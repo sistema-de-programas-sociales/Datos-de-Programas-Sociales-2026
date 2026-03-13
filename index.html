@@ -139,7 +139,7 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
   color: rgba(255,255,255,0.55);
   background: none;
   border: none;
-  padding: 11px 26px;
+  padding: 15px 26px;
   cursor: pointer;
   white-space: nowrap;
   display: flex;
@@ -756,10 +756,60 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
 <div id="tab-general" class="tab-pane active">
 
   <!-- ═══ SLIDER NAVEGACIÓN ═══ -->
-  <div style="display:flex;align-items:stretch;gap:0;margin-bottom:0;border:1px solid var(--border2);border-radius:4px;overflow:hidden;margin-top:8px">
-    <button id="slider-prev" onclick="slideGeneral(-1)" style="background:var(--ink);border:none;color:var(--gold);width:80px;min-width:80px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;flex-shrink:0;padding:0" onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='var(--ink)'"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
-    <div id="slider-label" style="font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-align:center;flex:1;padding:0 20px;display:flex;align-items:center;justify-content:center;background:var(--paper2);border-left:1px solid var(--border2);border-right:1px solid var(--border2)">—</div>
-    <button id="slider-next" onclick="slideGeneral(1)" style="background:var(--ink);border:none;color:var(--gold);width:80px;min-width:80px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;flex-shrink:0;padding:0" onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='var(--ink)'"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+  <style>
+    .slide-nav-bar { display:flex; align-items:stretch; gap:0; margin-top:10px; border:2px solid var(--ink); border-radius:5px; overflow:hidden; }
+    .slide-nav-btn { background:var(--ink); border:none; color:var(--gold); width:56px; min-width:56px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; padding:0; transition:background .18s; }
+    .slide-nav-btn:hover { background:var(--blue); }
+    .slide-nav-tabs { display:flex; flex:1; border-left:2px solid var(--ink); border-right:2px solid var(--ink); }
+    .slide-nav-tab {
+      flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:5px 10px; cursor:pointer; border:none; background:var(--paper2);
+      border-right:1px solid var(--border2); gap:2px; transition:background .18s;
+    }
+    .slide-nav-tab:last-child { border-right:none; }
+    .slide-nav-tab:hover:not(.active) { background:var(--paper); }
+    .slide-nav-tab.active {
+      background:var(--ink); cursor:default;
+    }
+    .slide-nav-tab .snt-num {
+      font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.15em;
+      text-transform:uppercase; color:var(--ink3); transition:color .18s;
+    }
+    .slide-nav-tab.active .snt-num { color:var(--gold); }
+    .slide-nav-tab .snt-title {
+      font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:.05em;
+      text-transform:uppercase; color:var(--ink2); text-align:center; line-height:1.3; transition:color .18s;
+    }
+    .slide-nav-tab.active .snt-title { color:#fff; }
+    .slide-nav-tab .snt-bar {
+      width:20px; height:2px; background:var(--border2); border-radius:2px; transition:background .18s, width .18s;
+    }
+    .slide-nav-tab.active .snt-bar { background:var(--gold); width:28px; }
+  </style>
+  <div class="slide-nav-bar">
+    <button class="slide-nav-btn" onclick="slideGeneral(-1)" id="slider-prev">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="slide-nav-tabs" id="slide-nav-tabs">
+      <button class="slide-nav-tab active" onclick="goToSlide(0)">
+        <span class="snt-num">Sección I</span>
+        <span class="snt-title">Beneficiarios<br>y Sexo</span>
+        <span class="snt-bar"></span>
+      </button>
+      <button class="slide-nav-tab" onclick="goToSlide(1)">
+        <span class="snt-num">Sección II</span>
+        <span class="snt-title">Apoyos y<br>Municipios</span>
+        <span class="snt-bar"></span>
+      </button>
+      <button class="slide-nav-tab" onclick="goToSlide(2)">
+        <span class="snt-num">Sección III</span>
+        <span class="snt-title">Beneficiarios<br>Localizables</span>
+        <span class="snt-bar"></span>
+      </button>
+    </div>
+    <button class="slide-nav-btn" onclick="slideGeneral(1)" id="slider-next">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
   </div>
 
   <!-- ═══ SLIDE 1: S1 Beneficiarios Únicos | S2 Mujeres y Hombres ═══ -->
@@ -2295,6 +2345,13 @@ const SLIDE_CONFIG = [
 
 let currentSlide = 0;
 
+function goToSlide(index) {
+  if (index === currentSlide) return;
+  const prevSlide = currentSlide;
+  currentSlide = index;
+  updateSlider(prevSlide);
+}
+
 function slideGeneral(dir) {
   const total = SLIDE_CONFIG.length;
   const prevSlide = currentSlide;
@@ -2314,6 +2371,11 @@ function updateSlider(prevSlide) {
   if (kpiStrip) kpiStrip.innerHTML = cfg.kpis().join('');
 
   // Sin animación en el primer render (prevSlide undefined)
+  // Actualizar tabs activos
+  document.querySelectorAll('.slide-nav-tab').forEach((tab, i) => {
+    tab.classList.toggle('active', i === currentSlide);
+  });
+
   if (prevSlide === undefined) {
     document.querySelectorAll('.g-slide').forEach(el => el.style.display = 'none');
     const active = document.getElementById('gslide-' + currentSlide);
