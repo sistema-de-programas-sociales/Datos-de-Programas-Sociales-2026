@@ -55,7 +55,50 @@ def leer_excel(excel_path):
     return json.loads(result.stdout)
 
 # ── Construir payload del dashboard ──────────────────────────────────────────
-def build_dashboard_data(raw):
+def leer_grupos_vulnerables(excel_path):
+    """Lee la hoja Grupos Vulnerables directamente con openpyxl."""
+    try:
+        import openpyxl
+        wb = openpyxl.load_workbook(str(excel_path), data_only=True)
+        if 'Grupos Vulnerables' not in wb.sheetnames:
+            return {}
+        ws = wb['Grupos Vulnerables']
+        result = {}
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            if not row[0]:
+                continue
+            genero = str(row[0]).strip().lower()
+            pob_vul = int(row[1]) if row[1] else 0
+            pob_ate = int(row[2]) if row[2] else 0
+            if 'muj' in genero:
+                result['mujeres'] = {'pob_vulnerable': pob_vul, 'atendidas': pob_ate}
+            elif 'hom' in genero:
+                result['hombres'] = {'pob_vulnerable': pob_vul, 'atendidos': pob_ate}
+        return result
+    except Exception as e:
+        print(f'AVISO: No se pudo leer Grupos Vulnerables: {e}', file=sys.stderr)
+        return {}
+
+
+def leer_nutrichihuahua(excel_path):
+    """Lee la hoja Nutrichihuahua directamente con openpyxl."""
+    try:
+        import openpyxl
+        wb = openpyxl.load_workbook(str(excel_path), data_only=True)
+        if 'Nutrichihuahua' not in wb.sheetnames:
+            return {}
+        ws = wb['Nutrichihuahua']
+        result = {}
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            if row[0] and row[1] is not None:
+                result[str(row[0]).strip()] = int(row[1]) if row[1] else 0
+        return result
+    except Exception as e:
+        print(f'AVISO: No se pudo leer Nutrichihuahua: {e}', file=sys.stderr)
+        return {}
+
+
+def build_dashboard_data(raw, excel_path=None):
     gt            = raw['gran_total']
     rangos        = raw['rangos_edad']            # col de rangos globales
     rangos_mh     = raw.get('rangos_mh_global', {})  # col S: desglose M/H
@@ -307,11 +350,22 @@ def build_dashboard_data(raw):
         t_e = int(sf(loc_rangos.get(key, 0)))
         loc_rangos_data.append({'label': label, 'key': key, 'total': t_e})
 
+    # ── Grupos Vulnerables y NutriChihuahua ──────────────────────────────────
+    grupos_vul   = leer_grupos_vulnerables(excel_path) if excel_path else {}
+    nutrichi     = leer_nutrichihuahua(excel_path)     if excel_path else {}
+
+    # Recalcular pob_vulnerable total desde Excel si hay datos reales
+    gv_m   = grupos_vul.get('mujeres', {}).get('pob_vulnerable', 0) or 0
+    gv_h   = grupos_vul.get('hombres', {}).get('pob_vulnerable', 0) or 0
+    pob_vul_real = (gv_m + gv_h) if (gv_m + gv_h) > 0 else POB_VULNERABLE
+
     # ══ PAYLOAD FINAL ════════════════════════════════════════════════════════
     return {
         '_meta': {
             'pob_estatal':    POB_ESTATAL,
-            'pob_vulnerable': POB_VULNERABLE,
+            'pob_vulnerable': pob_vul_real,
+            'pob_vul_m':      gv_m,
+            'pob_vul_h':      gv_h,
             'fuente':         'Padrón de Beneficiarios — SDHyBC Chihuahua',
         },
         # Reporte General
@@ -359,6 +413,10 @@ def build_dashboard_data(raw):
         'apoyos_g3': apoyos_g3_summary,
         # Indicadores
         'indicadores': indicadores_data,
+        # Grupos Vulnerables (hoja nueva)
+        'grupos_vulnerables': grupos_vul,
+        # NutriChihuahua (hoja nueva)
+        'nutrichihuahua': nutrichi,
     }
 
 
@@ -377,7 +435,7 @@ def main():
     print('Leyendo Excel...', file=sys.stderr)
     raw  = leer_excel(excel_path)
     print('Aplicando filtros...', file=sys.stderr)
-    data = build_dashboard_data(raw)
+    data = build_dashboard_data(raw, excel_path=excel_path)
 
     if modo_json:
         print(json.dumps(data, ensure_ascii=False, indent=2))
@@ -398,6 +456,12 @@ def main():
     print(f'  Municipios activos   : {data["general"]["mun_activos"]}', file=sys.stderr)
     print(f'  Instituciones activas: {data["general"]["total_inst"]}', file=sys.stderr)
     print(f'  Localizables         : {data["localizables"]["total"]:,}', file=sys.stderr)
+    if data.get('grupos_vulnerables'):
+        gv = data['grupos_vulnerables']
+        print(f'  Pob. Vul. Mujeres    : {gv.get("mujeres",{}).get("pob_vulnerable",0):,}', file=sys.stderr)
+        print(f'  Pob. Vul. Hombres    : {gv.get("hombres",{}).get("pob_vulnerable",0):,}', file=sys.stderr)
+    if data.get('nutrichihuahua') and data['nutrichihuahua']:
+        print(f'  NutriChihuahua       : {len(data["nutrichihuahua"])} registros', file=sys.stderr)
 
 
 if __name__ == '__main__':
