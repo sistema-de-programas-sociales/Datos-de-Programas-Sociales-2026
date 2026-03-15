@@ -676,7 +676,6 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
   html { zoom: 0.9; }
 </style>
 <script>
-  /* Forzar 90% zoom en escritorio vía transform si zoom no es soportado */
   (function(){
     var s = document.documentElement.style;
     if(typeof s.zoom === 'undefined') {
@@ -1016,41 +1015,7 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
      TAB 2 · INSTITUCIONES
 ════════════════════════════════════════════════ -->
 <div id="tab-instituciones" class="tab-pane">
-
-  <div class="sec-hdr mt20">
-    <span class="sec-hdr-tag">Sección II</span>
-    <span class="sec-hdr-title">Instituciones Participantes</span>
-    <div class="sec-hdr-rule"></div>
-    <span class="sec-hdr-date" id="inst-fecha">—</span>
-  </div>
-
-  <!-- KPIs por institución -->
-  <div class="stat-strip mt12" id="kpi-inst-row" style="border-top:3px solid var(--border);border-bottom:2px solid var(--border)"></div>
-
-  <!-- Barra comparativa general -->
-  <div class="np-grid g2 mt20">
-    <div class="np-col">
-      <div class="np-pad">
-        <div class="byline">Comparativa general de beneficiarios</div>
-        <div class="bar-list" id="bar-inst-compare"></div>
-      </div>
-    </div>
-    <div>
-      <div class="np-pad">
-        <div class="byline">Distribución de apoyos por institución</div>
-        <div class="donut-wrap" id="donut-inst-apoyos"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Artículos por institución en 2 columnas -->
-  <div class="sec-hdr mt20">
-    <span class="sec-hdr-tag gold">Detalle</span>
-    <span class="sec-hdr-title">Reporte por Institución</span>
-    <div class="sec-hdr-rule"></div>
-  </div>
-  <div class="cols-2 mt16" id="inst-articles"></div>
-
+  <div id="inst-rows-container" style="margin-top:10px"></div>
 </div><!-- /tab-instituciones -->
 
 
@@ -1391,7 +1356,7 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
       </div>
       <div style="margin-bottom:6px">
         <span class="footer-contact-lbl">Unidad</span>
-        <span class="footer-contact-val">Coordinación de Evaluación y Sistemas de Información de Chihuahua</span>
+        <span class="footer-contact-val">Coordinación de Evaluación y Sistemas de Información Estatal</span>
       </div>
       <div style="margin-bottom:6px">
         <span class="footer-contact-lbl">Dirección</span>
@@ -1494,6 +1459,15 @@ function instColor(name) {
   const key = Object.keys(INST_COLORS).find(k => name.toUpperCase().replace(/[^A-Z]/g,'').includes(k));
   return key ? INST_COLORS[key] : null;
 }
+/* Convierte NOMBRE EN MAYÚSCULAS a Nombre en minúsculas con primera letra en mayúscula */
+function toTitle(str) {
+  if (!str) return str;
+  const excepciones = new Set(['de','del','y','a','en','con','para','por','la','las','el','los','al']);
+  return str.toLowerCase().split(' ').map((w, i) =>
+    (i === 0 || !excepciones.has(w)) ? w.charAt(0).toUpperCase() + w.slice(1) : w
+  ).join(' ');
+}
+
 function barList(containerId, rows, cls, totalForPct=null) {
   const el = document.getElementById(containerId);
   if (!el) return;
@@ -1692,7 +1666,7 @@ function renderGeneral() {
   ppH.textContent='0'; animCount(ppH, g.total_h);
   document.getElementById('pp-hombres-pct-txt').textContent = `${pct(g.total_h,g.total_benef)} del total del padrón`;
   document.getElementById('pp-genero-cuerpo').innerHTML =
-    `El padrón registra una mayoría femenina con <span style='color:var(--fem);font-weight:700'>${fmt(g.total_m)} mujeres</span> (<strong>${pct(g.total_m,g.total_benef)}</strong>) frente a <span style='color:var(--male);font-weight:700'>${fmt(g.total_h)} hombres</span> (<strong>${pct(g.total_h,g.total_benef)}</strong>). Esta distribución refleja la tendencia estatal donde los programas de desarrollo social tienen <strong>mayor alcance entre la población femenina</strong>.`;
+    `El padrón registra una mayoría femenina con <strong>${fmt(g.total_m)} mujeres</strong> (<strong>${pct(g.total_m,g.total_benef)}</strong>) frente a <strong>${fmt(g.total_h)} hombres</strong> (<strong>${pct(g.total_h,g.total_benef)}</strong>). Esta distribución refleja la tendencia estatal donde los programas de desarrollo social tienen <strong>mayor alcance entre la población femenina</strong>.`;
 
   // Sección 4: Municipios
   {
@@ -1710,7 +1684,7 @@ function renderGeneral() {
   // Sección 5: Localizables
   document.getElementById('pp-loc-cuerpo').innerHTML =
     `Del total de <strong>${fmt(g.total_benef)}</strong> beneficiarios únicos del padrón estatal, `+
-    `<strong style='color:var(--green)'>${fmt(loc.total)}</strong> cuentan con datos de contacto verificados y actualizados `+
+    `<strong>${fmt(loc.total)}</strong> cuentan con datos de contacto verificados y actualizados `+
     `—teléfono, código postal o municipio de residencia validado—, `+
     `lo que representa el <strong>${locPctVal}%</strong> del universo total. `+
     `Los <strong style='color:var(--red)'>${fmt(g.total_benef - loc.total)}</strong> beneficiarios restantes `+
@@ -1822,8 +1796,8 @@ function renderGeneral() {
     const r5064_3 = re3_2.find(r=>r.key==='50-64'), r65_3 = re3_2.find(r=>r.key==='65+');
     const adultosMay3 = ((r5064_3?.total||0)+(r65_3?.total||0));
     locPirTexto.innerHTML =
-      `La pirámide refleja que el grupo etario con mayor concentración de <span style="color:var(--fem);font-weight:700">mujeres</span> localizables se concentra en <strong>${topM3?.label||'—'}</strong> `+
-      `con <strong>${fmt(topM3?.m||0)}</strong> registros; en <span style="color:var(--male);font-weight:700">hombres</span>, el pico es <strong>${topH3?.label||'—'}</strong> `+
+      `La pirámide refleja que el grupo etario con mayor concentración de <strong>mujeres</strong> localizables se concentra en <strong>${topM3?.label||'—'}</strong> `+
+      `con <strong>${fmt(topM3?.m||0)}</strong> registros; en <strong>hombres</strong>, el pico es <strong>${topH3?.label||'—'}</strong> `+
       `con <strong>${fmt(topH3?.h||0)}</strong>. Los adultos de 50 años en adelante suman <strong>${fmt(adultosMay3)}</strong> personas (`+
       `<strong>${pct(adultosMay3,g.total_benef)}</strong> del padrón), lo que subraya el peso de los programas dirigidos a adultos mayores y población en condición de vulnerabilidad estructural. `+
       `La pirámide de localizables es casi idéntica a la del padrón general, confirmando que la validación de datos de contacto no tiene sesgo etario significativo.`;
@@ -1857,8 +1831,8 @@ function renderGeneral() {
     const adultosMay = ((r5064?.total||0) + (r65?.total||0));
     pyrTexto.innerHTML =
       `La pirámide de edad muestra la distribución etaria de los <strong>${fmt(g.total_benef)}</strong> beneficiarios únicos del padrón. ` +
-      `El grupo con mayor concentración de <span style="color:var(--fem);font-weight:700">mujeres</span> se encuentra en el rango de <strong>${topM?.label||'—'}</strong> ` +
-      `con <strong>${fmt(topM?.m||0)}</strong> registros, mientras que en <span style="color:var(--male);font-weight:700">hombres</span> destaca el rango de ` +
+      `El grupo con mayor concentración de <strong>mujeres</strong> se encuentra en el rango de <strong>${topM?.label||'—'}</strong> ` +
+      `con <strong>${fmt(topM?.m||0)}</strong> registros, mientras que en <strong>hombres</strong> destaca el rango de ` +
       `<strong>${topH?.label||'—'}</strong> con <strong>${fmt(topH?.h||0)}</strong>. ` +
       `Los adultos de 50 años en adelante suman <strong>${fmt(adultosMay)}</strong> personas, representando el <strong>${pct(adultosMay, g.total_benef)}</strong> del padrón, ` +
       `lo que refleja la orientación de los programas sociales hacia la población adulta y en condición de mayor vulnerabilidad.`;
@@ -1869,93 +1843,421 @@ function renderGeneral() {
    TAB: INSTITUCIONES
 ════════════════════════════════════════════════ */
 const INST_META = {
-  DIF:     { av:'#002fa7', fullname:'DIF Chihuahua' },
-  SALUD:   { av:'#1a56db', fullname:'Secretaría de Salud' },
-  SDHyBC:  { av:'#065f46', fullname:'Sec. Desarrollo Humano y Bien Común' },
-  ICHIJUV: { av:'#5b21b6', fullname:'Inst. Chihuahuense de la Juventud' },
-  SPyCI:   { av:'#92400e', fullname:'Sec. Pueblos y Comunidades Indígenas' },
+  SALUD:   { av:'#1a56db', fullname:'Secretaría de Salud', muns:67,
+             titular:'MediChihuahua es el único programa con presencia en los 67 municipios del estado y el de mayor cobertura del padrón estatal',
+             highlight:'MediChihuahua',
+             img:'https://noro.mx/wp-content/uploads/2024/02/medichihuahua-programa-atencion-medica-1.png',
+             caption:'MediChihuahua — cobertura universal en los 67 municipios del estado, 2026.' },
+  SDHyBC:  { av:'#065f46', fullname:'Sec. Desarrollo Humano y Bien Común', muns:63,
+             titular:'La Secretaría de Desarrollo Humano lidera la diversidad programática con la mayor variedad de programas sociales activos del sistema',
+             highlight:'Secretaría de Desarrollo Humano',
+             img:'https://chihuahua.gob.mx/sites/default/atach2/styles/flexslider_full/public/noticias/galeria/2025-10/WhatsApp%20Image%202025-10-02%20at%204.56.48%20PM.jpeg.webp?itok=FcMk3xSF',
+             caption:'Programas de desarrollo humano y participación ciudadana — SDHyBC, 2026.' },
+  DIF:     { av:'#002fa7', fullname:'DIF Chihuahua', muns:33,
+             titular:'El DIF Chihuahua concentra la mayor proporción de mujeres beneficiarias, reflejo de su orientación hacia el desarrollo y bienestar familiar',
+             highlight:'DIF Chihuahua',
+             img:'https://difchihuahua.gob.mx/uploads/blog/imagen/795/IMG_6521.JPG',
+             caption:'Operativo de atención familiar — DIF Chihuahua, 2026.' },
+  SPyCI:   { av:'#92400e', fullname:'Sec. Pueblos y Comunidades Indígenas', muns:25,
+             titular:'La Secretaría de Pueblos y Comunidades Indígenas garantiza la asistencia social a comunidades originarias en 25 municipios del estado',
+             highlight:'Secretaría de Pueblos y Comunidades Indígenas',
+             img:'https://www.chihuahua.gob.mx/sites/default/atach2/styles/flexslider_full/public/noticias/galeria/2024-12/WhatsApp%20Image%202024-12-03%20at%2014.37.21.jpeg.webp?itok=53o2XPoe',
+             caption:'Asistencia social para la población indígena chihuahuense — SPyCI, 2026.' },
+  ICHIJUV: { av:'#5b21b6', fullname:'Inst. Chihuahuense de la Juventud', muns:9,
+             titular:'El Instituto Chihuahuense de la Juventud atiende a jóvenes chihuahuenses con el programa de mayor equilibrio de género del sistema',
+             highlight:'Instituto Chihuahuense de la Juventud',
+             img:'https://static.wixstatic.com/media/138c20_e9779296a624412fa9f160209d04fa7e~mv2.jpeg/v1/fill/w_638,h_358,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpeg',
+             caption:'Programa de atención integral a la juventud chihuahuense — ICHIJUV, 2026.' },
+  ICHDII:  { av:'#0891b2', fullname:'Inst. Chih. de Desarrollo Integral de la Infancia', muns:1,
+             titular:'El Instituto Chihuahuense de Desarrollo Integral de la Infancia opera las Estancias Infantiles para el desarrollo pleno de la niñez chihuahuense',
+             highlight:'Instituto Chihuahuense de Desarrollo Integral de la Infancia',
+             img:'https://scontent.fcuu2-1.fna.fbcdn.net/v/t51.82787-15/613134116_18500143078078100_1812333535448738698_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=sWxwG8klk4AQ7kNvwF0zSlL&_nc_oc=AdnHHKs70WYI8RVdEHmP6Z1qZIYNcjmFW4eHt2Q-xVwWn-BcDXprh8NjrN4hIZgdQAMhi812yjoTY3vsTjWKyEl1&_nc_zt=23&_nc_ht=scontent.fcuu2-1.fna&_nc_gid=FBEksMD6rresd8z2K9F-SA&_nc_ss=8&oh=00_Afyom4EpKH6-5mqEWKtWjAdMZ43chQQ1I4Q9CUyUSnpIVA&oe=69BCBFEE',
+             caption:'Programa de Estancias Infantiles para el Desarrollo Integral de la Niñez — ICHDII, 2026.' },
 };
 
+/* Titular dinámico para instituciones nuevas no definidas en INST_META */
+function instTitular(k, v, meta) {
+  const hl = (txt) => `<span style="color:${meta.av};font-style:normal">${txt}</span>`;
+
+  if (meta.titular) {
+    /* usa meta.highlight si está definido, si no prueba fullname y key */
+    const tit     = meta.titular;
+    const targets = [meta.highlight, meta.fullname, k].filter(Boolean);
+    for (const t of targets) {
+      if (tit.includes(t)) return tit.replace(t, hl(t));
+    }
+    return tit;
+  }
+  /* fallback dinámico para instituciones nuevas sin titular definido */
+  const nProg = v.programas.length;
+  const pctM  = v.total ? (v.m/v.total*100).toFixed(0) : 0;
+  const prog0 = v.programas[0]?.nombre || 'sus programas activos';
+  if (nProg === 1)
+    return hl(meta.fullname) + ' opera en ' + meta.muns + ' municipios del estado a través del programa ' + prog0;
+  const genTxt = pctM >= 60 ? 'mayoritariamente femenina' : pctM <= 40 ? 'mayoritariamente masculina' : 'con distribución equilibrada entre géneros';
+  return hl(meta.fullname) + ' opera ' + nProg + ' programas activos en ' + meta.muns + ' municipios, atendiendo a una población ' + genTxt;
+}
+const RANGOS_LABELS = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
+
 function renderInstituciones() {
-  const insts = D.instituciones;
-  const g     = D.general;
+  const insts  = D.instituciones;
+  const g      = D.general;
+  const inst   = k => insts[k] || {total:0,m:0,h:0,sn:0,apoyos:0,programas:[],rangos:{}};
+  const locByI = {};
+  (D.localizables?.por_institucion||[]).forEach(x => { locByI[x.nombre] = x; });
 
-  // KPIs
-  const instSorted = Object.entries(insts).sort(([,a],[,b])=>b.total-a.total);
-  document.getElementById('kpi-inst-row').style.gridTemplateColumns = `repeat(${instSorted.length},1fr)`;
-  document.getElementById('kpi-inst-row').innerHTML = instSorted.map(([k,v],i) => {
-    const mods = ['cb','cg','cr','cgr','ck'];
-    const numMods = ['b','g','r','gr',''];
-    return kpiSS(k, fmt(v.total), `${v.programas.length} programa${v.programas.length!==1?'s':''}`, mods[i%mods.length], numMods[i%numMods.length]);
-  }).join('');
+  /* orden fijo */
+  const ORDER = ['SALUD','SDHyBC','DIF','SPyCI','ICHIJUV','ICHDII'];
 
-  // Barras comparativa
-  barList('bar-inst-compare', instSorted.map(([k,v])=>({name:k,val:v.total})), 'bf-blue', g.total_benef);
+  /* ── helpers ── */
+  const fmtPct = (n,d) => d ? (n/d*100).toFixed(1)+'%' : '—';
 
-  // Donut apoyos
-  const colors = ['var(--blue)','var(--gold)','var(--red)','var(--green)','#7c3aed'];
-  const apSlices = instSorted.map(([k,v],i)=>({label:k,val:v.apoyos||0,color:colors[i%colors.length]}));
-  const totalAp  = apSlices.reduce((s,x)=>s+x.val,0)||1;
-  document.getElementById('donut-inst-apoyos').innerHTML = buildDonut('',totalAp,apSlices);
+  const genderBar = (m,h,t) => {
+    if (!t) return '';
+    const mp = (m/t*100).toFixed(1), hp = (h/t*100).toFixed(1);
+    return `
+      <div style="display:flex;justify-content:space-between;font-family:var(--sans);font-size:12px;margin-bottom:5px">
+        <span style="color:var(--fem)"><strong>${fmt(m)}</strong> Mujeres <span style="opacity:.6">(${mp}%)</span></span>
+        <span style="color:var(--male)"><strong>${fmt(h)}</strong> Hombres <span style="opacity:.6">(${hp}%)</span></span>
+      </div>
+      <div style="display:flex;height:18px;border-radius:2px;overflow:hidden">
+        <div style="width:${mp}%;background:var(--fem)"></div>
+        <div style="width:${hp}%;background:var(--male)"></div>
+      </div>`;
+  };
 
-  // Artículos de institución
-  document.getElementById('inst-articles').innerHTML = instSorted.map(([k,v]) => {
-    const meta = INST_META[k]||{av:'#002fa7',fullname:k};
-    const mp = v.total ? ((v.m/v.total)*100).toFixed(1) : 0;
-    const hp = v.total ? ((v.h/v.total)*100).toFixed(1) : 0;
-    const progBars = v.programas.map(p => {
-      const pw = ((p.total/v.total)*100).toFixed(1);
-      const n  = p.nombre.length>34 ? p.nombre.slice(0,32)+'…' : p.nombre;
-      const apStr = p.apoyos>0 ? ` · ${fmt(p.apoyos)} apoyos` : '';
-      return `<div class="bar-row" style="margin-bottom:4px">
-        <div class="bar-name" style="font-size:12px;min-width:140px" title="${p.nombre}">${n}</div>
+  const rangoChart = (rangos, av, total) => {
+    const keys = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
+    const vals  = keys.map(k => rangos[k]||0);
+    const tot   = vals.reduce((s,x)=>s+x,0) || 1;
+    return keys.map((k,i) => {
+      const w   = (vals[i]/tot*100).toFixed(1);
+      return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+        <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink2);width:38px;flex-shrink:0;text-align:right">${RANGOS_LABELS[k]}</div>
+        <div style="flex:1;height:20px;background:var(--border3);border-radius:2px;overflow:hidden">
+          <div style="height:100%;width:${w}%;background:${av};border-radius:2px;transition:width .8s ease"></div>
+        </div>
+        <div style="font-family:var(--sans);font-size:13px;color:var(--ink2);width:82px;flex-shrink:0">${fmt(vals[i])} <span style="opacity:.6;font-size:11px">${w}%</span></div>
+      </div>`;
+    }).join('');
+  };
+
+  const apoyosBar = (v, av) => {
+    if (!v.programas.length) return '';
+    const maxP = Math.max(...v.programas.map(p=>p.apoyos||p.total));
+    return v.programas.map(p => {
+      const val  = p.apoyos || p.total;
+      const w    = maxP ? (val/maxP*100).toFixed(1) : 0;
+      const n    = p.nombre.length>38 ? p.nombre.slice(0,36)+'…' : p.nombre;
+      return `<div class="bar-row" style="margin-bottom:5px">
+        <div class="bar-name" style="font-size:11px;min-width:0" title="${p.nombre}">${n}</div>
         <div class="bar-track" style="height:18px">
-          <div class="bar-fill bf-blue" style="width:${pw}%">
-            <span style="font-size:8.5px">${fmt(p.total)}${apStr}</span>
+          <div class="bar-fill" style="width:${w}%;background:${av}cc">
+            <span style="font-size:9px">${fmt(val)}</span>
           </div>
         </div>
       </div>`;
     }).join('');
+  };
 
-    return `<div class="inst-article no-break">
-      <div class="inst-art-hdr">
-        <div>
-          <div class="inst-art-name" style="color:${meta.av}">${k}</div>
-          <div class="inst-art-fullname">${meta.fullname}</div>
+  /* ── construir filas ── */
+  const container = document.getElementById('inst-rows-container');
+  if (!container) return;
+
+  container.innerHTML = ORDER.map((k, rowIdx) => {
+    const v    = inst(k);
+    const meta = INST_META[k] || {av:'#555',fullname:k,muns:0,img:'',caption:''};
+    const locI = locByI[k];
+    const locT = locI?.total || 0;
+    const locPct = v.total ? (locT/v.total*100).toFixed(1) : 0;
+    const apoyosRatio = v.total ? (v.apoyos/v.total).toFixed(2) : '—';
+    const sinDato = v.rangos['sin_datos'] || 0;
+    const border = rowIdx < ORDER.length-1
+      ? `border-bottom:3px solid ${meta.av}33;margin-bottom:0;padding-bottom:24px`
+      : '';
+
+    return `
+    <!-- ══ FILA ${k} ══ -->
+    <div style="${border}" id="inst-row-${k}">
+      <div class="np-2col mt4">
+
+        <!-- COL IZQ: kicker · titular (sin número) + imagen inline · texto · KPIs -->
+        <div class="np-2col-art" style="display:flex;flex-direction:column">
+          <div class="kicker mb8 mt12" style="color:${meta.av}">${meta.fullname} · ${meta.muns} municipios</div>
+
+          <!-- Titular texto + imagen en fila -->
+          <div style="display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start">
+            <div style="font-family:var(--head);font-weight:900;line-height:1.05;color:var(--ink);font-size:34px">
+              ${instTitular(k, v, meta)}
+            </div>
+            <div id="inst-img-wrap-${k}" style="width:180px;aspect-ratio:4/3;flex-shrink:0;overflow:hidden;border:1px solid ${meta.av}33">
+              <img src="${meta.img}" alt="${meta.fullname}"
+                style="width:100%;height:100%;object-fit:cover;display:block;"
+                onerror="this.style.display='none';document.getElementById('inst-img-ph-${k}').style.display='flex'">
+              <div id="inst-img-ph-${k}" style="display:none;width:100%;height:100%;background:${meta.av}12;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="${meta.av}" stroke-width="1.2" opacity=".5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <div style="font-family:var(--sans);font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${meta.av};opacity:.7;text-align:center;padding:0 6px">${k}</div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="rule-heavy">
+          <div class="body-copy dropcap mt12" id="inst-cuerpo-${k}">—</div>
+          <div class="deck mt4" style="font-style:italic;opacity:.7">${meta.caption}</div>
+          <div class="stat-strip c2" id="inst-kpi-${k}" style="border:1px solid ${meta.av}44;border-top:3px solid ${meta.av};margin-top:16px"></div>
         </div>
-        <div>
-          <div class="inst-art-bignum fmt">${fmt(v.total)}</div>
-          <div class="inst-art-biglbl">beneficiarios únicos</div>
-        </div>
-      </div>
 
-      <!-- Foto institución -->
-      <div class="img-box">
-        <div class="img-box-ph" style="aspect-ratio:16/7;background:${meta.av}14">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="${meta.av}" stroke-width="1.2" opacity=".5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span style="font-family:var(--sans);font-size:8px;letter-spacing:.1em;color:${meta.av};opacity:.6">${k} · FOTO INSTITUCIONAL</span>
-        </div>
-        <div class="img-caption">${meta.fullname}. Operativo de atención a beneficiarios, Chihuahua 2026.</div>
-      </div>
+        <div class="v-rule"></div>
 
-      <div class="byline mt8">Distribución por Sexo</div>
-      ${genderBar(v.m, v.h, v.total)}
+        <!-- COL DER: solo 3 gráficas: sexo · rangos etarios · localización -->
+        <div class="np-2col-art" style="display:flex;flex-direction:column;gap:20px;padding-top:12px">
 
-      <div class="byline mt12">Programas Activos</div>
-      ${progBars}
+          <!-- 1. Sexo -->
+          <div>
+            <div class="kicker mb6">Distribución por Sexo</div>
+            <div id="inst-sexo-${k}"></div>
+          </div>
 
-      <div class="np-grid g2 mt12" style="border-top:2px solid ${meta.av}">
-        <div class="np-col np-pad-sm">
-          <div class="ss-lbl">Apoyos totales</div>
-          <div style="font-family:var(--head);font-size:24px;font-weight:700;color:${meta.av}">${fmt(v.apoyos)}</div>
-        </div>
-        <div class="np-pad-sm">
-          <div class="ss-lbl">Programas</div>
-          <div style="font-family:var(--head);font-size:24px;font-weight:700;color:${meta.av}">${v.programas.length}</div>
+          <!-- 2. Rangos etarios -->
+          <div>
+            <div class="kicker mb8">Distribución por Rango de Edad</div>
+            <div id="inst-rangos-${k}"></div>
+            ${sinDato > 0 ? `<p class="nota" style="margin-top:6px">* ${fmt(sinDato)} sin rango de edad registrado.</p>` : ''}
+          </div>
+
+          <!-- 3. Localización -->
+          <div>
+            <div class="kicker mb4">Tasa de Localización <span style="font-weight:400;opacity:.7">· Datos de contacto verificados</span></div>
+            <div class="cov-track mt4">
+              <div class="cov-fill" id="inst-loc-bar-${k}" style="width:0%;background:linear-gradient(90deg,${meta.av},${meta.av}88)">
+                <span id="inst-loc-pct-${k}"></span>
+              </div>
+            </div>
+            <div class="deck mt4">${fmt(locT)} localizables de ${fmt(v.total)} beneficiarios</div>
+          </div>
+
+          <!-- 4. Programas / peso en el padrón -->
+          <div id="inst-progs-wrap-${k}"></div>
+
         </div>
       </div>
     </div>`;
   }).join('');
+
+  /* ── poblar datos dinámicos ── */
+  ORDER.forEach(k => {
+    const v    = inst(k);
+    const meta = INST_META[k] || {av:'#555'};
+    const locI = locByI[k];
+    const locT = locI?.total || 0;
+    const locPct = v.total ? (locT/v.total*100).toFixed(1) : 0;
+
+    /* héroe animado */
+    const heroEl = document.getElementById('inst-hero-'+k);
+    if (heroEl) { heroEl.textContent='0'; animCount(heroEl, v.total); }
+
+    /* texto editorial */
+    const cuerpoEl = document.getElementById('inst-cuerpo-'+k);
+    if (cuerpoEl) {
+      /* ── Función de texto analítico: genera texto según datos reales de cada institución ── */
+      const locByInst2 = {};
+      (D.localizables?.por_institucion||[]).forEach(x => { locByInst2[x.nombre] = x; });
+
+      const textoInst = (k, v, meta) => {
+        const locI    = locByInst2[k] || {};
+        const locT    = locI.total || 0;
+        const locPct  = v.total ? (locT/v.total*100).toFixed(1) : 0;
+        const mPct    = v.total ? (v.m/v.total*100).toFixed(1) : 0;
+        const hPct    = v.total ? (v.h/v.total*100).toFixed(1) : 0;
+        const ratio   = v.total ? (v.apoyos/v.total).toFixed(2) : 0;
+        const padPct  = g.total_benef ? (v.total/g.total_benef*100).toFixed(1) : 0;
+        const rg      = v.rangos || {};
+        const rkeys   = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
+        const sinD    = rg['sin_datos'] || 0;
+        const rangTot = rkeys.reduce((s,rk)=>s+(rg[rk]||0),0);
+        const topRang = rkeys.reduce((a,rk)=>(rg[rk]||0)>(rg[a]||0)?rk:a, rkeys[0]);
+        const topRangN = rg[topRang]||0;
+        const topRangPct = rangTot ? (topRangN/rangTot*100).toFixed(1) : 0;
+        const muns    = meta.muns || 0;
+        const p0      = v.programas[0] || {};
+        const p0Pct   = v.total ? (p0.total/v.total*100).toFixed(1) : 0;
+        const c       = meta.av;
+
+        const texts = {
+          SALUD: () => {
+            const sinDPct = v.total ? (sinD/v.total*100).toFixed(1) : 0;
+            const r3049 = rg['30-49']||0, r5064 = rg['50-64']||0, r65 = rg['65+']||0;
+            const adultos = r3049+r5064+r65;
+            const adPct = rangTot ? (adultos/rangTot*100).toFixed(1) : 0;
+            const cobEst = D._meta?.pob_estatal ? (v.total/D._meta.pob_estatal*100).toFixed(1) : 0;
+            return `<strong style="color:${c}">Secretaría de Salud</strong> concentra el <strong>${padPct}%</strong> del padrón `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios, todos en el programa <strong>MediChihuahua</strong> —el único presente en los <strong>67 municipios</strong> del estado. `+
+              `Al agrupar casi <strong>9 de cada 10 registros</strong> del padrón estatal, el peso de esta institución domina los totales consolidados, `+
+              `por lo que conviene analizarla de forma separada para entender el comportamiento real del resto del sistema. `+
+              `La cobertura alcanza al <strong>${cobEst}%</strong> de los ${fmt(D._meta?.pob_estatal||0)} habitantes del estado. `+
+              `El padrón registra <strong>${fmt(v.m)} mujeres</strong> (${mPct}%) y <strong>${fmt(v.h)} hombres</strong> (${hPct}%), `+
+              `con un promedio de <strong>${ratio}</strong> apoyos por persona. `+
+              `El <strong>${sinDPct}%</strong> no tiene edad registrada; entre quienes sí la tienen, `+
+              `los adultos de 30 años en adelante suman el <strong>${adPct}%</strong>. `+
+              `El <strong>${locPct}%</strong> de los beneficiarios cuenta con datos de contacto verificados.`;
+          },
+          SDHyBC: () => {
+            const prog0 = v.programas[0]||{}, prog1 = v.programas[1]||{}, prog2 = v.programas[2]||{};
+            const p0p = v.total?(prog0.total/v.total*100).toFixed(1):0;
+            const p1p = v.total?(prog1.total/v.total*100).toFixed(1):0;
+            const p2p = v.total?(prog2.total/v.total*100).toFixed(1):0;
+            const r65 = rg['65+']||0, r65p = rangTot?(r65/rangTot*100).toFixed(1):0;
+            const r1217 = rg['12-17']||0, r1217p = rangTot?(r1217/rangTot*100).toFixed(1):0;
+            return `<strong style="color:${c}">SDHyBC</strong> es la institución con más programas sociales activos: `+
+              `<strong>${v.programas.length} programas</strong> en <strong>63 municipios</strong> y <strong>${fmt(v.total)}</strong> beneficiarios únicos. `+
+              `El programa más grande es <strong>${toTitle(prog0.nombre||'—')}</strong> con <strong>${fmt(prog0.total||0)}</strong> beneficiarios (${p0p}%), `+
+              `seguido de <strong>${toTitle(prog1.nombre||'—')}</strong> con <strong>${fmt(prog1.total||0)}</strong> (${p1p}%) `+
+              `y <strong>${toTitle(prog2.nombre||'Apoyo a Personas Mayores')}</strong> con <strong>${fmt(prog2.total||0)}</strong> (${p2p}%). `+
+              `Los adultos mayores de 65 años representan el <strong>${r65p}%</strong> y los adolescentes de 12 a 17 el <strong>${r1217p}%</strong>, `+
+              `mostrando que la institución atiende tanto a los más jóvenes como a los más mayores. `+
+              `Con un promedio de <strong>${ratio}</strong> apoyos por persona —el más alto entre las instituciones con mayor número de beneficiarios—, `+
+              `el <strong>${locPct}%</strong> de sus beneficiarios cuenta con datos de contacto verificados.`;
+          },
+          DIF: () => {
+            const prog0 = v.programas[0]||{}, prog1 = v.programas[1]||{};
+            const p0pct = v.total?(prog0.total/v.total*100).toFixed(1):0;
+            const p1pct = v.total?(prog1.total/v.total*100).toFixed(1):0;
+            const p1mPct = prog1.total?(prog1.m/prog1.total*100).toFixed(1):0;
+            const p1hPct = prog1.total?(prog1.h/prog1.total*100).toFixed(1):0;
+            const r1829 = rg['18-29']||0, r3049 = rg['30-49']||0;
+            const adultoPct = rangTot?((r1829+r3049)/rangTot*100).toFixed(1):0;
+            return `<strong style="color:${c}">DIF Chihuahua</strong> opera <strong>${v.programas.length} programas</strong> en <strong>33 municipios</strong> `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios. Tiene la proporción más alta de mujeres del sistema: `+
+              `<strong>${mPct}%</strong> (<strong>${fmt(v.m)}</strong>), lo que refleja que sus programas están orientados principalmente hacia jefas de hogar y mujeres en situación vulnerable. `+
+              `El programa más grande es <strong>${toTitle(prog0.nombre||'—')}</strong> con <strong>${fmt(prog0.total||0)}</strong> beneficiarios (${p0pct}%). `+
+              `Le sigue <strong>${toTitle(prog1.nombre||'Rehabilitación Integral')}</strong> con <strong>${fmt(prog1.total||0)}</strong> (${p1pct}%), `+
+              `que es el más equilibrado en género: ${p1mPct}% mujeres y ${p1hPct}% hombres. `+
+              `Los adultos de 18 a 49 años concentran el <strong>${adultoPct}%</strong> de los beneficiarios con edad registrada. `+
+              `Solo el <strong>${locPct}%</strong> tiene datos de contacto verificados —la tasa más baja del sistema—, `+
+              `lo que representa una oportunidad de mejora importante en la gestión del padrón.`;
+          },
+          SPyCI: () => {
+            const r1217 = rg['12-17']||0, r1829 = rg['18-29']||0;
+            const jovPct = rangTot?((r1217+r1829)/rangTot*100).toFixed(1):0;
+            const prod0 = v.programas[0]||{};
+            return `<strong style="color:${c}">SPyCI</strong> atiende a la <strong>población indígena chihuahuense</strong> `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios en <strong>25 municipios</strong>. `+
+              `El programa <strong>${toTitle(prod0.nombre||'Asistencia Social para la Población Indígena')}</strong> agrupa al <strong>99.1%</strong> del padrón (<strong>${fmt(prod0.total||0)}</strong> personas). `+
+              `El <strong>${mPct}%</strong> son mujeres (<strong>${fmt(v.m)}</strong>), consistente con el rol que tienen en el acceso a servicios sociales en comunidades originarias. `+
+              `Los jóvenes de 12 a 29 años representan el <strong>${jovPct}%</strong> de los beneficiarios con edad registrada, `+
+              `el perfil más joven de todas las instituciones. `+
+              `La tasa de localización del <strong>${locPct}%</strong> refleja los retos propios de atender comunidades en zonas de difícil acceso.`;
+          },
+          ICHIJUV: () => {
+            const r1217 = rg['12-17']||0, r1217p = rangTot?(r1217/rangTot*100).toFixed(1):0;
+            const r1829 = rg['18-29']||0, r1829p = rangTot?(r1829/rangTot*100).toFixed(1):0;
+            return `<strong style="color:${c}">ICHIJUV</strong> atiende a jóvenes chihuahuenses en <strong>9 municipios</strong> `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios. Es la institución con la distribución de género más equilibrada: `+
+              `<strong>${fmt(v.m)} mujeres</strong> (${mPct}%) y <strong>${fmt(v.h)} hombres</strong> (${hPct}%), `+
+              `lo que muestra que los programas de juventud llegan de forma similar a ambos grupos. `+
+              `El <strong>${r1217p}%</strong> tiene entre 12 y 17 años y el <strong>${r1829p}%</strong> entre 18 y 29, `+
+              `confirmando que los apoyos llegan efectivamente al grupo al que están dirigidos. `+
+              `El promedio de <strong>${ratio}</strong> apoyos por persona indica que cada beneficiario recibe prácticamente un apoyo por ciclo. `+
+              `Solo el <strong>${locPct}%</strong> tiene datos de contacto verificados, lo que dificulta el seguimiento de los beneficiarios.`;
+          },
+          ICHDII: () => {
+            const r1829 = rg['18-29']||0, r3049 = rg['30-49']||0, r5064 = rg['50-64']||0;
+            const adPct = rangTot?((r1829+r3049+r5064)/rangTot*100).toFixed(1):0;
+            return `<strong style="color:${c}">ICHDII</strong> opera el <strong>Programa de Estancias Infantiles</strong> `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios en <strong>1 municipio</strong>. `+
+              `Su separación de SDHyBC como institución independiente permite medir y evaluar de forma propia la atención a la primera infancia. `+
+              `Aunque el programa atiende a niñas y niños, el padrón registra a los <strong>adultos responsables</strong>: `+
+              `el <strong>${adPct}%</strong> tiene entre 18 y 64 años, lo que indica que son los padres o cuidadores quienes aparecen en el registro. `+
+              `El <strong>${mPct}%</strong> son mujeres (<strong>${fmt(v.m)}</strong>), reflejo de que son principalmente las madres quienes gestionan el acceso al servicio. `+
+              `Su tasa de localización del <strong>100%</strong> es la más alta del sistema, `+
+              `resultado natural de operar con un padrón pequeño y manejable.`;
+          },
+        };
+
+        /* Fallback para instituciones nuevas sin texto definido */
+        if (texts[k]) return texts[k]();
+        const progNombres = v.programas.map(p=>p.nombre).join(', ');
+        return `<strong style="color:${meta.av}">${meta.fullname}</strong> opera en <strong>${muns} municipios</strong> `+
+          `con <strong>${fmt(v.total)}</strong> beneficiarios únicos (<strong>${padPct}%</strong> del padrón estatal). `+
+          `Composición de género: <strong>${fmt(v.m)} mujeres</strong> (${mPct}%) y <strong>${fmt(v.h)} hombres</strong> (${hPct}%). `+
+          `Programas activos: ${progNombres||'—'}. `+
+          `<strong>${fmt(v.apoyos)}</strong> apoyos registrados —promedio <strong>${ratio}</strong> por beneficiario. `+
+          `Tasa de localización: <strong>${locPct}%</strong> (<strong>${fmt(locT)}</strong> beneficiarios con datos verificados).`;
+      };
+
+      cuerpoEl.innerHTML = textoInst(k, v, meta);
+    }
+
+    /* género */
+    const sexoEl = document.getElementById('inst-sexo-'+k);
+    if (sexoEl) sexoEl.innerHTML = genderBar(v.m, v.h, v.total);
+
+    /* rangos etarios */
+    const rangosEl = document.getElementById('inst-rangos-'+k);
+    if (rangosEl) rangosEl.innerHTML = rangoChart(v.rangos, meta.av, v.total);
+
+    /* programas o indicador de peso según cantidad de programas */
+    const progsWrap = document.getElementById('inst-progs-wrap-'+k);
+    if (progsWrap) {
+      if (v.programas.length > 1) {
+        /* institución con varios programas → barras */
+        const maxP = Math.max(...v.programas.map(p => p.total), 1);
+        progsWrap.innerHTML =
+          `<div class="kicker mb6">Beneficiarios por Programa <span style="font-weight:400;opacity:.7">· Participación interna</span></div>` +
+          v.programas.map(p => {
+            const w   = (p.total / maxP * 100).toFixed(1);
+            const pct = v.total ? (p.total / v.total * 100).toFixed(1) : 0;
+            const n   = toTitle(p.nombre.length > 36 ? p.nombre.slice(0,34)+'…' : p.nombre);
+            return `<div style="margin-bottom:9px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px">
+                <span style="font-family:var(--sans);font-size:11px;color:var(--ink2);flex:1;padding-right:8px" title="${p.nombre}">${n}</span>
+                <span style="font-family:var(--head);font-size:13px;font-weight:700;color:${meta.av};white-space:nowrap">${fmt(p.total)} <span style="font-family:var(--sans);font-size:10px;font-weight:400;opacity:.6">(${pct}%)</span></span>
+              </div>
+              <div style="height:10px;background:var(--border3);border-radius:2px;overflow:hidden">
+                <div style="height:100%;width:${w}%;background:${meta.av};border-radius:2px;transition:width .8s ease"></div>
+              </div>
+            </div>`;
+          }).join('');
+      } else {
+        /* institución con 1 solo programa → indicador de peso en el padrón */
+        const pesoPct  = g.total_benef ? (v.total / g.total_benef * 100).toFixed(1) : 0;
+        const pesoW    = Math.min(parseFloat(pesoPct), 100);
+        const prog0    = v.programas[0] || {};
+        progsWrap.innerHTML =
+          `<div class="kicker mb6">Peso en el Padrón Estatal <span style="font-weight:400;opacity:.7">· 1 programa</span></div>` +
+          `<div style="font-family:var(--head);font-size:38px;font-weight:900;color:${meta.av};line-height:1">${pesoPct}%</div>` +
+          `<div style="font-family:var(--sans);font-size:12px;color:var(--ink2);margin-bottom:10px">de los ${fmt(g.total_benef)} beneficiarios del padrón estatal</div>` +
+          `<div style="height:12px;background:var(--border3);border-radius:2px;overflow:hidden;margin-bottom:6px">
+            <div style="height:100%;width:${pesoW}%;background:${meta.av};border-radius:2px;transition:width 1s ease"></div>
+          </div>` +
+          `<div style="font-family:var(--sans);font-size:11px;color:var(--ink2)">${toTitle(prog0.nombre||'—')}</div>`;
+      }
+    }
+
+    /* barra localización */
+    setTimeout(() => {
+      const bar = document.getElementById('inst-loc-bar-'+k);
+      if (bar) bar.style.width = locPct+'%';
+      const sp  = document.getElementById('inst-loc-pct-'+k);
+      if (sp)  sp.textContent  = locPct+'%';
+    }, 300);
+
+    /* KPI strip — color del número = color institucional */
+    const kpiEl = document.getElementById('inst-kpi-'+k);
+    if (kpiEl) kpiEl.innerHTML =
+      `<div class="ss-cell" style="position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:${meta.av}"></div>
+        <div class="ss-lbl">Beneficiarios</div>
+        <div class="ss-num fmt" style="color:${meta.av}">${fmt(v.total)}</div>
+        <div class="ss-sub">${fmtPct(v.total,g.total_benef)} del padrón</div>
+      </div>` +
+      `<div class="ss-cell" style="position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:${meta.av}"></div>
+        <div class="ss-lbl">Apoyos</div>
+        <div class="ss-num fmt" style="color:${meta.av}">${fmt(v.apoyos)}</div>
+        <div class="ss-sub">${(v.apoyos/v.total||0).toFixed(2)} por benef.</div>
+      </div>`;
+  });
 }
 
 /* ════════════════════════════════════════════════
@@ -2083,7 +2385,7 @@ function renderCobertura() {
       <span class="m-lbl">Localizables</span>
     </div>`;
   document.getElementById('meter-desc').innerHTML =
-    `De <strong>${fmt(g.total_benef)}</strong> beneficiarios únicos, <strong style="color:var(--green)">${fmt(loc.total)}</strong> son localizables en el padrón. <strong style="color:var(--fem)">${fmt(loc.m)}</strong> Mujeres · <strong style="color:var(--male)">${fmt(loc.h)}</strong> Hombres.`;
+    `De <strong>${fmt(g.total_benef)}</strong> beneficiarios únicos, <strong>${fmt(loc.total)}</strong> son localizables en el padrón. <strong>${fmt(loc.m)}</strong> Mujeres · <strong>${fmt(loc.h)}</strong> Hombres.`;
 
   // Barras edad localizables
   barList('bar-loc-edad', loc.rangos_edad.map(r=>({name:r.label,val:r.total})), 'bf-green');
