@@ -4,10 +4,9 @@ window.DASHBOARD_DATA = {
   "_meta": {
     "pob_estatal": 4043130,
     "pob_vulnerable": 1792324,
-    "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua",
     "pob_vul_m": 905124,
     "pob_vul_h": 887200,
-    "pob_vul_total": 1792324
+    "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua"
   },
   "general": {
     "total_benef": 182062,
@@ -15,13 +14,13 @@ window.DASHBOARD_DATA = {
     "total_h": 67584,
     "total_sn": 13,
     "total_apoyos": 247980,
-    "total_inst": 5,
+    "total_inst": 6,
     "total_prog": 17,
     "mun_activos": 67,
-    "ninos": 19093,
-    "jovenes": 27386,
-    "adultos": 48549,
-    "mayores": 19994,
+    "ninos": 19075,
+    "jovenes": 27389,
+    "adultos": 48540,
+    "mayores": 20017,
     "cob_estatal_pct": 4.5,
     "cob_vulnerable_pct": 10.2,
     "pres_total": 0,
@@ -32,9 +31,9 @@ window.DASHBOARD_DATA = {
     {
       "label": "0 - 5 años",
       "key": "0-5",
-      "total": 11354,
-      "m": 5414,
-      "h": 5944,
+      "total": 11336,
+      "m": 5403,
+      "h": 5937,
       "sn": 0,
       "pct_total": 6.2
     },
@@ -42,53 +41,53 @@ window.DASHBOARD_DATA = {
       "label": "6 - 11 años",
       "key": "6-11",
       "total": 7739,
-      "m": 3662,
-      "h": 4080,
+      "m": 3664,
+      "h": 4078,
       "sn": 0,
       "pct_total": 4.3
     },
     {
       "label": "12 - 17 años",
       "key": "12-17",
-      "total": 9112,
-      "m": 5084,
-      "h": 4031,
+      "total": 9107,
+      "m": 5078,
+      "h": 4032,
       "sn": 0,
       "pct_total": 5.0
     },
     {
       "label": "18 - 29 años",
       "key": "18-29",
-      "total": 18274,
-      "m": 13994,
-      "h": 4282,
+      "total": 18282,
+      "m": 13999,
+      "h": 4285,
       "sn": 0,
       "pct_total": 10.0
     },
     {
       "label": "30 - 49 años",
       "key": "30-49",
-      "total": 24306,
-      "m": 16913,
-      "h": 7401,
+      "total": 24302,
+      "m": 16912,
+      "h": 7398,
       "sn": 0,
-      "pct_total": 13.4
+      "pct_total": 13.3
     },
     {
       "label": "50 - 64 años",
       "key": "50-64",
-      "total": 24243,
-      "m": 15565,
-      "h": 8688,
+      "total": 24238,
+      "m": 15557,
+      "h": 8691,
       "sn": 0,
       "pct_total": 13.3
     },
     {
       "label": "65 años o más",
       "key": "65+",
-      "total": 19994,
-      "m": 11965,
-      "h": 8041,
+      "total": 20017,
+      "m": 11983,
+      "h": 8046,
       "sn": 0,
       "pct_total": 11.0
     },
@@ -103,10 +102,10 @@ window.DASHBOARD_DATA = {
     }
   ],
   "localizables": {
-    "total": 136311,
-    "m": 86723,
-    "h": 49613,
-    "pct_del_padron": 74.9,
+    "total": 136973,
+    "m": 87139,
+    "h": 49857,
+    "pct_del_padron": 75.2,
     "por_institucion": [
       {
         "nombre": "SALUD",
@@ -116,9 +115,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "nombre": "SDHyBC",
-        "total": 7796,
-        "m": 5060,
-        "h": 2736
+        "total": 7769,
+        "m": 5042,
+        "h": 2727
       },
       {
         "nombre": "DIF",
@@ -137,6 +136,12 @@ window.DASHBOARD_DATA = {
         "total": 66,
         "m": 40,
         "h": 26
+      },
+      {
+        "nombre": "ICHDII",
+        "total": 27,
+        "m": 18,
+        "h": 9
       }
     ],
     "por_municipio": {
@@ -480,37 +485,37 @@ window.DASHBOARD_DATA = {
       {
         "label": "0 - 5 años",
         "key": "0-5",
-        "total": 8983
+        "total": 0
       },
       {
         "label": "6 - 11 años",
         "key": "6-11",
-        "total": 5422
+        "total": 0
       },
       {
         "label": "12 - 17 años",
         "key": "12-17",
-        "total": 5462
+        "total": 0
       },
       {
         "label": "18 - 29 años",
         "key": "18-29",
-        "total": 13257
+        "total": 0
       },
       {
         "label": "30 - 49 años",
         "key": "30-49",
-        "total": 18206
+        "total": 0
       },
       {
         "label": "50 - 64 años",
         "key": "50-64",
-        "total": 20051
+        "total": 0
       },
       {
         "label": "65 años o más",
         "key": "65+",
-        "total": 16301
+        "total": 0
       }
     ]
   },
@@ -564,14 +569,41 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 432,
-        "6-11": 156,
-        "12-17": 149,
-        "18-29": 745,
-        "30-49": 743,
-        "50-64": 420,
+        "0-5": 431,
+        "6-11": 157,
+        "12-17": 148,
+        "18-29": 744,
+        "30-49": 744,
+        "50-64": 421,
         "65+": 457,
         "sin_datos": 52
+      }
+    },
+    "ICHDII": {
+      "total": 27,
+      "m": 18,
+      "h": 9,
+      "sn": 0,
+      "apoyos": 54,
+      "programas": [
+        {
+          "nombre": "PROGAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
+          "total": 27,
+          "m": 18,
+          "h": 9,
+          "sn": 0,
+          "apoyos": 0
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 12,
+        "30-49": 6,
+        "50-64": 9,
+        "65+": 0,
+        "sin_datos": 0
       }
     },
     "ICHIJUV": {
@@ -618,22 +650,22 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 10850,
-        "6-11": 6718,
-        "12-17": 5792,
-        "18-29": 15870,
-        "30-49": 21368,
-        "50-64": 21960,
-        "65+": 17292,
+        "0-5": 10833,
+        "6-11": 6717,
+        "12-17": 5788,
+        "18-29": 15878,
+        "30-49": 21364,
+        "50-64": 21954,
+        "65+": 17316,
         "sin_datos": 93419
       }
     },
     "SDHyBC": {
-      "total": 10612,
-      "m": 6727,
-      "h": 3885,
+      "total": 10585,
+      "m": 6709,
+      "h": 3876,
       "sn": 0,
-      "apoyos": 17665,
+      "apoyos": 17611,
       "programas": [
         {
           "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
@@ -684,14 +716,6 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "PROGAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
-          "total": 27,
-          "m": 18,
-          "h": 9,
-          "sn": 0,
-          "apoyos": 0
-        },
-        {
           "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÍA SOLIDARIA",
           "total": 11,
           "m": 4,
@@ -712,9 +736,9 @@ window.DASHBOARD_DATA = {
         "0-5": 92,
         "6-11": 884,
         "12-17": 1712,
-        "18-29": 1397,
-        "30-49": 2203,
-        "50-64": 1939,
+        "18-29": 1385,
+        "30-49": 2197,
+        "50-64": 1930,
         "65+": 2385,
         "sin_datos": 0
       }
@@ -1887,9 +1911,9 @@ window.DASHBOARD_DATA = {
       "instituciones": [
         {
           "nombre": "SDHyBC",
-          "total": 1252,
-          "m": 724,
-          "h": 528,
+          "total": 1198,
+          "m": 688,
+          "h": 510,
           "muns": 20,
           "programas": [
             {
@@ -1935,13 +1959,6 @@ window.DASHBOARD_DATA = {
               "muns": 3
             },
             {
-              "nombre": "PROGAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
-              "total": 54,
-              "m": 36,
-              "h": 18,
-              "muns": 4
-            },
-            {
               "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÍA SOLIDARIA",
               "total": 40,
               "m": 16,
@@ -1954,6 +1971,22 @@ window.DASHBOARD_DATA = {
               "m": 4,
               "h": 12,
               "muns": 1
+            }
+          ]
+        },
+        {
+          "nombre": "ICHDII",
+          "total": 54,
+          "m": 36,
+          "h": 18,
+          "muns": 4,
+          "programas": [
+            {
+              "nombre": "PROGAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
+              "total": 54,
+              "m": 36,
+              "h": 18,
+              "muns": 4
             }
           ]
         }
@@ -3947,6 +3980,11 @@ window.DASHBOARD_DATA = {
       "m": 0,
       "h": 0
     },
+    "ICHDII": {
+      "total": 54,
+      "m": 36,
+      "h": 18
+    },
     "ICHIJUV": {
       "total": 1692,
       "m": 928,
@@ -3968,9 +4006,9 @@ window.DASHBOARD_DATA = {
       "h": 80972
     },
     "SDHyBC": {
-      "total": 17665,
-      "m": 11212,
-      "h": 6453
+      "total": 17611,
+      "m": 11176,
+      "h": 6435
     },
     "SEECH": {
       "total": 1,
