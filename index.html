@@ -2393,17 +2393,19 @@ function renderInstituciones() {
   };
 
   const rangoChart = (rangos, av, total) => {
-    const keys = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
+    const keys = ['65+','50-64','30-49','18-29','12-17','6-11','0-5'];
     const vals  = keys.map(k => rangos[k]||0);
     const tot   = vals.reduce((s,x)=>s+x,0) || 1;
     return keys.map((k,i) => {
       const w   = (vals[i]/tot*100).toFixed(1);
-      return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-        <div style="font-family:var(--sans);font-size:15px;font-weight:700;color:var(--ink2);width:38px;flex-shrink:0;text-align:right">${RANGOS_LABELS[k]}</div>
-        <div style="flex:1;height:20px;background:var(--border3);border-radius:2px;overflow:hidden">
-          <div style="height:100%;width:${w}%;background:${av};border-radius:2px;transition:width .8s ease"></div>
+      return `<div style="margin-bottom:6px">
+        <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:1px">${RANGOS_LABELS[k]}</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="flex:1;height:20px;background:var(--border3);border-radius:2px;overflow:hidden">
+            <div style="height:100%;width:${w}%;background:${av};border-radius:2px;transition:width .8s ease"></div>
+          </div>
+          <div style="font-family:var(--sans);font-size:13px;color:var(--ink2);width:90px;flex-shrink:0;white-space:nowrap;text-align:right">${fmt(vals[i])} <span style="opacity:.6;font-size:11px">${w}%</span></div>
         </div>
-        <div style="font-family:var(--sans);font-size:15px;color:var(--ink2);width:82px;flex-shrink:0">${fmt(vals[i])} <span style="opacity:.6;font-size:13px">${w}%</span></div>
       </div>`;
     }).join('');
   };
@@ -3706,11 +3708,12 @@ function _card(clave){
     rangos.map(function(r){
       var pct=maxR>0?Math.round((r.v||0)/maxR*100):0;
       return'<div style="margin-bottom:5px">'+
-        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">'+
-          '<span style="font-size:13px;color:var(--ink3);white-space:nowrap">'+r.l+'</span>'+
-          '<strong style="font-size:13px;color:var(--ink)">'+_f(r.v||0)+'</strong></div>'+
-        '<div style="height:6px;background:var(--border2);border-radius:3px;overflow:hidden">'+
-          '<div style="height:100%;width:'+pct+'%;background:'+r.c+';border-radius:3px;transition:width .3s"></div>'+
+        '<span style="font-size:12px;font-weight:700;color:var(--ink3)">'+r.l+'</span>'+
+        '<div style="display:flex;align-items:center;gap:6px;margin-top:1px">'+
+          '<div style="flex:1;height:6px;background:var(--border2);border-radius:3px;overflow:hidden">'+
+            '<div style="height:100%;width:'+pct+'%;background:'+r.c+';border-radius:3px;transition:width .3s"></div>'+
+          '</div>'+
+          '<strong style="font-size:13px;color:var(--ink);min-width:32px;text-align:right">'+_f(r.v||0)+'</strong>'+
         '</div></div>';
     }).join('')+
     '<div style="font-size:11px;color:var(--ink3);margin-top:3px">'+
@@ -3924,5 +3927,6 @@ window.mapaLeafletInit=function(){
 };
 })();
 </script>
+
 </body>
 </html>
