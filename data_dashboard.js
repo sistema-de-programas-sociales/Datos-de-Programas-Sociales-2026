@@ -4439,7 +4439,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ALBERGUES(ALBERGUE COMUNITARIO-ALBERGUE PRIVADO)",
+      "nombre": "ATENCIÓN EN ALBERGUES",
       "total": 671,
       "m": 480,
       "h": 191,
