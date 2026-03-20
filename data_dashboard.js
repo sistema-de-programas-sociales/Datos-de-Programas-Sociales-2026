@@ -13,7 +13,7 @@ window.DASHBOARD_DATA = {
     "total_m": 127213,
     "total_h": 73882,
     "total_sn": 14,
-    "total_apoyos": 281177,
+    "total_apoyos": 281426,
     "total_inst": 7,
     "total_prog": 18,
     "mun_activos": 67,
@@ -605,7 +605,7 @@ window.DASHBOARD_DATA = {
       "m": 17018,
       "h": 8025,
       "sn": 4,
-      "apoyos": 38986,
+      "apoyos": 39235,
       "programas": [
         {
           "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
@@ -860,7 +860,7 @@ window.DASHBOARD_DATA = {
       "h": 16817,
       "sn": 0,
       "poblacion": 1028306,
-      "total_apoyos": 64930,
+      "total_apoyos": 64984,
       "n_programas": 16,
       "localizables": 35314,
       "loc_m": 21386,
@@ -905,7 +905,7 @@ window.DASHBOARD_DATA = {
       "h": 13904,
       "sn": 1,
       "poblacion": 1661295,
-      "total_apoyos": 51829,
+      "total_apoyos": 52016,
       "n_programas": 13,
       "localizables": 32882,
       "loc_m": 21074,
@@ -950,7 +950,7 @@ window.DASHBOARD_DATA = {
       "h": 2982,
       "sn": 0,
       "poblacion": 196633,
-      "total_apoyos": 13291,
+      "total_apoyos": 13292,
       "n_programas": 9,
       "localizables": 7722,
       "loc_m": 5283,
@@ -1130,7 +1130,7 @@ window.DASHBOARD_DATA = {
       "h": 1618,
       "sn": 0,
       "poblacion": 48426,
-      "total_apoyos": 6144,
+      "total_apoyos": 6148,
       "n_programas": 8,
       "localizables": 3867,
       "loc_m": 2406,
@@ -1310,7 +1310,7 @@ window.DASHBOARD_DATA = {
       "h": 927,
       "sn": 0,
       "poblacion": 23060,
-      "total_apoyos": 4192,
+      "total_apoyos": 4193,
       "n_programas": 7,
       "localizables": 1741,
       "loc_m": 1206,
@@ -1895,7 +1895,7 @@ window.DASHBOARD_DATA = {
       "h": 482,
       "sn": 0,
       "poblacion": 16198,
-      "total_apoyos": 1582,
+      "total_apoyos": 1583,
       "n_programas": 5,
       "localizables": 1146,
       "loc_m": 724,
@@ -2030,7 +2030,7 @@ window.DASHBOARD_DATA = {
       "h": 444,
       "sn": 0,
       "poblacion": 4727,
-      "total_apoyos": 1524,
+      "total_apoyos": 1525,
       "n_programas": 7,
       "localizables": 973,
       "loc_m": 584,
@@ -3884,12 +3884,12 @@ window.DASHBOARD_DATA = {
   ],
   "apoyos": [
     {
-      "nombre": "ATENCION MEDICA",
-      "total": 220964,
-      "m": 139992,
-      "h": 80972,
+      "nombre": "ATENCION A LA SALUD",
+      "total": 223749,
+      "m": 141570,
+      "h": 82179,
       "n_muns": 67,
-      "pct": 78.6,
+      "pct": 79.5,
       "instituciones": [
         {
           "nombre": "SALUD",
@@ -3906,68 +3906,151 @@ window.DASHBOARD_DATA = {
               "muns": 69
             }
           ]
-        }
-      ]
-    },
-    {
-      "nombre": "CANASTA ALIMENTARIA",
-      "total": 19988,
-      "m": 13811,
-      "h": 6177,
-      "n_muns": 66,
-      "pct": 7.1,
-      "instituciones": [
+        },
         {
           "nombre": "DIF",
-          "total": 19988,
-          "m": 13811,
-          "h": 6177,
-          "muns": 67,
+          "total": 2785,
+          "m": 1578,
+          "h": 1207,
+          "muns": 22,
           "programas": [
             {
               "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 19988,
-              "m": 13811,
-              "h": 6177,
-              "muns": 67
+              "total": 1757,
+              "m": 1074,
+              "h": 683,
+              "muns": 13
+            },
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 1028,
+              "m": 504,
+              "h": 524,
+              "muns": 12
             }
           ]
         }
       ]
     },
     {
-      "nombre": "TERAPIA FÍSICA",
-      "total": 6558,
-      "m": 3949,
-      "h": 2609,
-      "n_muns": 12,
-      "pct": 2.3,
+      "nombre": "DESPENSA DE ALIMENTOS",
+      "total": 20790,
+      "m": 14584,
+      "h": 6206,
+      "n_muns": 66,
+      "pct": 7.4,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 6558,
-          "m": 3949,
-          "h": 2609,
-          "muns": 13,
+          "total": 20790,
+          "m": 14584,
+          "h": 6206,
+          "muns": 68,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 6558,
-              "m": 3949,
-              "h": 2609,
-              "muns": 13
+              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "total": 20728,
+              "m": 14551,
+              "h": 6177,
+              "muns": 68
+            },
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 62,
+              "m": 33,
+              "h": 29,
+              "muns": 11
             }
           ]
         }
       ]
     },
     {
-      "nombre": "RACIONES ALIMENTICIAS",
-      "total": 2834,
-      "m": 2091,
-      "h": 743,
-      "n_muns": 12,
-      "pct": 1.0,
+      "nombre": "TERAPIA",
+      "total": 8955,
+      "m": 5002,
+      "h": 3953,
+      "n_muns": 19,
+      "pct": 3.2,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 8411,
+          "m": 4605,
+          "h": 3806,
+          "muns": 14,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 8402,
+              "m": 4598,
+              "h": 3804,
+              "muns": 14
+            },
+            {
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 9,
+              "m": 7,
+              "h": 2,
+              "muns": 1
+            }
+          ]
+        },
+        {
+          "nombre": "SDHyBC",
+          "total": 508,
+          "m": 375,
+          "h": 133,
+          "muns": 3,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "total": 447,
+              "m": 324,
+              "h": 123,
+              "muns": 3
+            },
+            {
+              "nombre": "APOYO A PERSONAS MAYORES",
+              "total": 39,
+              "m": 39,
+              "h": 0,
+              "muns": 1
+            },
+            {
+              "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
+              "total": 22,
+              "m": 12,
+              "h": 10,
+              "muns": 1
+            }
+          ]
+        },
+        {
+          "nombre": "ICHIJUV",
+          "total": 36,
+          "m": 22,
+          "h": 14,
+          "muns": 9,
+          "programas": [
+            {
+              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "total": 36,
+              "m": 22,
+              "h": 14,
+              "muns": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ASISTENCIA ALIMENTARIA EN ESPACIO COMÚN",
+      "total": 3946,
+      "m": 2722,
+      "h": 1224,
+      "n_muns": 28,
+      "pct": 1.4,
       "instituciones": [
         {
           "nombre": "DIF",
@@ -3982,6 +4065,159 @@ window.DASHBOARD_DATA = {
               "m": 2091,
               "h": 743,
               "muns": 13
+            }
+          ]
+        },
+        {
+          "nombre": "SDHyBC",
+          "total": 1078,
+          "m": 621,
+          "h": 457,
+          "muns": 21,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "total": 1078,
+              "m": 621,
+              "h": 457,
+              "muns": 21
+            }
+          ]
+        },
+        {
+          "nombre": "SPyCI",
+          "total": 34,
+          "m": 10,
+          "h": 24,
+          "muns": 5,
+          "programas": [
+            {
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
+              "total": 34,
+              "m": 10,
+              "h": 24,
+              "muns": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "CURSO DE CAPACITACIÓN",
+      "total": 3706,
+      "m": 3111,
+      "h": 595,
+      "n_muns": 17,
+      "pct": 1.3,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 2099,
+          "m": 1818,
+          "h": 281,
+          "muns": 13,
+          "programas": [
+            {
+              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "total": 1926,
+              "m": 1704,
+              "h": 222,
+              "muns": 12
+            },
+            {
+              "nombre": "PROGRAMA DE SALUD Y BIENESTAR COMUNITARIO",
+              "total": 173,
+              "m": 114,
+              "h": 59,
+              "muns": 4
+            }
+          ]
+        },
+        {
+          "nombre": "SDHyBC",
+          "total": 1607,
+          "m": 1293,
+          "h": 314,
+          "muns": 4,
+          "programas": [
+            {
+              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "total": 1587,
+              "m": 1283,
+              "h": 304,
+              "muns": 1
+            },
+            {
+              "nombre": "APOYO A PERSONAS MAYORES",
+              "total": 20,
+              "m": 10,
+              "h": 10,
+              "muns": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "CULTURA Y RECREACIÓN",
+      "total": 2589,
+      "m": 1579,
+      "h": 1010,
+      "n_muns": 8,
+      "pct": 0.9,
+      "instituciones": [
+        {
+          "nombre": "ICHIJUV",
+          "total": 1369,
+          "m": 710,
+          "h": 659,
+          "muns": 3,
+          "programas": [
+            {
+              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "total": 1369,
+              "m": 710,
+              "h": 659,
+              "muns": 3
+            }
+          ]
+        },
+        {
+          "nombre": "SDHyBC",
+          "total": 982,
+          "m": 686,
+          "h": 296,
+          "muns": 8,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "total": 722,
+              "m": 467,
+              "h": 255,
+              "muns": 6
+            },
+            {
+              "nombre": "APOYO A PERSONAS MAYORES",
+              "total": 260,
+              "m": 219,
+              "h": 41,
+              "muns": 3
+            }
+          ]
+        },
+        {
+          "nombre": "DIF",
+          "total": 238,
+          "m": 183,
+          "h": 55,
+          "muns": 1,
+          "programas": [
+            {
+              "nombre": "ESPARCIMIENTO PARA EL DESARROLLO FAMILIAR",
+              "total": 238,
+              "m": 183,
+              "h": 55,
+              "muns": 1
             }
           ]
         }
@@ -4029,81 +4265,6 @@ window.DASHBOARD_DATA = {
               "m": 114,
               "h": 80,
               "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CAPACITACION",
-      "total": 1592,
-      "m": 1247,
-      "h": 345,
-      "n_muns": 8,
-      "pct": 0.6,
-      "instituciones": [
-        {
-          "nombre": "SDHyBC",
-          "total": 1419,
-          "m": 1133,
-          "h": 286,
-          "muns": 4,
-          "programas": [
-            {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
-              "total": 1399,
-              "m": 1123,
-              "h": 276,
-              "muns": 1
-            },
-            {
-              "nombre": "APOYO A PERSONAS MAYORES",
-              "total": 20,
-              "m": 10,
-              "h": 10,
-              "muns": 3
-            }
-          ]
-        },
-        {
-          "nombre": "DIF",
-          "total": 173,
-          "m": 114,
-          "h": 59,
-          "muns": 4,
-          "programas": [
-            {
-              "nombre": "PROGRAMA DE SALUD Y BIENESTAR COMUNITARIO",
-              "total": 173,
-              "m": 114,
-              "h": 59,
-              "muns": 4
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VALORACIÓN NUTRICIONAL A NIÑOS Y NIÑAS",
-      "total": 1488,
-      "m": 807,
-      "h": 681,
-      "n_muns": 12,
-      "pct": 0.5,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1488,
-          "m": 807,
-          "h": 681,
-          "muns": 13,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 1488,
-              "m": 807,
-              "h": 681,
-              "muns": 13
             }
           ]
         }
@@ -4162,32 +4323,6 @@ window.DASHBOARD_DATA = {
               "m": 29,
               "h": 1,
               "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "EVENTOS LÚDICOS",
-      "total": 1369,
-      "m": 710,
-      "h": 659,
-      "n_muns": 3,
-      "pct": 0.5,
-      "instituciones": [
-        {
-          "nombre": "ICHIJUV",
-          "total": 1369,
-          "m": 710,
-          "h": 659,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
-              "total": 1369,
-              "m": 710,
-              "h": 659,
-              "muns": 3
             }
           ]
         }
@@ -4278,92 +4413,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CAPACITACIÓN EN ORIENTACIÓN ALIMENTARIA",
-      "total": 1200,
-      "m": 1042,
-      "h": 158,
-      "n_muns": 12,
-      "pct": 0.4,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1200,
-          "m": 1042,
-          "h": 158,
-          "muns": 12,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 1200,
-              "m": 1042,
-              "h": 158,
-              "muns": 12
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ASISTENCIA ALIMENTARIA EN ESPACIO COMÚN",
-      "total": 1078,
-      "m": 621,
-      "h": 457,
-      "n_muns": 21,
-      "pct": 0.4,
-      "instituciones": [
-        {
-          "nombre": "SDHyBC",
-          "total": 1078,
-          "m": 621,
-          "h": 457,
-          "muns": 21,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
-              "total": 1078,
-              "m": 621,
-              "h": 457,
-              "muns": 21
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CULTURA Y RECREACION",
-      "total": 982,
-      "m": 686,
-      "h": 296,
-      "n_muns": 8,
-      "pct": 0.3,
-      "instituciones": [
-        {
-          "nombre": "SDHyBC",
-          "total": 982,
-          "m": 686,
-          "h": 296,
-          "muns": 8,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
-              "total": 722,
-              "m": 467,
-              "h": 255,
-              "muns": 6
-            },
-            {
-              "nombre": "APOYO A PERSONAS MAYORES",
-              "total": 260,
-              "m": 219,
-              "h": 41,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PASAJE",
+      "nombre": "PASAJES",
       "total": 898,
       "m": 579,
       "h": 319,
@@ -4389,78 +4439,26 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TERAPIA DE LENGUAJE",
-      "total": 859,
-      "m": 258,
-      "h": 601,
-      "n_muns": 7,
-      "pct": 0.3,
+      "nombre": "ALBERGUES(ALBERGUE COMUNITARIO-ALBERGUE PRIVADO)",
+      "total": 671,
+      "m": 480,
+      "h": 191,
+      "n_muns": 10,
+      "pct": 0.2,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 859,
-          "m": 258,
-          "h": 601,
-          "muns": 7,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 859,
-              "m": 258,
-              "h": 601,
-              "muns": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "DESPENSAS",
-      "total": 740,
-      "m": 740,
-      "h": 0,
-      "n_muns": 0,
-      "pct": 0.3,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 740,
-          "m": 740,
-          "h": 0,
-          "muns": 1,
+          "total": 671,
+          "m": 480,
+          "h": 191,
+          "muns": 11,
           "programas": [
             {
               "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 740,
-              "m": 740,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CAPACITACIÓN EN EMBARAZO Y LACTANCIA",
-      "total": 726,
-      "m": 662,
-      "h": 64,
-      "n_muns": 12,
-      "pct": 0.3,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 726,
-          "m": 662,
-          "h": 64,
-          "muns": 12,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 726,
-              "m": 662,
-              "h": 64,
-              "muns": 12
+              "total": 671,
+              "m": 480,
+              "h": 191,
+              "muns": 11
             }
           ]
         }
@@ -4519,167 +4517,75 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TERAPIA",
-      "total": 508,
-      "m": 375,
-      "h": 133,
-      "n_muns": 3,
-      "pct": 0.2,
-      "instituciones": [
-        {
-          "nombre": "SDHyBC",
-          "total": 508,
-          "m": 375,
-          "h": 133,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
-              "total": 447,
-              "m": 324,
-              "h": 123,
-              "muns": 3
-            },
-            {
-              "nombre": "APOYO A PERSONAS MAYORES",
-              "total": 39,
-              "m": 39,
-              "h": 0,
-              "muns": 1
-            },
-            {
-              "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
-              "total": 22,
-              "m": 12,
-              "h": 10,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "TERAPIA OCUPACIONAL",
-      "total": 457,
-      "m": 220,
-      "h": 237,
-      "n_muns": 3,
-      "pct": 0.2,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 457,
-          "m": 220,
-          "h": 237,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 457,
-              "m": 220,
-              "h": 237,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "DOCUMENTOS DE GESTIÓN INSTITUCIONAL",
-      "total": 456,
-      "m": 283,
-      "h": 173,
-      "n_muns": 24,
+      "nombre": "GESTIÓN Y VINCULACIÓN",
+      "total": 505,
+      "m": 315,
+      "h": 190,
+      "n_muns": 25,
       "pct": 0.2,
       "instituciones": [
         {
           "nombre": "SPyCI",
-          "total": 456,
-          "m": 283,
-          "h": 173,
-          "muns": 24,
+          "total": 469,
+          "m": 293,
+          "h": 176,
+          "muns": 25,
           "programas": [
             {
               "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 456,
-              "m": 283,
-              "h": 173,
-              "muns": 24
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "TERAPIA PSICOLÓGICA",
-      "total": 378,
-      "m": 133,
-      "h": 245,
-      "n_muns": 10,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 342,
-          "m": 111,
-          "h": 231,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 342,
-              "m": 111,
-              "h": 231,
-              "muns": 3
+              "total": 469,
+              "m": 293,
+              "h": 176,
+              "muns": 25
             }
           ]
         },
         {
-          "nombre": "ICHIJUV",
+          "nombre": "DIF",
           "total": 36,
           "m": 22,
           "h": 14,
-          "muns": 9,
+          "muns": 1,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "FORTALECIMIENTO FAMILIAR",
               "total": 36,
               "m": 22,
               "h": 14,
-              "muns": 9
+              "muns": 1
             }
           ]
         }
       ]
     },
     {
-      "nombre": "ALBERGUE A ACOMPAÑANTES",
-      "total": 353,
-      "m": 213,
-      "h": 140,
-      "n_muns": 10,
+      "nombre": "PAGO DE CONSULTAS, ESTUDIOS, CIRUGIAS, MEDICAMENTOS Y PROTESIS",
+      "total": 381,
+      "m": 225,
+      "h": 156,
+      "n_muns": 30,
       "pct": 0.1,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 353,
-          "m": 213,
-          "h": 140,
-          "muns": 10,
+          "total": 381,
+          "m": 225,
+          "h": 156,
+          "muns": 30,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 353,
-              "m": 213,
-              "h": 140,
-              "muns": 10
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 381,
+              "m": 225,
+              "h": 156,
+              "muns": 30
             }
           ]
         }
       ]
     },
     {
-      "nombre": "CREDENCIAL DE DISCAPACIDAD",
+      "nombre": "CREDENCIAL DE DESCUENTO",
       "total": 286,
       "m": 121,
       "h": 165,
@@ -4705,7 +4611,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ESPACIOS EN CENTROS COMUNITARIOS",
+      "nombre": "CENTROS COMUNITARIOS Y OTROS ESPACIOS PARA EL DESARROLLO, Y SU CONTENIDO DIGITAL.",
       "total": 284,
       "m": 196,
       "h": 88,
@@ -4731,85 +4637,33 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "VALORACIÓN NUTRICIONAL A MUJER EMBARAZADA",
-      "total": 269,
-      "m": 267,
-      "h": 2,
-      "n_muns": 12,
+      "nombre": "DESARROLLO DE CAPACIDADES Y FORMACION DE CAPITAL SOCIAL",
+      "total": 252,
+      "m": 228,
+      "h": 23,
+      "n_muns": 2,
       "pct": 0.1,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 269,
-          "m": 267,
-          "h": 2,
-          "muns": 13,
+          "total": 252,
+          "m": 228,
+          "h": 23,
+          "muns": 3,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 269,
-              "m": 267,
-              "h": 2,
-              "muns": 13
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 252,
+              "m": 228,
+              "h": 23,
+              "muns": 3
             }
           ]
         }
       ]
     },
     {
-      "nombre": "CERTIFICADO MEDICO",
-      "total": 249,
-      "m": 104,
-      "h": 145,
-      "n_muns": 7,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 249,
-          "m": 104,
-          "h": 145,
-          "muns": 7,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 249,
-              "m": 104,
-              "h": 145,
-              "muns": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CURSO DE NATACIÓN",
-      "total": 238,
-      "m": 183,
-      "h": 55,
-      "n_muns": 1,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 238,
-          "m": 183,
-          "h": 55,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "ESPARCIMIENTO PARA EL DESARROLLO FAMILIAR",
-              "total": 238,
-              "m": 183,
-              "h": 55,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "HOSPEDAJE Y ALIMENTACIÓN - ESTANCIA TEMPORAL",
+      "nombre": "HOSPEDAJE Y ALIMENTACION",
       "total": 235,
       "m": 143,
       "h": 92,
@@ -4829,32 +4683,6 @@ window.DASHBOARD_DATA = {
               "m": 143,
               "h": 92,
               "muns": 23
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ALBERGUE A MUJER EMBARAZADA",
-      "total": 230,
-      "m": 228,
-      "h": 2,
-      "n_muns": 8,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 230,
-          "m": 228,
-          "h": 2,
-          "muns": 9,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 230,
-              "m": 228,
-              "h": 2,
-              "muns": 9
             }
           ]
         }
@@ -4901,111 +4729,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "PRECONSULTA MÉDICA",
-      "total": 205,
-      "m": 104,
-      "h": 101,
-      "n_muns": 5,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 205,
-          "m": 104,
-          "h": 101,
-          "muns": 6,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 205,
-              "m": 104,
-              "h": 101,
-              "muns": 6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CONSULTA MÉDICA ESPECIALIZADA EN REHABILITACIÓN FÍSICA",
-      "total": 199,
-      "m": 126,
-      "h": 73,
-      "n_muns": 4,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 199,
-          "m": 126,
-          "h": 73,
-          "muns": 5,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 199,
-              "m": 126,
-              "h": 73,
-              "muns": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CURSO DE CAPACITACIÓN",
-      "total": 188,
-      "m": 160,
-      "h": 28,
-      "n_muns": 1,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "SDHyBC",
-          "total": 188,
-          "m": 160,
-          "h": 28,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
-              "total": 188,
-              "m": 160,
-              "h": 28,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - MEDICAMENTO",
-      "total": 182,
-      "m": 105,
-      "h": 77,
-      "n_muns": 19,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 182,
-          "m": 105,
-          "h": 77,
-          "muns": 19,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 182,
-              "m": 105,
-              "h": 77,
-              "muns": 19
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PROYECTO",
+      "nombre": "PROYECTO PRODUCTIVO",
       "total": 182,
       "m": 125,
       "h": 57,
@@ -5025,32 +4749,6 @@ window.DASHBOARD_DATA = {
               "m": 125,
               "h": 57,
               "muns": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "MEDICAMENTOS",
-      "total": 177,
-      "m": 110,
-      "h": 67,
-      "n_muns": 22,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 177,
-          "m": 110,
-          "h": 67,
-          "muns": 22,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 177,
-              "m": 110,
-              "h": 67,
-              "muns": 22
             }
           ]
         }
@@ -5083,51 +4781,41 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TERAPIA DE REHAB. CARDIOVASCULAR Y RESPIRATORIO",
-      "total": 122,
-      "m": 41,
-      "h": 81,
-      "n_muns": 1,
-      "pct": 0.0,
+      "nombre": "APOYO EN GASTOS FUNERARIOS",
+      "total": 171,
+      "m": 107,
+      "h": 64,
+      "n_muns": 16,
+      "pct": 0.1,
       "instituciones": [
         {
-          "nombre": "DIF",
-          "total": 122,
-          "m": 41,
-          "h": 81,
-          "muns": 1,
+          "nombre": "SPyCI",
+          "total": 143,
+          "m": 95,
+          "h": 48,
+          "muns": 16,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 122,
-              "m": 41,
-              "h": 81,
-              "muns": 1
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
+              "total": 143,
+              "m": 95,
+              "h": 48,
+              "muns": 16
             }
           ]
-        }
-      ]
-    },
-    {
-      "nombre": "CONSULTA MÉDICA LOCAL",
-      "total": 121,
-      "m": 64,
-      "h": 57,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
+        },
         {
           "nombre": "DIF",
-          "total": 121,
-          "m": 64,
-          "h": 57,
+          "total": 28,
+          "m": 12,
+          "h": 16,
           "muns": 3,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 121,
-              "m": 64,
-              "h": 57,
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 28,
+              "m": 12,
+              "h": 16,
               "muns": 3
             }
           ]
@@ -5135,7 +4823,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "SERVICIO DE VINCULACION LABORAL",
+      "nombre": "SERVICIO DE VINCULACIÓN LABORAL",
       "total": 107,
       "m": 42,
       "h": 65,
@@ -5168,171 +4856,32 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ALBERGUE A NIÑOS Y NIÑAS",
-      "total": 88,
-      "m": 39,
-      "h": 49,
+      "nombre": "ANALISIS CLINICO",
+      "total": 55,
+      "m": 37,
+      "h": 18,
       "n_muns": 8,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 88,
-          "m": 39,
-          "h": 49,
-          "muns": 9,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 88,
-              "m": 39,
-              "h": 49,
-              "muns": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "SERVICIO FUNERARIO",
-      "total": 88,
-      "m": 58,
-      "h": 30,
-      "n_muns": 14,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "SPyCI",
-          "total": 80,
-          "m": 54,
-          "h": 26,
-          "muns": 14,
-          "programas": [
-            {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 80,
-              "m": 54,
-              "h": 26,
-              "muns": 14
-            }
-          ]
-        },
-        {
-          "nombre": "DIF",
-          "total": 8,
-          "m": 4,
-          "h": 4,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 8,
-              "m": 4,
-              "h": 4,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CRIANZA AFECTIVA",
-      "total": 82,
-      "m": 67,
-      "h": 15,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 82,
-          "m": 67,
-          "h": 15,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 82,
-              "m": 67,
-              "h": 15,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "OTROS TIPOS DE APOYOS - DESPENSAS",
-      "total": 46,
-      "m": 26,
-      "h": 20,
-      "n_muns": 7,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 46,
-          "m": 26,
-          "h": 20,
+          "total": 55,
+          "m": 37,
+          "h": 18,
           "muns": 8,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 46,
-              "m": 26,
-              "h": 20,
-              "muns": 8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PREVENCIÓN DE LA VIOLENCIA SEXUAL EN NNA",
-      "total": 46,
-      "m": 40,
-      "h": 5,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 46,
-          "m": 40,
-          "h": 5,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 46,
-              "m": 40,
-              "h": 5,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "MEJORAR LAS HABILIDADES DE CRIANZA",
-      "total": 45,
-      "m": 45,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 45,
-          "m": 45,
-          "h": 0,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
               "total": 45,
-              "m": 45,
-              "h": 0,
+              "m": 32,
+              "h": 13,
+              "muns": 7
+            },
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 10,
+              "m": 5,
+              "h": 5,
               "muns": 2
             }
           ]
@@ -5340,59 +4889,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TRÁMITE FUNERARIO APOYADO",
-      "total": 45,
-      "m": 32,
-      "h": 13,
-      "n_muns": 11,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "SPyCI",
-          "total": 45,
-          "m": 32,
-          "h": 13,
-          "muns": 11,
-          "programas": [
-            {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 45,
-              "m": 32,
-              "h": 13,
-              "muns": 11
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "TERAPIA NEUROSENSORIAL Y ESTIMULACIÓN TEMPRANA",
-      "total": 40,
-      "m": 10,
-      "h": 30,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 40,
-          "m": 10,
-          "h": 30,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 40,
-              "m": 10,
-              "h": 30,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PAÑALES",
+      "nombre": "INSUMOS VARIOS",
       "total": 36,
       "m": 21,
       "h": 15,
@@ -5418,77 +4915,25 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "REUNION DE VINCULACION",
-      "total": 36,
-      "m": 22,
+      "nombre": "MATERIAL DE CIRUGIA",
+      "total": 30,
+      "m": 16,
       "h": 14,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 36,
-          "m": 22,
-          "h": 14,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 36,
-              "m": 22,
-              "h": 14,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ABC DE LA CRIANZA",
-      "total": 34,
-      "m": 32,
-      "h": 2,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 34,
-          "m": 32,
-          "h": 2,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 34,
-              "m": 32,
-              "h": 2,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PLATILLOS BRINDADOS EN ESTANCIA TEMPORAL",
-      "total": 34,
-      "m": 10,
-      "h": 24,
       "n_muns": 5,
       "pct": 0.0,
       "instituciones": [
         {
-          "nombre": "SPyCI",
-          "total": 34,
-          "m": 10,
-          "h": 24,
+          "nombre": "DIF",
+          "total": 30,
+          "m": 16,
+          "h": 14,
           "muns": 5,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 34,
-              "m": 10,
-              "h": 24,
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 30,
+              "m": 16,
+              "h": 14,
               "muns": 5
             }
           ]
@@ -5496,59 +4941,33 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "PREVENCION DEL ABUSO SEXUAL",
+      "nombre": "PAGO DE SERVICIOS MEDICOS",
       "total": 24,
-      "m": 23,
-      "h": 1,
-      "n_muns": 1,
+      "m": 11,
+      "h": 13,
+      "n_muns": 4,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
           "total": 24,
-          "m": 23,
-          "h": 1,
-          "muns": 1,
+          "m": 11,
+          "h": 13,
+          "muns": 4,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
               "total": 24,
-              "m": 23,
-              "h": 1,
-              "muns": 1
+              "m": 11,
+              "h": 13,
+              "muns": 4
             }
           ]
         }
       ]
     },
     {
-      "nombre": "TERAPIA DE LENGUAJE GRUPAL",
-      "total": 24,
-      "m": 9,
-      "h": 15,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 24,
-          "m": 9,
-          "h": 15,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 24,
-              "m": 9,
-              "h": 15,
-              "muns": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PRÓTESIS",
+      "nombre": "PRÓTESIS DESARTICULADO DE CADERA",
       "total": 22,
       "m": 4,
       "h": 18,
@@ -5568,110 +4987,6 @@ window.DASHBOARD_DATA = {
               "m": 4,
               "h": 18,
               "muns": 12
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "MEJORAR LAS HABILIADDES DE CRIANZA EN BENEFICIO DE NNA.",
-      "total": 21,
-      "m": 21,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 21,
-          "m": 21,
-          "h": 0,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 21,
-              "m": 21,
-              "h": 0,
-              "muns": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS DE DEFUNCIÓN - SERVICIO FUNERARIO",
-      "total": 20,
-      "m": 8,
-      "h": 12,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 20,
-          "m": 8,
-          "h": 12,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 20,
-              "m": 8,
-              "h": 12,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "TRÁMITE FUNERARIO GESTIONADO",
-      "total": 18,
-      "m": 9,
-      "h": 9,
-      "n_muns": 7,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "SPyCI",
-          "total": 18,
-          "m": 9,
-          "h": 9,
-          "muns": 7,
-          "programas": [
-            {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 18,
-              "m": 9,
-              "h": 9,
-              "muns": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - IMAGENOLOGÍA",
-      "total": 16,
-      "m": 13,
-      "h": 3,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 16,
-          "m": 13,
-          "h": 3,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 16,
-              "m": 13,
-              "h": 3,
-              "muns": 2
             }
           ]
         }
@@ -5704,33 +5019,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "GESTIÓN DE APOYO",
-      "total": 13,
-      "m": 10,
-      "h": 3,
-      "n_muns": 6,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "SPyCI",
-          "total": 13,
-          "m": 10,
-          "h": 3,
-          "muns": 6,
-          "programas": [
-            {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDÍGENA",
-              "total": 13,
-              "m": 10,
-              "h": 3,
-              "muns": 6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PAQUETE ALIMENTARIO EMERGENTE",
+      "nombre": "PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA",
       "total": 13,
       "m": 9,
       "h": 4,
@@ -5756,77 +5045,51 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYOS MÉDICOS",
-      "total": 12,
-      "m": 6,
-      "h": 6,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 12,
-          "m": 6,
-          "h": 6,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 12,
-              "m": 6,
-              "h": 6,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - INSUMOS MÉDICOS",
-      "total": 12,
-      "m": 6,
-      "h": 6,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 12,
-          "m": 6,
-          "h": 6,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 12,
-              "m": 6,
-              "h": 6,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/PAQUETE ALIMENTARIO:\nDONACION DE PAQUETE ALIMENTARIO EMERGENTE A MUJER EN UNA SITUACION DE INSEGURIDAD ALIMENTARIA.",
-      "total": 10,
+      "nombre": "SILLA DE RUEDAS",
+      "total": 9,
       "m": 4,
-      "h": 6,
+      "h": 5,
+      "n_muns": 5,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 9,
+          "m": 4,
+          "h": 5,
+          "muns": 5,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 9,
+              "m": 4,
+              "h": 5,
+              "muns": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "REHABILITACION Y MANTENIMIENTO DE INFRAESTRUCTURA",
+      "total": 8,
+      "m": 1,
+      "h": 7,
       "n_muns": 4,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 10,
-          "m": 4,
-          "h": 6,
+          "total": 8,
+          "m": 1,
+          "h": 7,
           "muns": 4,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 10,
-              "m": 4,
-              "h": 6,
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 8,
+              "m": 1,
+              "h": 7,
               "muns": 4
             }
           ]
@@ -5834,59 +5097,33 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYOS MÉDICOS - ESTUDIO DE LABORATORIO",
-      "total": 9,
-      "m": 6,
-      "h": 3,
-      "n_muns": 1,
+      "nombre": "LENTES",
+      "total": 7,
+      "m": 3,
+      "h": 4,
+      "n_muns": 3,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 9,
-          "m": 6,
-          "h": 3,
-          "muns": 1,
+          "total": 7,
+          "m": 3,
+          "h": 4,
+          "muns": 3,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 9,
-              "m": 6,
-              "h": 3,
-              "muns": 1
+              "total": 7,
+              "m": 3,
+              "h": 4,
+              "muns": 3
             }
           ]
         }
       ]
     },
     {
-      "nombre": "MODIFICACIÓN CONDUCTUAL",
-      "total": 9,
-      "m": 7,
-      "h": 2,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 9,
-          "m": 7,
-          "h": 2,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 9,
-              "m": 7,
-              "h": 2,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ORTESIS",
+      "nombre": "MATERIAL DE OSTEOSÍNTESIS",
       "total": 7,
       "m": 2,
       "h": 5,
@@ -5912,25 +5149,25 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "REPARACIÓN Y AJUSTE DE PRÓTESIS",
+      "nombre": "APOYOS EXTRAORDINARIOS",
       "total": 6,
-      "m": 0,
-      "h": 6,
+      "m": 3,
+      "h": 3,
       "n_muns": 4,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
           "total": 6,
-          "m": 0,
-          "h": 6,
+          "m": 3,
+          "h": 3,
           "muns": 4,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
               "total": 6,
-              "m": 0,
-              "h": 6,
+              "m": 3,
+              "h": 3,
               "muns": 4
             }
           ]
@@ -5938,25 +5175,25 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYOS MÉDICOS - CUENTA HOSPITALARIA",
-      "total": 5,
-      "m": 1,
-      "h": 4,
+      "nombre": "ARTÍCULOS Y ACCESORIOS PARA DISCAPACITADOS",
+      "total": 6,
+      "m": 4,
+      "h": 2,
       "n_muns": 2,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 5,
-          "m": 1,
-          "h": 4,
+          "total": 6,
+          "m": 4,
+          "h": 2,
           "muns": 2,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 5,
-              "m": 1,
-              "h": 4,
+              "total": 6,
+              "m": 4,
+              "h": 2,
               "muns": 2
             }
           ]
@@ -5964,245 +5201,63 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CONSULTA MÉDICA PARA REHAB. CARDIOVASCULAR Y RESPIRATORIO",
-      "total": 5,
-      "m": 2,
-      "h": 3,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 5,
-          "m": 2,
-          "h": 3,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 5,
-              "m": 2,
-              "h": 3,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PRUEBAS Y ESTUDIOS -REHAB. CARDIOVASCULAR Y RESPIRATORIO",
-      "total": 5,
-      "m": 2,
-      "h": 3,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 5,
-          "m": 2,
-          "h": 3,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 5,
-              "m": 2,
-              "h": 3,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/PAQUETE ALIMENTARIO:\nDONACION DE PAQUETE ALIMENTARIO EMERGENTE A HOMBRE EN UNA SITUACION DE INSEGURIDAD ALIMENTARIA.",
-      "total": 5,
-      "m": 2,
-      "h": 3,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 5,
-          "m": 2,
-          "h": 3,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 5,
-              "m": 2,
-              "h": 3,
-              "muns": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD - SILLA DE RUEDAS",
-      "total": 4,
-      "m": 2,
-      "h": 2,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 4,
-          "m": 2,
-          "h": 2,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 4,
-              "m": 2,
-              "h": 2,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - COLOSTOMÍA",
-      "total": 4,
-      "m": 3,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 4,
-          "m": 3,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 4,
-              "m": 3,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ESTUDIO EMG",
-      "total": 4,
-      "m": 2,
-      "h": 2,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 4,
-          "m": 2,
-          "h": 2,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 4,
-              "m": 2,
-              "h": 2,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "OTROS TIPOS DE APOYOS",
-      "total": 4,
-      "m": 1,
-      "h": 3,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 4,
-          "m": 1,
-          "h": 3,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 4,
-              "m": 1,
-              "h": 3,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/TRATAMIENTO QUIRURGICO:\nAPOYO ECONOMICO PARA EL PAGO DE TRATAMIENTO QUIRURGICO OFTAMOLOGICO A FAVOR DE HOMBRE EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 4,
-      "m": 1,
-      "h": 3,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 4,
-          "m": 1,
-          "h": 3,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 4,
-              "m": 1,
-              "h": 3,
-              "muns": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - DIÁLISIS",
+      "nombre": "APOYO PARA DISCAPACIDAD",
       "total": 3,
-      "m": 1,
-      "h": 2,
-      "n_muns": 1,
+      "m": 2,
+      "h": 1,
+      "n_muns": 2,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
           "total": 3,
-          "m": 1,
-          "h": 2,
-          "muns": 1,
+          "m": 2,
+          "h": 1,
+          "muns": 2,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
               "total": 3,
-              "m": 1,
-              "h": 2,
-              "muns": 1
+              "m": 2,
+              "h": 1,
+              "muns": 2
             }
           ]
         }
       ]
     },
     {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
+      "nombre": "ANDADERA",
+      "total": 2,
+      "m": 1,
+      "h": 1,
+      "n_muns": 2,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 2,
+          "m": 1,
+          "h": 1,
+          "muns": 2,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 2,
+              "m": 1,
+              "h": 1,
+              "muns": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "CAMA/COLCHON/COLCHONETA",
       "total": 2,
       "m": 2,
       "h": 0,
-      "n_muns": 1,
+      "n_muns": 2,
       "pct": 0.0,
       "instituciones": [
         {
@@ -6210,125 +5265,21 @@ window.DASHBOARD_DATA = {
           "total": 2,
           "m": 2,
           "h": 0,
-          "muns": 1,
+          "muns": 2,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
               "total": 2,
               "m": 2,
               "h": 0,
-              "muns": 1
+              "muns": 2
             }
           ]
         }
       ]
     },
     {
-      "nombre": "APOYOS MÉDICOS - MATERIAL DE CURACIÓN",
-      "total": 2,
-      "m": 1,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 2,
-          "m": 1,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 2,
-              "m": 1,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS MÉDICOS - OTROS TIPOS",
-      "total": 2,
-      "m": 1,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 2,
-          "m": 1,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 2,
-              "m": 1,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "LENTES GRADUADOS",
-      "total": 2,
-      "m": 1,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 2,
-          "m": 1,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 2,
-              "m": 1,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "REPARACIÓN Y AJUSTE DE ÓRTESIS",
-      "total": 2,
-      "m": 1,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 2,
-          "m": 1,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 2,
-              "m": 1,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\n- 5 CAJAS DE BOLSAS PARA DIALISIS AL 1.5 %.",
+      "nombre": "MULETAS",
       "total": 2,
       "m": 0,
       "h": 2,
@@ -6354,7 +5305,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ACOMPAÑAMIENTO EN SITUACIÓN EMERGENTE",
+      "nombre": "*** PENDIENTE ***",
       "total": 1,
       "m": 0,
       "h": 1,
@@ -6380,7 +5331,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO 6 PAQUETES DE BOLSAS DE COLOSTOMIA",
+      "nombre": "APOYO PARA UTILES",
       "total": 1,
       "m": 1,
       "h": 0,
@@ -6406,215 +5357,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO DE ESTUDIO MEDICO CUANTIFERON TB, ORO",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE LENTES ADAPTADOS",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA ANDADERA CON ASIENTO",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA CIRUGIA OCULAR",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA SILLA DE DUCHA",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA SILLA DE RUEDAS 16\"",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA SILLA DE RUEDAS BASICA",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO DE UNA SONOGRAFIA ABDOMINAL INFERIOR",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO EN ESPECIE",
+      "nombre": "APOYOS DIVERSOS EN ESPECIE",
       "total": 1,
       "m": 1,
       "h": 0,
@@ -6640,33 +5383,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO PARA UN PERFIL HORMONAL FEMENINO 5, PERFIL TIROIDEO Y VITAMINA D 25",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PARA UNA RESONANCIA MAGNETICA DE COLUMNA LUMBAR SIMPLE",
+      "nombre": "ASISTENCIA TECNICA Y ACOMPAÑAMIENTO",
       "total": 1,
       "m": 0,
       "h": 1,
@@ -6692,59 +5409,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO PARCIAL PARA CIRUGIA OCULAR",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL 2 PZ BOLSA RECORTABLE TRANSPARENTE 64 MM",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL ABCITO 40 MG C/28 TAB",
+      "nombre": "AUXILIAR AUDITIVO",
       "total": 1,
       "m": 1,
       "h": 0,
@@ -6770,1723 +5435,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO PROPORCIONAL ACIDO FOLINICO 50 MG /4 ML",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL C PAP HERGOM",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL DE UNA CIRUGIA DE CATARATA EN OJO DERECHO",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL FULVESTRANT 250 MG SOL INY",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL PARA CIRUGIA DE CATARATA",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL PARA ESTUDIO MEDICO TAC DE ABDOMEN TOTAL I Y II",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPORCIONAL PARA LA COMPRA DE BEVACIZUMAB 400 MG /16 ML",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO PROPROCIONAL PARA RITUXIMAB SOLUNCION INYECTABLE 500 MG /50 ML",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYO UNA SILLA DE DE DUCHA, UNA ANDADERA",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD - ANDADOR",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD - MULETAS",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD - OTROS APOYOS",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD - SILLA DE DUCHA",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS ESCOLARES - ÚTILES ESCOLARES",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "APOYOS PARA PERSONAS CON DISCAPACIDAD - APARATO AUDITIVO",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "CATETER PUERTO POLISTE 8FR PERFIL BAJO",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "COORDINACION DE ATENCION CIUDADANA/APOYOS MEDICOS (ESTUDIOS DE LABORATORIO Y MEDICAMENTOS):\n- 10 CEFTRIAXONA 1 G.\n- 1 RENEGY 500 MG.\n- BHC.\n- QS 4 ELEMENTOS.\n- ELECTROLITROS SERICOS COMPLETOS.\n- PROCALATONINA PCR.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "HOSPITAL GENERAL/MEDICAMENTO:\n- 1 FENAZOPIRIDINA 100 MG. C/20 TAB. PSICOFARM.\n- 1 METOCLOPRAMIDA 10 MG. C/20 TAB. AVIVIA.\n- 10 CEFTRIAXONA 1 G. SOL. INY. IV AMCEF.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "MATERIAL DE CURACION",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "METILFENIDATO TAB LIBERACION PROLONGADA 27 MG",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "OTROS TIPOS DE APOYOS - ALMACEN GENERAL",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PPNNA  MEDICAMENTO: 2 OLANZAPINA 5 MG CON 14 TAB., 2 FLUOXETINA 20 MG CON 14 TAB.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PPNNA MEDICAMENTOS: 1 QUIMICA SANGUINEA DE 6 ELEMENTOS, 1 BIOMETRIA HEMATICA CON PAQUETAS,1 TIEMPO DE PROTROMBINA (TP),1 TIEMPO DE TROMBOPLASTINA (T), 1 EXAMEN GENERAL DE ORINA, 1 TOMA A DOMICILIO (POR EVENTO)",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PROPORCIONAL \nDECETAXEL 80 MG DOL. INY",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "PRUEBAS DE DIAGNÓSTICO - TRASTORNO DEL ESPECTRO AUTISTA (TEA)",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/APARATOS FUNCIONALES:\n- PAR DE MULETAS.\n- SILLA DE DUCHA.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/APOYOS EXTRAORDINARIOS:\nDONACION DE UNA DESPENSA, CUATRO COLCHONETAS Y CUATRO COBIJAS A FAVOR DE FAMILIA VICTIMA DE DESPLAZAMIENTO.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/COBIJAS:\nDONACION DE 4 COBIJAS DE 2KG. A FAVOR DE MUJER EN UNA SITUACION DE VULNERABILIDAD.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/COLCHONETA:\nDONACION DE COLCHONETA A FAVOR DE MUJER EN UNA EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/DESPENSA:\nDONACION DE PAQUETE ALIMENTARIO EMERGENTE A MUJER EN UNA SITUACION DE INSEGURIDAD ALIMENTARIA.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- APOYO ECONOMICO PROPORCIONAL PARA EL PAGO DE ESTUDIO MEDICO: GAMAGRAMA OSEO.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- IRM ATM BILATERAL DINAMICA SIMPLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- IRM COLUMNA LUMBOSACRA I Y II.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- IRM RODILLA SIMPLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- TAC ABDOMEN TOTAL I Y II.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- TAC TORAX ABDOMEN Y PELVIS I Y II.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- TOMOGRAFIA DE CUELLO Y TORAX CONTRASTADA.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE IMAGENOLOGIA:\n- TOMOGRAFIA DE TORAX, ABDOMEN Y PELVIS CONTRATASTADA.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE LABORATORIO:\n- APOYO ECONONOMICO PARA LA REALIZACION DE ESTUDIO MEDICO: VIDEOELECTROENCEFALOGRAMA DE 2 HORAS CUANTITATIVO.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO DE LABORATORIO:\nAPOYO ECONOMICO PROPORCIONAL PARA LA REALIZACION DE VIDEOELECTROENCEFALOGRAMA.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIO MEDICO:\n- APOYO ECONOMICO PARA LA REALIZACION DE UN ESTUDIO MEDICO DENOMINADO ANGIOTOMOGRAFIA CORONARIA.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIOS DE IMAGENOLOGIA:\n- PREOPERATORIOS.\n- RX HOMBRO AP Y LAT COMPARATIVAS.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIOS DE LABORATORIO:\n- PRUEBAS DE FUNCION HEPATICA.\n- ELECTROLITROS SERICOS.\n- HEMOGLOBINA GLICOSILADA A1C.\n-INSULINA.\n- RESISTENCIA A LA INSULINA, INDICE HOMA.\n- PERFIL TIROIDEO.\n- PERFIL REUMATOIDE.\n- VITAMINA D 25 HIDROXI.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/ESTUDIOS DE LABORATORIO:\n- QUIMICA SANGUINEA 4 ELEMENTOS.\n- PERFIL HORMONAL DE 4 ELEMENTOS.\n- EGO, EXAMEN GENERAL DE ORINA.\n- BH, CITOMETRIA HEMATICA COMPLETA.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMO MEDICO:\nAPOYO ECONOMICO PARA LA COMPRA DE UNA BOTA WALKER NEUM LARG A FAVOR DE MUJER CON DISCAPACIDAD EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMO MEDICO:\nAPOYO ECONOMICO PROPORCIONAL PARA LA COMPRA DE UN CONCENTRADOR DE OXIGENO DE FLUJO SELLADO JAY 10 LTS. A FAVOR DE MUJER EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\n- 1 MEPILEX AG. ANTIMICROBIANO 20 CM. X 20 CM.\n- 1 ESPONJA DE GASA KERLIX AMD. ROLLO 11.4 X 3.7 M. KENDALL.\n- 2 VENDA ELASTICA PROTEC 15 X 5 CM.\n-1 CEPILLO EZ SCRUB 107 C/GLUCONATO PARA LAVADO PREQUIRURGICO B.D.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\n- 28 BOLSAS PARA DIALISIS PERITONIAL AL 1.5% PISA.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\n- 4 PARES DE CALCETIN THERAFIRM 15 - 20 HOMBRE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\n- 6 CAJAS DE BOLSAS PARA COLOSTOMIA ADULTO C/10.\n- 6 SONDAS FOLEY 18 FR2 VIAS GB 5.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\nAPOYO ECONOMICO PARA LA COMPRA DE TANQUE DE OXIGENO A FAVOR DE MUJER EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/INSUMOS MEDICOS:\nAPOYO ECONOMICO PARA LA COMPRA DE UN COLCHON TIPO HOSPITALARIO A FAVOR DE ADULTA MAYOR CON PROBLEMAS  DE MOVILIDAD EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/LENTES:\n- LENTES GRADUADOS.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/LENTES:\nAPOYO ECONOMICO PARA LA COMPRA DE LENTES GRADUADOS A FAVOR DE ADULTA MAYOR CON PROBLEMAS DE VISION EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/LENTES:\nAPOYO ECONOMICO PARA LA COMPRA DE LENTES GRADUADOS A FAVOR DE HOMBRE CON PROBLEMAS DE VISION EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/LENTES:\nAPOYO ECONOMICO PARA LA COMPRA DE LENTES GRADUADOS A FAVOR DE HOMBRE EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/MATERIAL DE CURACION:\n- 5 GASA ESTERIL 10 X 10 C/100 PROTEC.\n- 5 BOLSAS RECOLECTORAS DE ORINA 2 L. KENGUARD COVIDIEN.\n- 3 SONDA FOLEY 2 VIAS 18 FR. 5 CC 100% SILICON FORTUNE.\n- 1 GUANTE PARA EXPLORACION EST. MED. C/100 AMBIERM.\n- 1 HYPAFIX 10 CM. X 10 M. APOSITO DE FIJACION NO ESTERIL BSN.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/MEDICAMENTO E INSUMOS MEDICOS:\n- 1 CAJA DE BOLSAS PARA COLOSTOMIA ADULTO C/10.\n- 2 OXALIPLATINO 100 MG. SOL. INY. TIBOQUIR.\n- 1 OXALIPLATINO 50 MG./10 ML. TIBOQUIR.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/MEDICAMENTO:",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/MULETAS:\nAPOYO ECONOMICO PARA LA COMPRA DE UN PAR DE MULETAS A FAVOR DE HOMBRE CON PROBLEMAS DE MOVILIDAD EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/PAQUETE ALIMENTARIO, KIT DE LIMPIEZA Y COBIJAS:\nDONACION DE UN KIT WASH NIÑA, UN KIT WASH NIÑO, Y CUATRO COBIJAS DE 2 KG. A FAVOR DE FAMILIA EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/SILLA DE RUEDAS Y BOLSAS PARA DIALISIS:\nAPOYO ECONOMICO PARA LA COMPRA DE SILLA DE RUEDAS A FAVOR DE ADULTA MAYOR CON PROBLEMAS DE MOVILIDAD Y DONACION DE 8 CAJAS DE BOLSAS PARA DIALISIS EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/SILLA DE RUEDAS:\nAPOYO ECONOMICO PARA LA COMPRA DE SILLA DE RUEDAS A FAVOR DE ADULTA MAYOR CON PROBLEMAS DE MOVILIDAD EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/SILLA DE RUEDAS:\nAPOYO ECONOMICO PARA LA COMPRA DE SILLA DE RUEDAS A FAVOR DE MUJER CON PROBLEMAS DE MOVILIDAD EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/TRATAMIENTO MEDICO:\nAPOYO ECONOMICO PROPORCIONAL PARA EL PAGO DE UN TRATAMIENDO MEDICO A FAVOR DE MUJER EN UNA SITUACION FINANCIERA VULNERABLE:\n- RADIOYODO 131 DE 50 M CI.",
-      "total": 1,
-      "m": 1,
-      "h": 0,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 1,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 1,
-              "h": 0,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/TRATAMIENTO QUIRURGICO:\nAPOYO ECONOMICO PARA EL PAGO DE TRATAMIENTO QUIRURGICO OFTAMOLOGICO A FAVOR DE  HOMBRE INDIGENA EN UNA SITUACION FINANCIERA VULNERABLE.",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "VENTANILLA/TRATAMIENTO QUIRURGICO:\nAPOYO ECONOMICO PARA EL PAGO DE TRATAMIENTO QUIRURGICO OFTAMOLOGICO A FAVOR DE ADULTO MAYOR EN UNA SITUACION FINANCIERA VULNERABLE.",
+      "nombre": "COBIJA / COBERTOR",
       "total": 1,
       "m": 1,
       "h": 0,
@@ -8534,9 +5483,9 @@ window.DASHBOARD_DATA = {
       "h": 1
     },
     "DIF": {
-      "total": 38986,
-      "m": 26093,
-      "h": 12889
+      "total": 39235,
+      "m": 26197,
+      "h": 13034
     },
     "ICHD": {
       "total": 1,
@@ -8989,4 +5938,3 @@ window.DASHBOARD_DATA = {
   },
   "nutrichihuahua": {}
 };
-
