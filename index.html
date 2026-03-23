@@ -22,8 +22,8 @@
   --paper3:   #c7c4bb;
   --ink:      #2d3035;
   --ink2:     #686c72;
-  --blue:     #040b20;
-  --blue2:    #081333;
+  --blue:     #111820;
+  --blue2:    #111820;
   --blue3:    #23232465;
   --blue-lt:  #dce4f8;
   --blue-bg:  #eef2fc;
@@ -45,6 +45,46 @@
   --shadow:   0 1px 8px rgba(0,0,0,.07);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ══════════════════════════════════════════════════════
+   MODO NOCHE
+══════════════════════════════════════════════════════ */
+body.dark {
+  --paper:  #0d1117; --paper2: #161b22; --paper3: #21262d;
+  --ink:    #e6edf3; --ink2:   #8b949e;
+  --blue:   #010409; --blue2:  #cdd9e5; --blue3: rgba(205,217,229,.15);
+  --gold:   #d89d1e; --gold2:  #f0b429;
+  --border: rgba(205,217,229,.7); --border2: rgba(205,217,229,.15); --border3: rgba(205,217,229,.07);
+}
+body.dark .cat-card          { background:#161b22 }
+body.dark .cat-card:hover    { background:#21262d }
+body.dark .cat-card.expanded { background:#0d2137 }
+body.dark .cat-prog-row      { background:#0d1117; border-color:rgba(205,217,229,.1) }
+body.dark .cat-prog-row:hover{ background:#21262d }
+body.dark .cat-wrapper       { border-color:rgba(205,217,229,.15) }
+body.dark .cat-body          { background:rgba(205,217,229,.04) }
+body.dark .cat-search        { background:#161b22; color:#e6edf3; border-color:rgba(205,217,229,.15) }
+body.dark .cat-chip          { background:#161b22; color:#8b949e; border-color:rgba(205,217,229,.15) }
+body.dark .cat-chip.active   { background:#1f6feb; border-color:#1f6feb; color:#fff }
+body.dark .cat-stat-pill     { background:#161b22 }
+body.dark .cat-chips         { border-bottom-color:rgba(205,217,229,.07) }
+body.dark .np-table thead tr { background:#161b22 }
+body.dark .np-table tbody tr:hover { background:#161b22 }
+body.dark .mh-topbar         { color:#8b949e }
+
+/* ── Botón toggle ── */
+.dark-toggle {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:5px 12px; border-radius:20px;
+  border:0.5px solid var(--border2); background:transparent;
+  color:var(--ink2); font-size:11px; font-weight:600;
+  letter-spacing:.06em; cursor:pointer; transition:all .2s;
+  white-space:nowrap; font-family:var(--sans);
+}
+.dark-toggle:hover { background:var(--paper2); color:var(--ink) }
+body.dark .dark-toggle { border-color:rgba(205,217,229,.2); color:#8b949e }
+body.dark .dark-toggle:hover { background:#21262d; color:#e6edf3 }
+.dark-toggle svg { width:13px; height:13px; flex-shrink:0 }
 html{font-size:14px;scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height:100vh;line-height:1.6}
 
@@ -401,6 +441,32 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
 .ss-num.m  { color: var(--male); }
 .ss-sub  { font-family:var(--sans); font-size:12px; font-weight:400; color:var(--ink2); margin-top:3px; }
 
+/* ── KPI strip municipios — modo oscuro ── */
+#kpi-mun {
+  background: #0d1117;
+  border-top: 1px solid rgba(205,217,229,.1) !important;
+  border-bottom: 1px solid rgba(205,217,229,.08) !important;
+}
+#kpi-mun .ss-cell {
+  border-right: 1px solid rgba(205,217,229,.08);
+  background: #0d1117;
+  transition: background .15s;
+}
+#kpi-mun .ss-cell:hover { background: #161b22; }
+#kpi-mun .ss-cell:last-child { border-right: none; }
+#kpi-mun .ss-lbl  { color: #484f58; }
+#kpi-mun .ss-sub  { color: #8b949e; }
+#kpi-mun .ss-num  { color: #e6edf3; }
+#kpi-mun .ss-num.b  { color: #79c0ff; }
+#kpi-mun .ss-num.r  { color: #ff7b72; }
+#kpi-mun .ss-num.g  { color: #e3b341; }
+#kpi-mun .ss-num.gr { color: #3fb950; }
+#kpi-mun .ss-cell.cb::after  { background: #388bfd; }
+#kpi-mun .ss-cell.cr::after  { background: #ff7b72; }
+#kpi-mun .ss-cell.cg::after  { background: #e3b341; }
+#kpi-mun .ss-cell.ck::after  { background: rgba(205,217,229,.3); }
+#kpi-mun .ss-cell.cgr::after { background: #3fb950; }
+
 /* ══════════════════════════════════════════════════════
    GRID LAYOUTS
 ══════════════════════════════════════════════════════ */
@@ -675,469 +741,124 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
 }
 
 /* ══════════════════════════════════════════════════════
-   CATÁLOGO PREMIUM — Apoyos & Programas
-   Estilo: Civic Data Dashboard · DM Sans · Refinado
+   CATÁLOGO DE APOYOS — Layout editorial periódico 2026
 ══════════════════════════════════════════════════════ */
-
-/* ─── Variables locales del catálogo ─── */
 :root {
-  --cat-bg:        var(--paper);
-  --cat-surface:   #FFFFFF;
-  --cat-row-alt:   var(--paper);
-  --cat-thead:     #F0EAD8;
-  --cat-border:    rgba(15,23,42,0.08);
-  --cat-border-md: rgba(15,23,42,0.14);
-  --cat-ink:       #0F172A;
-  --cat-ink2:      #475569;
-  --cat-ink3:      #94A3B8;
-  --cat-blue:      #1E3A5F;
-  --cat-blue-lt:   #EFF6FF;
-  --cat-blue-acc:  #2563EB;
-  --cat-shadow-sm: 0 1px 3px rgba(15,23,42,0.07), 0 1px 2px rgba(15,23,42,0.04);
-  --cat-shadow-md: 0 4px 14px rgba(15,23,42,0.10), 0 2px 4px rgba(15,23,42,0.05);
-  --cat-radius:    10px;
-  --cat-font:      'DM Sans', system-ui, sans-serif;
-  --cat-mono:      'DM Mono', 'Fira Code', monospace;
-  /* colores de institución — desaturados */
-  --inst-salud:    #1E4D8C;
-  --inst-sdhybc:   #166534;
-  --inst-dif:      #9A3412;
-  --inst-ich:      #5B21B6;
-  --inst-spyci:    #065F46;
-  --inst-ichdii:   #7F1D1D;
-  --inst-rural:    #44403C;
-  --inst-other:    #334155;
-  /* colores pastel para badges */
-  --badge-salud:   #DBEAFE;
-  --badge-sdhybc:  #DCFCE7;
-  --badge-dif:     #FFEDD5;
-  --badge-ich:     #EDE9FE;
-  --badge-spyci:   #D1FAE5;
-  --badge-ichdii:  #FEE2E2;
-  --badge-rural:   #F5F5F4;
-  --badge-other:   #F1F5F9;
-  /* género */
-  --cat-fem:       #BE185D;
-  --cat-fem-lt:    #FCE7F3;
-  --cat-male:      #1D4ED8;
-  --cat-male-lt:   #DBEAFE;
+  --cat-navy:#0F3460;--cat-navy-lt:#E6F1FB;--cat-navy-md:#185FA5;
+  --cat-pink:#D4537E;--cat-ink:var(--ink);--cat-ink2:var(--ink2);--cat-ink3:var(--ink3);
+  --cat-bg:var(--paper);--cat-bg2:var(--paper2);
+  --cat-border:var(--border3);--cat-border2:var(--border2);
+  --cat-font:'DM Sans',system-ui,sans-serif;
+  --cat-mono:'DM Mono','Fira Code',monospace;
 }
 
-/* ─── Wrapper principal ─── */
-.cat-wrapper {
-  font-family: var(--cat-font);
-  background: var(--cat-bg);
-  border-radius: 14px;
-  border: 1px solid var(--cat-border-md);
-  overflow: hidden;
-  box-shadow: var(--cat-shadow-md);
-  margin-top: 28px;
-  max-width: 96%;
-}
+/* ── Cabecera ── */
+.cat-wrapper{font-family:var(--cat-font);background:#0d1117;border-radius:10px;border:1px solid rgba(205,217,229,.12);overflow:hidden;margin-bottom:16px}
+.cat-header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid rgba(205,217,229,.1);flex-wrap:wrap;gap:12px}
+.cat-header-left{}
+.cat-header-eyebrow{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8b949e;margin-bottom:4px}
+.cat-header-title{font-size:18px;font-weight:700;color:#e6edf3;letter-spacing:-.01em}
+.cat-header-stats{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cat-stat-pill{background:#161b22;border-radius:8px;padding:8px 14px;text-align:center;min-width:70px;border:0.5px solid rgba(205,217,229,.12)}
+.cat-stat-num{font-family:var(--cat-mono);font-size:20px;font-weight:500;color:#e6edf3;line-height:1}
+.cat-stat-lbl{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+.cat-search-wrap{position:relative}
+.cat-search{border:0.5px solid rgba(205,217,229,.15);border-radius:8px;padding:8px 14px 8px 36px;font-size:13px;background:#161b22;color:#e6edf3;width:240px;outline:none}
+.cat-search:focus{border-color:var(--cat-navy-md);box-shadow:0 0 0 3px var(--cat-navy-lt)}
+.cat-search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:14px;height:14px;opacity:.35;pointer-events:none}
 
-/* ─── Header del catálogo ─── */
-.cat-header {
-  background: var(--cat-blue);
-  padding: 18px 24px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-.cat-header-left { flex: 1; }
-.cat-header-eyebrow {
-  font-family: var(--cat-font);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.45);
-  margin-bottom: 4px;
-}
-.cat-header-title {
-  font-family: var(--cat-font);
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -.01em;
-}
-.cat-header-stats {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  border-left: 1px solid rgba(255,255,255,.12);
-  padding-left: 20px;
-}
-.cat-stat-pill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  border-right: 1px solid rgba(255,255,255,.12);
-  min-width: 72px;
-}
-.cat-stat-pill:last-child { border-right: none; padding-right: 20px; }
-.cat-stat-num {
-  font-family: var(--cat-mono);
-  font-size: 22px;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: -.02em;
-  line-height: 1;
-}
-.cat-stat-lbl {
-  font-family: var(--cat-font);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.4);
-  margin-top: 3px;
-}
+/* ── Chips institución ── */
+.cat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 20px;border-bottom:1px solid rgba(205,217,229,.08)}
+.cat-chip{padding:5px 13px;border-radius:20px;font-size:12px;font-weight:500;border:0.5px solid rgba(205,217,229,.15);background:#0d1117;color:#8b949e;cursor:pointer;transition:all .15s;white-space:nowrap}
+.cat-chip.active{background:#1f6feb;color:#fff;border-color:#1f6feb}
+.cat-chip:hover:not(.active){background:var(--cat-bg2)}
 
-/* ─── Buscador del catálogo ─── */
-.cat-search-wrap {
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-}
-.cat-search {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 8px;
-  padding: 8px 14px 8px 36px;
-  font-family: var(--cat-font);
-  font-size: 13px;
-  color: #fff;
-  outline: none;
-  width: 210px;
-  transition: background .2s, border-color .2s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.5)' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 12px center;
-}
-.cat-search:focus { background-color: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); }
-.cat-search::placeholder { color: rgba(255,255,255,.35); }
+/* ── Grid de cards ── */
+.cat-body{padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:rgba(205,217,229,.08);border-radius:0 0 10px 10px;overflow:hidden}
+.cat-no-results{padding:48px;text-align:center;font-size:14px;color:var(--cat-ink3);font-style:italic;background:var(--cat-bg);border-radius:0 0 10px 10px}
 
-/* ─── Cabecera de columnas ─── */
-.cat-col-header {
-  display: grid;
-  gap: 0;
-  background: var(--cat-thead);
-  border-bottom: 2px solid var(--cat-border-md);
-  padding: 10px 24px;
-  align-items: center;
-}
-.cat-col-lbl {
-  font-family: var(--cat-font);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--cat-ink3);
-}
-.cat-col-lbl.accent { color: var(--cat-blue-acc); }
+/* ── Card editorial ── */
+.cat-card{background:#161b22;padding:14px 16px;cursor:pointer;transition:background .15s;position:relative;display:flex;flex-direction:column;gap:9px;border-color:rgba(205,217,229,.08)}
+.cat-card:hover{background:#1c2330}
+.cat-card.expanded{background:#1c2330}
+.cat-card-accent{position:absolute;top:0;left:0;right:0;height:3px}
 
-/* ─── Body scrollable ─── */
-.cat-body {
-  max-height: 680px;
-  overflow-y: auto;
-  background: var(--cat-bg);
-}
-.cat-body::-webkit-scrollbar { width: 5px; }
-.cat-body::-webkit-scrollbar-track { background: transparent; }
-.cat-body::-webkit-scrollbar-thumb { background: var(--cat-border-md); border-radius: 3px; }
+/* nombre */
+.cat-apoyo-name{font-size:16px;font-weight:600;color:#e6edf3;line-height:1.25;letter-spacing:-.01em}
+.cat-apoyo-name em{font-style:normal;color:var(--cat-ink3);font-size:12px;font-weight:400;display:block;margin-top:3px}
 
-/* ─── Card de tipo de apoyo (nivel 1) ─── */
-.cat-card {
-  background: var(--cat-surface);
-  margin: 10px 12px;
-  border-radius: var(--cat-radius);
-  border: 1px solid var(--cat-border);
-  box-shadow: var(--cat-shadow-sm);
-  overflow: hidden;
-  transition: box-shadow .18s;
-}
-.cat-card:hover { box-shadow: var(--cat-shadow-md); }
+/* badges */
+.cat-apoyo-meta{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.cat-badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:600;letter-spacing:.04em;white-space:nowrap}
 
-/* ─── Fila principal del apoyo ─── */
-.cat-row-main {
-  display: grid;
-  gap: 0;
-  padding: 16px 20px;
-  align-items: center;
-  cursor: pointer;
-  transition: background .12s;
-}
-.cat-row-main:hover { background: #FAFBFF; }
+/* KPIs 3 columnas */
+.cat-card-datos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:0.5px solid rgba(205,217,229,.1);padding-top:8px}
+.cat-dato{text-align:center;padding:0 4px}
+.cat-dato+.cat-dato{border-left:0.5px solid rgba(205,217,229,.1)}
+.cat-dato-val{font-family:var(--cat-mono);font-size:18px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;line-height:1}
+.cat-dato-lbl{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
 
-/* ─── Nombre del tipo de apoyo ─── */
-.cat-apoyo-name {
-  font-family: var(--cat-font);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--cat-ink);
-  letter-spacing: -.01em;
-  margin-bottom: 6px;
-  line-height: 1.3;
-}
-.cat-apoyo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  align-items: center;
-}
+/* género barras */
+.cat-card-genero{display:flex;flex-direction:column;gap:4px;border-top:0.5px solid rgba(205,217,229,.1);padding-top:8px}
+.cat-gnr{display:flex;align-items:center;gap:7px}
+.cat-gnr-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.cat-gnr-track{flex:1;height:5px;border-radius:3px;background:rgba(205,217,229,.12);overflow:hidden;position:relative}
+.cat-gnr-fill{position:absolute;left:0;top:0;height:100%;border-radius:3px}
+.cat-gnr-val{font-family:var(--cat-mono);font-size:12px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;min-width:46px;text-align:right}
+.cat-gnr-pct{font-size:11px;color:#8b949e;min-width:30px;text-align:right}
 
-/* ─── Badges de institución ─── */
-.cat-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 9px;
-  border-radius: 20px;
-  font-family: var(--cat-font);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .04em;
-  white-space: nowrap;
-}
-.cat-badge-meta {
-  font-family: var(--cat-font);
-  font-size: 11px;
-  color: var(--cat-ink3);
-  font-weight: 400;
-}
+/* barra volumen */
+.cat-card-vol{display:flex;align-items:center;gap:8px;border-top:0.5px solid rgba(205,217,229,.1);padding-top:7px}
+.cat-vol-track{flex:1;height:4px;border-radius:2px;background:rgba(205,217,229,.12);overflow:hidden}
+.cat-vol-fill{height:100%;border-radius:2px;background:#388bfd;transition:width .4s cubic-bezier(.16,1,.3,1)}
+.cat-vol-pct{font-size:11px;color:#8b949e;min-width:50px;text-align:right}
 
-/* ─── KPI numérico grande ─── */
-.cat-kpi {
-  text-align: center;
-}
-.cat-kpi-num {
-  font-family: var(--cat-mono);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -.02em;
-  line-height: 1;
-  color: var(--cat-blue);
-}
-.cat-kpi-lbl {
-  font-family: var(--cat-font);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--cat-ink3);
-  margin-top: 2px;
-}
+/* detalle programas */
+.cat-prog-list{display:none}
+/* ── Modal de programas ── */
+.cat-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(2px)}
+.cat-modal-overlay.hidden{display:none}
+.cat-modal{background:#161b22;border:0.5px solid rgba(205,217,229,.15);border-radius:14px;width:100%;max-width:700px;max-height:80vh;display:flex;flex-direction:column;overflow:hidden}
+.cat-modal-header{padding:18px 20px 14px;border-bottom:0.5px solid rgba(205,217,229,.1);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-shrink:0}
+.cat-modal-title{font-size:16px;font-weight:600;color:#e6edf3;line-height:1.3}
+.cat-modal-sub{font-size:12px;color:#8b949e;margin-top:3px}
+.cat-modal-close{width:28px;height:28px;border-radius:50%;background:rgba(205,217,229,.08);border:0.5px solid rgba(205,217,229,.15);color:#8b949e;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.cat-modal-close:hover{background:rgba(205,217,229,.15);color:#e6edf3}
+.cat-modal-body{overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.cat-modal-prog{background:#0d1117;border:0.5px solid rgba(205,217,229,.1);border-radius:8px;padding:14px 16px}
+.cat-modal-prog-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.cat-modal-prog-name{font-size:13px;font-weight:500;color:#cdd9e5;line-height:1.3;flex:1}
+.cat-modal-prog-inst{font-size:9px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:.05em;text-transform:uppercase;flex-shrink:0}
+.cat-modal-prog-total{font-family:'DM Mono',monospace;font-size:18px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;flex-shrink:0}
+.cat-modal-prog-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cat-modal-stat{background:rgba(205,217,229,.05);border-radius:6px;padding:8px 12px}
+.cat-modal-stat-val{font-family:'DM Mono',monospace;font-size:17px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;line-height:1}
+.cat-modal-stat-lbl{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+.cat-modal-bar-wrap{margin-top:10px}
+.cat-modal-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.cat-modal-bar-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.cat-modal-bar-track{flex:1;height:5px;border-radius:3px;background:rgba(205,217,229,.1);overflow:hidden}
+.cat-modal-bar-fill{height:100%;border-radius:3px}
+.cat-modal-bar-val{font-size:11px;color:#8b949e;min-width:60px;text-align:right;font-variant-numeric:tabular-nums}
+/* btn ver programas */
+.cat-ver-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:6px;background:rgba(56,139,253,.15);border:0.5px solid rgba(56,139,253,.3);color:#79c0ff;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;letter-spacing:.03em;flex-shrink:0}
+.cat-ver-btn:hover{background:rgba(56,139,253,.25);border-color:rgba(56,139,253,.5)}
+.cat-ver-btn svg{width:11px;height:11px;flex-shrink:0}
 
-/* ─── Donut de género (SVG inline) ─── */
-.cat-gender-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.cat-donut-svg { flex-shrink: 0; }
-.cat-gender-nums {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-.cat-gnr {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--cat-font);
-}
-.cat-gnr-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.cat-gnr-val {
-  font-family: var(--cat-mono);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cat-ink);
-  letter-spacing: -.01em;
-}
-.cat-gnr-pct {
-  font-family: var(--cat-font);
-  font-size: 10px;
-  color: var(--cat-ink3);
-  margin-left: auto;
-}
+/* chevron */
+.cat-chev{width:24px;height:24px;border-radius:50%;background:rgba(205,217,229,.08);border:0.5px solid rgba(205,217,229,.15);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .15s;flex-shrink:0;color:#8b949e}
+.cat-card.expanded .cat-chev{transform:rotate(180deg);background:var(--cat-navy-lt)}
 
-/* ─── Municipios ─── */
-.cat-mun {
-  text-align: center;
-}
-.cat-mun-num {
-  font-family: var(--cat-mono);
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--cat-ink);
-  letter-spacing: -.02em;
-  line-height: 1;
-}
-.cat-mun-sub {
-  font-family: var(--cat-font);
-  font-size: 10px;
-  color: var(--cat-ink3);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
-/* ─── Sub-filas de programa ─── */
-.cat-prog-list {
-  border-top: 1px solid var(--cat-border);
-  background: var(--cat-bg);
-}
-.cat-prog-row {
-  display: grid;
-  gap: 0;
-  padding: 11px 20px 11px 36px;
-  border-bottom: 1px solid var(--cat-border);
-  align-items: center;
-  transition: background .1s;
-}
-.cat-prog-row:last-child { border-bottom: none; }
-.cat-prog-row:hover { background: var(--paper2); opacity: 1; }
-
-.cat-prog-indicator {
-  width: 3px;
-  height: 22px;
-  border-radius: 2px;
-  flex-shrink: 0;
-  margin-right: 10px;
-}
-.cat-prog-name-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  min-width: 0;
-}
-.cat-prog-name {
-  font-family: var(--cat-font);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--cat-ink2);
-  line-height: 1.35;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.cat-prog-inst-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-family: var(--cat-font);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  flex-shrink: 0;
-  margin-left: 8px;
-}
-
-/* ─── Clave monoespaciada ─── */
-.cat-clave {
-  font-family: var(--cat-mono);
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--cat-ink2);
-  background: var(--cat-surface);
-  border: 1px solid var(--cat-border-md);
-  border-radius: 5px;
-  padding: 3px 8px;
-  display: inline-block;
-  letter-spacing: .05em;
-  text-align: center;
-}
-
-/* ─── Barra de beneficiarios (programas) ─── */
-.cat-benef-wrap {
-  padding: 0 8px;
-}
-.cat-benef-bar-track {
-  height: 5px;
-  background: var(--cat-border);
-  border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 4px;
-}
-.cat-benef-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  transition: width .4s cubic-bezier(.16,1,.3,1);
-}
-.cat-benef-val {
-  font-family: var(--cat-mono);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -.01em;
-}
-.cat-benef-none {
-  font-family: var(--cat-font);
-  font-size: 11px;
-  color: var(--cat-ink3);
-  font-style: italic;
-}
-
-/* ─── Header de institución (en tabla de programas) ─── */
-.cat-inst-header {
-  display: grid;
-  gap: 0;
-  padding: 12px 24px;
-  background: var(--cat-thead);
-  border-top: 1px solid var(--cat-border-md);
-  align-items: center;
-}
-.cat-inst-name-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.cat-inst-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 14px;
-  border-radius: 6px;
-  font-family: var(--cat-font);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.cat-inst-prog-count {
-  font-family: var(--cat-font);
-  font-size: 12px;
-  color: var(--cat-ink3);
-}
-.cat-inst-total-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.cat-inst-total-num {
-  font-family: var(--cat-mono);
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -.01em;
-  flex-shrink: 0;
-}
-.cat-inst-total-sub {
-  font-family: var(--cat-font);
-  font-size: 10px;
-  color: var(--cat-ink3);
-  margin-top: 2px;
-}
+/* columnas legacy — necesarias para renderProgsTable */
+.cat-col-header{display:none}
+.cat-col-lbl{}
 
 /* ── Filas tabla municipios ── */
-.mun-row-even { background: #FFFFFF; }
-.mun-row-odd  { background: var(--paper); }
-.mun-row:hover { background: var(--paper2) !important; transition: background .1s; }
+/* ── Filas tabla municipios ── */
+/* ── Filas tabla municipios ── */
+.mun-row-even { background: #0d1117; }
+.mun-row-odd  { background: #111820; }
+.mun-row:hover { background: #1c2330 !important; transition: background .1s; }
 
 /* ── Navegación slide (Datos Generales y Municipios) ── */
 .slide-nav-bar { display:flex; align-items:stretch; gap:0; margin-top:10px; border:2px solid var(--ink); border-radius:5px; overflow:hidden; }
@@ -1167,6 +888,33 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
       s.width = '111.11%';
     }
   })();
+
+// ── Dark mode ──────────────────────────────────────────
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  const icon   = document.getElementById('dark-icon');
+  const lbl    = document.getElementById('dark-lbl');
+  localStorage.setItem('gaceta-dark', isDark ? '1' : '0');
+  if (isDark) {
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    lbl.textContent = 'Día';
+  } else {
+    icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    lbl.textContent = 'Noche';
+  }
+}
+// Restaurar preferencia guardada
+(function(){
+  if (localStorage.getItem('gaceta-dark') === '1') {
+    document.body.classList.add('dark');
+    setTimeout(function(){
+      var icon = document.getElementById('dark-icon');
+      var lbl  = document.getElementById('dark-lbl');
+      if (icon) icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+      if (lbl)  lbl.textContent = 'Día';
+    }, 0);
+  }
+})();
 </script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
@@ -1179,7 +927,15 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
   <div class="mh-topbar">
     <span id="mh-fecha">—</span>
     <span class="mh-topbar-center">Órgano Informativo Oficial · Secretaría de Desarrollo Humano y Bien Común</span>
-    <span id="mh-edition">—</span>
+    <span id="mh-edition" style="display:flex;align-items:center;gap:10px">
+      <span id="mh-edition-txt">—</span>
+      <button class="dark-toggle" onclick="toggleDark()" title="Cambiar tema">
+        <svg id="dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <span id="dark-lbl">Noche</span>
+      </button>
+    </span>
   </div>
   <div class="mh-nameplate">
     <div class="mh-left-info">
@@ -1571,50 +1327,50 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
 
   <!-- ═══ PANEL 1: TABLA DE DATOS ═══ -->
   <div id="mun-panel-1" style="margin-top:16px;display:none">
-    <div style="background:#FFFFFF;border:1px solid rgba(15,23,42,.13);border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(15,23,42,.08),0 1px 2px rgba(15,23,42,.05)">
-      <div style="padding:14px 20px;border-bottom:1px solid rgba(15,23,42,.10);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--paper2)">
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0F172A">Todos los Municipios</span>
-          <span style="font-family:'DM Mono',monospace;font-size:11px;color:#94a3b8;background:var(--paper2);padding:2px 8px;border-radius:20px;border:1px solid rgba(15,23,42,.07)">67 registros</span>
+    <div style="background:#0d1117;border:1px solid rgba(205,217,229,.1);border-radius:12px;overflow:hidden">
+
+      <!-- cabecera -->
+      <div style="padding:16px 20px;border-bottom:1px solid rgba(205,217,229,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:#161b22">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">Municipios de Chihuahua</span>
+          <span style="font-family:'DM Mono',monospace;font-size:15px;color:#388bfd;background:rgba(56,139,253,.12);padding:2px 10px;border-radius:20px;border:0.5px solid rgba(56,139,253,.25)">67 registros</span>
         </div>
-        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-          <div style="display:flex;gap:10px;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:#475569">
-            <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:8px;height:8px;background:#059669;border-radius:50%"></span>≥ 80%</span>
-            <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:8px;height:8px;background:#D97706;border-radius:50%"></span>50–79%</span>
-            <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:8px;height:8px;background:#DC2626;border-radius:50%"></span>&lt; 50%</span>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <div style="display:flex;gap:12px;font-family:'DM Sans',system-ui,sans-serif;font-size:15px">
+            <span style="display:flex;align-items:center;gap:5px;color:#3fb950"><span style="display:inline-block;width:7px;height:7px;background:#3fb950;border-radius:50%"></span>≥ 80%</span>
+            <span style="display:flex;align-items:center;gap:5px;color:#e3b341"><span style="display:inline-block;width:7px;height:7px;background:#e3b341;border-radius:50%"></span>50–79%</span>
+            <span style="display:flex;align-items:center;gap:5px;color:#ff7b72"><span style="display:inline-block;width:7px;height:7px;background:#ff7b72;border-radius:50%"></span>&lt; 50%</span>
           </div>
-          <input style="background:var(--paper);border:1px solid rgba(15,23,42,.15);border-radius:6px;padding:7px 14px 7px 32px;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:#0F172A;outline:none;width:200px;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:10px center;transition:border-color .2s"
-            placeholder="Buscar municipio…" id="mun-search" oninput="filterMuns()">
+          <div style="position:relative">
+            <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:13px;height:13px;opacity:.35;pointer-events:none" viewBox="0 0 16 16" fill="none" stroke="#e6edf3" stroke-width="1.5"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5l3 3"/></svg>
+            <input style="background:#0d1117;border:0.5px solid rgba(205,217,229,.15);border-radius:6px;padding:7px 14px 7px 32px;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;color:#e6edf3;outline:none;width:200px;transition:border-color .2s"
+              placeholder="Buscar municipio…" id="mun-search" oninput="filterMuns()">
+          </div>
         </div>
       </div>
+
+      <!-- tabla -->
       <div class="scroll-tbl" style="max-height:620px">
         <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',system-ui,sans-serif;table-layout:fixed">
           <colgroup>
-            <col style="width:3%">
-            <col style="width:14%">
-            <col style="width:10%">
-            <col style="width:11%">
-            <col style="width:8%">
-            <col style="width:5%">
-            <col style="width:9%">
-            <col style="width:7%">
-            <col style="width:7%">
-            <col style="width:9%">
-            <col style="width:9%">
+            <col style="width:3%"><col style="width:14%"><col style="width:11%">
+            <col style="width:11%"><col style="width:8%"><col style="width:5%">
+            <col style="width:9%"><col style="width:7%"><col style="width:7%">
+            <col style="width:9%"><col style="width:9%">
           </colgroup>
           <thead>
-            <tr style="background:var(--paper2);border-bottom:2px solid rgba(15,23,42,.12);position:sticky;top:0;z-index:2">
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94A3B8;white-space:nowrap">#</th>
-              <th style="padding:11px 8px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Municipio</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Beneficiarios</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Distribución M/H</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Apoyos</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Progs.</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Localización</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">% Loc.</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Cob.</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Rango Mayor</th>
-              <th style="padding:11px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#475569;white-space:nowrap">Rango Menor</th>
+            <tr style="background:#161b22;border-bottom:1px solid rgba(205,217,229,.12);position:sticky;top:0;z-index:2">
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#484f58;white-space:nowrap">#</th>
+              <th style="padding:11px 8px;text-align:left;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;white-space:nowrap">Municipio</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#79c0ff;white-space:nowrap">Beneficiarios</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f778ba;white-space:nowrap">M / H</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d2a8ff;white-space:nowrap">Apoyos</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d2a8ff;white-space:nowrap">Progs.</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364;white-space:nowrap">Localización</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364;white-space:nowrap">% Loc.</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e3b341;white-space:nowrap">Cob.</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#79c0ff;white-space:nowrap">Rango Mayor</th>
+              <th style="padding:11px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffa657;white-space:nowrap">Rango Menor</th>
             </tr>
           </thead>
           <tbody id="mun-tbody"></tbody>
@@ -1681,16 +1437,14 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
             <div class="cat-stat-lbl">Apoyos</div>
           </div>
           <div class="cat-search-wrap">
-            <input id="apoyo-search" class="cat-search" oninput="filterApoyos()" placeholder="Buscar tipo, programa o institución…">
+            <svg class="cat-search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="6.5" cy="6.5" r="4.5"/><path d="M10.5 10.5l3 3"/>
+            </svg>
+            <input id="apoyo-search" class="cat-search" oninput="filterApoyos()" placeholder="Buscar apoyo, programa o institución…">
           </div>
         </div>
       </div>
-      <div class="cat-col-header" style="grid-template-columns:1.8fr .8fr 1.3fr .7fr">
-        <div class="cat-col-lbl">Tipo de Apoyo · Programa</div>
-        <div class="cat-col-lbl accent" style="text-align:center"># Apoyos</div>
-        <div class="cat-col-lbl" style="text-align:center">Distribución de Género</div>
-        <div class="cat-col-lbl" style="text-align:center">Municipios</div>
-      </div>
+      <div class="cat-chips" id="cat-inst-chips"></div>
       <div class="cat-body" id="apoyos-tbody"></div>
     </div>
   </div><!-- /apoyos-panel-0 -->
@@ -1877,7 +1631,7 @@ const fLong  = now.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',mont
 const fShort = `${now.getDate()} de ${meses[now.getMonth()]} de ${now.getFullYear()}`;
 const wk     = Math.ceil((now - new Date(now.getFullYear(),0,1))/864e5/7);
 document.getElementById('mh-fecha').textContent   = fLong.charAt(0).toUpperCase()+fLong.slice(1);
-document.getElementById('mh-edition').textContent = `Vol. ${now.getFullYear()} · Núm. ${wk}`;
+document.getElementById('mh-edition-txt').textContent = `Vol. ${now.getFullYear()} · Núm. ${wk}`;
 document.getElementById('footer-dt').textContent  = `Datos al ${fShort}`;
 ['g-fecha-1','inst-fecha','mun-fecha','cob-fecha'].forEach(id=>{
   const el=document.getElementById(id); if(el) el.textContent=fShort;
@@ -2740,7 +2494,7 @@ function renderMunicipios() {
 function renderMunTable(data) {
   const maxT  = D.municipios[0]?.total || 1;
   const RL    = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
-  const _TD   = 'padding:10px 8px;border-bottom:1px solid rgba(15,23,42,.06);font-family:"DM Sans",system-ui,sans-serif;font-size:13px;';
+  const _TD   = 'padding:10px 8px;border-bottom:1px solid rgba(205,217,229,.06);font-family:"DM Sans",system-ui,sans-serif;font-size:15px;';
   const td    = (content, extra='') => `<td style="${_TD}text-align:center;${extra}">${content}</td>`;
   const tdL   = (content, extra='') => `<td style="${_TD}text-align:left;${extra}">${content}</td>`;
   const tdC   = (content, extra='') => `<td style="${_TD}text-align:center;${extra}">${content}</td>`;
@@ -2750,15 +2504,15 @@ function renderMunTable(data) {
     const hp     = (100-parseFloat(mp)).toFixed(1);
     const locPct = m.total ? (m.localizables/m.total*100).toFixed(1) : '0';
     const cobPct = m.poblacion ? (m.total/m.poblacion*100).toFixed(1) : null;
-    const locC   = parseFloat(locPct)>=80?'#059669':parseFloat(locPct)>=50?'#D97706':'#DC2626';
-    const locBg  = parseFloat(locPct)>=80?'#D1FAE5':parseFloat(locPct)>=50?'#FEF3C7':'#FEE2E2';
+    const locC   = parseFloat(locPct)>=80?'#3fb950':parseFloat(locPct)>=50?'#e3b341':'#ff7b72';
+    const locBg  = parseFloat(locPct)>=80?'rgba(63,185,80,.15)':parseFloat(locPct)>=50?'rgba(227,179,65,.15)':'rgba(255,123,114,.15)';
     const barW   = Math.round((m.total/maxT)*100);
 
     const benBar = `<div style="display:flex;align-items:center;justify-content:center;gap:7px">
-      <div style="width:44px;height:4px;background:rgba(15,23,42,.08);border-radius:2px;overflow:hidden;flex-shrink:0">
-        <div style="height:100%;width:${barW}%;background:#1E3A5F;border-radius:2px"></div>
+      <div style="width:44px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
+        <div style="height:100%;width:${barW}%;background:#388bfd;border-radius:2px"></div>
       </div>
-      <span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:#0F172A;letter-spacing:-.01em">${fmt(m.total)}</span>
+      <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:500;color:#e6edf3;letter-spacing:-.01em">${fmt(m.total)}</span>
     </div>`;
 
     const mhCell = `<div style="min-width:100px">
@@ -2766,36 +2520,36 @@ function renderMunTable(data) {
         <div style="width:${mp}%;background:#BE185D;opacity:.75"></div>
         <div style="width:${hp}%;background:#1D4ED8;opacity:.55"></div>
       </div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;font-family:'DM Sans',system-ui,sans-serif">
+      <div style="display:flex;justify-content:space-between;font-size:14px;font-family:'DM Sans',system-ui,sans-serif">
         <span style="color:#BE185D;font-weight:600">${mp}%</span>
         <span style="color:#1D4ED8;font-weight:600">${hp}%</span>
       </div>
     </div>`;
 
     const locBar = `<div style="display:flex;align-items:center;justify-content:center;gap:6px">
-      <div style="width:36px;height:4px;background:rgba(15,23,42,.08);border-radius:2px;overflow:hidden;flex-shrink:0">
+      <div style="width:36px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
         <div style="height:100%;width:${locPct}%;background:${locC};border-radius:2px"></div>
       </div>
-      <span style="font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:${locC}">${locPct}%</span>
+      <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:${locC}">${locPct}%</span>
     </div>`;
 
     const cobStr = cobPct
-      ? `<span style="font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:#1E3A5F">${cobPct}%</span>`
+      ? `<span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:600;background:rgba(227,179,65,.12);color:#e3b341;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(227,179,65,.25)">${cobPct}%</span>`
       : '<span style="opacity:.3">—</span>';
 
     const rowClass = i%2===0 ? 'mun-row-even' : 'mun-row-odd';
     return `<tr class="${rowClass} mun-row">
-      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:11px;color:#94A3B8;font-weight:500">${i+1}</span>`)}\
-      ${tdL(`<span style="font-weight:600;font-size:13px;color:#0F172A;font-family:'DM Sans',system-ui,sans-serif">${toTitle(m.nombre)}</span>`)}\
+      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:600;background:rgba(205,217,229,.06);color:#484f58;padding:2px 7px;border-radius:20px;border:0.5px solid rgba(205,217,229,.08)">${i+1}</span>`)}\
+      ${tdL(`<span style="font-weight:600;font-size:15px;color:#e6edf3;font-family:'DM Sans',system-ui,sans-serif">${toTitle(m.nombre)}</span>`)}\
       ${td(benBar)}\
       ${tdC(mhCell,'min-width:110px')}\
-      ${td(`<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:#334155">${fmt(m.total_apoyos)}</span>`)}\
-      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#5B21B6">${m.n_programas}</span>`)}\
-      ${td(`<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:#334155">${fmt(m.localizables)}</span>`)}\
+      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${fmt(m.total_apoyos)}</span>`)}\
+      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${m.n_programas}</span>`)}\
+      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:${locBg};color:${locC};padding:3px 9px;border-radius:20px;border:0.5px solid ${locC}33">${fmt(m.localizables)}</span>`)}\
       ${tdC(locBar)}\
       ${td(cobStr)}\
-      ${tdC(m.rango_dom ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:.04em;background:${locBg};color:${locC};padding:3px 8px;border-radius:20px">${RL[m.rango_dom]||m.rango_dom}</span>` : '<span style="opacity:.3">—</span>')}\
-      ${tdC(m.rango_min ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:10px;font-weight:600;background:var(--paper2);color:#5B4A2D;padding:3px 8px;border-radius:20px">${RL[m.rango_min]||m.rango_min}</span>` : '<span style="opacity:.3">—</span>')}\
+      ${tdC(m.rango_dom ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;background:rgba(56,139,253,.15);color:#79c0ff;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(56,139,253,.25)">${RL[m.rango_dom]||m.rango_dom}</span>` : '<span style="opacity:.3">—</span>')}\
+      ${tdC(m.rango_min ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;background:rgba(255,166,87,.12);color:#ffa657;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(255,166,87,.25)">${RL[m.rango_min]||m.rango_min}</span>` : '<span style="opacity:.3;color:#484f58">—</span>')}\
     </tr>`;
   }).join('');
 
@@ -2807,18 +2561,47 @@ function renderMunTable(data) {
   const totAp  = isFullSet ? D.general.total_apoyos : data.reduce((s,m)=>s+m.total_apoyos,0);
   const totLoc = isFullSet ? D.localizables.total   : data.reduce((s,m)=>s+m.localizables,0);
   const totLocPct = totT ? (totLoc/totT*100).toFixed(1) : 0;
+  const totLocC  = parseFloat(totLocPct)>=80?'#3fb950':parseFloat(totLocPct)>=50?'#e3b341':'#ff7b72';
+  const totLocBg = parseFloat(totLocPct)>=80?'rgba(63,185,80,.15)':parseFloat(totLocPct)>=50?'rgba(227,179,65,.15)':'rgba(255,123,114,.15)';
+  const totMPct  = totT ? (totM/totT*100).toFixed(1) : 50;
+  const totHPct  = totT ? (totH/totT*100).toFixed(1) : 50;
+  /* programas únicos totales */
+  const totProg = data.reduce((s,m)=>s+( m.n_programas||0),0);
+  /* rango dominante (moda de rango_dom y rango_min) */
+  const modaRango = arr => { const c={}; arr.forEach(v=>v&&(c[v]=(c[v]||0)+1)); return Object.entries(c).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—'; };
+  const RL = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
+  const totRangoDom = modaRango(data.map(m=>m.rango_dom));
+  const totRangoMin = modaRango(data.map(m=>m.rango_min));
   const foot = document.getElementById('mun-tfoot');
-  if (foot) foot.innerHTML = `<tr style="background:var(--paper2);border-top:2px solid rgba(15,23,42,.14)">
-    <td colspan="2" style="padding:11px 14px;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#475569">Total · ${data.length} municipios</td>
-    <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#0F172A">${fmt(totT)}</td>
-    <td style="padding:11px 8px"></td>
-    <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#0F172A">${fmt(totAp)}</td>
-    <td style="padding:11px 8px"></td>
-    <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#0F172A">${fmt(totLoc)}</td>
-    <td style="padding:11px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#059669">${totLocPct}%</td>
-    <td style="padding:11px 8px"></td>
-    <td style="padding:11px 8px"></td>
-    <td style="padding:11px 8px"></td>
+  if (foot) foot.innerHTML = `<tr style="background:#161b22;border-top:1px solid rgba(205,217,229,.15)">
+    <td colspan="2" style="padding:12px 14px;font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8b949e">Total · ${data.length} municipios</td>
+    <td style="padding:12px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#e6edf3">${fmt(totT)}</td>
+    <td style="padding:12px 8px;text-align:center">
+      <div style="min-width:100px">
+        <div style="height:5px;border-radius:3px;overflow:hidden;display:flex;margin-bottom:4px">
+          <div style="width:${totMPct}%;background:#BE185D;opacity:.75"></div>
+          <div style="width:${totHPct}%;background:#1D4ED8;opacity:.55"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;font-family:'DM Sans',system-ui,sans-serif">
+          <span style="color:#BE185D;font-weight:600">${totMPct}%</span>
+          <span style="color:#1D4ED8;font-weight:600">${totHPct}%</span>
+        </div>
+      </div>
+    </td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${fmt(totAp)}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${totProg}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:${totLocBg};color:${totLocC};padding:3px 9px;border-radius:20px;border:0.5px solid ${totLocC}33">${fmt(totLoc)}</span></td>
+    <td style="padding:12px 8px;text-align:center">
+      <div style="display:flex;align-items:center;justify-content:center;gap:6px">
+        <div style="width:36px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
+          <div style="height:100%;width:${totLocPct}%;background:${totLocC};border-radius:2px"></div>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:${totLocC}">${totLocPct}%</span>
+      </div>
+    </td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:600;background:rgba(227,179,65,.12);color:#e3b341;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(227,179,65,.25)">—</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;background:rgba(56,139,253,.15);color:#79c0ff;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(56,139,253,.25)">${RL[totRangoDom]||totRangoDom}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;background:rgba(255,166,87,.12);color:#ffa657;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(255,166,87,.25)">${RL[totRangoMin]||totRangoMin}</span></td>
   </tr>`;
 }
 
@@ -2879,160 +2662,237 @@ function renderApoyos() {
 }
 
 function renderApoyosTable(rows) {
-  const apoyos = rows.filter(r => r.type === 'apoyo').map(r => r.data);
+  const apoyos      = rows.filter(r => r.type === 'apoyo').map(r => r.data);
   const totalGlobal = D.general.total_apoyos || 1;
+  const maxTotal    = Math.max(...apoyos.map(a => a.total), 1);
 
-  // ── Paleta institucional premium (desaturada) ──
-  const INST_INK = {
-    'SALUD':'#1E4D8C','SDHyBC':'#166534','DIF':'#9A3412',
-    'ICHIJUV':'#5B21B6','SPyCI':'#065F46','ICHDII':'#7F1D1D','RURAL':'#44403C'
-  };
-  const INST_BG = {
-    'SALUD':'#DBEAFE','SDHyBC':'#DCFCE7','DIF':'#FFEDD5',
-    'ICHIJUV':'#EDE9FE','SPyCI':'#D1FAE5','ICHDII':'#FEE2E2','RURAL':'#F5F5F4'
-  };
+  const INST_INK = {'SALUD':'#1E4D8C','SDHyBC':'#166534','DIF':'#9A3412','ICHIJUV':'#5B21B6','SPyCI':'#065F46','ICHDII':'#7F1D1D','RURAL':'#44403C','CULTURA':'#713F12'};
+  const INST_BG  = {'SALUD':'#DBEAFE','SDHyBC':'#DCFCE7','DIF':'#FFEDD5','ICHIJUV':'#EDE9FE','SPyCI':'#D1FAE5','ICHDII':'#FEE2E2','RURAL':'#F5F5F4','CULTURA':'#FEF9C3'};
+  const INST_ACC = {'SALUD':'#2563EB','SDHyBC':'#1D9E75','DIF':'#EA580C','ICHIJUV':'#7C3AED','SPyCI':'#059669','ICHDII':'#DC2626','RURAL':'#78716C','CULTURA':'#CA8A04'};
+  function iInk(n){ return INST_INK[n] || '#334155' }
+  function iBg(n){  return INST_BG[n]  || '#F1F5F9' }
+  function iAcc(n){ return INST_ACC[n] || '#64748B' }
 
-  // ── Donut SVG minimalista ──
-  function donutSVG(pctF, r) {
-    r = r || 22;
-    const C = 2 * Math.PI * r;
-    const arcF = (pctF / 100) * C;
-    const arcM = C - arcF;
-    return `<svg class="cat-donut-svg" width="${r*2+8}" height="${r*2+8}" viewBox="0 0 ${r*2+8} ${r*2+8}">
-      <circle cx="${r+4}" cy="${r+4}" r="${r}" fill="none" stroke="#E2E8F0" stroke-width="5"/>
-      <circle cx="${r+4}" cy="${r+4}" r="${r}" fill="none" stroke="#BE185D" stroke-width="5"
-        stroke-dasharray="${arcF.toFixed(2)} ${arcM.toFixed(2)}"
-        stroke-dashoffset="${(C * 0.25).toFixed(2)}" stroke-linecap="round"/>
-      <circle cx="${r+4}" cy="${r+4}" r="${r}" fill="none" stroke="#1D4ED8" stroke-width="5"
-        stroke-dasharray="${arcM.toFixed(2)} ${arcF.toFixed(2)}"
-        stroke-dashoffset="${(C * 0.25 - arcF).toFixed(2)}" stroke-linecap="round" opacity=".55"/>
-    </svg>`;
-  }
-
-  const GCOLS = `display:grid;grid-template-columns:1.8fr .8fr 1.3fr .7fr;gap:0;align-items:center`;
-
+  // ── KPIs ──
   const elTipos = document.getElementById('cat-total-tipos');
   const elNum   = document.getElementById('cat-total-num');
   if (elTipos) elTipos.textContent = apoyos.length;
-  if (elNum)   elNum.textContent = (D.general.total_apoyos || apoyos.reduce((s,a)=>s+a.total,0)).toLocaleString('es-MX');
+  if (elNum)   elNum.textContent   = (D.general.total_apoyos || apoyos.reduce((s,a)=>s+a.total,0)).toLocaleString('es-MX');
 
-  const out = apoyos.map((a, ai) => {
-    const pct  = a.total / totalGlobal * 100;
-    const pctM = a.total > 0 ? a.m / a.total * 100 : 0;
-    const pctH = 100 - pctM;
-
-    // Aplanar programas de todas las instituciones
-    const progs = [];
-    a.instituciones.forEach(inst => {
-      inst.programas.forEach(p => {
-        progs.push({ ...p, inst: inst.nombre });
-      });
+  // ── Chips (construir una sola vez) ──
+  const chipsEl = document.getElementById('cat-inst-chips');
+  if (chipsEl && !chipsEl._built) {
+    chipsEl._built = true;
+    const insts = new Set();
+    D.apoyos.forEach(a => a.instituciones.forEach(i => insts.add(i.nombre)));
+    chipsEl.innerHTML = ['TODOS', ...[...insts].sort()].map(n => {
+      const act = (window._catInstFilter||'TODOS') === n ? ' active' : '';
+      return `<button class="cat-chip${act}" onclick="catSetInst('${n}',this)">${n==='TODOS'?'Todos':n}</button>`;
+    }).join('');
+  } else if (chipsEl) {
+    const active = window._catInstFilter || 'TODOS';
+    chipsEl.querySelectorAll('.cat-chip').forEach(c => {
+      c.classList.toggle('active', c.textContent === active || (active==='TODOS' && c.textContent==='Todos'));
     });
-    progs.sort((a,b) => b.total - a.total);
+  }
 
-    // ── Sub-filas de programas (premium) ──
-    const progRows = progs.map(p => {
-      const pPctM  = p.total > 0 ? (p.m / p.total * 100) : 0;
-      const iInk   = INST_INK[p.inst] || '#334155';
-      const iBg    = INST_BG[p.inst]  || '#F1F5F9';
-      return `<div class="cat-prog-row" style="grid-template-columns:1.8fr .8fr 1.3fr .7fr">
-        <div class="cat-prog-name-wrap">
-          <div class="cat-prog-indicator" style="background:${iInk}"></div>
-          <span class="cat-prog-name">${toTitle(p.nombre)}</span>
-          <span class="cat-prog-inst-badge" style="background:${iBg};color:${iInk}">${p.inst}</span>
-        </div>
-        <div style="text-align:center">
-          <span style="font-family:var(--cat-mono);font-size:14px;font-weight:500;
-                       color:var(--cat-ink);letter-spacing:-.01em">${fmt(p.total)}</span>
-        </div>
-        <div style="padding:0 12px">
-          <div style="display:flex;align-items:center;justify-content:center;gap:10px">
-            ${donutSVG(pPctM, 16)}
-            <div style="font-family:var(--cat-font)">
-              <div style="display:flex;gap:10px;align-items:center;margin-bottom:2px">
-                <span style="font-size:11px;font-weight:600;color:#BE185D">♀ ${pPctM.toFixed(0)}%</span>
-                <span style="font-size:11px;font-weight:600;color:#1D4ED8">♂ ${(100-pPctM).toFixed(0)}%</span>
-              </div>
-              <div style="font-family:var(--cat-mono);font-size:11px;color:var(--cat-ink3)">
-                ${fmt(p.m)} · ${fmt(p.h)}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <span style="font-family:var(--cat-mono);font-size:14px;font-weight:500;
-                       color:var(--cat-ink2)">${p.muns || '—'}</span>
-          <div style="font-family:var(--cat-font);font-size:9px;color:var(--cat-ink3);
-                      text-transform:uppercase;letter-spacing:.06em;margin-top:1px">de 67</div>
+  if (!apoyos.length) {
+    document.getElementById('apoyos-tbody').innerHTML = '<div class="cat-no-results">Sin resultados para esta búsqueda.</div>';
+    return;
+  }
+
+  const out = apoyos.map(a => {
+    const pctM  = a.total > 0 ? Math.round(a.m / a.total * 100) : 0;
+    const pctH  = 100 - pctM;
+    const barW  = Math.round(a.total / maxTotal * 100);
+    const isExp = (window._catExpanded || new Set()).has(a.nombre);
+    const progs = [];
+    a.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+    progs.sort((x, y) => y.total - x.total);
+
+    const firstInst = a.instituciones[0]?.nombre || '';
+    const acc       = iAcc(firstInst);
+
+    const badges = a.instituciones.map(i =>
+      `<span class="cat-badge" style="background:${iBg(i.nombre)};color:${iInk(i.nombre)}">${i.nombre}</span>`
+    ).join('');
+
+    const detRows = progs.map(p => {
+      const pM = p.total > 0 ? Math.round(p.m / p.total * 100) : 0;
+      return `<div class="cat-prog-row">
+        <div class="cat-prog-name">${toTitle(p.nombre)}<span class="cat-prog-inst-badge" style="background:${iBg(p.inst)};color:${iInk(p.inst)}">${p.inst}</span></div>
+        <div class="cat-prog-nums">
+          <span class="cat-prog-num">${fmt(p.total)}<span class="cat-prog-num-lbl">apoyos</span></span>
+          <div class="cat-prog-bar-wrap"><div class="cat-prog-bar-fill" style="width:${pM}%"></div></div>
+          <span style="font-size:11px;color:#D4537E;font-weight:600">♀ ${pM}%</span>
+          <span style="font-size:11px;color:#185FA5;font-weight:600">♂ ${100-pM}%</span>
+          <span style="font-size:11px;color:var(--cat-ink3)">${p.muns||'—'} mun.</span>
         </div>
       </div>`;
     }).join('');
 
-    // ── Badges de institución (pastel) ──
-    const instBadges = a.instituciones.map(i => {
-      const iInk = INST_INK[i.nombre] || '#334155';
-      const iBg  = INST_BG[i.nombre]  || '#F1F5F9';
-      return `<span class="cat-badge" style="background:${iBg};color:${iInk}">${i.nombre}</span>`;
-    }).join('');
-
-    return `<div class="cat-card">
-      <div class="cat-row-main" style="grid-template-columns:1.8fr .8fr 1.3fr .7fr">
-        <div>
+    const safeName = a.nombre.replace(/'/g, "\\'");
+    return `<div class="cat-card${isExp?' expanded':''}" onclick="catToggle('${safeName}')">
+      <div class="cat-card-accent" style="background:${acc}"></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+        <div style="flex:1;min-width:0">
           <div class="cat-apoyo-name">${toTitle(a.nombre)}</div>
-          <div class="cat-apoyo-meta">
-            ${instBadges}
-            <span class="cat-badge-meta">${progs.length} programa${progs.length!==1?'s':''}</span>
-            <span style="font-family:var(--cat-font);font-size:10px;font-weight:600;
-                         color:var(--cat-blue-acc);background:var(--cat-blue-lt);padding:2px 8px;
-                         border-radius:20px">${pct.toFixed(1)}% del total</span>
-          </div>
+          <div style="font-size:11px;color:#8b949e;margin-top:2px">${progs.length} programa${progs.length!==1?'s':''} · ${a.pct.toFixed(1)}% del total</div>
         </div>
-        <div class="cat-kpi">
-          <div class="cat-kpi-num">${fmt(a.total)}</div>
-          <div class="cat-kpi-lbl">apoyos</div>
+        ${progs.length ? `<button class="cat-ver-btn" onclick="event.stopPropagation();catModal('${safeName}')">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="4.5"/><line x1="6" y1="4" x2="6" y2="8"/><line x1="4" y1="6" x2="8" y2="6"/></svg>
+          Ver programas
+        </button>` : ''}
+      </div>
+      <div class="cat-apoyo-meta">${badges}</div>
+      <div class="cat-card-datos">
+        <div class="cat-dato">
+          <div class="cat-dato-val">${fmt(a.total)}</div>
+          <div class="cat-dato-lbl">Apoyos</div>
         </div>
-        <div class="cat-gender-wrap" style="justify-content:center">
-          ${donutSVG(pctM, 22)}
-          <div class="cat-gender-nums">
-            <div class="cat-gnr">
-              <div class="cat-gnr-dot" style="background:#BE185D"></div>
-              <span class="cat-gnr-val">${fmt(a.m)}</span>
-              <span class="cat-gnr-pct">${pctM.toFixed(0)}%</span>
-            </div>
-            <div class="cat-gnr">
-              <div class="cat-gnr-dot" style="background:#1D4ED8;opacity:.7"></div>
-              <span class="cat-gnr-val">${fmt(a.h)}</span>
-              <span class="cat-gnr-pct">${pctH.toFixed(0)}%</span>
-            </div>
-            <div style="font-family:var(--cat-mono);font-size:12px;color:var(--cat-ink3);
-                        padding-top:2px;border-top:1px solid #E2E8F0;margin-top:2px">
-              Total ${fmt(a.total)}
-            </div>
-          </div>
+        <div class="cat-dato">
+          <div class="cat-dato-val">${a.n_muns}</div>
+          <div class="cat-dato-lbl">Municipios</div>
         </div>
-        <div class="cat-mun">
-          <div class="cat-mun-num">${a.n_muns}</div>
-          <div class="cat-mun-sub">de 67</div>
+        <div class="cat-dato">
+          <div class="cat-dato-val">${pctM}%</div>
+          <div class="cat-dato-lbl">Mujeres</div>
         </div>
       </div>
-      ${progs.length > 0 ? `<div class="cat-prog-list">${progRows}</div>` : ''}
+      <div class="cat-card-genero">
+        <div class="cat-gnr">
+          <div class="cat-gnr-dot" style="background:#D4537E"></div>
+          <div class="cat-gnr-track"><div class="cat-gnr-fill" style="width:${pctM}%;background:#D4537E"></div></div>
+          <span class="cat-gnr-val">${fmt(a.m)}</span>
+          <span class="cat-gnr-pct">${pctM}%</span>
+        </div>
+        <div class="cat-gnr">
+          <div class="cat-gnr-dot" style="background:#185FA5;opacity:.7"></div>
+          <div class="cat-gnr-track"><div class="cat-gnr-fill" style="width:${pctH}%;background:#185FA5;opacity:.7"></div></div>
+          <span class="cat-gnr-val">${fmt(a.h)}</span>
+          <span class="cat-gnr-pct">${pctH}%</span>
+        </div>
+      </div>
+      <div class="cat-card-vol">
+        <div class="cat-vol-track"><div class="cat-vol-fill" style="width:${Math.max(barW,1)}%"></div></div>
+        <span class="cat-vol-pct">${barW}% del máx.</span>
+      </div>
     </div>`;
   }).join('');
 
-  document.getElementById('apoyos-tbody').innerHTML = out ||
-    `<div style="padding:48px;text-align:center;font-family:var(--cat-font);font-size:14px;color:var(--cat-ink3)">
-      Sin resultados para esta búsqueda.</div>`;
+  document.getElementById('apoyos-tbody').innerHTML = out;
 }
+
+function catToggle(nombre) {
+  // ya no se usa para expandir — se mantiene por compatibilidad
+}
+
+function catModal(nombre) {
+  const apoyo = D.apoyos.find(a => a.nombre === nombre);
+  if (!apoyo) return;
+
+  const INST_INK = {'SALUD':'#79c0ff','SDHyBC':'#56d364','DIF':'#ffa657','ICHIJUV':'#d2a8ff','SPyCI':'#3fb950','ICHDII':'#ff7b72','RURAL':'#8b949e','CULTURA':'#e3b341'};
+  const INST_BG  = {'SALUD':'rgba(56,139,253,.15)','SDHyBC':'rgba(63,185,80,.15)','DIF':'rgba(255,166,87,.15)','ICHIJUV':'rgba(210,168,255,.15)','SPyCI':'rgba(63,185,80,.15)','ICHDII':'rgba(255,123,114,.15)','RURAL':'rgba(139,148,158,.15)','CULTURA':'rgba(227,179,65,.15)'};
+  function iInk(n){ return INST_INK[n]||'#8b949e' }
+  function iBg(n){  return INST_BG[n] ||'rgba(139,148,158,.15)' }
+
+  const progs = [];
+  apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  progs.sort((x, y) => y.total - x.total);
+  const totalApoyo = apoyo.total || 1;
+
+  document.getElementById('cat-modal-title').textContent = toTitle(apoyo.nombre);
+  document.getElementById('cat-modal-sub').textContent =
+    `${progs.length} programa${progs.length!==1?'s':''} · ${apoyo.total.toLocaleString('es-MX')} apoyos · ${apoyo.n_muns} municipios`;
+
+  document.getElementById('cat-modal-body').innerHTML = progs.map(p => {
+    const pM   = p.total > 0 ? Math.round(p.m / p.total * 100) : 0;
+    const pW   = Math.round(p.total / totalApoyo * 100);
+    return `<div class="cat-modal-prog">
+      <div class="cat-modal-prog-header">
+        <div class="cat-modal-prog-name">${toTitle(p.nombre)}</div>
+        <span class="cat-modal-prog-inst" style="background:${iBg(p.inst)};color:${iInk(p.inst)}">${p.inst}</span>
+        <div class="cat-modal-prog-total">${fmt(p.total)}</div>
+      </div>
+      <div class="cat-modal-prog-stats">
+        <div class="cat-modal-stat">
+          <div class="cat-modal-stat-val">${fmt(p.m)}</div>
+          <div class="cat-modal-stat-lbl">Mujeres (${pM}%)</div>
+        </div>
+        <div class="cat-modal-stat">
+          <div class="cat-modal-stat-val">${fmt(p.h)}</div>
+          <div class="cat-modal-stat-lbl">Hombres (${100-pM}%)</div>
+        </div>
+      </div>
+      <div class="cat-modal-bar-wrap">
+        <div class="cat-modal-bar-row">
+          <div class="cat-modal-bar-dot" style="background:#f778ba"></div>
+          <div class="cat-modal-bar-track"><div class="cat-modal-bar-fill" style="width:${pM}%;background:#f778ba"></div></div>
+          <span class="cat-modal-bar-val">${fmt(p.m)} · ${pM}%</span>
+        </div>
+        <div class="cat-modal-bar-row">
+          <div class="cat-modal-bar-dot" style="background:#79c0ff;opacity:.8"></div>
+          <div class="cat-modal-bar-track"><div class="cat-modal-bar-fill" style="width:${100-pM}%;background:#79c0ff;opacity:.8"></div></div>
+          <span class="cat-modal-bar-val">${fmt(p.h)} · ${100-pM}%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+          <span style="font-size:10px;color:#8b949e">Peso dentro del apoyo</span>
+          <div style="flex:1;height:3px;border-radius:2px;background:rgba(205,217,229,.1);overflow:hidden">
+            <div style="height:100%;width:${pW}%;background:#388bfd;border-radius:2px"></div>
+          </div>
+          <span style="font-size:11px;color:#8b949e">${pW}%</span>
+        </div>
+        ${p.muns ? `<div style="font-size:11px;color:#8b949e;margin-top:6px">Presente en <strong style="color:#cdd9e5">${p.muns}</strong> municipio${p.muns!==1?'s':''}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('cat-modal-overlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function catModalClose(e) {
+  if (e && e.target !== document.getElementById('cat-modal-overlay')) return;
+  document.getElementById('cat-modal-overlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+// Cerrar con Escape
+document.addEventListener('keydown', function(e){
+  if (e.key==='Escape') catModalClose(null);
+});
+
+function catSetInst(inst, btn) {
+  window._catInstFilter = inst;
+  window._catExpanded   = new Set(); // limpiar expandidos al cambiar filtro
+  document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  filterApoyos();
+}
+
 function filterApoyos() {
-  const q = norm(document.getElementById('apoyo-search').value);
-  if (!q) { renderApoyosTable(apoyosFlat); return; }
-  // Buscar en nombre del apoyo, institución o programa
-  const matchedApoyo = new Set();
-  apoyosFlat.filter(r => r.q.includes(q)).forEach(r => {
-    if (r.type === 'apoyo') matchedApoyo.add(r.data.nombre);
-    else if (r.parent) matchedApoyo.add(r.parent);
-  });
-  renderApoyosTable(apoyosFlat.filter(r => r.type === 'apoyo' && matchedApoyo.has(r.data.nombre)));
+  const q    = norm(document.getElementById('apoyo-search').value);
+  const inst = window._catInstFilter || 'TODOS';
+
+  // Siempre partir del flat completo
+  let rows = apoyosFlat.filter(r => r.type === 'apoyo');
+
+  // Filtro texto
+  if (q) {
+    const matchedApoyo = new Set();
+    apoyosFlat.filter(r => r.q.includes(q)).forEach(r => {
+      if (r.type === 'apoyo') matchedApoyo.add(r.data.nombre);
+      else if (r.parent) matchedApoyo.add(r.parent);
+    });
+    rows = rows.filter(r => matchedApoyo.has(r.data.nombre));
+  }
+
+  // Filtro institución
+  if (inst !== 'TODOS') {
+    rows = rows.filter(r => r.data.instituciones.some(i => i.nombre === inst));
+  }
+
+  renderApoyosTable(rows);
 }
 
 function renderProgsTable(data) {
@@ -3902,7 +3762,49 @@ window.mapaLeafletInit=function(){
   });
 };
 })();
+
+// ── Dark mode ──────────────────────────────────────────
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  const icon   = document.getElementById('dark-icon');
+  const lbl    = document.getElementById('dark-lbl');
+  localStorage.setItem('gaceta-dark', isDark ? '1' : '0');
+  if (isDark) {
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    lbl.textContent = 'Día';
+  } else {
+    icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    lbl.textContent = 'Noche';
+  }
+}
+// Restaurar preferencia guardada
+(function(){
+  if (localStorage.getItem('gaceta-dark') === '1') {
+    document.body.classList.add('dark');
+    setTimeout(function(){
+      var icon = document.getElementById('dark-icon');
+      var lbl  = document.getElementById('dark-lbl');
+      if (icon) icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+      if (lbl)  lbl.textContent = 'Día';
+    }, 0);
+  }
+})();
 </script>
 
+<div class="cat-modal-overlay hidden" id="cat-modal-overlay" onclick="catModalClose(event)">
+  <div class="cat-modal" id="cat-modal-box">
+    <div class="cat-modal-header">
+      <div>
+        <div class="cat-modal-title" id="cat-modal-title">—</div>
+        <div class="cat-modal-sub" id="cat-modal-sub">—</div>
+      </div>
+      <button class="cat-modal-close" onclick="catModalClose(null)">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/></svg>
+      </button>
+    </div>
+    <div class="cat-modal-body" id="cat-modal-body"></div>
+  </div>
+</div>
 </body>
 </html>
+
