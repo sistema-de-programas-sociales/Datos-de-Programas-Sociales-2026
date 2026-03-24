@@ -853,111 +853,6 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height
 .cat-col-header{display:none}
 .cat-col-lbl{}
 
-/* ══════════════════════════════════════════════════════
-   CATÁLOGO DE PROGRAMAS — estilos propios
-══════════════════════════════════════════════════════ */
-
-/* Contenedor override — lista vertical, no grid de cards */
-#prog-tbody{
-  display:flex !important;
-  flex-direction:column !important;
-  gap:0 !important;
-  overflow-y:auto;
-  max-height:600px;
-  background:transparent !important;
-  padding:12px !important;
-}
-
-/* Grupo institucional (cat-card reusado) */
-#prog-tbody .cat-card{
-  padding:0 !important;
-  gap:0 !important;
-  cursor:default !important;
-  border:1px solid rgba(205,217,229,.1) !important;
-  border-radius:10px !important;
-  overflow:hidden;
-  margin:0 0 10px 0 !important;
-  background:#161b22 !important;
-}
-#prog-tbody .cat-card:hover{ background:#161b22 !important; }
-
-/* Header del grupo */
-.cat-inst-name-badge{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.cat-inst-pill{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
-  padding:3px 10px; border-radius:4px; white-space:nowrap;
-}
-.cat-inst-prog-count{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:12px; color:#8b949e;
-}
-.cat-inst-total-bar{ display:flex; align-items:center; gap:10px; }
-.cat-inst-total-num{
-  font-family:'DM Mono',monospace;
-  font-size:14px; font-weight:600; white-space:nowrap;
-  font-variant-numeric:tabular-nums; min-width:70px; text-align:right;
-}
-.cat-inst-total-sub{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:10px; color:#8b949e; margin-top:2px; text-transform:uppercase; letter-spacing:.05em;
-}
-
-/* Lista de programas */
-.cat-prog-list{ display:block; }
-
-/* Fila individual de programa */
-.cat-prog-row{
-  padding:10px 20px;
-  border-bottom:1px solid rgba(205,217,229,.05);
-  transition:background .12s;
-  align-items:center;
-}
-.cat-prog-row:last-child{ border-bottom:none; }
-.cat-prog-row:hover{ background:rgba(205,217,229,.04); }
-
-/* Indicador lateral de color */
-.cat-prog-indicator{
-  width:3px; height:26px; border-radius:2px; flex-shrink:0;
-}
-
-/* Nombre del programa */
-.cat-prog-name{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:13px; font-weight:500; color:#cdd9e5;
-  line-height:1.35; white-space:normal;
-}
-
-/* Clave */
-.cat-clave{
-  font-family:'DM Mono',monospace;
-  font-size:11px; font-weight:500; color:#8b949e;
-  letter-spacing:.04em; background:rgba(205,217,229,.06);
-  padding:2px 7px; border-radius:4px;
-  border:0.5px solid rgba(205,217,229,.1); white-space:nowrap;
-}
-
-/* Barra de beneficiarios */
-.cat-benef-wrap{ display:flex; flex-direction:column; justify-content:center; min-width:0; }
-.cat-benef-bar-track{
-  height:5px; border-radius:3px;
-  background:rgba(205,217,229,.1); overflow:hidden;
-}
-.cat-benef-bar-fill{
-  height:100%; border-radius:3px;
-  transition:width .5s cubic-bezier(.16,1,.3,1);
-}
-.cat-benef-val{
-  font-family:'DM Mono',monospace;
-  font-size:13px; font-weight:600;
-  white-space:nowrap; font-variant-numeric:tabular-nums;
-  min-width:60px; text-align:right;
-}
-.cat-benef-none{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:11px; color:#484f58; font-style:italic;
-}
-
 /* ── Filas tabla municipios ── */
 /* ── Filas tabla municipios ── */
 /* ── Filas tabla municipios ── */
@@ -1578,7 +1473,7 @@ function toggleDark() {
         <div class="cat-col-lbl" style="text-align:center">Beneficiarios Reales</div>
         <div class="cat-col-lbl" style="text-align:center">Institución</div>
       </div>
-      <div class="cat-body" id="prog-tbody"></div>
+      <div class="cat-body" style="max-height:560px" id="prog-tbody"></div>
     </div>
   </div><!-- /apoyos-panel-1 -->
 
@@ -2666,18 +2561,47 @@ function renderMunTable(data) {
   const totAp  = isFullSet ? D.general.total_apoyos : data.reduce((s,m)=>s+m.total_apoyos,0);
   const totLoc = isFullSet ? D.localizables.total   : data.reduce((s,m)=>s+m.localizables,0);
   const totLocPct = totT ? (totLoc/totT*100).toFixed(1) : 0;
+  const totLocC  = parseFloat(totLocPct)>=80?'#3fb950':parseFloat(totLocPct)>=50?'#e3b341':'#ff7b72';
+  const totLocBg = parseFloat(totLocPct)>=80?'rgba(63,185,80,.15)':parseFloat(totLocPct)>=50?'rgba(227,179,65,.15)':'rgba(255,123,114,.15)';
+  const totMPct  = totT ? (totM/totT*100).toFixed(1) : 50;
+  const totHPct  = totT ? (totH/totT*100).toFixed(1) : 50;
+  /* programas únicos totales */
+  const totProg = data.reduce((s,m)=>s+( m.n_programas||0),0);
+  /* rango dominante (moda de rango_dom y rango_min) */
+  const modaRango = arr => { const c={}; arr.forEach(v=>v&&(c[v]=(c[v]||0)+1)); return Object.entries(c).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—'; };
+  const RL = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
+  const totRangoDom = modaRango(data.map(m=>m.rango_dom));
+  const totRangoMin = modaRango(data.map(m=>m.rango_min));
   const foot = document.getElementById('mun-tfoot');
   if (foot) foot.innerHTML = `<tr style="background:#161b22;border-top:1px solid rgba(205,217,229,.15)">
     <td colspan="2" style="padding:12px 14px;font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8b949e">Total · ${data.length} municipios</td>
-    <td style="padding:12px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#e6edf3">${fmt(totT)}</td>
-    <td style="padding:12px 8px"></td>
-    <td style="padding:12px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#cdd9e5">${fmt(totAp)}</td>
-    <td style="padding:12px 8px"></td>
-    <td style="padding:12px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#cdd9e5">${fmt(totLoc)}</td>
-    <td style="padding:12px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#3fb950">${totLocPct}%</td>
-    <td style="padding:12px 8px"></td>
-    <td style="padding:12px 8px"></td>
-    <td style="padding:12px 8px"></td>
+    <td style="padding:12px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#e6edf3">${fmt(totT)}</td>
+    <td style="padding:12px 8px;text-align:center">
+      <div style="min-width:100px">
+        <div style="height:5px;border-radius:3px;overflow:hidden;display:flex;margin-bottom:4px">
+          <div style="width:${totMPct}%;background:#BE185D;opacity:.75"></div>
+          <div style="width:${totHPct}%;background:#1D4ED8;opacity:.55"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;font-family:'DM Sans',system-ui,sans-serif">
+          <span style="color:#BE185D;font-weight:600">${totMPct}%</span>
+          <span style="color:#1D4ED8;font-weight:600">${totHPct}%</span>
+        </div>
+      </div>
+    </td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${fmt(totAp)}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${totProg}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:${totLocBg};color:${totLocC};padding:3px 9px;border-radius:20px;border:0.5px solid ${totLocC}33">${fmt(totLoc)}</span></td>
+    <td style="padding:12px 8px;text-align:center">
+      <div style="display:flex;align-items:center;justify-content:center;gap:6px">
+        <div style="width:36px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
+          <div style="height:100%;width:${totLocPct}%;background:${totLocC};border-radius:2px"></div>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:${totLocC}">${totLocPct}%</span>
+      </div>
+    </td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:600;background:rgba(227,179,65,.12);color:#e3b341;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(227,179,65,.25)">—</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;background:rgba(56,139,253,.15);color:#79c0ff;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(56,139,253,.25)">${RL[totRangoDom]||totRangoDom}</span></td>
+    <td style="padding:12px 8px;text-align:center"><span style="font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;background:rgba(255,166,87,.12);color:#ffa657;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(255,166,87,.25)">${RL[totRangoMin]||totRangoMin}</span></td>
   </tr>`;
 }
 
@@ -2974,20 +2898,14 @@ function filterApoyos() {
 function renderProgsTable(data) {
   // ── Paleta institucional premium (desaturada) ──
   const INST_INK = {
-    'SALUD':'#79c0ff','SDHyBC':'#56d364','DIF':'#ffa657',
-    'ICHIJUV':'#d2a8ff','SPyCI':'#3fb950','ICHDII':'#ff7b72',
-    'ICHD':'#39d0d8','RURAL':'#e3b341',
-    'CECYTECH':'#58a6ff','COESPO':'#bc8cff','COESVI':'#79c0ff',
-    'CULTURA':'#ffa657','ICHIMUJ':'#f778ba','SEECH':'#56d364',
-    'SEyD':'#e3b341','SPyCI':'#3fb950'
+    'SALUD':'#1E4D8C','SDHyBC':'#166534','DIF':'#9A3412',
+    'ICHIJUV':'#5B21B6','SPyCI':'#065F46','ICHDII':'#7F1D1D',
+    'ICHD':'#155E75','RURAL':'#44403C'
   };
   const INST_BG = {
-    'SALUD':'rgba(121,192,255,.1)','SDHyBC':'rgba(86,211,100,.1)','DIF':'rgba(255,166,87,.1)',
-    'ICHIJUV':'rgba(210,168,255,.1)','SPyCI':'rgba(63,185,80,.1)','ICHDII':'rgba(255,123,114,.1)',
-    'ICHD':'rgba(57,208,216,.1)','RURAL':'rgba(227,179,65,.1)',
-    'CECYTECH':'rgba(88,166,255,.1)','COESPO':'rgba(188,140,255,.1)','COESVI':'rgba(121,192,255,.1)',
-    'CULTURA':'rgba(255,166,87,.1)','ICHIMUJ':'rgba(247,120,186,.1)','SEECH':'rgba(86,211,100,.1)',
-    'SEyD':'rgba(227,179,65,.1)'
+    'SALUD':'#DBEAFE','SDHyBC':'#DCFCE7','DIF':'#FFEDD5',
+    'ICHIJUV':'#EDE9FE','SPyCI':'#D1FAE5','ICHDII':'#FEE2E2',
+    'ICHD':'#CFFAFE','RURAL':'#F5F5F4'
   };
   const GCOLS = `display:grid;grid-template-columns:1.8fr .8fr 1.3fr .7fr;gap:0;align-items:center`;
 
@@ -3045,13 +2963,13 @@ function renderProgsTable(data) {
 
       // ── Header de grupo institucional ──
       return `<div class="cat-card" style="margin:${gi===0?'10px':'6px'} 12px">
-        <div style="${GCOLS};padding:13px 20px;background:${iBg};border-bottom:1px solid rgba(205,217,229,.08)">
+        <div style="${GCOLS};padding:13px 20px;background:${iBg};border-bottom:1px solid rgba(0,0,0,.06)">
           <div class="cat-inst-name-badge">
-            <span class="cat-inst-pill" style="background:${iInk};color:#0d1117">${inst}</span>
+            <span class="cat-inst-pill" style="background:${iInk};color:#fff">${inst}</span>
             <span class="cat-inst-prog-count">${progs.length} programa${progs.length!==1?'s':''}</span>
           </div>
           <div style="text-align:center">
-            <span style="font-family:var(--cat-mono);font-size:11px;color:#484f58">—</span>
+            <span style="font-family:var(--cat-mono);font-size:11px;color:var(--cat-ink3)">—</span>
           </div>
           <div class="cat-benef-wrap">
             ${totalInst > 0 ? `
@@ -3062,10 +2980,10 @@ function renderProgsTable(data) {
                 <span class="cat-inst-total-num" style="color:${iInk}">${totalInst.toLocaleString('es-MX')}</span>
               </div>
               <div class="cat-inst-total-sub">total institución</div>
-            ` : '<span style="font-family:\'DM Mono\',monospace;font-size:11px;color:#484f58">Sin datos</span>'}
+            ` : ''}
           </div>
           <div style="text-align:center">
-            <span style="font-family:var(--cat-mono);font-size:11px;color:#484f58">—</span>
+            <span style="font-family:var(--cat-mono);font-size:11px;color:var(--cat-ink3)">—</span>
           </div>
         </div>
         <div class="cat-prog-list">${progRows}</div>
