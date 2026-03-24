@@ -657,14 +657,14 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 3649,
-        "6-11": 930,
-        "12-17": 585,
-        "18-29": 2093,
-        "30-49": 5276,
-        "50-64": 5299,
-        "65+": 6956,
-        "sin_datos": 133
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0,
+        "sin_datos": 0
       }
     },
     "ICHDII": {
@@ -3903,7 +3903,87 @@ window.DASHBOARD_DATA = {
               "total": 220964,
               "m": 139992,
               "h": 80972,
-              "muns": 69
+              "muns": 69,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "AQUILES SERDAN",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "COYAME DEL SOTOL",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "DR. BELISARIO DOMINGUEZ",
+                "EL TULE",
+                "FORANEO",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GRAN MORELOS",
+                "GUACHOCHI",
+                "GUADALUPE",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "HUEJOTITAN",
+                "IGNACIO ZARAGOZA",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MANUEL BENAVIDES",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NO IDENTIFICADO",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "OCAMPO",
+                "OJINAGA",
+                "PRAXEDIS G. GUERRERO",
+                "RIVA PALACIO",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SAN FRANCISCO DE CONCHOS",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 11951,
+                "6-11": 7396,
+                "12-17": 6425,
+                "18-29": 18292,
+                "30-49": 23936,
+                "50-64": 24679,
+                "65+": 19387
+              }
             }
           ]
         },
@@ -3919,16 +3999,490 @@ window.DASHBOARD_DATA = {
               "total": 1757,
               "m": 1074,
               "h": 683,
-              "muns": 13
+              "muns": 13,
+              "muns_lista": [
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CARICHI",
+                "CHINIPAS",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "MAGUARICHI",
+                "MORELOS",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 1360,
+                "6-11": 70,
+                "12-17": 56,
+                "18-29": 148,
+                "30-49": 70,
+                "50-64": 0,
+                "65+": 3
+              }
             },
             {
               "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
               "total": 1028,
               "m": 504,
               "h": 524,
-              "muns": 12
+              "muns": 12,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "AQUILES SERDAN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "FORANEO",
+                "JANOS",
+                "JUAREZ",
+                "URIQUE",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 79,
+                "6-11": 72,
+                "12-17": 56,
+                "18-29": 97,
+                "30-49": 224,
+                "50-64": 332,
+                "65+": 168
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 13390,
+        "6-11": 7538,
+        "12-17": 6537,
+        "18-29": 18537,
+        "30-49": 24230,
+        "50-64": 25011,
+        "65+": 19558
+      },
+      "rango_dom": "50–64",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 43954,
+          "m": 26724,
+          "h": 17230
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 42838,
+          "m": 27328,
+          "h": 15510
+        },
+        {
+          "nombre": "NO IDENTIFICADO",
+          "total": 31862,
+          "m": 18972,
+          "h": 12890
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 10945,
+          "m": 7529,
+          "h": 3416
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 7946,
+          "m": 5368,
+          "h": 2578
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 5921,
+          "m": 3740,
+          "h": 2181
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 5689,
+          "m": 3575,
+          "h": 2114
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 5599,
+          "m": 3567,
+          "h": 2032
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 4073,
+          "m": 2707,
+          "h": 1366
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 3526,
+          "m": 2272,
+          "h": 1254
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 3438,
+          "m": 2220,
+          "h": 1218
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 3268,
+          "m": 2138,
+          "h": 1130
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 2977,
+          "m": 2097,
+          "h": 880
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 2961,
+          "m": 1925,
+          "h": 1036
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 2926,
+          "m": 2008,
+          "h": 918
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 2607,
+          "m": 1574,
+          "h": 1033
+        },
+        {
+          "nombre": "ASCENSION",
+          "total": 2117,
+          "m": 1415,
+          "h": 702
+        },
+        {
+          "nombre": "MADERA",
+          "total": 2038,
+          "m": 1440,
+          "h": 598
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 2019,
+          "m": 1285,
+          "h": 734
+        },
+        {
+          "nombre": "BUENAVENTURA",
+          "total": 2008,
+          "m": 1370,
+          "h": 638
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 1942,
+          "m": 1276,
+          "h": 666
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 1708,
+          "m": 1158,
+          "h": 550
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 1559,
+          "m": 958,
+          "h": 601
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1476,
+          "m": 957,
+          "h": 519
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 1433,
+          "m": 869,
+          "h": 564
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 1279,
+          "m": 834,
+          "h": 445
+        },
+        {
+          "nombre": "GOMEZ FARIAS",
+          "total": 1241,
+          "m": 764,
+          "h": 477
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 1230,
+          "m": 812,
+          "h": 418
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1128,
+          "m": 711,
+          "h": 417
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 1036,
+          "m": 688,
+          "h": 348
+        },
+        {
+          "nombre": "ROSALES",
+          "total": 990,
+          "m": 606,
+          "h": 384
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 985,
+          "m": 650,
+          "h": 335
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 984,
+          "m": 604,
+          "h": 380
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 845,
+          "m": 553,
+          "h": 292
+        },
+        {
+          "nombre": "JANOS",
+          "total": 835,
+          "m": 508,
+          "h": 327
+        },
+        {
+          "nombre": "PRAXEDIS G. GUERRERO",
+          "total": 829,
+          "m": 546,
+          "h": 283
+        },
+        {
+          "nombre": "LA CRUZ",
+          "total": 827,
+          "m": 510,
+          "h": 317
+        },
+        {
+          "nombre": "IGNACIO ZARAGOZA",
+          "total": 817,
+          "m": 502,
+          "h": 315
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 799,
+          "m": 499,
+          "h": 300
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 748,
+          "m": 498,
+          "h": 250
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 692,
+          "m": 464,
+          "h": 228
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 663,
+          "m": 454,
+          "h": 209
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 629,
+          "m": 399,
+          "h": 230
+        },
+        {
+          "nombre": "JULIMES",
+          "total": 620,
+          "m": 363,
+          "h": 257
+        },
+        {
+          "nombre": "MORIS",
+          "total": 613,
+          "m": 405,
+          "h": 208
+        },
+        {
+          "nombre": "SATEVO",
+          "total": 583,
+          "m": 356,
+          "h": 227
+        },
+        {
+          "nombre": "SAN FRANCISCO DE CONCHOS",
+          "total": 579,
+          "m": 342,
+          "h": 237
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 562,
+          "m": 373,
+          "h": 189
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 549,
+          "m": 336,
+          "h": 213
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 544,
+          "m": 345,
+          "h": 199
+        },
+        {
+          "nombre": "GALEANA",
+          "total": 492,
+          "m": 351,
+          "h": 141
+        },
+        {
+          "nombre": "MATACHI",
+          "total": 479,
+          "m": 320,
+          "h": 159
+        },
+        {
+          "nombre": "GUADALUPE",
+          "total": 477,
+          "m": 284,
+          "h": 193
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 461,
+          "m": 280,
+          "h": 181
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 430,
+          "m": 244,
+          "h": 186
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 405,
+          "m": 247,
+          "h": 158
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 376,
+          "m": 251,
+          "h": 125
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 373,
+          "m": 234,
+          "h": 139
+        },
+        {
+          "nombre": "GRAN MORELOS",
+          "total": 370,
+          "m": 226,
+          "h": 144
+        },
+        {
+          "nombre": "COYAME DEL SOTOL",
+          "total": 305,
+          "m": 197,
+          "h": 108
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 297,
+          "m": 201,
+          "h": 96
+        },
+        {
+          "nombre": "MANUEL BENAVIDES",
+          "total": 292,
+          "m": 173,
+          "h": 119
+        },
+        {
+          "nombre": "HUEJOTITAN",
+          "total": 288,
+          "m": 172,
+          "h": 116
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 285,
+          "m": 173,
+          "h": 112
+        },
+        {
+          "nombre": "DR. BELISARIO DOMINGUEZ",
+          "total": 266,
+          "m": 165,
+          "h": 101
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 230,
+          "m": 150,
+          "h": 80
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 182,
+          "m": 113,
+          "h": 69
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 153,
+          "m": 105,
+          "h": 48
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 151,
+          "m": 90,
+          "h": 61
         }
       ]
     },
@@ -3952,16 +4506,538 @@ window.DASHBOARD_DATA = {
               "total": 20728,
               "m": 14551,
               "h": 6177,
-              "muns": 68
+              "muns": 68,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "AQUILES SERDAN",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "COYAME DEL SOTOL",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "DR. BELISARIO DOMINGUEZ",
+                "EL TULE",
+                "FORANEO",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GRAN MORELOS",
+                "GUACHOCHI",
+                "GUADALUPE",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "HUEJOTITAN",
+                "IGNACIO ZARAGOZA",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NO IDENTIFICADO",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "OCAMPO",
+                "OJINAGA",
+                "PRAXEDIS G. GUERRERO",
+                "RIVA PALACIO",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SAN FRANCISCO DE CONCHOS",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 2512,
+                "6-11": 692,
+                "12-17": 417,
+                "18-29": 1761,
+                "30-49": 4577,
+                "50-64": 4477,
+                "65+": 6291
+              }
             },
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
               "total": 62,
               "m": 33,
               "h": 29,
-              "muns": 11
+              "muns": 11,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "BACHINIVA",
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "FORANEO",
+                "GOMEZ FARIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "OJINAGA",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 4,
+                "30-49": 22,
+                "50-64": 21,
+                "65+": 15
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 2512,
+        "6-11": 692,
+        "12-17": 417,
+        "18-29": 1765,
+        "30-49": 4599,
+        "50-64": 4498,
+        "65+": 6306
+      },
+      "rango_dom": "65+",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 3516,
+          "m": 2745,
+          "h": 771
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2740,
+          "m": 2056,
+          "h": 684
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 1769,
+          "m": 1332,
+          "h": 437
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1456,
+          "m": 988,
+          "h": 468
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 760,
+          "m": 513,
+          "h": 247
+        },
+        {
+          "nombre": "NO IDENTIFICADO",
+          "total": 740,
+          "m": 740,
+          "h": 0
+        },
+        {
+          "nombre": "BUENAVENTURA",
+          "total": 637,
+          "m": 441,
+          "h": 196
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 588,
+          "m": 363,
+          "h": 225
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 588,
+          "m": 408,
+          "h": 180
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 460,
+          "m": 309,
+          "h": 151
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 420,
+          "m": 278,
+          "h": 142
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 378,
+          "m": 243,
+          "h": 135
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 300,
+          "m": 201,
+          "h": 99
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 300,
+          "m": 166,
+          "h": 134
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 298,
+          "m": 198,
+          "h": 100
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 262,
+          "m": 161,
+          "h": 101
+        },
+        {
+          "nombre": "MADERA",
+          "total": 226,
+          "m": 122,
+          "h": 104
+        },
+        {
+          "nombre": "GOMEZ FARIAS",
+          "total": 217,
+          "m": 123,
+          "h": 94
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 216,
+          "m": 145,
+          "h": 71
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 212,
+          "m": 132,
+          "h": 80
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 197,
+          "m": 114,
+          "h": 83
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 190,
+          "m": 117,
+          "h": 73
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 186,
+          "m": 101,
+          "h": 85
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 181,
+          "m": 119,
+          "h": 62
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 180,
+          "m": 128,
+          "h": 52
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 173,
+          "m": 101,
+          "h": 72
+        },
+        {
+          "nombre": "MORIS",
+          "total": 172,
+          "m": 122,
+          "h": 50
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 166,
+          "m": 91,
+          "h": 75
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 161,
+          "m": 105,
+          "h": 56
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 161,
+          "m": 98,
+          "h": 63
+        },
+        {
+          "nombre": "JANOS",
+          "total": 155,
+          "m": 81,
+          "h": 74
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 152,
+          "m": 95,
+          "h": 57
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 142,
+          "m": 103,
+          "h": 39
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 127,
+          "m": 77,
+          "h": 50
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 123,
+          "m": 78,
+          "h": 45
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 115,
+          "m": 89,
+          "h": 26
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 115,
+          "m": 79,
+          "h": 36
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 111,
+          "m": 89,
+          "h": 22
+        },
+        {
+          "nombre": "IGNACIO ZARAGOZA",
+          "total": 110,
+          "m": 49,
+          "h": 61
+        },
+        {
+          "nombre": "JULIMES",
+          "total": 102,
+          "m": 58,
+          "h": 44
+        },
+        {
+          "nombre": "SATEVO",
+          "total": 100,
+          "m": 65,
+          "h": 35
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 98,
+          "m": 62,
+          "h": 36
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 96,
+          "m": 50,
+          "h": 46
+        },
+        {
+          "nombre": "ASCENSION",
+          "total": 89,
+          "m": 52,
+          "h": 37
+        },
+        {
+          "nombre": "MATACHI",
+          "total": 89,
+          "m": 47,
+          "h": 42
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 78,
+          "m": 53,
+          "h": 25
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 77,
+          "m": 38,
+          "h": 39
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 76,
+          "m": 47,
+          "h": 29
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 74,
+          "m": 50,
+          "h": 24
+        },
+        {
+          "nombre": "PRAXEDIS G. GUERRERO",
+          "total": 70,
+          "m": 44,
+          "h": 26
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 63,
+          "m": 27,
+          "h": 36
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 63,
+          "m": 33,
+          "h": 30
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 60,
+          "m": 35,
+          "h": 25
+        },
+        {
+          "nombre": "GALEANA",
+          "total": 59,
+          "m": 43,
+          "h": 16
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 55,
+          "m": 36,
+          "h": 19
+        },
+        {
+          "nombre": "GUADALUPE",
+          "total": 55,
+          "m": 35,
+          "h": 20
+        },
+        {
+          "nombre": "HUEJOTITAN",
+          "total": 53,
+          "m": 41,
+          "h": 12
+        },
+        {
+          "nombre": "GRAN MORELOS",
+          "total": 50,
+          "m": 33,
+          "h": 17
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 48,
+          "m": 24,
+          "h": 24
+        },
+        {
+          "nombre": "COYAME DEL SOTOL",
+          "total": 47,
+          "m": 29,
+          "h": 18
+        },
+        {
+          "nombre": "LA CRUZ",
+          "total": 47,
+          "m": 29,
+          "h": 18
+        },
+        {
+          "nombre": "SAN FRANCISCO DE CONCHOS",
+          "total": 45,
+          "m": 25,
+          "h": 20
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 43,
+          "m": 23,
+          "h": 20
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 42,
+          "m": 33,
+          "h": 9
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 41,
+          "m": 20,
+          "h": 21
+        },
+        {
+          "nombre": "ROSALES",
+          "total": 33,
+          "m": 29,
+          "h": 4
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 26,
+          "m": 15,
+          "h": 11
+        },
+        {
+          "nombre": "DR. BELISARIO DOMINGUEZ",
+          "total": 11,
+          "m": 8,
+          "h": 3
         }
       ]
     },
@@ -3985,14 +5061,51 @@ window.DASHBOARD_DATA = {
               "total": 8402,
               "m": 4598,
               "h": 3804,
-              "muns": 14
+              "muns": 14,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "FORANEO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MADERA",
+                "RIVA PALACIO",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 828,
+                "6-11": 778,
+                "12-17": 270,
+                "18-29": 579,
+                "30-49": 1214,
+                "50-64": 2542,
+                "65+": 2191
+              }
             },
             {
               "nombre": "FORTALECIMIENTO FAMILIAR",
               "total": 9,
               "m": 7,
               "h": 2,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 3,
+                "30-49": 6,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
         },
@@ -4008,21 +5121,59 @@ window.DASHBOARD_DATA = {
               "total": 447,
               "m": 324,
               "h": 123,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "NAMIQUIPA",
+                "SAN FRANCISCO DE BORJA"
+              ],
+              "rangos": {
+                "0-5": 1,
+                "6-11": 73,
+                "12-17": 92,
+                "18-29": 45,
+                "30-49": 145,
+                "50-64": 68,
+                "65+": 23
+              }
             },
             {
               "nombre": "APOYO A PERSONAS MAYORES",
               "total": 39,
               "m": 39,
               "h": 0,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 7,
+                "65+": 32
+              }
             },
             {
               "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
               "total": 22,
               "m": 12,
               "h": 10,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 9,
+                "30-49": 9,
+                "50-64": 4,
+                "65+": 0
+              }
             }
           ]
         },
@@ -4038,9 +5189,162 @@ window.DASHBOARD_DATA = {
               "total": 36,
               "m": 22,
               "h": 14,
-              "muns": 9
+              "muns": 9,
+              "muns_lista": [
+                "ALDAMA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MEOQUI",
+                "NONOAVA",
+                "ROSARIO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 7,
+                "18-29": 29,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 829,
+        "6-11": 851,
+        "12-17": 369,
+        "18-29": 665,
+        "30-49": 1374,
+        "50-64": 2621,
+        "65+": 2246
+      },
+      "rango_dom": "50–64",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5723,
+          "m": 3411,
+          "h": 2312
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1719,
+          "m": 799,
+          "h": 920
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 1310,
+          "m": 703,
+          "h": 607
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 51,
+          "m": 25,
+          "h": 26
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 44,
+          "m": 17,
+          "h": 27
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 33,
+          "m": 0,
+          "h": 33
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 15,
+          "m": 15,
+          "h": 0
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 15,
+          "m": 1,
+          "h": 14
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 13,
+          "m": 9,
+          "h": 4
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 8,
+          "m": 0,
+          "h": 8
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 3,
+          "m": 3,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "MADERA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4064,7 +5368,31 @@ window.DASHBOARD_DATA = {
               "total": 2834,
               "m": 2091,
               "h": 743,
-              "muns": 13
+              "muns": 13,
+              "muns_lista": [
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CARICHI",
+                "CHINIPAS",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "MAGUARICHI",
+                "MORELOS",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 1075,
+                "6-11": 42,
+                "12-17": 164,
+                "18-29": 747,
+                "30-49": 559,
+                "50-64": 100,
+                "65+": 12
+              }
             }
           ]
         },
@@ -4080,7 +5408,39 @@ window.DASHBOARD_DATA = {
               "total": 1078,
               "m": 621,
               "h": 457,
-              "muns": 21
+              "muns": 21,
+              "muns_lista": [
+                "ALDAMA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "DELICIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "NAMIQUIPA",
+                "NONOAVA",
+                "OJINAGA",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 17,
+                "6-11": 126,
+                "12-17": 224,
+                "18-29": 116,
+                "30-49": 163,
+                "50-64": 174,
+                "65+": 258
+              }
             }
           ]
         },
@@ -4096,9 +5456,212 @@ window.DASHBOARD_DATA = {
               "total": 34,
               "m": 10,
               "h": 24,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "EL TULE",
+                "GUACHOCHI",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 14,
+                "18-29": 7,
+                "30-49": 8,
+                "50-64": 5,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 1092,
+        "6-11": 168,
+        "12-17": 402,
+        "18-29": 870,
+        "30-49": 730,
+        "50-64": 279,
+        "65+": 270
+      },
+      "rango_dom": "0–5",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1473,
+          "m": 1113,
+          "h": 360
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 439,
+          "m": 289,
+          "h": 150
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 345,
+          "m": 241,
+          "h": 104
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 326,
+          "m": 212,
+          "h": 114
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 160,
+          "m": 111,
+          "h": 49
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 158,
+          "m": 105,
+          "h": 53
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 157,
+          "m": 112,
+          "h": 45
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 140,
+          "m": 102,
+          "h": 38
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 114,
+          "m": 57,
+          "h": 57
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 96,
+          "m": 52,
+          "h": 44
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 64,
+          "m": 37,
+          "h": 27
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 61,
+          "m": 47,
+          "h": 14
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 60,
+          "m": 42,
+          "h": 18
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 57,
+          "m": 44,
+          "h": 13
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 49,
+          "m": 23,
+          "h": 26
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 37,
+          "m": 14,
+          "h": 23
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 32,
+          "m": 11,
+          "h": 21
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 31,
+          "m": 19,
+          "h": 12
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 24,
+          "m": 14,
+          "h": 10
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 23,
+          "m": 18,
+          "h": 5
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 15,
+          "m": 12,
+          "h": 3
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 15,
+          "m": 10,
+          "h": 5
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 15,
+          "m": 9,
+          "h": 6
+        },
+        {
+          "nombre": "MADERA",
+          "total": 15,
+          "m": 6,
+          "h": 9
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 15,
+          "m": 10,
+          "h": 5
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 12,
+          "m": 7,
+          "h": 5
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 10,
+          "m": 2,
+          "h": 8
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4122,14 +5685,52 @@ window.DASHBOARD_DATA = {
               "total": 1926,
               "m": 1704,
               "h": 222,
-              "muns": 12
+              "muns": 12,
+              "muns_lista": [
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CARICHI",
+                "CHINIPAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "MAGUARICHI",
+                "MORELOS",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 10,
+                "6-11": 2,
+                "12-17": 193,
+                "18-29": 870,
+                "30-49": 654,
+                "50-64": 90,
+                "65+": 14
+              }
             },
             {
               "nombre": "PROGRAMA DE SALUD Y BIENESTAR COMUNITARIO",
               "total": 173,
               "m": 114,
               "h": 59,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "GUACHOCHI",
+                "HIDALGO DEL PARRAL",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 15,
+                "30-49": 74,
+                "50-64": 56,
+                "65+": 28
+              }
             }
           ]
         },
@@ -4145,16 +5746,157 @@ window.DASHBOARD_DATA = {
               "total": 1587,
               "m": 1283,
               "h": 304,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 18,
+                "6-11": 118,
+                "12-17": 194,
+                "18-29": 411,
+                "30-49": 439,
+                "50-64": 308,
+                "65+": 99
+              }
             },
             {
               "nombre": "APOYO A PERSONAS MAYORES",
               "total": 20,
               "m": 10,
               "h": 10,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "DELICIAS",
+                "SAUCILLO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 4,
+                "65+": 16
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 28,
+        "6-11": 120,
+        "12-17": 387,
+        "18-29": 1296,
+        "30-49": 1167,
+        "50-64": 458,
+        "65+": 157
+      },
+      "rango_dom": "18–29",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 1587,
+          "m": 1283,
+          "h": 304
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 566,
+          "m": 532,
+          "h": 34
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 322,
+          "m": 251,
+          "h": 71
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 247,
+          "m": 189,
+          "h": 58
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 209,
+          "m": 197,
+          "h": 12
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 180,
+          "m": 156,
+          "h": 24
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 158,
+          "m": 123,
+          "h": 35
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 112,
+          "m": 99,
+          "h": 13
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 79,
+          "m": 66,
+          "h": 13
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 64,
+          "m": 57,
+          "h": 7
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 63,
+          "m": 58,
+          "h": 5
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 47,
+          "m": 46,
+          "h": 1
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 36,
+          "m": 28,
+          "h": 8
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 16,
+          "m": 16,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 10,
+          "m": 6,
+          "h": 4
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 8,
+          "m": 4,
+          "h": 4
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2,
+          "m": 0,
+          "h": 2
         }
       ]
     },
@@ -4178,7 +5920,21 @@ window.DASHBOARD_DATA = {
               "total": 1369,
               "m": 710,
               "h": 659,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 1283,
+                "18-29": 86,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
         },
@@ -4194,14 +5950,45 @@ window.DASHBOARD_DATA = {
               "total": 722,
               "m": 467,
               "h": 255,
-              "muns": 6
+              "muns": 6,
+              "muns_lista": [
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "GUACHOCHI",
+                "JIMENEZ",
+                "JUAREZ",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 10,
+                "6-11": 213,
+                "12-17": 164,
+                "18-29": 38,
+                "30-49": 48,
+                "50-64": 97,
+                "65+": 152
+              }
             },
             {
               "nombre": "APOYO A PERSONAS MAYORES",
               "total": 260,
               "m": 219,
               "h": 41,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "HIDALGO DEL PARRAL"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 46,
+                "65+": 214
+              }
             }
           ]
         },
@@ -4217,9 +6004,82 @@ window.DASHBOARD_DATA = {
               "total": 238,
               "m": 183,
               "h": 55,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 67,
+                "65+": 171
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 10,
+        "6-11": 213,
+        "12-17": 1447,
+        "18-29": 124,
+        "30-49": 48,
+        "50-64": 210,
+        "65+": 537
+      },
+      "rango_dom": "12–17",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2031,
+          "m": 1240,
+          "h": 791
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 218,
+          "m": 104,
+          "h": 114
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 154,
+          "m": 95,
+          "h": 59
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 117,
+          "m": 101,
+          "h": 16
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 45,
+          "m": 17,
+          "h": 28
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 13,
+          "m": 13,
+          "h": 0
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 9,
+          "m": 8,
+          "h": 1
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 2,
+          "m": 1,
+          "h": 1
         }
       ]
     },
@@ -4243,30 +6103,117 @@ window.DASHBOARD_DATA = {
               "total": 1398,
               "m": 1080,
               "h": 318,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "HIDALGO DEL PARRAL"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 241,
+                "65+": 1157
+              }
             },
             {
               "nombre": "JUÁREZ CUENTA CONMIGO",
               "total": 520,
               "m": 314,
               "h": 206,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 38,
+                "12-17": 286,
+                "18-29": 0,
+                "30-49": 2,
+                "50-64": 59,
+                "65+": 135
+              }
             },
             {
               "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
               "total": 220,
               "m": 87,
               "h": 133,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 2,
+                "18-29": 113,
+                "30-49": 81,
+                "50-64": 24,
+                "65+": 0
+              }
             },
             {
               "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
               "total": 194,
               "m": 114,
               "h": 80,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 67,
+                "12-17": 19,
+                "18-29": 15,
+                "30-49": 42,
+                "50-64": 17,
+                "65+": 34
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 105,
+        "12-17": 307,
+        "18-29": 128,
+        "30-49": 125,
+        "50-64": 341,
+        "65+": 1326
+      },
+      "rango_dom": "65+",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1474,
+          "m": 1001,
+          "h": 473
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 520,
+          "m": 314,
+          "h": 206
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 218,
+          "m": 177,
+          "h": 41
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 120,
+          "m": 103,
+          "h": 17
         }
       ]
     },
@@ -4290,7 +6237,81 @@ window.DASHBOARD_DATA = {
               "total": 1413,
               "m": 937,
               "h": 476,
-              "muns": 63
+              "muns": 63,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "AQUILES SERDAN",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "COYAME DEL SOTOL",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "DR. BELISARIO DOMINGUEZ",
+                "EL TULE",
+                "FORANEO",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GRAN MORELOS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "IGNACIO ZARAGOZA",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MANUEL BENAVIDES",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "OCAMPO",
+                "OJINAGA",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SAN FRANCISCO DE CONCHOS",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 389,
+                "30-49": 643,
+                "50-64": 324,
+                "65+": 57
+              }
             }
           ]
         },
@@ -4306,7 +6327,30 @@ window.DASHBOARD_DATA = {
               "total": 34,
               "m": 23,
               "h": 11,
-              "muns": 12
+              "muns": 12,
+              "muns_lista": [
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CARICHI",
+                "CHIHUAHUA",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUERRERO",
+                "JIMENEZ",
+                "JUAREZ",
+                "NONOAVA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 8,
+                "30-49": 12,
+                "50-64": 10,
+                "65+": 4
+              }
             }
           ]
         },
@@ -4322,9 +6366,412 @@ window.DASHBOARD_DATA = {
               "total": 30,
               "m": 29,
               "h": 1,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 9,
+                "30-49": 7,
+                "50-64": 5,
+                "65+": 9
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 406,
+        "30-49": 662,
+        "50-64": 339,
+        "65+": 70
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 420,
+          "m": 303,
+          "h": 117
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 221,
+          "m": 101,
+          "h": 120
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 66,
+          "m": 39,
+          "h": 27
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 58,
+          "m": 52,
+          "h": 6
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 47,
+          "m": 40,
+          "h": 7
+        },
+        {
+          "nombre": "MADERA",
+          "total": 34,
+          "m": 16,
+          "h": 18
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 32,
+          "m": 18,
+          "h": 14
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 29,
+          "m": 19,
+          "h": 10
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 27,
+          "m": 18,
+          "h": 9
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 26,
+          "m": 20,
+          "h": 6
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 22,
+          "m": 18,
+          "h": 4
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 22,
+          "m": 14,
+          "h": 8
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 20,
+          "m": 12,
+          "h": 8
+        },
+        {
+          "nombre": "BUENAVENTURA",
+          "total": 20,
+          "m": 16,
+          "h": 4
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 18,
+          "m": 18,
+          "h": 0
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 18,
+          "m": 14,
+          "h": 4
+        },
+        {
+          "nombre": "ROSALES",
+          "total": 18,
+          "m": 14,
+          "h": 4
+        },
+        {
+          "nombre": "ASCENSION",
+          "total": 16,
+          "m": 12,
+          "h": 4
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 16,
+          "m": 8,
+          "h": 8
+        },
+        {
+          "nombre": "JANOS",
+          "total": 16,
+          "m": 14,
+          "h": 2
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 16,
+          "m": 8,
+          "h": 8
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 16,
+          "m": 16,
+          "h": 0
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 14,
+          "m": 9,
+          "h": 5
+        },
+        {
+          "nombre": "GOMEZ FARIAS",
+          "total": 14,
+          "m": 10,
+          "h": 4
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 14,
+          "m": 6,
+          "h": 8
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 13,
+          "m": 9,
+          "h": 4
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 12,
+          "m": 10,
+          "h": 2
+        },
+        {
+          "nombre": "MORIS",
+          "total": 12,
+          "m": 10,
+          "h": 2
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 10,
+          "m": 8,
+          "h": 2
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 10,
+          "m": 6,
+          "h": 4
+        },
+        {
+          "nombre": "JULIMES",
+          "total": 10,
+          "m": 6,
+          "h": 4
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 9,
+          "m": 8,
+          "h": 1
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 8,
+          "m": 8,
+          "h": 0
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 8,
+          "m": 2,
+          "h": 6
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 8,
+          "m": 6,
+          "h": 2
+        },
+        {
+          "nombre": "DR. BELISARIO DOMINGUEZ",
+          "total": 8,
+          "m": 4,
+          "h": 4
+        },
+        {
+          "nombre": "GALEANA",
+          "total": 8,
+          "m": 8,
+          "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 8,
+          "m": 0,
+          "h": 8
+        },
+        {
+          "nombre": "LA CRUZ",
+          "total": 8,
+          "m": 6,
+          "h": 2
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 8,
+          "m": 4,
+          "h": 4
+        },
+        {
+          "nombre": "SATEVO",
+          "total": 8,
+          "m": 6,
+          "h": 2
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 8,
+          "m": 6,
+          "h": 2
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 7,
+          "m": 4,
+          "h": 3
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 7,
+          "m": 4,
+          "h": 3
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 6,
+          "m": 5,
+          "h": 1
+        },
+        {
+          "nombre": "GRAN MORELOS",
+          "total": 6,
+          "m": 6,
+          "h": 0
+        },
+        {
+          "nombre": "IGNACIO ZARAGOZA",
+          "total": 6,
+          "m": 4,
+          "h": 2
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 6,
+          "m": 6,
+          "h": 0
+        },
+        {
+          "nombre": "MATACHI",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 6,
+          "m": 6,
+          "h": 0
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 4,
+          "m": 2,
+          "h": 2
+        },
+        {
+          "nombre": "SAN FRANCISCO DE CONCHOS",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "COYAME DEL SOTOL",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "MANUEL BENAVIDES",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 2,
+          "m": 0,
+          "h": 2
         }
       ]
     },
@@ -4348,49 +6795,156 @@ window.DASHBOARD_DATA = {
               "total": 459,
               "m": 273,
               "h": 186,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 102,
+                "30-49": 221,
+                "50-64": 111,
+                "65+": 25
+              }
             },
             {
               "nombre": "DESARROLLO HUMANO",
               "total": 234,
               "m": 117,
               "h": 117,
-              "muns": 6
+              "muns": 6,
+              "muns_lista": [
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "FORANEO",
+                "HIDALGO DEL PARRAL",
+                "MANUEL BENAVIDES",
+                "NUEVO CASAS GRANDES"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 64,
+                "30-49": 114,
+                "50-64": 48,
+                "65+": 8
+              }
             },
             {
               "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
               "total": 225,
               "m": 172,
               "h": 53,
-              "muns": 14
+              "muns": 14,
+              "muns_lista": [
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "DELICIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MAGUARICHI",
+                "NAMIQUIPA",
+                "NONOAVA",
+                "OJINAGA",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 46,
+                "30-49": 97,
+                "50-64": 56,
+                "65+": 26
+              }
             },
             {
               "nombre": "APOYO A PERSONAS MAYORES",
               "total": 153,
               "m": 76,
               "h": 77,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 28,
+                "30-49": 65,
+                "50-64": 36,
+                "65+": 24
+              }
             },
             {
               "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
               "total": 71,
               "m": 30,
               "h": 41,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "JUAREZ",
+                "SAUCILLO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 15,
+                "30-49": 28,
+                "50-64": 20,
+                "65+": 8
+              }
             },
             {
               "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÍA SOLIDARIA",
               "total": 40,
               "m": 16,
               "h": 24,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "ALDAMA",
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 13,
+                "30-49": 23,
+                "50-64": 4,
+                "65+": 0
+              }
             },
             {
               "nombre": "ATENCIÓN A NIÑAS, NIÑOS, ADOLESCENTES Y JUVENTUDES",
               "total": 16,
               "m": 4,
               "h": 12,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 8,
+                "30-49": 8,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
         },
@@ -4406,9 +6960,157 @@ window.DASHBOARD_DATA = {
               "total": 54,
               "m": 36,
               "h": 18,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "GUACHOCHI",
+                "JUAREZ",
+                "NONOAVA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 24,
+                "30-49": 12,
+                "50-64": 18,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 300,
+        "30-49": 568,
+        "50-64": 293,
+        "65+": 91
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 671,
+          "m": 377,
+          "h": 294
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 487,
+          "m": 291,
+          "h": 196
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 28,
+          "m": 10,
+          "h": 18
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 12,
+          "m": 10,
+          "h": 2
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 8,
+          "m": 6,
+          "h": 2
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "MANUEL BENAVIDES",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 2,
+          "m": 2,
+          "h": 0
         }
       ]
     },
@@ -4432,9 +7134,208 @@ window.DASHBOARD_DATA = {
               "total": 898,
               "m": 579,
               "h": 319,
-              "muns": 25
+              "muns": 25,
+              "muns_lista": [
+                "ALDAMA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CUAUHTEMOC",
+                "DELICIAS",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MAGUARICHI",
+                "MORELOS",
+                "NAMIQUIPA",
+                "OCAMPO",
+                "OJINAGA",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 7,
+                "6-11": 42,
+                "12-17": 61,
+                "18-29": 155,
+                "30-49": 358,
+                "50-64": 212,
+                "65+": 61
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 7,
+        "6-11": 42,
+        "12-17": 61,
+        "18-29": 155,
+        "30-49": 358,
+        "50-64": 212,
+        "65+": 61
+      },
+      "rango_dom": "30–49",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 238,
+          "m": 175,
+          "h": 63
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 225,
+          "m": 144,
+          "h": 81
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 193,
+          "m": 116,
+          "h": 77
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 54,
+          "m": 25,
+          "h": 29
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 41,
+          "m": 21,
+          "h": 20
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 26,
+          "m": 17,
+          "h": 9
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 23,
+          "m": 15,
+          "h": 8
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 22,
+          "m": 11,
+          "h": 11
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 20,
+          "m": 14,
+          "h": 6
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 14,
+          "m": 10,
+          "h": 4
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 9,
+          "m": 8,
+          "h": 1
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 9,
+          "m": 6,
+          "h": 3
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 3,
+          "m": 1,
+          "h": 2
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 3,
+          "m": 3,
+          "h": 0
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4458,9 +7359,110 @@ window.DASHBOARD_DATA = {
               "total": 671,
               "m": 480,
               "h": 191,
-              "muns": 11
+              "muns": 11,
+              "muns_lista": [
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CHINIPAS",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "MAGUARICHI",
+                "MORELOS",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 148,
+                "6-11": 17,
+                "12-17": 80,
+                "18-29": 214,
+                "30-49": 131,
+                "50-64": 33,
+                "65+": 7
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 148,
+        "6-11": 17,
+        "12-17": 80,
+        "18-29": 214,
+        "30-49": 131,
+        "50-64": 33,
+        "65+": 7
+      },
+      "rango_dom": "18–29",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 251,
+          "m": 161,
+          "h": 90
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 146,
+          "m": 107,
+          "h": 39
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 86,
+          "m": 70,
+          "h": 16
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 54,
+          "m": 43,
+          "h": 11
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 54,
+          "m": 43,
+          "h": 11
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 22,
+          "m": 16,
+          "h": 6
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 21,
+          "m": 13,
+          "h": 8
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 19,
+          "m": 14,
+          "h": 5
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 14,
+          "m": 10,
+          "h": 4
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 3,
+          "m": 3,
+          "h": 0
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4484,9 +7486,47 @@ window.DASHBOARD_DATA = {
               "total": 644,
               "m": 352,
               "h": 292,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "JIMENEZ"
+              ],
+              "rangos": {
+                "0-5": 14,
+                "6-11": 356,
+                "12-17": 158,
+                "18-29": 23,
+                "30-49": 10,
+                "50-64": 24,
+                "65+": 59
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 14,
+        "6-11": 356,
+        "12-17": 158,
+        "18-29": 23,
+        "30-49": 10,
+        "50-64": 24,
+        "65+": 59
+      },
+      "rango_dom": "6–11",
+      "rango_min": "30–49",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 636,
+          "m": 344,
+          "h": 292
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 8,
+          "m": 8,
+          "h": 0
         }
       ]
     },
@@ -4510,9 +7550,96 @@ window.DASHBOARD_DATA = {
               "total": 633,
               "m": 322,
               "h": 311,
-              "muns": 9
+              "muns": 9,
+              "muns_lista": [
+                "ALDAMA",
+                "AQUILES SERDAN",
+                "CHIHUAHUA",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "MEOQUI",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 125,
+                "30-49": 253,
+                "50-64": 180,
+                "65+": 75
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 125,
+        "30-49": 253,
+        "50-64": 180,
+        "65+": 75
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 499,
+          "m": 231,
+          "h": 268
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 104,
+          "m": 79,
+          "h": 25
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 23,
+          "m": 9,
+          "h": 14
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4536,7 +7663,43 @@ window.DASHBOARD_DATA = {
               "total": 469,
               "m": 293,
               "h": 176,
-              "muns": 25
+              "muns": 25,
+              "muns_lista": [
+                "ALDAMA",
+                "ALLENDE",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JANOS",
+                "JUAREZ",
+                "MEOQUI",
+                "MORELOS",
+                "NUEVO CASAS GRANDES",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 2,
+                "6-11": 25,
+                "12-17": 174,
+                "18-29": 143,
+                "30-49": 91,
+                "50-64": 28,
+                "65+": 5
+              }
             }
           ]
         },
@@ -4552,9 +7715,184 @@ window.DASHBOARD_DATA = {
               "total": 36,
               "m": 22,
               "h": 14,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 1,
+                "18-29": 1,
+                "30-49": 24,
+                "50-64": 10,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 2,
+        "6-11": 25,
+        "12-17": 175,
+        "18-29": 144,
+        "30-49": 115,
+        "50-64": 38,
+        "65+": 5
+      },
+      "rango_dom": "12–17",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 255,
+          "m": 160,
+          "h": 95
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 115,
+          "m": 67,
+          "h": 48
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 25,
+          "m": 16,
+          "h": 9
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 18,
+          "m": 11,
+          "h": 7
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 18,
+          "m": 12,
+          "h": 6
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 17,
+          "m": 16,
+          "h": 1
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 11,
+          "m": 6,
+          "h": 5
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 11,
+          "m": 7,
+          "h": 4
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 6,
+          "m": 5,
+          "h": 1
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 5,
+          "m": 2,
+          "h": 3
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 3,
+          "m": 1,
+          "h": 2
+        },
+        {
+          "nombre": "JANOS",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4578,9 +7916,243 @@ window.DASHBOARD_DATA = {
               "total": 381,
               "m": 225,
               "h": 156,
-              "muns": 30
+              "muns": 30,
+              "muns_lista": [
+                "ALDAMA",
+                "AQUILES SERDAN",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "CUAUHTEMOC",
+                "DELICIAS",
+                "GOMEZ FARIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JIMENEZ",
+                "JUAREZ",
+                "MEOQUI",
+                "MORELOS",
+                "NAMIQUIPA",
+                "NUEVO CASAS GRANDES",
+                "OJINAGA",
+                "SANTA ISABEL",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 17,
+                "18-29": 39,
+                "30-49": 85,
+                "50-64": 111,
+                "65+": 129
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 17,
+        "18-29": 39,
+        "30-49": 85,
+        "50-64": 111,
+        "65+": 129
+      },
+      "rango_dom": "65+",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 309,
+          "m": 176,
+          "h": 133
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 9,
+          "m": 4,
+          "h": 5
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 7,
+          "m": 6,
+          "h": 1
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 6,
+          "m": 3,
+          "h": 3
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 4,
+          "m": 3,
+          "h": 1
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 4,
+          "m": 2,
+          "h": 2
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 4,
+          "m": 3,
+          "h": 1
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 3,
+          "m": 3,
+          "h": 0
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "GOMEZ FARIAS",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BUENAVENTURA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4604,9 +8176,68 @@ window.DASHBOARD_DATA = {
               "total": 286,
               "m": 121,
               "h": 165,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "AHUMADA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "FORANEO",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 29,
+                "6-11": 24,
+                "12-17": 23,
+                "18-29": 40,
+                "30-49": 67,
+                "50-64": 91,
+                "65+": 12
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 29,
+        "6-11": 24,
+        "12-17": 23,
+        "18-29": 40,
+        "30-49": 67,
+        "50-64": 91,
+        "65+": 12
+      },
+      "rango_dom": "50–64",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 282,
+          "m": 118,
+          "h": 164
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4630,9 +8261,47 @@ window.DASHBOARD_DATA = {
               "total": 284,
               "m": 196,
               "h": 88,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "HIDALGO DEL PARRAL"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 105,
+                "18-29": 179,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 105,
+        "18-29": 179,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "rango_dom": "18–29",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 211,
+          "m": 123,
+          "h": 88
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 73,
+          "m": 73,
+          "h": 0
         }
       ]
     },
@@ -4656,9 +8325,54 @@ window.DASHBOARD_DATA = {
               "total": 252,
               "m": 228,
               "h": 23,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "FORANEO",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 2,
+                "18-29": 50,
+                "30-49": 123,
+                "50-64": 45,
+                "65+": 27
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 2,
+        "18-29": 50,
+        "30-49": 123,
+        "50-64": 45,
+        "65+": 27
+      },
+      "rango_dom": "30–49",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 186,
+          "m": 162,
+          "h": 23
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 64,
+          "m": 64,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 2,
+          "m": 2,
+          "h": 0
         }
       ]
     },
@@ -4682,9 +8396,194 @@ window.DASHBOARD_DATA = {
               "total": 235,
               "m": 143,
               "h": 92,
-              "muns": 23
+              "muns": 23,
+              "muns_lista": [
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CUAUHTEMOC",
+                "EL TULE",
+                "FORANEO",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JIMENEZ",
+                "JUAREZ",
+                "MAGUARICHI",
+                "MORELOS",
+                "OCAMPO",
+                "SANTA BARBARA",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 19,
+                "12-17": 12,
+                "18-29": 47,
+                "30-49": 84,
+                "50-64": 54,
+                "65+": 19
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 19,
+        "12-17": 12,
+        "18-29": 47,
+        "30-49": 84,
+        "50-64": 54,
+        "65+": 19
+      },
+      "rango_dom": "30–49",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "GUACHOCHI",
+          "total": 57,
+          "m": 36,
+          "h": 21
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 34,
+          "m": 23,
+          "h": 11
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 32,
+          "m": 15,
+          "h": 17
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 20,
+          "m": 12,
+          "h": 8
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 18,
+          "m": 11,
+          "h": 7
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 14,
+          "m": 9,
+          "h": 5
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 12,
+          "m": 10,
+          "h": 2
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 11,
+          "m": 6,
+          "h": 5
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5,
+          "m": 3,
+          "h": 2
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 5,
+          "m": 2,
+          "h": 3
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 4,
+          "m": 1,
+          "h": 3
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4708,23 +8607,84 @@ window.DASHBOARD_DATA = {
               "total": 104,
               "m": 91,
               "h": 13,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 12,
+                "50-64": 14,
+                "65+": 78
+              }
             },
             {
               "nombre": "JUÁREZ CUENTA CONMIGO",
               "total": 99,
               "m": 69,
               "h": 30,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 22,
+                "12-17": 25,
+                "18-29": 12,
+                "30-49": 20,
+                "50-64": 16,
+                "65+": 4
+              }
             },
             {
               "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
               "total": 25,
               "m": 8,
               "h": 17,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 1,
+                "6-11": 1,
+                "12-17": 1,
+                "18-29": 3,
+                "30-49": 8,
+                "50-64": 8,
+                "65+": 3
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 1,
+        "6-11": 23,
+        "12-17": 26,
+        "18-29": 15,
+        "30-49": 40,
+        "50-64": 38,
+        "65+": 85
+      },
+      "rango_dom": "65+",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 124,
+          "m": 77,
+          "h": 47
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 104,
+          "m": 91,
+          "h": 13
         }
       ]
     },
@@ -4748,9 +8708,68 @@ window.DASHBOARD_DATA = {
               "total": 182,
               "m": 125,
               "h": 57,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "GUACHOCHI",
+                "HIDALGO DEL PARRAL",
+                "PRAXEDIS G. GUERRERO",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 26,
+                "30-49": 71,
+                "50-64": 63,
+                "65+": 22
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 26,
+        "30-49": 71,
+        "50-64": 63,
+        "65+": 22
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 56,
+          "m": 24,
+          "h": 32
+        },
+        {
+          "nombre": "PRAXEDIS G. GUERRERO",
+          "total": 53,
+          "m": 47,
+          "h": 6
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 32,
+          "m": 19,
+          "h": 13
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 21,
+          "m": 19,
+          "h": 2
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 20,
+          "m": 16,
+          "h": 4
         }
       ]
     },
@@ -4774,9 +8793,47 @@ window.DASHBOARD_DATA = {
               "total": 172,
               "m": 69,
               "h": 103,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 2,
+                "6-11": 4,
+                "12-17": 11,
+                "18-29": 31,
+                "30-49": 40,
+                "50-64": 52,
+                "65+": 32
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 2,
+        "6-11": 4,
+        "12-17": 11,
+        "18-29": 31,
+        "30-49": 40,
+        "50-64": 52,
+        "65+": 32
+      },
+      "rango_dom": "50–64",
+      "rango_min": "0–5",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 147,
+          "m": 61,
+          "h": 86
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 25,
+          "m": 8,
+          "h": 17
         }
       ]
     },
@@ -4800,7 +8857,34 @@ window.DASHBOARD_DATA = {
               "total": 143,
               "m": 95,
               "h": 48,
-              "muns": 16
+              "muns": 16,
+              "muns_lista": [
+                "ALDAMA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "NONOAVA",
+                "SAN FRANCISCO DEL ORO",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 34,
+                "30-49": 85,
+                "50-64": 23,
+                "65+": 1
+              }
             }
           ]
         },
@@ -4816,9 +8900,132 @@ window.DASHBOARD_DATA = {
               "total": 28,
               "m": 12,
               "h": 16,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "BOCOYNA",
+                "CARICHI",
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 5,
+                "50-64": 9,
+                "65+": 13
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 35,
+        "30-49": 90,
+        "50-64": 32,
+        "65+": 14
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 59,
+          "m": 34,
+          "h": 25
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 36,
+          "m": 26,
+          "h": 10
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 15,
+          "m": 8,
+          "h": 7
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 11,
+          "m": 7,
+          "h": 4
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 11,
+          "m": 9,
+          "h": 2
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 10,
+          "m": 4,
+          "h": 6
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 6,
+          "m": 6,
+          "h": 0
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 5,
+          "m": 5,
+          "h": 0
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 3,
+          "m": 1,
+          "h": 2
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 3,
+          "m": 2,
+          "h": 1
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4842,16 +9049,73 @@ window.DASHBOARD_DATA = {
               "total": 70,
               "m": 32,
               "h": 38,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 33,
+                "65+": 37
+              }
             },
             {
               "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
               "total": 37,
               "m": 10,
               "h": 27,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "CAMARGO",
+                "CHIHUAHUA",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 9,
+                "30-49": 17,
+                "50-64": 11,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 9,
+        "30-49": 17,
+        "50-64": 44,
+        "65+": 37
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 105,
+          "m": 42,
+          "h": 63
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4875,16 +9139,108 @@ window.DASHBOARD_DATA = {
               "total": 45,
               "m": 32,
               "h": 13,
-              "muns": 7
+              "muns": 7,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "CHIHUAHUA",
+                "GUADALUPE Y CALVO",
+                "HIDALGO DEL PARRAL",
+                "SAUCILLO",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 1,
+                "18-29": 7,
+                "30-49": 12,
+                "50-64": 9,
+                "65+": 16
+              }
             },
             {
               "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
               "total": 10,
               "m": 5,
               "h": 5,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 1,
+                "12-17": 0,
+                "18-29": 2,
+                "30-49": 3,
+                "50-64": 1,
+                "65+": 3
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 1,
+        "12-17": 1,
+        "18-29": 9,
+        "30-49": 15,
+        "50-64": 10,
+        "65+": 19
+      },
+      "rango_dom": "65+",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 43,
+          "m": 29,
+          "h": 14
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 4,
+          "m": 2,
+          "h": 2
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -4908,9 +9264,68 @@ window.DASHBOARD_DATA = {
               "total": 36,
               "m": 21,
               "h": 15,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "MEOQUI",
+                "OJINAGA",
+                "SAUCILLO",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 2,
+                "30-49": 9,
+                "50-64": 7,
+                "65+": 18
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 2,
+        "30-49": 9,
+        "50-64": 7,
+        "65+": 18
+      },
+      "rango_dom": "65+",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 32,
+          "m": 18,
+          "h": 14
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4934,9 +9349,68 @@ window.DASHBOARD_DATA = {
               "total": 30,
               "m": 16,
               "h": 14,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "AHUMADA",
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "NUEVO CASAS GRANDES"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 4,
+                "30-49": 5,
+                "50-64": 13,
+                "65+": 8
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 4,
+        "30-49": 5,
+        "50-64": 13,
+        "65+": 8
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 25,
+          "m": 13,
+          "h": 12
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4960,9 +9434,61 @@ window.DASHBOARD_DATA = {
               "total": 24,
               "m": 11,
               "h": 13,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "ALDAMA",
+                "CHIHUAHUA",
+                "GUADALUPE Y CALVO",
+                "OCAMPO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 2,
+                "30-49": 8,
+                "50-64": 6,
+                "65+": 8
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 2,
+        "30-49": 8,
+        "50-64": 6,
+        "65+": 8
+      },
+      "rango_dom": "30–49",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 21,
+          "m": 10,
+          "h": 11
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -4986,9 +9512,117 @@ window.DASHBOARD_DATA = {
               "total": 22,
               "m": 4,
               "h": 18,
-              "muns": 12
+              "muns": 12,
+              "muns_lista": [
+                "ALDAMA",
+                "BACHINIVA",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CORONADO",
+                "CUAUHTEMOC",
+                "GUAZAPARES",
+                "HIDALGO DEL PARRAL",
+                "JIMENEZ",
+                "JUAREZ",
+                "LOPEZ",
+                "SAUCILLO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 1,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 9,
+                "50-64": 10,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 1,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 9,
+        "50-64": 10,
+        "65+": 1
+      },
+      "rango_dom": "50–64",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 10,
+          "m": 1,
+          "h": 9
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5012,9 +9646,40 @@ window.DASHBOARD_DATA = {
               "total": 15,
               "m": 12,
               "h": 3,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 0,
+                "50-64": 10,
+                "65+": 4
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 0,
+        "50-64": 10,
+        "65+": 4
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 15,
+          "m": 12,
+          "h": 3
         }
       ]
     },
@@ -5038,9 +9703,61 @@ window.DASHBOARD_DATA = {
               "total": 13,
               "m": 9,
               "h": 4,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 1,
+                "50-64": 7,
+                "65+": 4
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 1,
+        "50-64": 7,
+        "65+": 4
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 10,
+          "m": 6,
+          "h": 4
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5064,9 +9781,68 @@ window.DASHBOARD_DATA = {
               "total": 9,
               "m": 4,
               "h": 5,
-              "muns": 5
+              "muns": 5,
+              "muns_lista": [
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "GUAZAPARES",
+                "SAUCILLO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 2,
+                "50-64": 2,
+                "65+": 4
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 2,
+        "50-64": 2,
+        "65+": 4
+      },
+      "rango_dom": "65+",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5,
+          "m": 2,
+          "h": 3
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5090,9 +9866,61 @@ window.DASHBOARD_DATA = {
               "total": 8,
               "m": 1,
               "h": 7,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "AHUMADA",
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "JIMENEZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 1,
+                "18-29": 0,
+                "30-49": 2,
+                "50-64": 2,
+                "65+": 3
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 1,
+        "18-29": 0,
+        "30-49": 2,
+        "50-64": 2,
+        "65+": 3
+      },
+      "rango_dom": "65+",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 4,
+          "m": 1,
+          "h": 3
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5116,9 +9944,54 @@ window.DASHBOARD_DATA = {
               "total": 7,
               "m": 3,
               "h": 4,
-              "muns": 3
+              "muns": 3,
+              "muns_lista": [
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 3,
+                "50-64": 3,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 3,
+        "50-64": 3,
+        "65+": 1
+      },
+      "rango_dom": "30–49",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5,
+          "m": 2,
+          "h": 3
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5142,9 +10015,47 @@ window.DASHBOARD_DATA = {
               "total": 7,
               "m": 2,
               "h": 5,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "GUAZAPARES"
+              ],
+              "rangos": {
+                "0-5": 2,
+                "6-11": 1,
+                "12-17": 1,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 1,
+                "65+": 2
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 2,
+        "6-11": 1,
+        "12-17": 1,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 1,
+        "65+": 2
+      },
+      "rango_dom": "0–5",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 6,
+          "m": 2,
+          "h": 4
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5168,9 +10079,61 @@ window.DASHBOARD_DATA = {
               "total": 6,
               "m": 3,
               "h": 3,
-              "muns": 4
+              "muns": 4,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "GRAN MORELOS",
+                "MORIS"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 4,
+                "50-64": 2,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 4,
+        "50-64": 2,
+        "65+": 0
+      },
+      "rango_dom": "30–49",
+      "rango_min": "50–64",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 3,
+          "m": 2,
+          "h": 1
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GRAN MORELOS",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "MORIS",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5194,9 +10157,47 @@ window.DASHBOARD_DATA = {
               "total": 6,
               "m": 4,
               "h": 2,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "ALDAMA",
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 1,
+                "50-64": 2,
+                "65+": 2
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 1,
+        "50-64": 2,
+        "65+": 2
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 4,
+          "m": 2,
+          "h": 2
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 2,
+          "m": 2,
+          "h": 0
         }
       ]
     },
@@ -5220,9 +10221,47 @@ window.DASHBOARD_DATA = {
               "total": 3,
               "m": 2,
               "h": 1,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "DELICIAS"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 2
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 1,
+        "50-64": 0,
+        "65+": 2
+      },
+      "rango_dom": "65+",
+      "rango_min": "30–49",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5246,9 +10285,47 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 1,
               "h": 1,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "MORELOS"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 1,
+        "50-64": 0,
+        "65+": 1
+      },
+      "rango_dom": "30–49",
+      "rango_min": "30–49",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5272,9 +10349,47 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 2,
               "h": 0,
-              "muns": 2
+              "muns": 2,
+              "muns_lista": [
+                "ALDAMA",
+                "GUACHOCHI"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 1,
+        "50-64": 0,
+        "65+": 0
+      },
+      "rango_dom": "18–29",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5298,9 +10413,40 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 0,
               "h": 2,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 1,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 1,
+        "65+": 1
+      },
+      "rango_dom": "50–64",
+      "rango_min": "50–64",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2,
+          "m": 0,
+          "h": 2
         }
       ]
     },
@@ -5324,9 +10470,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 0,
               "h": 1,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "GUADALUPE Y CALVO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 1,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 1,
+        "65+": 0
+      },
+      "rango_dom": "50–64",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5350,9 +10527,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 1
+      },
+      "rango_dom": "65+",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5376,9 +10584,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "GUADALUPE Y CALVO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "rango_dom": "18–29",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5402,9 +10641,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 0,
               "h": 1,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "ALDAMA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 1,
+        "50-64": 0,
+        "65+": 0
+      },
+      "rango_dom": "30–49",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -5428,9 +10698,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 1
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 1
+      },
+      "rango_dom": "65+",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "URIQUE",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -5454,9 +10755,40 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0,
-              "muns": 1
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 0
+              }
             }
           ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 1,
+        "50-64": 0,
+        "65+": 0
+      },
+      "rango_dom": "30–49",
+      "rango_min": null,
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     }
@@ -5551,379 +10883,1883 @@ window.DASHBOARD_DATA = {
   "indicadores": [
     {
       "inst": "ICHIJUV",
-      "clave": "N/A",
+      "clave": "2P026L2",
       "nombre": "Institucionalización de la perspectiva de las juventudes",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "ICHIJUV",
-      "clave": "N/A",
+      "clave": "1S022A1",
       "nombre": "Impulsando juventudes",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "ICHIJUV",
-      "clave": "#DIV/0!",
+      "clave": "2E029C1",
       "nombre": "Atención a la juventud",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 1674,
       "benef_reales": 1675,
+      "mujeres": 914,
+      "hombres": 760,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "ALDAMA",
+        "CAMARGO",
+        "CHIHUAHUA",
+        "CUAUHTEMOC",
+        "HIDALGO DEL PARRAL",
+        "JUAREZ",
+        "MEOQUI",
+        "NONOAVA",
+        "ROSARIO"
+      ]
     },
     {
       "inst": "ICHD",
-      "clave": "N/A",
+      "clave": "IS031A1",
       "nombre": "Apoyos al deporte",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "1S035A1",
       "nombre": "Asistencia social para la población indígena",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 1560,
       "benef_reales": 1295,
+      "mujeres": 1086,
+      "hombres": 474,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "ALDAMA",
+        "ALLENDE",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "CAMARGO",
+        "CARICHI",
+        "CHIHUAHUA",
+        "CHINIPAS",
+        "CUAUHTEMOC",
+        "CUSIHUIRIACHI",
+        "DELICIAS",
+        "EL TULE",
+        "FORANEO",
+        "GUACHOCHI",
+        "GUADALUPE Y CALVO",
+        "GUAZAPARES",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "JANOS",
+        "JIMENEZ",
+        "JUAREZ",
+        "MAGUARICHI",
+        "MEOQUI",
+        "MORELOS",
+        "NAMIQUIPA",
+        "NONOAVA",
+        "NUEVO CASAS GRANDES",
+        "OCAMPO",
+        "OJINAGA",
+        "SAN FRANCISCO DEL ORO",
+        "SANTA BARBARA",
+        "TEMOSACHIC",
+        "URIQUE",
+        "URUACHI"
+      ]
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "1S057A1",
       "nombre": "Juntos por nuestra identidad",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "2E215C1",
       "nombre": "Fomento por el respeto de los derechos indígenas",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "2E218C1",
       "nombre": "Desarrollo económico para la población indígena",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "1S034A1",
       "nombre": "Programa integral para la producción agrícola",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "2E200C1",
       "nombre": "Estrategia solidaria de alimentación nutritiva",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "SPyCI",
-      "clave": "N/A",
+      "clave": "1S056A1",
       "nombre": "Incentivos económicos a estudiantes indígenas para su profesionalización",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S005A1",
       "nombre": "Alimentación y desarrollo autosustentable de las familias",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 22207,
       "benef_reales": 22125,
+      "mujeres": 15369,
+      "hombres": 6838,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "AHUMADA",
+        "ALDAMA",
+        "ALLENDE",
+        "AQUILES SERDAN",
+        "ASCENSION",
+        "BACHINIVA",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "BUENAVENTURA",
+        "CAMARGO",
+        "CARICHI",
+        "CASAS GRANDES",
+        "CHIHUAHUA",
+        "CHINIPAS",
+        "CORONADO",
+        "COYAME DEL SOTOL",
+        "CUAUHTEMOC",
+        "CUSIHUIRIACHI",
+        "DELICIAS",
+        "DR. BELISARIO DOMINGUEZ",
+        "EL TULE",
+        "FORANEO",
+        "GALEANA",
+        "GOMEZ FARIAS",
+        "GRAN MORELOS",
+        "GUACHOCHI",
+        "GUADALUPE",
+        "GUADALUPE Y CALVO",
+        "GUAZAPARES",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "HUEJOTITAN",
+        "IGNACIO ZARAGOZA",
+        "JANOS",
+        "JIMENEZ",
+        "JUAREZ",
+        "JULIMES",
+        "LA CRUZ",
+        "LOPEZ",
+        "MADERA",
+        "MAGUARICHI",
+        "MATACHI",
+        "MATAMOROS",
+        "MEOQUI",
+        "MORELOS",
+        "MORIS",
+        "NAMIQUIPA",
+        "NO IDENTIFICADO",
+        "NONOAVA",
+        "NUEVO CASAS GRANDES",
+        "OCAMPO",
+        "OJINAGA",
+        "PRAXEDIS G. GUERRERO",
+        "RIVA PALACIO",
+        "ROSALES",
+        "ROSARIO",
+        "SAN FRANCISCO DE BORJA",
+        "SAN FRANCISCO DE CONCHOS",
+        "SAN FRANCISCO DEL ORO",
+        "SANTA BARBARA",
+        "SANTA ISABEL",
+        "SATEVO",
+        "SAUCILLO",
+        "TEMOSACHIC",
+        "URIQUE",
+        "URUACHI",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S041A1",
       "nombre": "Fortalecimiento familiar",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 290,
       "benef_reales": 291,
+      "mujeres": 251,
+      "hombres": 39,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 3,
+        "18-29": 53,
+        "30-49": 147,
+        "50-64": 55,
+        "65+": 28
+      },
+      "sin_datos_edad": 5,
+      "municipios": [
+        "CHIHUAHUA",
+        "FORANEO",
+        "JUAREZ"
+      ]
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S042A1",
       "nombre": "Rehabilitación integral y apoyos funcionales",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 1689,
       "benef_reales": 1625,
+      "mujeres": 851,
+      "hombres": 838,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "AHUMADA",
+        "ALDAMA",
+        "AQUILES SERDAN",
+        "BACHINIVA",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "CAMARGO",
+        "CARICHI",
+        "CHIHUAHUA",
+        "CORONADO",
+        "CUAUHTEMOC",
+        "CUSIHUIRIACHI",
+        "FORANEO",
+        "GUAZAPARES",
+        "HIDALGO DEL PARRAL",
+        "JANOS",
+        "JIMENEZ",
+        "JUAREZ",
+        "LOPEZ",
+        "MADERA",
+        "RIVA PALACIO",
+        "SAUCILLO",
+        "URIQUE",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S045A1",
       "nombre": "Gestión social y atención a la ciudadanía",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 580,
       "benef_reales": 579,
+      "mujeres": 334,
+      "hombres": 246,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "AHUMADA",
+        "ALDAMA",
+        "AQUILES SERDAN",
+        "BACHINIVA",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "BUENAVENTURA",
+        "CARICHI",
+        "CASAS GRANDES",
+        "CHIHUAHUA",
+        "CHINIPAS",
+        "CORONADO",
+        "CUAUHTEMOC",
+        "DELICIAS",
+        "FORANEO",
+        "GOMEZ FARIAS",
+        "GRAN MORELOS",
+        "GUACHOCHI",
+        "GUADALUPE Y CALVO",
+        "GUAZAPARES",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "JIMENEZ",
+        "JUAREZ",
+        "MEOQUI",
+        "MORELOS",
+        "MORIS",
+        "NAMIQUIPA",
+        "NUEVO CASAS GRANDES",
+        "OCAMPO",
+        "OJINAGA",
+        "SANTA ISABEL",
+        "SAUCILLO",
+        "URIQUE",
+        "URUACHI",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "2E093C1",
       "nombre": "Esparcimiento para el desarrollo familiar",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 238,
       "benef_reales": 238,
+      "mujeres": 183,
+      "hombres": 55,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 67,
+        "65+": 171
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "CHIHUAHUA"
+      ]
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S059A1",
       "nombre": "Juntos por la sierra",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S005A1",
       "nombre": "Desayunamos juntos, come, crece y aprende",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "DIF",
-      "clave": "N/A",
+      "clave": "1S041A1",
       "nombre": "Acciones que mejoran las habilidades de crianza para un desarrollo armónico",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "ICHDII",
-      "clave": "N/A",
+      "clave": "1S052A1",
       "nombre": "Estancias infantiles para el desarrollo integral de la niñez",
-      "benef_reales": null,
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 27,
+      "benef_reales": 27,
+      "mujeres": 18,
+      "hombres": 9,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 12,
+        "30-49": 6,
+        "50-64": 9,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "CHIHUAHUA",
+        "GUACHOCHI",
+        "JUAREZ",
+        "NONOAVA"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "1S047A1",
       "nombre": "Apoyos a personas con discapacidad",
-      "benef_reales": null,
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 338,
+      "benef_reales": 338,
+      "mujeres": 132,
+      "hombres": 206,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 2,
+        "6-11": 4,
+        "12-17": 11,
+        "18-29": 103,
+        "30-49": 104,
+        "50-64": 80,
+        "65+": 34
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "CAMARGO",
+        "CHIHUAHUA",
+        "JUAREZ",
+        "SAUCILLO"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "1S027A1",
       "nombre": "Apoyo a personas mayores",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 1460,
       "benef_reales": 1460,
+      "mujeres": 1086,
+      "hombres": 374,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 7,
+        "30-49": 17,
+        "50-64": 279,
+        "65+": 1157
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "CHIHUAHUA",
+        "CUAUHTEMOC",
+        "DELICIAS",
+        "HIDALGO DEL PARRAL",
+        "JUAREZ",
+        "SAUCILLO"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "2E027C1",
       "nombre": "Fortalecimiento comunitario y participación ciudadana",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 5884,
       "benef_reales": 5884,
+      "mujeres": 3443,
+      "hombres": 2441,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "ALDAMA",
+        "AQUILES SERDAN",
+        "BACHINIVA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "CAMARGO",
+        "CARICHI",
+        "CASAS GRANDES",
+        "CHIHUAHUA",
+        "CUAUHTEMOC",
+        "DELICIAS",
+        "GRAN MORELOS",
+        "GUACHOCHI",
+        "GUADALUPE Y CALVO",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "JIMENEZ",
+        "JUAREZ",
+        "MADERA",
+        "MAGUARICHI",
+        "MATAMOROS",
+        "MEOQUI",
+        "MORELOS",
+        "NAMIQUIPA",
+        "NONOAVA",
+        "OJINAGA",
+        "SAN FRANCISCO DE BORJA",
+        "URIQUE",
+        "URUACHI",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "1S054A1",
       "nombre": "Atención a niños, niñas, adolescentes y juventudes",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 4,
       "benef_reales": 4,
+      "mujeres": 1,
+      "hombres": 3,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "CHIHUAHUA"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "2F054C1",
       "nombre": "Proyectos productivos y economía solidaria",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 11,
       "benef_reales": 11,
+      "mujeres": 4,
+      "hombres": 7,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "ALDAMA",
+        "CHIHUAHUA"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "1S028A1",
       "nombre": "Juárez cuenta conmigo",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 2099,
       "benef_reales": 2099,
+      "mujeres": 1537,
+      "hombres": 562,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "JUAREZ"
+      ]
     },
     {
       "inst": "SDHyBC",
-      "clave": "N/A",
+      "clave": "1S025A1",
       "nombre": "Desarrollo humano",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 836,
       "benef_reales": 836,
+      "mujeres": 541,
+      "hombres": 295,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 237,
+        "30-49": 381,
+        "50-64": 186,
+        "65+": 32
+      },
+      "sin_datos_edad": 0,
+      "municipios": [
+        "AHUMADA",
+        "ALDAMA",
+        "ALLENDE",
+        "AQUILES SERDAN",
+        "ASCENSION",
+        "BACHINIVA",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "BUENAVENTURA",
+        "CAMARGO",
+        "CARICHI",
+        "CASAS GRANDES",
+        "CHIHUAHUA",
+        "CHINIPAS",
+        "CORONADO",
+        "COYAME DEL SOTOL",
+        "CUAUHTEMOC",
+        "CUSIHUIRIACHI",
+        "DELICIAS",
+        "DR. BELISARIO DOMINGUEZ",
+        "EL TULE",
+        "FORANEO",
+        "GALEANA",
+        "GOMEZ FARIAS",
+        "GRAN MORELOS",
+        "GUACHOCHI",
+        "GUADALUPE Y CALVO",
+        "GUAZAPARES",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "IGNACIO ZARAGOZA",
+        "JANOS",
+        "JIMENEZ",
+        "JUAREZ",
+        "JULIMES",
+        "LA CRUZ",
+        "LOPEZ",
+        "MADERA",
+        "MANUEL BENAVIDES",
+        "MATACHI",
+        "MATAMOROS",
+        "MEOQUI",
+        "MORELOS",
+        "MORIS",
+        "NAMIQUIPA",
+        "NONOAVA",
+        "NUEVO CASAS GRANDES",
+        "OCAMPO",
+        "OJINAGA",
+        "ROSALES",
+        "ROSARIO",
+        "SAN FRANCISCO DE BORJA",
+        "SAN FRANCISCO DE CONCHOS",
+        "SAN FRANCISCO DEL ORO",
+        "SANTA BARBARA",
+        "SANTA ISABEL",
+        "SATEVO",
+        "SAUCILLO",
+        "TEMOSACHIC",
+        "URIQUE",
+        "URUACHI",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "2F004C1",
       "nombre": "Fomento agrícola",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "1S053B1",
       "nombre": "Atención a la sequía",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "1S019B1",
       "nombre": "Desarrollo forestal sustentable",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "2F052C1",
       "nombre": "Desarrollo de productores agropecuarios, agroindistriales, agrícolas y forestales",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "1S017B1",
       "nombre": "Desarrollo rural sustentable",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "2E084C1",
       "nombre": "Mecanización del campo",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "1S020B1",
       "nombre": "Uso sustentable del agua",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "2F012B1",
       "nombre": "Fomento de los agronegocios y valor agregado",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "RURAL",
-      "clave": "N/A",
+      "clave": "1S014B2",
       "nombre": "Subsidios a la producción, equipamento e infraestructura",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "TRABAJO",
-      "clave": "N/A",
+      "clave": "1S037A1",
       "nombre": "Apoyos para el empleo",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "CULTURA",
-      "clave": "N/A",
+      "clave": "1S012A1",
       "nombre": "Apoyos a la cultura",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 30,
       "benef_reales": 31,
+      "mujeres": 29,
+      "hombres": 1,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 9,
+        "30-49": 7,
+        "50-64": 5,
+        "65+": 9
+      },
+      "sin_datos_edad": 1,
+      "municipios": [
+        "CHIHUAHUA"
+      ]
     },
     {
       "inst": "COESPO",
-      "clave": "N/A",
+      "clave": "1S046A1",
       "nombre": "Apoyo integral a migrantes",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "COESVI",
-      "clave": "N/A",
+      "clave": "1S015A1",
       "nombre": "Apoyos sociales en vivenda",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "COESVI",
-      "clave": "N/A",
+      "clave": "2E086C1",
       "nombre": "Vivienda digna",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "SALUD",
-      "clave": "N/A",
+      "clave": "2E166C1",
       "nombre": "Atención médica",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": 167394,
       "benef_reales": 167381,
+      "mujeres": 105143,
+      "hombres": 62251,
+      "sin_id": null,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 10814,
+        "6-11": 6726,
+        "12-17": 5784,
+        "18-29": 15875,
+        "30-49": 21370,
+        "50-64": 21939,
+        "65+": 17342
+      },
+      "sin_datos_edad": 93419,
+      "municipios": [
+        "AHUMADA",
+        "ALDAMA",
+        "ALLENDE",
+        "AQUILES SERDAN",
+        "ASCENSION",
+        "BACHINIVA",
+        "BALLEZA",
+        "BATOPILAS DE MANUEL GOMEZ MORIN",
+        "BOCOYNA",
+        "BUENAVENTURA",
+        "CAMARGO",
+        "CARICHI",
+        "CASAS GRANDES",
+        "CHIHUAHUA",
+        "CHINIPAS",
+        "CORONADO",
+        "COYAME DEL SOTOL",
+        "CUAUHTEMOC",
+        "CUSIHUIRIACHI",
+        "DELICIAS",
+        "DR. BELISARIO DOMINGUEZ",
+        "EL TULE",
+        "FORANEO",
+        "GALEANA",
+        "GOMEZ FARIAS",
+        "GRAN MORELOS",
+        "GUACHOCHI",
+        "GUADALUPE",
+        "GUADALUPE Y CALVO",
+        "GUAZAPARES",
+        "GUERRERO",
+        "HIDALGO DEL PARRAL",
+        "HUEJOTITAN",
+        "IGNACIO ZARAGOZA",
+        "JANOS",
+        "JIMENEZ",
+        "JUAREZ",
+        "JULIMES",
+        "LA CRUZ",
+        "LOPEZ",
+        "MADERA",
+        "MAGUARICHI",
+        "MANUEL BENAVIDES",
+        "MATACHI",
+        "MATAMOROS",
+        "MEOQUI",
+        "MORELOS",
+        "MORIS",
+        "NAMIQUIPA",
+        "NO IDENTIFICADO",
+        "NONOAVA",
+        "NUEVO CASAS GRANDES",
+        "OCAMPO",
+        "OJINAGA",
+        "PRAXEDIS G. GUERRERO",
+        "RIVA PALACIO",
+        "ROSALES",
+        "ROSARIO",
+        "SAN FRANCISCO DE BORJA",
+        "SAN FRANCISCO DE CONCHOS",
+        "SAN FRANCISCO DEL ORO",
+        "SANTA BARBARA",
+        "SANTA ISABEL",
+        "SATEVO",
+        "SAUCILLO",
+        "TEMOSACHIC",
+        "URIQUE",
+        "URUACHI",
+        "VALLE DE ZARAGOZA"
+      ]
     },
     {
       "inst": "SEECH",
-      "clave": "N/A",
+      "clave": "SE206C1",
       "nombre": "Cobertura en educación básica",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "SEyD",
-      "clave": "N/A",
+      "clave": null,
       "nombre": "Desayunos frios y calientes",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "TURISMO",
-      "clave": "N/A",
+      "clave": "2F011C1",
       "nombre": "Fomento y desarrollo turístico",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     },
     {
       "inst": "ICHIMUJ",
-      "clave": "N/A",
+      "clave": null,
       "nombre": "Apoyo a familiares de victimas de feminicidios",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 1,
+      "municipios": []
     },
     {
       "inst": "CECYTECH",
-      "clave": "N/A",
+      "clave": null,
       "nombre": "Alimentacion en escuelas",
+      "pob_potencial": null,
+      "pob_objetivo": null,
+      "pob_alcanzada": null,
+      "benef_unicos": null,
       "benef_reales": 1,
+      "mujeres": null,
+      "hombres": null,
+      "sin_id": 1,
       "presupuesto": null,
-      "gasto": null
+      "gasto": null,
+      "ep": null,
+      "metas_prog": null,
+      "avance_metas": null,
+      "eficacia": null,
+      "eficiencia": null,
+      "desempeno": null,
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 0,
+        "65+": 0
+      },
+      "sin_datos_edad": 0,
+      "municipios": []
     }
   ],
   "grupos_vulnerables": {
