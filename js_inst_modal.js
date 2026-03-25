@@ -210,7 +210,10 @@ function _instProgRender(p, inst, tab) {
     if (_GEO) {
       _GEO.features.forEach(function(f){
         var nm = normMun(f.properties.nombre || '');
-        var activo = !!listaSetNorm[nm];
+        // Exact match OR prefix match (e.g. GeoJSON "Batopilas" vs data "Batopilas de Manuel Gómez Morín")
+        var activo = !!listaSetNorm[nm] || Object.keys(listaSetNorm).some(function(k){
+          return k.indexOf(nm) === 0 || nm.indexOf(k) === 0;
+        });
         var fill   = activo ? acc         : '#111c2b';
         var stroke = activo ? '#ffffff99' : '#ffffff22';
         var sw     = activo ? '1.2'       : '0.4';
