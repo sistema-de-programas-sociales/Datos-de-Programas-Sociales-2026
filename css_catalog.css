@@ -44,20 +44,13 @@
 .cat-badge{display:inline-flex;align-items:center;padding:3px 11px;border-radius:5px;font-size:12px;font-weight:600;letter-spacing:.04em;white-space:nowrap}
 
 /* KPIs 3 columnas */
-.cat-card-datos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:0.5px solid rgba(205,217,229,.1);padding-top:8px;margin-top:6px;min-height:70px}
 .cat-dato{text-align:center;padding:0 4px}
 .cat-dato+.cat-dato{border-left:0.5px solid rgba(205,217,229,.1)}
 .cat-dato-val{font-family:var(--cat-mono);font-size:20px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;line-height:1}
 .cat-dato-lbl{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
 
 /* género barras */
-.cat-card-genero{display:flex;flex-direction:column;gap:5px;border-top:0.5px solid rgba(205,217,229,.1);padding-top:8px;margin-top:6px}
-.cat-gnr{display:flex;align-items:center;gap:7px}
-.cat-gnr-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.cat-gnr-track{flex:1;height:5px;border-radius:3px;background:rgba(205,217,229,.12);overflow:hidden;position:relative}
-.cat-gnr-fill{position:absolute;left:0;top:0;height:100%;border-radius:3px}
 .cat-gnr-val{font-family:var(--cat-mono);font-size:12px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums;min-width:46px;text-align:right}
-.cat-gnr-pct{font-size:11px;color:#8b949e;min-width:30px;text-align:right}
 
 /* barra volumen */
 
@@ -109,11 +102,8 @@
 .cat-ver-btn svg{width:13px;height:13px;flex-shrink:0}
 
 /* chevron */
-.cat-chev{width:24px;height:24px;border-radius:50%;background:rgba(205,217,229,.08);border:0.5px solid rgba(205,217,229,.15);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .15s;flex-shrink:0;color:#8b949e}
-.cat-card.expanded .cat-chev{transform:rotate(180deg);background:var(--cat-navy-lt)}
-
+.cat-card.expanded 
 /* columnas legacy — necesarias para renderProgsTable */
-.cat-col-header{display:none}
 .cat-col-lbl{}
 
 /* ── Filas tabla municipios ── */
