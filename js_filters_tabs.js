@@ -444,3 +444,4 @@ function updateSlider(prevSlide) {
 renderGeneral();
 rendered['general'] = true;
 updateSlider();
+
