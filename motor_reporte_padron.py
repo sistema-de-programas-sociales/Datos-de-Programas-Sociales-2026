@@ -71,6 +71,33 @@ def leer_excel():
         print('Error leyendo Excel:', result.stderr); sys.exit(1)
     return json.loads(result.stdout)
 
+def leer_grupos_vulnerables():
+    """Lee la hoja Grupos Vulnerables del Excel del padrón."""
+    try:
+        import openpyxl
+        wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
+        if 'Grupos Vulnerables' not in wb.sheetnames:
+            return []
+        ws = wb['Grupos Vulnerables']
+        grupos = []
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            if not row[0]:
+                continue
+            nombre = str(row[0]).strip()
+            try:
+                pob_vul = int(row[1]) if row[1] not in (None, '') else 0
+            except (ValueError, TypeError):
+                pob_vul = 0
+            try:
+                pob_ate = int(row[2]) if row[2] not in (None, '') else 0
+            except (ValueError, TypeError):
+                pob_ate = 0
+            grupos.append({'nombre': nombre, 'pob_vulnerable': pob_vul, 'atendidos': pob_ate})
+        return grupos
+    except Exception as e:
+        print(f'AVISO: No se pudo leer Grupos Vulnerables: {e}')
+        return []
+
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
 def fmt(n, dec=0):
     if n is None or n == '': return '0'
@@ -698,8 +725,53 @@ def main():
         [1900, 1000, 1000, 1000, 1000, 1500, 1500])
     add_spacer(doc)
 
-    # ══ 4. INSTITUCIONES PARTICIPANTES ════════════════════════════════════════
-    add_heading(doc, '4. Instituciones Participantes', page_break=True)
+    # ══ 4. GRUPOS VULNERABLES ════════════════════════════════════════════════
+    add_heading(doc, '4. Grupos Vulnerables', page_break=True)
+    grupos_vul = leer_grupos_vulnerables()
+    if grupos_vul:
+        add_body(doc,
+            'La siguiente tabla presenta los grupos de población identificados en situación de vulnerabilidad '
+            'en el estado de Chihuahua, comparando la población vulnerable total con la población atendida '
+            'por los programas sociales del padrón de beneficiarios 2026.')
+        add_spacer(doc, 4)
+
+        # KPIs globales de grupos vulnerables
+        total_vul  = sum(g['pob_vulnerable'] for g in grupos_vul)
+        total_ate  = sum(g['atendidos']      for g in grupos_vul)
+        vul_m = next((g['pob_vulnerable'] for g in grupos_vul if 'muj' in g['nombre'].lower()), 0)
+        vul_h = next((g['pob_vulnerable'] for g in grupos_vul if 'hom' in g['nombre'].lower()), 0)
+        ate_m = next((g['atendidos']      for g in grupos_vul if 'muj' in g['nombre'].lower()), 0)
+        ate_h = next((g['atendidos']      for g in grupos_vul if 'hom' in g['nombre'].lower()), 0)
+
+        add_kpi_table(doc, [[
+            {'label': 'Pob. Vulnerable Total', 'value': fmt(total_vul), 'sub': 'personas identificadas'},
+            {'label': 'Población Atendida',    'value': fmt(total_ate), 'sub': pct_of(total_ate, total_vul) + ' de la pob. vulnerable'},
+            {'label': 'Mujeres Vulnerables',   'value': fmt(vul_m),    'sub': pct_of(ate_m, vul_m) + ' atendidas'},
+            {'label': 'Hombres Vulnerables',   'value': fmt(vul_h),    'sub': pct_of(ate_h, vul_h) + ' atendidos'},
+        ]])
+        add_spacer(doc, 6)
+
+        # Tabla de todos los grupos
+        add_body(doc, '4.1  Desglose por grupo vulnerable:', keep_next=True)
+        add_spacer(doc, 3, keep_next=True)
+        gv_rows = []
+        for g in grupos_vul:
+            cob = pct_of(g['atendidos'], g['pob_vulnerable']) if g['atendidos'] > 0 else '—'
+            ate_str = fmt(g['atendidos']) if g['atendidos'] > 0 else '—'
+            gv_rows.append([g['nombre'], fmt(g['pob_vulnerable']), ate_str, cob])
+        # Fila total
+        gv_rows.append(['TOTAL', fmt(total_vul), fmt(total_ate), pct_of(total_ate, total_vul)])
+        add_table(doc,
+            ['Grupo Vulnerable', 'Pob. Vulnerable', 'Atendidos', 'Cobertura'],
+            gv_rows,
+            [4000, 1500, 1500, 1000])
+        add_spacer(doc)
+    else:
+        add_body(doc, 'No se encontraron datos de grupos vulnerables en el archivo de Excel.')
+        add_spacer(doc)
+
+    # ══ 5. INSTITUCIONES PARTICIPANTES ════════════════════════════════════════
+    add_heading(doc, '5. Instituciones Participantes', page_break=True)
     add_body(doc, f'Seguimiento a las instituciones con programas activos en el padrón de beneficiarios con registro en el periodo.', keep_next=True)
     add_spacer(doc, keep_next=True)
 
@@ -742,8 +814,8 @@ def main():
                 [4700, 1000, 1000, 1200, 1200])
         add_spacer(doc, 4)
 
-    # ══ 5. BENEFICIARIOS POR MUNICIPIO ════════════════════════════════════════
-    add_heading(doc, '5. Beneficiarios por Municipio', page_break=True)
+    # ══ 6. BENEFICIARIOS POR MUNICIPIO ════════════════════════════════════════
+    add_heading(doc, '6. Beneficiarios por Municipio', page_break=True)
     add_body(doc, f'{mun_act} municipios con beneficiarios registrados en el período, ordenados por volumen de atención de mayor a menor.', keep_next=True)
     add_spacer(doc, keep_next=True)
     # Separar municipios reales de entradas especiales
@@ -778,7 +850,7 @@ def main():
         f'{len(mun_reales)} municipios  |  Foráneos: {fmt(next((m["total"] for m in mun_especial if "FORAN" in unicodedata.normalize("NFD", m["municipio"].upper()).encode("ascii","ignore").decode()), 0))}  |  Sin municipio identificado: {fmt(next((m["total"] for m in mun_especial if "NO IDENT" in m["municipio"].upper()), 0))}')
 
     # ══ 6. APOYOS OTORGADOS ═══════════════════════════════════════════════════
-    add_heading(doc, '6. Apoyos Otorgados', page_break=True)
+    add_heading(doc, '7. Apoyos Otorgados', page_break=True)
     add_body(doc, f'Los {len(ap_clean)} tipos de apoyo registrados en el período, ordenados por volumen de entregas.', keep_next=True)
     add_spacer(doc, keep_next=True)
 
@@ -949,7 +1021,7 @@ def main():
         f'{fmt(total_apoyos)} apoyos otorgados  |  {len(ap_clean)} tipos de apoyo distintos')
 
     # ══ 7. DESEMPEÑO PRESUPUESTAL Y DE PROGRAMAS ══════════════════════════════
-    add_heading(doc, '7. Desempeño Presupuestal y de Programas', page_break=True)
+    add_heading(doc, '8. Desempeño Presupuestal y de Programas', page_break=True)
     add_body(doc,
         'En esta sección se presentan los indicadores de presupuesto, ejecución presupuestal, '
         'eficacia, eficiencia y desempeño global por programa social. '
@@ -1021,7 +1093,7 @@ def main():
         italic=True)
 
     # ══ 8. DESEMPEÑO POR INSTITUCIÓN ══════════════════════════════════════════
-    add_heading(doc, '8. Desempeño por Institución', page_break=True)
+    add_heading(doc, '9. Desempeño por Institución', page_break=True)
     add_body(doc,
         'Resumen consolidado de indicadores de desempeño por institución. '
         'Se integran los datos de todos los programas activos de cada institución. '
@@ -1076,7 +1148,7 @@ def main():
     add_spacer(doc)
 
     # ══ 9. CONCLUSIONES ═══════════════════════════════════════════════════════
-    add_heading(doc, '9. Conclusiones y Observaciones', page_break=True)
+    add_heading(doc, '10. Conclusiones y Observaciones', page_break=True)
     add_body(doc, f'Con base en los datos registrados al corte de {PERIODO_LARGO}, se presentan las '
                   f'siguientes conclusiones por área temática:')
     add_spacer(doc, 6)

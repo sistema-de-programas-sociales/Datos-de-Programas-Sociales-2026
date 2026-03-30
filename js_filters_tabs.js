@@ -244,27 +244,59 @@ function showTab(name, btn) {
 function renderVulnerables() {
   const gv = D.grupos_vulnerables;
   if (!gv) return;
+
   const vulM = gv.mujeres?.pob_vulnerable || 0;
   const vulH = gv.hombres?.pob_vulnerable || 0;
   const ateM = gv.mujeres?.atendidas     || 0;
   const ateH = gv.hombres?.atendidos     || 0;
   const vulT = vulM + vulH;
+  const ateT = ateM + ateH;
+  const grupos = gv.grupos || [];
 
-  // KPIs
+  // ── KPIs globales ─────────────────────────────────────────────────────────
   const s = document.getElementById('vul-kpis');
   if (s) s.innerHTML =
-    kpiSS('Mujeres Vulnerables', (ateM/vulM*100).toFixed(1)+'%', fmt(vulM)+' en situación vulnerable', 'cf','f') +
-    kpiSS('Hombres Vulnerables', (ateH/vulH*100).toFixed(1)+'%', fmt(vulH)+' en situación vulnerable', 'cm','m') +
-    kpiSS('Total Vulnerable',    fmt(vulT),  'población identificada en vulnerabilidad', 'cr','r') +
-    kpiSS('Cobertura Total',     (((ateM+ateH)/vulT)*100).toFixed(1)+'%', fmt(ateM+ateH)+' atendidos', 'cb','b');
+    kpiSS('Pob. Vulnerable Total', fmt(vulT), 'personas identificadas en vulnerabilidad', 'cr','r') +
+    kpiSS('Población Atendida',    fmt(ateT), pct(ateT, vulT)+' de la pob. vulnerable', 'cb','b') +
+    kpiSS('Mujeres Vulnerables',   fmt(vulM), pct(ateM, vulM)+' atendidas', 'cf','f') +
+    kpiSS('Hombres Vulnerables',   fmt(vulH), pct(ateH, vulH)+' atendidos', 'cm','m');
 
-  // Barras comparativas
-  barList('bar-vulnerables', [
-    { name:'Mujeres atendidas',    val: ateM },
-    { name:'Mujeres vulnerables',  val: vulM },
-    { name:'Hombres atendidos',    val: ateH },
-    { name:'Hombres vulnerables',  val: vulH },
-  ], 'bf-fem');
+  // ── Tabla de todos los grupos ─────────────────────────────────────────────
+  const tablaEl = document.getElementById('vul-grupos-tabla');
+  if (tablaEl && grupos.length > 0) {
+    const maxVul = Math.max(...grupos.map(g => g.pob_vulnerable), 1);
+    tablaEl.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:0;font-family:var(--sans);font-size:12px;color:var(--ink2);font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-bottom:2px solid var(--border)">
+        <span>Grupo</span>
+        <span style="text-align:right;padding-right:16px">Pob. Vulnerable</span>
+        <span style="text-align:right;padding-right:16px">Atendidos</span>
+        <span style="text-align:right">Cobertura</span>
+      </div>
+      ${grupos.map(g => {
+        const cob = g.pob_vulnerable > 0 ? (g.atendidos / g.pob_vulnerable * 100).toFixed(1) : '—';
+        const barW = (g.pob_vulnerable / maxVul * 100).toFixed(1);
+        const cobNum = parseFloat(cob) || 0;
+        const cobColor = cobNum >= 20 ? 'var(--green)' : cobNum >= 10 ? 'var(--gold)' : 'var(--red2)';
+        return `<div style="display:grid;grid-template-columns:1fr auto auto auto;gap:0;padding:10px 12px;border-bottom:0.5px solid var(--border2);align-items:center">
+          <div>
+            <div style="font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px">${g.nombre}</div>
+            <div style="height:4px;background:var(--border3);border-radius:2px;max-width:200px">
+              <div style="height:100%;width:${barW}%;background:#e91e8c;border-radius:2px;opacity:.6"></div>
+            </div>
+          </div>
+          <span style="font-family:var(--head);font-size:14px;font-weight:700;color:var(--ink);text-align:right;padding-right:16px">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</span>
+          <span style="font-family:var(--head);font-size:14px;font-weight:700;color:var(--gold);text-align:right;padding-right:16px">${g.atendidos > 0 ? fmt(g.atendidos) : '—'}</span>
+          <span style="font-family:var(--head);font-size:13px;font-weight:700;color:${cobColor};text-align:right">${g.atendidos > 0 ? cob+'%' : '—'}</span>
+        </div>`;
+      }).join('')}`;
+  }
+
+  // ── Barras comparativas (solo grupos con atendidos) ───────────────────────
+  const gruposConAte = grupos.filter(g => g.atendidos > 0);
+  barList('bar-vulnerables',
+    gruposConAte.map(g => ({ name: g.nombre, val: g.atendidos })),
+    'bf-gold'
+  );
 }
 
 /* ─── NUTRICHIHUAHUA ─── */

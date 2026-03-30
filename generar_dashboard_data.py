@@ -67,24 +67,42 @@ def leer_excel(excel_path):
 
 # ── Construir payload del dashboard ──────────────────────────────────────────
 def leer_grupos_vulnerables(excel_path):
-    """Lee la hoja Grupos Vulnerables directamente con openpyxl."""
+    """Lee la hoja Grupos Vulnerables directamente con openpyxl.
+    Retorna: {
+        'grupos': [{'nombre': str, 'pob_vulnerable': int, 'atendidos': int}, ...],
+        'mujeres': {'pob_vulnerable': int, 'atendidas': int},
+        'hombres': {'pob_vulnerable': int, 'atendidos': int},
+    }
+    """
     try:
         import openpyxl
         wb = openpyxl.load_workbook(str(excel_path), data_only=True)
         if 'Grupos Vulnerables' not in wb.sheetnames:
             return {}
         ws = wb['Grupos Vulnerables']
-        result = {}
+        result = {'grupos': [], 'mujeres': {}, 'hombres': {}}
         for row in ws.iter_rows(min_row=2, values_only=True):
             if not row[0]:
                 continue
-            genero = str(row[0]).strip().lower()
-            pob_vul = int(row[1]) if row[1] else 0
-            pob_ate = int(row[2]) if row[2] else 0
-            if 'muj' in genero:
+            nombre = str(row[0]).strip()
+            try:
+                pob_vul = int(row[1]) if row[1] not in (None, '') else 0
+            except (ValueError, TypeError):
+                pob_vul = 0
+            try:
+                pob_ate = int(row[2]) if row[2] not in (None, '') else 0
+            except (ValueError, TypeError):
+                pob_ate = 0
+            nombre_l = nombre.lower()
+            if 'muj' in nombre_l:
                 result['mujeres'] = {'pob_vulnerable': pob_vul, 'atendidas': pob_ate}
-            elif 'hom' in genero:
+            elif 'hom' in nombre_l:
                 result['hombres'] = {'pob_vulnerable': pob_vul, 'atendidos': pob_ate}
+            result['grupos'].append({
+                'nombre': nombre,
+                'pob_vulnerable': pob_vul,
+                'atendidos': pob_ate,
+            })
         return result
     except Exception as e:
         print(f'AVISO: No se pudo leer Grupos Vulnerables: {e}', file=sys.stderr)

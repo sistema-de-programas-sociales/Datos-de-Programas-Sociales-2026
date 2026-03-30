@@ -159,12 +159,12 @@ document.addEventListener('DOMContentLoaded', function(){
       <div>
       <div class="kicker mb8 mt12">Informe de cobertura social · Ejercicio 2026</div>
       <div style="font-family:var(--head);font-weight:900;line-height:.95;color:var(--ink)">
-        <span class="hl-blue fmt" id="pp-benef-hero" style="font-size:65px;display:inline;line-height:.9">—</span><span style="font-size:42px"> Chihuahuenses atendidos con apoyos sociales por parte del gobierno estatal</span>
+        <span class="hl-blue fmt" id="pp-benef-hero" style="font-size:65px;display:inline;line-height:.9">—</span><span style="font-size:42px"> Chiuahaenses atendidos con apoyos sociales por parte del gobierno estatal</span>
       </div>
       <hr class="rule-heavy">
       <div class="body-copy dropcap mt12" id="pp-cuerpo">—</div>
       <div class="img-box mt12">htt
-        <img src="https://noro.mx/wp-content/uploads/2025/04/En-Chihuahua-y-Durango-habitan-las-personas-mas-altas-de-Mexico-revela-Inegi.jpg">
+        <img src="https://scontent-phx1-1.xx.fbcdn.net/v/t51.82787-15/610980322_18499158430078100_2624357981298804836_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=EKdxTJDJPL0Q7kNvwEguvZF&_nc_oc=AdqTD6Tw-RxyH7HKMGS1jewzUSug6tBdL52R5iA7FNqAbTa620cIPbnPmfaYdhxTMRbpb3c3o48L8cOEUVmVpOyI&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=OktyQe_-f28M0zYPY2H0IA&_nc_ss=7a30f&oh=00_AfzOdN8eua4D_b4cLF36OlTSHS6vaJ5Kwd5rlCnls6GeVw&oe=69C381E7" alt="Beneficiarios" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;">
         <div class="img-caption">Datos obtenidos del padrón de beneficiarios 2026 - SDHyBC.</div>
       </div>
       </div>
@@ -701,11 +701,18 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="kicker mb8 mt16" style="color:#e91e8c">Grupos Vulnerables · Ejercicio 2026</div>
     <div class="hl-large mt4 mb16">Cobertura de atención a población en situación de vulnerabilidad</div>
     <hr class="rule-heavy">
+    <!-- KPIs globales -->
     <div class="stat-strip c4 mt16" id="vul-kpis"></div>
+    <!-- Tabla de todos los grupos -->
+    <div class="cbox mt16">
+      <div class="cbox-hdr">Desglose por Grupo Vulnerable</div>
+      <div class="cbox-body" id="vul-grupos-tabla"></div>
+    </div>
+    <!-- Barras comparativas -->
     <div class="np-2col mt16">
       <div class="np-2col-art">
         <div class="cbox">
-          <div class="cbox-hdr">Comparativa · Vulnerables vs Atendidos</div>
+          <div class="cbox-hdr">Población Atendida vs Vulnerable · Por Grupo</div>
           <div class="cbox-body"><div class="bar-list" id="bar-vulnerables"></div></div>
         </div>
       </div>
@@ -714,7 +721,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <div class="cbox">
           <div class="cbox-hdr">Notas de la Sección</div>
           <div class="cbox-body">
-            <p class="body-copy">Los datos de población vulnerable son tomados de la hoja <strong>Grupos Vulnerables</strong> del Excel del padrón. Los valores de atendidos corresponden al total de beneficiarios únicos por sexo del padrón general.</p>
+            <p class="body-copy">Los datos de población vulnerable provienen de la hoja <strong>Grupos Vulnerables</strong> del Excel del padrón. La columna <strong>Atendidos</strong> refleja los beneficiarios del padrón que pertenecen a cada grupo. La cobertura indica el porcentaje de la población vulnerable efectivamente atendida.</p>
           </div>
         </div>
       </div>

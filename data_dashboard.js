@@ -4,8 +4,8 @@ window.DASHBOARD_DATA = {
   "_meta": {
     "pob_estatal": 4043130,
     "pob_vulnerable": 1792324,
-    "pob_vul_m": 905124,
-    "pob_vul_h": 887200,
+    "pob_vul_m": 0,
+    "pob_vul_h": 0,
     "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua"
   },
   "general": {
@@ -11290,8 +11290,8 @@ window.DASHBOARD_DATA = {
       "inst": "DIF",
       "clave": "1S005A1",
       "nombre": "Alimentación y desarrollo autosustentable de las familias",
-      "pob_potencial": 32000,
-      "pob_objetivo": 30128,
+      "pob_potencial": null,
+      "pob_objetivo": null,
       "pob_alcanzada": 28182,
       "benef_unicos": 22125,
       "benef_reales": 22207,
@@ -11761,7 +11761,7 @@ window.DASHBOARD_DATA = {
       "clave": "1S047A1",
       "nombre": "Apoyos a personas con discapacidad",
       "pob_potencial": null,
-      "pob_objetivo": 654,
+      "pob_objetivo": null,
       "pob_alcanzada": 549,
       "benef_unicos": 338,
       "benef_reales": 338,
@@ -12807,15 +12807,6 @@ window.DASHBOARD_DATA = {
       "municipios": []
     }
   ],
-  "grupos_vulnerables": {
-    "mujeres": {
-      "pob_vulnerable": 905124,
-      "atendidas": 127213
-    },
-    "hombres": {
-      "pob_vulnerable": 887200,
-      "atendidos": 73882
-    }
-  },
+  "grupos_vulnerables": {},
   "nutrichihuahua": {}
 };

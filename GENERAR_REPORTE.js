@@ -74,7 +74,7 @@ function verificarDependencias() {
     'js_init.js','js_utils.js',
     'js_render_general.js','js_render_inst.js','js_render_muns.js','js_render_apoyos.js',
     'js_catalogo_modal.js','js_inst_modal.js','js_filters_tabs.js',
-    'js_map1.js','js_map2.js',
+    'js_map2.js',
   ];
   const req = ['motor_reporte_padron.py','read_excel_padron.py','generar_municipios.py',
                'generar_instituciones.py','build_municipio.js','build_institucion.js',
@@ -207,7 +207,7 @@ async function runWeb(excelPath) {
     'js_init.js','js_utils.js',
     'js_render_general.js','js_render_inst.js','js_render_muns.js','js_render_apoyos.js',
     'js_catalogo_modal.js','js_inst_modal.js','js_filters_tabs.js',
-    'js_map1.js','js_map2.js',
+    'js_map2.js',
   ];
   let copiedFiles = 0;
   for (const fname of DASH_FILES) {
