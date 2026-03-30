@@ -35,7 +35,7 @@ const DIR = __dirname;
 // ── Modo automático --web ─────────────────────────────────────────────────────
 const AUTO_WEB = process.argv.includes('--web');
 // Destino fijo para el modo automático
-const WEB_DIR  = path.join(DIR, 'Dashboard');  // subcarpeta con index.html y CSS/JS
+const WEB_DIR  = DIR;  // archivos del dashboard en la raiz
 
 // ─── EJECUTAR PYTHON — stdin aislado para no romper readline ─────────────────
 function pyRun(args) {
@@ -79,9 +79,9 @@ function verificarDependencias() {
   const req = ['motor_reporte_padron.py','read_excel_padron.py','generar_municipios.py',
                'generar_instituciones.py','build_municipio.js','build_institucion.js',
                'generar_dashboard_data.py', ...dashFiles];
-  // Los archivos del dashboard viven en Dashboard/, los demás en DIR
+  // Los archivos del dashboard viven en la raiz junto con el pipeline
   const falt = req.filter(f => {
-    if (dashFiles.includes(f)) return !fs.existsSync(path.join(DIR, 'Dashboard', f));
+    if (dashFiles.includes(f)) return !fs.existsSync(path.join(DIR, f));
     return !fs.existsSync(path.join(DIR, f));
   });
   if (!falt.length) ok('Scripts de generacion encontrados.');
@@ -173,10 +173,10 @@ const ask = q => new Promise(resolve => RL.question(q, resolve));
 // ─── RUN WEB AUTOMÁTICO — sin preguntas, destino fijo Reportes/2026/JP ─────────
 async function runWeb(excelPath) {
   const dashScript = path.join(DIR, 'generar_dashboard_data.py');
-  const htmlSrc    = path.join(DIR, 'Dashboard', 'index.html');
+  const htmlSrc    = path.join(DIR, 'index.html');
 
   if (!fs.existsSync(dashScript)) { err('generar_dashboard_data.py no encontrado.'); return; }
-  if (!fs.existsSync(htmlSrc))    { err('index.html no encontrado en Dashboard/. Verifica la carpeta.'); return; }
+  if (!fs.existsSync(htmlSrc))    { err('index.html no encontrado en la raiz.'); return; }
 
   // Crear carpeta destino si no existe
   if (!fs.existsSync(WEB_DIR)) {
@@ -618,11 +618,11 @@ async function run(excelPath) {
   if (generarWeb) {
     info('Actualizando datos del informe web (data_dashboard.js)...');
     const dashScript = path.join(DIR, 'generar_dashboard_data.py');
-    const htmlSrc    = path.join(DIR, 'Dashboard', 'index.html');
+    const htmlSrc    = path.join(DIR, 'index.html');
     if (!fs.existsSync(dashScript)) {
       warn('generar_dashboard_data.py no encontrado — omitiendo dashboard.');
     } else if (!fs.existsSync(htmlSrc)) {
-      warn('index.html no encontrado en Dashboard/.');
+      warn('index.html no encontrado en la raiz.');
     } else {
       // Solo regenera el archivo de datos — nunca toca los archivos del dashboard
       const ok5 = pyRun([dashScript, excelPath]);
