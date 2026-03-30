@@ -698,35 +698,57 @@ document.addEventListener('DOMContentLoaded', function(){
 <!-- ═══ TAB 6 · GRUPOS VULNERABLES ═══ -->
 <div id="tab-vulnerables" class="tab-pane">
   <div class="wrap">
-    <div class="kicker mb8 mt16" style="color:#e91e8c">Grupos Vulnerables · Ejercicio 2026</div>
-    <div class="hl-large mt4 mb16">Cobertura de atención a población en situación de vulnerabilidad</div>
-    <hr class="rule-heavy">
-    <!-- KPIs globales -->
-    <div class="stat-strip c4 mt16" id="vul-kpis"></div>
-    <!-- Tabla de todos los grupos -->
-    <div class="cbox mt16">
-      <div class="cbox-hdr">Desglose por Grupo Vulnerable</div>
-      <div class="cbox-body" id="vul-grupos-tabla"></div>
-    </div>
-    <!-- Barras comparativas -->
-    <div class="np-2col mt16">
-      <div class="np-2col-art">
-        <div class="cbox">
-          <div class="cbox-hdr">Población Atendida vs Vulnerable · Por Grupo</div>
-          <div class="cbox-body"><div class="bar-list" id="bar-vulnerables"></div></div>
+
+  <!-- KPI strip -->
+  <div class="stat-strip c4 mt12" id="vul-kpis" style="border-top:3px solid var(--ink);border-bottom:2px solid var(--border)"></div>
+
+  <!-- Panel dark igual que municipios -->
+  <div style="margin-top:16px">
+    <div style="background:#0d1117;border:1px solid rgba(205,217,229,.1);border-radius:12px;overflow:hidden">
+
+      <!-- Cabecera -->
+      <div style="padding:16px 20px;border-bottom:1px solid rgba(205,217,229,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:#161b22">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">Grupos Vulnerables · Chihuahua 2026</span>
+          <span id="vul-badge-count" style="font-family:'DM Mono',monospace;font-size:15px;color:#f778ba;background:rgba(247,120,186,.1);padding:2px 10px;border-radius:20px;border:0.5px solid rgba(247,120,186,.25)">— grupos</span>
+        </div>
+        <div style="display:flex;gap:14px;font-family:'DM Sans',system-ui,sans-serif;font-size:13px">
+          <span style="display:flex;align-items:center;gap:5px;color:#56d364"><span style="display:inline-block;width:7px;height:7px;background:#56d364;border-radius:50%"></span>≥ 20%</span>
+          <span style="display:flex;align-items:center;gap:5px;color:#ffa657"><span style="display:inline-block;width:7px;height:7px;background:#ffa657;border-radius:50%"></span>8–19%</span>
+          <span style="display:flex;align-items:center;gap:5px;color:#f85149"><span style="display:inline-block;width:7px;height:7px;background:#f85149;border-radius:50%"></span>&lt; 8%</span>
         </div>
       </div>
-      <div class="v-rule"></div>
-      <div class="np-2col-art">
-        <div class="cbox">
-          <div class="cbox-hdr">Notas de la Sección</div>
-          <div class="cbox-body">
-            <p class="body-copy">Los datos de población vulnerable provienen de la hoja <strong>Grupos Vulnerables</strong> del Excel del padrón. La columna <strong>Atendidos</strong> refleja los beneficiarios del padrón que pertenecen a cada grupo. La cobertura indica el porcentaje de la población vulnerable efectivamente atendida.</p>
-          </div>
-        </div>
+
+      <!-- Tabla -->
+      <div class="scroll-tbl" style="max-height:580px">
+        <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',system-ui,sans-serif;table-layout:fixed">
+          <colgroup>
+            <col style="width:3%">
+            <col style="width:35%">
+            <col style="width:17%">
+            <col style="width:15%">
+            <col style="width:12%">
+            <col style="width:18%">
+          </colgroup>
+          <thead>
+            <tr style="background:#161b22;border-bottom:1px solid rgba(205,217,229,.12);position:sticky;top:0;z-index:2">
+              <th style="padding:11px 8px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#484f58;white-space:nowrap">#</th>
+              <th style="padding:11px 12px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;white-space:nowrap">Grupo Vulnerable</th>
+              <th style="padding:11px 8px;text-align:right;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f778ba;white-space:nowrap">Pob. Vulnerable</th>
+              <th style="padding:11px 8px;text-align:right;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffa657;white-space:nowrap">Atendidos</th>
+              <th style="padding:11px 8px;text-align:right;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364;white-space:nowrap">Cobertura</th>
+              <th style="padding:11px 12px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364;white-space:nowrap">Barra cobertura</th>
+            </tr>
+          </thead>
+          <tbody id="vul-tbody"></tbody>
+          <tfoot id="vul-tfoot"></tfoot>
+        </table>
       </div>
+
     </div>
   </div>
+
+  </div><!-- /wrap -->
 </div><!-- /tab-vulnerables -->
 
 <!-- ═══ TAB 7 · NUTRICHIHUAHUA ═══ -->

@@ -119,6 +119,33 @@
 #kpi-mun .ss-cell.ck::after  { background: rgba(205,217,229,.3); }
 #kpi-mun .ss-cell.cgr::after { background: #3fb950; }
 
+/* ── KPI strip vulnerables — modo oscuro ── */
+#vul-kpis {
+  background: #0d1117;
+  border-top: 1px solid rgba(205,217,229,.1) !important;
+  border-bottom: 1px solid rgba(205,217,229,.08) !important;
+}
+#vul-kpis .ss-cell {
+  border-right: 1px solid rgba(205,217,229,.08);
+  background: #0d1117;
+  transition: background .15s;
+}
+#vul-kpis .ss-cell:hover { background: #161b22; }
+#vul-kpis .ss-cell:last-child { border-right: none; }
+#vul-kpis .ss-lbl  { color: #484f58; }
+#vul-kpis .ss-sub  { color: #8b949e; }
+#vul-kpis .ss-num  { color: #e6edf3; }
+#vul-kpis .ss-num.b  { color: #79c0ff; }
+#vul-kpis .ss-num.r  { color: #ff7b72; }
+#vul-kpis .ss-num.g  { color: #e3b341; }
+#vul-kpis .ss-num.gr { color: #3fb950; }
+#vul-kpis .ss-num.m  { color: #79c0ff; }
+#vul-kpis .ss-cell.cb::after  { background: #388bfd; }
+#vul-kpis .ss-cell.cr::after  { background: #ff7b72; }
+#vul-kpis .ss-cell.cg::after  { background: #e3b341; }
+#vul-kpis .ss-cell.cgr::after { background: #3fb950; }
+#vul-kpis .ss-cell.cm::after  { background: #79c0ff; }
+
 /* ══════════════════════════════════════════════════════
    GRID LAYOUTS
 ══════════════════════════════════════════════════════ */

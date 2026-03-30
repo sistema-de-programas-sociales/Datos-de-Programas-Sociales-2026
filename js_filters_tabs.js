@@ -245,65 +245,87 @@ function renderVulnerables() {
   const gv = D.grupos_vulnerables;
   if (!gv) return;
 
-  const vulM = gv.mujeres?.pob_vulnerable || 0;
-  const vulH = gv.hombres?.pob_vulnerable || 0;
-  const ateM = D.general.total_m;  // canónico del padrón
-  const ateH = D.general.total_h;  // canónico del padrón
-  const vulT = vulM + vulH;
-  const ateT = D.general.total_benef;  // total canónico del padrón
+  const POB_VUL_CANON = D._meta?.pob_vulnerable || 1792324;
+  const ateT = D.general.total_benef;
   const grupos = gv.grupos || [];
 
-  // ── KPIs globales ─────────────────────────────────────────────────────────
+  // ── Texto dinámico ───────────────────────────────────────────────────────
+  const elTotal = document.getElementById('vul-txt-total');
+  const elAte   = document.getElementById('vul-txt-atendidos');
+  const elPct   = document.getElementById('vul-txt-pct');
+  if (elTotal) elTotal.textContent = fmt(POB_VUL_CANON);
+  if (elAte)   elAte.textContent   = fmt(ateT);
+  if (elPct)   elPct.textContent   = pct(ateT, POB_VUL_CANON);
+
+  // ── KPIs ─────────────────────────────────────────────────────────────────
+  const gruposConCob = grupos.filter(g =>
+    g.pob_vulnerable > 0 && g.atendidos > 0 &&
+    !g.nombre.toLowerCase().includes('muj') &&
+    !g.nombre.toLowerCase().includes('hom'));
+  const grupoMax = gruposConCob.length
+    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a)
+    : null;
+  const grupoMin = gruposConCob.length
+    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a)
+    : null;
+
   const s = document.getElementById('vul-kpis');
-  const POB_VUL_CANON = D._meta?.pob_vulnerable || 1792324;
-  // Grupos con cobertura calculable (excluye mujeres/hombres genéricos)
-  const gruposConCob = grupos.filter(g => g.pob_vulnerable > 0 && g.atendidos > 0 &&
-    !g.nombre.toLowerCase().includes('muj') && !g.nombre.toLowerCase().includes('hom'));
-  const grupoMax = gruposConCob.length ? gruposConCob.reduce((a,b) => (b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a)) : null;
-  const grupoMin = gruposConCob.length ? gruposConCob.reduce((a,b) => (b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a)) : null;
   if (s) s.innerHTML =
-    kpiSS('Pob. Vulnerable Total', fmt(POB_VUL_CANON), 'personas identificadas en vulnerabilidad', 'cr','r') +
-    kpiSS('Población Atendida',    fmt(ateT), pct(ateT, POB_VUL_CANON)+' de la pob. vulnerable', 'cb','b') +
-    (grupoMax ? kpiSS('Mayor Cobertura · '+grupoMax.nombre, pct(grupoMax.atendidos, grupoMax.pob_vulnerable), fmt(grupoMax.atendidos)+' atendidos', 'cg','g') : '') +
+    kpiSS('Pob. Vulnerable', fmt(POB_VUL_CANON), 'personas en situación vulnerable', 'cr','r') +
+    kpiSS('Población Atendida', fmt(ateT), pct(ateT, POB_VUL_CANON)+' de cobertura', 'cb','b') +
+    (grupoMax ? kpiSS('Mayor Cobertura · '+grupoMax.nombre, pct(grupoMax.atendidos, grupoMax.pob_vulnerable), fmt(grupoMax.atendidos)+' atendidos', 'cgr','gr') : '') +
     (grupoMin ? kpiSS('Menor Cobertura · '+grupoMin.nombre, pct(grupoMin.atendidos, grupoMin.pob_vulnerable), fmt(grupoMin.atendidos)+' atendidos', 'cm','m') : '');
 
-  // ── Tabla de todos los grupos ─────────────────────────────────────────────
-  const tablaEl = document.getElementById('vul-grupos-tabla');
-  if (tablaEl && grupos.length > 0) {
-    const maxVul = Math.max(...grupos.map(g => g.pob_vulnerable), 1);
-    tablaEl.innerHTML = `
-      <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:0;font-family:var(--sans);font-size:12px;color:var(--ink2);font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-bottom:2px solid var(--border)">
-        <span>Grupo</span>
-        <span style="text-align:right;padding-right:16px">Pob. Vulnerable</span>
-        <span style="text-align:right;padding-right:16px">Atendidos</span>
-        <span style="text-align:right">Cobertura</span>
-      </div>
-      ${grupos.map(g => {
-        const cob = g.pob_vulnerable > 0 ? (g.atendidos / g.pob_vulnerable * 100).toFixed(1) : '—';
-        const barW = (g.pob_vulnerable / maxVul * 100).toFixed(1);
-        const cobNum = parseFloat(cob) || 0;
-        const cobColor = cobNum >= 20 ? 'var(--green)' : cobNum >= 10 ? 'var(--gold)' : 'var(--red2)';
-        return `<div style="display:grid;grid-template-columns:1fr auto auto auto;gap:0;padding:10px 12px;border-bottom:0.5px solid var(--border2);align-items:center">
-          <div>
-            <div style="font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px">${g.nombre}</div>
-            <div style="height:4px;background:var(--border3);border-radius:2px;max-width:200px">
-              <div style="height:100%;width:${barW}%;background:#e91e8c;border-radius:2px;opacity:.6"></div>
-            </div>
-          </div>
-          <span style="font-family:var(--head);font-size:14px;font-weight:700;color:var(--ink);text-align:right;padding-right:16px">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</span>
-          <span style="font-family:var(--head);font-size:14px;font-weight:700;color:var(--gold);text-align:right;padding-right:16px">${g.atendidos > 0 ? fmt(g.atendidos) : '—'}</span>
-          <span style="font-family:var(--head);font-size:13px;font-weight:700;color:${cobColor};text-align:right">${g.atendidos > 0 ? cob+'%' : '—'}</span>
-        </div>`;
-      }).join('')}`;
-  }
+  // ── Badge count ──────────────────────────────────────────────────────────
+  const badge = document.getElementById('vul-badge-count');
+  if (badge) badge.textContent = grupos.length + ' grupos';
 
-  // ── Barras comparativas (solo grupos con atendidos) ───────────────────────
-  const gruposConAte = grupos.filter(g => g.atendidos > 0);
-  barList('bar-vulnerables',
-    gruposConAte.map(g => ({ name: g.nombre, val: g.atendidos })),
-    'bf-gold'
-  );
+  // ── Tabla ────────────────────────────────────────────────────────────────
+  const tbody = document.getElementById('vul-tbody');
+  const tfoot = document.getElementById('vul-tfoot');
+  if (!tbody) return;
+
+  tbody.innerHTML = grupos.map((g, i) => {
+    const cobNum  = g.pob_vulnerable > 0 && g.atendidos > 0 ? (g.atendidos / g.pob_vulnerable * 100) : null;
+    const cobStr  = cobNum !== null ? cobNum.toFixed(1)+'%' : '—';
+    const cobColor = cobNum === null ? '#484f58'
+      : cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
+    const barW = cobNum !== null ? Math.min(cobNum * 3, 100).toFixed(1) : 0; // scale x3 para visibilidad
+    const rowBg = i % 2 === 0 ? 'transparent' : 'rgba(205,217,229,.02)';
+
+    return `<tr style="background:${rowBg};border-bottom:0.5px solid rgba(205,217,229,.06);transition:background .12s"
+      onmouseover="this.style.background='rgba(205,217,229,.06)'"
+      onmouseout="this.style.background='${rowBg}'">
+      <td style="padding:11px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:12px;color:#484f58">${i+1}</td>
+      <td style="padding:11px 14px;font-size:13px;font-weight:500;color:#e6edf3">${g.nombre}</td>
+      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;color:#8b949e">
+        ${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}
+      </td>
+      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#ffa657">
+        ${g.atendidos > 0 ? fmt(g.atendidos) : '—'}
+      </td>
+      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${cobColor}">
+        ${cobStr}
+      </td>
+      <td style="padding:11px 12px">
+        <div style="height:6px;background:rgba(205,217,229,.08);border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${barW}%;background:${cobColor};border-radius:3px;opacity:.85"></div>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+
+  // Fila total
+  if (tfoot) tfoot.innerHTML = `<tr style="background:#161b22;border-top:2px solid rgba(205,217,229,.15)">
+    <td style="padding:10px 8px"></td>
+    <td style="padding:10px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8b949e">Total padrón</td>
+    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#f778ba">${fmt(POB_VUL_CANON)}</td>
+    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#ffa657">${fmt(ateT)}</td>
+    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#79c0ff">${pct(ateT, POB_VUL_CANON)}</td>
+    <td></td>
+  </tr>`;
 }
+
 
 /* ─── NUTRICHIHUAHUA ─── */
 function renderNutri() {
@@ -444,4 +466,3 @@ function updateSlider(prevSlide) {
 renderGeneral();
 rendered['general'] = true;
 updateSlider();
-
