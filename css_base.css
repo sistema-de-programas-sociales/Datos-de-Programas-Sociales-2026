@@ -40,44 +40,6 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-/* ══════════════════════════════════════════════════════
-   MODO NOCHE
-══════════════════════════════════════════════════════ */
-body.dark {
-  --paper:  #0d1117; --paper2: #161b22; --paper3: #21262d;
-  --ink:    #e6edf3; --ink2:   #8b949e;
-  --blue:   #010409; --blue2:  #cdd9e5; --blue3: rgba(205,217,229,.15);
-  --gold:   #d89d1e; --gold2:  #f0b429;
-  --border: rgba(205,217,229,.7); --border2: rgba(205,217,229,.15); --border3: rgba(205,217,229,.07);
-}
-body.dark .cat-card          { background:#161b22 }
-body.dark .cat-card:hover    { background:#21262d }
-body.dark .cat-card.expanded { background:#0d2137 }
-body.dark .cat-prog-row      { background:#0d1117; border-color:rgba(205,217,229,.1) }
-body.dark .cat-prog-row:hover{ background:#21262d }
-body.dark .cat-wrapper       { border-color:rgba(205,217,229,.15) }
-body.dark .cat-body          { background:rgba(205,217,229,.04) }
-body.dark .cat-search        { background:#161b22; color:#e6edf3; border-color:rgba(205,217,229,.15) }
-body.dark .cat-chip          { background:#161b22; color:#8b949e; border-color:rgba(205,217,229,.15) }
-body.dark .cat-chip.active   { background:#1f6feb; border-color:#1f6feb; color:#fff }
-body.dark .cat-stat-pill     { background:#161b22 }
-body.dark .cat-chips         { border-bottom-color:rgba(205,217,229,.07) }
-body.dark .np-table thead tr { background:#161b22 }
-body.dark .np-table tbody tr:hover { background:#161b22 }
-body.dark .mh-topbar         { color:#8b949e }
 
-/* ── Botón toggle ── */
-.dark-toggle {
-  display:inline-flex; align-items:center; gap:6px;
-  padding:5px 12px; border-radius:20px;
-  border:0.5px solid var(--border2); background:transparent;
-  color:var(--ink2); font-size:11px; font-weight:600;
-  letter-spacing:.06em; cursor:pointer; transition:all .2s;
-  white-space:nowrap; font-family:var(--sans);
-}
-.dark-toggle:hover { background:var(--paper2); color:var(--ink) }
-body.dark .dark-toggle { border-color:rgba(205,217,229,.2); color:#8b949e }
-body.dark .dark-toggle:hover { background:#21262d; color:#e6edf3 }
-.dark-toggle svg { width:13px; height:13px; flex-shrink:0 }
 html{font-size:14px;scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height:100vh;line-height:1.6}
