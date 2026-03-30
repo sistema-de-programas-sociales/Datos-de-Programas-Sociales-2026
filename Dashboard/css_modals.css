@@ -1,0 +1,11 @@
+/* css_modals.css — estilos de modales incluidos en css_catalog.css */
+
+/* ── Leaflet overrides + tooltip ── */
+.leaflet-interactive:focus{outline:none!important}
+.leaflet-interactive{outline:none!important}
+.ltt{background:rgba(8,18,32,.96)!important;border:1px solid rgba(100,160,220,.2)!important;border-radius:6px!important;color:#e8edf3!important;font-size:15px!important;padding:13px 16px!important;pointer-events:none;max-width:320px;box-shadow:0 6px 24px rgba(0,0,0,.6)!important;line-height:1.6}
+.ltt::before{border-right-color:rgba(100,160,220,.2)!important}
+.leaflet-control-zoom a{background:rgba(12,22,38,.92)!important;color:#cdd8e3!important;border-color:rgba(255,255,255,.12)!important;font-size:18px!important}
+.leaflet-bar{border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 2px 10px rgba(0,0,0,.5)!important}
+#map-layer-sel optgroup{color:#888;font-size:12px}
+#map-layer-sel option{color:#ccd6e0;background:#1c2a38}
