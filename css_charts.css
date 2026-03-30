@@ -304,4 +304,3 @@
 /* Spark bar */
 .mun-sp  { display:inline-block; width:50px; height:7px; background:var(--blue-bg); border:1px solid rgba(0,47,167,.1); vertical-align:middle; margin-right:6px; position:relative; top:-1px; overflow:hidden; }
 .mun-spf { height:100%; background:var(--blue); opacity:.65; }
-

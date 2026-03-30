@@ -81,4 +81,3 @@ body.dark .dark-toggle:hover { background:#21262d; color:#e6edf3 }
 .dark-toggle svg { width:13px; height:13px; flex-shrink:0 }
 html{font-size:14px;scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);min-height:100vh;line-height:1.6}
-
