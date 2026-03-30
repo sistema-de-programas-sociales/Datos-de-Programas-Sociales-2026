@@ -746,13 +746,22 @@ def main():
         grupos_esp = [g for g in grupos_vul if "muj" not in g["nombre"].lower() and "hom" not in g["nombre"].lower() and g["pob_vulnerable"] > 0 and g["atendidos"] > 0]
         grupo_top = max(grupos_esp, key=lambda g: g["atendidos"] / g["pob_vulnerable"], default=None)
 
-        top_nombre = grupo_top['nombre'] if grupo_top else '—'
-        top_cob    = pct_of(grupo_top['atendidos'], grupo_top['pob_vulnerable']) if grupo_top else '—'
-        add_kpi_table(doc, [[
-            {'label': 'Pob. Vulnerable',          'value': fmt(POB_VULNERABLE_CANON), 'sub': 'población en situación vulnerable'},
-            {'label': 'Población Atendida',       'value': fmt(total_ate),            'sub': pct_of(total_ate, POB_VULNERABLE_CANON) + ' de la pob. vulnerable'},
-            {'label': 'Mayor Cobertura · ' + top_nombre, 'value': top_cob,           'sub': fmt(grupo_top["atendidos"]) + ' atendidos' if grupo_top else ''},
-        ]])
+        # Grupo mayor y menor cobertura
+        grupo_min = min(grupos_esp, key=lambda g: g["atendidos"] / g["pob_vulnerable"], default=None)
+        top_nombre = grupo_top["nombre"] if grupo_top else "—"
+        top_cob    = pct_of(grupo_top["atendidos"], grupo_top["pob_vulnerable"]) if grupo_top else "—"
+        min_nombre = grupo_min["nombre"] if grupo_min else "—"
+        min_cob    = pct_of(grupo_min["atendidos"], grupo_min["pob_vulnerable"]) if grupo_min else "—"
+        add_kpi_table(doc, [
+            [
+                {"label": "Pob. Vulnerable",    "value": fmt(POB_VULNERABLE_CANON), "sub": "población en situación vulnerable"},
+                {"label": "Población Atendida", "value": fmt(total_ate),            "sub": pct_of(total_ate, POB_VULNERABLE_CANON) + " de la pob. vulnerable"},
+                {"label": "Mayor Cobertura · " + top_nombre, "value": top_cob, "sub": fmt(grupo_top["atendidos"]) + " atendidos" if grupo_top else ""},
+            ],
+            [
+                {"label": "Menor Cobertura · " + min_nombre, "value": min_cob, "sub": fmt(grupo_min["atendidos"]) + " atendidos" if grupo_min else ""},
+            ],
+        ])
         add_kpi_table(doc, [[
             {'label': 'Mujeres Atendidas', 'value': fmt(ate_m), 'sub': 'beneficiarias en el padrón'},
             {'label': 'Hombres Atendidos', 'value': fmt(ate_h), 'sub': 'beneficiarios en el padrón'},

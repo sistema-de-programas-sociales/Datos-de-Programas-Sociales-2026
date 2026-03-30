@@ -250,16 +250,22 @@ function renderVulnerables() {
   const ateM = D.general.total_m;  // canónico del padrón
   const ateH = D.general.total_h;  // canónico del padrón
   const vulT = vulM + vulH;
-  const ateT = ateM + ateH;
+  const ateT = D.general.total_benef;  // total canónico del padrón
   const grupos = gv.grupos || [];
 
   // ── KPIs globales ─────────────────────────────────────────────────────────
   const s = document.getElementById('vul-kpis');
+  const POB_VUL_CANON = D._meta?.pob_vulnerable || 1792324;
+  // Grupos con cobertura calculable (excluye mujeres/hombres genéricos)
+  const gruposConCob = grupos.filter(g => g.pob_vulnerable > 0 && g.atendidos > 0 &&
+    !g.nombre.toLowerCase().includes('muj') && !g.nombre.toLowerCase().includes('hom'));
+  const grupoMax = gruposConCob.length ? gruposConCob.reduce((a,b) => (b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a)) : null;
+  const grupoMin = gruposConCob.length ? gruposConCob.reduce((a,b) => (b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a)) : null;
   if (s) s.innerHTML =
-    kpiSS('Pob. Vulnerable Total', fmt(vulT), 'personas identificadas en vulnerabilidad', 'cr','r') +
-    kpiSS('Población Atendida',    fmt(ateT), pct(ateT, vulT)+' de la pob. vulnerable', 'cb','b') +
-    kpiSS('Mujeres Vulnerables',   fmt(vulM), pct(ateM, vulM)+' atendidas', 'cf','f') +
-    kpiSS('Hombres Vulnerables',   fmt(vulH), pct(ateH, vulH)+' atendidos', 'cm','m');
+    kpiSS('Pob. Vulnerable Total', fmt(POB_VUL_CANON), 'personas identificadas en vulnerabilidad', 'cr','r') +
+    kpiSS('Población Atendida',    fmt(ateT), pct(ateT, POB_VUL_CANON)+' de la pob. vulnerable', 'cb','b') +
+    (grupoMax ? kpiSS('Mayor Cobertura · '+grupoMax.nombre, pct(grupoMax.atendidos, grupoMax.pob_vulnerable), fmt(grupoMax.atendidos)+' atendidos', 'cg','g') : '') +
+    (grupoMin ? kpiSS('Menor Cobertura · '+grupoMin.nombre, pct(grupoMin.atendidos, grupoMin.pob_vulnerable), fmt(grupoMin.atendidos)+' atendidos', 'cm','m') : '');
 
   // ── Tabla de todos los grupos ─────────────────────────────────────────────
   const tablaEl = document.getElementById('vul-grupos-tabla');
