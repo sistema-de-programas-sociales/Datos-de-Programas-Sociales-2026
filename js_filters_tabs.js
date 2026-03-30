@@ -247,8 +247,8 @@ function renderVulnerables() {
 
   const vulM = gv.mujeres?.pob_vulnerable || 0;
   const vulH = gv.hombres?.pob_vulnerable || 0;
-  const ateM = gv.mujeres?.atendidas     || 0;
-  const ateH = gv.hombres?.atendidos     || 0;
+  const ateM = D.general.total_m;  // canónico del padrón
+  const ateH = D.general.total_h;  // canónico del padrón
   const vulT = vulM + vulH;
   const ateT = ateM + ateH;
   const grupos = gv.grupos || [];

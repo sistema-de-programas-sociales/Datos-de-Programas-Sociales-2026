@@ -736,18 +736,26 @@ def main():
         add_spacer(doc, 4)
 
         # KPIs globales de grupos vulnerables
-        total_vul  = sum(g['pob_vulnerable'] for g in grupos_vul)
-        total_ate  = sum(g['atendidos']      for g in grupos_vul)
-        vul_m = next((g['pob_vulnerable'] for g in grupos_vul if 'muj' in g['nombre'].lower()), 0)
-        vul_h = next((g['pob_vulnerable'] for g in grupos_vul if 'hom' in g['nombre'].lower()), 0)
-        ate_m = next((g['atendidos']      for g in grupos_vul if 'muj' in g['nombre'].lower()), 0)
-        ate_h = next((g['atendidos']      for g in grupos_vul if 'hom' in g['nombre'].lower()), 0)
+        POB_VULNERABLE_CANON = 1792324
+        total_vul = POB_VULNERABLE_CANON
+        # Usar totales canónicos del padrón, no los de la hoja de grupos vulnerables
+        total_ate = int(total_benef)
+        ate_m = int(total_m)
+        ate_h = int(total_h)
+        # Grupo con mayor cobertura (excluyendo mujeres/hombres)
+        grupos_esp = [g for g in grupos_vul if "muj" not in g["nombre"].lower() and "hom" not in g["nombre"].lower() and g["pob_vulnerable"] > 0 and g["atendidos"] > 0]
+        grupo_top = max(grupos_esp, key=lambda g: g["atendidos"] / g["pob_vulnerable"], default=None)
 
+        top_nombre = grupo_top['nombre'] if grupo_top else '—'
+        top_cob    = pct_of(grupo_top['atendidos'], grupo_top['pob_vulnerable']) if grupo_top else '—'
         add_kpi_table(doc, [[
-            {'label': 'Pob. Vulnerable Total', 'value': fmt(total_vul), 'sub': 'personas identificadas'},
-            {'label': 'Población Atendida',    'value': fmt(total_ate), 'sub': pct_of(total_ate, total_vul) + ' de la pob. vulnerable'},
-            {'label': 'Mujeres Vulnerables',   'value': fmt(vul_m),    'sub': pct_of(ate_m, vul_m) + ' atendidas'},
-            {'label': 'Hombres Vulnerables',   'value': fmt(vul_h),    'sub': pct_of(ate_h, vul_h) + ' atendidos'},
+            {'label': 'Pob. Vulnerable',          'value': fmt(POB_VULNERABLE_CANON), 'sub': 'población en situación vulnerable'},
+            {'label': 'Población Atendida',       'value': fmt(total_ate),            'sub': pct_of(total_ate, POB_VULNERABLE_CANON) + ' de la pob. vulnerable'},
+            {'label': 'Mayor Cobertura · ' + top_nombre, 'value': top_cob,           'sub': fmt(grupo_top["atendidos"]) + ' atendidos' if grupo_top else ''},
+        ]])
+        add_kpi_table(doc, [[
+            {'label': 'Mujeres Atendidas', 'value': fmt(ate_m), 'sub': 'beneficiarias en el padrón'},
+            {'label': 'Hombres Atendidos', 'value': fmt(ate_h), 'sub': 'beneficiarios en el padrón'},
         ]])
         add_spacer(doc, 6)
 

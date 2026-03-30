@@ -4,8 +4,8 @@ window.DASHBOARD_DATA = {
   "_meta": {
     "pob_estatal": 4043130,
     "pob_vulnerable": 1792324,
-    "pob_vul_m": 0,
-    "pob_vul_h": 0,
+    "pob_vul_m": 905124,
+    "pob_vul_h": 887200,
     "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua"
   },
   "general": {
@@ -12807,6 +12807,77 @@ window.DASHBOARD_DATA = {
       "municipios": []
     }
   ],
-  "grupos_vulnerables": {},
+  "grupos_vulnerables": {
+    "grupos": [
+      {
+        "nombre": "Mujeres",
+        "pob_vulnerable": 905124,
+        "atendidos": 127213
+      },
+      {
+        "nombre": "Hombres",
+        "pob_vulnerable": 887200,
+        "atendidos": 73882
+      },
+      {
+        "nombre": "Niños y adolescentes (0-17)",
+        "pob_vulnerable": 542176,
+        "atendidos": 32346
+      },
+      {
+        "nombre": "Jovenes (18-29)",
+        "pob_vulnerable": 401598,
+        "atendidos": 19664
+      },
+      {
+        "nombre": "Adultos (30-64)",
+        "pob_vulnerable": 730828,
+        "atendidos": 57242
+      },
+      {
+        "nombre": "Personas mayores (65+)",
+        "pob_vulnerable": 117722,
+        "atendidos": 25809
+      },
+      {
+        "nombre": "Personas con pobreza multidimensional",
+        "pob_vulnerable": 587300,
+        "atendidos": 0
+      },
+      {
+        "nombre": "Personas en pobreza (sin contar alimentacion)",
+        "pob_vulnerable": 202447,
+        "atendidos": 0
+      },
+      {
+        "nombre": "Personas con carencia alimentaria",
+        "pob_vulnerable": 384853,
+        "atendidos": 0
+      },
+      {
+        "nombre": "Personas indígenas",
+        "pob_vulnerable": 296844,
+        "atendidos": 2110
+      },
+      {
+        "nombre": "Personas con discapacidad",
+        "pob_vulnerable": 228514,
+        "atendidos": 0
+      },
+      {
+        "nombre": "Personas en situacion de vulnerabilidad y violencia familiar",
+        "pob_vulnerable": 100000,
+        "atendidos": 0
+      }
+    ],
+    "mujeres": {
+      "pob_vulnerable": 905124,
+      "atendidas": 127213
+    },
+    "hombres": {
+      "pob_vulnerable": 887200,
+      "atendidos": 73882
+    }
+  },
   "nutrichihuahua": {}
 };
