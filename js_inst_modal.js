@@ -1,3 +1,4 @@
+///HOLA//
 function instModalOpen(inst) {
   const progs = D.indicadores.filter(p => p.inst === inst);
   const meta  = INST_META[inst] || {};
