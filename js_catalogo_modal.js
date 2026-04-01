@@ -1,3 +1,4 @@
+//HOLA
 function catModal(nombre, tipo='sexo') {
   const apoyo = D.apoyos.find(a => a.nombre === nombre);
   if (!apoyo) return;
