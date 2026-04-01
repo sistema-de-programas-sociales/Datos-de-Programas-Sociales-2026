@@ -902,7 +902,37 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 11.7,
       "idx_vulnerabilidad": 57.7,
       "idx_dependencia": 94.6,
-      "idx_urgencia": 80.3
+      "idx_urgencia": 80.3,
+      "inst": {
+        "CULTURA": {
+          "benef": 30,
+          "apoyos": 30
+        },
+        "DIF": {
+          "benef": 4175,
+          "apoyos": 4175
+        },
+        "ICHDII": {
+          "benef": 13,
+          "apoyos": 13
+        },
+        "ICHIJUV": {
+          "benef": 1290,
+          "apoyos": 1290
+        },
+        "SALUD": {
+          "benef": 32155,
+          "apoyos": 32155
+        },
+        "SDHyBC": {
+          "benef": 5753,
+          "apoyos": 5753
+        },
+        "SPyCI": {
+          "benef": 312,
+          "apoyos": 312
+        }
+      }
     },
     {
       "clave": "08038",
@@ -947,7 +977,33 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 5.0,
       "idx_vulnerabilidad": 39.6,
       "idx_dependencia": 61.0,
-      "idx_urgencia": 67.4
+      "idx_urgencia": 67.4,
+      "inst": {
+        "DIF": {
+          "benef": 4332,
+          "apoyos": 4332
+        },
+        "ICHDII": {
+          "benef": 9,
+          "apoyos": 9
+        },
+        "ICHIJUV": {
+          "benef": 221,
+          "apoyos": 221
+        },
+        "SALUD": {
+          "benef": 33026,
+          "apoyos": 33026
+        },
+        "SDHyBC": {
+          "benef": 2383,
+          "apoyos": 2383
+        },
+        "SPyCI": {
+          "benef": 78,
+          "apoyos": 78
+        }
+      }
     },
     {
       "clave": "08018",
@@ -992,7 +1048,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 13.5,
       "idx_vulnerabilidad": 38.2,
       "idx_dependencia": 66.4,
-      "idx_urgencia": 64.7
+      "idx_urgencia": 64.7,
+      "inst": {
+        "DIF": {
+          "benef": 607,
+          "apoyos": 607
+        },
+        "ICHIJUV": {
+          "benef": 1,
+          "apoyos": 1
+        },
+        "SALUD": {
+          "benef": 8296,
+          "apoyos": 8296
+        },
+        "SDHyBC": {
+          "benef": 357,
+          "apoyos": 357
+        },
+        "SPyCI": {
+          "benef": 34,
+          "apoyos": 34
+        }
+      }
     },
     {
       "clave": "08033",
@@ -1037,7 +1115,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 2.9,
       "idx_vulnerabilidad": 33.8,
       "idx_dependencia": 56.7,
-      "idx_urgencia": 64.1
+      "idx_urgencia": 64.1,
+      "inst": {
+        "DIF": {
+          "benef": 1473,
+          "apoyos": 1473
+        },
+        "ICHIJUV": {
+          "benef": 155,
+          "apoyos": 155
+        },
+        "SALUD": {
+          "benef": 5650,
+          "apoyos": 5650
+        },
+        "SDHyBC": {
+          "benef": 516,
+          "apoyos": 516
+        },
+        "SPyCI": {
+          "benef": 20,
+          "apoyos": 20
+        }
+      }
     },
     {
       "clave": "08022",
@@ -1082,7 +1182,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.3,
       "idx_vulnerabilidad": 32.3,
       "idx_dependencia": 48.4,
-      "idx_urgencia": 66.6
+      "idx_urgencia": 66.6,
+      "inst": {
+        "DIF": {
+          "benef": 145,
+          "apoyos": 145
+        },
+        "SALUD": {
+          "benef": 4396,
+          "apoyos": 4396
+        },
+        "SDHyBC": {
+          "benef": 55,
+          "apoyos": 55
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08028",
@@ -1127,7 +1245,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.2,
       "idx_vulnerabilidad": 44.4,
       "idx_dependencia": 56.3,
-      "idx_urgencia": 64.4
+      "idx_urgencia": 64.4,
+      "inst": {
+        "DIF": {
+          "benef": 1892,
+          "apoyos": 1892
+        },
+        "ICHDII": {
+          "benef": 4,
+          "apoyos": 4
+        },
+        "SALUD": {
+          "benef": 2494,
+          "apoyos": 2494
+        },
+        "SDHyBC": {
+          "benef": 55,
+          "apoyos": 55
+        },
+        "SPyCI": {
+          "benef": 220,
+          "apoyos": 220
+        }
+      }
     },
     {
       "clave": "08012",
@@ -1172,7 +1312,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.9,
       "idx_vulnerabilidad": 42.2,
       "idx_dependencia": 65.8,
-      "idx_urgencia": 59.6
+      "idx_urgencia": 59.6,
+      "inst": {
+        "DIF": {
+          "benef": 122,
+          "apoyos": 122
+        },
+        "ICHIJUV": {
+          "benef": 1,
+          "apoyos": 1
+        },
+        "SALUD": {
+          "benef": 4155,
+          "apoyos": 4155
+        },
+        "SDHyBC": {
+          "benef": 41,
+          "apoyos": 41
+        },
+        "SPyCI": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08037",
@@ -1217,7 +1379,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 21.7,
       "idx_vulnerabilidad": 32.4,
       "idx_dependencia": 67.4,
-      "idx_urgencia": 57.5
+      "idx_urgencia": 57.5,
+      "inst": {
+        "DIF": {
+          "benef": 189,
+          "apoyos": 189
+        },
+        "SALUD": {
+          "benef": 4072,
+          "apoyos": 4072
+        },
+        "SDHyBC": {
+          "benef": 73,
+          "apoyos": 73
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08030",
@@ -1262,7 +1442,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 20.0,
       "idx_vulnerabilidad": 43.5,
       "idx_dependencia": 70.0,
-      "idx_urgencia": 63.8
+      "idx_urgencia": 63.8,
+      "inst": {
+        "DIF": {
+          "benef": 1565,
+          "apoyos": 1565
+        },
+        "SALUD": {
+          "benef": 2057,
+          "apoyos": 2057
+        },
+        "SDHyBC": {
+          "benef": 160,
+          "apoyos": 160
+        },
+        "SPyCI": {
+          "benef": 192,
+          "apoyos": 192
+        }
+      }
     },
     {
       "clave": "08032",
@@ -1307,7 +1505,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.1,
       "idx_vulnerabilidad": 22.9,
       "idx_dependencia": 71.2,
-      "idx_urgencia": 44.2
+      "idx_urgencia": 44.2,
+      "inst": {
+        "DIF": {
+          "benef": 586,
+          "apoyos": 586
+        },
+        "SALUD": {
+          "benef": 3086,
+          "apoyos": 3086
+        },
+        "SDHyBC": {
+          "benef": 61,
+          "apoyos": 61
+        },
+        "SPyCI": {
+          "benef": 18,
+          "apoyos": 18
+        }
+      }
     },
     {
       "clave": "08009",
@@ -1352,7 +1568,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 11.8,
       "idx_vulnerabilidad": 58.3,
       "idx_dependencia": 75.0,
-      "idx_urgencia": 72.0
+      "idx_urgencia": 72.0,
+      "inst": {
+        "DIF": {
+          "benef": 463,
+          "apoyos": 463
+        },
+        "SALUD": {
+          "benef": 2228,
+          "apoyos": 2228
+        },
+        "SDHyBC": {
+          "benef": 143,
+          "apoyos": 143
+        },
+        "SPyCI": {
+          "benef": 160,
+          "apoyos": 160
+        }
+      }
     },
     {
       "clave": "08002",
@@ -1397,7 +1631,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 9.5,
       "idx_vulnerabilidad": 34.5,
       "idx_dependencia": 80.0,
-      "idx_urgencia": 58.2
+      "idx_urgencia": 58.2,
+      "inst": {
+        "DIF": {
+          "benef": 180,
+          "apoyos": 180
+        },
+        "ICHIJUV": {
+          "benef": 2,
+          "apoyos": 2
+        },
+        "SALUD": {
+          "benef": 2626,
+          "apoyos": 2626
+        },
+        "SDHyBC": {
+          "benef": 81,
+          "apoyos": 81
+        },
+        "SPyCI": {
+          "benef": 5,
+          "apoyos": 5
+        }
+      }
     },
     {
       "clave": "08053",
@@ -1442,7 +1698,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.3,
       "idx_vulnerabilidad": 41.5,
       "idx_dependencia": 54.6,
-      "idx_urgencia": 56.6
+      "idx_urgencia": 56.6,
+      "inst": {
+        "DIF": {
+          "benef": 77,
+          "apoyos": 77
+        },
+        "SALUD": {
+          "benef": 2679,
+          "apoyos": 2679
+        },
+        "SDHyBC": {
+          "benef": 44,
+          "apoyos": 44
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08051",
@@ -1487,7 +1761,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 33.3,
       "idx_vulnerabilidad": 59.7,
       "idx_dependencia": 61.6,
-      "idx_urgencia": 81.2
+      "idx_urgencia": 81.2,
+      "inst": {
+        "DIF": {
+          "benef": 298,
+          "apoyos": 298
+        },
+        "SALUD": {
+          "benef": 2194,
+          "apoyos": 2194
+        },
+        "SDHyBC": {
+          "benef": 17,
+          "apoyos": 17
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08011",
@@ -1532,7 +1824,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 16.6,
       "idx_vulnerabilidad": 25.6,
       "idx_dependencia": 69.4,
-      "idx_urgencia": 48.2
+      "idx_urgencia": 48.2,
+      "inst": {
+        "DIF": {
+          "benef": 621,
+          "apoyos": 621
+        },
+        "SALUD": {
+          "benef": 1545,
+          "apoyos": 1545
+        },
+        "SDHyBC": {
+          "benef": 11,
+          "apoyos": 11
+        }
+      }
     },
     {
       "clave": "08046",
@@ -1577,7 +1883,29 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 11.7,
       "idx_vulnerabilidad": 73.8,
       "idx_dependencia": 69.1,
-      "idx_urgencia": 94.8
+      "idx_urgencia": 94.8,
+      "inst": {
+        "DIF": {
+          "benef": 50,
+          "apoyos": 50
+        },
+        "ICHIJUV": {
+          "benef": 2,
+          "apoyos": 2
+        },
+        "SALUD": {
+          "benef": 1963,
+          "apoyos": 1963
+        },
+        "SDHyBC": {
+          "benef": 40,
+          "apoyos": 40
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08007",
@@ -1622,7 +1950,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.2,
       "idx_vulnerabilidad": 40.0,
       "idx_dependencia": 73.6,
-      "idx_urgencia": 61.0
+      "idx_urgencia": 61.0,
+      "inst": {
+        "DIF": {
+          "benef": 818,
+          "apoyos": 818
+        },
+        "SALUD": {
+          "benef": 1196,
+          "apoyos": 1196
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 7
+        },
+        "SPyCI": {
+          "benef": 41,
+          "apoyos": 41
+        }
+      }
     },
     {
       "clave": "08041",
@@ -1667,7 +2013,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 3.4,
       "idx_vulnerabilidad": 71.5,
       "idx_dependencia": 63.0,
-      "idx_urgencia": 91.5
+      "idx_urgencia": 91.5,
+      "inst": {
+        "DIF": {
+          "benef": 227,
+          "apoyos": 227
+        },
+        "SALUD": {
+          "benef": 1650,
+          "apoyos": 1650
+        },
+        "SDHyBC": {
+          "benef": 58,
+          "apoyos": 58
+        }
+      }
     },
     {
       "clave": "08063",
@@ -1712,7 +2072,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 9.5,
       "idx_vulnerabilidad": 47.0,
       "idx_dependencia": 65.9,
-      "idx_urgencia": 64.0
+      "idx_urgencia": 64.0,
+      "inst": {
+        "DIF": {
+          "benef": 304,
+          "apoyos": 304
+        },
+        "SALUD": {
+          "benef": 1483,
+          "apoyos": 1483
+        },
+        "SDHyBC": {
+          "benef": 15,
+          "apoyos": 15
+        }
+      }
     },
     {
       "clave": "08066",
@@ -1757,7 +2131,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 4.3,
       "idx_vulnerabilidad": 58.9,
       "idx_dependencia": 68.3,
-      "idx_urgencia": 74.8
+      "idx_urgencia": 74.8,
+      "inst": {
+        "DIF": {
+          "benef": 308,
+          "apoyos": 308
+        },
+        "SALUD": {
+          "benef": 1353,
+          "apoyos": 1353
+        },
+        "SDHyBC": {
+          "benef": 65,
+          "apoyos": 65
+        },
+        "SPyCI": {
+          "benef": 77,
+          "apoyos": 77
+        }
+      }
     },
     {
       "clave": "08005",
@@ -1802,7 +2194,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 36.4,
       "idx_vulnerabilidad": 47.1,
       "idx_dependencia": 58.7,
-      "idx_urgencia": 62.9
+      "idx_urgencia": 62.9,
+      "inst": {
+        "DIF": {
+          "benef": 89,
+          "apoyos": 89
+        },
+        "SALUD": {
+          "benef": 1647,
+          "apoyos": 1647
+        },
+        "SDHyBC": {
+          "benef": 8,
+          "apoyos": 8
+        }
+      }
     },
     {
       "clave": "08049",
@@ -1847,7 +2253,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 7.3,
       "idx_vulnerabilidad": 44.3,
       "idx_dependencia": 91.1,
-      "idx_urgencia": 61.2
+      "idx_urgencia": 61.2,
+      "inst": {
+        "DIF": {
+          "benef": 65,
+          "apoyos": 65
+        },
+        "SALUD": {
+          "benef": 1526,
+          "apoyos": 1526
+        },
+        "SDHyBC": {
+          "benef": 126,
+          "apoyos": 126
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08008",
@@ -1892,7 +2316,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 13.0,
       "idx_vulnerabilidad": 72.6,
       "idx_dependencia": 76.5,
-      "idx_urgencia": 72.8
+      "idx_urgencia": 72.8,
+      "inst": {
+        "DIF": {
+          "benef": 379,
+          "apoyos": 379
+        },
+        "SALUD": {
+          "benef": 933,
+          "apoyos": 933
+        },
+        "SDHyBC": {
+          "benef": 83,
+          "apoyos": 83
+        },
+        "SPyCI": {
+          "benef": 33,
+          "apoyos": 33
+        }
+      }
     },
     {
       "clave": "08001",
@@ -1937,7 +2379,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 14.8,
       "idx_vulnerabilidad": 33.0,
       "idx_dependencia": 68.7,
-      "idx_urgencia": 61.1
+      "idx_urgencia": 61.1,
+      "inst": {
+        "DIF": {
+          "benef": 97,
+          "apoyos": 97
+        },
+        "SALUD": {
+          "benef": 1198,
+          "apoyos": 1198
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08031",
@@ -1982,7 +2438,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 14.4,
       "idx_vulnerabilidad": 42.9,
       "idx_dependencia": 72.9,
-      "idx_urgencia": 57.9
+      "idx_urgencia": 57.9,
+      "inst": {
+        "DIF": {
+          "benef": 432,
+          "apoyos": 432
+        },
+        "SALUD": {
+          "benef": 865,
+          "apoyos": 865
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        },
+        "SPyCI": {
+          "benef": 21,
+          "apoyos": 21
+        }
+      }
     },
     {
       "clave": "08014",
@@ -2027,7 +2501,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.0,
       "idx_vulnerabilidad": 38.1,
       "idx_dependencia": 88.0,
-      "idx_urgencia": 60.3
+      "idx_urgencia": 60.3,
+      "inst": {
+        "DIF": {
+          "benef": 189,
+          "apoyos": 189
+        },
+        "SALUD": {
+          "benef": 946,
+          "apoyos": 946
+        },
+        "SDHyBC": {
+          "benef": 82,
+          "apoyos": 82
+        }
+      }
     },
     {
       "clave": "08068",
@@ -2072,7 +2560,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 0,
       "idx_vulnerabilidad": 17.5,
       "idx_dependencia": 94.2,
-      "idx_urgencia": 42.6
+      "idx_urgencia": 42.6,
+      "inst": {
+        "DIF": {
+          "benef": 84,
+          "apoyos": 84
+        },
+        "SALUD": {
+          "benef": 1078,
+          "apoyos": 1078
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08013",
@@ -2117,7 +2619,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 21.8,
       "idx_vulnerabilidad": 36.2,
       "idx_dependencia": 87.2,
-      "idx_urgencia": 58.6
+      "idx_urgencia": 58.6,
+      "inst": {
+        "DIF": {
+          "benef": 467,
+          "apoyos": 467
+        },
+        "SALUD": {
+          "benef": 686,
+          "apoyos": 686
+        },
+        "SDHyBC": {
+          "benef": 5,
+          "apoyos": 5
+        },
+        "SPyCI": {
+          "benef": 24,
+          "apoyos": 24
+        }
+      }
     },
     {
       "clave": "08026",
@@ -2162,7 +2682,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 4.6,
       "idx_vulnerabilidad": 33.3,
       "idx_dependencia": 71.5,
-      "idx_urgencia": 53.7
+      "idx_urgencia": 53.7,
+      "inst": {
+        "DIF": {
+          "benef": 216,
+          "apoyos": 216
+        },
+        "SALUD": {
+          "benef": 916,
+          "apoyos": 916
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 7
+        }
+      }
     },
     {
       "clave": "08021",
@@ -2207,7 +2741,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 13.6,
       "idx_vulnerabilidad": 23.8,
       "idx_dependencia": 57.5,
-      "idx_urgencia": 45.4
+      "idx_urgencia": 45.4,
+      "inst": {
+        "DIF": {
+          "benef": 483,
+          "apoyos": 483
+        },
+        "SALUD": {
+          "benef": 472,
+          "apoyos": 472
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        },
+        "SPyCI": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08061",
@@ -2252,7 +2804,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 1.2,
       "idx_vulnerabilidad": 47.5,
       "idx_dependencia": 70.3,
-      "idx_urgencia": 63.2
+      "idx_urgencia": 63.2,
+      "inst": {
+        "DIF": {
+          "benef": 212,
+          "apoyos": 212
+        },
+        "SALUD": {
+          "benef": 721,
+          "apoyos": 721
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 3
+        },
+        "SPyCI": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08036",
@@ -2297,7 +2867,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.6,
       "idx_vulnerabilidad": 34.1,
       "idx_dependencia": 72.8,
-      "idx_urgencia": 62.6
+      "idx_urgencia": 62.6,
+      "inst": {
+        "DIF": {
+          "benef": 156,
+          "apoyos": 156
+        },
+        "SALUD": {
+          "benef": 696,
+          "apoyos": 696
+        },
+        "SDHyBC": {
+          "benef": 8,
+          "apoyos": 8
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08045",
@@ -2342,7 +2930,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.0,
       "idx_vulnerabilidad": 37.1,
       "idx_dependencia": 92.3,
-      "idx_urgencia": 53.3
+      "idx_urgencia": 53.3,
+      "inst": {
+        "DIF": {
+          "benef": 262,
+          "apoyos": 262
+        },
+        "SALUD": {
+          "benef": 529,
+          "apoyos": 529
+        },
+        "SDHyBC": {
+          "benef": 99,
+          "apoyos": 99
+        }
+      }
     },
     {
       "clave": "08056",
@@ -2387,7 +2989,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.7,
       "idx_vulnerabilidad": 35.4,
       "idx_dependencia": 70.8,
-      "idx_urgencia": 64.6
+      "idx_urgencia": 64.6,
+      "inst": {
+        "DIF": {
+          "benef": 33,
+          "apoyos": 33
+        },
+        "SALUD": {
+          "benef": 760,
+          "apoyos": 760
+        },
+        "SDHyBC": {
+          "benef": 9,
+          "apoyos": 9
+        }
+      }
     },
     {
       "clave": "08025",
@@ -2432,7 +3048,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.6,
       "idx_vulnerabilidad": 42.1,
       "idx_dependencia": 79.9,
-      "idx_urgencia": 50.6
+      "idx_urgencia": 50.6,
+      "inst": {
+        "DIF": {
+          "benef": 217,
+          "apoyos": 217
+        },
+        "SALUD": {
+          "benef": 615,
+          "apoyos": 615
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08067",
@@ -2477,7 +3107,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 14.6,
       "idx_vulnerabilidad": 35.7,
       "idx_dependencia": 73.7,
-      "idx_urgencia": 60.8
+      "idx_urgencia": 60.8,
+      "inst": {
+        "DIF": {
+          "benef": 318,
+          "apoyos": 318
+        },
+        "SALUD": {
+          "benef": 465,
+          "apoyos": 465
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        },
+        "SPyCI": {
+          "benef": 17,
+          "apoyos": 17
+        }
+      }
     },
     {
       "clave": "08035",
@@ -2522,7 +3170,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 38.8,
       "idx_vulnerabilidad": 44.1,
       "idx_dependencia": 97.1,
-      "idx_urgencia": 54.3
+      "idx_urgencia": 54.3,
+      "inst": {
+        "DIF": {
+          "benef": 110,
+          "apoyos": 110
+        },
+        "SALUD": {
+          "benef": 658,
+          "apoyos": 658
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08006",
@@ -2567,7 +3229,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 13.4,
       "idx_vulnerabilidad": 40.6,
       "idx_dependencia": 85.3,
-      "idx_urgencia": 56.1
+      "idx_urgencia": 56.1,
+      "inst": {
+        "DIF": {
+          "benef": 64,
+          "apoyos": 64
+        },
+        "SALUD": {
+          "benef": 671,
+          "apoyos": 671
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 7
+        }
+      }
     },
     {
       "clave": "08040",
@@ -2612,7 +3288,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 13.0,
       "idx_vulnerabilidad": 46.6,
       "idx_dependencia": 63.0,
-      "idx_urgencia": 50.4
+      "idx_urgencia": 50.4,
+      "inst": {
+        "DIF": {
+          "benef": 27,
+          "apoyos": 27
+        },
+        "SALUD": {
+          "benef": 698,
+          "apoyos": 698
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08052",
@@ -2657,7 +3347,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 16.8,
       "idx_vulnerabilidad": 35.4,
       "idx_dependencia": 77.1,
-      "idx_urgencia": 62.0
+      "idx_urgencia": 62.0,
+      "inst": {
+        "DIF": {
+          "benef": 127,
+          "apoyos": 127
+        },
+        "SALUD": {
+          "benef": 588,
+          "apoyos": 588
+        },
+        "SDHyBC": {
+          "benef": 9,
+          "apoyos": 9
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08054",
@@ -2702,7 +3410,17 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 7.2,
       "idx_vulnerabilidad": 37.2,
       "idx_dependencia": 93.1,
-      "idx_urgencia": 55.0
+      "idx_urgencia": 55.0,
+      "inst": {
+        "DIF": {
+          "benef": 102,
+          "apoyos": 102
+        },
+        "SALUD": {
+          "benef": 605,
+          "apoyos": 605
+        }
+      }
     },
     {
       "clave": "08048",
@@ -2747,7 +3465,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 18.8,
       "idx_vulnerabilidad": 41.3,
       "idx_dependencia": 85.9,
-      "idx_urgencia": 55.8
+      "idx_urgencia": 55.8,
+      "inst": {
+        "DIF": {
+          "benef": 173,
+          "apoyos": 173
+        },
+        "SALUD": {
+          "benef": 523,
+          "apoyos": 523
+        },
+        "SDHyBC": {
+          "benef": 6,
+          "apoyos": 6
+        }
+      }
     },
     {
       "clave": "08064",
@@ -2792,7 +3524,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 6.4,
       "idx_vulnerabilidad": 38.1,
       "idx_dependencia": 78.2,
-      "idx_urgencia": 58.7
+      "idx_urgencia": 58.7,
+      "inst": {
+        "DIF": {
+          "benef": 173,
+          "apoyos": 173
+        },
+        "SALUD": {
+          "benef": 487,
+          "apoyos": 487
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08017",
@@ -2837,7 +3587,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.9,
       "idx_vulnerabilidad": 31.9,
       "idx_dependencia": 81.2,
-      "idx_urgencia": 50.9
+      "idx_urgencia": 50.9,
+      "inst": {
+        "DIF": {
+          "benef": 47,
+          "apoyos": 47
+        },
+        "SALUD": {
+          "benef": 581,
+          "apoyos": 581
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08039",
@@ -2882,7 +3646,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 4.4,
       "idx_vulnerabilidad": 20.5,
       "idx_dependencia": 71.4,
-      "idx_urgencia": 44.4
+      "idx_urgencia": 44.4,
+      "inst": {
+        "DIF": {
+          "benef": 102,
+          "apoyos": 102
+        },
+        "SALUD": {
+          "benef": 501,
+          "apoyos": 501
+        },
+        "SDHyBC": {
+          "benef": 5,
+          "apoyos": 5
+        }
+      }
     },
     {
       "clave": "08062",
@@ -2927,7 +3705,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.6,
       "idx_vulnerabilidad": 33.5,
       "idx_dependencia": 125.4,
-      "idx_urgencia": 56.6
+      "idx_urgencia": 56.6,
+      "inst": {
+        "DIF": {
+          "benef": 100,
+          "apoyos": 100
+        },
+        "SALUD": {
+          "benef": 420,
+          "apoyos": 420
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08015",
@@ -2972,7 +3764,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 16.7,
       "idx_vulnerabilidad": 41.5,
       "idx_dependencia": 83.6,
-      "idx_urgencia": 46.4
+      "idx_urgencia": 46.4,
+      "inst": {
+        "DIF": {
+          "benef": 116,
+          "apoyos": 116
+        },
+        "SALUD": {
+          "benef": 403,
+          "apoyos": 403
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08004",
@@ -3017,7 +3823,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.4,
       "idx_vulnerabilidad": 34.4,
       "idx_dependencia": 54.2,
-      "idx_urgencia": 68.6
+      "idx_urgencia": 68.6,
+      "inst": {
+        "DIF": {
+          "benef": 104,
+          "apoyos": 104
+        },
+        "SALUD": {
+          "benef": 335,
+          "apoyos": 335
+        },
+        "SDHyBC": {
+          "benef": 46,
+          "apoyos": 46
+        }
+      }
     },
     {
       "clave": "08059",
@@ -3062,7 +3882,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 3.3,
       "idx_vulnerabilidad": 33.0,
       "idx_dependencia": 71.2,
-      "idx_urgencia": 54.0
+      "idx_urgencia": 54.0,
+      "inst": {
+        "DIF": {
+          "benef": 45,
+          "apoyos": 45
+        },
+        "SALUD": {
+          "benef": 401,
+          "apoyos": 401
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08060",
@@ -3107,7 +3941,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 7.4,
       "idx_vulnerabilidad": 34.2,
       "idx_dependencia": 81.6,
-      "idx_urgencia": 60.3
+      "idx_urgencia": 60.3,
+      "inst": {
+        "DIF": {
+          "benef": 43,
+          "apoyos": 43
+        },
+        "SALUD": {
+          "benef": 404,
+          "apoyos": 404
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 2
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08058",
@@ -3152,7 +4004,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 5.0,
       "idx_vulnerabilidad": 33.0,
       "idx_dependencia": 92.6,
-      "idx_urgencia": 54.0
+      "idx_urgencia": 54.0,
+      "inst": {
+        "DIF": {
+          "benef": 160,
+          "apoyos": 160
+        },
+        "SALUD": {
+          "benef": 303,
+          "apoyos": 303
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08065",
@@ -3197,7 +4063,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 9.8,
       "idx_vulnerabilidad": 62.7,
       "idx_dependencia": 98.4,
-      "idx_urgencia": 54.9
+      "idx_urgencia": 54.9,
+      "inst": {
+        "DIF": {
+          "benef": 115,
+          "apoyos": 115
+        },
+        "SALUD": {
+          "benef": 342,
+          "apoyos": 342
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 2
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08029",
@@ -3242,7 +4126,17 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 5.6,
       "idx_vulnerabilidad": 68.7,
       "idx_dependencia": 71.3,
-      "idx_urgencia": 72.5
+      "idx_urgencia": 72.5,
+      "inst": {
+        "DIF": {
+          "benef": 55,
+          "apoyos": 55
+        },
+        "SALUD": {
+          "benef": 384,
+          "apoyos": 384
+        }
+      }
     },
     {
       "clave": "08044",
@@ -3287,7 +4181,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 8.7,
       "idx_vulnerabilidad": 47.7,
       "idx_dependencia": 89.9,
-      "idx_urgencia": 54.4
+      "idx_urgencia": 54.4,
+      "inst": {
+        "DIF": {
+          "benef": 89,
+          "apoyos": 89
+        },
+        "SALUD": {
+          "benef": 348,
+          "apoyos": 348
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
     },
     {
       "clave": "08024",
@@ -3332,7 +4240,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 11.9,
       "idx_vulnerabilidad": 31.9,
       "idx_dependencia": 67.4,
-      "idx_urgencia": 63.9
+      "idx_urgencia": 63.9,
+      "inst": {
+        "DIF": {
+          "benef": 59,
+          "apoyos": 59
+        },
+        "SALUD": {
+          "benef": 366,
+          "apoyos": 366
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08050",
@@ -3377,7 +4299,33 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 19.8,
       "idx_vulnerabilidad": 24.0,
       "idx_dependencia": 82.7,
-      "idx_urgencia": 42.8
+      "idx_urgencia": 42.8,
+      "inst": {
+        "DIF": {
+          "benef": 78,
+          "apoyos": 78
+        },
+        "ICHDII": {
+          "benef": 1,
+          "apoyos": 1
+        },
+        "ICHIJUV": {
+          "benef": 1,
+          "apoyos": 1
+        },
+        "SALUD": {
+          "benef": 287,
+          "apoyos": 287
+        },
+        "SDHyBC": {
+          "benef": 24,
+          "apoyos": 24
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08042",
@@ -3422,7 +4370,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 2.4,
       "idx_vulnerabilidad": 43.4,
       "idx_dependencia": 91.2,
-      "idx_urgencia": 42.0
+      "idx_urgencia": 42.0,
+      "inst": {
+        "DIF": {
+          "benef": 112,
+          "apoyos": 112
+        },
+        "SALUD": {
+          "benef": 257,
+          "apoyos": 257
+        },
+        "SDHyBC": {
+          "benef": 42,
+          "apoyos": 42
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08047",
@@ -3467,7 +4433,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 16.1,
       "idx_vulnerabilidad": 59.6,
       "idx_dependencia": 60.0,
-      "idx_urgencia": 82.7
+      "idx_urgencia": 82.7,
+      "inst": {
+        "DIF": {
+          "benef": 231,
+          "apoyos": 231
+        },
+        "SALUD": {
+          "benef": 104,
+          "apoyos": 104
+        },
+        "SDHyBC": {
+          "benef": 5,
+          "apoyos": 5
+        },
+        "SPyCI": {
+          "benef": 8,
+          "apoyos": 8
+        }
+      }
     },
     {
       "clave": "08027",
@@ -3512,7 +4496,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.4,
       "idx_vulnerabilidad": 44.0,
       "idx_dependencia": 65.7,
-      "idx_urgencia": 56.7
+      "idx_urgencia": 56.7,
+      "inst": {
+        "DIF": {
+          "benef": 51,
+          "apoyos": 51
+        },
+        "SALUD": {
+          "benef": 271,
+          "apoyos": 271
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08019",
@@ -3557,7 +4555,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.1,
       "idx_vulnerabilidad": 22.6,
       "idx_dependencia": 69.1,
-      "idx_urgencia": 50.3
+      "idx_urgencia": 50.3,
+      "inst": {
+        "DIF": {
+          "benef": 64,
+          "apoyos": 64
+        },
+        "SALUD": {
+          "benef": 221,
+          "apoyos": 221
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 7
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08016",
@@ -3602,7 +4618,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 10.5,
       "idx_vulnerabilidad": 40.8,
       "idx_dependencia": 98.7,
-      "idx_urgencia": 46.4
+      "idx_urgencia": 46.4,
+      "inst": {
+        "DIF": {
+          "benef": 42,
+          "apoyos": 42
+        },
+        "SALUD": {
+          "benef": 240,
+          "apoyos": 240
+        },
+        "SDHyBC": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08057",
@@ -3647,7 +4677,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 4.3,
       "idx_vulnerabilidad": 34.8,
       "idx_dependencia": 88.2,
-      "idx_urgencia": 63.0
+      "idx_urgencia": 63.0,
+      "inst": {
+        "DIF": {
+          "benef": 151,
+          "apoyos": 151
+        },
+        "ICHIJUV": {
+          "benef": 2,
+          "apoyos": 2
+        },
+        "SALUD": {
+          "benef": 125,
+          "apoyos": 125
+        },
+        "SDHyBC": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     },
     {
       "clave": "08034",
@@ -3692,7 +4740,17 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 11.6,
       "idx_vulnerabilidad": 38.5,
       "idx_dependencia": 84.6,
-      "idx_urgencia": 37.8
+      "idx_urgencia": 37.8,
+      "inst": {
+        "DIF": {
+          "benef": 53,
+          "apoyos": 53
+        },
+        "SALUD": {
+          "benef": 211,
+          "apoyos": 211
+        }
+      }
     },
     {
       "clave": "08055",
@@ -3737,7 +4795,17 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 12.4,
       "idx_vulnerabilidad": 32.7,
       "idx_dependencia": 75.4,
-      "idx_urgencia": 67.0
+      "idx_urgencia": 67.0,
+      "inst": {
+        "DIF": {
+          "benef": 42,
+          "apoyos": 42
+        },
+        "SALUD": {
+          "benef": 190,
+          "apoyos": 190
+        }
+      }
     },
     {
       "clave": "08043",
@@ -3782,7 +4850,17 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 15.4,
       "idx_vulnerabilidad": 41.3,
       "idx_dependencia": 67.0,
-      "idx_urgencia": 45.9
+      "idx_urgencia": 45.9,
+      "inst": {
+        "SALUD": {
+          "benef": 221,
+          "apoyos": 221
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
     },
     {
       "clave": "08023",
@@ -3827,7 +4905,21 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 35.9,
       "idx_vulnerabilidad": 53.4,
       "idx_dependencia": 163.9,
-      "idx_urgencia": 59.9
+      "idx_urgencia": 59.9,
+      "inst": {
+        "DIF": {
+          "benef": 11,
+          "apoyos": 11
+        },
+        "SALUD": {
+          "benef": 203,
+          "apoyos": 203
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 4
+        }
+      }
     },
     {
       "clave": "08003",
@@ -3872,7 +4964,25 @@ window.DASHBOARD_DATA = {
       "avg_sin_salud": 20.7,
       "idx_vulnerabilidad": 34.8,
       "idx_dependencia": 62.3,
-      "idx_urgencia": 52.8
+      "idx_urgencia": 52.8,
+      "inst": {
+        "DIF": {
+          "benef": 55,
+          "apoyos": 55
+        },
+        "SALUD": {
+          "benef": 147,
+          "apoyos": 147
+        },
+        "SDHyBC": {
+          "benef": 5,
+          "apoyos": 5
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
     }
   ],
   "municipios_especiales": [

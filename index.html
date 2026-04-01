@@ -364,38 +364,8 @@
         <span style="font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.32)">· 67 municipios · Chihuahua · CONEVAL 2020 + SDHyBC 2026 + INEGI</span>
         <div id="map-layer-wrap" style="margin-left:auto;display:flex;align-items:center;gap:8px">
           <span style="font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em">Capa:</span>
-          <select id="map-layer-sel" style="background:#1c2a38;color:#ccd6e0;border:1px solid rgba(255,255,255,.18);border-radius:3px;padding:5px 10px;font-family:var(--sans);font-size:14px;cursor:pointer;outline:none;max-width:340px">
-            <optgroup label="── Pobreza y Rezago Social (CONEVAL 2020) ──" style="color:#888">
-              <option value="grs">Grado de Rezago Social</option>
-              <option value="idx_vul">Índice de Vulnerabilidad Social</option>
-              <option value="idx_urgencia">Índice de Urgencia de Atención</option>
-              <option value="sin_internet">% Viviendas sin Internet</option>
-              <option value="hacinamiento">% Hacinamiento</option>
-              <option value="analfabeta">% Analfabetismo</option>
-              <option value="piso_tierra">% Piso de Tierra</option>
-              <option value="sin_salud">% Sin Derechohabiencia a Salud</option>
-            </optgroup>
-            <optgroup label="── Padrón SDHyBC 2026 ──" style="color:#888">
-              <option value="benef">Total Beneficiarios</option>
-              <option value="cob_pob">Cobertura Poblacional %</option>
-              <option value="brecha">Brecha de Cobertura %</option>
-              <option value="apoyos">Total Apoyos Otorgados</option>
-              <option value="apoyos_pc">Apoyos por 1,000 Habitantes</option>
-              <option value="apoyos_pb">Apoyos por Beneficiario</option>
-              <option value="programas">Nº Programas Activos</option>
-              <option value="pct_loc">Tasa de Localización %</option>
-              <option value="poblacion">Población Municipal</option>
-            </optgroup>
-            <optgroup label="── Perfil Demográfico del Padrón ──" style="color:#888">
-              <option value="pct_fem">Feminización del Padrón %</option>
-              <option value="pct_65mas">% Adultos Mayores (65+)</option>
-              <option value="pct_ninos">% Niñez (0-11 años)</option>
-              <option value="pct_jovenes">% Jóvenes (12-29 años)</option>
-              <option value="abs_65mas">Beneficiarios 65+ (absoluto)</option>
-              <option value="abs_ninos">Beneficiarios 0-11 (absoluto)</option>
-              <option value="idx_dep">Índice de Dependencia Etaria</option>
-            </optgroup>
-          </select>
+          <!-- Opciones generadas dinámicamente por js_map2.js desde LY y GRUPOS -->
+          <select id="map-layer-sel" style="background:#1c2a38;color:#ccd6e0;border:1px solid rgba(255,255,255,.18);border-radius:3px;padding:5px 10px;font-family:var(--sans);font-size:14px;cursor:pointer;outline:none;max-width:340px"></select>
         </div><!-- /map-layer-wrap -->
           <!-- Overlay button (always visible, positioned relative for dropdown) -->
           <div style="position:relative">
@@ -407,75 +377,13 @@
             <div style="font-size:10px;color:#8b949e;margin-bottom:12px;line-height:1.5">Combina 2 capas — cada uno de los 9 colores representa una combinación única de nivel en ambas variables.</div>
             <div style="margin-bottom:10px">
               <div style="font-size:10px;font-weight:700;color:#7ab8e0;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">① Eje vertical (↑)</div>
-              <select id="ovl-sel-0" style="background:#111827;color:#ccd6e0;border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:5px 8px;font-family:var(--sans);font-size:13px;cursor:pointer;outline:none;width:100%">
-                <option value="">— Sin capa —</option>
-                  <optgroup label="Pobreza y Rezago" style="color:#666">
-                    <option value="grs"  selected>Grado de Rezago Social</option>
-                    <option value="idx_vul">Índice de Vulnerabilidad</option>
-                    <option value="idx_urgencia">Índice de Urgencia</option>
-                    <option value="sin_internet">% Sin Internet</option>
-                    <option value="hacinamiento">% Hacinamiento</option>
-                    <option value="analfabeta">% Analfabetismo</option>
-                    <option value="piso_tierra">% Piso de Tierra</option>
-                    <option value="sin_salud">% Sin Salud</option>
-                  </optgroup>
-                  <optgroup label="Padrón SDHyBC 2026" style="color:#666">
-                    <option value="benef">Total Beneficiarios</option>
-                    <option value="cob_pob">Cobertura Poblacional %</option>
-                    <option value="brecha">Brecha de Cobertura %</option>
-                    <option value="apoyos">Total Apoyos Otorgados</option>
-                    <option value="apoyos_pc">Apoyos por 1,000 Hab.</option>
-                    <option value="apoyos_pb">Apoyos por Beneficiario</option>
-                    <option value="programas">Nº Programas Activos</option>
-                    <option value="pct_loc">Tasa de Localización %</option>
-                    <option value="poblacion">Población Municipal</option>
-                  </optgroup>
-                  <optgroup label="Perfil Demográfico" style="color:#666">
-                    <option value="pct_fem">Feminización %</option>
-                    <option value="pct_65mas">% Adultos Mayores 65+</option>
-                    <option value="pct_ninos">% Niñez 0-11</option>
-                    <option value="pct_jovenes">% Jóvenes 12-29</option>
-                    <option value="abs_65mas">Benef. 65+ (absoluto)</option>
-                    <option value="abs_ninos">Benef. 0-11 (absoluto)</option>
-                    <option value="idx_dep">Índice Dependencia Etaria</option>
-                  </optgroup>
-              </select>
+              <!-- Opciones generadas dinámicamente por js_map2.js -->
+              <select id="ovl-sel-0" style="background:#111827;color:#ccd6e0;border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:5px 8px;font-family:var(--sans);font-size:13px;cursor:pointer;outline:none;width:100%"></select>
             </div>
             <div style="margin-bottom:14px">
               <div style="font-size:10px;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">② Eje horizontal (→)</div>
-              <select id="ovl-sel-1" style="background:#111827;color:#ccd6e0;border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:5px 8px;font-family:var(--sans);font-size:13px;cursor:pointer;outline:none;width:100%">
-                <option value="">— Sin capa —</option>
-                  <optgroup label="Pobreza y Rezago" style="color:#666">
-                    <option value="grs">Grado de Rezago Social</option>
-                    <option value="idx_vul">Índice de Vulnerabilidad</option>
-                    <option value="idx_urgencia">Índice de Urgencia</option>
-                    <option value="sin_internet">% Sin Internet</option>
-                    <option value="hacinamiento">% Hacinamiento</option>
-                    <option value="analfabeta">% Analfabetismo</option>
-                    <option value="piso_tierra">% Piso de Tierra</option>
-                    <option value="sin_salud">% Sin Salud</option>
-                  </optgroup>
-                  <optgroup label="Padrón SDHyBC 2026" style="color:#666">
-                    <option value="benef"  selected>Total Beneficiarios</option>
-                    <option value="cob_pob">Cobertura Poblacional %</option>
-                    <option value="brecha">Brecha de Cobertura %</option>
-                    <option value="apoyos">Total Apoyos Otorgados</option>
-                    <option value="apoyos_pc">Apoyos por 1,000 Hab.</option>
-                    <option value="apoyos_pb">Apoyos por Beneficiario</option>
-                    <option value="programas">Nº Programas Activos</option>
-                    <option value="pct_loc">Tasa de Localización %</option>
-                    <option value="poblacion">Población Municipal</option>
-                  </optgroup>
-                  <optgroup label="Perfil Demográfico" style="color:#666">
-                    <option value="pct_fem">Feminización %</option>
-                    <option value="pct_65mas">% Adultos Mayores 65+</option>
-                    <option value="pct_ninos">% Niñez 0-11</option>
-                    <option value="pct_jovenes">% Jóvenes 12-29</option>
-                    <option value="abs_65mas">Benef. 65+ (absoluto)</option>
-                    <option value="abs_ninos">Benef. 0-11 (absoluto)</option>
-                    <option value="idx_dep">Índice Dependencia Etaria</option>
-                  </optgroup>
-              </select>
+              <!-- Opciones generadas dinámicamente por js_map2.js -->
+              <select id="ovl-sel-1" style="background:#111827;color:#ccd6e0;border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:5px 8px;font-family:var(--sans);font-size:13px;cursor:pointer;outline:none;width:100%"></select>
             </div>
             <div style="display:flex;gap:8px">
               <button id="ovl-apply" style="flex:1;background:rgba(30,120,200,.4);color:#7ab8e0;border:1px solid rgba(100,180,255,.3);border-radius:4px;padding:7px 0;font-family:var(--sans);font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.06em">✓ Aplicar</button>

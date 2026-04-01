@@ -23,4 +23,8 @@ document.addEventListener('DOMContentLoaded', function(){
     if (icon) icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
     if (lbl)  lbl.textContent = 'Día';
   }
+  // Poblar selectores de capa del mapa sin necesitar Leaflet
+  if (typeof window.mapaSelectorsInit === 'function') {
+    setTimeout(window.mapaSelectorsInit, 100);
+  }
 });

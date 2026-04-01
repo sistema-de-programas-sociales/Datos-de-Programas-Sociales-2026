@@ -324,6 +324,22 @@ def build_dashboard_data(raw, excel_path=None):
         }
 
     # ── Municipios (para tab Municipios) ──────────────────────────────────────
+    # ── Inst por municipio (para capas G3 del mapa) ──────────────────────────
+    # inst_subtotales viene directo de parse_sheet2: {inst_nombre: {m, h, total}}
+    # Es la fuente más directa y confiable — ya está en cada objeto municipio
+    # Construimos un lookup normalizado para usarlo en el loop de mun_reales
+    inst_subtotales_por_mun = {}
+    for m in municipios:
+        nom_k = _norm_mun(m.get('municipio', ''))
+        subtotales = m.get('inst_subtotales', {})
+        if subtotales:
+            inst_subtotales_por_mun[nom_k] = {
+                ins: {'benef': int(sf(v.get('total', 0))),
+                      'apoyos': int(sf(v.get('total', 0)))}
+                for ins, v in subtotales.items()
+                if sf(v.get('total', 0)) > 0
+            }
+
     # Sólo municipios reales (no especiales), ordenados por volumen desc
     municipios_data = []
     mun_reales = sorted([m for m in municipios if not m.get('especial')],
@@ -392,6 +408,8 @@ def build_dashboard_data(raw, excel_path=None):
             'idx_vulnerabilidad': _st.get('idx_vulnerabilidad', 0),
             'idx_dependencia':    _st.get('idx_dependencia', 0),
             'idx_urgencia':       _st.get('idx_urgencia', 0),
+            # ── Desglose por institución (para capas G3 del mapa) ──
+            'inst':               inst_subtotales_por_mun.get(_norm_mun(nom), {}),
         })
 
     # Municipios especiales (Foráneo, No identificado)

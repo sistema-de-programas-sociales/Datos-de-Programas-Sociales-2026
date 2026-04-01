@@ -13,7 +13,7 @@ var _norm_mun = function(s){
   return s.toUpperCase().trim()
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 };
-var MD = (function(){
+var MD = window._MD_DEBUG = (function(){
   var out = {};
   (window.DASHBOARD_DATA && window.DASHBOARD_DATA.municipios || []).forEach(function(m){
     var st = _MD_STATIC[_norm_mun(m.nombre)] || {};
@@ -67,6 +67,8 @@ var MD = (function(){
       avg_sin_salud:     st.avg_sin_salud      || 0,
       idx_vulnerabilidad:st.idx_vulnerabilidad || 0,
       idx_urgencia:      st.idx_urgencia       || 0,
+      // ── Desglose por institución (dinámico, desde data_dashboard.js) ──
+      inst:              m.inst || {},
     };
   });
   return out;
@@ -128,24 +130,41 @@ var LY={
   poblacion:  {g:1,label:'Población Municipal',             pal:'teal',  get:function(d){return d.poblacion;},
                fmt:function(v){return v.toLocaleString('es-MX')+' hab.'},desc:'Población total estimada del municipio (INEGI / CONAPO)'},
 
-  // GRUPO 2: Perfil Demográfico del Padrón
-  pct_fem:    {g:2,label:'Feminización del Padrón %',       pal:'purple',get:function(d){return d.pct_fem;},
-               fmt:function(v){return v.toFixed(1)+'%'},   desc:'Proporción de beneficiarias mujeres. El padrón SDHyBC tiene un sesgo femenino estructural.'},
-  pct_65mas:  {g:2,label:'% Adultos Mayores (65+)',         pal:'teal',  get:function(d){return d.pct_65mas;},
-               fmt:function(v){return v.toFixed(1)+'%'},   desc:'% de beneficiarios con 65 años o más. Indica orientación de la oferta hacia adultos mayores.'},
-  pct_ninos:  {g:2,label:'% Niñez (0-11 años)',             pal:'blue',  get:function(d){return d.pct_ninos;},
-               fmt:function(v){return v.toFixed(1)+'%'},   desc:'% de beneficiarios menores de 12 años. Indicador de atención a primera infancia.'},
-  pct_jovenes:{g:2,label:'% Jóvenes (12-29 años)',          pal:'teal',  get:function(d){return d.pct_jovenes;},
-               fmt:function(v){return v.toFixed(1)+'%'},   desc:'% de beneficiarios de 12 a 29 años. Indicador de alcance en población juvenil.'},
-  abs_65mas:  {g:2,label:'Beneficiarios 65+ (absoluto)',    pal:'amber', get:function(d){return d.r_65mas;},
-               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Número absoluto de adultos mayores en el padrón 2026'},
-  abs_ninos:  {g:2,label:'Beneficiarios 0-11 (absoluto)',   pal:'blue',  get:function(d){return d.r_0_5+d.r_6_11;},
-               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Número absoluto de niñas y niños menores de 12 años en el padrón 2026'},
-  idx_dep:    {g:2,label:'Índice de Dependencia Etaria',   pal:'orange',get:function(d){return d.idx_dependencia;},
-               fmt:function(v){return v.toFixed(1)+'%'},   desc:'Razón entre dependientes (0-17 y 65+) sobre población en edad de trabajar (18-64) en el padrón'},
+  // GRUPO 2: Rangos etarios y género del Padrón (personas absolutas)
+  mujeres:    {g:2,label:'Mujeres',                          pal:'purple',get:function(d){return d.benef_m;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarias mujeres en el padrón 2026'},
+  hombres:    {g:2,label:'Hombres',                          pal:'teal',  get:function(d){return d.benef_h;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios hombres en el padrón 2026'},
+  ninos:      {g:2,label:'Niños (0-11 años)',                pal:'blue',  get:function(d){return d.r_0_5+d.r_6_11;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 0 a 11 años en el padrón 2026 (primera infancia y niñez)'},
+  adolesc:    {g:2,label:'Adolescentes (12-17 años)',        pal:'teal',  get:function(d){return d.r_12_17;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 12 a 17 años en el padrón 2026'},
+  jovenes:    {g:2,label:'Jóvenes (18-29 años)',             pal:'green', get:function(d){return d.r_18_29;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 18 a 29 años en el padrón 2026'},
+  adultos:    {g:2,label:'Adultos (30-64 años)',             pal:'amber', get:function(d){return d.r_30_49+d.r_50_64;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 30 a 64 años en el padrón 2026'},
+  mayores:    {g:2,label:'Personas Mayores (65+)',           pal:'orange',get:function(d){return d.r_65mas;},
+               fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 65 años o más en el padrón 2026'},
+
+  // GRUPO 3: Instituciones 2026 — hardcodeado para garantizar disponibilidad inmediata
+  inst_CULTURA_benef: {g:3,label:'CULTURA (Beneficiarios)',pal:'rose',  get:function(d){return(d.inst['CULTURA']||{}).benef||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de CULTURA en el municipio'},
+  inst_CULTURA_apoyos:{g:3,label:'CULTURA (Apoyos)',       pal:'rose',  get:function(d){return(d.inst['CULTURA']||{}).apoyos||0;}, fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de CULTURA en el municipio'},
+  inst_DIF_benef:     {g:3,label:'DIF (Beneficiarios)',    pal:'purple',get:function(d){return(d.inst['DIF']||{}).benef||0;},      fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de DIF en el municipio'},
+  inst_DIF_apoyos:    {g:3,label:'DIF (Apoyos)',           pal:'purple',get:function(d){return(d.inst['DIF']||{}).apoyos||0;},     fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de DIF en el municipio'},
+  inst_ICHDII_benef:  {g:3,label:'ICHDII (Beneficiarios)', pal:'orange',get:function(d){return(d.inst['ICHDII']||{}).benef||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de ICHDII en el municipio'},
+  inst_ICHDII_apoyos: {g:3,label:'ICHDII (Apoyos)',        pal:'orange',get:function(d){return(d.inst['ICHDII']||{}).apoyos||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de ICHDII en el municipio'},
+  inst_ICHIJUV_benef: {g:3,label:'ICHIJUV (Beneficiarios)',pal:'amber', get:function(d){return(d.inst['ICHIJUV']||{}).benef||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de ICHIJUV en el municipio'},
+  inst_ICHIJUV_apoyos:{g:3,label:'ICHIJUV (Apoyos)',       pal:'amber', get:function(d){return(d.inst['ICHIJUV']||{}).apoyos||0;}, fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de ICHIJUV en el municipio'},
+  inst_SALUD_benef:   {g:3,label:'SALUD (Beneficiarios)',  pal:'green', get:function(d){return(d.inst['SALUD']||{}).benef||0;},    fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SALUD en el municipio'},
+  inst_SALUD_apoyos:  {g:3,label:'SALUD (Apoyos)',         pal:'green', get:function(d){return(d.inst['SALUD']||{}).apoyos||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SALUD en el municipio'},
+  inst_SDHyBC_benef:  {g:3,label:'SDHyBC (Beneficiarios)', pal:'blue',  get:function(d){return(d.inst['SDHyBC']||{}).benef||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SDHyBC en el municipio'},
+  inst_SDHyBC_apoyos: {g:3,label:'SDHyBC (Apoyos)',        pal:'blue',  get:function(d){return(d.inst['SDHyBC']||{}).apoyos||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SDHyBC en el municipio'},
+  inst_SPyCI_benef:   {g:3,label:'SPyCI (Beneficiarios)',  pal:'teal',  get:function(d){return(d.inst['SPyCI']||{}).benef||0;},    fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SPyCI en el municipio'},
+  inst_SPyCI_apoyos:  {g:3,label:'SPyCI (Apoyos)',         pal:'teal',  get:function(d){return(d.inst['SPyCI']||{}).apoyos||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SPyCI en el municipio'},
 };
 
-var GRUPOS=['Pobreza y Rezago Social — CONEVAL 2020','Padrón SDHyBC 2026','Perfil Demográfico del Padrón'];
+var GRUPOS=['Pobreza y Rezago Social — CONEVAL 2020','Padrón SDHyBC 2026','Rangos Etarios del Padrón','Instituciones 2026'];
+
 
 // ── Utilidades ─────────────────────────────────────────────────────────────
 function _f(v){return v==null?'—':Number(v).toLocaleString('es-MX');} // alias de fmt() para uso interno del mapa
@@ -498,6 +517,45 @@ function _ttOvl(d){
 }
 
 // ── Inicialización ──────────────────────────────────────────────────────────
+// ── Inicialización de selectores (sin Leaflet — puede llamarse al cargar la página) ──
+window.mapaSelectorsInit=function(){
+  // Poblar capas de institución si aún no se hizo
+  // Construir/actualizar los tres <select> del mapa
+  var byGroup={};
+  Object.keys(LY).forEach(function(lk){
+    var g=LY[lk].g;
+    if(!byGroup[g]) byGroup[g]=[];
+    byGroup[g].push(lk);
+  });
+  function _fillSel(selEl,addEmpty){
+    selEl.innerHTML='';
+    if(addEmpty){
+      var empty=document.createElement('option');
+      empty.value=''; empty.textContent='— Sin capa —';
+      selEl.appendChild(empty);
+    }
+    Object.keys(byGroup).sort(function(a,b){return a-b;}).forEach(function(g){
+      var label=GRUPOS[parseInt(g)]||('Grupo '+g);
+      var og=document.createElement('optgroup');
+      og.label='── '+label+' ──';
+      og.style.color='#888';
+      byGroup[g].forEach(function(lk){
+        var opt=document.createElement('option');
+        opt.value=lk;
+        opt.textContent=LY[lk].label;
+        og.appendChild(opt);
+      });
+      selEl.appendChild(og);
+    });
+  }
+  var mainSel=document.getElementById('map-layer-sel');
+  if(mainSel){ _fillSel(mainSel,false); mainSel.value=_cl||'grs'; }
+  [0,1].forEach(function(i){
+    var s=document.getElementById('ovl-sel-'+i);
+    if(s){ _fillSel(s,true); s.value=_ovl.layers[i]||''; }
+  });
+};
+
 window.mapaLeafletInit=function(){
   if(_ready){if(_map) _map.invalidateSize(true); return;}
   var cont=document.getElementById('map-leaflet');
@@ -673,6 +731,12 @@ window.mapaLeafletInit=function(){
     if(joyActive){ e.preventDefault(); joyMove(e.touches[0].clientX, e.touches[0].clientY); }
   }, {passive:false});
   document.addEventListener('touchend', function(){ if(joyActive) joyReset(); });
+
+  // ── Construir capas de institución (requiere MD listo) ──────────────────
+
+  // ── Construir selectores de capa dinámicamente desde LY y GRUPOS ──────────
+  window.mapaSelectorsInit();
+
   _leg('grs');
 
   document.getElementById('map-layer-sel').addEventListener('change',function(){
@@ -847,6 +911,8 @@ function _legOverlay(){
 
   el.innerHTML=grid+axisNames+keys;
 }
+
+// ── Poblar G3 al cargar el script (data_dashboard.js ya existe) ────────────
 
 })();
 // ── Dark mode ──────────────────────────────────────────
