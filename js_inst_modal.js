@@ -1,4 +1,3 @@
-///HOLA//
 function instModalOpen(inst) {
   const progs = D.indicadores.filter(p => p.inst === inst);
   const meta  = INST_META[inst] || {};
@@ -246,7 +245,7 @@ function _instProgRender(p, inst, tab) {
       + '</div>'
       + '<span style="font-size:11px;color:#8b949e;font-weight:600">'+lista.length+' municipios</span>'
       + '</div>'
-      + '<div style="padding:0 12px 6px;position:relative">'
+      + '<div style="padding:0 12px 6px;position:relative;overflow:hidden">'
       + '<svg id="inst-mun-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+svgW+' '+svgH+'" style="width:100%;height:auto;display:block;background:#0a1520;border-radius:8px">'
       + paths
       + '</svg>'
@@ -356,8 +355,15 @@ function _instProgRender(p, inst, tab) {
         var nombre = parts[0], activo = parts[1] === 'si', benCount = parts[2];
         var rect = svg.parentElement.getBoundingClientRect();
         tip.style.display = 'block';
-        tip.style.left = (e.clientX - rect.left + 12) + 'px';
-        tip.style.top  = (e.clientY - rect.top  - 10) + 'px';
+        tip.style.left = '-9999px'; // render offscreen first to measure
+        tip.style.top  = '-9999px';
+        // Calculate position avoiding right overflow
+        var tipW = tip.offsetWidth || 160;
+        var x = e.clientX - rect.left + 12;
+        var y = e.clientY - rect.top  - 10;
+        if (x + tipW > rect.width - 4) x = e.clientX - rect.left - tipW - 8;
+        tip.style.left = x + 'px';
+        tip.style.top  = y + 'px';
         tip.innerHTML = activo
           ? '<div style="font-size:12px;font-weight:700;color:#e6edf3">' + nombre + '</div>'
           + '<div style="font-size:13px;font-weight:700;color:' + acc + ';margin-top:3px">' + (benCount ? Number(benCount).toLocaleString('es-MX') + ' beneficiarios' : 'Con presencia') + '</div>'

@@ -280,50 +280,183 @@ function renderVulnerables() {
   const badge = document.getElementById('vul-badge-count');
   if (badge) badge.textContent = grupos.length + ' grupos';
 
+  // ── Gauge de cobertura general ───────────────────────────────────────────
+  const cobGeneral = ateT / POB_VUL_CANON * 100;
+  const gaugeEl = document.getElementById('vul-gauge-svg');
+  const gaugeLabel = document.getElementById('vul-gauge-label');
+  if (gaugeEl) {
+    const cx = 60, cy = 58, r = 44;
+    const startDeg = 180, endDeg = 0; // semicírculo de izquierda a derecha
+    const cobColor = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
+    // Trazar arco: coordenadas para semicírculo
+    // Start: (cx-r, cy) = izquierda  End: (cx+r, cy) = derecha
+    const fillAngle = Math.PI * Math.min(cobGeneral / 100, 1); // 0..π
+    const ex = cx - r * Math.cos(fillAngle);
+    const ey = cy - r * Math.sin(fillAngle);
+    // Track completo (semicírculo)
+    const trackD = `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${cx+r} ${cy}`;
+    // Fill (porción coloreada)
+    const fillD = cobGeneral >= 99.5
+      ? trackD
+      : `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${ex.toFixed(2)} ${ey.toFixed(2)}`;
+    // Ticks de referencia (25%, 50%, 75%)
+    const ticks = [0.25, 0.5, 0.75].map(p => {
+      const angle = Math.PI * p;
+      const tx = cx - r * Math.cos(angle);
+      const ty = cy - r * Math.sin(angle);
+      const tx2 = cx - (r-7) * Math.cos(angle);
+      const ty2 = cy - (r-7) * Math.sin(angle);
+      return `<line x1="${tx.toFixed(1)}" y1="${ty.toFixed(1)}" x2="${tx2.toFixed(1)}" y2="${ty2.toFixed(1)}" stroke="rgba(205,217,229,.15)" stroke-width="1"/>`;
+    }).join('');
+    gaugeEl.innerHTML =
+      `<path d="${trackD}" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="10" stroke-linecap="round"/>` +
+      `<path d="${fillD}" fill="none" stroke="${cobColor}" stroke-width="10" stroke-linecap="round"/>` +
+      ticks +
+      `<text x="17" y="${cy+14}" text-anchor="middle" font-size="8" fill="#484f58">0%</text>` +
+      `<text x="103" y="${cy+14}" text-anchor="middle" font-size="8" fill="#484f58">100%</text>` +
+      `<text x="${cx}" y="${cy+2}" text-anchor="middle" font-size="9" fill="#6e7f8d">de pob. vulnerable</text>`;
+  }
+  if (gaugeLabel) {
+    const cobColor = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
+    gaugeLabel.textContent = cobGeneral.toFixed(1) + '%';
+    gaugeLabel.style.color = cobColor;
+  }
+
+  // ── Grupos sin datos ─────────────────────────────────────────────────────
+  const sinDatosEl = document.getElementById('vul-sin-datos');
+  const sinDatos = grupos.filter(g => !g.atendidos || g.atendidos === 0);
+  if (sinDatosEl) {
+    sinDatosEl.innerHTML = sinDatos.length
+      ? sinDatos.map(g => `<div style="display:flex;align-items:center;gap:6px">
+          <span style="width:5px;height:5px;background:rgba(205,217,229,.2);border-radius:50%;display:inline-block;flex-shrink:0"></span>
+          <span>${g.nombre}</span>
+        </div>`).join('')
+      : '<span style="color:#3fb950">Todos con datos ✓</span>';
+  }
+
   // ── Tabla ────────────────────────────────────────────────────────────────
   const tbody = document.getElementById('vul-tbody');
   const tfoot = document.getElementById('vul-tfoot');
   if (!tbody) return;
+
+  const gruposConDatos = grupos.filter(g => g.atendidos > 0);
+  const maxCob = gruposConDatos.length
+    ? Math.max(...gruposConDatos.map(g => g.atendidos / g.pob_vulnerable * 100))
+    : 100;
 
   tbody.innerHTML = grupos.map((g, i) => {
     const cobNum  = g.pob_vulnerable > 0 && g.atendidos > 0 ? (g.atendidos / g.pob_vulnerable * 100) : null;
     const cobStr  = cobNum !== null ? cobNum.toFixed(1)+'%' : '—';
     const cobColor = cobNum === null ? '#484f58'
       : cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
-    const barW = cobNum !== null ? Math.min(cobNum * 3, 100).toFixed(1) : 0; // scale x3 para visibilidad
+    // Barra relativa al máximo del grupo
+    const barW = cobNum !== null ? Math.min((cobNum / maxCob) * 100, 100).toFixed(1) : 0;
     const rowBg = i % 2 === 0 ? 'transparent' : 'rgba(205,217,229,.02)';
+    const hasDatos = g.atendidos > 0;
 
-    return `<tr style="background:${rowBg};border-bottom:0.5px solid rgba(205,217,229,.06);transition:background .12s"
-      onmouseover="this.style.background='rgba(205,217,229,.06)'"
-      onmouseout="this.style.background='${rowBg}'">
-      <td style="padding:11px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:12px;color:#484f58">${i+1}</td>
-      <td style="padding:11px 14px;font-size:13px;font-weight:500;color:#e6edf3">${g.nombre}</td>
-      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;color:#8b949e">
+    return `<tr id="vul-row-${i}" style="background:${rowBg};border-bottom:0.5px solid rgba(205,217,229,.05);cursor:${hasDatos?'pointer':'default'};transition:background .1s"
+      onmouseover="this.style.background='rgba(205,217,229,.05)'"
+      onmouseout="this.style.background='${rowBg}'"
+      onclick="vulSelectRow(${i})">
+      <td style="padding:10px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:#484f58">${i+1}</td>
+      <td style="padding:10px 14px;font-size:13px;font-weight:500;color:${hasDatos?'#e6edf3':'#6e7f8d'}">${g.nombre}</td>
+      <td style="padding:10px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:12px;color:#8b949e">
         ${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}
       </td>
-      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#ffa657">
-        ${g.atendidos > 0 ? fmt(g.atendidos) : '—'}
+      <td style="padding:10px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${hasDatos?'#ffa657':'#484f58'}">
+        ${hasDatos ? fmt(g.atendidos) : '—'}
       </td>
-      <td style="padding:11px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${cobColor}">
+      <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${cobColor}">
         ${cobStr}
       </td>
-      <td style="padding:11px 12px">
-        <div style="height:6px;background:rgba(205,217,229,.08);border-radius:3px;overflow:hidden">
-          <div style="height:100%;width:${barW}%;background:${cobColor};border-radius:3px;opacity:.85"></div>
+      <td style="padding:10px 14px">
+        ${hasDatos ? `<div style="height:5px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${barW}%;background:${cobColor};border-radius:3px;transition:width .4s ease"></div>
         </div>
+        <div style="font-size:9px;color:#484f58;margin-top:2px">${cobNum < maxCob ? cobNum.toFixed(1)+'% de '+maxCob.toFixed(1)+'% máx' : 'Mayor cobertura'}</div>` : ''}
       </td>
     </tr>`;
   }).join('');
 
   // Fila total
-  if (tfoot) tfoot.innerHTML = `<tr style="background:#161b22;border-top:2px solid rgba(205,217,229,.15)">
-    <td style="padding:10px 8px"></td>
-    <td style="padding:10px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8b949e">Total padrón</td>
-    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#f778ba">${fmt(POB_VUL_CANON)}</td>
-    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#ffa657">${fmt(ateT)}</td>
-    <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#79c0ff">${pct(ateT, POB_VUL_CANON)}</td>
+  if (tfoot) tfoot.innerHTML = `<tr style="background:#161b22;border-top:2px solid rgba(205,217,229,.12)">
+    <td style="padding:9px 8px"></td>
+    <td style="padding:9px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8b949e">Total padrón</td>
+    <td style="padding:9px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:12px;font-weight:700;color:#f778ba">${fmt(POB_VUL_CANON)}</td>
+    <td style="padding:9px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#ffa657">${fmt(ateT)}</td>
+    <td style="padding:9px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#79c0ff">${pct(ateT, POB_VUL_CANON)}</td>
     <td></td>
   </tr>`;
+
+  // Seleccionar fila activa
+  window._vulGrupos = grupos;
+  window._vulAteT = ateT;
+  window._vulPobVul = POB_VUL_CANON;
+  window.vulSelectRow = function(i) {
+    const g = window._vulGrupos[i];
+    if (!g || !g.atendidos) return;
+    // Highlight fila
+    document.querySelectorAll('[id^="vul-row-"]').forEach(r => {
+      r.style.outline = 'none'; r.style.background = '';
+    });
+    const row = document.getElementById('vul-row-'+i);
+    if (row) { row.style.outline = '1.5px solid rgba(205,217,229,.25)'; row.style.background = 'rgba(205,217,229,.05)'; }
+
+    const cobNum = g.pob_vulnerable > 0 ? (g.atendidos / g.pob_vulnerable * 100) : 0;
+    const cobColor = cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
+    const noAtend = g.pob_vulnerable - g.atendidos;
+    const cobVsGeneral = cobNum - (window._vulAteT / window._vulPobVul * 100);
+    const vsStr = cobVsGeneral >= 0
+      ? `<span style="color:#56d364">▲ ${cobVsGeneral.toFixed(1)}pp</span> sobre el promedio`
+      : `<span style="color:#f85149">▼ ${Math.abs(cobVsGeneral).toFixed(1)}pp</span> bajo el promedio`;
+
+    // Rango de cobertura con todos los grupos para ranking
+    const gruposOrdenados = window._vulGrupos
+      .filter(x => x.atendidos > 0 && x.pob_vulnerable > 0)
+      .sort((a,b) => (b.atendidos/b.pob_vulnerable) - (a.atendidos/a.pob_vulnerable));
+    const rank = gruposOrdenados.findIndex(x => x.nombre === g.nombre) + 1;
+    const totalRank = gruposOrdenados.length;
+
+    // Personas que faltan para llegar a 20%
+    const meta20 = Math.ceil(g.pob_vulnerable * 0.20);
+    const faltaMeta = Math.max(0, meta20 - g.atendidos);
+
+    const insightEl = document.getElementById('vul-insight-body');
+    if (insightEl) insightEl.innerHTML = `
+      <div style="font-size:13px;font-weight:700;color:#e6edf3;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(205,217,229,.07)">${g.nombre}</div>
+
+      <!-- Ranking y comparativa -->
+      <div style="background:#161b22;border-radius:8px;padding:10px 12px;margin-bottom:8px">
+        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Posición en el estado</div>
+        <div style="font-size:13px;font-weight:700;color:#e6edf3;margin-bottom:3px">${rank}° de ${totalRank} grupos con datos</div>
+        <div style="font-size:11px;color:#8b949e">${vsStr}</div>
+      </div>
+
+      <!-- Brecha visual -->
+      <div style="background:#161b22;border-radius:8px;padding:10px 12px;margin-bottom:8px">
+        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Distribución de cobertura</div>
+        <div style="position:relative;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden;margin-bottom:5px">
+          <div style="position:absolute;left:0;top:0;height:100%;width:${Math.min(cobNum,100)}%;background:${cobColor};border-radius:5px"></div>
+          <div style="position:absolute;left:20%;top:-1px;width:1.5px;height:12px;background:rgba(255,255,255,.2)"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:#6e7f8d">
+          <span style="color:${cobColor};font-weight:600">${fmt(g.atendidos)} atendidos</span>
+          <span>${fmt(noAtend)} sin atender</span>
+        </div>
+        <div style="font-size:9px;color:#484f58;margin-top:3px">Línea blanca = meta 20%</div>
+      </div>
+
+      <!-- Proyección a meta 20% -->
+      <div style="background:#161b22;border-radius:8px;padding:10px 12px">
+        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Para alcanzar cobertura 20%</div>
+        ${faltaMeta > 0
+          ? `<div style="font-size:13px;font-weight:700;color:#ffa657">${fmt(faltaMeta)} personas más</div>
+             <div style="font-size:10px;color:#6e7f8d;margin-top:2px">= ${(faltaMeta/g.atendidos*100).toFixed(0)}% adicional sobre lo actual</div>`
+          : `<div style="font-size:13px;font-weight:700;color:#56d364">✓ Meta superada</div>
+             <div style="font-size:10px;color:#6e7f8d;margin-top:2px">${(cobNum-20).toFixed(1)}pp sobre el umbral mínimo</div>`
+        }
+      </div>`;
+  };
 }
 
 
