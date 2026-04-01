@@ -579,63 +579,9 @@
   <!-- KPI strip -->
   <div class="stat-strip c4 mt12" id="vul-kpis" style="border-top:3px solid var(--ink);border-bottom:2px solid var(--border)"></div>
 
-  <!-- Grid principal: tabla + panel lateral -->
-  <div style="margin-top:20px;display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start">
+  <!-- Contenedor principal — renderizado dinámicamente por renderVulnerables() -->
+  <div id="vul-main-container" style="margin-top:20px"></div>
 
-    <!-- Tabla -->
-    <div style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:12px;overflow:hidden">
-      <div style="padding:12px 18px;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;justify-content:space-between;background:#161b22">
-        <div style="display:flex;align-items:center;gap:10px">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">GRUPOS VULNERABLES · CHIHUAHUA 2026</span>
-          <span id="vul-badge-count" style="font-size:11px;color:#f778ba;background:rgba(247,120,186,.08);padding:2px 9px;border-radius:20px;border:0.5px solid rgba(247,120,186,.2)">— grupos</span>
-        </div>
-        <div style="display:flex;gap:12px;font-size:11px">
-          <span style="display:flex;align-items:center;gap:4px;color:#56d364"><span style="width:6px;height:6px;background:#56d364;border-radius:50%;display:inline-block"></span>≥ 20%</span>
-          <span style="display:flex;align-items:center;gap:4px;color:#ffa657"><span style="width:6px;height:6px;background:#ffa657;border-radius:50%;display:inline-block"></span>8–19%</span>
-          <span style="display:flex;align-items:center;gap:4px;color:#f85149"><span style="width:6px;height:6px;background:#f85149;border-radius:50%;display:inline-block"></span>&lt; 8%</span>
-        </div>
-      </div>
-      <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',system-ui,sans-serif">
-        <colgroup>
-          <col style="width:36px"><col><col style="width:130px"><col style="width:110px"><col style="width:70px"><col style="width:130px">
-        </colgroup>
-        <thead>
-          <tr style="background:#161b22;border-bottom:1px solid rgba(205,217,229,.08)">
-            <th style="padding:9px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#484f58">#</th>
-            <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b949e">Grupo Vulnerable</th>
-            <th style="padding:9px 12px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f778ba">Pob. Vulnerable</th>
-            <th style="padding:9px 12px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffa657">Atendidos</th>
-            <th style="padding:9px 8px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364">Cob.</th>
-            <th style="padding:9px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56d364">Barra</th>
-          </tr>
-        </thead>
-        <tbody id="vul-tbody"></tbody>
-        <tfoot id="vul-tfoot"></tfoot>
-      </table>
-    </div>
-
-    <!-- Panel lateral -->
-    <div style="display:flex;flex-direction:column;gap:12px">
-      <!-- Gauge cobertura general -->
-      <div style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:12px;padding:16px;text-align:center">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">COBERTURA GENERAL</div>
-        <svg id="vul-gauge-svg" viewBox="0 0 120 70" style="width:100%;max-width:160px;margin:0 auto;display:block"></svg>
-        <div id="vul-gauge-label" style="font-size:24px;font-weight:800;color:#e6edf3;margin-top:2px;font-family:'DM Mono',monospace">—</div>
-        <div style="font-size:11px;color:#6e7f8d;margin-top:2px">de pob. vulnerable atendida</div>
-      </div>
-      <!-- Panel insight al hacer clic -->
-      <div id="vul-insight-panel" style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:12px;padding:16px">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">DETALLE · clic en fila</div>
-        <div id="vul-insight-body" style="font-size:12px;color:#6e7f8d;line-height:1.7">Selecciona un grupo para ver su análisis.</div>
-      </div>
-      <!-- Grupos sin datos -->
-      <div style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:12px;padding:14px">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:8px">SIN DATOS DE COBERTURA</div>
-        <div id="vul-sin-datos" style="display:flex;flex-direction:column;gap:5px;font-size:11px;color:#6e7f8d">—</div>
-      </div>
-    </div>
-
-  </div><!-- /grid -->
   </div><!-- /wrap -->
 </div><!-- /tab-vulnerables -->
 

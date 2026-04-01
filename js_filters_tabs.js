@@ -241,223 +241,348 @@ function showTab(name, btn) {
 }
 
 /* ─── GRUPOS VULNERABLES ─── */
+// ═══════════════════════════════════════════════════════════════
+//  GRUPOS VULNERABLES · REDISEÑO COMPLETO
+//  Concepto: Mapa de calor radial + tarjetas interactivas
+//  Sin tablas. Sin barras horizontales clásicas.
+// ═══════════════════════════════════════════════════════════════
+
 function renderVulnerables() {
   const gv = D.grupos_vulnerables;
   if (!gv) return;
 
-  const POB_VUL_CANON = D._meta?.pob_vulnerable || 1792324;
-  const ateT = D.general.total_benef;
-  const grupos = gv.grupos || [];
+  const POB_VUL = D._meta?.pob_vulnerable || 1792324;
+  const ateT    = D.general.total_benef;
+  const grupos  = gv.grupos || [];
 
-  // ── Texto dinámico ───────────────────────────────────────────────────────
-  const elTotal = document.getElementById('vul-txt-total');
-  const elAte   = document.getElementById('vul-txt-atendidos');
-  const elPct   = document.getElementById('vul-txt-pct');
-  if (elTotal) elTotal.textContent = fmt(POB_VUL_CANON);
-  if (elAte)   elAte.textContent   = fmt(ateT);
-  if (elPct)   elPct.textContent   = pct(ateT, POB_VUL_CANON);
-
-  // ── KPIs ─────────────────────────────────────────────────────────────────
+  // ── KPIs strip ───────────────────────────────────────────────
   const gruposConCob = grupos.filter(g =>
     g.pob_vulnerable > 0 && g.atendidos > 0 &&
     !g.nombre.toLowerCase().includes('muj') &&
     !g.nombre.toLowerCase().includes('hom'));
   const grupoMax = gruposConCob.length
-    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a)
-    : null;
+    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a) : null;
   const grupoMin = gruposConCob.length
-    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a)
-    : null;
+    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a) : null;
 
   const s = document.getElementById('vul-kpis');
   if (s) s.innerHTML =
-    kpiSS('Pob. Vulnerable', fmt(POB_VUL_CANON), 'personas en situación vulnerable', 'cr','r') +
-    kpiSS('Población Atendida', fmt(ateT), pct(ateT, POB_VUL_CANON)+' de cobertura', 'cb','b') +
+    kpiSS('Pob. Vulnerable', fmt(POB_VUL), 'personas en situación vulnerable', 'cr','r') +
+    kpiSS('Población Atendida', fmt(ateT), pct(ateT, POB_VUL)+' de cobertura', 'cb','b') +
     (grupoMax ? kpiSS('Mayor Cobertura · '+grupoMax.nombre, pct(grupoMax.atendidos, grupoMax.pob_vulnerable), fmt(grupoMax.atendidos)+' atendidos', 'cgr','gr') : '') +
     (grupoMin ? kpiSS('Menor Cobertura · '+grupoMin.nombre, pct(grupoMin.atendidos, grupoMin.pob_vulnerable), fmt(grupoMin.atendidos)+' atendidos', 'cm','m') : '');
 
-  // ── Badge count ──────────────────────────────────────────────────────────
   const badge = document.getElementById('vul-badge-count');
   if (badge) badge.textContent = grupos.length + ' grupos';
 
-  // ── Gauge de cobertura general ───────────────────────────────────────────
-  const cobGeneral = ateT / POB_VUL_CANON * 100;
-  const gaugeEl = document.getElementById('vul-gauge-svg');
-  const gaugeLabel = document.getElementById('vul-gauge-label');
-  if (gaugeEl) {
-    const cx = 60, cy = 58, r = 44;
-    const startDeg = 180, endDeg = 0; // semicírculo de izquierda a derecha
-    const cobColor = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
-    // Trazar arco: coordenadas para semicírculo
-    // Start: (cx-r, cy) = izquierda  End: (cx+r, cy) = derecha
-    const fillAngle = Math.PI * Math.min(cobGeneral / 100, 1); // 0..π
-    const ex = cx - r * Math.cos(fillAngle);
-    const ey = cy - r * Math.sin(fillAngle);
-    // Track completo (semicírculo)
-    const trackD = `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${cx+r} ${cy}`;
-    // Fill (porción coloreada)
-    const fillD = cobGeneral >= 99.5
-      ? trackD
-      : `M ${cx-r} ${cy} A ${r} ${r} 0 0 1 ${ex.toFixed(2)} ${ey.toFixed(2)}`;
-    // Ticks de referencia (25%, 50%, 75%)
-    const ticks = [0.25, 0.5, 0.75].map(p => {
-      const angle = Math.PI * p;
-      const tx = cx - r * Math.cos(angle);
-      const ty = cy - r * Math.sin(angle);
-      const tx2 = cx - (r-7) * Math.cos(angle);
-      const ty2 = cy - (r-7) * Math.sin(angle);
-      return `<line x1="${tx.toFixed(1)}" y1="${ty.toFixed(1)}" x2="${tx2.toFixed(1)}" y2="${ty2.toFixed(1)}" stroke="rgba(205,217,229,.15)" stroke-width="1"/>`;
-    }).join('');
-    gaugeEl.innerHTML =
-      `<path d="${trackD}" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="10" stroke-linecap="round"/>` +
-      `<path d="${fillD}" fill="none" stroke="${cobColor}" stroke-width="10" stroke-linecap="round"/>` +
-      ticks +
-      `<text x="17" y="${cy+14}" text-anchor="middle" font-size="8" fill="#484f58">0%</text>` +
-      `<text x="103" y="${cy+14}" text-anchor="middle" font-size="8" fill="#484f58">100%</text>` +
-      `<text x="${cx}" y="${cy+2}" text-anchor="middle" font-size="9" fill="#6e7f8d">de pob. vulnerable</text>`;
-  }
-  if (gaugeLabel) {
-    const cobColor = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
-    gaugeLabel.textContent = cobGeneral.toFixed(1) + '%';
-    gaugeLabel.style.color = cobColor;
+  // ── Paleta semáforo ──────────────────────────────────────────
+  function cobColor(p) {
+    if (p === null) return '#2a2f3a';
+    if (p >= 20)   return '#56d364';
+    if (p >= 8)    return '#ffa657';
+    if (p > 0)     return '#f85149';
+    return '#2a2f3a';
   }
 
-  // ── Grupos sin datos ─────────────────────────────────────────────────────
-  const sinDatosEl = document.getElementById('vul-sin-datos');
-  const sinDatos = grupos.filter(g => !g.atendidos || g.atendidos === 0);
-  if (sinDatosEl) {
-    sinDatosEl.innerHTML = sinDatos.length
-      ? sinDatos.map(g => `<div style="display:flex;align-items:center;gap:6px">
-          <span style="width:5px;height:5px;background:rgba(205,217,229,.2);border-radius:50%;display:inline-block;flex-shrink:0"></span>
-          <span>${g.nombre}</span>
-        </div>`).join('')
-      : '<span style="color:#3fb950">Todos con datos ✓</span>';
+  // ── Imágenes por grupo ──────────────────────────────────────
+  const GV_IMGS = {
+    'mujeres':           'imagenes/mujeres_gv.jpg',
+    'hombres':           'imagenes/hombres_gv.avif',
+    'niños':             'imagenes/017_gv.jpg',
+    'jovenes':           'imagenes/1829_gv.jpg',
+    'adultos':           'imagenes/3064_gv.avif',
+    'mayores':           'imagenes/65_gv.jpg',
+    'multidimensional':  'imagenes/personaspobrezam_gv.webp',
+    'sin contar':        'imagenes/pobrezaalim_gv.webp',
+    'alimentaria':       'imagenes/carenciaalim_gv.webp',
+    'indígenas':         'imagenes/indigenas_gv.jpg',
+    'discapacidad':      'imagenes/discapacidad_gv.jpeg',
+    'violencia':         'imagenes/famvuln_gv.jpg',
+  };
+  function getImg(nombre) {
+    const n = nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    for (const [k,v] of Object.entries(GV_IMGS)) {
+      const kn = k.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      if (n.includes(kn)) return v;
+    }
+    return null;
   }
 
-  // ── Tabla ────────────────────────────────────────────────────────────────
-  const tbody = document.getElementById('vul-tbody');
-  const tfoot = document.getElementById('vul-tfoot');
-  if (!tbody) return;
+  // ── Render principal ─────────────────────────────────────────
+  const container = document.getElementById('vul-main-container');
+  if (!container) return;
 
-  const gruposConDatos = grupos.filter(g => g.atendidos > 0);
-  const maxCob = gruposConDatos.length
-    ? Math.max(...gruposConDatos.map(g => g.atendidos / g.pob_vulnerable * 100))
-    : 100;
+  const maxPob = Math.max(...grupos.map(g => g.pob_vulnerable || 0));
+  const cobGeneral = (ateT / POB_VUL * 100);
+  const cobColor2 = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
 
-  tbody.innerHTML = grupos.map((g, i) => {
-    const cobNum  = g.pob_vulnerable > 0 && g.atendidos > 0 ? (g.atendidos / g.pob_vulnerable * 100) : null;
-    const cobStr  = cobNum !== null ? cobNum.toFixed(1)+'%' : '—';
-    const cobColor = cobNum === null ? '#484f58'
-      : cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
-    // Barra relativa al máximo del grupo
-    const barW = cobNum !== null ? Math.min((cobNum / maxCob) * 100, 100).toFixed(1) : 0;
-    const rowBg = i % 2 === 0 ? 'transparent' : 'rgba(205,217,229,.02)';
-    const hasDatos = g.atendidos > 0;
+  container.innerHTML = `
+    <style>
+      .gv-card {
+        background: #0d1117;
+        border: 1px solid rgba(205,217,229,.07);
+        border-radius: 14px;
+        padding: 18px 16px;
+        cursor: pointer;
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .gv-card:hover { transform: translateY(-3px); border-color: rgba(205,217,229,.18); }
+      .gv-card.active { border-color: rgba(205,217,229,.3) !important; }
+      .gv-card.no-data { opacity: .55; cursor: default; }
+      .gv-card.no-data:hover { transform: none; }
+      .gv-ring-track { fill: none; stroke: rgba(205,217,229,.07); }
+      .gv-ring-fill  { fill: none; stroke-linecap: round; transition: stroke-dasharray .6s cubic-bezier(.4,0,.2,1); }
+      @keyframes gv-fadein { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+      .gv-card { animation: gv-fadein .35s ease both; }
+    </style>
 
-    return `<tr id="vul-row-${i}" style="background:${rowBg};border-bottom:0.5px solid rgba(205,217,229,.05);cursor:${hasDatos?'pointer':'default'};transition:background .1s"
-      onmouseover="this.style.background='rgba(205,217,229,.05)'"
-      onmouseout="this.style.background='${rowBg}'"
-      onclick="vulSelectRow(${i})">
-      <td style="padding:10px 8px;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:#484f58">${i+1}</td>
-      <td style="padding:10px 14px;font-size:13px;font-weight:500;color:${hasDatos?'#e6edf3':'#6e7f8d'}">${g.nombre}</td>
-      <td style="padding:10px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:12px;color:#8b949e">
-        ${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}
-      </td>
-      <td style="padding:10px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${hasDatos?'#ffa657':'#484f58'}">
-        ${hasDatos ? fmt(g.atendidos) : '—'}
-      </td>
-      <td style="padding:10px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:${cobColor}">
-        ${cobStr}
-      </td>
-      <td style="padding:10px 14px">
-        ${hasDatos ? `<div style="height:5px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">
-          <div style="height:100%;width:${barW}%;background:${cobColor};border-radius:3px;transition:width .4s ease"></div>
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start">
+
+      <!-- CUADRÍCULA DE TARJETAS -->
+      <div>
+        <!-- Header strip -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding:0 2px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">GRUPOS VULNERABLES · CHIHUAHUA 2026</span>
+            <span id="vul-badge-count" style="font-size:15px;color:#f778ba;background:rgba(247,120,186,.08);padding:2px 9px;border-radius:20px;border:0.5px solid rgba(247,120,186,.2)">${grupos.length} grupos</span>
+          </div>
+          <div style="display:flex;gap:10px;font-size:14px">
+            <span style="display:flex;align-items:center;gap:4px;color:#56d364"><span style="width:6px;height:6px;background:#56d364;border-radius:50%;display:inline-block"></span>≥ 20%</span>
+            <span style="display:flex;align-items:center;gap:4px;color:#ffa657"><span style="width:6px;height:6px;background:#ffa657;border-radius:50%;display:inline-block"></span>8–19%</span>
+            <span style="display:flex;align-items:center;gap:4px;color:#f85149"><span style="width:6px;height:6px;background:#f85149;border-radius:50%;display:inline-block"></span>&lt; 8%</span>
+            <span style="display:flex;align-items:center;gap:4px;color:#2a2f3a;filter:brightness(2)"><span style="width:6px;height:6px;background:#484f58;border-radius:50%;display:inline-block"></span>Sin datos</span>
+          </div>
         </div>
-        <div style="font-size:9px;color:#484f58;margin-top:2px">${cobNum < maxCob ? cobNum.toFixed(1)+'% de '+maxCob.toFixed(1)+'% máx' : 'Mayor cobertura'}</div>` : ''}
-      </td>
-    </tr>`;
-  }).join('');
 
-  // Fila total
-  if (tfoot) tfoot.innerHTML = `<tr style="background:#161b22;border-top:2px solid rgba(205,217,229,.12)">
-    <td style="padding:9px 8px"></td>
-    <td style="padding:9px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8b949e">Total padrón</td>
-    <td style="padding:9px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:12px;font-weight:700;color:#f778ba">${fmt(POB_VUL_CANON)}</td>
-    <td style="padding:9px 12px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#ffa657">${fmt(ateT)}</td>
-    <td style="padding:9px 8px;text-align:right;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#79c0ff">${pct(ateT, POB_VUL_CANON)}</td>
-    <td></td>
-  </tr>`;
+        <!-- Grid cards -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          ${grupos.map((g, i) => {
+            const cobNum = g.pob_vulnerable > 0 && g.atendidos > 0
+              ? (g.atendidos / g.pob_vulnerable * 100) : null;
+            const cc = cobColor(cobNum);
+            const hasDatos = cobNum !== null;
+            // Tamaño relativo de la célula según población (normalizado 60px–88px)
+            const ringR = 36;
+            const circ = 2 * Math.PI * ringR;
+            const fillPct = cobNum !== null ? Math.min(cobNum / 100, 1) : 0;
+            const dash = (fillPct * circ).toFixed(1);
+            // Barra de población relativa
+            const pobRel = Math.round((g.pob_vulnerable / maxPob) * 100);
+            const delay = (i * 0.05).toFixed(2);
+            return `<div class="gv-card${hasDatos ? '' : ' no-data'}"
+              id="gv-card-${i}"
+              style="--gv-glow:${cc}22;animation-delay:${delay}s"
+              ${hasDatos ? `onclick="gvSelectCard(${i})"` : ''}>
+              <!-- Top: imagen + anillo -->
+              <div style="display:flex;align-items:center;gap:12px">
+                <!-- Anillo SVG con imagen -->
+                <div style="position:relative;flex-shrink:0;width:88px;height:88px">
+                  <!-- Imagen recortada en círculo -->
+                  <div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">
+                    ${getImg(g.nombre) ? `<img src="${getImg(g.nombre)}" style="width:100%;height:100%;object-fit:cover;opacity:${hasDatos ? '1' : '0.35'}" onerror="this.style.display='none'"/>` : ''}
+                  </div>
+                  <!-- Anillo encima -->
+                  <svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">
+                    <circle cx="44" cy="44" r="${ringR}" fill="none" stroke="rgba(205,217,229,.08)" stroke-width="7"/>
+                    <circle cx="44" cy="44" r="${ringR}" fill="none"
+                      stroke="${cc}" stroke-width="7" stroke-linecap="round"
+                      stroke-dasharray="${dash} ${circ.toFixed(1)}"
+                      transform="rotate(-90 44 44)"
+                      ${!hasDatos ? 'opacity=".25"' : ''}
+                    />
+                  </svg>
+                  <!-- Badge porcentaje -->
+                  ${hasDatos ? `<div style="position:absolute;bottom:-4px;right:-4px;background:#0d1117;border:1px solid ${cc}55;border-radius:7px;padding:2px 6px;font-size:11px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1.3;">${cobNum.toFixed(1)}%</div>` : ''}
+                </div>
+                <!-- Nombre y pop -->
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:14px;font-weight:600;color:${hasDatos ? '#e6edf3' : '#6e7f8d'};line-height:1.3;margin-bottom:4px">${g.nombre}</div>
+                  <div style="font-size:14px;color:#484f58;margin-bottom:6px">Pob. vulnerable</div>
+                  <div style="font-size:15px;font-weight:700;color:#8b949e;font-family:'DM Mono',monospace">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</div>
+                </div>
+              </div>
+              <!-- Barra pop relativa (tamaño) -->
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:3px;font-size:15px;color:#484f58">
+                  <span>Peso poblacional</span>
+                  <span>${pobRel}% del mayor grupo</span>
+                </div>
+                <div style="height:3px;background:rgba(205,217,229,.06);border-radius:2px;overflow:hidden">
+                  <div style="height:100%;width:${pobRel}%;background:rgba(205,217,229,.2);border-radius:2px"></div>
+                </div>
+              </div>
+              <!-- Atendidos si hay datos -->
+              ${hasDatos ? `<div style="display:flex;align-items:center;justify-content:space-between;padding-top:6px;border-top:1px solid rgba(205,217,229,.05)">
+                <span style="font-size:14px;color:#6e7f8d">Atendidos</span>
+                <span style="font-size:14px;font-weight:700;color:#ffa657;font-family:'DM Mono',monospace">${fmt(g.atendidos)}</span>
+              </div>` : `<div style="padding-top:6px;border-top:1px solid rgba(205,217,229,.04);font-size:14px;color:#484f58;text-align:center">Sin datos de cobertura</div>`}
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
 
-  // Seleccionar fila activa
-  window._vulGrupos = grupos;
-  window._vulAteT = ateT;
-  window._vulPobVul = POB_VUL_CANON;
-  window.vulSelectRow = function(i) {
-    const g = window._vulGrupos[i];
+      <!-- PANEL LATERAL -->
+      <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:12px">
+
+        <!-- Gauge cobertura general -->
+        <div style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px;text-align:center">
+          <div style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:14px">COBERTURA GENERAL</div>
+          <svg viewBox="0 0 120 72" style="width:100%;max-width:170px;display:block;margin:0 auto">
+            <path d="M 16 62 A 44 44 0 0 1 104 62" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="10" stroke-linecap="round"/>
+            ${(() => {
+              const pFill = Math.min(cobGeneral / 100, 1);
+              const r = 44, cx = 60, cy = 62;
+              const startRad = Math.PI;
+              const endRad = startRad + pFill * Math.PI;
+              const ex = cx + r * Math.cos(Math.PI + pFill * Math.PI);
+              const ey = cy + r * Math.sin(Math.PI + pFill * Math.PI);
+              const large = pFill > 0.5 ? 1 : 0;
+              return `<path d="M 16 62 A 44 44 0 ${large} 1 ${ex.toFixed(2)} ${ey.toFixed(2)}" fill="none" stroke="${cobColor2}" stroke-width="10" stroke-linecap="round"/>`;
+            })()}
+            <text x="12" y="74" font-size="8" fill="#484f58" font-family="DM Mono,monospace">0%</text>
+            <text x="98" y="74" font-size="8" fill="#484f58" font-family="DM Mono,monospace">100%</text>
+            <line x1="60" y1="22" x2="60" y2="30" stroke="rgba(205,217,229,.12)" stroke-width="1.5"/>
+          </svg>
+          <div style="font-size:30px;font-weight:800;color:${cobColor2};font-family:'DM Mono',monospace;margin-top:4px">${cobGeneral.toFixed(1)}%</div>
+          <div style="font-size:15px;color:#6e7f8d;margin-top:2px">de ${fmt(POB_VUL)} en situación vulnerable</div>
+        </div>
+
+        <!-- Panel detalle (vacío inicial) -->
+        <div id="gv-detail-panel" style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
+          <div style="padding:11px 16px;background:#161b22;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
+            <div style="width:3px;height:13px;background:#484f58;border-radius:2px"></div>
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;color:#484f58">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".3"><path d="M15 15l5 5M10 17A7 7 0 1 0 10 3a7 7 0 0 0 0 14z"/></svg>
+            <span style="font-size:13px;text-align:center;line-height:1.5;max-width:180px">Haz clic en una tarjeta para ver su análisis</span>
+          </div>
+        </div>
+
+      </div><!-- /panel lateral -->
+    </div>
+  `;
+
+  // ── Función de selección de tarjeta ────────────────────────
+  window._gvGrupos = grupos;
+  window._gvPobVul = POB_VUL;
+  window._gvAteT   = ateT;
+  window.gvSelectCard = function(i) {
+    const g = window._gvGrupos[i];
     if (!g || !g.atendidos) return;
-    // Highlight fila
-    document.querySelectorAll('[id^="vul-row-"]').forEach(r => {
-      r.style.outline = 'none'; r.style.background = '';
+
+    // Reset active state
+    document.querySelectorAll('.gv-card').forEach(c => {
+      c.classList.remove('active');
+      c.style.boxShadow = 'none';
     });
-    const row = document.getElementById('vul-row-'+i);
-    if (row) { row.style.outline = '1.5px solid rgba(205,217,229,.25)'; row.style.background = 'rgba(205,217,229,.05)'; }
+    const card = document.getElementById('gv-card-'+i);
+    if (card) {
+      card.classList.add('active');
+      const cc = cobColor(g.atendidos/g.pob_vulnerable*100);
+      card.style.boxShadow = 'none';
+    }
 
-    const cobNum = g.pob_vulnerable > 0 ? (g.atendidos / g.pob_vulnerable * 100) : 0;
-    const cobColor = cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
+    const cobNum = (g.atendidos / g.pob_vulnerable * 100);
+    const cc = cobColor(cobNum);
     const noAtend = g.pob_vulnerable - g.atendidos;
-    const cobVsGeneral = cobNum - (window._vulAteT / window._vulPobVul * 100);
-    const vsStr = cobVsGeneral >= 0
-      ? `<span style="color:#56d364">▲ ${cobVsGeneral.toFixed(1)}pp</span> sobre el promedio`
-      : `<span style="color:#f85149">▼ ${Math.abs(cobVsGeneral).toFixed(1)}pp</span> bajo el promedio`;
+    const cobGenPct = (window._gvAteT / window._gvPobVul * 100);
+    const diff = cobNum - cobGenPct;
+    const diffStr = diff >= 0
+      ? `<span style="color:#56d364">+${diff.toFixed(1)}pp</span>`
+      : `<span style="color:#f85149">${diff.toFixed(1)}pp</span>`;
 
-    // Rango de cobertura con todos los grupos para ranking
-    const gruposOrdenados = window._vulGrupos
+    // Ranking
+    const ranked = window._gvGrupos
       .filter(x => x.atendidos > 0 && x.pob_vulnerable > 0)
-      .sort((a,b) => (b.atendidos/b.pob_vulnerable) - (a.atendidos/a.pob_vulnerable));
-    const rank = gruposOrdenados.findIndex(x => x.nombre === g.nombre) + 1;
-    const totalRank = gruposOrdenados.length;
+      .sort((a,b) => (b.atendidos/b.pob_vulnerable)-(a.atendidos/a.pob_vulnerable));
+    const rank = ranked.findIndex(x => x.nombre === g.nombre) + 1;
 
-    // Personas que faltan para llegar a 20%
-    const meta20 = Math.ceil(g.pob_vulnerable * 0.20);
-    const faltaMeta = Math.max(0, meta20 - g.atendidos);
+    // Meta 20%
+    const meta20  = Math.ceil(g.pob_vulnerable * 0.20);
+    const falta20 = Math.max(0, meta20 - g.atendidos);
 
-    const insightEl = document.getElementById('vul-insight-body');
-    if (insightEl) insightEl.innerHTML = `
-      <div style="font-size:13px;font-weight:700;color:#e6edf3;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(205,217,229,.07)">${g.nombre}</div>
+    // Progreso hacia meta
+    const progMeta = Math.min((g.atendidos / meta20) * 100, 100);
 
-      <!-- Ranking y comparativa -->
-      <div style="background:#161b22;border-radius:8px;padding:10px 12px;margin-bottom:8px">
-        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Posición en el estado</div>
-        <div style="font-size:13px;font-weight:700;color:#e6edf3;margin-bottom:3px">${rank}° de ${totalRank} grupos con datos</div>
-        <div style="font-size:11px;color:#8b949e">${vsStr}</div>
+    document.getElementById('gv-detail-panel').innerHTML = `
+      <!-- Header con imagen de fondo -->
+      <div style="position:relative;height:90px;overflow:hidden;border-bottom:1px solid rgba(205,217,229,.06)">
+        ${getImg(g.nombre) ? `<img src="${getImg(g.nombre)}" style="width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.7)"/>` : ''}
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,#161b22 0%,transparent 100%)"></div>
+        <div style="position:absolute;inset:0;padding:12px 16px;display:flex;align-items:center;gap:10px">
+          <div style="width:3px;height:100%;background:${cc};border-radius:2px;flex-shrink:0"></div>
+          <div>
+            <div style="font-size:11px;color:#484f58;text-transform:uppercase;letter-spacing:.12em;margin-bottom:3px">ANÁLISIS DE GRUPO</div>
+            <div style="font-size:14px;font-weight:700;color:#e6edf3;line-height:1.3">${g.nombre}</div>
+          </div>
+          <div style="margin-left:auto;background:${cc}20;border:1px solid ${cc}40;border-radius:8px;padding:4px 10px;text-align:center;flex-shrink:0">
+            <div style="font-size:18px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1">${cobNum.toFixed(1)}%</div>
+            <div style="font-size:10px;color:#6e7f8d;margin-top:1px">#${rank} ranking</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Brecha visual -->
-      <div style="background:#161b22;border-radius:8px;padding:10px 12px;margin-bottom:8px">
-        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Distribución de cobertura</div>
-        <div style="position:relative;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden;margin-bottom:5px">
-          <div style="position:absolute;left:0;top:0;height:100%;width:${Math.min(cobNum,100)}%;background:${cobColor};border-radius:5px"></div>
-          <div style="position:absolute;left:20%;top:-1px;width:1.5px;height:12px;background:rgba(255,255,255,.2)"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:10px;color:#6e7f8d">
-          <span style="color:${cobColor};font-weight:600">${fmt(g.atendidos)} atendidos</span>
-          <span>${fmt(noAtend)} sin atender</span>
-        </div>
-        <div style="font-size:9px;color:#484f58;margin-top:3px">Línea blanca = meta 20%</div>
-      </div>
+      <!-- Cuerpo -->
+      <div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">
 
-      <!-- Proyección a meta 20% -->
-      <div style="background:#161b22;border-radius:8px;padding:10px 12px">
-        <div style="font-size:9px;color:#484f58;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Para alcanzar cobertura 20%</div>
-        ${faltaMeta > 0
-          ? `<div style="font-size:13px;font-weight:700;color:#ffa657">${fmt(faltaMeta)} personas más</div>
-             <div style="font-size:10px;color:#6e7f8d;margin-top:2px">= ${(faltaMeta/g.atendidos*100).toFixed(0)}% adicional sobre lo actual</div>`
-          : `<div style="font-size:13px;font-weight:700;color:#56d364">✓ Meta superada</div>
-             <div style="font-size:10px;color:#6e7f8d;margin-top:2px">${(cobNum-20).toFixed(1)}pp sobre el umbral mínimo</div>`
-        }
-      </div>`;
+        <!-- vs promedio -->
+        <div style="background:#161b22;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-size:11px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">vs. promedio general</div>
+            <div style="font-size:14px;font-weight:700">${diffStr} ${Math.abs(diff) < 1 ? '· similar' : diff > 0 ? '· por encima' : '· por debajo'}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:11px;color:#484f58;margin-bottom:2px">General</div>
+            <div style="font-size:13px;color:#6e7f8d;font-family:'DM Mono',monospace">${cobGenPct.toFixed(1)}%</div>
+          </div>
+        </div>
+
+        <!-- Progreso meta 20% -->
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px">
+            <span style="color:#6e7f8d">Progreso hacia meta 20%</span>
+            <span style="color:${cc};font-weight:700">${progMeta.toFixed(0)}%</span>
+          </div>
+          <div style="height:6px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden;position:relative">
+            <div style="height:100%;width:${progMeta}%;background:${cc};border-radius:4px"></div>
+            <div style="position:absolute;right:0;top:0;height:100%;width:1.5px;background:rgba(255,255,255,.1)"></div>
+          </div>
+          <div style="font-size:11px;color:#484f58;margin-top:4px">
+            ${falta20 > 0 ? `Faltan <strong style="color:#ffa657">${fmt(falta20)}</strong> personas para llegar al 20%` : `<span style="color:#56d364">✓ Meta 20% superada</span>`}
+          </div>
+        </div>
+
+        <!-- Stats grid 2×2 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
+            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Atendidos</div>
+            <div style="color:#ffa657;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(g.atendidos)}</div>
+          </div>
+          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
+            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Sin atender</div>
+            <div style="color:#f85149;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(noAtend)}</div>
+          </div>
+          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
+            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Pob. vulnerable</div>
+            <div style="color:#8b949e;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(g.pob_vulnerable)}</div>
+          </div>
+          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
+            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Meta 20%</div>
+            <div style="color:#79c0ff;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(meta20)}</div>
+          </div>
+        </div>
+
+      </div>
+    `;
   };
 }
+
 
 
 /* ─── NUTRICHIHUAHUA ─── */
