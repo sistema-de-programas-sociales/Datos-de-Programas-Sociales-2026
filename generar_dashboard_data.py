@@ -666,6 +666,7 @@ def build_dashboard_data(raw, excel_path=None):
         })
 
     indicadores_data = []
+    pivot_mun_prog = raw.get('pivot_mun_prog', {})  # {inst_norm: {prog_norm: {mun_norm: count}}}
     for ind in indicadores:
         def _int(v): return int(sf(v)) if v else None
         def _flt(v): return round(float(v), 2) if v else None
@@ -682,6 +683,12 @@ def build_dashboard_data(raw, excel_path=None):
         # Limpiar clave inválida
         if not _clave or _clave in ('N/A','n/a','#DIV/0!','#N/A','') or _clave.startswith('#'):
             _clave = None
+        # Beneficiarios por municipio desde pivot AJ (fuente exacta)
+        inst_norm = _norm_mun(ind.get('institucion', ''))
+        prog_norm = _norm_mun(nombre_prog_key)
+        prog_norm_alias = _norm_mun(nombre_prog_alias)
+        _inst_pivot = pivot_mun_prog.get(inst_norm, {})
+        _muns_benef = _inst_pivot.get(prog_norm, _inst_pivot.get(prog_norm_alias, {}))
         indicadores_data.append({
             'inst':          ind.get('institucion', ''),
             'clave':         _clave,
@@ -705,6 +712,7 @@ def build_dashboard_data(raw, excel_path=None):
             'rangos':        {k: int(_rp.get(k, 0)) for k in _rk2},
             'sin_datos_edad': _sin_datos_rango,
             'municipios':    _mp,
+            'muns_benef':    _muns_benef,  # {mun_norm: count} desde pivot AJ
         })
 
     # ── Presupuesto global (igual que reporte general) ────────────────────────

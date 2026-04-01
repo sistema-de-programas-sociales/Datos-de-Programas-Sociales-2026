@@ -12028,7 +12028,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "ICHIJUV",
@@ -12060,7 +12063,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "ICHIJUV",
@@ -12102,7 +12108,19 @@ window.DASHBOARD_DATA = {
         "MEOQUI",
         "NONOAVA",
         "ROSARIO"
-      ]
+      ],
+      "muns_benef": {
+        "ALDAMA": 2,
+        "CAMARGO": 1,
+        "CHIHUAHUA": 1290,
+        "CUAUHTEMOC": 1,
+        "HIDALGO DEL PARRAL": 155,
+        "JUAREZ": 221,
+        "MEOQUI": 2,
+        "NO IDENTIFICADO": 1,
+        "NONOAVA": 1,
+        "ROSARIO": 2
+      }
     },
     {
       "inst": "ICHD",
@@ -12134,7 +12152,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12202,7 +12223,22 @@ window.DASHBOARD_DATA = {
         "TEMOSACHIC",
         "URIQUE",
         "URUACHI"
-      ]
+      ],
+      "muns_benef": {
+        "ALDAMA": 5,
+        "ALLENDE": 1,
+        "BALLEZA": 41,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 33,
+        "BOCOYNA": 160,
+        "CAMARGO": 3,
+        "CARICHI": 24,
+        "CHIHUAHUA": 312,
+        "CHINIPAS": 4,
+        "CUAUHTEMOC": 34,
+        "CUSIHUIRIACHI": 1,
+        "DELICIAS": 1,
+        "EL TULE": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12234,7 +12270,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12266,7 +12305,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12298,7 +12340,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12330,7 +12375,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12362,7 +12410,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SPyCI",
@@ -12394,7 +12445,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "DIF",
@@ -12495,7 +12547,31 @@ window.DASHBOARD_DATA = {
         "URIQUE",
         "URUACHI",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "AHUMADA": 96,
+        "ALDAMA": 166,
+        "ALLENDE": 55,
+        "AQUILES SERDAN": 95,
+        "ASCENSION": 89,
+        "BACHINIVA": 62,
+        "BALLEZA": 816,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 345,
+        "BOCOYNA": 454,
+        "BUENAVENTURA": 620,
+        "CAMARGO": 111,
+        "CARICHI": 465,
+        "CASAS GRANDES": 188,
+        "CHIHUAHUA": 2693,
+        "CHINIPAS": 482,
+        "CORONADO": 114,
+        "COYAME DEL SOTOL": 42,
+        "CUAUHTEMOC": 419,
+        "CUSIHUIRIACHI": 60,
+        "DELICIAS": 142,
+        "DR. BELISARIO DOMINGUEZ": 11,
+        "EL TULE": 115
+      }
     },
     {
       "inst": "DIF",
@@ -12531,7 +12607,10 @@ window.DASHBOARD_DATA = {
         "CHIHUAHUA",
         "FORANEO",
         "JUAREZ"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 60
+      }
     },
     {
       "inst": "DIF",
@@ -12589,7 +12668,22 @@ window.DASHBOARD_DATA = {
         "SAUCILLO",
         "URIQUE",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "AHUMADA": 2,
+        "ALDAMA": 4,
+        "AQUILES SERDAN": 2,
+        "BACHINIVA": 1,
+        "BALLEZA": 1,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 1,
+        "BOCOYNA": 3,
+        "CAMARGO": 11,
+        "CARICHI": 1,
+        "CHIHUAHUA": 764,
+        "CORONADO": 1,
+        "CUAUHTEMOC": 184,
+        "CUSIHUIRIACHI": 4
+      }
     },
     {
       "inst": "DIF",
@@ -12659,7 +12753,24 @@ window.DASHBOARD_DATA = {
         "URIQUE",
         "URUACHI",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "AHUMADA": 1,
+        "ALDAMA": 10,
+        "AQUILES SERDAN": 7,
+        "BACHINIVA": 1,
+        "BALLEZA": 1,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 2,
+        "BOCOYNA": 8,
+        "BUENAVENTURA": 1,
+        "CARICHI": 2,
+        "CASAS GRANDES": 1,
+        "CHIHUAHUA": 461,
+        "CHINIPAS": 4,
+        "CORONADO": 1,
+        "CUAUHTEMOC": 4,
+        "DELICIAS": 3
+      }
     },
     {
       "inst": "DIF",
@@ -12693,7 +12804,10 @@ window.DASHBOARD_DATA = {
       "sin_datos_edad": 0,
       "municipios": [
         "CHIHUAHUA"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 238
+      }
     },
     {
       "inst": "DIF",
@@ -12725,7 +12839,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "DIF",
@@ -12757,7 +12874,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "DIF",
@@ -12795,7 +12913,14 @@ window.DASHBOARD_DATA = {
         "HIDALGO DEL PARRAL",
         "PRAXEDIS G. GUERRERO",
         "URIQUE"
-      ]
+      ],
+      "muns_benef": {
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 31,
+        "GUACHOCHI": 32,
+        "HIDALGO DEL PARRAL": 18,
+        "PRAXEDIS G. GUERRERO": 32,
+        "URIQUE": 21
+      }
     },
     {
       "inst": "DIF",
@@ -12827,7 +12952,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "ICHDII",
@@ -12864,7 +12990,13 @@ window.DASHBOARD_DATA = {
         "GUACHOCHI",
         "JUAREZ",
         "NONOAVA"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 13,
+        "GUACHOCHI": 4,
+        "JUAREZ": 9,
+        "NONOAVA": 1
+      }
     },
     {
       "inst": "SDHyBC",
@@ -12901,7 +13033,13 @@ window.DASHBOARD_DATA = {
         "CHIHUAHUA",
         "JUAREZ",
         "SAUCILLO"
-      ]
+      ],
+      "muns_benef": {
+        "CAMARGO": 1,
+        "CHIHUAHUA": 309,
+        "JUAREZ": 27,
+        "SAUCILLO": 1
+      }
     },
     {
       "inst": "SDHyBC",
@@ -12940,7 +13078,15 @@ window.DASHBOARD_DATA = {
         "HIDALGO DEL PARRAL",
         "JUAREZ",
         "SAUCILLO"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 1132,
+        "CUAUHTEMOC": 121,
+        "DELICIAS": 5,
+        "HIDALGO DEL PARRAL": 197,
+        "JUAREZ": 1,
+        "SAUCILLO": 4
+      }
     },
     {
       "inst": "SDHyBC",
@@ -13003,7 +13149,39 @@ window.DASHBOARD_DATA = {
         "URIQUE",
         "URUACHI",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "ALDAMA": 75,
+        "AQUILES SERDAN": 42,
+        "BACHINIVA": 1,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 79,
+        "BOCOYNA": 138,
+        "CAMARGO": 29,
+        "CARICHI": 1,
+        "CASAS GRANDES": 76,
+        "CHIHUAHUA": 4028,
+        "CUAUHTEMOC": 219,
+        "DELICIAS": 21,
+        "GRAN MORELOS": 1,
+        "GUACHOCHI": 43,
+        "GUADALUPE Y CALVO": 148,
+        "GUERRERO": 49,
+        "HIDALGO DEL PARRAL": 279,
+        "JIMENEZ": 63,
+        "JUAREZ": 151,
+        "MADERA": 41,
+        "MAGUARICHI": 42,
+        "MATAMOROS": 96,
+        "MEOQUI": 31,
+        "MORELOS": 1,
+        "NAMIQUIPA": 117,
+        "NONOAVA": 23,
+        "OJINAGA": 37,
+        "SAN FRANCISCO DE BORJA": 1,
+        "URIQUE": 57,
+        "URUACHI": 1,
+        "VALLE DE ZARAGOZA": 1
+      }
     },
     {
       "inst": "SDHyBC",
@@ -13037,7 +13215,10 @@ window.DASHBOARD_DATA = {
       "sin_datos_edad": 0,
       "municipios": [
         "CHIHUAHUA"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 4
+      }
     },
     {
       "inst": "SDHyBC",
@@ -13072,7 +13253,11 @@ window.DASHBOARD_DATA = {
       "municipios": [
         "ALDAMA",
         "CHIHUAHUA"
-      ]
+      ],
+      "muns_benef": {
+        "ALDAMA": 1,
+        "CHIHUAHUA": 10
+      }
     },
     {
       "inst": "SDHyBC",
@@ -13106,7 +13291,10 @@ window.DASHBOARD_DATA = {
       "sin_datos_edad": 0,
       "municipios": [
         "JUAREZ"
-      ]
+      ],
+      "muns_benef": {
+        "JUAREZ": 2099
+      }
     },
     {
       "inst": "SDHyBC",
@@ -13202,7 +13390,31 @@ window.DASHBOARD_DATA = {
         "URIQUE",
         "URUACHI",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "AHUMADA": 4,
+        "ALDAMA": 5,
+        "ALLENDE": 5,
+        "AQUILES SERDAN": 4,
+        "ASCENSION": 8,
+        "BACHINIVA": 6,
+        "BALLEZA": 7,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 4,
+        "BOCOYNA": 5,
+        "BUENAVENTURA": 11,
+        "CAMARGO": 11,
+        "CARICHI": 4,
+        "CASAS GRANDES": 6,
+        "CHIHUAHUA": 288,
+        "CHINIPAS": 4,
+        "CORONADO": 2,
+        "COYAME DEL SOTOL": 1,
+        "CUAUHTEMOC": 26,
+        "CUSIHUIRIACHI": 7,
+        "DELICIAS": 29,
+        "DR. BELISARIO DOMINGUEZ": 4,
+        "EL TULE": 2
+      }
     },
     {
       "inst": "RURAL",
@@ -13234,7 +13446,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "RURAL",
@@ -13266,7 +13481,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "RURAL",
@@ -13298,7 +13514,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "RURAL",
@@ -13330,7 +13549,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "RURAL",
@@ -13362,7 +13582,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "RURAL",
@@ -13394,7 +13617,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "RURAL",
@@ -13426,7 +13652,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "RURAL",
@@ -13458,7 +13687,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "RURAL",
@@ -13490,7 +13720,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "TRABAJO",
@@ -13522,7 +13753,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "CULTURA",
@@ -13556,7 +13790,11 @@ window.DASHBOARD_DATA = {
       "sin_datos_edad": 1,
       "municipios": [
         "CHIHUAHUA"
-      ]
+      ],
+      "muns_benef": {
+        "CHIHUAHUA": 30,
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "COESPO",
@@ -13588,7 +13826,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "COESVI",
@@ -13620,7 +13861,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     },
     {
       "inst": "COESVI",
@@ -13652,7 +13894,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SALUD",
@@ -13754,7 +13999,31 @@ window.DASHBOARD_DATA = {
         "URIQUE",
         "URUACHI",
         "VALLE DE ZARAGOZA"
-      ]
+      ],
+      "muns_benef": {
+        "AHUMADA": 1198,
+        "ALDAMA": 2626,
+        "ALLENDE": 147,
+        "AQUILES SERDAN": 335,
+        "ASCENSION": 1647,
+        "BACHINIVA": 671,
+        "BALLEZA": 1196,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 933,
+        "BOCOYNA": 2228,
+        "BUENAVENTURA": 1545,
+        "CAMARGO": 4155,
+        "CARICHI": 686,
+        "CASAS GRANDES": 946,
+        "CHIHUAHUA": 32155,
+        "CHINIPAS": 472,
+        "CORONADO": 403,
+        "COYAME DEL SOTOL": 240,
+        "CUAUHTEMOC": 8296,
+        "CUSIHUIRIACHI": 221,
+        "DELICIAS": 4396,
+        "DR. BELISARIO DOMINGUEZ": 203,
+        "EL TULE": 342
+      }
     },
     {
       "inst": "SEECH",
@@ -13786,7 +14055,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "SEyD",
@@ -13818,7 +14090,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "TURISMO",
@@ -13850,7 +14125,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "ICHIMUJ",
@@ -13882,7 +14160,10 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 1,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {
+        "NO IDENTIFICADO": 1
+      }
     },
     {
       "inst": "CECYTECH",
@@ -13914,7 +14195,8 @@ window.DASHBOARD_DATA = {
         "65+": 0
       },
       "sin_datos_edad": 0,
-      "municipios": []
+      "municipios": [],
+      "muns_benef": {}
     }
   ],
   "grupos_vulnerables": {

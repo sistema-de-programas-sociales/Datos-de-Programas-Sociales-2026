@@ -1901,6 +1901,33 @@ for inst_k in instituciones:
         'h_65_mas':     calcular_filtro(instituciones, municipios, inst_key=inst_k, sexo='h', rangos_edad=RANGOS_MAYORES),
     }
 
+def _parse_pivot_mun_prog():
+    """Lee la tabla pivot de col AJ:AK en 'Beneficiarios por Municipio'.
+    Retorna {inst_norm: {prog_norm: {mun_norm: count}}}"""
+    rows_piv = _WB_CACHE.get('Beneficiarios por Municipio', [])
+    INST_NORM_SET = {_norm(x) for x in {
+        'CECYTECH','COESPO','COESVI','DIF','ICHDII','ICHIJUV','ICHIMUJ',
+        'SALUD','SDHYBC','SPYCI','CULTURA','ICHD','RURAL','SEECH','SEYD',
+        'TRABAJO','TURISMO','SDHyBC','SPyCI'
+    }}
+    MUN_VALIDOS_NORM = {_norm(k) for k in POB_MUNICIPAL.keys()} | {_norm('NO IDENTIFICADO')}
+    result = {}
+    inst_act = prog_act = None
+    for r in rows_piv:
+        a = r[35] if len(r) > 35 else None
+        b = r[36] if len(r) > 36 else None
+        if a is None: continue
+        na = _norm(str(a))
+        if na in INST_NORM_SET:
+            inst_act = na; prog_act = None
+            result.setdefault(inst_act, {})
+        elif inst_act and na not in INST_NORM_SET and isinstance(b, (int, float)) and na not in MUN_VALIDOS_NORM:
+            prog_act = na
+            result[inst_act].setdefault(prog_act, {})
+        elif inst_act and prog_act and na in MUN_VALIDOS_NORM and isinstance(b, (int, float)) and b > 0:
+            result[inst_act][prog_act][na] = int(b)
+    return result
+
 output = {
     'gran_total':           gran_total,
     'total_apoyos_excel':   total_apoyos_excel,
@@ -1919,5 +1946,6 @@ output = {
     'localizables':         localizables,
     'indicadores':          indicadores,
     'filtros_cruzados':     filtros_cruzados,
+    'pivot_mun_prog':       _parse_pivot_mun_prog(),
 }
 print(json.dumps(output, ensure_ascii=False, default=str, indent=2))

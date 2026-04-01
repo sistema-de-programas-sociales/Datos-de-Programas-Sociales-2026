@@ -1,4 +1,3 @@
-//HOLA
 function catModal(nombre, tipo='sexo') {
   const apoyo = D.apoyos.find(a => a.nombre === nombre);
   if (!apoyo) return;
@@ -178,20 +177,23 @@ function catModal(nombre, tipo='sexo') {
       var byN = {};
       topMuns2.forEach(function(m){
         byN[m.nombre.toLowerCase().trim()] = m;
+        // También indexar por nombre normalizado (sin acentos) para match con GEO
+        var _normKey = m.nombre.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        byN[_normKey] = m;
         if (m.clave) byN[m.clave] = m;
       });
 
       L.geoJSON(GEO, {
         style: function(feat){
           var k  = feat.properties.clave;
-          var no = (feat.properties.nombre||'').toLowerCase().trim();
+          var no = (feat.properties.nombre||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
           var mu = byN[k] || byN[no];
           if (!mu || mu.total === 0) return {fillColor:'#080908',fillOpacity:1,color:'rgba(255,255,255,.15)',weight:0.7};
           return {fillColor:baseHex,fillOpacity:0.85,color:'rgba(255,255,255,.5)',weight:1.2};
         },
         onEachFeature: function(feat,layer){
           var k  = feat.properties.clave;
-          var no = (feat.properties.nombre||'').toLowerCase().trim();
+          var no = (feat.properties.nombre||'').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
           var mu = byN[k] || byN[no];
           var nomMun = feat.properties.nombre || '';
           if (!mu || mu.total === 0) {

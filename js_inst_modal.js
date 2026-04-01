@@ -208,23 +208,13 @@ function _instProgRender(p, inst, tab) {
     // GEO puede estar en window.GEO (bloque map1) o en el scope global
     var _GEO = (typeof GEO !== 'undefined') ? GEO : (window.GEO || null);
 
-    // Construir lookup de beneficiarios por municipio cruzando D.apoyos
-    var benPorMun = {}; // {normMun(nombre): {total, m, h}}
-    var progNormStr = (p.nombre||'').trim().toLowerCase();
-    (D.apoyos || []).forEach(function(a) {
-      a.instituciones.forEach(function(instObj) {
-        (instObj.programas || []).forEach(function(prog) {
-          if ((prog.nombre||'').trim().toLowerCase() === progNormStr) {
-            (a.por_municipio || []).forEach(function(mun) {
-              var k = normMun(mun.nombre||'');
-              if (!benPorMun[k]) benPorMun[k] = {total:0, m:0, h:0};
-              benPorMun[k].total += mun.total||0;
-              benPorMun[k].m     += mun.m||0;
-              benPorMun[k].h     += mun.h||0;
-            });
-          }
-        });
-      });
+    // Usar p.muns_benef del pivot AJ (fuente exacta: {mun_norm: count})
+    var benPorMun = {}; // {normMun(nombre): count}
+    var muns_benef = p.muns_benef || {};
+    // muns_benef keys ya están normalizados (uppercase sin acentos)
+    // normMun hace lowercase sin acentos — necesitamos mapear
+    Object.keys(muns_benef).forEach(function(k) {
+      benPorMun[k.toLowerCase()] = muns_benef[k];
     });
 
     var paths = '';
@@ -239,8 +229,8 @@ function _instProgRender(p, inst, tab) {
         var fill   = activo ? acc         : '#111c2b';
         var stroke = activo ? '#ffffff99' : '#ffffff22';
         var sw     = activo ? '1.2'       : '0.4';
-        var benData = benPorMun[nm] || null;
-        var benStr = benData ? String(benData.total) : '';
+        var benData = benPorMun[nm];
+        var benStr = (benData != null) ? String(benData) : '';
         var tip    = activo ? (nombreOriginal+'|||si|||'+benStr) : (nombreOriginal+'|||no|||');
         var geom = f.geometry;
         var rings = geom.type === 'Polygon' ? [geom.coordinates[0]] : geom.coordinates.map(function(p){return p[0];});
