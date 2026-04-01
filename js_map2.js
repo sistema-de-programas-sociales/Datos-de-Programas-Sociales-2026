@@ -1,6 +1,18 @@
 
 (function(){
 'use strict';
+// ── Inyectar CSS del tooltip ──────────────────────────────────────────────
+(function(){
+  var s=document.createElement('style');
+  s.textContent=
+    '.ltt{background:#0d1117!important;border:1px solid rgba(255,255,255,.12)!important;'+
+    'border-radius:7px!important;box-shadow:0 6px 24px rgba(0,0,0,.7)!important;'+
+    'color:#cdd9e5!important;padding:10px 13px!important;min-width:210px!important;'+
+    'font-family:var(--sans,system-ui)!important;line-height:1.35!important}'+
+    '.ltt::before{display:none!important}'+
+    '.leaflet-tooltip-right.ltt::before{display:none!important}';
+  document.head.appendChild(s);
+})();
 var _map=null,_gl=null,_cl='grs',_sel=null,_ready=false;
 // Overlay state: bivariado — 2 capas simultáneas
 var _ovl={active:false,layers:['grs','benef']};
@@ -182,11 +194,11 @@ function _lerp(pal,t){
   return'#'+[0,1,2].map(function(j){return Math.round(a[j]+(b[j]-a[j])*f).toString(16).padStart(2,'0');}).join('');
 }
 function _color(clave,lk){
-  var d=MD[clave]; if(!d) return '#1e2d3d';
+  var d=MD[clave]; if(!d) return '#080908';
   var cfg=LY[lk];
   if(cfg.isCat) return GRS_COL[cfg.get(d)]||'#555';
   var r=_rng(lk),v=cfg.get(d);
-  if(!v||v===0||!isFinite(v)) return '#1e2d3d';
+  if(!v||v===0||!isFinite(v)) return '#080908';
   return _lerp(PAL[cfg.pal],(v-r.min)/(r.max-r.min||1));
 }
 function _sty(feat){
@@ -254,7 +266,7 @@ function _bvRebuild(){
 }
 
 function _bvColor(clave){
-  var d=MD[clave]; if(!d) return '#1e2d3d';
+  var d=MD[clave]; if(!d) return '#080908';
   var lk1=_ovl.layers[0],lk2=_ovl.layers[1];
   if(!lk1||!lk2) return _color(clave,_cl);
   if(!_bvCache||_bvCache.lk1!==lk1||_bvCache.lk2!==lk2) _bvRebuild();
@@ -477,16 +489,38 @@ function _tt(clave){
   var d=MD[clave]; if(!d) return '';
   var cfg=LY[_cl];
   var gc=GRS_COL[d.grado_dom]||'#888';
-  var valStr=cfg.isCat?('<span style="color:'+GRS_COL[cfg.get(d)]+'">●</span> '+cfg.get(d)):('<strong style="color:#7ab8e0">'+cfg.fmt(cfg.get(d))+'</strong>');
-  return'<div style="font-weight:700;font-size:16px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:5px">'+d.nombre+'</div>'+
-    '<div style="margin-bottom:4px;font-size:15px">'+valStr+' <span style="font-size:13px;opacity:.6">'+cfg.label+'</span></div>'+
-    '<div style="display:flex;align-items:center;gap:5px;margin-bottom:3px">'+
-      '<div style="width:8px;height:8px;border-radius:2px;background:'+gc+'"></div>'+
-      '<span style="font-size:14px">Rezago <strong>'+d.grado_dom+'</strong></span></div>'+
-    '<div style="font-size:14px;margin-bottom:2px">Benef: <strong>'+_f(d.benef)+'</strong> · Cob: <strong>'+d.cob_pob+'%</strong></div>'+
-    '<div style="font-size:14px;margin-bottom:2px">Vuln: <strong>'+d.idx_vulnerabilidad+'/100</strong> · Urgencia: <strong>'+d.idx_urgencia.toFixed(0)+'/100</strong></div>'+
-    '<div style="font-size:13px;margin-top:6px;opacity:.45;font-style:italic">Click para ficha completa →</div>'+
-    (_ovl.active&&_ovl.layers.filter(function(l){return l;}).length>1?_ttOvl(d):'');
+  var palAcc=cfg.pal?PAL[cfg.pal]:null;
+  var acc=palAcc?palAcc[3]:'#4c9be8';
+  var valStr=cfg.isCat
+    ?('<span style="color:'+GRS_COL[cfg.get(d)]+'">●</span> <strong>'+cfg.get(d)+'</strong>')
+    :('<strong style="color:'+acc+'">'+cfg.fmt(cfg.get(d))+'</strong>');
+
+  return (
+    '<div style="height:2px;background:'+acc+';border-radius:2px 2px 0 0;margin:-1px -1px 8px -1px"></div>'+
+    '<div style="font-weight:800;font-size:14px;letter-spacing:.4px;color:#e6edf3;margin-bottom:6px">'+d.nombre.toUpperCase()+'</div>'+
+    '<div style="display:flex;align-items:baseline;gap:5px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.07)">'+
+      '<span style="font-size:12px">'+valStr+'</span>'+
+      '<span style="font-size:11px;color:#6e7f8d">'+cfg.label+'</span>'+
+    '</div>'+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;margin-bottom:6px">'+
+      _ttStat('Benef.', _f(d.benef), '#e6edf3')+
+      _ttStat('Cobertura', d.cob_pob+'%', d.cob_pob>=20?'#3fb950':d.cob_pob>=8?'#ffa657':'#f85149')+
+      _ttStat('Vuln.', d.idx_vulnerabilidad+'/100', '#cdd9e5')+
+      _ttStat('Urgencia', d.idx_urgencia.toFixed(0)+'/100', '#cdd9e5')+
+    '</div>'+
+    '<div style="display:flex;align-items:center;gap:5px;padding-top:5px;border-top:1px solid rgba(255,255,255,.06)">'+
+      '<div style="width:7px;height:7px;border-radius:50%;background:'+gc+';flex-shrink:0"></div>'+
+      '<span style="font-size:11px;color:#6e7f8d">Rezago: <strong style="color:#aab">'+d.grado_dom+'</strong></span>'+
+      '<span style="margin-left:auto;font-size:10px;color:rgba(255,255,255,.2);font-style:italic">clic →</span>'+
+    '</div>'+
+    (_ovl.active&&_ovl.layers.filter(function(l){return l;}).length>1?_ttOvl(d):'')
+  );
+}
+function _ttStat(label,val,col){
+  return '<div>'+
+    '<div style="font-size:10px;color:#6e7f8d;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px">'+label+'</div>'+
+    '<div style="font-size:13px;font-weight:700;color:'+(col||'#e6edf3')+'">'+val+'</div>'+
+  '</div>';
 }
 
 function _ttOvl(d){

@@ -95,7 +95,7 @@ function catModal(nombre, tipo='sexo') {
     body.style.padding = '0';
     body.style.gap = '0';
     body.innerHTML = `
-      <div id="cat-mini-map-wrap" style="width:100%;height:260px;background:#0d1117;position:relative;flex-shrink:0;border-bottom:0.5px solid rgba(205,217,229,.08)">
+      <div id="cat-mini-map-wrap" style="width:100%;height:200px;background:#0d1117;position:relative;flex-shrink:0;border-bottom:0.5px solid rgba(205,217,229,.08)">
         <div id="cat-mini-map" style="width:100%;height:100%"></div>
         <div style="position:absolute;bottom:10px;left:12px;z-index:1000;background:rgba(8,18,32,.85);border:0.5px solid rgba(255,255,255,.12);border-radius:8px;padding:7px 12px;backdrop-filter:blur(4px)">
           <div style="font-size:10px;font-weight:700;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">Beneficiarios</div>
@@ -185,20 +185,27 @@ function catModal(nombre, tipo='sexo') {
           var k  = feat.properties.clave;
           var no = (feat.properties.nombre||'').toLowerCase().trim();
           var mu = byN[k] || byN[no];
-          if (!mu) return {fillColor:'#1a2535',fillOpacity:0.45,color:'rgba(255,255,255,.18)',weight:0.7};
-          var t = vMax2>vMin2 ? (mu.total-vMin2)/(vMax2-vMin2) : 1;
-          return {fillColor:_lerp(t,cLo,cHi),fillOpacity:0.9,color:'rgba(255,255,255,.5)',weight:1.2};
+          if (!mu || mu.total === 0) return {fillColor:'#080908',fillOpacity:1,color:'rgba(255,255,255,.15)',weight:0.7};
+          return {fillColor:baseHex,fillOpacity:0.85,color:'rgba(255,255,255,.5)',weight:1.2};
         },
         onEachFeature: function(feat,layer){
           var k  = feat.properties.clave;
           var no = (feat.properties.nombre||'').toLowerCase().trim();
           var mu = byN[k] || byN[no];
-          if (!mu) return;
+          var nomMun = feat.properties.nombre || '';
+          if (!mu || mu.total === 0) {
+            layer.bindTooltip(
+              '<div style="font-size:12px;font-weight:600;color:#6e7f8d">'+nomMun+'</div>'+
+              '<div style="font-size:10px;color:#484f58;margin-top:2px">Sin beneficiarios de este apoyo</div>',
+              {sticky:true,direction:'right',offset:[10,0],className:'ltt',opacity:0.97}
+            );
+            return;
+          }
           var pm = mu.total>0 ? Math.round(mu.m/mu.total*100) : 0;
           layer.bindTooltip(
-            '<div style="font-size:12px;font-weight:600;color:#e6edf3">'+feat.properties.nombre+'</div>'+
-            '<div style="font-size:11px;color:#79c0ff;margin-top:2px">'+fmt(mu.total)+' beneficiarios</div>'+
-            '<div style="font-size:10px;color:#8b949e;margin-top:1px">♀ '+pm+'% · ♂ '+(100-pm)+'%</div>',
+            '<div style="font-size:12px;font-weight:600;color:#e6edf3">'+nomMun+'</div>'+
+            '<div style="font-size:13px;font-weight:700;color:'+baseHex+';margin-top:3px">'+fmt(mu.total)+' beneficiarios</div>'+
+            '<div style="font-size:10px;color:#8b949e;margin-top:2px">♀ '+fmt(mu.m)+' ('+pm+'%) · ♂ '+fmt(mu.h)+' ('+(100-pm)+'%)</div>',
             {sticky:true,direction:'right',offset:[10,0],className:'ltt',opacity:0.97}
           );
         }
@@ -206,17 +213,12 @@ function catModal(nombre, tipo='sexo') {
 
       mm.fitBounds([[25.3,-109.2],[31.8,-103.0]],{padding:[6,6],maxZoom:7});
 
-      // Leyenda
+      // Leyenda — solo un item: municipios con presencia
       var legEl = document.getElementById('cat-mini-legend-items');
       if (legEl) {
-        legEl.innerHTML = [
-          {c:cLo, l:'Menos ('+fmt(vMin2)+')'},
-          {c:cHi, l:'Más ('+fmt(vMax2)+')'}
-        ].map(function(it){
-          return '<div style="display:flex;align-items:center;gap:6px">'+
-            '<div style="width:10px;height:10px;border-radius:2px;background:'+it.c+';border:0.5px solid rgba(255,255,255,.2)"></div>'+
-            '<div style="font-size:10px;color:#cdd9e5">'+it.l+'</div></div>';
-        }).join('');
+        legEl.innerHTML = '<div style="display:flex;align-items:center;gap:6px">'+
+          '<div style="width:10px;height:10px;border-radius:2px;background:'+baseHex+';border:0.5px solid rgba(255,255,255,.2)"></div>'+
+          '<div style="font-size:10px;color:#cdd9e5">Con beneficiarios</div></div>';
       }
 
       window._catMiniMap = mm;
@@ -246,6 +248,15 @@ function catModalDesgloseProg(nombre, tipo, btn) {
   container.style.gap = '8px';
   if (chev) chev.style.transform = open ? '' : 'rotate(180deg)';
   btn.style.background = open ? 'rgba(56,139,253,.08)' : 'rgba(56,139,253,.15)';
+
+  // Colapsar/expandir el mapa según si el desglose está abierto
+  var mapWrap = document.getElementById('cat-mini-map-wrap');
+  if (mapWrap) {
+    mapWrap.style.height = open ? '200px' : '120px';
+    var mapEl = document.getElementById('cat-mini-map');
+    if (mapEl) mapEl.style.height = open ? '200px' : '120px';
+    if (window._catMiniMap) setTimeout(function(){ window._catMiniMap.invalidateSize(); }, 50);
+  }
 
   if (!open && !container._built) {
     container._built = true;

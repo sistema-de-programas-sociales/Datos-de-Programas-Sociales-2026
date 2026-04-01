@@ -207,10 +207,30 @@ function _instProgRender(p, inst, tab) {
     // GEO puede estar en window.GEO (bloque map1) o en el scope global
     var _GEO = (typeof GEO !== 'undefined') ? GEO : (window.GEO || null);
 
+    // Construir lookup de beneficiarios por municipio cruzando D.apoyos
+    var benPorMun = {}; // {normMun(nombre): {total, m, h}}
+    var progNormStr = (p.nombre||'').trim().toLowerCase();
+    (D.apoyos || []).forEach(function(a) {
+      a.instituciones.forEach(function(instObj) {
+        (instObj.programas || []).forEach(function(prog) {
+          if ((prog.nombre||'').trim().toLowerCase() === progNormStr) {
+            (a.por_municipio || []).forEach(function(mun) {
+              var k = normMun(mun.nombre||'');
+              if (!benPorMun[k]) benPorMun[k] = {total:0, m:0, h:0};
+              benPorMun[k].total += mun.total||0;
+              benPorMun[k].m     += mun.m||0;
+              benPorMun[k].h     += mun.h||0;
+            });
+          }
+        });
+      });
+    });
+
     var paths = '';
     if (_GEO) {
       _GEO.features.forEach(function(f){
         var nm = normMun(f.properties.nombre || '');
+        var nombreOriginal = f.properties.nombre || '';
         // Exact match OR prefix match (e.g. GeoJSON "Batopilas" vs data "Batopilas de Manuel Gómez Morín")
         var activo = !!listaSetNorm[nm] || Object.keys(listaSetNorm).some(function(k){
           return k.indexOf(nm) === 0 || nm.indexOf(k) === 0;
@@ -218,13 +238,16 @@ function _instProgRender(p, inst, tab) {
         var fill   = activo ? acc         : '#111c2b';
         var stroke = activo ? '#ffffff99' : '#ffffff22';
         var sw     = activo ? '1.2'       : '0.4';
+        var benData = benPorMun[nm] || null;
+        var benStr = benData ? String(benData.total) : '';
+        var tip    = activo ? (nombreOriginal+'|||si|||'+benStr) : (nombreOriginal+'|||no|||');
         var geom = f.geometry;
         var rings = geom.type === 'Polygon' ? [geom.coordinates[0]] : geom.coordinates.map(function(p){return p[0];});
-        rings.forEach(function(r){ paths += '<path d="'+_ring(r)+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+sw+'"/>'; });
+        rings.forEach(function(r){ paths += '<path d="'+_ring(r)+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+sw+'" data-tip="'+tip+'" style="cursor:default"/>'; });
       });
     }
 
-    bodyHTML = '<div style="padding:0">'
+    bodyHTML = '<div style="padding:0;position:relative">'
       + '<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px 4px">'
       + '<div style="display:flex;align-items:center;gap:10px">'
       + '<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:'+acc+'"></div><span style="font-size:10px;color:#cdd9e5">Con presencia</span></div>'
@@ -232,10 +255,11 @@ function _instProgRender(p, inst, tab) {
       + '</div>'
       + '<span style="font-size:11px;color:#8b949e;font-weight:600">'+lista.length+' municipios</span>'
       + '</div>'
-      + '<div style="padding:0 12px 6px">'
-      + '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+svgW+' '+svgH+'" style="width:100%;height:auto;display:block;background:#0a1520;border-radius:8px">'
+      + '<div style="padding:0 12px 6px;position:relative">'
+      + '<svg id="inst-mun-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+svgW+' '+svgH+'" style="width:100%;height:auto;display:block;background:#0a1520;border-radius:8px">'
       + paths
       + '</svg>'
+      + '<div id="inst-mun-tip" style="display:none;position:absolute;background:#0d1117;border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:7px 11px;pointer-events:none;z-index:999;font-family:var(--sans,system-ui);min-width:150px"></div>'
       + '</div>'
       + '<div style="display:flex;flex-wrap:wrap;gap:4px;padding:2px 14px 14px">'
       + lista.map(function(mn){ return '<span style="font-size:10px;background:'+acc+'18;color:'+acc+';padding:2px 7px;border-radius:8px;border:0.5px solid '+acc+'30">'+toTitle(mn)+'</span>'; }).join('')
@@ -328,6 +352,30 @@ function _instProgRender(p, inst, tab) {
     </div>
     ${tabsHTML}
     ${bodyHTML}`;
+
+  // Activar tooltip SVG del mapa de municipios
+  if (tab === 'muns') {
+    var svg = document.getElementById('inst-mun-svg');
+    var tip = document.getElementById('inst-mun-tip');
+    if (svg && tip) {
+      svg.addEventListener('mousemove', function(e) {
+        var path = e.target.closest('path');
+        if (!path || !path.dataset.tip) { tip.style.display = 'none'; return; }
+        var parts = path.dataset.tip.split('|||');
+        var nombre = parts[0], activo = parts[1] === 'si', benCount = parts[2];
+        var rect = svg.parentElement.getBoundingClientRect();
+        tip.style.display = 'block';
+        tip.style.left = (e.clientX - rect.left + 12) + 'px';
+        tip.style.top  = (e.clientY - rect.top  - 10) + 'px';
+        tip.innerHTML = activo
+          ? '<div style="font-size:12px;font-weight:700;color:#e6edf3">' + nombre + '</div>'
+          + '<div style="font-size:13px;font-weight:700;color:' + acc + ';margin-top:3px">' + (benCount ? Number(benCount).toLocaleString('es-MX') + ' beneficiarios' : 'Con presencia') + '</div>'
+          : '<div style="font-size:12px;font-weight:600;color:#6e7f8d">' + nombre + '</div>'
+          + '<div style="font-size:10px;color:#484f58;margin-top:2px">Sin presencia</div>';
+      });
+      svg.addEventListener('mouseleave', function() { tip.style.display = 'none'; });
+    }
+  }
 
 }
 
