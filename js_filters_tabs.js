@@ -316,6 +316,22 @@ function renderVulnerables() {
   const cobGeneral = (ateT / POB_VUL * 100);
   const cobColor2 = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
 
+  // ── Datos históricos 2025 (fijos) ────────────────────────────
+  const DATA_2025 = {
+    'Mujeres':                                              621392,
+    'Hombres':                                              461573,
+    'Niños y adolescentes (0-17)':                          341473,
+    'Jovenes (18-29)':                                      170036,
+    'Adultos (30-64)':                                      367465,
+    'Personas mayores (65+)':                               110977,
+    'Personas con pobreza multidimensional':                569065,
+    'Personas en pobreza (sin contar alimentacion)':        152682,
+    'Personas con carencia alimentaria':                    416383,
+    'Personas indígenas':                                   134134,
+    'Personas con discapacidad':                             18876,
+    'Personas en situacion de vulnerabilidad y violencia familiar': 2253,
+  };
+
   container.innerHTML = `
     <style>
       .gv-card {
@@ -372,7 +388,7 @@ function renderVulnerables() {
             const fillPct = cobNum !== null ? Math.min(cobNum / 100, 1) : 0;
             const dash = (fillPct * circ).toFixed(1);
             // Barra de población relativa
-            const pobRel = Math.round((g.pob_vulnerable / maxPob) * 100);
+            const pobRel = g.atendidos > 0 ? (g.atendidos / POB_VUL * 100).toFixed(1) : 0;
             const delay = (i * 0.05).toFixed(2);
             return `<div class="gv-card${hasDatos ? '' : ' no-data'}"
               id="gv-card-${i}"
@@ -397,30 +413,44 @@ function renderVulnerables() {
                     />
                   </svg>
                   <!-- Badge porcentaje -->
-                  ${hasDatos ? `<div style="position:absolute;bottom:-4px;right:-4px;background:#0d1117;border:1px solid ${cc}55;border-radius:7px;padding:2px 6px;font-size:11px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1.3;">${cobNum.toFixed(1)}%</div>` : ''}
+                  ${hasDatos ? `<div style="position:absolute;bottom:-4px;right:-4px;background:#0d1117;border:1px solid ${cc}55;border-radius:7px;padding:2px 6px;font-size:13px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1.3;">${cobNum.toFixed(1)}%</div>` : ''}
                 </div>
                 <!-- Nombre y pop -->
                 <div style="flex:1;min-width:0">
-                  <div style="font-size:14px;font-weight:600;color:${hasDatos ? '#e6edf3' : '#6e7f8d'};line-height:1.3;margin-bottom:4px">${g.nombre}</div>
-                  <div style="font-size:14px;color:#484f58;margin-bottom:6px">Pob. vulnerable</div>
-                  <div style="font-size:15px;font-weight:700;color:#8b949e;font-family:'DM Mono',monospace">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</div>
+                  <div style="font-size:16px;font-weight:600;color:${hasDatos ? '#e6edf3' : '#6e7f8d'};line-height:1.3;margin-bottom:4px">${g.nombre}</div>
+                  <div style="font-size:16px;color:#484f58;margin-bottom:6px">Pob. vulnerable</div>
+                  <div style="font-size:17px;font-weight:700;color:#8b949e;font-family:'DM Mono',monospace">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</div>
                 </div>
               </div>
               <!-- Barra pop relativa (tamaño) -->
               <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:3px;font-size:15px;color:#484f58">
-                  <span>Peso poblacional</span>
-                  <span>${pobRel}% del mayor grupo</span>
+                <div style="display:flex;justify-content:space-between;margin-bottom:3px;font-size:17px;color:#484f58">
+                  <span style="font-size:13px;color:#6e7f8d">% atendidos / pob. vulnerable</span>
+                  <span style="font-size:13px;color:#cdd9e5;font-weight:600">${pobRel}%</span>
                 </div>
                 <div style="height:3px;background:rgba(205,217,229,.06);border-radius:2px;overflow:hidden">
                   <div style="height:100%;width:${pobRel}%;background:rgba(205,217,229,.2);border-radius:2px"></div>
                 </div>
               </div>
-              <!-- Atendidos si hay datos -->
-              ${hasDatos ? `<div style="display:flex;align-items:center;justify-content:space-between;padding-top:6px;border-top:1px solid rgba(205,217,229,.05)">
-                <span style="font-size:14px;color:#6e7f8d">Atendidos</span>
-                <span style="font-size:14px;font-weight:700;color:#ffa657;font-family:'DM Mono',monospace">${fmt(g.atendidos)}</span>
-              </div>` : `<div style="padding-top:6px;border-top:1px solid rgba(205,217,229,.04);font-size:14px;color:#484f58;text-align:center">Sin datos de cobertura</div>`}
+              <!-- Atendidos + comparativa 2025 -->
+              ${hasDatos ? (() => {
+                const at2025 = DATA_2025[g.nombre] || 0;
+                const diff2025 = at2025 > 0 ? g.atendidos - at2025 : null;
+                const diffPct = at2025 > 0 ? ((g.atendidos - at2025) / at2025 * 100) : null;
+                const diffColor = diff2025 === null ? '#484f58' : diff2025 >= 0 ? '#56d364' : '#f85149';
+                const diffSign = diff2025 !== null && diff2025 >= 0 ? '▲' : '▼';
+                let html = '<div style="display:flex;align-items:center;justify-content:space-between;padding-top:6px;border-top:1px solid rgba(205,217,229,.05)">';
+                html += '<span style="font-size:13px;color:#6e7f8d">Atendidos 2026</span>';
+                html += '<span style="font-size:15px;font-weight:700;color:#ffa657;font-family:\'DM Mono\',monospace">' + fmt(g.atendidos) + '</span>';
+                html += '</div>';
+                if (at2025 > 0) {
+                  html += '<div style="display:flex;align-items:center;justify-content:space-between;padding-top:4px;border-top:1px solid rgba(205,217,229,.04)">';
+                  html += '<span style="font-size:11px;color:#484f58">vs 2025 · ' + fmt(at2025) + '</span>';
+                  html += '<span style="font-size:11px;font-weight:700;color:' + diffColor + '">' + diffSign + ' ' + fmt(Math.abs(diff2025)) + ' (' + Math.abs(diffPct).toFixed(1) + '%)</span>';
+                  html += '</div>';
+                }
+                return html;
+              })() : '<div style="padding-top:6px;border-top:1px solid rgba(205,217,229,.04);font-size:16px;color:#484f58;text-align:center">Sin datos de cobertura</div>'}
             </div>`;
           }).join('')}
         </div>
@@ -429,38 +459,54 @@ function renderVulnerables() {
       <!-- PANEL LATERAL -->
       <div style="display:flex;flex-direction:column;gap:12px">
 
-        <!-- Gauge cobertura general -->
-        <div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px;text-align:center">
-          <div style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:14px">COBERTURA GENERAL</div>
-          <svg viewBox="0 0 120 72" style="width:100%;max-width:170px;display:block;margin:0 auto">
-            <path d="M 16 62 A 44 44 0 0 1 104 62" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="10" stroke-linecap="round"/>
-            ${(() => {
-              const pFill = Math.min(cobGeneral / 100, 1);
-              const r = 44, cx = 60, cy = 62;
-              const startRad = Math.PI;
-              const endRad = startRad + pFill * Math.PI;
-              const ex = cx + r * Math.cos(Math.PI + pFill * Math.PI);
-              const ey = cy + r * Math.sin(Math.PI + pFill * Math.PI);
-              const large = pFill > 0.5 ? 1 : 0;
-              return `<path d="M 16 62 A 44 44 0 ${large} 1 ${ex.toFixed(2)} ${ey.toFixed(2)}" fill="none" stroke="${cobColor2}" stroke-width="10" stroke-linecap="round"/>`;
-            })()}
-            <text x="12" y="74" font-size="8" fill="#484f58" font-family="DM Mono,monospace">0%</text>
-            <text x="98" y="74" font-size="8" fill="#484f58" font-family="DM Mono,monospace">100%</text>
-            <line x1="60" y1="22" x2="60" y2="30" stroke="rgba(205,217,229,.12)" stroke-width="1.5"/>
-          </svg>
-          <div style="font-size:30px;font-weight:800;color:${cobColor2};font-family:'DM Mono',monospace;margin-top:4px">${cobGeneral.toFixed(1)}%</div>
-          <div style="font-size:15px;color:#6e7f8d;margin-top:2px">de ${fmt(POB_VUL)} en situación vulnerable</div>
+        <!-- Cobertura general card -->
+        <div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
+          <!-- Header -->
+          <div style="padding:11px 16px;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
+            <div style="width:3px;height:13px;background:${cobColor2};border-radius:2px"></div>
+            <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">COBERTURA · 2026</span>
+          </div>
+          <!-- Donut SVG con número centrado -->
+          <div style="padding:20px 16px 12px;display:flex;justify-content:center;position:relative">
+            <svg viewBox="0 0 200 110" style="width:100%;max-width:240px;display:block;overflow:visible">
+              <!-- Track semicircle -->
+              <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="18" stroke-linecap="round"/>
+              <!-- Colored fill -->
+              ${(() => {
+                const p = Math.min(cobGeneral/100, 1);
+                const r = 80, cx = 100, cy = 100;
+                const ex = cx + r * Math.cos(Math.PI + p * Math.PI);
+                const ey = cy + r * Math.sin(Math.PI + p * Math.PI);
+                const lg = p > 0.5 ? 1 : 0;
+                return `<path d="M 20 100 A 80 80 0 ${lg} 1 ${ex.toFixed(1)} ${ey.toFixed(1)}" fill="none" stroke="${cobColor2}" stroke-width="18" stroke-linecap="round"/>`;
+              })()}
+              <!-- Número centrado dentro del arco -->
+              <text x="100" y="92" text-anchor="middle" font-size="32" font-weight="900" fill="${cobColor2}" font-family="DM Mono,monospace">${cobGeneral.toFixed(1)}%</text>
+              <text x="100" y="108" text-anchor="middle" font-size="10" fill="#6e7f8d" font-family="system-ui">de pob. vulnerable</text>
+            </svg>
+          </div>
+          <!-- Stats grid -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(205,217,229,.06)">
+            <div style="background:#161b22;padding:12px 14px;text-align:center">
+              <div style="font-size:12px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Atendidos</div>
+              <div style="font-size:18px;font-weight:800;color:${cobColor2};font-family:'DM Mono',monospace">${fmt(ateT)}</div>
+            </div>
+            <div style="background:#161b22;padding:12px 14px;text-align:center">
+              <div style="font-size:12px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Sin atender</div>
+              <div style="font-size:18px;font-weight:800;color:#f85149;font-family:'DM Mono',monospace">${fmt(POB_VUL-ateT)}</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Panel detalle (vacío inicial) -->
+                <!-- Panel detalle (vacío inicial) -->
         <div id="gv-detail-panel" style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
           <div style="padding:11px 16px;background:#161b22;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
             <div style="width:3px;height:13px;background:#484f58;border-radius:2px"></div>
-            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span>
+            <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span>
           </div>
           <div style="padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;color:#484f58">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".3"><path d="M15 15l5 5M10 17A7 7 0 1 0 10 3a7 7 0 0 0 0 14z"/></svg>
-            <span style="font-size:13px;text-align:center;line-height:1.5;max-width:180px">Haz clic en una tarjeta para ver su análisis</span>
+            <span style="font-size:15px;text-align:center;line-height:1.5;max-width:180px">Haz clic en una tarjeta para ver su análisis</span>
           </div>
         </div>
 
@@ -503,13 +549,6 @@ function renderVulnerables() {
       .sort((a,b) => (b.atendidos/b.pob_vulnerable)-(a.atendidos/a.pob_vulnerable));
     const rank = ranked.findIndex(x => x.nombre === g.nombre) + 1;
 
-    // Meta 20%
-    const meta20  = Math.ceil(g.pob_vulnerable * 0.20);
-    const falta20 = Math.max(0, meta20 - g.atendidos);
-
-    // Progreso hacia meta
-    const progMeta = Math.min((g.atendidos / meta20) * 100, 100);
-
     document.getElementById('gv-detail-panel').innerHTML = `
       <!-- Header con imagen de fondo -->
       <div style="position:relative;height:90px;overflow:hidden;border-bottom:1px solid rgba(205,217,229,.06)">
@@ -543,20 +582,6 @@ function renderVulnerables() {
           </div>
         </div>
 
-        <!-- Progreso meta 20% -->
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px">
-            <span style="color:#6e7f8d">Progreso hacia meta 20%</span>
-            <span style="color:${cc};font-weight:700">${progMeta.toFixed(0)}%</span>
-          </div>
-          <div style="height:6px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden;position:relative">
-            <div style="height:100%;width:${progMeta}%;background:${cc};border-radius:4px"></div>
-            <div style="position:absolute;right:0;top:0;height:100%;width:1.5px;background:rgba(255,255,255,.1)"></div>
-          </div>
-          <div style="font-size:11px;color:#484f58;margin-top:4px">
-            ${falta20 > 0 ? `Faltan <strong style="color:#ffa657">${fmt(falta20)}</strong> personas para llegar al 20%` : `<span style="color:#56d364">✓ Meta 20% superada</span>`}
-          </div>
-        </div>
 
         <!-- Stats grid 2×2 -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
@@ -573,8 +598,8 @@ function renderVulnerables() {
             <div style="color:#8b949e;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(g.pob_vulnerable)}</div>
           </div>
           <div style="background:#161b22;border-radius:8px;padding:9px 11px">
-            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Meta 20%</div>
-            <div style="color:#79c0ff;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(meta20)}</div>
+            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Cobertura</div>
+            <div style="color:${cc};font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${cobNum.toFixed(1)}%</div>
           </div>
         </div>
 
