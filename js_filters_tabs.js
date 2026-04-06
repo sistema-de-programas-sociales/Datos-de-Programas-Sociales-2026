@@ -125,43 +125,7 @@ function renderProgsTable(data) {
     const iconSvg = getApoyoIcon(p.nombre + ' ' + p.inst);
     const safeName = (p.nombre||'').replace(/'/g,"\'");
 
-    return '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;height:100%">'
-      + '<div style="height:4px;background:' + cardAccColor + ';flex-shrink:0"></div>'
-      + '<div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1">'
-        + '<div style="display:flex;align-items:flex-start;gap:12px">'
-          + '<div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px">'
-            + '<div style="width:52px;height:52px;border-radius:12px;' + cardIconStyle + ';display:flex;align-items:center;justify-content:center">'
-              + '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="' + cardIconStroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + iconSvg + '</svg>'
-            + '</div>'
-            + '<div style="font-size:10px;font-weight:700;color:' + cardAccColor + ';opacity:.85;text-align:center;max-width:60px;line-height:1.2">' + (p.inst||'') + '</div>'
-          + '</div>'
-          + '<div style="flex:1;min-width:0;min-height:72px;display:flex;flex-direction:column;justify-content:center">'
-            + '<div style="font-size:11px;color:' + cardAccColor + ';font-weight:800;letter-spacing:.08em;margin-bottom:3px;font-family:\'DM Mono\',monospace">' + (p.clave||'') + '</div>'
-            + '<div style="font-size:13px;font-weight:600;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical">' + toTitle(p.nombre) + '</div>'
-          + '</div>'
-        + '</div>'
-        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'
-        + '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">'
-          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
-            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (unicos > 0 ? unicos.toLocaleString('es-MX') : '0') + '</div>'
-            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Beneficiarios</div>'
-          + '</div>'
-          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
-            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (nMuns > 0 ? nMuns : '—') + '</div>'
-            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Municipios</div>'
-          + '</div>'
-          + '<div style="text-align:center;padding:0 8px">'
-            + '<div style="font-size:16px;font-weight:700;color:' + cardAccColor + '">' + rangoLabel + '</div>'
-            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Rango Mayor</div>'
-          + '</div>'
-        + '</div>'
-        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'
-        + '<button onclick="progModal(\''+p.clave+'\')" style="width:100%;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:' + cardAccColor + '12;border:0.5px solid ' + cardAccColor + '35;border-radius:8px;color:' + cardAccColor + ';font-size:12px;font-weight:600;cursor:pointer">'
-          + '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
-          + ' Más datos'
-        + '</button>'
-      + '</div>'
-    + '</div>';
+    return '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;height:100%">'      + '<div style="height:4px;background:' + cardAccColor + ';flex-shrink:0"></div>'      + '<div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1">'        + '<div style="display:flex;align-items:flex-start;gap:12px">'          + '<div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px">'            + '<div style="width:52px;height:52px;border-radius:12px;' + cardIconStyle + ';display:flex;align-items:center;justify-content:center">'              + '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="' + cardIconStroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + iconSvg + '</svg>'            + '</div>'            + '<div style="font-size:10px;font-weight:700;color:' + cardAccColor + ';text-align:center;max-width:60px;line-height:1.2">' + (p.inst||'') + '</div>'          + '</div>'          + '<div style="flex:1;min-width:0;min-height:72px;display:flex;flex-direction:column;justify-content:center">'            + '<div style="font-size:11px;color:' + cardAccColor + ';font-weight:800;letter-spacing:.08em;margin-bottom:3px;font-family:\'DM Mono\',monospace">' + (p.clave||'') + '</div>'            + '<div style="font-size:13px;font-weight:600;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical">' + toTitle(p.nombre) + '</div>'          + '</div>'        + '</div>'        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'        + '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">'          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (unicos > 0 ? unicos.toLocaleString('es-MX') : '0') + '</div>'            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Beneficiarios</div>'          + '</div>'          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (nMuns > 0 ? nMuns : '—') + '</div>'            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Municipios</div>'          + '</div>'          + '<div style="text-align:center;padding:0 8px">'            + '<div style="font-size:16px;font-weight:700;color:' + cardAccColor + '">' + rangoLabel + '</div>'            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Rango Mayor</div>'          + '</div>'        + '</div>'        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'        + '<button onclick="progModal(\''+p.clave+'\')" style="width:100%;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:' + cardAccColor + '12;border:0.5px solid ' + cardAccColor + '35;border-radius:8px;color:' + cardAccColor + ';font-size:12px;font-weight:600;cursor:pointer">'          + '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'          + ' Más datos'        + '</button>'      + '</div>'    + '</div>';
   }).join('');
 
   document.getElementById('prog-tbody').innerHTML = out;
@@ -241,370 +205,261 @@ function showTab(name, btn) {
 }
 
 /* ─── GRUPOS VULNERABLES ─── */
-// ═══════════════════════════════════════════════════════════════
-//  GRUPOS VULNERABLES · REDISEÑO COMPLETO
-//  Concepto: Mapa de calor radial + tarjetas interactivas
-//  Sin tablas. Sin barras horizontales clásicas.
-// ═══════════════════════════════════════════════════════════════
-
 function renderVulnerables() {
   const gv = D.grupos_vulnerables;
   if (!gv) return;
-
   const POB_VUL = D._meta?.pob_vulnerable || 1792324;
   const ateT    = D.general.total_benef;
   const grupos  = gv.grupos || [];
-
-  // ── KPIs strip ───────────────────────────────────────────────
   const gruposConCob = grupos.filter(g =>
     g.pob_vulnerable > 0 && g.atendidos > 0 &&
     !g.nombre.toLowerCase().includes('muj') &&
     !g.nombre.toLowerCase().includes('hom'));
-  const grupoMax = gruposConCob.length
-    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a) : null;
-  const grupoMin = gruposConCob.length
-    ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a) : null;
-
+  const grupoMax = gruposConCob.length ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable > a.atendidos/a.pob_vulnerable ? b : a) : null;
+  const grupoMin = gruposConCob.length ? gruposConCob.reduce((a,b) => b.atendidos/b.pob_vulnerable < a.atendidos/a.pob_vulnerable ? b : a) : null;
   const s = document.getElementById('vul-kpis');
   if (s) s.innerHTML =
     kpiSS('Pob. Vulnerable', fmt(POB_VUL), 'personas en situación vulnerable', 'cr','r') +
     kpiSS('Población Atendida', fmt(ateT), pct(ateT, POB_VUL)+' de cobertura', 'cb','b') +
     (grupoMax ? kpiSS('Mayor Cobertura · '+grupoMax.nombre, pct(grupoMax.atendidos, grupoMax.pob_vulnerable), fmt(grupoMax.atendidos)+' atendidos', 'cgr','gr') : '') +
     (grupoMin ? kpiSS('Menor Cobertura · '+grupoMin.nombre, pct(grupoMin.atendidos, grupoMin.pob_vulnerable), fmt(grupoMin.atendidos)+' atendidos', 'cm','m') : '');
-
   const badge = document.getElementById('vul-badge-count');
   if (badge) badge.textContent = grupos.length + ' grupos';
-
-  // ── Paleta semáforo ──────────────────────────────────────────
   function cobColor(p) {
-    if (p === null) return '#2a2f3a';
-    if (p >= 20)   return '#56d364';
-    if (p >= 8)    return '#ffa657';
-    if (p > 0)     return '#f85149';
+    if (p === null || p === undefined) return '#2a2f3a';
+    if (p >= 20) return '#56d364';
+    if (p >= 8)  return '#ffa657';
+    if (p > 0)   return '#f85149';
     return '#2a2f3a';
   }
 
-  // ── Imágenes por grupo ──────────────────────────────────────
+  const cobGeneral = (ateT / POB_VUL * 100);
+  const cobColor2 = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
+
+  const DATA_2025 = {
+    'Mujeres': 621392, 'Hombres': 461573,
+    'Niños y adolescentes (0-17)': 341473, 'Jovenes (18-29)': 170036,
+    'Adultos (30-64)': 367465, 'Personas mayores (65+)': 110977,
+    'Personas con pobreza multidimensional': 569065,
+    'Personas en pobreza (sin contar alimentacion)': 152682,
+    'Personas con carencia alimentaria': 416383,
+    'Personas indígenas': 134134, 'Personas con discapacidad': 18876,
+    'Personas en situacion de vulnerabilidad y violencia familiar': 2253,
+  };
   const GV_IMGS = {
-    'mujeres':           'imagenes/mujeres_gv.jpg',
-    'hombres':           'imagenes/hombres_gv.avif',
-    'niños':             'imagenes/017_gv.jpg',
-    'jovenes':           'imagenes/1829_gv.jpg',
-    'adultos':           'imagenes/3064_gv.avif',
-    'mayores':           'imagenes/65_gv.jpg',
-    'multidimensional':  'imagenes/personaspobrezam_gv.webp',
-    'sin contar':        'imagenes/pobrezaalim_gv.webp',
-    'alimentaria':       'imagenes/carenciaalim_gv.webp',
-    'indígenas':         'imagenes/indigenas_gv.jpg',
-    'discapacidad':      'imagenes/discapacidad_gv.jpeg',
-    'violencia':         'imagenes/famvuln_gv.jpg',
+    'mujeres':          'imagenes/mujeres_gv.jpg',
+    'hombres':          'imagenes/hombres_gv.avif',
+    'ni':               'imagenes/017_gv.jpg',
+    'jovenes':          'imagenes/1829_gv.jpg',
+    'adultos':          'imagenes/3064_gv.avif',
+    'mayores':          'imagenes/65_gv.jpg',
+    'multidimensional': 'imagenes/personaspobrezam_gv.webp',
+    'sin contar':       'imagenes/pobrezaalim_gv.webp',
+    'alimentaria':      'imagenes/carenciaalim_gv.webp',
+    'indígenas':        'imagenes/indigenas_gv.jpg',
+    'discapacidad':     'imagenes/discapacidad_gv.jpeg',
+    'violencia':        'imagenes/famvuln_gv.jpg',
   };
   function getImg(nombre) {
     const n = nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     for (const [k,v] of Object.entries(GV_IMGS)) {
-      const kn = k.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      if (n.includes(kn)) return v;
+      if (n.includes(k.normalize('NFD').replace(/[\u0300-\u036f]/g,''))) return v;
     }
     return null;
   }
-
-  // ── Render principal ─────────────────────────────────────────
   const container = document.getElementById('vul-main-container');
   if (!container) return;
 
-  const maxPob = Math.max(...grupos.map(g => g.pob_vulnerable || 0));
-  const cobGeneral = (ateT / POB_VUL * 100);
-  const cobColor2 = cobGeneral >= 20 ? '#56d364' : cobGeneral >= 8 ? '#ffa657' : '#f85149';
+  let html = '';
+  html += '<style>.gv-card{background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:18px 16px;cursor:pointer;transition:transform .18s ease,border-color .18s ease;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;}';
+  html += '.gv-card:hover{transform:translateY(-3px);border-color:rgba(205,217,229,.18);background:#1c2330;}';
+  html += '.gv-card.active{border-color:rgba(205,217,229,.3)!important;}';
+  html += '.gv-card.no-data{opacity:.55;cursor:default;}.gv-card.no-data:hover{transform:none;background:#161b22;}';
+  html += '@keyframes gv-fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.gv-card{animation:gv-fadein .35s ease both;}</style>';
+  html += '<div style="display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start">';
+  html += '<div>';
+  html += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding:0 2px">';
+  html += '<div style="display:flex;align-items:center;gap:10px">';
+  html += '<span style="font-size:17px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">GRUPOS VULNERABLES · CHIHUAHUA 2026</span>';
+  html += '<span id="vul-badge-count2" style="font-size:15px;color:#f778ba;background:rgba(247,120,186,.08);padding:2px 9px;border-radius:20px;border:0.5px solid rgba(247,120,186,.2)">'+grupos.length+' grupos</span>';
+  html += '</div>';
+  html += '<div style="display:flex;gap:10px;font-size:14px">';
+  html += '<span style="display:flex;align-items:center;gap:4px;color:#56d364"><span style="width:6px;height:6px;background:#56d364;border-radius:50%;display:inline-block"></span>≥ 20%</span>';
+  html += '<span style="display:flex;align-items:center;gap:4px;color:#ffa657"><span style="width:6px;height:6px;background:#ffa657;border-radius:50%;display:inline-block"></span>8–19%</span>';
+  html += '<span style="display:flex;align-items:center;gap:4px;color:#f85149"><span style="width:6px;height:6px;background:#f85149;border-radius:50%;display:inline-block"></span>&lt; 8%</span>';
+  html += '<span style="display:flex;align-items:center;gap:4px;color:#484f58"><span style="width:6px;height:6px;background:#484f58;border-radius:50%;display:inline-block"></span>Sin datos</span>';
+  html += '</div></div>';
+  html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">';
 
-  // ── Datos históricos 2025 (fijos) ────────────────────────────
-  const DATA_2025 = {
-    'Mujeres':                                              621392,
-    'Hombres':                                              461573,
-    'Niños y adolescentes (0-17)':                          341473,
-    'Jovenes (18-29)':                                      170036,
-    'Adultos (30-64)':                                      367465,
-    'Personas mayores (65+)':                               110977,
-    'Personas con pobreza multidimensional':                569065,
-    'Personas en pobreza (sin contar alimentacion)':        152682,
-    'Personas con carencia alimentaria':                    416383,
-    'Personas indígenas':                                   134134,
-    'Personas con discapacidad':                             18876,
-    'Personas en situacion de vulnerabilidad y violencia familiar': 2253,
-  };
+  grupos.forEach(function(g, i) {
+    const cobNum = g.pob_vulnerable > 0 && g.atendidos > 0 ? (g.atendidos / g.pob_vulnerable * 100) : null;
+    const hasDatos = cobNum !== null;
+    const cc = cobNum === null ? '#2a2f3a' : cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
+    const ringR = 36, circ = 2 * Math.PI * ringR;
+    const dash = hasDatos ? (Math.min(cobNum/100,1)*circ).toFixed(1) : '0';
+    const pobRel = g.atendidos > 0 ? (g.atendidos / POB_VUL * 100).toFixed(1) : 0;
+    const delay = (i * 0.05).toFixed(2);
+    const imgSrc = getImg(g.nombre);
+    const at2025 = DATA_2025[g.nombre] || 0;
+    const diff25 = hasDatos && at2025 > 0 ? g.atendidos - at2025 : null;
+    const diffPct25 = diff25 !== null ? (diff25 / at2025 * 100) : null;
+    const isUp25 = diff25 !== null && diff25 >= 0;
+    const dCol25 = diff25 === null ? '#484f58' : isUp25 ? '#56d364' : '#f85149';
+    const maxB = Math.max(g.atendidos || 0, at2025) || 1;
+    const w26b = g.atendidos > 0 ? Math.round(g.atendidos / maxB * 100) : 0;
+    const w25b = at2025 > 0 ? Math.round(at2025 / maxB * 100) : 0;
 
-  container.innerHTML = `
-    <style>
-      .gv-card {
-        background: #161b22;
-        border: 1px solid rgba(205,217,229,.08);
-        border-radius: 14px;
-        padding: 18px 16px;
-        cursor: pointer;
-        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    html += '<div class="gv-card'+(hasDatos?'':' no-data')+'" id="gv-card-'+i+'" style="animation-delay:'+delay+'s" '+(hasDatos?'onclick="gvSelectCard('+i+')"':'')+' >';
+    html += '<div style="display:flex;align-items:center;gap:12px">';
+    html += '<div style="position:relative;flex-shrink:0;width:88px;height:88px">';
+    html += '<div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">';
+    if (imgSrc) html += '<img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover;opacity:'+(hasDatos?'1':'0.35')+'" onerror="this.style.display=\'none\'"/>';
+    html += '</div>';
+    html += '<svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">';
+    html += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.08)" stroke-width="7"/>';
+    html += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="'+cc+'" stroke-width="7" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 44 44)" '+(hasDatos?'':'opacity=".25"')+'/>';
+    html += '</svg>';
+    if (hasDatos) html += '<div style="position:absolute;bottom:-4px;right:-4px;background:#0d1117;border:1px solid '+cc+'55;border-radius:7px;padding:2px 6px;font-size:15px;font-weight:800;color:'+cc+';font-family:DM Mono,monospace;line-height:1.3;">'+cobNum.toFixed(1)+'%</div>';
+    html += '</div>';
+    html += '<div style="flex:1;min-width:0">';
+    html += '<div style="font-size:17px;font-weight:600;color:'+(hasDatos?'#e6edf3':'#6e7f8d')+';line-height:1.3;margin-bottom:4px">'+g.nombre+'</div>';
+    html += '<div style="font-size:15px;color:#484f58;margin-bottom:4px">Pob. vulnerable</div>';
+    html += '<div style="font-size:17px;font-weight:700;color:#8b949e;font-family:DM Mono,monospace">'+(g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—')+'</div>';
+    html += '</div></div>';
+    html += '<div><div style="display:flex;justify-content:space-between;margin-bottom:3px">';
+    html += '<span style="font-size:14px;color:#6e7f8d">% atendidos / pob. vulnerable</span>';
+    html += '<span style="font-size:14px;color:#cdd9e5;font-weight:600">'+pobRel+'%</span></div>';
+    html += '<div style="height:3px;background:rgba(205,217,229,.06);border-radius:2px;overflow:hidden">';
+    html += '<div style="height:100%;width:'+pobRel+'%;background:rgba(205,217,229,.2);border-radius:2px"></div></div></div>';
+    if (hasDatos) {
+      html += '<div style="padding-top:8px;border-top:1px solid rgba(205,217,229,.05)">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">';
+      html += '<span style="font-size:13px;font-weight:700;letter-spacing:.06em;color:#8b949e;text-transform:uppercase">2026 vs 2025</span>';
+      if (diff25 !== null) html += '<span style="font-size:13px;font-weight:800;color:'+dCol25+';background:'+dCol25+'18;padding:1px 7px;border-radius:4px">'+(isUp25?'▲':'▼')+' '+Math.abs(diffPct25).toFixed(1)+'%</span>';
+      html += '</div>';
+      html += '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">';
+      html += '<span style="font-size:12px;font-weight:700;color:#ffa657;min-width:28px">2026</span>';
+      html += '<div style="flex:1;height:7px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden">';
+      html += '<div style="height:100%;width:'+w26b+'%;background:#ffa657;border-radius:4px"></div></div>';
+      html += '<span style="font-size:13px;font-weight:700;color:#ffa657;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(g.atendidos)+'</span></div>';
+      if (at2025 > 0) {
+        html += '<div style="display:flex;align-items:center;gap:6px">';
+        html += '<span style="font-size:12px;font-weight:700;color:#6e7f8d;min-width:28px">2025</span>';
+        html += '<div style="flex:1;height:7px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden">';
+        html += '<div style="height:100%;width:'+w25b+'%;background:#6e7f8d;border-radius:4px;opacity:.6"></div></div>';
+        html += '<span style="font-size:13px;font-weight:700;color:#6e7f8d;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(at2025)+'</span></div>';
       }
-      .gv-card:hover { transform: translateY(-3px); border-color: rgba(205,217,229,.18); background: #1c2330; }
-      .gv-card.active { border-color: rgba(205,217,229,.3) !important; }
-      .gv-card.no-data { opacity: .55; cursor: default; }
-      .gv-card.no-data:hover { transform: none; }
-      .gv-ring-track { fill: none; stroke: rgba(205,217,229,.07); }
-      .gv-ring-fill  { fill: none; stroke-linecap: round; transition: stroke-dasharray .6s cubic-bezier(.4,0,.2,1); }
-      @keyframes gv-fadein { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
-      .gv-card { animation: gv-fadein .35s ease both; }
-    </style>
+      html += '</div>';
+    } else {
+      html += '<div style="padding-top:6px;border-top:1px solid rgba(205,217,229,.04);font-size:16px;color:#484f58;text-align:center">Sin datos de cobertura</div>';
+    }
+    html += '</div>';
+  });
 
-    <div style="display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start">
+  html += '</div></div>';
 
-      <!-- CUADRÍCULA DE TARJETAS -->
-      <div>
-        <!-- Header strip -->
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding:0 2px">
-          <div style="display:flex;align-items:center;gap:10px">
-            <span style="font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e">GRUPOS VULNERABLES · CHIHUAHUA 2026</span>
-            <span id="vul-badge-count" style="font-size:15px;color:#f778ba;background:rgba(247,120,186,.08);padding:2px 9px;border-radius:20px;border:0.5px solid rgba(247,120,186,.2)">${grupos.length} grupos</span>
-          </div>
-          <div style="display:flex;gap:10px;font-size:14px">
-            <span style="display:flex;align-items:center;gap:4px;color:#56d364"><span style="width:6px;height:6px;background:#56d364;border-radius:50%;display:inline-block"></span>≥ 20%</span>
-            <span style="display:flex;align-items:center;gap:4px;color:#ffa657"><span style="width:6px;height:6px;background:#ffa657;border-radius:50%;display:inline-block"></span>8–19%</span>
-            <span style="display:flex;align-items:center;gap:4px;color:#f85149"><span style="width:6px;height:6px;background:#f85149;border-radius:50%;display:inline-block"></span>&lt; 8%</span>
-            <span style="display:flex;align-items:center;gap:4px;color:#2a2f3a;filter:brightness(2)"><span style="width:6px;height:6px;background:#484f58;border-radius:50%;display:inline-block"></span>Sin datos</span>
-          </div>
-        </div>
+  // Panel lateral
+  const arcP2 = Math.min(cobGeneral/100,1);
+  const arcR2=80, arcCx2=100, arcCy2=100;
+  const arcEx2 = arcCx2 + arcR2*Math.cos(Math.PI+arcP2*Math.PI);
+  const arcEy2 = arcCy2 + arcR2*Math.sin(Math.PI+arcP2*Math.PI);
+  const arcLg2 = arcP2>0.5?1:0;
+  const at2025g=1083185, maxGb=Math.max(ateT,at2025g);
+  const w26g=Math.round(ateT/maxGb*100);
+  const diffG=ateT-at2025g, diffPctG=(diffG/at2025g*100);
+  const colG=diffG>=0?'#56d364':'#f85149', signG=diffG>=0?'▲':'▼';
 
-        <!-- Grid cards -->
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-          ${grupos.map((g, i) => {
-            const cobNum = g.pob_vulnerable > 0 && g.atendidos > 0
-              ? (g.atendidos / g.pob_vulnerable * 100) : null;
-            const cc = cobColor(cobNum);
-            const hasDatos = cobNum !== null;
-            // Tamaño relativo de la célula según población (normalizado 60px–88px)
-            const ringR = 36;
-            const circ = 2 * Math.PI * ringR;
-            const fillPct = cobNum !== null ? Math.min(cobNum / 100, 1) : 0;
-            const dash = (fillPct * circ).toFixed(1);
-            // Barra de población relativa
-            const pobRel = g.atendidos > 0 ? (g.atendidos / POB_VUL * 100).toFixed(1) : 0;
-            const delay = (i * 0.05).toFixed(2);
-            return `<div class="gv-card${hasDatos ? '' : ' no-data'}"
-              id="gv-card-${i}"
-              style="--gv-glow:${cc}22;animation-delay:${delay}s"
-              ${hasDatos ? `onclick="gvSelectCard(${i})"` : ''}>
-              <!-- Top: imagen + anillo -->
-              <div style="display:flex;align-items:center;gap:12px">
-                <!-- Anillo SVG con imagen -->
-                <div style="position:relative;flex-shrink:0;width:88px;height:88px">
-                  <!-- Imagen recortada en círculo -->
-                  <div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">
-                    ${getImg(g.nombre) ? `<img src="${getImg(g.nombre)}" style="width:100%;height:100%;object-fit:cover;opacity:${hasDatos ? '1' : '0.35'}" onerror="this.style.display='none'"/>` : ''}
-                  </div>
-                  <!-- Anillo encima -->
-                  <svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">
-                    <circle cx="44" cy="44" r="${ringR}" fill="none" stroke="rgba(205,217,229,.08)" stroke-width="7"/>
-                    <circle cx="44" cy="44" r="${ringR}" fill="none"
-                      stroke="${cc}" stroke-width="7" stroke-linecap="round"
-                      stroke-dasharray="${dash} ${circ.toFixed(1)}"
-                      transform="rotate(-90 44 44)"
-                      ${!hasDatos ? 'opacity=".25"' : ''}
-                    />
-                  </svg>
-                  <!-- Badge porcentaje -->
-                  ${hasDatos ? `<div style="position:absolute;bottom:-4px;right:-4px;background:#0d1117;border:1px solid ${cc}55;border-radius:7px;padding:2px 6px;font-size:13px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1.3;">${cobNum.toFixed(1)}%</div>` : ''}
-                </div>
-                <!-- Nombre y pop -->
-                <div style="flex:1;min-width:0">
-                  <div style="font-size:16px;font-weight:600;color:${hasDatos ? '#e6edf3' : '#6e7f8d'};line-height:1.3;margin-bottom:4px">${g.nombre}</div>
-                  <div style="font-size:16px;color:#484f58;margin-bottom:6px">Pob. vulnerable</div>
-                  <div style="font-size:17px;font-weight:700;color:#8b949e;font-family:'DM Mono',monospace">${g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—'}</div>
-                </div>
-              </div>
-              <!-- Barra pop relativa (tamaño) -->
-              <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:3px;font-size:17px;color:#484f58">
-                  <span style="font-size:13px;color:#6e7f8d">% atendidos / pob. vulnerable</span>
-                  <span style="font-size:13px;color:#cdd9e5;font-weight:600">${pobRel}%</span>
-                </div>
-                <div style="height:3px;background:rgba(205,217,229,.06);border-radius:2px;overflow:hidden">
-                  <div style="height:100%;width:${pobRel}%;background:rgba(205,217,229,.2);border-radius:2px"></div>
-                </div>
-              </div>
-              <!-- Atendidos + comparativa 2025 -->
-              ${hasDatos ? (() => {
-                const at2025 = DATA_2025[g.nombre] || 0;
-                const diff2025 = at2025 > 0 ? g.atendidos - at2025 : null;
-                const diffPct = at2025 > 0 ? ((g.atendidos - at2025) / at2025 * 100) : null;
-                const diffColor = diff2025 === null ? '#484f58' : diff2025 >= 0 ? '#56d364' : '#f85149';
-                const diffSign = diff2025 !== null && diff2025 >= 0 ? '▲' : '▼';
-                let html = '<div style="display:flex;align-items:center;justify-content:space-between;padding-top:6px;border-top:1px solid rgba(205,217,229,.05)">';
-                html += '<span style="font-size:13px;color:#6e7f8d">Atendidos 2026</span>';
-                html += '<span style="font-size:15px;font-weight:700;color:#ffa657;font-family:\'DM Mono\',monospace">' + fmt(g.atendidos) + '</span>';
-                html += '</div>';
-                if (at2025 > 0) {
-                  html += '<div style="display:flex;align-items:center;justify-content:space-between;padding-top:4px;border-top:1px solid rgba(205,217,229,.04)">';
-                  html += '<span style="font-size:11px;color:#484f58">vs 2025 · ' + fmt(at2025) + '</span>';
-                  html += '<span style="font-size:11px;font-weight:700;color:' + diffColor + '">' + diffSign + ' ' + fmt(Math.abs(diff2025)) + ' (' + Math.abs(diffPct).toFixed(1) + '%)</span>';
-                  html += '</div>';
-                }
-                return html;
-              })() : '<div style="padding-top:6px;border-top:1px solid rgba(205,217,229,.04);font-size:16px;color:#484f58;text-align:center">Sin datos de cobertura</div>'}
-            </div>`;
-          }).join('')}
-        </div>
-      </div>
+  html += '<div style="display:flex;flex-direction:column;gap:12px">';
+  html += '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">';
+  html += '<div style="padding:11px 16px;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">';
+  html += '<div style="width:3px;height:13px;background:'+cobColor2+';border-radius:2px"></div>';
+  html += '<span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">COBERTURA · 2026</span></div>';
+  html += '<div style="padding:16px 16px 0;display:flex;justify-content:center">';
+  html += '<div style="position:relative;width:100%;max-width:220px">';
+  html += '<svg viewBox="0 0 200 110" style="width:100%;display:block">';
+  html += '<path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="18" stroke-linecap="round"/>';
+  html += '<path d="M 20 100 A 80 80 0 '+arcLg2+' 1 '+arcEx2.toFixed(1)+' '+arcEy2.toFixed(1)+'" fill="none" stroke="'+cobColor2+'" stroke-width="18" stroke-linecap="round"/>';
+  html += '</svg>';
+  html += '<div style="position:absolute;bottom:14px;left:0;right:0;text-align:center">';
+  html += '<div style="font-size:31px;font-weight:900;color:'+cobColor2+';font-family:DM Mono,monospace;line-height:1">'+cobGeneral.toFixed(1)+'<span style="font-size:17px">%</span></div>';
+  html += '<div style="font-size:12px;color:#6e7f8d;margin-top:3px">de pob. vulnerable</div>';
+  html += '</div></div></div>';
+  html += '<div style="padding:12px 16px 16px;border-top:1px solid rgba(205,217,229,.06)">';
+  html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">';
+  html += '<span style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#484f58">Beneficiarios únicos · 2026 vs 2025</span>';
+  html += '<span style="font-size:13px;font-weight:800;color:'+colG+';background:'+colG+'18;padding:2px 8px;border-radius:5px">'+signG+' '+Math.abs(diffPctG).toFixed(1)+'%</span></div>';
+  html += '<div style="display:flex;flex-direction:column;gap:6px">';
+  html += '<div style="display:flex;align-items:center;gap:8px">';
+  html += '<span style="font-size:12px;font-weight:700;color:'+colG+';min-width:28px">2026</span>';
+  html += '<div style="flex:1;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden">';
+  html += '<div style="height:100%;width:'+w26g+'%;background:'+colG+';border-radius:5px"></div></div>';
+  html += '<span style="font-size:13px;font-weight:700;color:'+colG+';font-family:DM Mono,monospace;min-width:60px;text-align:right">'+fmt(ateT)+'</span></div>';
+  html += '<div style="display:flex;align-items:center;gap:8px">';
+  html += '<span style="font-size:12px;font-weight:700;color:#6e7f8d;min-width:28px">2025</span>';
+  html += '<div style="flex:1;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden">';
+  html += '<div style="height:100%;width:100%;background:#6e7f8d;border-radius:5px;opacity:.5"></div></div>';
+  html += '<span style="font-size:13px;font-weight:700;color:#6e7f8d;font-family:DM Mono,monospace;min-width:60px;text-align:right">1,083,185</span></div>';
+  html += '</div></div></div>';
 
-      <!-- PANEL LATERAL -->
-      <div style="display:flex;flex-direction:column;gap:12px">
+  html += '<div id="gv-detail-panel" style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">';
+  html += '<div style="padding:11px 16px;background:#161b22;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">';
+  html += '<div style="width:3px;height:13px;background:#484f58;border-radius:2px"></div>';
+  html += '<span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span></div>';
+  html += '<div style="padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;color:#484f58">';
+  html += '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".3"><path d="M15 15l5 5M10 17A7 7 0 1 0 10 3a7 7 0 0 0 0 14z"/></svg>';
+  html += '<span style="font-size:15px;text-align:center;line-height:1.5;max-width:180px">Haz clic en una tarjeta para ver su análisis</span></div></div>';
+  html += '</div></div>';
 
-        <!-- Cobertura general card -->
-        <div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
-          <!-- Header -->
-          <div style="padding:11px 16px;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
-            <div style="width:3px;height:13px;background:${cobColor2};border-radius:2px"></div>
-            <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">COBERTURA · 2026</span>
-          </div>
-          <!-- Donut SVG con número centrado -->
-          <div style="padding:20px 16px 12px;display:flex;justify-content:center;position:relative">
-            <svg viewBox="0 0 200 110" style="width:100%;max-width:240px;display:block;overflow:visible">
-              <!-- Track semicircle -->
-              <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="18" stroke-linecap="round"/>
-              <!-- Colored fill -->
-              ${(() => {
-                const p = Math.min(cobGeneral/100, 1);
-                const r = 80, cx = 100, cy = 100;
-                const ex = cx + r * Math.cos(Math.PI + p * Math.PI);
-                const ey = cy + r * Math.sin(Math.PI + p * Math.PI);
-                const lg = p > 0.5 ? 1 : 0;
-                return `<path d="M 20 100 A 80 80 0 ${lg} 1 ${ex.toFixed(1)} ${ey.toFixed(1)}" fill="none" stroke="${cobColor2}" stroke-width="18" stroke-linecap="round"/>`;
-              })()}
-              <!-- Número centrado dentro del arco -->
-              <text x="100" y="92" text-anchor="middle" font-size="32" font-weight="900" fill="${cobColor2}" font-family="DM Mono,monospace">${cobGeneral.toFixed(1)}%</text>
-              <text x="100" y="108" text-anchor="middle" font-size="10" fill="#6e7f8d" font-family="system-ui">de pob. vulnerable</text>
-            </svg>
-          </div>
-          <!-- Stats grid -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(205,217,229,.06)">
-            <div style="background:#161b22;padding:12px 14px;text-align:center">
-              <div style="font-size:12px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Atendidos</div>
-              <div style="font-size:18px;font-weight:800;color:${cobColor2};font-family:'DM Mono',monospace">${fmt(ateT)}</div>
-            </div>
-            <div style="background:#161b22;padding:12px 14px;text-align:center">
-              <div style="font-size:12px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Sin atender</div>
-              <div style="font-size:18px;font-weight:800;color:#f85149;font-family:'DM Mono',monospace">${fmt(POB_VUL-ateT)}</div>
-            </div>
-          </div>
-        </div>
+  container.innerHTML = html;
 
-                <!-- Panel detalle (vacío inicial) -->
-        <div id="gv-detail-panel" style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
-          <div style="padding:11px 16px;background:#161b22;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
-            <div style="width:3px;height:13px;background:#484f58;border-radius:2px"></div>
-            <span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span>
-          </div>
-          <div style="padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;color:#484f58">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".3"><path d="M15 15l5 5M10 17A7 7 0 1 0 10 3a7 7 0 0 0 0 14z"/></svg>
-            <span style="font-size:15px;text-align:center;line-height:1.5;max-width:180px">Haz clic en una tarjeta para ver su análisis</span>
-          </div>
-        </div>
-
-      </div><!-- /panel lateral -->
-    </div>
-  `;
-
-  // ── Función de selección de tarjeta ────────────────────────
   window._gvGrupos = grupos;
-  window._gvPobVul = POB_VUL;
   window._gvAteT   = ateT;
+  window._gvPobVul = POB_VUL;
   window.gvSelectCard = function(i) {
     const g = window._gvGrupos[i];
     if (!g || !g.atendidos) return;
-
-    // Reset active state
-    document.querySelectorAll('.gv-card').forEach(c => {
-      c.classList.remove('active');
-      c.style.boxShadow = 'none';
-    });
+    document.querySelectorAll('.gv-card').forEach(c => { c.classList.remove('active'); });
     const card = document.getElementById('gv-card-'+i);
-    if (card) {
-      card.classList.add('active');
-      const cc = cobColor(g.atendidos/g.pob_vulnerable*100);
-      card.style.boxShadow = 'none';
-    }
-
-    const cobNum = (g.atendidos / g.pob_vulnerable * 100);
-    const cc = cobColor(cobNum);
+    if (card) card.classList.add('active');
+    const cobNum2 = (g.atendidos / g.pob_vulnerable * 100);
+    const cc2 = cobColor(cobNum2);
     const noAtend = g.pob_vulnerable - g.atendidos;
     const cobGenPct = (window._gvAteT / window._gvPobVul * 100);
-    const diff = cobNum - cobGenPct;
-    const diffStr = diff >= 0
-      ? `<span style="color:#56d364">+${diff.toFixed(1)}pp</span>`
-      : `<span style="color:#f85149">${diff.toFixed(1)}pp</span>`;
-
-    // Ranking
+    const diff2 = cobNum2 - cobGenPct;
+    const diffStr2 = diff2 >= 0
+      ? '<span style="color:#56d364">+'+diff2.toFixed(1)+'pp</span>'
+      : '<span style="color:#f85149">'+diff2.toFixed(1)+'pp</span>';
     const ranked = window._gvGrupos
       .filter(x => x.atendidos > 0 && x.pob_vulnerable > 0)
       .sort((a,b) => (b.atendidos/b.pob_vulnerable)-(a.atendidos/a.pob_vulnerable));
     const rank = ranked.findIndex(x => x.nombre === g.nombre) + 1;
-
-    document.getElementById('gv-detail-panel').innerHTML = `
-      <!-- Header con imagen de fondo -->
-      <div style="position:relative;height:90px;overflow:hidden;border-bottom:1px solid rgba(205,217,229,.06)">
-        ${getImg(g.nombre) ? `<img src="${getImg(g.nombre)}" style="width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.7)"/>` : ''}
-        <div style="position:absolute;inset:0;background:linear-gradient(to right,#161b22 0%,transparent 100%)"></div>
-        <div style="position:absolute;inset:0;padding:12px 16px;display:flex;align-items:center;gap:10px">
-          <div style="width:3px;height:100%;background:${cc};border-radius:2px;flex-shrink:0"></div>
-          <div>
-            <div style="font-size:11px;color:#484f58;text-transform:uppercase;letter-spacing:.12em;margin-bottom:3px">ANÁLISIS DE GRUPO</div>
-            <div style="font-size:14px;font-weight:700;color:#e6edf3;line-height:1.3">${g.nombre}</div>
-          </div>
-          <div style="margin-left:auto;background:${cc}20;border:1px solid ${cc}40;border-radius:8px;padding:4px 10px;text-align:center;flex-shrink:0">
-            <div style="font-size:18px;font-weight:800;color:${cc};font-family:'DM Mono',monospace;line-height:1">${cobNum.toFixed(1)}%</div>
-            <div style="font-size:10px;color:#6e7f8d;margin-top:1px">#${rank} ranking</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cuerpo -->
-      <div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">
-
-        <!-- vs promedio -->
-        <div style="background:#161b22;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div style="font-size:11px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">vs. promedio general</div>
-            <div style="font-size:14px;font-weight:700">${diffStr} ${Math.abs(diff) < 1 ? '· similar' : diff > 0 ? '· por encima' : '· por debajo'}</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-size:11px;color:#484f58;margin-bottom:2px">General</div>
-            <div style="font-size:13px;color:#6e7f8d;font-family:'DM Mono',monospace">${cobGenPct.toFixed(1)}%</div>
-          </div>
-        </div>
-
-
-        <!-- Stats grid 2×2 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
-            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Atendidos</div>
-            <div style="color:#ffa657;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(g.atendidos)}</div>
-          </div>
-          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
-            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Sin atender</div>
-            <div style="color:#f85149;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(noAtend)}</div>
-          </div>
-          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
-            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Pob. vulnerable</div>
-            <div style="color:#8b949e;font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${fmt(g.pob_vulnerable)}</div>
-          </div>
-          <div style="background:#161b22;border-radius:8px;padding:9px 11px">
-            <div style="color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Cobertura</div>
-            <div style="color:${cc};font-weight:700;font-family:'DM Mono',monospace;font-size:14px">${cobNum.toFixed(1)}%</div>
-          </div>
-        </div>
-
-      </div>
-    `;
+    const imgSrc3 = getImg(g.nombre);
+    const panel = document.getElementById('gv-detail-panel');
+    if (!panel) return;
+    let ph = '';
+    ph += '<div style="position:relative;height:90px;overflow:hidden;border-bottom:1px solid rgba(205,217,229,.06)">';
+    if (imgSrc3) ph += '<img src="'+imgSrc3+'" style="width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.7)" onerror="this.style.display=\'none\'"/>';
+    ph += '<div style="position:absolute;inset:0;background:linear-gradient(to right,#161b22 0%,transparent 100%)"></div>';
+    ph += '<div style="position:absolute;inset:0;padding:12px 16px;display:flex;align-items:center;gap:10px">';
+    ph += '<div style="width:3px;height:100%;background:'+cc2+';border-radius:2px;flex-shrink:0"></div>';
+    ph += '<div><div style="font-size:13px;color:#484f58;text-transform:uppercase;letter-spacing:.12em;margin-bottom:3px">ANÁLISIS DE GRUPO</div>';
+    ph += '<div style="font-size:16px;font-weight:700;color:#e6edf3;line-height:1.3">'+g.nombre+'</div></div>';
+    ph += '<div style="margin-left:auto;background:'+cc2+'20;border:1px solid '+cc2+'40;border-radius:8px;padding:4px 10px;text-align:center;flex-shrink:0">';
+    ph += '<div style="font-size:20px;font-weight:800;color:'+cc2+';font-family:DM Mono,monospace;line-height:1">'+cobNum2.toFixed(1)+'%</div>';
+    ph += '<div style="font-size:12px;color:#6e7f8d;margin-top:1px">#'+rank+' ranking</div></div></div></div>';
+    ph += '<div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">';
+    ph += '<div style="background:#161b22;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">';
+    ph += '<div><div style="font-size:13px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">vs. promedio general</div>';
+    ph += '<div style="font-size:16px;font-weight:700">'+diffStr2+' '+(Math.abs(diff2)<1?'· similar':diff2>0?'· por encima':'· por debajo')+'</div></div>';
+    ph += '<div style="text-align:right"><div style="font-size:13px;color:#484f58;margin-bottom:2px">General</div>';
+    ph += '<div style="font-size:15px;color:#6e7f8d;font-family:DM Mono,monospace">'+cobGenPct.toFixed(1)+'%</div></div></div>';
+    ph += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">';
+    ph += '<div style="background:#161b22;border-radius:8px;padding:9px 11px"><div style="color:#484f58;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Atendidos</div><div style="color:#ffa657;font-weight:700;font-family:DM Mono,monospace;font-size:16px">'+fmt(g.atendidos)+'</div></div>';
+    ph += '<div style="background:#161b22;border-radius:8px;padding:9px 11px"><div style="color:#484f58;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Sin atender</div><div style="color:#f85149;font-weight:700;font-family:DM Mono,monospace;font-size:16px">'+fmt(noAtend)+'</div></div>';
+    ph += '<div style="background:#161b22;border-radius:8px;padding:9px 11px"><div style="color:#484f58;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Pob. vulnerable</div><div style="color:#8b949e;font-weight:700;font-family:DM Mono,monospace;font-size:16px">'+fmt(g.pob_vulnerable)+'</div></div>';
+    ph += '<div style="background:#161b22;border-radius:8px;padding:9px 11px"><div style="color:#484f58;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Cobertura</div><div style="color:'+cc2+';font-weight:700;font-family:DM Mono,monospace;font-size:16px">'+cobNum2.toFixed(1)+'%</div></div>';
+    ph += '</div></div>';
+    panel.innerHTML = ph;
   };
 }
 
