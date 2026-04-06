@@ -125,41 +125,41 @@ function renderProgsTable(data) {
     const iconSvg = getApoyoIcon(p.nombre + ' ' + p.inst);
     const safeName = (p.nombre||'').replace(/'/g,"\'");
 
-    return '<div style="background:#161b22;' + cardBorder + ';border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%">'
-      // HEADER: clave + nombre + icono (altura fija)
-      + '<div style="display:flex;align-items:flex-start;justify-content:space-between;padding:16px 18px 12px;gap:10px;min-height:96px">'
-        + '<div style="flex:1;min-width:0">'
-          + '<div style="font-size:13px;color:' + cardAccColor + ';font-weight:800;letter-spacing:.06em;margin-bottom:4px;font-family:\'DM Mono\',monospace">' + (p.clave||'') + '</div>'
-          + '<div style="font-size:13px;font-weight:500;color:#e6edf3;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">' + toTitle(p.nombre) + '</div>'
-          + '<div style="font-size:11px;color:#8b949e;margin-top:3px">' + (p.inst||'') + '</div>'
+    return '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;height:100%">'
+      + '<div style="height:4px;background:' + cardAccColor + ';flex-shrink:0"></div>'
+      + '<div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1">'
+        + '<div style="display:flex;align-items:flex-start;gap:12px">'
+          + '<div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px">'
+            + '<div style="width:52px;height:52px;border-radius:12px;' + cardIconStyle + ';display:flex;align-items:center;justify-content:center">'
+              + '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="' + cardIconStroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + iconSvg + '</svg>'
+            + '</div>'
+            + '<div style="font-size:10px;font-weight:700;color:' + cardAccColor + ';opacity:.85;text-align:center;max-width:60px;line-height:1.2">' + (p.inst||'') + '</div>'
+          + '</div>'
+          + '<div style="flex:1;min-width:0;min-height:72px;display:flex;flex-direction:column;justify-content:center">'
+            + '<div style="font-size:11px;color:' + cardAccColor + ';font-weight:800;letter-spacing:.08em;margin-bottom:3px;font-family:\'DM Mono\',monospace">' + (p.clave||'') + '</div>'
+            + '<div style="font-size:13px;font-weight:600;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical">' + toTitle(p.nombre) + '</div>'
+          + '</div>'
         + '</div>'
-        + '<div style="width:40px;height:40px;border-radius:9px;' + cardIconStyle + ';display:flex;align-items:center;justify-content:center;flex-shrink:0">'
-          + '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="' + cardIconStroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + iconSvg + '</svg>'
+        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'
+        + '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">'
+          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
+            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (unicos > 0 ? unicos.toLocaleString('es-MX') : '0') + '</div>'
+            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Beneficiarios</div>'
+          + '</div>'
+          + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
+            + '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#e6edf3">' + (nMuns > 0 ? nMuns : '—') + '</div>'
+            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Municipios</div>'
+          + '</div>'
+          + '<div style="text-align:center;padding:0 8px">'
+            + '<div style="font-size:16px;font-weight:700;color:' + cardAccColor + '">' + rangoLabel + '</div>'
+            + '<div style="font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.06em">Rango Mayor</div>'
+          + '</div>'
         + '</div>'
-      + '</div>'
-      // BOTÓN MÁS DATOS
-      + '<div style="padding:0 18px 14px">'
-        + '<button onclick="progModal(\''+p.clave+'\')" style="display:flex;align-items:center;gap:5px;padding:7px 14px;background:' + cardAccColor + '15;border:0.5px solid ' + cardAccColor + '40;border-radius:16px;color:' + cardAccColor + ';font-size:12px;font-weight:600;cursor:pointer">'
+        + '<div style="height:0.5px;background:rgba(205,217,229,.08)"></div>'
+        + '<button onclick="progModal(\''+p.clave+'\')" style="width:100%;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:' + cardAccColor + '12;border:0.5px solid ' + cardAccColor + '35;border-radius:8px;color:' + cardAccColor + ';font-size:12px;font-weight:600;cursor:pointer">'
           + '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
           + ' Más datos'
         + '</button>'
-      + '</div>'
-      // SEPARADOR
-      + '<div style="height:0.5px;background:' + cardAccColor + '25;margin:0 18px"></div>'
-      // KPIs: beneficiarios / municipios / rango
-      + '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:14px 0 14px;margin-top:auto">'
-        + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
-          + '<div style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:#e6edf3">' + (unicos > 0 ? unicos.toLocaleString('es-MX') : '0') + '</div>'
-          + '<div style="font-size:11px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.04em">Beneficiarios</div>'
-        + '</div>'
-        + '<div style="text-align:center;padding:0 8px;border-right:0.5px solid rgba(205,217,229,.08)">'
-          + '<div style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:#e6edf3">' + (nMuns > 0 ? nMuns : '—') + '</div>'
-          + '<div style="font-size:11px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.04em">Municipios</div>'
-        + '</div>'
-        + '<div style="text-align:center;padding:0 8px">'
-          + '<div style="font-size:18px;font-weight:700;color:' + cardAccColor + '">' + rangoLabel + '</div>'
-          + '<div style="font-size:11px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.04em">Rango Mayor</div>'
-        + '</div>'
       + '</div>'
     + '</div>';
   }).join('');
@@ -319,8 +319,8 @@ function renderVulnerables() {
   container.innerHTML = `
     <style>
       .gv-card {
-        background: #0d1117;
-        border: 1px solid rgba(205,217,229,.07);
+        background: #161b22;
+        border: 1px solid rgba(205,217,229,.08);
         border-radius: 14px;
         padding: 18px 16px;
         cursor: pointer;
@@ -331,7 +331,7 @@ function renderVulnerables() {
         flex-direction: column;
         gap: 10px;
       }
-      .gv-card:hover { transform: translateY(-3px); border-color: rgba(205,217,229,.18); }
+      .gv-card:hover { transform: translateY(-3px); border-color: rgba(205,217,229,.18); background: #1c2330; }
       .gv-card.active { border-color: rgba(205,217,229,.3) !important; }
       .gv-card.no-data { opacity: .55; cursor: default; }
       .gv-card.no-data:hover { transform: none; }
@@ -427,10 +427,10 @@ function renderVulnerables() {
       </div>
 
       <!-- PANEL LATERAL -->
-      <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;flex-direction:column;gap:12px">
 
         <!-- Gauge cobertura general -->
-        <div style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px;text-align:center">
+        <div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px;text-align:center">
           <div style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:14px">COBERTURA GENERAL</div>
           <svg viewBox="0 0 120 72" style="width:100%;max-width:170px;display:block;margin:0 auto">
             <path d="M 16 62 A 44 44 0 0 1 104 62" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="10" stroke-linecap="round"/>
@@ -453,7 +453,7 @@ function renderVulnerables() {
         </div>
 
         <!-- Panel detalle (vacío inicial) -->
-        <div id="gv-detail-panel" style="background:#0d1117;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
+        <div id="gv-detail-panel" style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">
           <div style="padding:11px 16px;background:#161b22;border-bottom:1px solid rgba(205,217,229,.06);display:flex;align-items:center;gap:8px">
             <div style="width:3px;height:13px;background:#484f58;border-radius:2px"></div>
             <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58">ANÁLISIS DE GRUPO</span>

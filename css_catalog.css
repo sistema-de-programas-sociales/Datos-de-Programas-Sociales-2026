@@ -4,7 +4,7 @@
 /* cat-* variables moved to :root above */
 
 /* ── Cabecera ── */
-.cat-wrapper{font-family:var(--cat-font);background:#0d1117;border-radius:10px;border:1px solid rgba(205,217,229,.12);overflow:clip;margin-bottom:16px}
+.cat-wrapper{font-family:var(--cat-font);background:#0d1117;border-radius:10px;border:1px solid rgba(205,217,229,.12);margin-bottom:16px;overflow:visible}
 .cat-header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid rgba(205,217,229,.1);flex-wrap:wrap;gap:12px}
 .cat-header-left{}
 .cat-header-eyebrow{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8b949e;margin-bottom:4px}
@@ -26,14 +26,14 @@
 .cat-chip:hover:not(.active){background:var(--cat-bg2)}
 
 /* ── Grid de cards ── */
-.cat-body{padding:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;background:#0d1117;border-radius:0 0 10px 10px;overflow:hidden}
+.cat-body{padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;background:#0d1117;border-radius:0 0 10px 10px}
 .cat-no-results{padding:48px;text-align:center;font-size:14px;color:var(--cat-ink3);font-style:italic;background:var(--cat-bg);border-radius:0 0 10px 10px}
 
 /* ── Card editorial ── */
-.cat-card{background:#161b22;padding:16px 18px;cursor:pointer;transition:background .15s;position:relative;display:flex;flex-direction:column;gap:11px;border-color:rgba(205,217,229,.08)}
+.cat-card{background:#161b22;padding:16px 18px;cursor:pointer;transition:background .15s;position:relative;display:flex;flex-direction:column;gap:11px;border:1px solid rgba(205,217,229,.08);border-radius:14px}
 .cat-card:hover{background:#1c2330}
 .cat-card.expanded{background:#1c2330}
-.cat-card-accent{position:absolute;top:0;left:0;right:0;height:3px}
+.cat-card-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
 
 /* nombre */
 .cat-apoyo-name{font-size:17px;font-weight:600;color:#e6edf3;line-height:1.25;letter-spacing:-.01em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
