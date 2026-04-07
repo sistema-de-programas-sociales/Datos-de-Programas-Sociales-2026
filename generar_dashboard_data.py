@@ -110,18 +110,69 @@ def leer_grupos_vulnerables(excel_path):
 
 
 def leer_nutrichihuahua(excel_path):
-    """Lee la hoja Nutrichihuahua directamente con openpyxl."""
+    """Lee la hoja Nutrichihuahua y retorna estructura completa por municipio y programa."""
     try:
-        import openpyxl
-        wb = openpyxl.load_workbook(str(excel_path), data_only=True)
-        if 'Nutrichihuahua' not in wb.sheetnames:
+        import pandas as pd
+        xl = pd.ExcelFile(str(excel_path))
+        if 'Nutrichihuahua' not in xl.sheet_names:
             return {}
-        ws = wb['Nutrichihuahua']
-        result = {}
-        for row in ws.iter_rows(min_row=2, values_only=True):
-            if row[0] and row[1] is not None:
-                result[str(row[0]).strip()] = int(row[1]) if row[1] else 0
-        return result
+        df = xl.parse('Nutrichihuahua', header=None)
+        RANGOS = ['0-5','6-11','12-17','18-29','30-49','50-64','65+']
+
+        # TABLE 1: by municipality (col B=1, rows 8+)
+        muns = []
+        for row_i in range(8, df.shape[0]):
+            mun = str(df.iloc[row_i, 1]).strip() if pd.notna(df.iloc[row_i, 1]) else ''
+            if not mun or mun in ['nan','None','(en blanco)','Grand Total','FORANEO']:
+                continue
+            total_m_val = df.iloc[row_i, 10]
+            total_m = int(total_m_val) if pd.notna(total_m_val) else 0
+            m_rangos = {}
+            for j, r in enumerate(RANGOS):
+                v = df.iloc[row_i, 2+j]
+                m_rangos[r] = int(v) if pd.notna(v) else 0
+            h_rangos = {}
+            for j, r in enumerate(RANGOS):
+                v = df.iloc[row_i, 11+j]
+                h_rangos[r] = int(v) if pd.notna(v) else 0
+            total_h_val = df.iloc[row_i, 19]
+            total_h = int(total_h_val) if pd.notna(total_h_val) else sum(h_rangos.values())
+            total = total_m + total_h
+            muns.append({'nombre': mun, 'total': total, 'mujeres': total_m, 'hombres': total_h,
+                         'rangos_m': m_rangos, 'rangos_h': h_rangos})
+
+        # TABLE 2: by program (col AH=33, rows 9+)
+        INSTS = ['DIF', 'SDHyBC', 'SPyCI']
+        instituciones = []
+        current_inst = None
+        for row_i in range(9, df.shape[0]):
+            prog = str(df.iloc[row_i, 33]).strip() if pd.notna(df.iloc[row_i, 33]) else ''
+            if not prog or prog in ['nan','None','(en blanco)','Grand Total','LOCALIZABLES NUTRICHIHUAHUA']:
+                continue
+            total_val = df.iloc[row_i, 52]
+            if pd.isna(total_val): continue
+            total = int(total_val)
+            if total == 0: continue
+            m_rangos = {r: int(df.iloc[row_i, 34+j]) if pd.notna(df.iloc[row_i, 34+j]) else 0 for j,r in enumerate(RANGOS)}
+            h_rangos = {r: int(df.iloc[row_i, 43+j]) if pd.notna(df.iloc[row_i, 43+j]) else 0 for j,r in enumerate(RANGOS)}
+            total_m = int(df.iloc[row_i, 42]) if pd.notna(df.iloc[row_i, 42]) else 0
+            total_h = int(df.iloc[row_i, 51]) if pd.notna(df.iloc[row_i, 51]) else 0
+            entry = {'nombre': prog, 'total': total, 'mujeres': total_m, 'hombres': total_h,
+                     'rangos_m': m_rangos, 'rangos_h': h_rangos}
+            if prog in INSTS:
+                entry['programas'] = []
+                current_inst = entry
+                instituciones.append(entry)
+            elif prog != 'TOTAL' and current_inst:
+                current_inst['programas'].append(entry)
+
+        total_general = sum(i['total'] for i in instituciones)
+        return {
+            'total': total_general,
+            'municipios': muns,
+            'instituciones': instituciones,
+            'rangos_labels': RANGOS,
+        }
     except Exception as e:
         print(f'AVISO: No se pudo leer Nutrichihuahua: {e}', file=sys.stderr)
         return {}

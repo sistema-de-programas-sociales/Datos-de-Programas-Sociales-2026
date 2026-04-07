@@ -589,20 +589,15 @@
 
 <!-- ═══ TAB 7 · NUTRICHIHUAHUA ═══ -->
 <div id="tab-nutrichihuahua" class="tab-pane">
-  <div class="np-2col">
-    <div class="np-2col-art">
-      <div class="kicker mb8 mt12" style="color:#00897b">NutriChihuahua · Ejercicio 2026</div>
-      <div class="hl-large mt4">Programa de nutrición y alimentación para familias chihuahuenses</div>
-      <hr class="rule-heavy">
-      <div class="body-copy mt12" style="color:var(--ink2);font-style:italic">
-        La hoja NutriChihuahua aún no contiene datos. Cuando se agreguen al Excel, esta sección se actualizará automáticamente.
-      </div>
-    </div>
-    <div class="v-rule"></div>
-    <div class="np-2col-art">
-      <div class="bar-list mt16" id="bar-nutri"></div>
-    </div>
-  </div>
+  <div class="wrap">
+
+  <!-- KPI strip -->
+  <div class="stat-strip mt12" id="kpi-nutri" style="grid-template-columns:repeat(8,1fr);border-top:3px solid var(--ink);border-bottom:2px solid var(--border)"></div>
+
+  <!-- Nav + Panels — renderizado por renderNutri() -->
+  <div id="nutri-nav-panels"></div>
+
+  </div><!-- /wrap -->
 </div><!-- /tab-nutrichihuahua -->
 
 </div><!-- /wrap -->
@@ -758,6 +753,7 @@
 <script src="js_render_inst.js"></script>
 <script src="js_render_muns.js"></script>
 <script src="js_render_apoyos.js"></script>
+<script src="js_render_nutri.js"></script>
 
 <!-- 5. Modales -->
 <script src="js_catalogo_modal.js"></script>

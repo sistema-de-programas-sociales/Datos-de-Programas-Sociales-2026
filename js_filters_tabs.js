@@ -450,7 +450,9 @@ function renderVulnerables() {
     ph += '<div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">';
     ph += '<div style="background:#161b22;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">';
     ph += '<div><div style="font-size:13px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">vs. promedio general</div>';
-    ph += '<div style="font-size:16px;font-weight:700">'+diffStr2+' '+(Math.abs(diff2)<1?'· similar':diff2>0?'· por encima':'· por debajo')+'</div></div>';
+    const dirLabel2 = Math.abs(diff2)<1 ? '· similar' : diff2>0 ? '· por encima' : '· por debajo';
+    const dirColor2 = Math.abs(diff2)<1 ? '#6e7f8d' : diff2>0 ? '#56d364' : '#f85149';
+    ph += '<div style="font-size:16px;font-weight:700">'+diffStr2+' <span style="color:'+dirColor2+'">'+dirLabel2+'</span></div></div>';
     ph += '<div style="text-align:right"><div style="font-size:13px;color:#484f58;margin-bottom:2px">General</div>';
     ph += '<div style="font-size:15px;color:#6e7f8d;font-family:DM Mono,monospace">'+cobGenPct.toFixed(1)+'%</div></div></div>';
     ph += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">';
@@ -466,14 +468,7 @@ function renderVulnerables() {
 
 
 /* ─── NUTRICHIHUAHUA ─── */
-function renderNutri() {
-  const nutri = D.nutrichihuahua;
-  const el = document.getElementById('bar-nutri');
-  if (!el) return;
-  if (nutri && Object.keys(nutri).length > 0) {
-    barList('bar-nutri', Object.entries(nutri).map(([k,v])=>({name:k,val:v})), 'bf-green');
-  }
-}
+/* renderNutri() defined in js_render_nutri.js */
 
 /* ─── SLIDER DATOS GENERALES ─── */
 const SLIDE_CONFIG = [

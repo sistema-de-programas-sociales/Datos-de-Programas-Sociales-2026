@@ -300,7 +300,7 @@ async function run(excelPath) {
   console.log(c('gray', '    5. Solo documentos institucionales  (todas las instituciones)'));
   console.log(c('gray', '    6. Institucion(es) especifica(s)'));
   console.log(c('gray', '    7. Solo informe web  (dashboard HTML)'));
-  console.log(c('gray', '    8. ' + c('yellow', 'Describir en texto libre')));
+  console.log(c('gray', '    8. ' + c('yellow', 'Reporte NutriChihuahua')));
   console.log('');
   const opcion = (await ask(c('cyan', '  Opcion (1-8): '))).trim();
 
@@ -451,101 +451,24 @@ async function run(excelPath) {
     }
   }
 
-  // ── Opción 8: texto libre ──────────────────────────────────────────────────
-  let opcionFinal = opcion;
+  // ── Opción 8: Reporte NutriChihuahua ─────────────────────────────────────────
   if (opcion === '8') {
-    console.log('');
-    console.log(c('cyan', '  Describe lo que necesitas. Ejemplos:'));
-    console.log(c('gray', '    "reporte del municipio de Ahumada"'));
-    console.log(c('gray', '    "mujeres atendidas en Allende con apoyo de SDHyBC"'));
-    console.log('');
-    const descripcion = (await ask(c('cyan', '  Describe tu reporte: '))).trim();
-    if (!descripcion) { err('No escribiste nada.'); return; }
-    info('Interpretando...');
-    const listaMuns8  = leerMunicipios(excelPath);
-    const listaInsts8 = leerInstituciones(excelPath);
-
-    function detectarPorTexto8(txt) {
-      const t = txt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      const muns  = listaMuns8.filter(m => t.includes(m.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')));
-      const insts = listaInsts8.filter(i => t.includes(i.toLowerCase()));
-      let op;
-      if (/dashboard|web|html/.test(t))                                op = '7';
-      else if (/todo|completo/.test(t) && !muns.length && !insts.length) op = '1';
-      else if (/todos.*municipios/.test(t) && !muns.length)           op = '3';
-      else if (/todas.*instituciones/.test(t) && !insts.length)       op = '5';
-      else if (muns.length && insts.length)                           op = '46';
-      else if (muns.length)                                           op = '4';
-      else if (insts.length)                                          op = '6';
-      else                                                            op = '2';
-      return { muns, insts, op };
+    info('Generando reporte NutriChihuahua...');
+    const nutriScript = path.join(DIR, 'generar_nutrichihuahua.py');
+    if (!fs.existsSync(nutriScript)) {
+      err('No se encontro generar_nutrichihuahua.py en la carpeta del proyecto.');
+      return;
     }
-
-    const envPath8 = path.join(DIR, '.env');
-    let apiKey8 = process.env.ANTHROPIC_API_KEY || '';
-    if (!apiKey8 && fs.existsSync(envPath8)) {
-      const envContent8 = fs.readFileSync(envPath8, 'utf8');
-      const m8 = envContent8.split('\n').find(l => l.startsWith('ANTHROPIC_API_KEY'));
-      if (m8) apiKey8 = m8.split('=').slice(1).join('=').trim().replace(/^["']|["']$/g, '');
-    }
-
-    if (!apiKey8) {
-      warn('Sin API key — usando deteccion por texto.');
-      const det = detectarPorTexto8(descripcion);
-      municipiosFiltro    = det.muns;
-      municipiosIndices   = det.muns.map(m => listaMuns8.indexOf(m) + 1);
-      institucionesFiltro = det.insts;
-      institucionesIndices = det.insts.map(i => listaInsts8.indexOf(i) + 1);
-      opcionFinal         = det.op;
-      if (municipiosFiltro.length)    ok('Municipios: ' + municipiosFiltro.join(', '));
-      if (institucionesFiltro.length) ok('Instituciones: ' + institucionesFiltro.join(', '));
-      if (opcionFinal === '2') warn('Sin coincidencias — reporte general.');
+    const nutriOutput = path.join(subDir, `NutriChihuahua_${mes}_${año}.docx`);
+    const okN = pyRun([nutriScript, excelPath, mes, año, nutriOutput]);
+    if (okN && fs.existsSync(nutriOutput)) {
+      const kb = (fs.statSync(nutriOutput).size / 1024).toFixed(0);
+      ok(`Reporte NutriChihuahua generado: ${path.basename(nutriOutput)}  (${kb} KB)`);
+      ok(`Carpeta: ${subDir}`);
     } else {
-      const promptLines = [
-        'Interpreta esta solicitud de reporte del padron de beneficiarios de Chihuahua.',
-        'Solicitud: "' + descripcion + '"',
-        'Municipios: ' + JSON.stringify(listaMuns8),
-        'Instituciones: ' + JSON.stringify(listaInsts8),
-        'Devuelve SOLO JSON: {"opcion":"1|2|3|4|5|6|7|4+6","municipios":[],"instituciones":[],"desc":"resumen"}'
-      ];
-      const promptStr = promptLines.join('\n');
-      const pyLines = [
-        'import urllib.request, json',
-        'body = json.dumps({"model":"claude-sonnet-4-20250514","max_tokens":300,"messages":[{"role":"user","content":' + JSON.stringify(promptStr) + '}]}).encode()',
-        'req = urllib.request.Request("https://api.anthropic.com/v1/messages",data=body,headers={"Content-Type":"application/json","x-api-key":' + JSON.stringify(apiKey8) + ',"anthropic-version":"2023-06-01"})',
-        'print(urllib.request.urlopen(req).read().decode())'
-      ];
-      const tmpPy = path.join(DIR, '_tcq.py');
-      try {
-        fs.writeFileSync(tmpPy, pyLines.join('\n'), 'utf8');
-        const raw    = pyCapture([tmpPy]);
-        const parsed = JSON.parse(raw);
-        const txt    = parsed.content?.[0]?.text || '';
-        const jm     = txt.match(/\{[\s\S]*\}/);
-        if (!jm) throw new Error('Sin JSON en respuesta');
-        const interp = JSON.parse(jm[0]);
-        ok('Interpretado: ' + c('bold', interp.desc || interp.descripcion_interpretada || ''));
-        opcionFinal         = interp.opcion === '4+6' ? '46' : (interp.opcion || '2');
-        municipiosFiltro    = (interp.municipios || []).filter(m => listaMuns8.includes(m));
-        municipiosIndices   = municipiosFiltro.map(m => listaMuns8.indexOf(m) + 1);
-        institucionesFiltro = (interp.instituciones || []).filter(i => listaInsts8.includes(i));
-        institucionesIndices = institucionesFiltro.map(i => listaInsts8.indexOf(i) + 1);
-        if (municipiosFiltro.length)    ok('Municipios: ' + municipiosFiltro.join(', '));
-        if (institucionesFiltro.length) ok('Instituciones: ' + institucionesFiltro.join(', '));
-      } catch(e8) {
-        err('Error API: ' + e8.message + ' — usando deteccion por texto.');
-        const det2 = detectarPorTexto8(descripcion);
-        municipiosFiltro    = det2.muns;
-        municipiosIndices   = det2.muns.map(m => listaMuns8.indexOf(m) + 1);
-        institucionesFiltro = det2.insts;
-        institucionesIndices = det2.insts.map(i => listaInsts8.indexOf(i) + 1);
-        opcionFinal         = det2.op;
-        if (municipiosFiltro.length)    ok('Municipios: ' + municipiosFiltro.join(', '));
-        if (institucionesFiltro.length) ok('Instituciones: ' + institucionesFiltro.join(', '));
-      } finally {
-        try { fs.unlinkSync(tmpPy); } catch {}
-      }
+      err('Error al generar el reporte NutriChihuahua.');
     }
+    return;
   }
 
   const generarPrincipal      = ['1','2','46'].includes(opcionFinal);
