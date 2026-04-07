@@ -138,8 +138,8 @@ function renderNutri() {
 
     /* ── sexo bar ── */
     p0 += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">';
-    p0 += '<span style="color:#f778ba;font-weight:600">♀ '+pM+'%&ensp;'+fN(inst.bm)+'</span>';
-    p0 += '<span style="color:#79c0ff;font-weight:600">'+fN(inst.bh)+'&ensp;♂ '+pH+'%</span>';
+    p0 += '<span style="color:#f778ba;font-weight:600">M '+pM+'%&ensp;'+fN(inst.bm)+'</span>';
+    p0 += '<span style="color:#79c0ff;font-weight:600">'+fN(inst.bh)+'&ensp;H '+pH+'%</span>';
     p0 += '</div>';
     p0 += '<div style="display:flex;height:8px;border-radius:4px;overflow:hidden;margin-bottom:16px">';
     p0 += '<div style="width:'+pM+'%;background:#f778ba;opacity:.85"></div>';
@@ -162,7 +162,7 @@ function renderNutri() {
       p0 += '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:#e6edf3">'+fN(benef)+'<span style="font-size:10px;font-weight:400;color:#484f58;margin-left:3px">benef.</span></span>';
       p0 += '</div>';
       p0 += '<div class="nc-bar"><div class="nc-bar-f" style="width:'+w+'%;background:'+c+';opacity:.65"></div></div>';
-      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">♀ '+pMp+'% · ♂ '+(100-parseInt(pMp))+'%</div>';
+      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">M '+pMp+'% · H '+(100-parseInt(pMp))+'%</div>';
       p0 += '</div>';
     });
 
@@ -187,7 +187,7 @@ function renderNutri() {
       p0 += '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:'+c+'">'+fN(a.t)+'<span style="font-size:10px;font-weight:400;color:#484f58;margin-left:3px">apoyos</span></span>';
       p0 += '</div>';
       p0 += '<div class="nc-bar"><div class="nc-bar-f" style="width:'+w2+'%;background:'+c+';opacity:.4"></div></div>';
-      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">♀ '+pMa+'% · ♂ '+(100-parseInt(pMa))+'% · '+pN(a.t,inst.apoyos_total)+' del inst.</div>';
+      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">M '+pMa+'% · H '+(100-parseInt(pMa))+'% · '+pN(a.t,inst.apoyos_total)+' del inst.</div>';
       p0 += '</div>';
     });
 
@@ -195,29 +195,67 @@ function renderNutri() {
   });
   p0 += '</div>';
 
-  /* rangos globales */
+  /* rangos globales — pirámide de barras verticales */
   const maxRTV = Math.max(...RKEYS.map(r=>ND.RT[r]));
-  const RCOL = {'0-5':'#ffa657','6-11':'#56d364','12-17':'#79c0ff','18-29':'#f778ba','30-49':'#d2a8ff','50-64':'#39d353','65+':'#ff7b72'};
-  p0 += '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:16px 18px">';
-  p0 += '<div style="font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#484f58;margin-bottom:14px">Distribución Global por Rango de Edad · NutriChihuahua</div>';
-  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px">';
+  const RCOL   = {'0-5':'#ffa657','6-11':'#56d364','12-17':'#79c0ff','18-29':'#f778ba',
+                  '30-49':'#d2a8ff','50-64':'#39d353','65+':'#ff7b72'};
+
+  p0 += '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px 24px">';
+
+  /* header */
+  p0 += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px">';
+  p0 += '<div style="display:flex;align-items:center;gap:10px">';
+  p0 += '<span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#484f58">Distribución por Rango de Edad</span>';
+  p0 += '<span style="font-family:DM Mono,monospace;font-size:12px;color:#388bfd;background:rgba(56,139,253,.1);padding:2px 9px;border-radius:20px;border:.5px solid rgba(56,139,253,.25)">'+fN(totalB)+' beneficiarios</span>';
+  p0 += '</div>';
+  p0 += '<div style="display:flex;align-items:center;gap:12px;font-size:11px">';
+  p0 += '<span style="display:flex;align-items:center;gap:5px;color:#f778ba"><span style="display:inline-block;width:10px;height:3px;background:#f778ba;border-radius:2px"></span>Mujeres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:5px;color:#79c0ff"><span style="display:inline-block;width:10px;height:3px;background:#79c0ff;border-radius:2px;opacity:.7"></span>Hombres</span>';
+  p0 += '</div>';
+  p0 += '</div>';
+
+  /* barras verticales */
+  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end;padding:0 4px">';
   RKEYS.forEach(r => {
-    const col  = RCOL[r]||'#8b949e';
-    const tot  = ND.RT[r], vm=ND.RT_M[r]||0;
-    const hTot = Math.max(3,Math.round(tot/maxRTV*60));
-    const hM   = Math.max(1,Math.round(vm/(tot||1)*hTot));
-    const hH   = Math.max(1,hTot-hM);
-    p0 += '<div style="background:#0d1117;border-radius:8px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px">';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:12px;font-weight:700;color:'+col+'">'+fN(tot)+'</div>';
-    p0 += '<div style="height:64px;display:flex;align-items:flex-end;gap:2px;width:100%;justify-content:center">';
-    p0 += '<div style="width:44%;border-radius:3px 3px 0 0;background:'+col+';opacity:.9;height:'+hM+'px;min-height:2px"></div>';
-    p0 += '<div style="width:44%;border-radius:3px 3px 0 0;background:'+col+';opacity:.35;height:'+hH+'px;min-height:2px"></div>';
+    const col  = RCOL[r] || '#8b949e';
+    const tot  = ND.RT[r];
+    const vm   = ND.RT_M[r] || 0;
+    const vh   = ND.RT_H[r] || 0;
+    const pctT = (tot/totalB*100).toFixed(1);
+    const pctM = tot>0 ? (vm/tot*100).toFixed(0) : 0;
+    const pctH = 100 - parseInt(pctM);
+    const barH = Math.max(6, Math.round(tot/maxRTV*120));
+    const barHM= Math.max(2, Math.round(vm/(tot||1)*barH));
+    const barHH= Math.max(2, barH-barHM);
+    const isDom= r === rangoMax;
+
+    p0 += '<div style="display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 4px 10px;border-radius:10px;transition:background .15s;cursor:default" title="'+ND.RLAB[r]+' años: '+fN(tot)+' benef. ('+pctT+'%) · M '+pctM+'% / H '+pctH+'%">';
+    /* número total arriba */
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:13px;font-weight:800;color:'+col+'">'+fN(tot)+'</div>';
+    /* barras dobles verticales */
+    p0 += '<div style="width:100%;display:flex;gap:3px;justify-content:center;align-items:flex-end;height:120px">';
+    p0 += '<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-width:0">';
+    p0 += '<div style="background:#f778ba;opacity:.9;border-radius:4px 4px 0 0;width:100%;min-height:3px;height:'+barHM+'px"></div>';
     p0 += '</div>';
-    p0 += '<div style="font-size:11px;font-weight:700;color:'+col+'">'+ND.RLAB[r]+'</div>';
-    p0 += '<div style="font-size:10px;font-family:DM Mono,monospace;color:#484f58">'+pN(tot,totalB)+'</div>';
+    p0 += '<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-width:0">';
+    p0 += '<div style="background:#79c0ff;opacity:.75;border-radius:4px 4px 0 0;width:100%;min-height:3px;height:'+barHH+'px"></div>';
+    p0 += '</div>';
+    p0 += '</div>';
+    /* barra de color en la base */
+    p0 += '<div style="width:80%;height:3px;background:'+col+';border-radius:2px;opacity:.6"></div>';
+    /* etiqueta rango */
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:'+col+'">'+ND.RLAB[r]+'</div>';
+    /* % del total */
+    p0 += '<div style="font-size:11px;font-weight:600;color:#6e7f8d">'+pctT+'%</div>';
+    /* M/H */
+    p0 += '<div style="font-size:10px;text-align:center;line-height:1.5">';
+    p0 += '<span style="color:#f778ba">M '+pctM+'%</span><br><span style="color:#79c0ff">H '+pctH+'%</span>';
+    p0 += '</div>';
     p0 += '</div>';
   });
-  p0 += '</div></div>';
+  p0 += '</div>';
+  p0 += '</div>';
+
   document.getElementById('n-p0').innerHTML = p0;
 
   /* ════════════════════════════════════════
@@ -339,8 +377,8 @@ function renderNutri() {
     p2 += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">';
     p2 += '<div style="height:100%;width:'+barW+'%;background:'+c+';border-radius:3px"></div></div>';
     p2 += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-top:6px">';
-    p2 += '<span style="color:#f778ba;font-weight:600">♀ '+fN(ap.m)+'</span>';
-    p2 += '<span style="color:#79c0ff;font-weight:600">'+fN(ap.h)+' ♂</span>';
+    p2 += '<span style="color:#f778ba;font-weight:600">M '+fN(ap.m)+'</span>';
+    p2 += '<span style="color:#79c0ff;font-weight:600">'+fN(ap.h)+' H</span>';
     p2 += '</div></div>';
     p2 += '</div></div>';
   });
