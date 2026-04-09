@@ -36,10 +36,12 @@ function renderNutri() {
   const NC = { DIF:'#DB2777', SDHyBC:'#1D9E75', SPyCI:'#C2410C' };
 
   /* store data globally for modals */
-  window._ncInsts = ND.insts;
-  window._ncMuns  = ND.muns;
-  window._ncRKEYS = ND.RANGOS;
-  window._ncRLAB  = ND.RLAB;
+  window._ncInsts  = ND.insts;
+  window._ncMuns   = ND.muns;
+  window._ncRKEYS  = ND.RANGOS;
+  window._ncRLAB   = ND.RLAB;
+  window._ncApoyos = ND.apoyos;
+  window._ncMunAp  = {"BALLEZA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 42, "h": 18, "total": 60}, "DESPENSA DE ALIMENTOS": {"m": 513, "h": 247, "total": 760}, "HOSPEDAJE Y ALIMENTACION": {"m": 2, "h": 4, "total": 6}}, "BATOPILAS DE MANUEL GOMEZ MORIN": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 212, "h": 114, "total": 326}, "DESPENSA DE ALIMENTOS": {"m": 78, "h": 45, "total": 123}, "HOSPEDAJE Y ALIMENTACION": {"m": 12, "h": 8, "total": 20}}, "BOCOYNA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 241, "h": 104, "total": 345}, "DESPENSA DE ALIMENTOS": {"m": 128, "h": 52, "total": 180}, "HOSPEDAJE Y ALIMENTACION": {"m": 15, "h": 17, "total": 32}}, "CARICHI": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 102, "h": 38, "total": 140}, "DESPENSA DE ALIMENTOS": {"m": 243, "h": 135, "total": 378}, "HOSPEDAJE Y ALIMENTACION": {"m": 10, "h": 2, "total": 12}}, "CHINIPAS": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 18, "h": 5, "total": 23}, "DESPENSA DE ALIMENTOS": {"m": 309, "h": 151, "total": 460}, "HOSPEDAJE Y ALIMENTACION": {"m": 0, "h": 1, "total": 1}}, "FORANEO": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 2, "h": 0, "total": 2}, "DESPENSA DE ALIMENTOS": {"m": 38, "h": 39, "total": 77}, "HOSPEDAJE Y ALIMENTACION": {"m": 2, "h": 0, "total": 2}}, "GUACHOCHI": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 112, "h": 45, "total": 157}, "DESPENSA DE ALIMENTOS": {"m": 1332, "h": 437, "total": 1769}, "HOSPEDAJE Y ALIMENTACION": {"m": 36, "h": 21, "total": 57}, "PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA": {"m": 1, "h": 0, "total": 1}}, "GUADALUPE Y CALVO": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 1113, "h": 360, "total": 1473}, "DESPENSA DE ALIMENTOS": {"m": 363, "h": 225, "total": 588}, "HOSPEDAJE Y ALIMENTACION": {"m": 23, "h": 11, "total": 34}, "PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA": {"m": 1, "h": 0, "total": 1}}, "GUAZAPARES": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 105, "h": 53, "total": 158}, "DESPENSA DE ALIMENTOS": {"m": 166, "h": 134, "total": 300}, "HOSPEDAJE Y ALIMENTACION": {"m": 6, "h": 5, "total": 11}, "PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA": {"m": 1, "h": 0, "total": 1}}, "MAGUARICHI": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 47, "h": 14, "total": 61}, "DESPENSA DE ALIMENTOS": {"m": 33, "h": 9, "total": 42}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 0, "total": 1}}, "MORELOS": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 44, "h": 13, "total": 57}, "DESPENSA DE ALIMENTOS": {"m": 119, "h": 62, "total": 181}, "HOSPEDAJE Y ALIMENTACION": {"m": 2, "h": 3, "total": 5}}, "URIQUE": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 57, "h": 57, "total": 114}, "DESPENSA DE ALIMENTOS": {"m": 98, "h": 63, "total": 161}, "HOSPEDAJE Y ALIMENTACION": {"m": 11, "h": 7, "total": 18}}, "URUACHI": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 111, "h": 49, "total": 160}, "DESPENSA DE ALIMENTOS": {"m": 114, "h": 83, "total": 197}, "HOSPEDAJE Y ALIMENTACION": {"m": 9, "h": 5, "total": 14}}, "ALDAMA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 11, "h": 21, "total": 32}, "DESPENSA DE ALIMENTOS": {"m": 91, "h": 75, "total": 166}}, "CAMARGO": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 10, "h": 5, "total": 15}, "DESPENSA DE ALIMENTOS": {"m": 89, "h": 22, "total": 111}}, "CASAS GRANDES": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 37, "h": 27, "total": 64}, "DESPENSA DE ALIMENTOS": {"m": 117, "h": 73, "total": 190}}, "CHIHUAHUA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 289, "h": 150, "total": 439}, "DESPENSA DE ALIMENTOS": {"m": 2056, "h": 684, "total": 2740}, "HOSPEDAJE Y ALIMENTACION": {"m": 3, "h": 2, "total": 5}, "PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA": {"m": 6, "h": 4, "total": 10}}, "CUAUHTEMOC": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 23, "h": 26, "total": 49}, "DESPENSA DE ALIMENTOS": {"m": 278, "h": 142, "total": 420}, "HOSPEDAJE Y ALIMENTACION": {"m": 4, "h": 0, "total": 4}}, "DELICIAS": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 9, "h": 6, "total": 15}, "DESPENSA DE ALIMENTOS": {"m": 103, "h": 39, "total": 142}}, "GUERRERO": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 14, "h": 10, "total": 24}, "DESPENSA DE ALIMENTOS": {"m": 408, "h": 180, "total": 588}, "HOSPEDAJE Y ALIMENTACION": {"m": 2, "h": 0, "total": 2}}, "HIDALGO DEL PARRAL": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 12, "h": 3, "total": 15}, "DESPENSA DE ALIMENTOS": {"m": 988, "h": 468, "total": 1456}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 3, "total": 4}}, "JUAREZ": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 19, "h": 12, "total": 31}, "DESPENSA DE ALIMENTOS": {"m": 2745, "h": 771, "total": 3516}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 0, "total": 1}}, "MADERA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 6, "h": 9, "total": 15}, "DESPENSA DE ALIMENTOS": {"m": 122, "h": 104, "total": 226}}, "MATAMOROS": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 52, "h": 44, "total": 96}, "DESPENSA DE ALIMENTOS": {"m": 161, "h": 101, "total": 262}}, "MEOQUI": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 10, "h": 5, "total": 15}, "DESPENSA DE ALIMENTOS": {"m": 24, "h": 24, "total": 48}}, "NAMIQUIPA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 14, "h": 23, "total": 37}, "DESPENSA DE ALIMENTOS": {"m": 33, "h": 30, "total": 63}}, "NONOAVA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 7, "h": 5, "total": 12}, "DESPENSA DE ALIMENTOS": {"m": 53, "h": 25, "total": 78}}, "OJINAGA": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 2, "h": 8, "total": 10}, "DESPENSA DE ALIMENTOS": {"m": 47, "h": 29, "total": 76}}, "EL TULE": {"ASISTENCIA ALIMENTARIA EN ESPACIO COMUN": {"m": 1, "h": 0, "total": 1}, "DESPENSA DE ALIMENTOS": {"m": 79, "h": 36, "total": 115}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 0, "total": 1}}, "AHUMADA": {"DESPENSA DE ALIMENTOS": {"m": 50, "h": 46, "total": 96}}, "ALLENDE": {"DESPENSA DE ALIMENTOS": {"m": 36, "h": 19, "total": 55}}, "AQUILES SERDAN": {"DESPENSA DE ALIMENTOS": {"m": 62, "h": 36, "total": 98}}, "ASCENSION": {"DESPENSA DE ALIMENTOS": {"m": 52, "h": 37, "total": 89}}, "BACHINIVA": {"DESPENSA DE ALIMENTOS": {"m": 27, "h": 36, "total": 63}}, "BUENAVENTURA": {"DESPENSA DE ALIMENTOS": {"m": 441, "h": 196, "total": 637}}, "CORONADO": {"DESPENSA DE ALIMENTOS": {"m": 89, "h": 26, "total": 115}}, "COYAME DEL SOTOL": {"DESPENSA DE ALIMENTOS": {"m": 29, "h": 18, "total": 47}}, "CUSIHUIRIACHI": {"DESPENSA DE ALIMENTOS": {"m": 35, "h": 25, "total": 60}}, "DR. BELISARIO DOMINGUEZ": {"DESPENSA DE ALIMENTOS": {"m": 8, "h": 3, "total": 11}}, "GALEANA": {"DESPENSA DE ALIMENTOS": {"m": 43, "h": 16, "total": 59}}, "GOMEZ FARIAS": {"DESPENSA DE ALIMENTOS": {"m": 123, "h": 94, "total": 217}}, "GRAN MORELOS": {"DESPENSA DE ALIMENTOS": {"m": 33, "h": 17, "total": 50}}, "GUADALUPE": {"DESPENSA DE ALIMENTOS": {"m": 35, "h": 20, "total": 55}}, "HUEJOTITAN": {"DESPENSA DE ALIMENTOS": {"m": 41, "h": 12, "total": 53}}, "IGNACIO ZARAGOZA": {"DESPENSA DE ALIMENTOS": {"m": 49, "h": 61, "total": 110}}, "JANOS": {"DESPENSA DE ALIMENTOS": {"m": 81, "h": 74, "total": 155}}, "JIMENEZ": {"DESPENSA DE ALIMENTOS": {"m": 101, "h": 85, "total": 186}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 1, "total": 2}}, "JULIMES": {"DESPENSA DE ALIMENTOS": {"m": 58, "h": 44, "total": 102}}, "LA CRUZ": {"DESPENSA DE ALIMENTOS": {"m": 29, "h": 18, "total": 47}}, "LOPEZ": {"DESPENSA DE ALIMENTOS": {"m": 15, "h": 11, "total": 26}}, "MATACHI": {"DESPENSA DE ALIMENTOS": {"m": 47, "h": 42, "total": 89}}, "MORIS": {"DESPENSA DE ALIMENTOS": {"m": 122, "h": 50, "total": 172}}, "NO IDENTIFICADO": {"DESPENSA DE ALIMENTOS": {"m": 740, "h": 0, "total": 740}}, "NUEVO CASAS GRANDES": {"DESPENSA DE ALIMENTOS": {"m": 198, "h": 100, "total": 298}}, "OCAMPO": {"DESPENSA DE ALIMENTOS": {"m": 77, "h": 50, "total": 127}, "HOSPEDAJE Y ALIMENTACION": {"m": 0, "h": 1, "total": 1}}, "PRAXEDIS G. GUERRERO": {"DESPENSA DE ALIMENTOS": {"m": 44, "h": 26, "total": 70}}, "RIVA PALACIO": {"DESPENSA DE ALIMENTOS": {"m": 20, "h": 21, "total": 41}}, "ROSALES": {"DESPENSA DE ALIMENTOS": {"m": 29, "h": 4, "total": 33}}, "ROSARIO": {"DESPENSA DE ALIMENTOS": {"m": 95, "h": 57, "total": 152}}, "SAN FRANCISCO DE BORJA": {"DESPENSA DE ALIMENTOS": {"m": 105, "h": 56, "total": 161}}, "SAN FRANCISCO DE CONCHOS": {"DESPENSA DE ALIMENTOS": {"m": 25, "h": 20, "total": 45}}, "SAN FRANCISCO DEL ORO": {"DESPENSA DE ALIMENTOS": {"m": 23, "h": 20, "total": 43}}, "SANTA BARBARA": {"DESPENSA DE ALIMENTOS": {"m": 132, "h": 80, "total": 212}, "HOSPEDAJE Y ALIMENTACION": {"m": 1, "h": 0, "total": 1}}, "SANTA ISABEL": {"DESPENSA DE ALIMENTOS": {"m": 145, "h": 71, "total": 216}}, "SATEVO": {"DESPENSA DE ALIMENTOS": {"m": 65, "h": 35, "total": 100}}, "SAUCILLO": {"DESPENSA DE ALIMENTOS": {"m": 201, "h": 99, "total": 300}}, "TEMOSACHIC": {"DESPENSA DE ALIMENTOS": {"m": 101, "h": 72, "total": 173}, "HOSPEDAJE Y ALIMENTACION": {"m": 0, "h": 1, "total": 1}}, "VALLE DE ZARAGOZA": {"DESPENSA DE ALIMENTOS": {"m": 50, "h": 24, "total": 74}}};
 
   /* ── KPI strip: fill the element that now exists in index.html ── */
   const kpiEl = document.getElementById('kpi-nutri');
@@ -476,9 +478,19 @@ function renderNutri() {
                    '30-49':'#d2a8ff','50-64':'#39d353','65+':'#ff7b72'};
     const maxR = Math.max(...ND.RANGOS.map(r=>(m.rm[r]||0)+(m.rh[r]||0)));
 
+    /* lookup per-mun apoyo data from Excel parse */
+    const munKey = nombre.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase();
+    const apData = (window._ncMunAp || {})[munKey] || {};
+    const apKeys = Object.keys(apData).sort((a,b)=>apData[b].total-apData[a].total);
+    const ACOL = {
+      'DESPENSA DE ALIMENTOS':                     '#e3b341',
+      'ASISTENCIA ALIMENTARIA EN ESPACIO COMUN':   '#3fb950',
+      'HOSPEDAJE Y ALIMENTACION':                  '#79c0ff',
+      'PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA':'#d2a8ff'
+    };
     let html = '';
 
-    /* totales */
+    /* KPIs */
     html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px">';
     html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
     html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Total apoyos</div>';
@@ -487,11 +499,11 @@ function renderNutri() {
     html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Beneficiarios</div>';
     html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#388bfd">'+fN(m.t)+'</div></div>';
     html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
-    html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Apoyos/benef.</div>';
+    html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Ratio</div>';
     html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#8b949e">'+apVsBen+'</div></div>';
     html += '</div>';
 
-    /* barra M/H apoyos */
+    /* barra M/H */
     html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:8px">Distribución por sexo · Apoyos</div>';
     html += '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px">';
     html += '<span style="color:#f778ba;font-weight:600">M '+pctM+'% &ensp; '+fN(m.am)+'</span>';
@@ -500,8 +512,48 @@ function renderNutri() {
     html += '<div style="width:'+pctM+'%;background:#f778ba;opacity:.85"></div>';
     html += '<div style="width:'+pctH+'%;background:#79c0ff;opacity:.7"></div></div>';
 
+    /* apoyos reales por municipio desde Excel */
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">Apoyos entregados por tipo</div>';
+    /* apoyo → instituciones que lo entregan en NutriChihuahua */
+    const AP_INST = {
+      'DESPENSA DE ALIMENTOS':                    ['DIF','SDHyBC'],
+      'ASISTENCIA ALIMENTARIA EN ESPACIO COMUN':  ['DIF','SDHyBC','SPyCI'],
+      'HOSPEDAJE Y ALIMENTACION':                 ['SPyCI'],
+      'PAQUETE DE ALIMENTOS E INSUMOS DE LIMPIEZA':['DIF'],
+    };
+    const NC2 = {DIF:'#DB2777', SDHyBC:'#1D9E75', SPyCI:'#C2410C'};
+    if (apKeys.length) {
+      const maxA2 = apData[apKeys[0]].total;
+      apKeys.forEach(ap => {
+        const v    = apData[ap];
+        const col  = ACOL[ap] || '#8b949e';
+        const w    = (v.total/maxA2*100).toFixed(1);
+        const pM2  = v.total>0 ? (v.m/v.total*100).toFixed(0) : 0;
+        const pH2  = 100-parseInt(pM2);
+        const insts = AP_INST[ap] || [];
+        html += '<div style="margin-bottom:14px">';
+        html += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;gap:8px">';
+        html += '<div style="display:flex;align-items:center;gap:8px;min-width:0">';
+        html += '<div style="width:10px;height:10px;border-radius:50%;background:'+col+';flex-shrink:0"></div>';
+        html += '<span style="font-size:13px;font-weight:600;color:#e6edf3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+toTit(ap)+'</span>';
+        html += '</div>';
+        html += '<div style="display:flex;align-items:center;gap:5px;flex-shrink:0">';
+        insts.forEach(ins => { const ic=NC2[ins]||'#8b949e'; html += '<span style="font-size:10px;font-weight:700;color:'+ic+';background:'+ic+'18;border:1px solid '+ic+'44;border-radius:4px;padding:1px 6px">'+ins+'</span>'; });
+        html += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:800;color:'+col+'">'+fN(v.total)+'</span>';
+        html += '</div></div>';
+        html += '<div style="height:8px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden;margin-bottom:4px">';
+        html += '<div style="height:100%;width:'+w+'%;background:'+col+';border-radius:4px;opacity:.8"></div></div>';
+        html += '<div style="display:flex;justify-content:space-between;font-size:11px">';
+        html += '<span style="color:#f778ba">M '+pM2+'% · '+fN(v.m)+'</span>';
+        html += '<span style="color:#79c0ff">'+fN(v.h)+' · H '+pH2+'%</span>';
+        html += '</div></div>';
+      });
+    } else {
+      html += '<div style="padding:12px;text-align:center;color:#484f58;font-size:13px">Sin desglose disponible</div>';
+    }
+
     /* rangos de edad */
-    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">Distribución por edad · Beneficiarios</div>';
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin:12px 0 10px">Distribución por edad · Beneficiarios</div>';
     (window._ncRKEYS||[]).forEach((r,ri) => {
       const vm = m.rm[r]||0, vh = m.rh[r]||0, tot = vm+vh;
       if (!tot) return;
