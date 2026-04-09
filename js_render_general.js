@@ -148,7 +148,7 @@ function renderGeneral() {
           <span style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fem)">Mujeres</span>
           <span style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--fem)">${fmt(locM)} <span style="font-size:12px;opacity:.7">(${pctM}%)</span></span>
         </div>
-        <div style="height:18px;background:var(--border3);border-radius:2px;overflow:hidden">
+        <div style="height:18px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
           <div style="height:100%;width:${pctM}%;background:var(--fem);border-radius:2px;transition:width .8s ease"></div>
         </div>
       </div>
@@ -157,13 +157,13 @@ function renderGeneral() {
           <span style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--male)">Hombres</span>
           <span style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--male)">${fmt(locH)} <span style="font-size:12px;opacity:.7">(${pctH}%)</span></span>
         </div>
-        <div style="height:18px;background:var(--border3);border-radius:2px;overflow:hidden">
+        <div style="height:18px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
           <div style="height:100%;width:${pctH}%;background:var(--male);border-radius:2px;transition:width .8s ease"></div>
         </div>
       </div>
-      <div style="border-top:1px solid var(--border2);padding-top:12px;display:flex;justify-content:space-between;font-family:var(--sans);font-size:12px;color:var(--ink2)">
+      <div style="border-top:1px solid rgba(205,217,229,.1);padding-top:12px;display:flex;justify-content:space-between;font-family:var(--sans);font-size:12px;color:#8b949e">
         <span>Total localizables</span>
-        <strong style="color:var(--ink1)">${fmt(locTot)}</strong>
+        <strong style="color:#e6edf3">${fmt(locTot)}</strong>
       </div>
     `;
   }

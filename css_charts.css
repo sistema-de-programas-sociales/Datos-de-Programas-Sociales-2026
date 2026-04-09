@@ -119,6 +119,35 @@
 #kpi-mun .ss-cell.ck::after  { background: rgba(205,217,229,.3); }
 #kpi-mun .ss-cell.cgr::after { background: #3fb950; }
 
+/* ── KPI strip apoyos — modo oscuro ── */
+#kpi-apoyos {
+  background: #0d1117;
+  border-top: 1px solid rgba(205,217,229,.1) !important;
+  border-bottom: 1px solid rgba(205,217,229,.08) !important;
+}
+#kpi-apoyos .ss-cell {
+  border-right: 1px solid rgba(205,217,229,.08);
+  background: #0d1117;
+  transition: background .15s;
+}
+#kpi-apoyos .ss-cell:hover { background: #161b22; }
+#kpi-apoyos .ss-cell:last-child { border-right: none; }
+#kpi-apoyos .ss-lbl  { color: #484f58; }
+#kpi-apoyos .ss-sub  { color: #8b949e; }
+#kpi-apoyos .ss-num  { color: #e6edf3; }
+#kpi-apoyos .ss-num.b  { color: #79c0ff; }
+#kpi-apoyos .ss-num.r  { color: #ff7b72; }
+#kpi-apoyos .ss-num.g  { color: #e3b341; }
+#kpi-apoyos .ss-num.gr { color: #3fb950; }
+#kpi-apoyos .ss-num.f  { color: #f778ba; }
+#kpi-apoyos .ss-num.m  { color: #79c0ff; }
+#kpi-apoyos .ss-cell.cb::after  { background: #388bfd; }
+#kpi-apoyos .ss-cell.cr::after  { background: #ff7b72; }
+#kpi-apoyos .ss-cell.cg::after  { background: #e3b341; }
+#kpi-apoyos .ss-cell.ck::after  { background: rgba(205,217,229,.3); }
+#kpi-apoyos .ss-cell.cgr::after { background: #3fb950; }
+#kpi-apoyos .ss-cell.cf::after  { background: #f778ba; }
+
 /* ── KPI strip nutrichihuahua — modo oscuro ── */
 #kpi-nutri {
   background: #0d1117;
@@ -333,3 +362,173 @@
 /* Spark bar */
 .mun-sp  { display:inline-block; width:50px; height:7px; background:var(--blue-bg); border:1px solid rgba(0,47,167,.1); vertical-align:middle; margin-right:6px; position:relative; top:-1px; overflow:hidden; }
 .mun-spf { height:100%; background:var(--blue); opacity:.65; }
+
+/* ══════════════════════════════════════════════════════
+   KPI STRIPS — DATOS GENERALES (dark container)
+══════════════════════════════════════════════════════ */
+#kpi-s1-cob, #kpi-s2-vul,
+#kpi-s2-apoyos, #kpi-s2-muns,
+#kpi-s3-loc, #kpi-s3-nolocal {
+  background: #0d1117;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-radius: 6px;
+}
+#kpi-s1-cob .ss-cell, #kpi-s2-vul .ss-cell,
+#kpi-s2-apoyos .ss-cell, #kpi-s2-muns .ss-cell,
+#kpi-s3-loc .ss-cell, #kpi-s3-nolocal .ss-cell {
+  border-right: 1px solid rgba(205,217,229,.08);
+  background: #161b22;
+  border-radius: 6px;
+  transition: background .15s;
+}
+#kpi-s1-cob .ss-cell:hover, #kpi-s2-vul .ss-cell:hover,
+#kpi-s2-apoyos .ss-cell:hover, #kpi-s2-muns .ss-cell:hover,
+#kpi-s3-loc .ss-cell:hover, #kpi-s3-nolocal .ss-cell:hover {
+  background: #1c2128;
+}
+#kpi-s1-cob .ss-cell:last-child, #kpi-s2-vul .ss-cell:last-child,
+#kpi-s2-apoyos .ss-cell:last-child, #kpi-s2-muns .ss-cell:last-child,
+#kpi-s3-loc .ss-cell:last-child, #kpi-s3-nolocal .ss-cell:last-child {
+  border-right: none;
+}
+#kpi-s1-cob .ss-lbl, #kpi-s2-vul .ss-lbl,
+#kpi-s2-apoyos .ss-lbl, #kpi-s2-muns .ss-lbl,
+#kpi-s3-loc .ss-lbl, #kpi-s3-nolocal .ss-lbl { color: #484f58; }
+
+#kpi-s1-cob .ss-sub, #kpi-s2-vul .ss-sub,
+#kpi-s2-apoyos .ss-sub, #kpi-s2-muns .ss-sub,
+#kpi-s3-loc .ss-sub, #kpi-s3-nolocal .ss-sub { color: #8b949e; }
+
+#kpi-s1-cob .ss-num, #kpi-s2-vul .ss-num,
+#kpi-s2-apoyos .ss-num, #kpi-s2-muns .ss-num,
+#kpi-s3-loc .ss-num, #kpi-s3-nolocal .ss-num { color: #e6edf3; }
+
+#kpi-s1-cob .ss-num.b, #kpi-s2-vul .ss-num.b,
+#kpi-s2-apoyos .ss-num.b, #kpi-s2-muns .ss-num.b,
+#kpi-s3-loc .ss-num.b, #kpi-s3-nolocal .ss-num.b { color: #79c0ff; }
+
+#kpi-s1-cob .ss-num.r, #kpi-s2-vul .ss-num.r,
+#kpi-s2-apoyos .ss-num.r, #kpi-s2-muns .ss-num.r,
+#kpi-s3-loc .ss-num.r, #kpi-s3-nolocal .ss-num.r { color: #ff7b72; }
+
+#kpi-s1-cob .ss-num.g, #kpi-s2-vul .ss-num.g,
+#kpi-s2-apoyos .ss-num.g, #kpi-s2-muns .ss-num.g,
+#kpi-s3-loc .ss-num.g, #kpi-s3-nolocal .ss-num.g { color: #e3b341; }
+
+#kpi-s1-cob .ss-num.gr, #kpi-s2-vul .ss-num.gr,
+#kpi-s2-apoyos .ss-num.gr, #kpi-s2-muns .ss-num.gr,
+#kpi-s3-loc .ss-num.gr, #kpi-s3-nolocal .ss-num.gr { color: #3fb950; }
+
+#kpi-s1-cob .ss-num.f, #kpi-s2-vul .ss-num.f,
+#kpi-s2-apoyos .ss-num.f, #kpi-s2-muns .ss-num.f,
+#kpi-s3-loc .ss-num.f, #kpi-s3-nolocal .ss-num.f { color: #f778ba; }
+
+#kpi-s1-cob .ss-num.m, #kpi-s2-vul .ss-num.m,
+#kpi-s2-apoyos .ss-num.m, #kpi-s2-muns .ss-num.m,
+#kpi-s3-loc .ss-num.m, #kpi-s3-nolocal .ss-num.m { color: #79c0ff; }
+
+#kpi-s1-cob .ss-cell.cb::after, #kpi-s2-vul .ss-cell.cb::after,
+#kpi-s2-apoyos .ss-cell.cb::after, #kpi-s2-muns .ss-cell.cb::after,
+#kpi-s3-loc .ss-cell.cb::after, #kpi-s3-nolocal .ss-cell.cb::after { background:#388bfd; }
+
+#kpi-s1-cob .ss-cell.cr::after, #kpi-s2-vul .ss-cell.cr::after,
+#kpi-s2-apoyos .ss-cell.cr::after, #kpi-s2-muns .ss-cell.cr::after,
+#kpi-s3-loc .ss-cell.cr::after, #kpi-s3-nolocal .ss-cell.cr::after { background:#ff7b72; }
+
+#kpi-s1-cob .ss-cell.cg::after, #kpi-s2-vul .ss-cell.cg::after,
+#kpi-s2-apoyos .ss-cell.cg::after, #kpi-s2-muns .ss-cell.cg::after,
+#kpi-s3-loc .ss-cell.cg::after, #kpi-s3-nolocal .ss-cell.cg::after { background:#e3b341; }
+
+#kpi-s1-cob .ss-cell.ck::after, #kpi-s2-vul .ss-cell.ck::after,
+#kpi-s2-apoyos .ss-cell.ck::after, #kpi-s2-muns .ss-cell.ck::after,
+#kpi-s3-loc .ss-cell.ck::after, #kpi-s3-nolocal .ss-cell.ck::after { background:rgba(205,217,229,.3); }
+
+#kpi-s1-cob .ss-cell.cgr::after, #kpi-s2-vul .ss-cell.cgr::after,
+#kpi-s2-apoyos .ss-cell.cgr::after, #kpi-s2-muns .ss-cell.cgr::after,
+#kpi-s3-loc .ss-cell.cgr::after, #kpi-s3-nolocal .ss-cell.cgr::after { background:#3fb950; }
+
+#kpi-s1-cob .ss-cell.cf::after, #kpi-s2-vul .ss-cell.cf::after,
+#kpi-s2-apoyos .ss-cell.cf::after, #kpi-s2-muns .ss-cell.cf::after,
+#kpi-s3-loc .ss-cell.cf::after, #kpi-s3-nolocal .ss-cell.cf::after { background:#f778ba; }
+
+/* ══════════════════════════════════════════════════════
+   DATOS GENERALES — contenido de slides (dark)
+══════════════════════════════════════════════════════ */
+#tab-general .kicker                { color: #cdd9e5; }
+#tab-general .kicker.gold            { color: #e3b341; }
+#tab-general .kicker.green           { color: #3fb950; }
+#tab-general .kicker.red             { color: #ff7b72; }
+#tab-general .kicker.fem             { color: #f778ba; }
+#tab-general .body-copy              { color: #cdd9e5; }
+#tab-general .dropcap::first-letter  { color: #cdd9e5; }
+#tab-general .deck                   { color: #8b949e; }
+#tab-general .deck strong            { color: #e6edf3; }
+#tab-general .nota                   { color: #484f58; border-top-color: rgba(205,217,229,.08); }
+#tab-general .img-caption            { color: #484f58; }
+#tab-general .rule-heavy             { border-color: rgba(205,217,229,.12); }
+#tab-general .v-rule                 { background: rgba(205,217,229,.08); }
+#tab-general .bar-track { background: rgba(205,217,229,.07); }
+#tab-general .bar-name { color: #8b949e; }
+#tab-general .bar-val  { color: #e6edf3; }
+#tab-general .bar-pct  { color: #484f58; }
+#tab-general .leg-lbl  { color: #8b949e; }
+#tab-general .leg-val  { color: #e6edf3; }
+#tab-general .leg-pct  { color: #484f58; }
+#tab-general .donut-hole { background: #0d1117; }
+#tab-general .donut-hole .dv { color: #e6edf3; }
+#tab-general .donut-hole .dl { color: #484f58; }
+#tab-general .pyr-lbl { color: #8b949e; }
+#tab-general .hl-hero  { color: #e6edf3; }
+#tab-general .hl-large { color: #e6edf3; }
+#tab-general .hl-blue  { color: #e6edf3; }
+#tab-general .hl-gold  { color: #e3b341; }
+#tab-general .hl-green { color: #3fb950; }
+#tab-general [style*="color:var(--blue)"]  { color: #e6edf3 !important; }
+#tab-general [style*="color:var(--gold)"]  { color: #e3b341 !important; }
+#tab-general [style*="color:var(--green)"] { color: #3fb950 !important; }
+#tab-general [style*="font-size:42px"]:not([style*="color"]) { color: #cdd9e5; }
+#tab-general [style*="font-size:65px"]:not([style*="color"]) { color: #e6edf3; }
+#tab-general [style*="color:var(--ink)"]  { color: #e6edf3 !important; }
+#tab-general [style*="color:var(--ink2)"] { color: #8b949e !important; }
+#tab-general [style*="color:var(--ink3)"] { color: #484f58 !important; }
+#tab-general [style*="font-size:42px"] { color: #cdd9e5 !important; }
+#tab-general [style*="background:var(--border3)"] { background: rgba(205,217,229,.07) !important; }
+#tab-general .cov-track { background: rgba(205,217,229,.07); }
+#tab-general .g-bar { background: rgba(205,217,229,.07); }
+#tab-general .g-labels { color: #8b949e; }
+#tab-general .slide-nav-tab:not(.active) { background: #161b22; }
+#tab-general .slide-nav-tab:hover:not(.active) { background: #1c2128; }
+
+/* ══════════════════════════════════════════════════════
+   INSTITUCIONES — contenido (dark)
+══════════════════════════════════════════════════════ */
+#tab-instituciones .kicker                { color: #cdd9e5; }
+#tab-instituciones .kicker.gold            { color: #e3b341; }
+#tab-instituciones .kicker.green           { color: #3fb950; }
+#tab-instituciones .kicker.red             { color: #ff7b72; }
+#tab-instituciones .kicker.fem             { color: #f778ba; }
+#tab-instituciones .body-copy              { color: #cdd9e5; }
+#tab-instituciones .dropcap::first-letter  { color: #cdd9e5; }
+#tab-instituciones .deck                   { color: #8b949e; }
+#tab-instituciones .deck strong            { color: #e6edf3; }
+#tab-instituciones .nota                   { color: #484f58; border-top-color: rgba(205,217,229,.08); }
+#tab-instituciones .img-caption            { color: #484f58; }
+#tab-instituciones .rule-heavy             { border-color: rgba(205,217,229,.12); }
+#tab-instituciones .v-rule                 { background: rgba(205,217,229,.08); }
+#tab-instituciones .bar-track { background: rgba(205,217,229,.07); }
+#tab-instituciones .bar-name { color: #8b949e; }
+#tab-instituciones .bar-val  { color: #e6edf3; }
+#tab-instituciones .cov-track { background: rgba(205,217,229,.07); }
+#tab-instituciones [style*="color:var(--ink)"]  { color: #e6edf3 !important; }
+#tab-instituciones [style*="color:var(--ink2)"] { color: #8b949e !important; }
+#tab-instituciones [style*="color:var(--ink3)"] { color: #484f58 !important; }
+#tab-instituciones [style*="background:var(--border3)"] { background: rgba(205,217,229,.07) !important; }
+#tab-instituciones [style*="font-size:36px"] { color: #e6edf3 !important; }
+
+/* separador entre instituciones */
+#tab-instituciones [id^="inst-row-"] {
+  border-color: rgba(205,217,229,.06) !important;
+}
+
+/* ── Padding lateral: el .wrap externo (40px) aplica — sin override extra ── */

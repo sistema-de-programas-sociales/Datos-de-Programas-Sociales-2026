@@ -43,12 +43,12 @@ function renderInstituciones() {
       const isSin = k === 'sin_datos';
       const barColor = isSin ? 'rgba(100,100,100,.4)' : av;
       return `<div style="margin-bottom:6px">
-        <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:${isSin?'var(--ink3)':'var(--ink2)'};margin-bottom:1px">${allLabels[k]}</div>
+        <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:${isSin?'#484f58':'#8b949e'};margin-bottom:1px">${allLabels[k]}</div>
         <div style="display:flex;align-items:center;gap:8px">
-          <div style="flex:1;height:20px;background:var(--border3);border-radius:2px;overflow:hidden">
+          <div style="flex:1;height:20px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
             <div style="height:100%;width:${w}%;background:${barColor};border-radius:2px;transition:width .8s ease${isSin?';opacity:.7':''}"></div>
           </div>
-          <div style="font-family:var(--sans);font-size:13px;color:${isSin?'var(--ink3)':'var(--ink2)'};width:90px;flex-shrink:0;white-space:nowrap;text-align:right">${fmt(vals[i])} <span style="opacity:.6;font-size:11px">${w}%</span></div>
+          <div style="font-family:var(--sans);font-size:13px;color:${isSin?'#484f58':'#8b949e'};width:90px;flex-shrink:0;white-space:nowrap;text-align:right">${fmt(vals[i])} <span style="opacity:.6;font-size:11px">${w}%</span></div>
         </div>
       </div>`;
     }).join('');
@@ -99,7 +99,7 @@ function renderInstituciones() {
 
           <!-- Titular texto + imagen en fila -->
           <div style="display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start">
-            <div style="font-family:var(--head);font-weight:900;line-height:1.05;color:var(--ink);font-size:36px">
+            <div style="font-family:var(--head);font-weight:900;line-height:1.05;color:#e6edf3;font-size:36px">
               ${instTitular(k, v, meta)}
             </div>
             <div id="inst-img-wrap-${k}" style="width:180px;aspect-ratio:4/3;flex-shrink:0;overflow:hidden;border:1px solid ${meta.av}33">

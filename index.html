@@ -91,7 +91,7 @@
 <div id="tab-general" class="tab-pane active">
 
   <!-- ═══ SLIDER NAVEGACIÓN ═══ -->
-  <div class="slide-nav-bar">
+  <div class="slide-nav-bar" style="margin-top:10px">
     <button class="slide-nav-btn" onclick="slideGeneral(-1)" id="slider-prev">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
@@ -117,6 +117,8 @@
     </button>
   </div>
 
+  <div style="background:#0d1117;border:1px solid rgba(205,217,229,.12);border-radius:10px;overflow:hidden;margin-top:10px;padding:0 40px 24px">
+
   <!-- ═══ SLIDE 1: S1 Beneficiarios Únicos | S2 Mujeres y Hombres ═══ -->
   <!-- ▓▓▓▓▓▓ SLIDE 1 BLOQUEADO · NO MODIFICAR · IDs: pp-benef-hero pp-cuerpo pp-mujeres-hero pp-hombres-hero pp-mujeres-pct-txt pp-hombres-pct-txt pp-genero-cuerpo donut-sexo-pp pyramid-loc-pp pp-piramide-texto kpi-s1-cob kpi-s2-vul ▓▓▓▓▓▓ -->
   <div class="g-slide" id="gslide-0">
@@ -136,7 +138,7 @@
         <div class="img-caption">Datos obtenidos del padrón de beneficiarios 2026 - SDHyBC.</div>
       </div>
       </div>
-      <div class="stat-strip c2" id="kpi-s1-cob" style="border:1px solid var(--border2);border-right:none;margin-top:auto"></div>
+      <div class="stat-strip c2" id="kpi-s1-cob" style="border:1px solid rgba(205,217,229,.1);border-right:none;margin-top:auto"></div>
     </div>
 
     <div class="v-rule"></div>
@@ -177,7 +179,7 @@
       </div>
       <div class="body-copy dropcap mt12" id="pp-piramide-texto">—</div>
       </div>
-      <div class="stat-strip c2" id="kpi-s2-vul" style="border:1px solid var(--border2);border-left:none;margin-top:auto"></div>
+      <div class="stat-strip c2" id="kpi-s2-vul" style="border:1px solid rgba(205,217,229,.1);border-left:none;margin-top:auto"></div>
     </div>
   </div>
   </div><!-- /gslide-0 -->
@@ -210,7 +212,7 @@
         <div class="kicker mt14 mb6">Beneficiarios por Institución <span style="font-weight:400;opacity:.7">· Participación</span></div>
         <div class="bar-list" id="bar-inst-general"></div>
       </div>
-      <div class="stat-strip c2" id="kpi-s2-apoyos" style="border:1px solid var(--border2);border-right:none;margin-top:16px"></div>
+      <div class="stat-strip c2" id="kpi-s2-apoyos" style="border:1px solid rgba(205,217,229,.1);border-right:none;margin-top:16px"></div>
     </div>
 
     <div class="v-rule"></div>
@@ -228,8 +230,8 @@
           <img src="imagenes/cobertura-municipios.jpg" alt="Chihuahua territorio" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" onerror="this.style.display='none'">
           <div class="img-caption">Distribución de programas sociales en los 67 municipios — SDHyBC, 2026.</div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border2);margin-top:14px">
-          <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(205,217,229,.1);margin-top:14px;background:#161b22;border-radius:6px;overflow:hidden">
+          <div style="padding:14px 16px;border-right:1px solid rgba(205,217,229,.08)">
             <div class="kicker gold mb4">Programas Activos</div>
             <div class="hl-large hl-gold fmt" id="pp-prog">—</div>
             <div class="deck mt4" id="pp-inst-deck">—</div>
@@ -244,7 +246,7 @@
         <div class="bar-list" id="bar-edad-pp"></div>
         <p class="nota" id="nota-edad-pp"></p>
       </div>
-      <div class="stat-strip c2" id="kpi-s2-muns" style="border:1px solid var(--border2);border-left:none;margin-top:16px"></div>
+      <div class="stat-strip c2" id="kpi-s2-muns" style="border:1px solid rgba(205,217,229,.1);border-left:none;margin-top:16px"></div>
     </div>
 
   </div>
@@ -281,7 +283,7 @@
         <div class="kicker mt16 mb6">Localizables por Institución <span style="font-weight:400;opacity:.7">· Participación</span></div>
         <div class="bar-list" id="bar-inst-pp"></div>
       </div>
-      <div class="stat-strip c2" id="kpi-s3-loc" style="border:1px solid var(--border2);border-right:none;margin-top:16px"></div>
+      <div class="stat-strip c2" id="kpi-s3-loc" style="border:1px solid rgba(205,217,229,.1);border-right:none;margin-top:16px"></div>
     </div>
 
     <div class="v-rule"></div>
@@ -304,7 +306,7 @@
         <div class="pyramid" id="pyramid-loc-s3"></div>
         <div class="body-copy mt12" id="pp-loc-piramide-texto">—</div>
       </div>
-      <div class="stat-strip c2" id="kpi-s3-nolocal" style="border:1px solid var(--border2);border-left:none;margin-top:16px"></div>
+      <div class="stat-strip c2" id="kpi-s3-nolocal" style="border:1px solid rgba(205,217,229,.1);border-left:none;margin-top:16px"></div>
     </div>
 
   </div>
@@ -314,13 +316,16 @@
   <!-- KPIs ocultos (referenciados por JS del slider) -->
   <div id="kpi-general-all" style="display:none"></div>
 
+  </div><!-- /dark-panel -->
 </div><!-- /tab-general -->
 
 <!-- ════════════════════════════════════════════════
      TAB 2 · INSTITUCIONES
 ════════════════════════════════════════════════ -->
 <div id="tab-instituciones" class="tab-pane">
-  <div id="inst-rows-container" style="margin-top:10px"></div>
+  <div style="background:#0d1117;border:1px solid rgba(205,217,229,.12);border-radius:10px;overflow:hidden;margin-top:12px;padding:12px 0 24px">
+  <div id="inst-rows-container" style="padding:10px 40px 0"></div>
+  </div><!-- /dark-panel -->
 </div><!-- /tab-instituciones -->
 
 <!-- ════════════════════════════════════════════════
@@ -479,9 +484,6 @@
 ════════════════════════════════════════════════ -->
 <div id="tab-apoyos" class="tab-pane">
 
-  <!-- KPI strip -->
-  <div class="stat-strip c4 mt12" id="kpi-apoyos"></div>
-
   <!-- ═══ NAVEGACIÓN INTERNA ═══ -->
   <div class="slide-nav-bar" style="margin-top:10px">
     <button class="slide-nav-btn" onclick="showApoyosPanel(document.getElementById('apoyos-tab-0').classList.contains('active')?1:0)">
@@ -569,11 +571,9 @@
   </div><!-- /apoyos-panel-1 -->
 
 </div><!-- /tab-apoyos -->
-</div><!-- /tab-apoyos -->
 
 <!-- ═══ TAB 6 · GRUPOS VULNERABLES ═══ -->
 <div id="tab-vulnerables" class="tab-pane">
-  <div class="wrap">
 
   <!-- KPI strip -->
   <div class="stat-strip c4 mt12" id="vul-kpis" style="border-top:3px solid var(--ink);border-bottom:2px solid var(--border)"></div>
@@ -583,12 +583,10 @@
     <div id="vul-main-container"></div>
   </div>
 
-  </div><!-- /wrap -->
 </div><!-- /tab-vulnerables -->
 
 <!-- ═══ TAB 7 · NUTRICHIHUAHUA ═══ -->
 <div id="tab-nutrichihuahua" class="tab-pane">
-  <div class="wrap">
 
   <!-- KPI strip -->
   <div class="stat-strip mt12" id="kpi-nutri" style="grid-template-columns:repeat(8,1fr);border-top:3px solid var(--ink);border-bottom:2px solid var(--border)"></div>
@@ -596,7 +594,6 @@
   <!-- Nav + Panels — renderizado por renderNutri() -->
   <div id="nutri-nav-panels"></div>
 
-  </div><!-- /wrap -->
 </div><!-- /tab-nutrichihuahua -->
 
 </div><!-- /wrap -->
