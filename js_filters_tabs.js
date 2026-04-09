@@ -295,7 +295,7 @@ function renderVulnerables() {
     const cobNum = g.pob_vulnerable > 0 && g.atendidos > 0 ? (g.atendidos / g.pob_vulnerable * 100) : null;
     const hasDatos = cobNum !== null;
     const cc = cobNum === null ? '#2a2f3a' : cobNum >= 20 ? '#56d364' : cobNum >= 8 ? '#ffa657' : '#f85149';
-    const ringR = 36, circ = 2 * Math.PI * ringR;
+    const ringR = 46, circ = 2 * Math.PI * ringR;
     const dash = hasDatos ? (Math.min(cobNum/100,1)*circ).toFixed(1) : '0';
     const pobRel = g.atendidos > 0 ? (g.atendidos / POB_VUL * 100).toFixed(1) : 0;
     const delay = (i * 0.05).toFixed(2);
@@ -311,13 +311,13 @@ function renderVulnerables() {
 
     html += '<div class="gv-card'+(hasDatos?'':' no-data')+'" id="gv-card-'+i+'" style="animation-delay:'+delay+'s" '+(hasDatos?'onclick="gvSelectCard('+i+')"':'')+' >';
     html += '<div style="display:flex;align-items:center;gap:12px">';
-    html += '<div style="position:relative;flex-shrink:0;width:88px;height:88px">';
-    html += '<div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">';
+    html += '<div style="position:relative;flex-shrink:0;width:110px;height:110px">';
+    html += '<div style="position:absolute;inset:9px;border-radius:50%;overflow:hidden;background:#161b22">';
     if (imgSrc) html += '<img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover;opacity:'+(hasDatos?'1':'0.35')+'" onerror="this.style.display=\'none\'"/>';
     html += '</div>';
-    html += '<svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">';
-    html += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
-    html += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="'+cc+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 44 44)" '+(hasDatos?'':'opacity=".25"')+'/>';
+    html += '<svg width="110" height="110" viewBox="0 0 110 110" style="position:absolute;inset:0">';
+    html += '<circle cx="55" cy="55" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
+    html += '<circle cx="55" cy="55" r="'+ringR+'" fill="none" stroke="'+cc+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 55 55)" '+(hasDatos?'':'opacity=".25"')+'/>';
     html += '</svg>';
     html += '</div>';
     html += '<div style="flex:1;min-width:0">';

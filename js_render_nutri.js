@@ -101,7 +101,7 @@ function renderNutri() {
     const pM     = inst.benef>0 ? (inst.bm/inst.benef*100).toFixed(1) : 0;
     const pH     = (100-parseFloat(pM)).toFixed(1);
     const pct    = totalB>0 ? (inst.benef/totalB*100) : 0;
-    const ringR  = 36, circ = 2*Math.PI*ringR;
+    const ringR  = 46, circ = 2*Math.PI*ringR;
     const dash   = (Math.min(pct/100,1)*circ).toFixed(1);
     const delay  = (ii*0.07).toFixed(2);
     const imgMap = {DIF:'imagenes/inst-dif.jpg', SDHyBC:'imagenes/inst-sdhybc.jpg', SPyCI:'imagenes/inst-spyci.jpg'};
@@ -119,15 +119,15 @@ function renderNutri() {
     /* ── HEADER: imagen con anillo + nombre + cifras ── */
     p0 += '<div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">';
     /* imagen con anillo SVG — igual que GV */
-    p0 += '<div style="position:relative;flex-shrink:0;width:88px;height:88px">';
-    p0 += '<div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">';
+    p0 += '<div style="position:relative;flex-shrink:0;width:110px;height:110px">';
+    p0 += '<div style="position:absolute;inset:9px;border-radius:50%;overflow:hidden;background:#161b22">';
     if (imgSrc) {
       p0 += '<img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display=\'none\'"/>';
     }
     p0 += '</div>';
-    p0 += '<svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">';
-    p0 += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
-    p0 += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 44 44)"/>';
+    p0 += '<svg width="110" height="110" viewBox="0 0 110 110" style="position:absolute;inset:0">';
+    p0 += '<circle cx="55" cy="55" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
+    p0 += '<circle cx="55" cy="55" r="'+ringR+'" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 55 55)"/>';
     p0 += '</svg>';
     p0 += '</div>';
     /* nombre, % del total como badge, cifras */
