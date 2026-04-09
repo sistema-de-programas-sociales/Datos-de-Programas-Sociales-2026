@@ -35,6 +35,9 @@ function renderNutri() {
   /* inst accent colors matching INST_COLORS */
   const NC = { DIF:'#DB2777', SDHyBC:'#1D9E75', SPyCI:'#C2410C' };
 
+  /* store inst data globally for modal */
+  window._ncInsts = ND.insts;
+
   /* ── KPI strip: fill the element that now exists in index.html ── */
   const kpiEl = document.getElementById('kpi-nutri');
   if (kpiEl) {
@@ -89,17 +92,18 @@ function renderNutri() {
     '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px">';
 
   ND.insts.forEach((inst, ii) => {
-    const c   = NC[inst.nombre] || '#8b949e';
-    const pM  = inst.benef>0 ? (inst.bm/inst.benef*100).toFixed(1) : 0;
-    const pH  = (100-parseFloat(pM)).toFixed(1);
-    const pct = totalB>0 ? (inst.benef/totalB*100) : 0;
-    const ringR = 36, circ = 2*Math.PI*ringR;
-    const dash = (Math.min(pct/100,1)*circ).toFixed(1);
-    const delay = (ii*0.07).toFixed(2);
+    const c      = NC[inst.nombre] || '#8b949e';
+    const pM     = inst.benef>0 ? (inst.bm/inst.benef*100).toFixed(1) : 0;
+    const pH     = (100-parseFloat(pM)).toFixed(1);
+    const pct    = totalB>0 ? (inst.benef/totalB*100) : 0;
+    const ringR  = 36, circ = 2*Math.PI*ringR;
+    const dash   = (Math.min(pct/100,1)*circ).toFixed(1);
+    const delay  = (ii*0.07).toFixed(2);
+    const imgMap = {DIF:'imagenes/inst-dif.jpg', SDHyBC:'imagenes/inst-sdhybc.jpg', SPyCI:'imagenes/inst-spyci.jpg'};
+    const imgSrc = imgMap[inst.nombre] || '';
 
     /* Real programs from ap_programas */
-    const realProgs = inst.ap_programas || [];
-    /* Beneficiarios per real program — match by name from inst.programas */
+    const realProgs  = inst.ap_programas || [];
     const benefByProg = {};
     (inst.programas||[]).forEach(p => { benefByProg[p.n] = (benefByProg[p.n]||0) + p.t; });
 
@@ -107,30 +111,35 @@ function renderNutri() {
     p0 += '<div style="height:4px;background:'+c+'"></div>';
     p0 += '<div style="padding:18px;display:flex;flex-direction:column;gap:0">';
 
-    /* ── HEADER: donut + nombre + cifras ── */
+    /* ── HEADER: imagen con anillo + nombre + cifras ── */
     p0 += '<div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">';
-    /* donut */
-    p0 += '<div style="position:relative;flex-shrink:0;width:80px;height:80px">';
-    p0 += '<div style="position:absolute;inset:10px;border-radius:50%;background:#0d1117;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px">';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:13px;font-weight:900;color:'+c+';line-height:1">'+pct.toFixed(1)+'%</div>';
-    p0 += '<div style="font-size:9px;color:#484f58;line-height:1">del total</div>';
+    /* imagen con anillo SVG — igual que GV */
+    p0 += '<div style="position:relative;flex-shrink:0;width:88px;height:88px">';
+    p0 += '<div style="position:absolute;inset:7px;border-radius:50%;overflow:hidden;background:#161b22">';
+    if (imgSrc) {
+      p0 += '<img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display=\'none\'"/>';
+    }
     p0 += '</div>';
-    p0 += '<svg width="80" height="80" viewBox="0 0 80 80" style="position:absolute;inset:0">';
-    p0 += '<circle cx="40" cy="40" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
-    p0 += '<circle cx="40" cy="40" r="'+ringR+'" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 40 40)"/>';
+    p0 += '<svg width="88" height="88" viewBox="0 0 88 88" style="position:absolute;inset:0">';
+    p0 += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="rgba(205,217,229,.07)" stroke-width="8"/>';
+    p0 += '<circle cx="44" cy="44" r="'+ringR+'" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+dash+' '+circ.toFixed(1)+'" transform="rotate(-90 44 44)"/>';
     p0 += '</svg>';
     p0 += '</div>';
-    /* nombre y cifras */
+    /* nombre, % del total como badge, cifras */
     p0 += '<div style="flex:1;min-width:0">';
-    p0 += '<div style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:'+c+';margin-bottom:6px">'+inst.nombre+'</div>';
-    p0 += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">';
-    p0 += '<div style="background:#0d1117;border-radius:8px;padding:8px 10px">';
-    p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Beneficiarios</div>';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:20px;font-weight:800;color:#e6edf3;line-height:1">'+fN(inst.benef)+'</div>';
+    p0 += '<div style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:'+c+';margin-bottom:5px">'+inst.nombre+'</div>';
+    p0 += '<div style="display:inline-flex;align-items:center;gap:5px;background:'+c+'18;border:1px solid '+c+'44;border-radius:8px;padding:3px 9px;margin-bottom:8px">';
+    p0 += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:900;color:'+c+'">'+pct.toFixed(1)+'%</span>';
+    p0 += '<span style="font-size:11px;color:'+c+';opacity:.7">del programa</span>';
     p0 += '</div>';
-    p0 += '<div style="background:#0d1117;border-radius:8px;padding:8px 10px">';
-    p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px">Apoyos</div>';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:20px;font-weight:800;color:'+c+';line-height:1">'+fN(inst.apoyos_total)+'</div>';
+    p0 += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">';
+    p0 += '<div style="background:#0d1117;border-radius:8px;padding:7px 10px">';
+    p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Beneficiarios</div>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:800;color:#e6edf3;line-height:1">'+fN(inst.benef)+'</div>';
+    p0 += '</div>';
+    p0 += '<div style="background:#0d1117;border-radius:8px;padding:7px 10px">';
+    p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Apoyos</div>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:800;color:'+c+';line-height:1">'+fN(inst.apoyos_total)+'</div>';
     p0 += '</div>';
     p0 += '</div>';
     p0 += '</div>';
@@ -146,50 +155,15 @@ function renderNutri() {
     p0 += '<div style="width:'+pH+'%;background:#79c0ff;opacity:.7"></div>';
     p0 += '</div>';
 
-    /* ── PROGRAMAS (uno por entrada de ap_programas) ── */
+    /* ── botón Más datos → modal ── */
+    const safeInst = inst.nombre.replace(/'/g,'\\\'');
     p0 += '<div style="height:1px;background:rgba(205,217,229,.06)"></div>';
-    p0 += '<div class="nc-sec-lbl">Programas</div>';
-    const maxProgB = Math.max(...realProgs.map(rp => benefByProg[rp.n]||rp.t), 1);
-    realProgs.forEach(rp => {
-      const benef = benefByProg[rp.n] || rp.t;
-      const w = ((benef/maxProgB)*100).toFixed(1);
-      /* beneficiarios del programa — buscar en inst.programas */
-      const progBenef = (inst.programas||[]).find(p=>p.n===rp.n);
-      const pMp = progBenef && progBenef.t>0 ? (progBenef.m/progBenef.t*100).toFixed(0) : 0;
-      p0 += '<div class="nc-row">';
-      p0 += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px">';
-      p0 += '<span style="font-size:12px;color:#8b949e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:72%" title="'+rp.n+'">'+toTit(rp.n)+'</span>';
-      p0 += '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:#e6edf3">'+fN(benef)+'<span style="font-size:10px;font-weight:400;color:#484f58;margin-left:3px">benef.</span></span>';
-      p0 += '</div>';
-      p0 += '<div class="nc-bar"><div class="nc-bar-f" style="width:'+w+'%;background:'+c+';opacity:.65"></div></div>';
-      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">M '+pMp+'% · H '+(100-parseInt(pMp))+'%</div>';
-      p0 += '</div>';
-    });
-
-    /* ── APOYOS (de ap_programas[].apoyos) ── */
-    const allAps = [];
-    realProgs.forEach(rp => (rp.apoyos||[]).forEach(a => {
-      const existing = allAps.find(x=>x.n===a.n);
-      if (existing) { existing.t+=a.t; existing.m+=a.m; existing.h+=a.h; }
-      else allAps.push({...a});
-    }));
-    allAps.sort((a,b)=>b.t-a.t);
-    const maxApoyoT = Math.max(...allAps.map(a=>a.t), 1);
-
-    p0 += '<div style="height:1px;background:rgba(205,217,229,.06);margin-top:8px"></div>';
-    p0 += '<div class="nc-sec-lbl">Apoyos Entregados</div>';
-    allAps.forEach(a => {
-      const w2 = ((a.t/inst.apoyos_total)*100).toFixed(1);
-      const pMa = a.t>0 ? (a.m/a.t*100).toFixed(0) : 0;
-      p0 += '<div class="nc-row">';
-      p0 += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px">';
-      p0 += '<span style="font-size:12px;color:#8b949e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:72%" title="'+a.n+'">'+toTit(a.n)+'</span>';
-      p0 += '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:'+c+'">'+fN(a.t)+'<span style="font-size:10px;font-weight:400;color:#484f58;margin-left:3px">apoyos</span></span>';
-      p0 += '</div>';
-      p0 += '<div class="nc-bar"><div class="nc-bar-f" style="width:'+w2+'%;background:'+c+';opacity:.4"></div></div>';
-      p0 += '<div style="font-size:11px;color:#484f58;margin-top:2px">M '+pMa+'% · H '+(100-parseInt(pMa))+'% · '+pN(a.t,inst.apoyos_total)+' del inst.</div>';
-      p0 += '</div>';
-    });
+    p0 += '<div style="margin-top:12px">';
+    p0 += '<button class="cat-ver-btn" style="width:100%;justify-content:center;font-size:12px;padding:8px 0" onclick="ncInstModal(\'' + safeInst + '\')">';
+    p0 += '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" style="width:13px;height:13px"><circle cx="6" cy="6" r="5"/><path d="M6 4v4M4 6h4"/></svg>';
+    p0 += ' Programas y Apoyos';
+    p0 += '</button>';
+    p0 += '</div>';
 
     p0 += '</div></div>'; /* /padding /card */
   });
@@ -399,6 +373,81 @@ function renderNutri() {
       '</div>' +
       '<div class="cat-body" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">'+p2+'</div>' +
     '</div>';
+
+  /* ── modal Programas y Apoyos por institución ── */
+  window.ncInstModal = function(nombre) {
+    const inst = window._ncInsts?.find(i => i.nombre === nombre);
+    if (!inst) return;
+    const c = {DIF:'#DB2777',SDHyBC:'#1D9E75',SPyCI:'#C2410C'}[nombre] || '#8b949e';
+    const realProgs = inst.ap_programas || [];
+
+    /* reusar el cat-modal-overlay existente */
+    const overlay = document.getElementById('cat-modal-overlay');
+    const titleEl = document.getElementById('cat-modal-title');
+    const subEl   = document.getElementById('cat-modal-sub');
+    const bodyEl  = document.getElementById('cat-modal-body');
+    const tabsEl  = document.getElementById('cat-modal-tabs');
+    if (!overlay || !bodyEl) return;
+
+    titleEl.textContent = nombre + ' · NutriChihuahua';
+    subEl.textContent   = fN(inst.benef) + ' beneficiarios · ' + fN(inst.apoyos_total) + ' apoyos';
+    if (tabsEl) tabsEl.style.display = 'none';
+
+    /* beneficiarios por programa */
+    const benefByProg = {};
+    (inst.programas||[]).forEach(p => { benefByProg[p.n] = (benefByProg[p.n]||0) + p.t; });
+    const maxP = Math.max(...realProgs.map(rp => benefByProg[rp.n]||rp.t), 1);
+
+    /* apoyos agregados */
+    const allAps = [];
+    realProgs.forEach(rp => (rp.apoyos||[]).forEach(a => {
+      const ex = allAps.find(x=>x.n===a.n);
+      if (ex) { ex.t+=a.t; ex.m+=a.m; ex.h+=a.h; } else allAps.push({...a});
+    }));
+    allAps.sort((a,b)=>b.t-a.t);
+
+    let html = '';
+
+    /* programas */
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">Programas — Beneficiarios</div>';
+    realProgs.forEach(rp => {
+      const benef = benefByProg[rp.n] || rp.t;
+      const w = ((benef/maxP)*100).toFixed(1);
+      const progBenef = (inst.programas||[]).find(p=>p.n===rp.n);
+      const pMp = progBenef && progBenef.t>0 ? (progBenef.m/progBenef.t*100).toFixed(0) : 0;
+      html += '<div style="margin-bottom:12px">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">';
+      html += '<span style="font-size:13px;color:#cdd9e5;font-weight:600">' + toTit(rp.n) + '</span>';
+      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#e6edf3">' + fN(benef) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">benef.</span></span>';
+      html += '</div>';
+      html += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden;margin-bottom:4px">';
+      html += '<div style="height:100%;width:'+w+'%;background:'+c+';border-radius:3px;opacity:.7"></div></div>';
+      html += '<div style="font-size:11px;color:#484f58">M '+pMp+'% · H '+(100-parseInt(pMp))+'%</div>';
+      html += '</div>';
+    });
+
+    /* divider */
+    html += '<div style="height:1px;background:rgba(205,217,229,.08);margin:4px 0 14px"></div>';
+
+    /* apoyos */
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">Apoyos Entregados — '+fN(inst.apoyos_total)+'</div>';
+    allAps.forEach(a => {
+      const w2 = ((a.t/inst.apoyos_total)*100).toFixed(1);
+      const pMa = a.t>0 ? (a.m/a.t*100).toFixed(0) : 0;
+      html += '<div style="margin-bottom:12px">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">';
+      html += '<span style="font-size:13px;color:#cdd9e5;font-weight:600">' + toTit(a.n) + '</span>';
+      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:'+c+'">' + fN(a.t) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">apoyos</span></span>';
+      html += '</div>';
+      html += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden;margin-bottom:4px">';
+      html += '<div style="height:100%;width:'+w2+'%;background:'+c+';border-radius:3px;opacity:.45"></div></div>';
+      html += '<div style="font-size:11px;color:#484f58">M '+pMa+'% · H '+(100-parseInt(pMa))+'% · ' + pN(a.t,inst.apoyos_total) + ' del total</div>';
+      html += '</div>';
+    });
+
+    bodyEl.innerHTML = html;
+    overlay.classList.remove('hidden');
+  };
 
   /* panel switcher */
   window.nSw = function(idx) {
