@@ -62,7 +62,7 @@ function renderNutri() {
   if (!navEl) return;
   navEl.innerHTML =
     '<div class="slide-nav-bar" style="margin-top:10px">' +
-      '<button class="slide-nav-btn" onclick="nSw(+document.querySelector(".n-tab.active")?.dataset.i-1)">' +
+      '<button class="slide-nav-btn" onclick="nSw(+document.querySelector(\'.n-tab.active\')?.dataset.i-1)">' +
         '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>' +
       '</button>' +
       '<div class="slide-nav-tabs">' +
@@ -70,7 +70,7 @@ function renderNutri() {
         '<button class="slide-nav-tab n-tab" data-i="1" onclick="nSw(1)"><span class="snt-num">Sección II</span><span class="snt-title">Municipios</span><span class="snt-bar"></span></button>' +
         '<button class="slide-nav-tab n-tab" data-i="2" onclick="nSw(2)"><span class="snt-num">Sección III</span><span class="snt-title">Tipos de<br>Apoyo</span><span class="snt-bar"></span></button>' +
       '</div>' +
-      '<button class="slide-nav-btn" onclick="nSw(+document.querySelector(".n-tab.active")?.dataset.i+1)">' +
+      '<button class="slide-nav-btn" onclick="nSw(+document.querySelector(\'.n-tab.active\')?.dataset.i+1)">' +
         '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>' +
       '</button>' +
     '</div>' +
@@ -161,7 +161,7 @@ function renderNutri() {
     p0 += '</div>';
 
     /* ── botón Más datos → modal ── */
-    const safeInst = inst.nombre.replace(/'/g,'\\\'');
+    const safeInst = inst.nombre.replace(/'/g,'&#39;');
     p0 += '<div style="height:1px;background:rgba(205,217,229,.06)"></div>';
     p0 += '<div style="margin-top:12px">';
     p0 += '<button class="cat-ver-btn" style="width:100%;justify-content:center;font-size:12px;padding:8px 0" onclick="ncInstModal(\'' + safeInst + '\')">';

@@ -335,16 +335,15 @@ def build_dashboard_data(raw, excel_path=None):
         prog_apoyos_filtrado = {k: int(sf(v2)) for k, v2 in g3_progs.items()
                                 if sf(v2) >= 2}
 
+        def _norm_prog(s):
+            return _nk(s)
+
         programas = []
         for p in sorted(v.get('programas', []), key=lambda x: -sf(x.get('total', 0))):
-            # Buscar apoyos con normalización tolerante a tildes
-            def norm(s):
-                import unicodedata
-                return unicodedata.normalize('NFD', (s or '').upper()).encode('ascii', 'ignore').decode()
             ap_prog = prog_apoyos_filtrado.get(p['nombre'], 0)
             if not ap_prog:
                 for k, val in prog_apoyos_filtrado.items():
-                    if norm(k) == norm(p['nombre']):
+                    if _norm_prog(k) == _norm_prog(p['nombre']):
                         ap_prog = val
                         break
             programas.append({
@@ -855,7 +854,7 @@ def build_dashboard_data(raw, excel_path=None):
 
 def main():
     if len(sys.argv) < 2:
-        print('Uso: python3 generar_dashboard_data.py <excel_path> [--json]', file=sys.stderr)
+        print('Uso: python3 generar_dashboard_data.py <excel_path> [--json] [--nutrichihuahua-only]', file=sys.stderr)
         sys.exit(1)
 
     excel_path = Path(sys.argv[1])
@@ -863,7 +862,36 @@ def main():
         print(f'ERROR: no existe {excel_path}', file=sys.stderr)
         sys.exit(1)
 
-    modo_json = '--json' in sys.argv
+    modo_json              = '--json'                in sys.argv
+    modo_nutri_only        = '--nutrichihuahua-only' in sys.argv
+
+    # ── Modo rápido: solo regenerar sección NutriChihuahua ──────────────────
+    if modo_nutri_only:
+        out_js = SCRIPT_DIR / 'data_dashboard.js'
+        if not out_js.exists():
+            print('WARN: data_dashboard.js no existe — ejecutando pipeline completo.', file=sys.stderr)
+        else:
+            print('Leyendo datos NutriChihuahua...', file=sys.stderr)
+            nutri_data = leer_nutrichihuahua(excel_path)
+            # Leer el JS existente, reemplazar solo la clave nutrichihuahua
+            with open(out_js, 'r', encoding='utf-8') as f:
+                js_content = f.read()
+            import re, json as _json
+            nutri_json = _json.dumps(nutri_data, ensure_ascii=False)
+            # Reemplazar valor de "nutrichihuahua": ... hasta la siguiente clave de nivel 0
+            pattern = r'("nutrichihuahua"\s*:\s*)(?:\{[^}]*\}|\[[^\]]*\]|null)'
+            replacement = f'"nutrichihuahua": {nutri_json}'
+            new_js, n = re.subn(pattern, replacement, js_content, count=1, flags=re.DOTALL)
+            if n:
+                with open(out_js, 'w', encoding='utf-8') as f:
+                    f.write(new_js)
+                kb = out_js.stat().st_size // 1024
+                print(f'✓ NutriChihuahua actualizado en data_dashboard.js ({kb} KB)', file=sys.stderr)
+                if nutri_data:
+                    print(f'  NutriChihuahua: {len(nutri_data)} registros', file=sys.stderr)
+                return
+            else:
+                print('WARN: no se encontró clave nutrichihuahua en data_dashboard.js — ejecutando pipeline completo.', file=sys.stderr)
 
     print('Leyendo Excel...', file=sys.stderr)
     raw  = leer_excel(excel_path)

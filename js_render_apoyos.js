@@ -83,7 +83,7 @@ function renderApoyosTable(rows) {
 
     // sin rango por apoyo disponible en el JSON
 
-    const safeName = a.nombre.replace(/'/g, "\\'");
+    const safeName = a.nombre.replace(/'/g,'&#39;');
 
     // Color accent — filtro activo o gradiente multi-inst
     const accentColor = (() => {
