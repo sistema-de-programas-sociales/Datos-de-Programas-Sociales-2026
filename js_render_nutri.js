@@ -35,8 +35,11 @@ function renderNutri() {
   /* inst accent colors matching INST_COLORS */
   const NC = { DIF:'#DB2777', SDHyBC:'#1D9E75', SPyCI:'#C2410C' };
 
-  /* store inst data globally for modal */
+  /* store data globally for modals */
   window._ncInsts = ND.insts;
+  window._ncMuns  = ND.muns;
+  window._ncRKEYS = ND.RANGOS;
+  window._ncRLAB  = ND.RLAB;
 
   /* ── KPI strip: fill the element that now exists in index.html ── */
   const kpiEl = document.getElementById('kpi-nutri');
@@ -267,6 +270,7 @@ function renderNutri() {
       '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;font-weight:600;color:#79c0ff">'+fN(m.h)+'</span><div style="font-size:11px;color:#484f58">'+pH2+'%</div></td>' +
       '<td style="'+TD+';text-align:center">'+cob+'</td>' +
       '<td style="'+TD+'"><div style="display:flex;align-items:center;gap:7px"><div style="width:44px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden"><div style="height:100%;width:'+barA+'%;background:#e3b341;border-radius:2px"></div></div><span style="font-family:DM Mono,monospace;font-size:14px;color:#e3b341">'+fN(m.at||0)+'</span></div></td>' +
+      '<td style="'+TD+';text-align:center"><button data-n="'+m.n+'" onclick="ncMunModal(this.dataset.n)" style="font-size:11px;font-weight:600;color:#79c0ff;background:rgba(56,139,253,.1);border:0.5px solid rgba(56,139,253,.3);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap">Ver</button></td>' +
       '<td style="'+TD+';text-align:center">'+rMaxP+'</td>' +
       '<td style="'+TD+';text-align:center">'+rMinP+'</td>' +
       '</tr>';
@@ -281,7 +285,7 @@ function renderNutri() {
     '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#79c0ff">'+fN(totBH)+'</span></td>' +
     '<td></td>' +
     '<td style="padding:12px 8px"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#e3b341">'+fN(totApAll)+'</span></td>' +
-    '<td></td><td></td>' +
+    '<td></td><td></td><td></td>' +
     '</tr>';
 
   const TH = 'padding:10px 8px;font-family:DM Sans,system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b949e';
@@ -301,6 +305,7 @@ function renderNutri() {
       '<th style="'+TH+';text-align:center">Hombres</th>' +
       '<th style="'+TH+';text-align:center">Cobertura</th>' +
       '<th style="'+TH+';text-align:left">Apoyos</th>' +
+      '<th style="'+TH+';text-align:center"></th>' +
       '<th style="'+TH+';text-align:center">Rango Mayor</th>' +
       '<th style="'+TH+';text-align:center">Rango Menor</th>' +
     '</tr></thead>' +
@@ -443,6 +448,74 @@ function renderNutri() {
       html += '<div style="height:100%;width:'+w2+'%;background:'+c+';border-radius:3px;opacity:.45"></div></div>';
       html += '<div style="font-size:11px;color:#484f58">M '+pMa+'% · H '+(100-parseInt(pMa))+'% · ' + pN(a.t,inst.apoyos_total) + ' del total</div>';
       html += '</div>';
+    });
+
+    bodyEl.innerHTML = html;
+    overlay.classList.remove('hidden');
+  };
+
+  /* ── modal Ver Apoyos por municipio ── */
+  window.ncMunModal = function(nombre) {
+    const m = window._ncMuns?.find(x => x.n === nombre);
+    if (!m) return;
+    const overlay = document.getElementById('cat-modal-overlay');
+    const titleEl = document.getElementById('cat-modal-title');
+    const subEl   = document.getElementById('cat-modal-sub');
+    const bodyEl  = document.getElementById('cat-modal-body');
+    const tabsEl  = document.getElementById('cat-modal-tabs');
+    if (!overlay || !bodyEl) return;
+
+    titleEl.textContent = toTit(nombre) + ' · Apoyos NutriChihuahua';
+    subEl.textContent   = fN(m.at) + ' apoyos entregados · ' + fN(m.t) + ' beneficiarios';
+    if (tabsEl) tabsEl.style.display = 'none';
+
+    const pctM = m.at>0 ? (m.am/m.at*100).toFixed(1) : 0;
+    const pctH = (100-parseFloat(pctM)).toFixed(1);
+    const apVsBen = m.t>0 ? (m.at/m.t).toFixed(2) : '—';
+    const RCOLM = {'0-5':'#ffa657','6-11':'#56d364','12-17':'#79c0ff','18-29':'#f778ba',
+                   '30-49':'#d2a8ff','50-64':'#39d353','65+':'#ff7b72'};
+    const maxR = Math.max(...ND.RANGOS.map(r=>(m.rm[r]||0)+(m.rh[r]||0)));
+
+    let html = '';
+
+    /* totales */
+    html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px">';
+    html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
+    html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Total apoyos</div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#e3b341">'+fN(m.at)+'</div></div>';
+    html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
+    html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Beneficiarios</div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#388bfd">'+fN(m.t)+'</div></div>';
+    html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
+    html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Apoyos/benef.</div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#8b949e">'+apVsBen+'</div></div>';
+    html += '</div>';
+
+    /* barra M/H apoyos */
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:8px">Distribución por sexo · Apoyos</div>';
+    html += '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px">';
+    html += '<span style="color:#f778ba;font-weight:600">M '+pctM+'% &ensp; '+fN(m.am)+'</span>';
+    html += '<span style="color:#79c0ff;font-weight:600">'+fN(m.ah)+' &ensp; H '+pctH+'%</span></div>';
+    html += '<div style="display:flex;height:10px;border-radius:5px;overflow:hidden;margin-bottom:16px">';
+    html += '<div style="width:'+pctM+'%;background:#f778ba;opacity:.85"></div>';
+    html += '<div style="width:'+pctH+'%;background:#79c0ff;opacity:.7"></div></div>';
+
+    /* rangos de edad */
+    html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:10px">Distribución por edad · Beneficiarios</div>';
+    (window._ncRKEYS||[]).forEach((r,ri) => {
+      const vm = m.rm[r]||0, vh = m.rh[r]||0, tot = vm+vh;
+      if (!tot) return;
+      const w  = maxR>0 ? (tot/maxR*100).toFixed(1) : 0;
+      const wm = maxR>0 ? (vm/maxR*100).toFixed(1)  : 0;
+      const col = RCOLM[r]||'#8b949e';
+      html += '<div style="margin-bottom:8px">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px">';
+      html += '<span style="font-size:13px;font-weight:600;color:'+col+'">'+(window._ncRLAB||{})[r]+'</span>';
+      html += '<span style="font-family:DM Mono,monospace;font-size:13px;color:'+col+'">'+fN(tot)+'</span></div>';
+      html += '<div style="height:8px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden;position:relative">';
+      html += '<div style="position:absolute;height:100%;width:'+w+'%;background:'+col+';border-radius:4px;opacity:.35"></div>';
+      html += '<div style="position:absolute;height:100%;width:'+wm+'%;background:'+col+';border-radius:4px;opacity:.9"></div>';
+      html += '</div></div>';
     });
 
     bodyEl.innerHTML = html;
