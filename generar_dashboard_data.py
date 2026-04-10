@@ -378,6 +378,17 @@ def build_dashboard_data(raw, excel_path=None):
     # inst_subtotales viene directo de parse_sheet2: {inst_nombre: {m, h, total}}
     # Es la fuente más directa y confiable — ya está en cada objeto municipio
     # Construimos un lookup normalizado para usarlo en el loop de mun_reales
+
+    # Calcular apoyos reales por inst+municipio desde desglose_municipal
+    _apoyos_inst_mun = {}  # {norm_mun: {inst: apoyos}}
+    for mun_k, entries in desglose_mun.items():
+        for e in entries:
+            ins = e.get('institucion', '')
+            if not ins:
+                continue
+            _apoyos_inst_mun.setdefault(mun_k, {})
+            _apoyos_inst_mun[mun_k][ins] = _apoyos_inst_mun[mun_k].get(ins, 0) + int(sf(e.get('total', 0)))
+
     inst_subtotales_por_mun = {}
     for m in municipios:
         nom_k = _norm_mun(m.get('municipio', ''))
@@ -385,7 +396,9 @@ def build_dashboard_data(raw, excel_path=None):
         if subtotales:
             inst_subtotales_por_mun[nom_k] = {
                 ins: {'benef': int(sf(v.get('total', 0))),
-                      'apoyos': int(sf(v.get('total', 0)))}
+                      'apoyos': _apoyos_inst_mun.get(nom_k, {}).get(ins,
+                               _apoyos_inst_mun.get(_nk(m.get('municipio','')), {}).get(ins,
+                               int(sf(v.get('total', 0)))))}
                 for ins, v in subtotales.items()
                 if sf(v.get('total', 0)) > 0
             }

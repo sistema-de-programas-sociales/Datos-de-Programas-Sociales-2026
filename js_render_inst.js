@@ -53,7 +53,7 @@ function renderInstituciones() {
             <span style="font-family:var(--sans);font-size:11px;color:#484f58">${w}%</span>
           </div>
         </div>
-        <div style="height:12px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">
+        <div style="height:18px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">
           <div style="height:100%;width:${w}%;background:${barColor};border-radius:3px;transition:width .8s ease${isSin?';opacity:.7':''}"></div>
         </div>
       </div>`;
@@ -97,26 +97,25 @@ function renderInstituciones() {
     return `
     <!-- ══ FILA ${k} ══ -->
     <div style="${border}" id="inst-row-${k}">
-      <div class="np-2col mt4">
+      <div class="np-2col mt4" style="align-items:stretch">
 
         <!-- COL IZQ: kicker · titular (sin número) + imagen inline · texto · KPIs -->
-        <div class="np-2col-art" style="display:flex;flex-direction:column">
+        <div class="np-2col-art" style="display:flex;flex-direction:column;justify-content:space-between">
           <div class="kicker mb8 mt12" style="color:${meta.av}">${meta.fullname} · ${meta.muns} municipios</div>
 
-          <!-- Titular texto + imagen en fila -->
-          <div style="display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start">
-            <div style="font-family:var(--head);font-weight:900;line-height:1.05;color:#e6edf3;font-size:36px">
-              ${instTitular(k, v, meta)}
+          <!-- Imagen a ancho completo + titular debajo -->
+          <div id="inst-img-wrap-${k}" style="width:100%;aspect-ratio:5/2;max-height:350px;overflow:hidden;border-radius:8px;border:1px solid ${meta.av}33;margin-bottom:14px;flex-shrink:0">
+            <img src="${meta.img}" alt="${meta.fullname}"
+              style="width:100%;height:100%;object-fit:cover;object-position: 50% 15%;display:block;"
+              onerror="this.style.display='none';document.getElementById('inst-img-ph-${k}').style.display='flex'">
+            <div id="inst-img-ph-${k}" style="display:none;width:100%;height:100%;background:${meta.av}12;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="${meta.av}" stroke-width="1.2" opacity=".5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <div style="font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${meta.av};opacity:.7;text-align:center;padding:0 6px">${k}</div>
             </div>
-            <div id="inst-img-wrap-${k}" style="width:180px;aspect-ratio:4/3;flex-shrink:0;overflow:hidden;border:1px solid ${meta.av}33">
-              <img src="${meta.img}" alt="${meta.fullname}"
-                style="width:100%;height:100%;object-fit:cover;display:block;"
-                onerror="this.style.display='none';document.getElementById('inst-img-ph-${k}').style.display='flex'">
-              <div id="inst-img-ph-${k}" style="display:none;width:100%;height:100%;background:${meta.av}12;align-items:center;justify-content:center;flex-direction:column;gap:6px">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="${meta.av}" stroke-width="1.2" opacity=".5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <div style="font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${meta.av};opacity:.7;text-align:center;padding:0 6px">${k}</div>
-              </div>
-            </div>
+          </div>
+          <!-- Titular -->
+          <div style="font-family:var(--head);font-weight:900;line-height:1.05;color:#e6edf3;font-size:36px">
+            ${instTitular(k, v, meta)}
           </div>
 
           <hr class="rule-heavy">
@@ -154,6 +153,43 @@ function renderInstituciones() {
             <div class="deck mt4">${fmt(locT)} localizables de ${fmt(v.total)} beneficiarios</div>
           </div>
 
+          <!-- 4. Panel KPIs 2x3 -->
+          <div style="margin-top:auto;background:rgba(205,217,229,.03);border:1px solid ${meta.av}22;border-left:3px solid ${meta.av};border-radius:8px;overflow:hidden" id="inst-mun-panel-${k}">
+
+            <!-- FILA 1: Municipios con cobertura · Apoyos/benef global · Apoyo más entregado -->
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(205,217,229,.06)">
+              <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Municipios con cobertura</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:${meta.av};line-height:1">${meta.muns}</div>
+              </div>
+              <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyos p. benef. (global)</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:#e6edf3;line-height:1">${(v.apoyos/(v.total||1)).toFixed(2)}</div>
+              </div>
+              <div style="padding:12px 14px">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyo más entregado</div>
+                <div style="font-size:12px;font-weight:700;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-max-${k}">—</div>
+              </div>
+            </div>
+
+            <!-- FILA 2: Municipio con mayor entrega · Apoyos/benef top municipio · Apoyo menos entregado -->
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr">
+              <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Municipio con mayor entrega</div>
+                <div style="font-size:13px;font-weight:700;color:${meta.av};line-height:1.2" id="inst-top-mun-${k}">—</div>
+                <div style="font-size:10px;color:#6e7f8d;margin-top:3px" id="inst-top-mun-val-${k}">—</div>
+              </div>
+              <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyos p. benef. (municipio)</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:#e6edf3;line-height:1" id="inst-ratio-mun-${k}">—</div>
+              </div>
+              <div style="padding:12px 14px">
+                <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyo menos entregado</div>
+                <div style="font-size:12px;font-weight:700;color:#8b949e;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-min-${k}">—</div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </div>
@@ -171,6 +207,35 @@ function renderInstituciones() {
     /* héroe animado */
     const heroEl = document.getElementById('inst-hero-'+k);
     if (heroEl) { heroEl.textContent='0'; animCount(heroEl, v.total); }
+
+    /* top municipio + KPIs dinámicos */
+    const topMunEl  = document.getElementById('inst-top-mun-'+k);
+    const topMunVal = document.getElementById('inst-top-mun-val-'+k);
+    if (topMunEl) {
+      const munList = (D.municipios||[]).filter(m => m.inst && m.inst[k] && m.inst[k].apoyos > 0);
+      const topMun  = munList.reduce((best, m) => (!best || m.inst[k].apoyos > best.inst[k].apoyos) ? m : best, null);
+      if (topMun) {
+        topMunEl.textContent  = toTitle(topMun.nombre);
+        topMunVal.textContent = fmt(topMun.inst[k].apoyos) + ' apoyos · ' + fmt(topMun.inst[k].benef) + ' beneficiarios';
+        const ratioMunEl = document.getElementById('inst-ratio-mun-'+k);
+        if (ratioMunEl) {
+          const r = topMun.inst[k].benef > 0 ? (topMun.inst[k].apoyos / topMun.inst[k].benef).toFixed(2) : '—';
+          ratioMunEl.textContent = r;
+        }
+      } else { topMunEl.textContent = '—'; }
+    }
+    /* apoyo más/menos entregado */
+    const progMaxEl = document.getElementById('inst-prog-max-'+k);
+    const progMinEl = document.getElementById('inst-prog-min-'+k);
+    if (progMaxEl || progMinEl) {
+      const progs = (v.programas||[]).filter(p => (p.total||0) > 0);
+      if (progs.length) {
+        const pMax = progs.reduce((a,b) => (a.total||0)>=(b.total||0)?a:b);
+        const pMin = progs.reduce((a,b) => (a.total||0)<=(b.total||0)?a:b);
+        if (progMaxEl) progMaxEl.textContent = toTitle(pMax.nombre||'—');
+        if (progMinEl) progMinEl.textContent = toTitle(pMin.nombre||'—');
+      }
+    }
 
     /* texto editorial */
     const cuerpoEl = document.getElementById('inst-cuerpo-'+k);

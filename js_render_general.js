@@ -258,23 +258,6 @@ function renderGeneral() {
       kpiSS('Hombres Localiz.', fmt(locH3), pct(locH3,loc.total)+' de localizables', 'cm','m');
   }
 
-  // Texto explicativo de la pirámide
-  const pyrTexto = document.getElementById('pp-piramide-texto');
-  if (pyrTexto) {
-    const re = (D.rangos_edad||[]).filter(r=>r.key!=='sin_datos');
-    const topM = [...re].sort((a,b)=>(b.m||0)-(a.m||0))[0];
-    const topH = [...re].sort((a,b)=>(b.h||0)-(a.h||0))[0];
-    const r5064 = re.find(r=>r.key==='50-64');
-    const r65   = re.find(r=>r.key==='65+');
-    const adultosMay = ((r5064?.total||0) + (r65?.total||0));
-    pyrTexto.innerHTML =
-      `La pirámide de edad muestra la distribución etaria de los <strong>${fmt(g.total_benef)}</strong> beneficiarios únicos del padrón. ` +
-      `El grupo con mayor concentración de <strong>mujeres</strong> se encuentra en el rango de <strong>${topM?.label||'—'}</strong> ` +
-      `con <strong>${fmt(topM?.m||0)}</strong> registros, mientras que en <strong>hombres</strong> destaca el rango de ` +
-      `<strong>${topH?.label||'—'}</strong> con <strong>${fmt(topH?.h||0)}</strong>. ` +
-      `Los adultos de 50 años en adelante suman <strong>${fmt(adultosMay)}</strong> personas, representando el <strong>${pct(adultosMay, g.total_benef)}</strong> del padrón, ` +
-      `lo que refleja la orientación de los programas sociales hacia la población adulta y en condición de mayor vulnerabilidad.`;
-  }
 }
 
 /* ════════════════════════════════════════════════
