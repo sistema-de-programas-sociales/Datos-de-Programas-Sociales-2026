@@ -224,16 +224,22 @@ function renderInstituciones() {
         }
       } else { topMunEl.textContent = '—'; }
     }
-    /* apoyo más/menos entregado */
+    /* apoyo más/menos entregado — desde D.apoyos filtrado por institución */
     const progMaxEl = document.getElementById('inst-prog-max-'+k);
     const progMinEl = document.getElementById('inst-prog-min-'+k);
     if (progMaxEl || progMinEl) {
-      const progs = (v.programas||[]).filter(p => (p.total||0) > 0);
-      if (progs.length) {
-        const pMax = progs.reduce((a,b) => (a.total||0)>=(b.total||0)?a:b);
-        const pMin = progs.reduce((a,b) => (a.total||0)<=(b.total||0)?a:b);
-        if (progMaxEl) progMaxEl.textContent = toTitle(pMax.nombre||'—');
-        if (progMinEl) progMinEl.textContent = toTitle(pMin.nombre||'—');
+      const instApoyos = [];
+      (D.apoyos||[]).forEach(a => {
+        const instEntry = (a.instituciones||[]).find(i => i.nombre === k);
+        if (instEntry && instEntry.total > 0) {
+          instApoyos.push({nombre: a.nombre, total: instEntry.total});
+        }
+      });
+      if (instApoyos.length) {
+        const aMax = instApoyos.reduce((a,b) => a.total >= b.total ? a : b);
+        const aMin = instApoyos.reduce((a,b) => a.total <= b.total ? a : b);
+        if (progMaxEl) { progMaxEl.textContent = toTitle(aMax.nombre); progMaxEl.title = fmt(aMax.total)+' apoyos'; }
+        if (progMinEl) { progMinEl.textContent = toTitle(aMin.nombre); progMinEl.title = fmt(aMin.total)+' apoyos'; }
       }
     }
 
