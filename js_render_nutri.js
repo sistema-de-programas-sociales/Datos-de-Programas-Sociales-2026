@@ -179,60 +179,86 @@ function renderNutri() {
   const RCOL   = {'0-5':'#ffa657','6-11':'#56d364','12-17':'#79c0ff','18-29':'#f778ba',
                   '30-49':'#d2a8ff','50-64':'#39d353','65+':'#ff7b72'};
 
-  p0 += '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;padding:20px 24px">';
+  /* ── Age chart: lollipop + stat row ── */
+  p0 += '<div style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">';
 
-  /* header */
-  p0 += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px">';
-  p0 += '<div style="display:flex;align-items:center;gap:10px">';
-  p0 += '<span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#484f58">Distribución por Rango de Edad</span>';
-  p0 += '<span style="font-family:DM Mono,monospace;font-size:12px;color:#388bfd;background:rgba(56,139,253,.1);padding:2px 9px;border-radius:20px;border:.5px solid rgba(56,139,253,.25)">'+fN(totalB)+' beneficiarios</span>';
-  p0 += '</div>';
-  p0 += '<div style="display:flex;align-items:center;gap:12px;font-size:11px">';
-  p0 += '<span style="display:flex;align-items:center;gap:5px;color:#f778ba"><span style="display:inline-block;width:10px;height:3px;background:#f778ba;border-radius:2px"></span>Mujeres</span>';
-  p0 += '<span style="display:flex;align-items:center;gap:5px;color:#79c0ff"><span style="display:inline-block;width:10px;height:3px;background:#79c0ff;border-radius:2px;opacity:.7"></span>Hombres</span>';
-  p0 += '</div>';
-  p0 += '</div>';
-
-  /* barras verticales */
-  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end;padding:0 4px">';
+  /* stat summary row */
+  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid rgba(205,217,229,.07)">';
   RKEYS.forEach(r => {
-    const col  = RCOL[r] || '#8b949e';
-    const tot  = ND.RT[r];
-    const vm   = ND.RT_M[r] || 0;
-    const vh   = ND.RT_H[r] || 0;
+    const col = RCOL[r]||'#8b949e';
+    const tot = ND.RT[r];
     const pctT = (tot/totalB*100).toFixed(1);
-    const pctM = tot>0 ? (vm/tot*100).toFixed(0) : 0;
-    const pctH = 100 - parseInt(pctM);
-    const barH = Math.max(6, Math.round(tot/maxRTV*120));
-    const barHM= Math.max(2, Math.round(vm/(tot||1)*barH));
-    const barHH= Math.max(2, barH-barHM);
-    const isDom= r === rangoMax;
+    const isDom = r === rangoMax;
+    p0 += '<div style="padding:14px 6px 12px;text-align:center;border-right:1px solid rgba(205,217,229,.05);background:'+(isDom?'rgba(205,217,229,.04)':'transparent')+'">';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:'+(isDom?'20':'17')+'px;font-weight:800;color:'+col+';letter-spacing:-.02em;line-height:1">'+fN(tot)+'</div>';
+    p0 += '<div style="font-size:10px;color:#484f58;margin-top:4px;font-weight:600;letter-spacing:.04em">'+pctT+'%</div>';
+    p0 += '</div>';
+  });
+  p0 += '</div>';
 
-    p0 += '<div style="display:flex;flex-direction:column;align-items:center;gap:5px;padding:8px 4px 10px;border-radius:10px;transition:background .15s;cursor:default" title="'+ND.RLAB[r]+' años: '+fN(tot)+' benef. ('+pctT+'%) · M '+pctM+'% / H '+pctH+'%">';
-    /* número total arriba */
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:13px;font-weight:800;color:'+col+'">'+fN(tot)+'</div>';
-    /* barras dobles verticales */
-    p0 += '<div style="width:100%;display:flex;gap:3px;justify-content:center;align-items:flex-end;height:120px">';
-    p0 += '<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-width:0">';
-    p0 += '<div style="background:#f778ba;opacity:.9;border-radius:4px 4px 0 0;width:100%;min-height:3px;height:'+barHM+'px"></div>';
+  /* chart area */
+  p0 += '<div style="padding:20px 20px 0;position:relative">';
+
+  /* grid lines de fondo */
+  p0 += '<div style="position:absolute;inset:20px 20px 0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none">';
+  [100,75,50,25].forEach(pct => {
+    p0 += '<div style="display:flex;align-items:center;gap:8px"><span style="font-size:9px;color:#2d333b;width:20px;text-align:right;flex-shrink:0">'+pct+'%</span><div style="flex:1;height:1px;background:rgba(205,217,229,.04)"></div></div>';
+  });
+  p0 += '</div>';
+
+  /* barras lollipop */
+  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);column-gap:8px;align-items:end;height:160px;padding-left:28px">';
+  RKEYS.forEach(r => {
+    const col = RCOL[r]||'#8b949e';
+    const tot = ND.RT[r];
+    const vm  = ND.RT_M[r]||0;
+    const vh  = ND.RT_H[r]||0;
+    const hM  = Math.max(6, Math.round(vm/maxRTV*150));
+    const hH  = Math.max(6, Math.round(vh/maxRTV*150));
+    const isDom = r === rangoMax;
+
+    p0 += '<div style="display:flex;gap:5px;justify-content:center;align-items:flex-end;height:150px">';
+    /* barra M con cabeza redonda */
+    p0 += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:0">';
+    p0 += '<div style="width:8px;height:8px;background:#f778ba;border-radius:50%;margin-bottom:-1px;opacity:.95;flex-shrink:0"></div>';
+    p0 += '<div style="width:100%;background:linear-gradient(to top,#f778ba88,#f778ba22);border-radius:3px 3px 0 0;height:'+hM+'px"></div>';
     p0 += '</div>';
-    p0 += '<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-width:0">';
-    p0 += '<div style="background:#79c0ff;opacity:.75;border-radius:4px 4px 0 0;width:100%;min-height:3px;height:'+barHH+'px"></div>';
-    p0 += '</div>';
-    p0 += '</div>';
-    /* barra de color en la base */
-    p0 += '<div style="width:80%;height:3px;background:'+col+';border-radius:2px;opacity:.6"></div>';
-    /* etiqueta rango */
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:13px;font-weight:700;color:'+col+'">'+ND.RLAB[r]+'</div>';
-    /* % del total */
-    p0 += '<div style="font-size:11px;font-weight:600;color:#6e7f8d">'+pctT+'%</div>';
-    /* M/H */
-    p0 += '<div style="font-size:10px;text-align:center;line-height:1.5">';
-    p0 += '<span style="color:#f778ba">M '+pctM+'%</span><br><span style="color:#79c0ff">H '+pctH+'%</span>';
+    /* barra H con cabeza redonda */
+    p0 += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:0">';
+    p0 += '<div style="width:8px;height:8px;background:#79c0ff;border-radius:50%;margin-bottom:-1px;opacity:.85;flex-shrink:0"></div>';
+    p0 += '<div style="width:100%;background:linear-gradient(to top,#79c0ff88,#79c0ff22);border-radius:3px 3px 0 0;height:'+hH+'px"></div>';
     p0 += '</div>';
     p0 += '</div>';
   });
   p0 += '</div>';
+  p0 += '</div>';
+
+  /* label bar */
+  p0 += '<div style="display:grid;grid-template-columns:repeat(7,1fr);column-gap:8px;border-top:2px solid rgba(205,217,229,.06);margin-top:0">';
+  RKEYS.forEach(r => {
+    const col = RCOL[r]||'#8b949e';
+    const tot = ND.RT[r];
+    const vm  = ND.RT_M[r]||0;
+    const vh  = ND.RT_H[r]||0;
+    const pM  = tot>0?(vm/tot*100).toFixed(0):0;
+    const pH  = 100-parseInt(pM);
+    const isDom = r === rangoMax;
+    p0 += '<div style="text-align:center;padding:10px 4px 14px;background:'+(isDom?'rgba(205,217,229,.03)':'transparent')+';border-top:2px solid '+(isDom?col:'transparent')+'">';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:12px;font-weight:700;color:'+col+';margin-bottom:6px">'+ND.RLAB[r]+'</div>';
+    p0 += '<div style="display:flex;justify-content:center;gap:8px;font-size:10px">';
+    p0 += '<span style="color:#f778ba">M <b style="color:#e6edf3;font-family:DM Mono,monospace">'+pM+'%</b></span>';
+    p0 += '<span style="color:#79c0ff">H <b style="color:#e6edf3;font-family:DM Mono,monospace">'+pH+'%</b></span>';
+    p0 += '</div>';
+    p0 += '</div>';
+  });
+  p0 += '</div>';
+
+  /* footer leyenda */
+  p0 += '<div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:10px;border-top:1px solid rgba(205,217,229,.05);background:rgba(0,0,0,.15)">';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#f778ba"><span style="width:8px;height:8px;background:#f778ba;border-radius:50%"></span>Mujeres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#79c0ff"><span style="width:8px;height:8px;background:#79c0ff;border-radius:50%;opacity:.85"></span>Hombres</span>';
+  p0 += '</div>';
+
   p0 += '</div>';
 
   document.getElementById('n-p0').innerHTML = p0;
