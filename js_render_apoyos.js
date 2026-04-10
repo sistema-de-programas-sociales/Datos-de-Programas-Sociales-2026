@@ -12,7 +12,11 @@ function renderApoyosTable(rows) {
   const elNum   = document.getElementById('cat-total-num');
   if (elTipos) elTipos.textContent = apoyos.length;
   // Si hay filtro activo → suma de la selección; si no → total canónico
-  const filteredTotal = apoyos.reduce((s,a)=>s+a.total,0);
+  const _fi = window._catInstFilter && window._catInstFilter !== 'TODOS' ? window._catInstFilter : null;
+  const filteredTotal = apoyos.reduce((s,a) => {
+    const _id = _fi ? a.instituciones.find(i => i.nombre === _fi) : null;
+    return s + (_id ? _id.total : a.total);
+  }, 0);
   const isFiltered = (window._catInstFilter && window._catInstFilter !== 'TODOS') ||
                      (document.getElementById('apoyo-search')?.value?.trim());
   if (elNum) elNum.textContent = (isFiltered ? filteredTotal : (D.general.total_apoyos||filteredTotal)).toLocaleString('es-MX');
@@ -52,9 +56,15 @@ function renderApoyosTable(rows) {
   }
 
   const out = apoyos.map(a => {
-    const pctM  = a.total > 0 ? Math.round(a.m / a.total * 100) : 0;
+    // Si hay filtro de institución activo → usar el total de esa inst, no el global
+    const _fInst = window._catInstFilter && window._catInstFilter !== 'TODOS' ? window._catInstFilter : null;
+    const _instData = _fInst ? a.instituciones.find(i => i.nombre === _fInst) : null;
+    const displayTotal = _instData ? _instData.total : a.total;
+    const displayM     = _instData ? (_instData.m || 0) : (a.m || 0);
+    const displayMuns  = _instData ? (_instData.muns || a.n_muns) : a.n_muns;
+    const pctM  = displayTotal > 0 ? Math.round(displayM / displayTotal * 100) : 0;
     const pctH  = 100 - pctM;
-    const barW  = Math.round(a.total / maxTotal * 100);
+    const barW  = Math.round(displayTotal / maxTotal * 100);
     const isExp = (window._catExpanded || new Set()).has(a.nombre);
     const progs = [];
     a.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
@@ -134,11 +144,11 @@ function renderApoyosTable(rows) {
         <!-- KPIs: Apoyos / Municipios / Rango -->
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
           <div class="cat-dato">
-            <div class="cat-dato-val">${fmt(a.total)}</div>
+            <div class="cat-dato-val">${fmt(displayTotal)}</div>
             <div class="cat-dato-lbl">Apoyos</div>
           </div>
           <div class="cat-dato">
-            <div class="cat-dato-val">${a.n_muns}</div>
+            <div class="cat-dato-val">${displayMuns}</div>
             <div class="cat-dato-lbl">Municipios</div>
           </div>
           <div class="cat-dato">
