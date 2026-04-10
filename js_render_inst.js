@@ -33,22 +33,28 @@ function renderInstituciones() {
 
   const rangoChart = (rangos, av, total) => {
     const keys = ['65+','50-64','30-49','18-29','12-17','6-11','0-5'];
-    const sinD = rangos['sin_datos'] || 0;
-    const allKeys = [...keys, ...(sinD > 0 ? ['sin_datos'] : [])];
+    const sumaRangos = keys.reduce((s,k) => s + (rangos[k]||0), 0);
+    const sinD = (rangos['sin_datos'] > 0)
+      ? rangos['sin_datos']
+      : (total > sumaRangos ? total - sumaRangos : 0);
+    const allKeys = [...keys, 'sin_datos'];
     const allLabels = {...RANGOS_LABELS, 'sin_datos': 'Sin identificar'};
-    const vals  = allKeys.map(k => rangos[k]||0);
+    const vals  = allKeys.map(k => k === 'sin_datos' ? sinD : (rangos[k]||0));
     const tot   = vals.reduce((s,x)=>s+x,0) || 1;
     return allKeys.map((k,i) => {
       const w   = (vals[i]/tot*100).toFixed(1);
       const isSin = k === 'sin_datos';
-      const barColor = isSin ? 'rgba(100,100,100,.4)' : av;
-      return `<div style="margin-bottom:6px">
-        <div style="font-family:var(--sans);font-size:13px;font-weight:700;color:${isSin?'#484f58':'#8b949e'};margin-bottom:1px">${allLabels[k]}</div>
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="flex:1;height:20px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
-            <div style="height:100%;width:${w}%;background:${barColor};border-radius:2px;transition:width .8s ease${isSin?';opacity:.7':''}"></div>
+      const barColor = isSin ? 'rgba(150,150,150,.35)' : av;
+      return `<div style="margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+          <div style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${isSin?'#484f58':'#8b949e'}">${allLabels[k]}</div>
+          <div style="display:flex;align-items:baseline;gap:6px">
+            <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:700;color:${isSin?'#484f58':'#e6edf3'}">${fmt(vals[i])}</span>
+            <span style="font-family:var(--sans);font-size:11px;color:#484f58">${w}%</span>
           </div>
-          <div style="font-family:var(--sans);font-size:13px;color:${isSin?'#484f58':'#8b949e'};width:90px;flex-shrink:0;white-space:nowrap;text-align:right">${fmt(vals[i])} <span style="opacity:.6;font-size:11px">${w}%</span></div>
+        </div>
+        <div style="height:12px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${w}%;background:${barColor};border-radius:3px;transition:width .8s ease${isSin?';opacity:.7':''}"></div>
         </div>
       </div>`;
     }).join('');
@@ -281,6 +287,21 @@ function renderInstituciones() {
               `El <strong>${mPct}%</strong> son mujeres (<strong>${fmt(v.m)}</strong>), reflejo de que son principalmente las madres quienes gestionan el acceso al servicio. `+
               `Su tasa de localización del <strong>100%</strong> es la más alta del sistema, `+
               `resultado natural de operar con un padrón pequeño y manejable.`;
+          },
+          CULTURA: () => {
+            const prog0 = v.programas[0]||{};
+            const mujPct = mPct, homPct = hPct;
+            const topMun = muns;
+            const topRangLabel = RANGOS_LABELS[topRang]||topRang;
+            return `<strong style="color:${c}">Secretaría de Cultura</strong> promueve el acceso a expresiones artísticas, culturales y recreativas para la población chihuahuense, `+
+              `operando en <strong>${topMun} municipios</strong> del estado con <strong>${fmt(v.total)}</strong> beneficiarios únicos —el <strong>${padPct}%</strong> del padrón estatal. `+
+              `La institución canaliza sus apoyos a través del programa <strong>${toTitle(prog0.nombre||'Apoyos a la Cultura')}</strong>, `+
+              `con un registro de <strong>${fmt(v.apoyos)}</strong> apoyos otorgados y un promedio de <strong>${ratio}</strong> apoyo por beneficiario, `+
+              `lo que refleja una distribución directa e individual de sus intervenciones culturales. `+
+              `La composición de género muestra una participación predominantemente femenina: <strong>${fmt(v.m)} mujeres</strong> (${mujPct}%) frente a <strong>${fmt(v.h)} hombres</strong> (${homPct}%), `+
+              `con el rango etario de <strong>${topRangLabel}</strong> como el más representado dentro del padrón. `+
+              `La tasa de localización del <strong>${locPct}%</strong> —con <strong>${fmt(locT)}</strong> beneficiarios con datos de contacto verificados— `+
+              `indica un área de oportunidad para fortalecer el seguimiento y la medición del impacto cultural en la población atendida.`;
           },
         };
 
