@@ -1,7 +1,14 @@
 function renderApoyosTable(rows) {
   const apoyos      = rows.filter(r => r.type === 'apoyo').map(r => r.data);
   const totalGlobal = D.general.total_apoyos || 1;
-  const maxTotal    = Math.max(...apoyos.map(a => a.total), 1);
+  const _fiMax = (window._catInstFilter && window._catInstFilter !== 'TODOS') ? window._catInstFilter : null;
+  const maxTotal = Math.max(...apoyos.map(a => {
+    if (_fiMax) {
+      const ie = (a.instituciones||[]).find(i => i.nombre === _fiMax);
+      return ie ? (ie.total||0) : 0;
+    }
+    return a.total||0;
+  }), 1);
 
   const iInk = instInk;
   const iBg  = instBg;
@@ -10,16 +17,21 @@ function renderApoyosTable(rows) {
   // ── KPIs (dinámicos según filtro) ──
   const elTipos = document.getElementById('cat-total-tipos');
   const elNum   = document.getElementById('cat-total-num');
+  const _fi = (window._catInstFilter && window._catInstFilter !== 'TODOS') ? window._catInstFilter : null;
+  // Tipos: cantidad de apoyos únicos visibles
   if (elTipos) elTipos.textContent = apoyos.length;
-  // Si hay filtro activo → suma de la selección; si no → total canónico
-  const _fi = window._catInstFilter && window._catInstFilter !== 'TODOS' ? window._catInstFilter : null;
-  const filteredTotal = apoyos.reduce((s,a) => {
-    const _id = _fi ? a.instituciones.find(i => i.nombre === _fi) : null;
-    return s + (_id ? _id.total : a.total);
-  }, 0);
-  const isFiltered = (window._catInstFilter && window._catInstFilter !== 'TODOS') ||
-                     (document.getElementById('apoyo-search')?.value?.trim());
-  if (elNum) elNum.textContent = (isFiltered ? filteredTotal : (D.general.total_apoyos||filteredTotal)).toLocaleString('es-MX');
+  // Total apoyos: sin filtro → canónico de D.general; con filtro inst → suma de esa inst
+  if (elNum) {
+    if (_fi) {
+      const instTotal = apoyos.reduce((s,a) => {
+        const ie = (a.instituciones||[]).find(i => i.nombre === _fi);
+        return s + (ie ? (ie.total||0) : 0);
+      }, 0);
+      elNum.textContent = instTotal.toLocaleString('es-MX');
+    } else {
+      elNum.textContent = (D.general.total_apoyos || 0).toLocaleString('es-MX');
+    }
+  }
 
   // ── Chips (construir una sola vez) ──
   const chipsEl = document.getElementById('cat-inst-chips');
