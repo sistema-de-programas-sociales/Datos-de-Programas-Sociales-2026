@@ -134,17 +134,17 @@ function renderNutri() {
     p0 += '<div style="flex:1;min-width:0">';
     p0 += '<div style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:'+c+';margin-bottom:5px">'+inst.nombre+'</div>';
     p0 += '<div style="display:inline-flex;align-items:center;gap:5px;background:'+c+'18;border:1px solid '+c+'44;border-radius:8px;padding:3px 9px;margin-bottom:8px">';
-    p0 += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:900;color:'+c+'">'+pct.toFixed(1)+'%</span>';
+    p0 += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:400;color:'+c+'">'+pct.toFixed(1)+'%</span>';
     p0 += '<span style="font-size:11px;color:'+c+';opacity:.7">del programa</span>';
     p0 += '</div>';
     p0 += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">';
     p0 += '<div style="background:#0d1117;border-radius:8px;padding:7px 10px">';
     p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Beneficiarios</div>';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:800;color:#e6edf3;line-height:1">'+fN(inst.benef)+'</div>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:400;color:#e6edf3;line-height:1">'+fN(inst.benef)+'</div>';
     p0 += '</div>';
     p0 += '<div style="background:#0d1117;border-radius:8px;padding:7px 10px">';
     p0 += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Apoyos</div>';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:800;color:'+c+';line-height:1">'+fN(inst.apoyos_total)+'</div>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:18px;font-weight:400;color:'+c+';line-height:1">'+fN(inst.apoyos_total)+'</div>';
     p0 += '</div>';
     p0 += '</div>';
     p0 += '</div>';
@@ -152,8 +152,8 @@ function renderNutri() {
 
     /* ── sexo bar ── */
     p0 += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px">';
-    p0 += '<span style="color:#f778ba;font-weight:600">M '+pM+'%&ensp;'+fN(inst.bm)+'</span>';
-    p0 += '<span style="color:#79c0ff;font-weight:600">'+fN(inst.bh)+'&ensp;H '+pH+'%</span>';
+    p0 += '<span style="color:#f778ba;font-weight:400">M '+pM+'%&ensp;'+fN(inst.bm)+'</span>';
+    p0 += '<span style="color:#79c0ff;font-weight:400">'+fN(inst.bh)+'&ensp;H '+pH+'%</span>';
     p0 += '</div>';
     p0 += '<div style="display:flex;height:8px;border-radius:4px;overflow:hidden;margin-bottom:16px">';
     p0 += '<div style="width:'+pM+'%;background:#f778ba;opacity:.85"></div>';
@@ -244,7 +244,7 @@ function renderNutri() {
     const pH  = 100-parseInt(pM);
     const isDom = r === rangoMax;
     p0 += '<div style="text-align:center;padding:10px 4px 14px;background:'+(isDom?'rgba(205,217,229,.03)':'transparent')+';border-top:2px solid '+(isDom?col:'transparent')+'">';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:'+col+';margin-bottom:6px">'+ND.RLAB[r]+'</div>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:'+col+';margin-bottom:6px">'+ND.RLAB[r]+'</div>';
     p0 += '<div style="display:flex;justify-content:center;gap:12px;font-size:15px">';
     p0 += '<span style="color:#f778ba;font-family:DM Mono,monospace">M '+pM+'%</span>';
     p0 += '<span style="color:#79c0ff;font-family:DM Mono,monospace">H '+pH+'%</span>';
@@ -255,8 +255,8 @@ function renderNutri() {
 
   /* footer leyenda */
   p0 += '<div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:10px;border-top:1px solid rgba(205,217,229,.05);background:rgba(0,0,0,.15)">';
-  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#f778ba"><span style="width:8px;height:8px;background:#f778ba;border-radius:50%"></span>Mujeres</span>';
-  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#79c0ff"><span style="width:8px;height:8px;background:#79c0ff;border-radius:50%;opacity:.85"></span>Hombres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:400;color:#f778ba"><span style="width:8px;height:8px;background:#f778ba;border-radius:50%"></span>Mujeres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:400;color:#79c0ff"><span style="width:8px;height:8px;background:#79c0ff;border-radius:50%;opacity:.85"></span>Hombres</span>';
   p0 += '</div>';
 
   p0 += '</div>';
@@ -280,22 +280,22 @@ function renderNutri() {
     const barA= Math.round(((m.at||0)/maxMunAp)*100);
     const pob = pobMap[normN(m.n)] || 0;
     const cob = pob>0
-      ? '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:600;background:rgba(148,163,184,.08);color:#94a3b8;padding:3px 9px;border-radius:20px;border:.5px solid rgba(148,163,184,.2)">'+(m.t/pob*100).toFixed(1)+'%</span>'
+      ? '<span style="font-family:DM Mono,monospace;font-size:13px;font-weight:400;background:rgba(148,163,184,.08);color:#94a3b8;padding:3px 9px;border-radius:20px;border:.5px solid rgba(148,163,184,.2)">'+(m.t/pob*100).toFixed(1)+'%</span>'
       : '<span style="opacity:.3;color:#484f58">—</span>';
     const munRangos = RKEYS.map(r=>({r,tot:(m.rm[r]||0)+(m.rh[r]||0)})).filter(x=>x.tot>0);
     const rMax = munRangos.length ? munRangos.reduce((a,b)=>b.tot>a.tot?b:a).r : null;
     const rMin = munRangos.length>1 ? munRangos.reduce((a,b)=>b.tot<a.tot?b:a).r : null;
-    const rMaxP = rMax ? '<span style="font-size:12px;font-weight:700;background:rgba(56,139,253,.15);color:#79c0ff;padding:2px 8px;border-radius:20px;border:.5px solid rgba(56,139,253,.25)">'+ND.RLAB[rMax]+'</span>' : '<span style="opacity:.3;color:#484f58">—</span>';
-    const rMinP = rMin ? '<span style="font-size:12px;font-weight:700;background:rgba(255,166,87,.12);color:#ffa657;padding:2px 8px;border-radius:20px;border:.5px solid rgba(255,166,87,.25)">'+ND.RLAB[rMin]+'</span>' : '<span style="opacity:.3;color:#484f58">—</span>';
+    const rMaxP = rMax ? '<span style="font-size:12px;font-weight:400;background:rgba(56,139,253,.15);color:#79c0ff;padding:2px 8px;border-radius:20px;border:.5px solid rgba(56,139,253,.25)">'+ND.RLAB[rMax]+'</span>' : '<span style="opacity:.3;color:#484f58">—</span>';
+    const rMinP = rMin ? '<span style="font-size:12px;font-weight:400;background:rgba(255,166,87,.12);color:#ffa657;padding:2px 8px;border-radius:20px;border:.5px solid rgba(255,166,87,.25)">'+ND.RLAB[rMin]+'</span>' : '<span style="opacity:.3;color:#484f58">—</span>';
     const bg = i%2===0?'':'background:rgba(205,217,229,.02)';
     const TD = 'padding:9px 8px;border-bottom:1px solid rgba(205,217,229,.06)';
     mRows +=
       '<tr style="'+bg+'">' +
       '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;color:#484f58;background:rgba(205,217,229,.06);padding:2px 7px;border-radius:20px;border:.5px solid rgba(205,217,229,.08)">'+(i+1)+'</span></td>' +
-      '<td style="'+TD+';padding-left:14px"><span style="font-weight:600;font-size:14px;color:#e6edf3;font-family:DM Sans,system-ui,sans-serif">'+toTit(m.n)+'</span></td>' +
+      '<td style="'+TD+';padding-left:14px"><span style="font-weight:400;font-size:14px;color:#e6edf3;font-family:DM Sans,system-ui,sans-serif">'+toTit(m.n)+'</span></td>' +
       '<td style="'+TD+'"><div style="display:flex;align-items:center;gap:7px"><div style="width:44px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden"><div style="height:100%;width:'+barB+'%;background:#388bfd;border-radius:2px"></div></div><span style="font-family:DM Mono,monospace;font-size:14px;color:#e6edf3">'+fN(m.t)+'</span></div></td>' +
-      '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;font-weight:600;color:#f778ba">'+fN(m.m)+'</span><div style="font-size:11px;color:#484f58">'+pM2+'%</div></td>' +
-      '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;font-weight:600;color:#79c0ff">'+fN(m.h)+'</span><div style="font-size:11px;color:#484f58">'+pH2+'%</div></td>' +
+      '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;font-weight:400;color:#f778ba">'+fN(m.m)+'</span><div style="font-size:11px;color:#484f58">'+pM2+'%</div></td>' +
+      '<td style="'+TD+';text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;font-weight:400;color:#79c0ff">'+fN(m.h)+'</span><div style="font-size:11px;color:#484f58">'+pH2+'%</div></td>' +
       '<td style="'+TD+';text-align:center">'+cob+'</td>' +
       '<td style="'+TD+'"><div style="display:flex;align-items:center;gap:7px"><div style="width:44px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden"><div style="height:100%;width:'+barA+'%;background:#e3b341;border-radius:2px"></div></div><span style="font-family:DM Mono,monospace;font-size:14px;color:#e3b341">'+fN(m.at||0)+'</span></div></td>' +
       '<td style="'+TD+';text-align:center"><button data-n="'+m.n+'" onclick="ncMunModal(this.dataset.n)" style="font-size:11px;font-weight:600;color:#79c0ff;background:rgba(56,139,253,.1);border:0.5px solid rgba(56,139,253,.3);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap">Ver</button></td>' +
@@ -308,11 +308,11 @@ function renderNutri() {
     '<tr style="background:#161b22;border-top:1px solid rgba(205,217,229,.2)">' +
     '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:13px;color:#484f58">Σ</span></td>' +
     '<td style="padding:12px 14px;font-family:DM Sans,system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b949e">Total · '+ND.muns.length+' municipios</td>' +
-    '<td style="padding:12px 8px"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#388bfd">'+fN(totalB)+'</span></td>' +
-    '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#f778ba">'+fN(totBM)+'</span></td>' +
-    '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#79c0ff">'+fN(totBH)+'</span></td>' +
+    '<td style="padding:12px 8px"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:#388bfd">'+fN(totalB)+'</span></td>' +
+    '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:#f778ba">'+fN(totBM)+'</span></td>' +
+    '<td style="padding:12px 8px;text-align:center"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:#79c0ff">'+fN(totBH)+'</span></td>' +
     '<td></td>' +
-    '<td style="padding:12px 8px"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#e3b341">'+fN(totApAll)+'</span></td>' +
+    '<td style="padding:12px 8px"><span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:#e3b341">'+fN(totApAll)+'</span></td>' +
     '<td></td><td></td><td></td>' +
     '</tr>';
 
@@ -384,8 +384,8 @@ function renderNutri() {
     p2 += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden">';
     p2 += '<div style="height:100%;width:'+barW+'%;background:'+c+';border-radius:3px"></div></div>';
     p2 += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-top:6px">';
-    p2 += '<span style="color:#f778ba;font-weight:600">M '+fN(ap.m)+'</span>';
-    p2 += '<span style="color:#79c0ff;font-weight:600">'+fN(ap.h)+' H</span>';
+    p2 += '<span style="color:#f778ba;font-weight:400">M '+fN(ap.m)+'</span>';
+    p2 += '<span style="color:#79c0ff;font-weight:400">'+fN(ap.h)+' H</span>';
     p2 += '</div></div>';
     p2 += '</div></div>';
   });
@@ -451,7 +451,7 @@ function renderNutri() {
       html += '<div style="margin-bottom:12px">';
       html += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">';
       html += '<span style="font-size:13px;color:#cdd9e5;font-weight:600">' + toTit(rp.n) + '</span>';
-      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:#e6edf3">' + fN(benef) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">benef.</span></span>';
+      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:#e6edf3">' + fN(benef) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">benef.</span></span>';
       html += '</div>';
       html += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden;margin-bottom:4px">';
       html += '<div style="height:100%;width:'+w+'%;background:'+c+';border-radius:3px;opacity:.7"></div></div>';
@@ -470,7 +470,7 @@ function renderNutri() {
       html += '<div style="margin-bottom:12px">';
       html += '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">';
       html += '<span style="font-size:13px;color:#cdd9e5;font-weight:600">' + toTit(a.n) + '</span>';
-      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:'+c+'">' + fN(a.t) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">apoyos</span></span>';
+      html += '<span style="font-family:DM Mono,monospace;font-size:14px;font-weight:400;color:'+c+'">' + fN(a.t) + '<span style="font-size:11px;font-weight:400;color:#484f58;margin-left:4px">apoyos</span></span>';
       html += '</div>';
       html += '<div style="height:6px;background:rgba(205,217,229,.07);border-radius:3px;overflow:hidden;margin-bottom:4px">';
       html += '<div style="height:100%;width:'+w2+'%;background:'+c+';border-radius:3px;opacity:.45"></div></div>';
@@ -520,20 +520,20 @@ function renderNutri() {
     html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px">';
     html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
     html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Total apoyos</div>';
-    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#e3b341">'+fN(m.at)+'</div></div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:400;color:#e3b341">'+fN(m.at)+'</div></div>';
     html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
     html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Beneficiarios</div>';
-    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#388bfd">'+fN(m.t)+'</div></div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:400;color:#388bfd">'+fN(m.t)+'</div></div>';
     html += '<div style="background:#0d1117;border-radius:8px;padding:10px 12px;text-align:center">';
     html += '<div style="font-size:10px;color:#484f58;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">Ratio</div>';
-    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:800;color:#8b949e">'+apVsBen+'</div></div>';
+    html += '<div style="font-family:DM Mono,monospace;font-size:22px;font-weight:400;color:#8b949e">'+apVsBen+'</div></div>';
     html += '</div>';
 
     /* barra M/H */
     html += '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#484f58;margin-bottom:8px">Distribución por sexo · Apoyos</div>';
     html += '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px">';
-    html += '<span style="color:#f778ba;font-weight:600">M '+pctM+'% &ensp; '+fN(m.am)+'</span>';
-    html += '<span style="color:#79c0ff;font-weight:600">'+fN(m.ah)+' &ensp; H '+pctH+'%</span></div>';
+    html += '<span style="color:#f778ba;font-weight:400">M '+pctM+'% &ensp; '+fN(m.am)+'</span>';
+    html += '<span style="color:#79c0ff;font-weight:400">'+fN(m.ah)+' &ensp; H '+pctH+'%</span></div>';
     html += '<div style="display:flex;height:10px;border-radius:5px;overflow:hidden;margin-bottom:16px">';
     html += '<div style="width:'+pctM+'%;background:#f778ba;opacity:.85"></div>';
     html += '<div style="width:'+pctH+'%;background:#79c0ff;opacity:.7"></div></div>';
@@ -565,7 +565,7 @@ function renderNutri() {
         html += '</div>';
         html += '<div style="display:flex;align-items:center;gap:5px;flex-shrink:0">';
         insts.forEach(ins => { const ic=NC2[ins]||'#8b949e'; html += '<span style="font-size:10px;font-weight:700;color:'+ic+';background:'+ic+'18;border:1px solid '+ic+'44;border-radius:4px;padding:1px 6px">'+ins+'</span>'; });
-        html += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:800;color:'+col+'">'+fN(v.total)+'</span>';
+        html += '<span style="font-family:DM Mono,monospace;font-size:15px;font-weight:400;color:'+col+'">'+fN(v.total)+'</span>';
         html += '</div></div>';
         html += '<div style="height:8px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden;margin-bottom:4px">';
         html += '<div style="height:100%;width:'+w+'%;background:'+col+';border-radius:4px;opacity:.8"></div></div>';

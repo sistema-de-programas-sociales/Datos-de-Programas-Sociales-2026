@@ -49,7 +49,7 @@ function renderInstituciones() {
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
           <div style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${isSin?'#484f58':'#8b949e'}">${allLabels[k]}</div>
           <div style="display:flex;align-items:baseline;gap:6px">
-            <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:700;color:${isSin?'#484f58':'#e6edf3'}">${fmt(vals[i])}</span>
+            <span style="font-family:'DM Mono',monospace;font-size:14px;font-weight:400;color:${isSin?'#484f58':'#e6edf3'}">${fmt(vals[i])}</span>
             <span style="font-family:var(--sans);font-size:11px;color:#484f58">${w}%</span>
           </div>
         </div>
@@ -160,15 +160,15 @@ function renderInstituciones() {
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(205,217,229,.06)">
               <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Municipios con cobertura</div>
-                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:${meta.av};line-height:1">${meta.muns}</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:500;color:${meta.av};line-height:1">${meta.muns}</div>
               </div>
               <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyos p. benef. (global)</div>
-                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:#e6edf3;line-height:1">${(v.apoyos/(v.total||1)).toFixed(2)}</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:400;color:#e6edf3;line-height:1">${(v.apoyos/(v.total||1)).toFixed(2)}</div>
               </div>
               <div style="padding:12px 14px">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyo más entregado</div>
-                <div style="font-size:12px;font-weight:700;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-max-${k}">—</div>
+                <div style="font-size:12px;font-weight:400;color:#e6edf3;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-max-${k}">—</div>
               </div>
             </div>
 
@@ -176,16 +176,16 @@ function renderInstituciones() {
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr">
               <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Municipio con mayor entrega</div>
-                <div style="font-size:13px;font-weight:700;color:${meta.av};line-height:1.2" id="inst-top-mun-${k}">—</div>
+                <div style="font-size:13px;font-weight:400;color:${meta.av};line-height:1.2" id="inst-top-mun-${k}">—</div>
                 <div style="font-size:10px;color:#6e7f8d;margin-top:3px" id="inst-top-mun-val-${k}">—</div>
               </div>
               <div style="padding:12px 14px;border-right:1px solid rgba(205,217,229,.06)">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyos p. benef. (municipio)</div>
-                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:800;color:#e6edf3;line-height:1" id="inst-ratio-mun-${k}">—</div>
+                <div style="font-family:'DM Mono',monospace;font-size:26px;font-weight:400;color:#e6edf3;line-height:1" id="inst-ratio-mun-${k}">—</div>
               </div>
               <div style="padding:12px 14px">
                 <div style="font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#484f58;margin-bottom:5px">Apoyo menos entregado</div>
-                <div style="font-size:12px;font-weight:700;color:#8b949e;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-min-${k}">—</div>
+                <div style="font-size:12px;font-weight:400;color:#8b949e;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical" id="inst-prog-min-${k}">—</div>
               </div>
             </div>
 

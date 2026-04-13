@@ -48,7 +48,7 @@ function _instProgRender(p, inst, tab) {
   function kpi(label, val, color) {
     const v = val != null ? Number(val).toLocaleString('es-MX') : '—';
     return `<div style="background:#0d1117;border-radius:8px;padding:11px 12px;border:0.5px solid rgba(205,217,229,.08);text-align:center">
-      <div style="font-family:'DM Mono',monospace;font-size:17px;font-weight:700;color:${color||'#e6edf3'}">${v}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:17px;font-weight:400;color:${color||'#e6edf3'}">${v}</div>
       <div style="font-size:9px;color:#8b949e;margin-top:2px;text-transform:uppercase;letter-spacing:.04em">${label}</div>
     </div>`;
   }
@@ -59,7 +59,7 @@ function _instProgRender(p, inst, tab) {
             : Number(val).toLocaleString('es-MX');
     return `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid rgba(205,217,229,.06)">
       <span style="font-size:12px;color:#8b949e">${label}</span>
-      <span style="font-size:13px;font-weight:600;color:#e6edf3;font-family:'DM Mono',monospace">${v}</span>
+      <span style="font-size:13px;font-weight:400;color:#e6edf3;font-family:'DM Mono',monospace">${v}</span>
     </div>`;
   }
 
@@ -96,15 +96,15 @@ function _instProgRender(p, inst, tab) {
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
         <div style="background:#0d1117;border-radius:10px;padding:12px 14px;border:0.5px solid rgba(205,217,229,.08);text-align:center">
           <div style="font-size:10px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">Pob. Potencial</div>
-          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#8b949e;line-height:1">${p.pob_potencial != null ? Number(p.pob_potencial).toLocaleString('es-MX') : '—'}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:400;color:#8b949e;line-height:1">${p.pob_potencial != null ? Number(p.pob_potencial).toLocaleString('es-MX') : '—'}</div>
         </div>
         <div style="background:#0d1117;border-radius:10px;padding:12px 14px;border:0.5px solid rgba(205,217,229,.08);text-align:center">
           <div style="font-size:10px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">Pob. Objetivo</div>
-          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#8b949e;line-height:1">${p.pob_objetivo != null ? Number(p.pob_objetivo).toLocaleString('es-MX') : '—'}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:400;color:#8b949e;line-height:1">${p.pob_objetivo != null ? Number(p.pob_objetivo).toLocaleString('es-MX') : '—'}</div>
         </div>
         <div style="background:#0d1117;border-radius:10px;padding:12px 14px;border:0.5px solid rgba(205,217,229,.08);text-align:center">
           <div style="font-size:10px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">Pob. Alcanzada</div>
-          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#8b949e;line-height:1">${p.pob_alcanzada != null ? Number(p.pob_alcanzada).toLocaleString('es-MX') : '—'}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:400;color:#8b949e;line-height:1">${p.pob_alcanzada != null ? Number(p.pob_alcanzada).toLocaleString('es-MX') : '—'}</div>
         </div>
       </div>
 
@@ -119,15 +119,15 @@ function _instProgRender(p, inst, tab) {
         <div style="font-size:10px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Desglose por sexo</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px">
           <div style="background:#f778ba10;border-radius:10px;padding:12px 14px;border:0.5px solid #f778ba25">
-            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#f778ba;line-height:1">${Number(mujeres).toLocaleString('es-MX')}</div>
-            <div style="font-size:10px;color:#8b949e;margin-top:5px">Mujeres <span style="color:#f778ba;font-weight:600">${pctM}%</span></div>
+            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:400;color:#f778ba;line-height:1">${Number(mujeres).toLocaleString('es-MX')}</div>
+            <div style="font-size:10px;color:#8b949e;margin-top:5px">Mujeres <span style="color:#f778ba;font-weight:400">${pctM}%</span></div>
           </div>
           <div style="background:#79c0ff10;border-radius:10px;padding:12px 14px;border:0.5px solid #79c0ff25">
-            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#79c0ff;line-height:1">${Number(hombres).toLocaleString('es-MX')}</div>
-            <div style="font-size:10px;color:#8b949e;margin-top:5px">Hombres <span style="color:#79c0ff;font-weight:600">${pctH}%</span></div>
+            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:400;color:#79c0ff;line-height:1">${Number(hombres).toLocaleString('es-MX')}</div>
+            <div style="font-size:10px;color:#8b949e;margin-top:5px">Hombres <span style="color:#79c0ff;font-weight:400">${pctH}%</span></div>
           </div>
           <div style="background:rgba(139,148,158,.07);border-radius:10px;padding:12px 14px;border:0.5px solid rgba(139,148,158,.15)">
-            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#8b949e;line-height:1">${sinId > 0 ? Number(sinId).toLocaleString('es-MX') : '—'}</div>
+            <div style="font-family:'DM Mono',monospace;font-size:22px;font-weight:400;color:#8b949e;line-height:1">${sinId > 0 ? Number(sinId).toLocaleString('es-MX') : '—'}</div>
             <div style="font-size:10px;color:#8b949e;margin-top:5px">Sin identificar ${sinId > 0 ? '<span style="font-weight:600">'+pctS+'%</span>' : ''}</div>
           </div>
         </div>
@@ -243,7 +243,7 @@ function _instProgRender(p, inst, tab) {
       + '<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:'+acc+'"></div><span style="font-size:10px;color:#cdd9e5">Con presencia</span></div>'
       + '<div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:2px;background:#111c2b;border:0.5px solid rgba(255,255,255,.2)"></div><span style="font-size:10px;color:#8b949e">Sin presencia</span></div>'
       + '</div>'
-      + '<span style="font-size:11px;color:#8b949e;font-weight:600">'+lista.length+' municipios</span>'
+      + '<span style="font-size:11px;color:#8b949e;font-weight:400">'+lista.length+' municipios</span>'
       + '</div>'
       + '<div style="padding:0 12px 6px;position:relative;overflow:hidden">'
       + '<svg id="inst-mun-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+svgW+' '+svgH+'" style="width:100%;height:auto;display:block;background:#0a1520;border-radius:8px">'
@@ -283,7 +283,7 @@ function _instProgRender(p, inst, tab) {
           return `<div style="margin-bottom:14px">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
               <span style="font-size:12px;color:#cdd9e5;font-weight:600;flex:1;padding-right:8px;line-height:1.3">${toTitle(t.tipo)}</span>
-              <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:${acc};white-space:nowrap">${fmt(t.total)}</span>
+              <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;color:${acc};white-space:nowrap">${fmt(t.total)}</span>
             </div>
             <div style="height:8px;background:rgba(205,217,229,.08);border-radius:3px;overflow:hidden;margin-bottom:4px">
               <div style="height:100%;width:${w}%;background:${acc};border-radius:3px;opacity:.85"></div>
@@ -300,7 +300,7 @@ function _instProgRender(p, inst, tab) {
       <!-- KPI total -->
       <div style="background:#0d1117;border-radius:8px;padding:14px 16px;border:0.5px solid ${acc}44;margin-bottom:16px;text-align:center">
         <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Total Apoyos Otorgados</div>
-        <div style="font-family:'DM Mono',monospace;font-size:28px;font-weight:900;color:${acc};line-height:1">${fmt(totalApoyos)}</div>
+        <div style="font-family:'DM Mono',monospace;font-size:28px;font-weight:500;color:${acc};line-height:1">${fmt(totalApoyos)}</div>
         ${tiposEncontrados.length > 1
           ? `<div style="font-size:11px;color:#8b949e;margin-top:4px">${tiposEncontrados.length} tipos de apoyo</div>`
           : ''}
@@ -366,7 +366,7 @@ function _instProgRender(p, inst, tab) {
         tip.style.top  = y + 'px';
         tip.innerHTML = activo
           ? '<div style="font-size:12px;font-weight:700;color:#e6edf3">' + nombre + '</div>'
-          + '<div style="font-size:13px;font-weight:700;color:' + acc + ';margin-top:3px">' + (benCount ? Number(benCount).toLocaleString('es-MX') + ' beneficiarios' : 'Con presencia') + '</div>'
+          + '<div style="font-size:13px;font-weight:400;color:' + acc + ';margin-top:3px">' + (benCount ? Number(benCount).toLocaleString('es-MX') + ' beneficiarios' : 'Con presencia') + '</div>'
           : '<div style="font-size:12px;font-weight:600;color:#6e7f8d">' + nombre + '</div>'
           + '<div style="font-size:10px;color:#484f58;margin-top:2px">Sin presencia</div>';
       });

@@ -96,8 +96,8 @@ function renderApoyosTable(rows) {
         <div class="cat-prog-nums">
           <span class="cat-prog-num">${fmt(p.total)}<span class="cat-prog-num-lbl">apoyos</span></span>
           <div class="cat-prog-bar-wrap"><div class="cat-prog-bar-fill" style="width:${pM}%"></div></div>
-          <span style="font-size:11px;color:#D4537E;font-weight:600">♀ ${pM}%</span>
-          <span style="font-size:11px;color:#185FA5;font-weight:600">♂ ${100-pM}%</span>
+          <span style="font-size:11px;color:#D4537E;font-weight:400">♀ ${pM}%</span>
+          <span style="font-size:11px;color:#185FA5;font-weight:400">♂ ${100-pM}%</span>
           <span style="font-size:11px;color:var(--cat-ink3)">${p.muns||'—'} mun.</span>
         </div>
       </div>`;

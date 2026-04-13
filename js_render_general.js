@@ -146,7 +146,7 @@ function renderGeneral() {
       <div style="margin-bottom:20px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
           <span style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fem)">Mujeres</span>
-          <span style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--fem)">${fmt(locM)} <span style="font-size:12px;opacity:.7">(${pctM}%)</span></span>
+          <span style="font-family:var(--sans);font-size:13px;font-weight:400;color:var(--fem)">${fmt(locM)} <span style="font-size:12px;opacity:.7">(${pctM}%)</span></span>
         </div>
         <div style="height:18px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
           <div style="height:100%;width:${pctM}%;background:var(--fem);border-radius:2px;transition:width .8s ease"></div>
@@ -155,7 +155,7 @@ function renderGeneral() {
       <div style="margin-bottom:20px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
           <span style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--male)">Hombres</span>
-          <span style="font-family:var(--sans);font-size:13px;font-weight:700;color:var(--male)">${fmt(locH)} <span style="font-size:12px;opacity:.7">(${pctH}%)</span></span>
+          <span style="font-family:var(--sans);font-size:13px;font-weight:400;color:var(--male)">${fmt(locH)} <span style="font-size:12px;opacity:.7">(${pctH}%)</span></span>
         </div>
         <div style="height:18px;background:rgba(205,217,229,.07);border-radius:2px;overflow:hidden">
           <div style="height:100%;width:${pctH}%;background:var(--male);border-radius:2px;transition:width .8s ease"></div>

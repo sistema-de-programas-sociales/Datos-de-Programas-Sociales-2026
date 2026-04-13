@@ -59,7 +59,7 @@ function catModal(nombre, tipo='sexo') {
         const w   = Math.round(v / maxR * 100);
         return `<div class="cat-modal-prog" style="padding:12px 14px">
           <div style="display:flex;align-items:center;gap:10px">
-            <div style="font-size:13px;font-weight:600;color:#cdd9e5;min-width:72px">${RLABS[k]}</div>
+            <div style="font-size:13px;font-weight:400;color:#cdd9e5;min-width:72px">${RLABS[k]}</div>
             <div style="flex:1;height:18px;background:rgba(205,217,229,.08);border-radius:3px;overflow:hidden">
               <div style="height:100%;width:${w}%;background:${RCOLS[k]};border-radius:3px;transition:width .5s ease"></div>
             </div>
@@ -198,7 +198,7 @@ function catModal(nombre, tipo='sexo') {
           var nomMun = feat.properties.nombre || '';
           if (!mu || mu.total === 0) {
             layer.bindTooltip(
-              '<div style="font-size:12px;font-weight:600;color:#6e7f8d">'+nomMun+'</div>'+
+              '<div style="font-size:12px;font-weight:400;color:#6e7f8d">'+nomMun+'</div>'+
               '<div style="font-size:10px;color:#484f58;margin-top:2px">Sin beneficiarios de este apoyo</div>',
               {sticky:true,direction:'right',offset:[10,0],className:'ltt',opacity:0.97}
             );
@@ -206,8 +206,8 @@ function catModal(nombre, tipo='sexo') {
           }
           var pm = mu.total>0 ? Math.round(mu.m/mu.total*100) : 0;
           layer.bindTooltip(
-            '<div style="font-size:12px;font-weight:600;color:#e6edf3">'+nomMun+'</div>'+
-            '<div style="font-size:13px;font-weight:700;color:'+baseHex+';margin-top:3px">'+fmt(mu.total)+' beneficiarios</div>'+
+            '<div style="font-size:12px;font-weight:400;color:#e6edf3">'+nomMun+'</div>'+
+            '<div style="font-size:13px;font-weight:400;color:'+baseHex+';margin-top:3px">'+fmt(mu.total)+' beneficiarios</div>'+
             '<div style="font-size:10px;color:#8b949e;margin-top:2px">♀ '+fmt(mu.m)+' ('+pm+'%) · ♂ '+fmt(mu.h)+' ('+(100-pm)+'%)</div>',
             {sticky:true,direction:'right',offset:[10,0],className:'ltt',opacity:0.97}
           );
@@ -380,7 +380,7 @@ function catModalDesgloseProg(nombre, tipo, btn) {
           <!-- Barra de municipios -->
           <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="1.5"><path d="M12 2C9.24 2 7 4.24 7 7c0 4.17 5 11 5 11s5-6.83 5-11c0-2.76-2.24-5-5-5z"/></svg>
-            <div style="font-size:12px;color:#cdd9e5;font-weight:600">${p.muns} mun.</div>
+            <div style="font-size:12px;color:#cdd9e5;font-weight:400">${p.muns} mun.</div>
             <div style="flex:1;height:5px;background:rgba(205,217,229,.08);border-radius:3px;overflow:hidden">
               <div style="height:100%;width:${wM}%;background:${c};border-radius:3px"></div>
             </div>
