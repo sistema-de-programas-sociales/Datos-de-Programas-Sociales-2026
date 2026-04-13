@@ -324,7 +324,7 @@ function renderVulnerables() {
     html += '<div style="font-size:17px;font-weight:600;color:'+(hasDatos?'#e6edf3':'#6e7f8d')+';line-height:1.3;margin-bottom:6px">'+g.nombre+'</div>';
     if (hasDatos) html += '<div style="display:inline-flex;align-items:center;gap:5px;background:'+cc+'18;border:1px solid '+cc+'44;border-radius:8px;padding:3px 9px;margin-bottom:6px"><span style="font-family:DM Mono,monospace;font-size:15px;font-weight:900;color:'+cc+'">'+cobNum.toFixed(1)+'%</span><span style="font-size:11px;color:'+cc+';opacity:.7">cobertura</span></div>';
     html += '<div style="font-size:13px;color:#484f58;margin-bottom:2px">Pob. vulnerable</div>';
-    html += '<div style="font-size:16px;font-weight:700;color:#8b949e;font-family:DM Mono,monospace">'+(g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—')+'</div>';
+    html += '<div style="font-size:16px;font-weight:500;color:#aab8c4;font-family:DM Mono,monospace">'+(g.pob_vulnerable > 0 ? fmt(g.pob_vulnerable) : '—')+'</div>';
     html += '</div></div>';
     html += '<div><div style="display:flex;justify-content:space-between;margin-bottom:3px">';
     html += '<span style="font-size:14px;color:#6e7f8d">% atendidos / pob. vulnerable</span>';
@@ -347,7 +347,7 @@ function renderVulnerables() {
         html += '<span style="font-size:12px;font-weight:700;color:#6e7f8d;min-width:28px">2025</span>';
         html += '<div style="flex:1;height:7px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden">';
         html += '<div style="height:100%;width:'+w25b+'%;background:#6e7f8d;border-radius:4px;opacity:.6"></div></div>';
-        html += '<span style="font-size:13px;font-weight:700;color:#6e7f8d;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(at2025)+'</span></div>';
+        html += '<span style="font-size:13px;font-weight:500;color:#8b949e;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(at2025)+'</span></div>';
       }
       html += '</div>';
     } else {

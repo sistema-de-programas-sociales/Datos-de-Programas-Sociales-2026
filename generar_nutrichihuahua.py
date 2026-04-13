@@ -363,35 +363,53 @@ def leer_nutri(excel_path):
             cur['programas'].append(entry)
 
     # ── BE table: jerarquía 3 niveles institución→programa→apoyo ──────────────
-    PROG_NAMES_BE = {
-        'ALIMENTACION Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS',
-        'FORTALECIMIENTO COMUNITARIO Y PARTICIPACION CIUDADANA',
-        'ASISTENCIA SOCIAL PARA LA POBLACION INDIGENA',
-        'GESTION SOCIAL Y ATENCION A LA CIUDADANIA',
-    }
-    insts_ap, cur_ap, cur_prog_ap = [], None, None
+    # ── Detectar nivel automáticamente por comparación de totales ──────────────
+    # Si el total de una fila ≈ suma acumulada de las siguientes filas no-inst → es PROGRAMA
+    # Si no → es APOYO. Esto elimina cualquier lista hardcodeada de nombres.
+    _SKIP_BE = {'nan','None','TOTAL','LOCALIZABLES NUTRICHIHUAHUA'}
+    _raw_be = []
     for row_i in range(9, df.shape[0]):
         nombre = str(df.iloc[row_i, 56]).strip() if not pd.isna(df.iloc[row_i, 56]) else ''
-        if not nombre or nombre in ['nan','None','TOTAL','LOCALIZABLES NUTRICHIHUAHUA']: continue
+        if not nombre or nombre in _SKIP_BE: continue
         tv = df.iloc[row_i, 75]
         if pd.isna(tv): continue
         total = int(tv)
         if total == 0: continue
-        total_m2 = int(df.iloc[row_i, 65]) if not pd.isna(df.iloc[row_i, 65]) else 0
-        total_h2 = int(df.iloc[row_i, 74]) if not pd.isna(df.iloc[row_i, 74]) else 0
-        entry = {'nombre': nombre, 'total': total, 'mujeres': total_m2, 'hombres': total_h2,
-                 'programas': [], 'apoyos': []}
+        tm = int(df.iloc[row_i, 65]) if not pd.isna(df.iloc[row_i, 65]) else 0
+        th = int(df.iloc[row_i, 74]) if not pd.isna(df.iloc[row_i, 74]) else 0
+        _raw_be.append({'nombre': nombre, 'total': total, 'mujeres': tm, 'hombres': th,
+                        'rangos_m': {r: (int(df.iloc[row_i, 57+j]) if not pd.isna(df.iloc[row_i, 57+j]) else 0)
+                                     for j,r in enumerate(RANGOS)},
+                        'rangos_h': {r: (int(df.iloc[row_i, 66+j]) if not pd.isna(df.iloc[row_i, 66+j]) else 0)
+                                     for j,r in enumerate(RANGOS)}})
+
+    def _es_programa(idx, rows, inst_names):
+        """True si el total de rows[idx] ≈ suma prefijo de filas siguientes no-inst."""
+        total = rows[idx]['total']
+        acum = 0
+        for r in rows[idx+1:]:
+            if r['nombre'] in inst_names: break
+            acum += r['total']
+            if abs(acum - total) <= max(5, int(total * 0.02)):
+                return True
+            if acum > total * 1.05:
+                break
+        return False
+
+    insts_ap, cur_ap, cur_prog_ap = [], None, None
+    for idx, entry in enumerate(_raw_be):
+        nombre = entry['nombre']
+        e = {**entry, 'programas': [], 'apoyos': []}
         if nombre in INST_NAMES:
-            cur_ap = entry; cur_prog_ap = None; insts_ap.append(entry)
-        elif nombre in PROG_NAMES_BE:
-            cur_prog_ap = entry
-            if cur_ap: cur_ap['programas'].append(entry)
+            cur_ap = e; cur_prog_ap = None; insts_ap.append(e)
+        elif _es_programa(idx, _raw_be, set(INST_NAMES)):
+            cur_prog_ap = e
+            if cur_ap: cur_ap['programas'].append(e)
         else:
-            # Es un apoyo real (nivel naranja)
-            entry['inst'] = cur_ap['nombre'] if cur_ap else ''
-            entry['prog'] = cur_prog_ap['nombre'] if cur_prog_ap else ''
-            if cur_prog_ap: cur_prog_ap['apoyos'].append(entry)
-            if cur_ap: cur_ap['apoyos'].append(entry)
+            e['inst'] = cur_ap['nombre'] if cur_ap else ''
+            e['prog'] = cur_prog_ap['nombre'] if cur_prog_ap else ''
+            if cur_prog_ap: cur_prog_ap['apoyos'].append(e)
+            if cur_ap: cur_ap['apoyos'].append(e)
 
     # ── CC table: apoyos por municipio (col 80, rows 13+, total col 99) ──────
     SKIP_MUN = {'nan','None','Grand Total','FORANEO','NO IDENTIFICADO','TOTAL'}
@@ -407,18 +425,102 @@ def leer_nutri(excel_path):
         total_h2 = int(df.iloc[row_i, 98]) if not pd.isna(df.iloc[row_i, 98]) else 0
         muns_ap.append({'nombre': mun, 'total': total, 'mujeres': total_m2, 'hombres': total_h2})
 
+    # Leer fila TOTAL de tabla AH (col 33) — fuente canónica de beneficiarios únicos
+    total_benef_canonico = 0
+    for row_i in range(9, df.shape[0]):
+        prog = str(df.iloc[row_i, 33]).strip() if not pd.isna(df.iloc[row_i, 33]) else ''
+        if prog.upper() == 'TOTAL':
+            tv = df.iloc[row_i, 52]
+            if not pd.isna(tv):
+                total_benef_canonico = int(float(tv))
+            break
+
     return {
         'municipios':    [m for m in muns if m['nombre'] not in ('TOTAL','NO IDENTIFICADO')],
         'instituciones': insts,
         'apoyos_inst':   insts_ap,
         'apoyos_mun':    muns_ap,
         'apoyos_total':  sum(i['total'] for i in insts_ap),
+        'total_benef_canonico': total_benef_canonico,
     }
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     if not EXCEL or not Path(EXCEL).exists():
         print(f'ERROR: No se encontró el archivo Excel: {EXCEL}', file=sys.stderr); sys.exit(1)
+
+    # ── Modo --dashboard-only: solo actualiza js_render_nutri.js ─────────────
+    if '--dashboard-only' in sys.argv:
+        import json, re as _re
+        print('Modo --dashboard-only: regenerando js_render_nutri.js...')
+        try:
+            data = leer_nutri(EXCEL)
+        except Exception as e:
+            print(f'ERROR: {e}', file=sys.stderr); sys.exit(1)
+        insts_ap  = data['apoyos_inst']
+        muns      = data['municipios']
+        RLAB_D    = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29',
+                     '30-49':'30–49','50-64':'50–64','65+':'65+'}
+        RT_M = {r: sum(m['rangos_m'].get(r,0) for m in muns) for r in RANGOS}
+        RT_H = {r: sum(m['rangos_h'].get(r,0) for m in muns) for r in RANGOS}
+        RT   = {r: RT_M[r]+RT_H[r] for r in RANGOS}
+        # Apoyos desde insts_ap
+        apoyos_dict = {}
+        for inst in insts_ap:
+            for prog in inst.get('programas',[]):
+                for ap in prog.get('apoyos',[]):
+                    k = ap['nombre']
+                    if k not in apoyos_dict:
+                        apoyos_dict[k] = {'n':k,'t':0,'m':0,'h':0,'insts':[]}
+                    apoyos_dict[k]['t'] += ap['total']
+                    apoyos_dict[k]['m'] += ap['mujeres']
+                    apoyos_dict[k]['h'] += ap['hombres']
+                    if inst['nombre'] not in apoyos_dict[k]['insts']:
+                        apoyos_dict[k]['insts'].append(inst['nombre'])
+        apoyos_list = sorted(apoyos_dict.values(), key=lambda x:-x['t'])
+        total_benef  = data.get('total_benef_canonico', sum(i['total'] for i in data['instituciones']))
+        total_apoyos = data['apoyos_total']
+        ND = {
+            'total_benef':  total_benef,
+            'total_apoyos': total_apoyos,
+            'RT':  RT, 'RANGOS': RANGOS, 'RLAB': RLAB_D,
+            'muns': [{'n':m['nombre'],'t':m['total'],'m':m['mujeres'],'h':m['hombres'],
+                      'at':m['total'],'am':m['mujeres'],'ah':m['hombres'],
+                      'rm':m['rangos_m'],'rh':m['rangos_h']} for m in muns],
+            'insts': [{'nombre':i['nombre'],'benef':i['total'],'bm':i['mujeres'],'bh':i['hombres'],
+                       'apoyos_total':sum(a['t'] for a in apoyos_list if i['nombre'] in a.get('insts',[])),
+                       'am':i['mujeres'],'ah':i['hombres'],
+                       'programas':[{'n':p['nombre'],'t':p['total'],'m':p['mujeres'],'h':p['hombres']} for p in i.get('programas',[])],
+                       'ap_programas':[{'n':p['nombre'],'t':p['total'],'apoyos':[{'n':a['nombre'],'t':a['total'],'m':a['mujeres'],'h':a['hombres']} for a in p.get('apoyos',[])]} for p in i.get('programas',[])]
+                       }
+                      for i in insts_ap],
+            'apoyos': apoyos_list,
+            'RT_M': RT_M, 'RT_H': RT_H,
+        }
+        nd_json = json.dumps(ND, ensure_ascii=False, separators=(',',':'))
+        # Actualizar js_render_nutri.js
+        js_path = Path(__file__).parent / 'js_render_nutri.js'
+        if not js_path.exists():
+            print(f'ERROR: {js_path} no encontrado', file=sys.stderr); sys.exit(1)
+        js = js_path.read_text(encoding='utf-8')
+        # Reemplazar ND usando balance de llaves
+        _start = js.find('const ND')
+        if _start < 0:
+            print('AVISO: No se encontro const ND en js_render_nutri.js', file=sys.stderr)
+        else:
+            _eq = js.find('{', _start)
+            _depth = 0; _end = _eq
+            for _i, _ch in enumerate(js[_eq:], _eq):
+                if _ch == '{': _depth += 1
+                elif _ch == '}': _depth -= 1
+                if _depth == 0: _end = _i + 1; break
+            if _end < len(js) and js[_end] == ';': _end += 1
+            js_new = js[:_start] + 'const ND  = ' + nd_json + ';' + js[_end:]
+            js_path.write_text(js_new, encoding='utf-8')
+            print(f'  js_render_nutri.js actualizado')
+            print(f'  total_benef={total_benef}, total_apoyos={total_apoyos}')
+            print(f'  apoyos: {[a["n"] for a in apoyos_list]}')
+        return
 
     print('Leyendo hoja NutriChihuahua...')
     try:

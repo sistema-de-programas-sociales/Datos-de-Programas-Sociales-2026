@@ -75,6 +75,7 @@ function verificarDependencias() {
     'js_render_general.js','js_render_inst.js','js_render_muns.js','js_render_apoyos.js',
     'js_catalogo_modal.js','js_inst_modal.js','js_filters_tabs.js',
     'js_map2.js',
+    'js_render_nutri.js',
   ];
   const req = ['motor_reporte_padron.py','read_excel_padron.py','generar_municipios.py',
                'generar_instituciones.py','build_municipio.js','build_institucion.js',
