@@ -57,8 +57,8 @@ function renderMunTable(data) {
         <div style="width:${hp}%;background:#1D4ED8;opacity:.55"></div>
       </div>
       <div style="display:flex;justify-content:space-between;font-size:15px;font-family:'DM Sans',system-ui,sans-serif">
-        <span style="color:#BE185D;font-weight:600">${mp}%</span>
-        <span style="color:#1D4ED8;font-weight:600">${hp}%</span>
+        <span style="color:#BE185D;font-weight:400">${mp}%</span>
+        <span style="color:#1D4ED8;font-weight:400">${hp}%</span>
       </div>
     </div>`;
 
@@ -70,22 +70,22 @@ function renderMunTable(data) {
     </div>`;
 
     const cobStr = cobPct
-      ? `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(148,163,184,.08);color:#94a3b8;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(148,163,184,.2)">${cobPct}%</span>`
+      ? `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;background:rgba(148,163,184,.08);color:#94a3b8;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(148,163,184,.2)">${cobPct}%</span>`
       : '<span style="opacity:.3">—</span>';
 
     const rowClass = i%2===0 ? 'mun-row-even' : 'mun-row-odd';
     return `<tr class="${rowClass} mun-row">
       ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(205,217,229,.06);color:#484f58;padding:2px 7px;border-radius:20px;border:0.5px solid rgba(205,217,229,.08)">${i+1}</span>`)}\
-      ${tdL(`<span style="font-weight:600;font-size:15px;color:#e6edf3;font-family:'DM Sans',system-ui,sans-serif">${toTitle(m.nombre)}</span>`)}\
+      ${tdL(`<span style="font-weight:400;font-size:15px;color:#e6edf3;font-family:'DM Sans',system-ui,sans-serif">${toTitle(m.nombre)}</span>`)}\
       ${td(benBar)}\
       ${tdC(mhCell,'min-width:110px')}\
-      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${fmt(m.total_apoyos)}</span>`)}\
-      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${m.n_programas}</span>`)}\
-      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;background:${locBg};color:${locC};padding:3px 9px;border-radius:20px;border:0.5px solid ${locC}33">${fmt(m.localizables)}</span>`)}\
+      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${fmt(m.total_apoyos)}</span>`)}\
+      ${tdC(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;background:rgba(210,168,255,.1);color:#d2a8ff;padding:3px 9px;border-radius:20px;border:0.5px solid rgba(210,168,255,.2)">${m.n_programas}</span>`)}\
+      ${td(`<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;background:${locBg};color:${locC};padding:3px 9px;border-radius:20px;border:0.5px solid ${locC}33">${fmt(m.localizables)}</span>`)}\
       ${tdC(locBar)}\
       ${td(cobStr)}\
       ${tdC(m.rango_dom ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;background:rgba(56,139,253,.15);color:#79c0ff;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(56,139,253,.25)">${RL[m.rango_dom]||m.rango_dom}</span>` : '<span style="opacity:.3">—</span>')}\
-      ${tdC(m.rango_min ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:600;background:rgba(255,166,87,.12);color:#ffa657;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(255,166,87,.25)">${RL[m.rango_min]||m.rango_min}</span>` : '<span style="opacity:.3;color:#484f58">—</span>')}\
+      ${tdC(m.rango_min ? `<span style="font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:400;background:rgba(255,166,87,.12);color:#ffa657;padding:3px 8px;border-radius:20px;border:0.5px solid rgba(255,166,87,.25)">${RL[m.rango_min]||m.rango_min}</span>` : '<span style="opacity:.3;color:#484f58">—</span>')}\
     </tr>`;
   }).join('');
 
@@ -112,7 +112,7 @@ function renderMunTable(data) {
     <div style="width:44px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
       <div style="height:100%;width:100%;background:#388bfd;border-radius:2px"></div>
     </div>
-    <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#e6edf3">${fmt(totT)}</span>
+    <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;color:#e6edf3">${fmt(totT)}</span>
   </div>`;
 
   // Celda M/H
@@ -122,34 +122,34 @@ function renderMunTable(data) {
       <div style="width:${totPct_h}%;background:#79c0ff;opacity:.7"></div>
     </div>
     <div style="display:flex;justify-content:space-between;font-size:13px;font-family:'DM Sans',system-ui,sans-serif">
-      <span style="color:#f778ba;font-weight:600">${totPct_m}%</span>
-      <span style="color:#79c0ff;font-weight:600">${totPct_h}%</span>
+      <span style="color:#f778ba;font-weight:400">${totPct_m}%</span>
+      <span style="color:#79c0ff;font-weight:400">${totPct_h}%</span>
     </div>
   </div>`;
 
   // Celda Apoyos — pill morado
-  const totApCell = `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;
+  const totApCell = `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;
     background:rgba(210,168,255,.12);color:#d2a8ff;padding:3px 10px;border-radius:20px;
     border:0.5px solid rgba(210,168,255,.25)">${fmt(totAp)}</span>`;
 
   // Celda Progs — promedio
-  const totProgsCell = `<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:#d2a8ff">
+  const totProgsCell = `<span style="font-family:'DM Mono',monospace;font-size:13px;font-weight:400;color:#d2a8ff">
     ~${avgProgs}<span style="font-size:11px;font-weight:400;color:#8b949e;margin-left:2px">prom</span></span>`;
 
   // Celda Localización — número + color
-  const totLocCell = `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:${locC_tot}">${fmt(totLoc)}</span>`;
+  const totLocCell = `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;color:${locC_tot}">${fmt(totLoc)}</span>`;
 
   // Celda % Loc — barra + %
   const totLocBarCell = `<div style="display:flex;align-items:center;justify-content:center;gap:6px">
     <div style="width:36px;height:4px;background:rgba(205,217,229,.1);border-radius:2px;overflow:hidden;flex-shrink:0">
       <div style="height:100%;width:${totLocPct}%;background:${locC_tot};border-radius:2px"></div>
     </div>
-    <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:${locC_tot}">${totLocPct}%</span>
+    <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;color:${locC_tot}">${totLocPct}%</span>
   </div>`;
 
   // Celda Cobertura
   const totCobCell = avgCob
-    ? `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:#94a3b8">${avgCob}%<span style="font-size:11px;font-weight:400;color:#8b949e;margin-left:2px">prom</span></span>`
+    ? `<span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:400;color:#94a3b8">${avgCob}%<span style="font-size:11px;font-weight:400;color:#8b949e;margin-left:2px">prom</span></span>`
     : '<span style="opacity:.3;color:#484f58">—</span>';
 
   // Rango más y menos atendido — desde D.rangos_edad (Tabla S, valores reales del padrón)

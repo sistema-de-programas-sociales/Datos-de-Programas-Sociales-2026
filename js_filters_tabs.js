@@ -334,20 +334,20 @@ function renderVulnerables() {
     if (hasDatos) {
       html += '<div style="padding-top:8px;border-top:1px solid rgba(205,217,229,.05)">';
       html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">';
-      html += '<span style="font-size:13px;font-weight:700;letter-spacing:.06em;color:#8b949e;text-transform:uppercase">2026 vs 2025</span>';
-      if (diff25 !== null) html += '<span style="font-size:13px;font-weight:800;color:'+dCol25+';background:'+dCol25+'18;padding:1px 7px;border-radius:4px">'+(isUp25?'▲':'▼')+' '+Math.abs(diffPct25).toFixed(1)+'%</span>';
+      html += '<span style="font-size:13px;font-weight:500;letter-spacing:.06em;color:#8b949e;text-transform:uppercase">2026 vs 2025</span>';
+      if (diff25 !== null) html += '<span style="font-size:14px;font-weight:600;color:'+dCol25+';background:'+dCol25+'18;padding:1px 7px;border-radius:4px">'+(isUp25?'▲':'▼')+' '+Math.abs(diffPct25).toFixed(1)+'%</span>';
       html += '</div>';
       html += '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">';
-      html += '<span style="font-size:12px;font-weight:700;color:#ffa657;min-width:28px">2026</span>';
+      html += '<span style="font-size:13px;font-weight:400;color:#ffa657;min-width:28px">2026</span>';
       html += '<div style="flex:1;height:7px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden">';
       html += '<div style="height:100%;width:'+w26b+'%;background:#ffa657;border-radius:4px"></div></div>';
-      html += '<span style="font-size:13px;font-weight:700;color:#ffa657;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(g.atendidos)+'</span></div>';
+      html += '<span style="font-size:14px;font-weight:400;color:#ffa657;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(g.atendidos)+'</span></div>';
       if (at2025 > 0) {
         html += '<div style="display:flex;align-items:center;gap:6px">';
-        html += '<span style="font-size:12px;font-weight:700;color:#6e7f8d;min-width:28px">2025</span>';
+        html += '<span style="font-size:13px;font-weight:400;color:#6e7f8d;min-width:28px">2025</span>';
         html += '<div style="flex:1;height:7px;background:rgba(205,217,229,.06);border-radius:4px;overflow:hidden">';
         html += '<div style="height:100%;width:'+w25b+'%;background:#6e7f8d;border-radius:4px;opacity:.6"></div></div>';
-        html += '<span style="font-size:13px;font-weight:500;color:#8b949e;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(at2025)+'</span></div>';
+        html += '<span style="font-size:14px;font-weight:400;color:#8b949e;font-family:DM Mono,monospace;min-width:52px;text-align:right">'+fmt(at2025)+'</span></div>';
       }
       html += '</div>';
     } else {
@@ -393,12 +393,12 @@ function renderVulnerables() {
   html += '<span style="font-size:12px;font-weight:700;color:'+colG+';min-width:28px">2026</span>';
   html += '<div style="flex:1;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden">';
   html += '<div style="height:100%;width:'+w26g+'%;background:'+colG+';border-radius:5px"></div></div>';
-  html += '<span style="font-size:13px;font-weight:700;color:'+colG+';font-family:DM Mono,monospace;min-width:60px;text-align:right">'+fmt(ateT)+'</span></div>';
+  html += '<span style="font-size:14px;font-weight:400;color:'+colG+';font-family:DM Mono,monospace;min-width:60px;text-align:right">'+fmt(ateT)+'</span></div>';
   html += '<div style="display:flex;align-items:center;gap:8px">';
-  html += '<span style="font-size:12px;font-weight:700;color:#6e7f8d;min-width:28px">2025</span>';
+  html += '<span style="font-size:13px;font-weight:400;color:#8b949e;min-width:28px">2025</span>';
   html += '<div style="flex:1;height:10px;background:rgba(205,217,229,.06);border-radius:5px;overflow:hidden">';
   html += '<div style="height:100%;width:100%;background:#6e7f8d;border-radius:5px;opacity:.5"></div></div>';
-  html += '<span style="font-size:13px;font-weight:700;color:#6e7f8d;font-family:DM Mono,monospace;min-width:60px;text-align:right">1,083,185</span></div>';
+  html += '<span style="font-size:14px;font-weight:400;color:#8b949e;font-family:DM Mono,monospace;min-width:60px;text-align:right">1,083,185</span></div>';
   html += '</div></div></div>';
 
   html += '<div id="gv-detail-panel" style="background:#161b22;border:1px solid rgba(205,217,229,.08);border-radius:14px;overflow:hidden">';

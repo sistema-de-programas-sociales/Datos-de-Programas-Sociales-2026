@@ -191,7 +191,7 @@ function renderNutri() {
     const isDom = r === rangoMax;
     p0 += '<div style="padding:14px 6px 12px;text-align:center;border-right:1px solid rgba(205,217,229,.05);background:'+(isDom?'rgba(205,217,229,.04)':'transparent')+'">';
     p0 += '<div style="font-family:DM Mono,monospace;font-size:'+(isDom?'20':'17')+'px;font-weight:800;color:'+col+';letter-spacing:-.02em;line-height:1">'+fN(tot)+'</div>';
-    p0 += '<div style="font-size:10px;color:#484f58;margin-top:4px;font-weight:600;letter-spacing:.04em">'+pctT+'%</div>';
+    p0 += '<div style="font-size:12px;color:#484f58;margin-top:4px;font-weight:600;letter-spacing:.04em">'+pctT+'%</div>';
     p0 += '</div>';
   });
   p0 += '</div>';
@@ -244,10 +244,10 @@ function renderNutri() {
     const pH  = 100-parseInt(pM);
     const isDom = r === rangoMax;
     p0 += '<div style="text-align:center;padding:10px 4px 14px;background:'+(isDom?'rgba(205,217,229,.03)':'transparent')+';border-top:2px solid '+(isDom?col:'transparent')+'">';
-    p0 += '<div style="font-family:DM Mono,monospace;font-size:12px;font-weight:700;color:'+col+';margin-bottom:6px">'+ND.RLAB[r]+'</div>';
-    p0 += '<div style="display:flex;justify-content:center;gap:8px;font-size:10px">';
-    p0 += '<span style="color:#f778ba">M <b style="color:#e6edf3;font-family:DM Mono,monospace">'+pM+'%</b></span>';
-    p0 += '<span style="color:#79c0ff">H <b style="color:#e6edf3;font-family:DM Mono,monospace">'+pH+'%</b></span>';
+    p0 += '<div style="font-family:DM Mono,monospace;font-size:14px;font-weight:700;color:'+col+';margin-bottom:6px">'+ND.RLAB[r]+'</div>';
+    p0 += '<div style="display:flex;justify-content:center;gap:12px;font-size:15px">';
+    p0 += '<span style="color:#f778ba;font-family:DM Mono,monospace">M '+pM+'%</span>';
+    p0 += '<span style="color:#79c0ff;font-family:DM Mono,monospace">H '+pH+'%</span>';
     p0 += '</div>';
     p0 += '</div>';
   });
@@ -255,8 +255,8 @@ function renderNutri() {
 
   /* footer leyenda */
   p0 += '<div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:10px;border-top:1px solid rgba(205,217,229,.05);background:rgba(0,0,0,.15)">';
-  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#f778ba"><span style="width:8px;height:8px;background:#f778ba;border-radius:50%"></span>Mujeres</span>';
-  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#79c0ff"><span style="width:8px;height:8px;background:#79c0ff;border-radius:50%;opacity:.85"></span>Hombres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#f778ba"><span style="width:8px;height:8px;background:#f778ba;border-radius:50%"></span>Mujeres</span>';
+  p0 += '<span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#79c0ff"><span style="width:8px;height:8px;background:#79c0ff;border-radius:50%;opacity:.85"></span>Hombres</span>';
   p0 += '</div>';
 
   p0 += '</div>';
