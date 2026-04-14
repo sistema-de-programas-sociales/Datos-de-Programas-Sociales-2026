@@ -81,6 +81,7 @@
   <button class="tab-btn" onclick="showTab('nutrichihuahua',this)" style="padding:10px 0">
     <img src="imagenes/Logito_NT.png" style="height:28px;width:auto;object-fit:contain;mix-blend-mode:screen" alt="NutriChihuahua">
   </button>
+
 </nav>
 
 <div class="wrap">
@@ -129,7 +130,7 @@
       <div>
       <div class="kicker mb8 mt12">Informe de cobertura social · Ejercicio 2026</div>
       <div style="font-family:var(--head);font-weight:900;line-height:.95;color:var(--ink)">
-        <span class="hl-blue fmt" id="pp-benef-hero" style="font-size:65px;display:inline;line-height:.9">—</span><span style="font-size:42px"> Chihuahuenses atendidos con apoyos sociales por parte del gobierno estatal</span>
+        <span class="hl-gold fmt" id="pp-benef-hero" style="font-size:65px;display:inline;line-height:.9;color:#e3b341">—</span><span style="font-size:42px"> Chiuahaenses atendidos con apoyos sociales por parte del gobierno estatal</span>
       </div>
       <hr class="rule-heavy">
       <div class="body-copy dropcap mt12" id="pp-cuerpo">—</div>
@@ -146,24 +147,43 @@
     <!-- S2: Mujeres y Hombres Atendidos -->
     <div class="np-2col-art" style="display:flex;flex-direction:column;justify-content:space-between">
       <div>
-      <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;border-bottom:2px solid var(--border);padding-bottom:16px;margin-top:12px">
-        <div>
-          <div class="kicker mb4" style="color:var(--fem)">Mujeres atendidas</div>
-          <div class="hl-hero fmt" style="color:var(--fem)" id="pp-mujeres-hero">—</div>
-          <div class="hl-large mt4" id="pp-mujeres-pct-txt">—</div>
-        </div>
-        <img src="imagenes/mujeres.webp" alt="Mujeres" style="width:250px;aspect-ratio:16/9;object-fit:cover;display:block;flex-shrink:0;">
+
+      <!-- Subtítulo de sección -->
+      <div style="margin-top:8px;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+        <div class="kicker mb4" style="letter-spacing:.14em">Composición del Padrón por Sexo</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;padding-top:16px;padding-bottom:0">
-        <div>
-          <div class="kicker mb4" style="color:var(--male)">Hombres atendidos</div>
-          <div class="hl-hero fmt" style="color:var(--male)" id="pp-hombres-hero">—</div>
-          <div class="hl-large mt4" id="pp-hombres-pct-txt">—</div>
+
+      <!-- Fila superior: 2 columnas simétricas (imagen arriba, texto abajo) -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:14px;border-bottom:2px solid var(--border)">
+
+        <!-- Mujeres -->
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center">
+          <img src="imagenes/mujeres.webp" alt="Mujeres"
+            style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;display:block;border-radius:4px">
+          <div>
+            <div class="kicker mb4" style="color:#ffffff">Mujeres atendidas</div>
+            <div class="hl-hero fmt" style="color:var(--fem)" id="pp-mujeres-hero">—</div>
+            <div class="hl-large mt4" id="pp-mujeres-pct-txt" style="display:none">—</div>
+          </div>
         </div>
-        <img src="imagenes/hombres.jpg" alt="Hombres" style="width:250px;aspect-ratio:16/9;object-fit:cover;display:block;flex-shrink:0;">
+
+        <!-- Hombres -->
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center">
+          <img src="imagenes/hombres.jpg" alt="Hombres"
+            style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;display:block;border-radius:4px">
+          <div>
+            <div class="kicker mb4" style="color:#ffffff">Hombres atendidos</div>
+            <div class="hl-hero fmt" style="color:var(--male)" id="pp-hombres-hero">—</div>
+            <div class="hl-large mt4" id="pp-hombres-pct-txt" style="display:none">—</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Texto extendido -->
       <div class="body-copy dropcap mt12" id="pp-genero-cuerpo">—</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
+
+      <!-- Gráficas -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;padding-bottom:14px;border-bottom:1px solid var(--border)">
         <div>
           <div class="kicker mb6">Distribución por Sexo <span style="font-weight:400;opacity:.7">· Total del padrón</span></div>
           <div class="donut-wrap" id="donut-sexo-pp"></div>
@@ -177,7 +197,9 @@
           <div class="pyramid" id="pyramid-loc-pp"></div>
         </div>
       </div>
+
       </div>
+      <!-- KPIs al fondo -->
       <div class="stat-strip c2" id="kpi-s2-vul" style="border:1px solid rgba(205,217,229,.1);border-left:none;margin-top:auto"></div>
     </div>
   </div>
@@ -594,6 +616,7 @@
   <div id="nutri-nav-panels"></div>
 
 </div><!-- /tab-nutrichihuahua -->
+
 
 </div><!-- /wrap -->
 

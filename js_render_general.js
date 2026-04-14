@@ -99,8 +99,7 @@ function renderGeneral() {
   ppH.textContent='0'; animCount(ppH, g.total_h);
   document.getElementById('pp-hombres-pct-txt').textContent = `${pct(g.total_h,g.total_benef)} del total del padrón`;
   document.getElementById('pp-genero-cuerpo').innerHTML =
-    `El padrón registra una mayoría femenina con <strong>${fmt(g.total_m)} mujeres</strong> (<strong>${pct(g.total_m,g.total_benef)}</strong>) frente a <strong>${fmt(g.total_h)} hombres</strong> (<strong>${pct(g.total_h,g.total_benef)}</strong>). Esta distribución refleja la tendencia estatal donde los programas de desarrollo social tienen <strong>mayor alcance entre la población femenina</strong>.`;
-
+    `Del total de beneficiarios del ejercicio 2026, <strong>${fmt(g.total_m)} son mujeres</strong> (${pct(g.total_m,g.total_benef)}) y <strong>${fmt(g.total_h)} son hombres</strong> (${pct(g.total_h,g.total_benef)}). Esta distribución es consistente con ejercicios anteriores y refleja que las mujeres presentan mayores índices de localización y permanencia en el padrón, así como una mayor concentración de carencias en los hogares que encabezan.`;
   // Sección 4: Municipios
   {
     const munsSort = (D.municipios||[]).slice().sort((a,b)=>b.total-a.total);
