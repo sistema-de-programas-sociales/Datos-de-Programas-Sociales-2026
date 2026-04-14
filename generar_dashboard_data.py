@@ -575,9 +575,11 @@ def build_dashboard_data(raw, excel_path=None):
 
     # ── Municipios por apoyo (desde desglose_municipal) ────────────────────────
     municipios_por_apoyo = {}  # {apoyo: {mun: {m, h, total}}}
+    muns_por_apoyo_inst  = {}  # {apoyo: {inst: {mun: {m, h, total}}}}
     for mun_nombre, mun_entries in desglose_mun.items():
         for entry in mun_entries:
-            ap = entry.get('apoyo', '')
+            ap  = entry.get('apoyo', '')
+            ins = entry.get('institucion', '')
             if not ap:
                 continue
             if ap not in municipios_por_apoyo:
@@ -587,6 +589,13 @@ def build_dashboard_data(raw, excel_path=None):
             municipios_por_apoyo[ap][mun_nombre]['m']     += sf(entry.get('m', 0))
             municipios_por_apoyo[ap][mun_nombre]['h']     += sf(entry.get('h', 0))
             municipios_por_apoyo[ap][mun_nombre]['total'] += sf(entry.get('total', 0))
+            # Por institución
+            if ap and ins:
+                muns_por_apoyo_inst.setdefault(ap, {}).setdefault(ins, {})
+                muns_por_apoyo_inst[ap][ins].setdefault(mun_nombre, {'m': 0, 'h': 0, 'total': 0})
+                muns_por_apoyo_inst[ap][ins][mun_nombre]['m']     += sf(entry.get('m', 0))
+                muns_por_apoyo_inst[ap][ins][mun_nombre]['h']     += sf(entry.get('h', 0))
+                muns_por_apoyo_inst[ap][ins][mun_nombre]['total'] += sf(entry.get('total', 0))
 
     # ── Rangos y municipios por programa (desde desglose_municipal) ─────────────
     _rk = ['0-5','6-11','12-17','18-29','30-49','50-64','65+','sin_datos']
@@ -637,13 +646,21 @@ def build_dashboard_data(raw, excel_path=None):
                     'muns_lista': muns_lista,
                     'rangos':     rangos_prog,
                 })
+            # por_municipio de esta institución para este apoyo
+            _inst_muns_dict = muns_por_apoyo_inst.get(nombre_apoyo, {}).get(ins_k, {})
+            _inst_por_mun = sorted(
+                [{'nombre': mn, 'total': int(v['total']), 'm': int(v['m']), 'h': int(v['h'])}
+                 for mn, v in _inst_muns_dict.items() if v['total'] > 0],
+                key=lambda x: -x['total']
+            )
             insts.append({
-                'nombre': ins_k,
-                'total':  ins_total,
-                'm':      ins_m,
-                'h':      ins_h,
-                'muns':   len(ins_muns),
-                'programas': progs_list,
+                'nombre':        ins_k,
+                'total':         ins_total,
+                'm':             ins_m,
+                'h':             ins_h,
+                'muns':          len(ins_muns),
+                'programas':     progs_list,
+                'por_municipio': _inst_por_mun,
             })
         # Rangos de edad para este apoyo
         _ra = rangos_por_apoyo.get(nombre_apoyo, {})

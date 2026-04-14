@@ -1,23 +1,64 @@
-function catModal(nombre, tipo='sexo') {
+function catModal(nombre, tipo='sexo', instFiltro='TODOS') {
   const apoyo = D.apoyos.find(a => a.nombre === nombre);
   if (!apoyo) return;
 
   const iInk = instInk;
   const iBg  = instBg;
 
+  // ── Resolver datos filtrados por institución ──────────────────────────────
+  const _instActiva = (instFiltro && instFiltro !== 'TODOS')
+    ? apoyo.instituciones.find(i => i.nombre === instFiltro)
+    : null;
+
+  // Datos de sexo: inst filtrada o global
+  const _mTotal  = _instActiva ? (_instActiva.m  || 0) : (apoyo.m  || 0);
+  const _hTotal  = _instActiva ? (_instActiva.h  || 0) : (apoyo.h  || 0);
+  const _total   = _instActiva ? (_instActiva.total || 0) : (apoyo.total || 1);
+
+  // Datos de rangos: sumar programas de inst filtrada o usar global
+  const _rangosBase = (() => {
+    if (!_instActiva) return apoyo.rangos || {};
+    const r = {};
+    (_instActiva.programas || []).forEach(p => {
+      Object.entries(p.rangos || {}).forEach(([k,v]) => { r[k] = (r[k]||0) + v; });
+    });
+    return r;
+  })();
+
+  // Datos de municipios filtrados por institución activa
+  const _munsBase = (() => {
+    if (!_instActiva) return apoyo.por_municipio || [];
+    // Usar por_municipio exacto de la institución (generado desde desglose_municipal)
+    if (_instActiva.por_municipio && _instActiva.por_municipio.length > 0)
+      return _instActiva.por_municipio;
+    // Fallback: filtrar global por muns_lista de los programas
+    const _norm = s => (s||'').toUpperCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const munSet = new Set();
+    (_instActiva.programas || []).forEach(p =>
+      (p.muns_lista || []).forEach(mn => munSet.add(_norm(mn)))
+    );
+    return (apoyo.por_municipio || []).filter(m => munSet.has(_norm(m.nombre)));
+  })();
+
+  // Programas: solo de inst filtrada o todos
   const progs = [];
-  apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  if (_instActiva) {
+    (_instActiva.programas || []).forEach(p => progs.push({...p, inst: _instActiva.nombre}));
+  } else {
+    apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  }
   progs.sort((x, y) => y.total - x.total);
-  const totalApoyo = apoyo.total || 1;
+  const totalApoyo = _total || 1;
 
   const tipoLabel = {'sexo':'Desglose por Sexo','edad':'Desglose por Edad','municipios':'Desglose por Municipio'};
+  const _instLabel = _instActiva ? ` · ${_instActiva.nombre}` : '';
   document.getElementById('cat-modal-title').textContent = toTitle(apoyo.nombre);
   document.getElementById('cat-modal-sub').textContent =
-    `${tipoLabel[tipo]||tipo} · ${apoyo.total.toLocaleString('es-MX')} apoyos · ${apoyo.n_muns} municipios`;
+    `${tipoLabel[tipo]||tipo}${_instLabel} · ${_total.toLocaleString('es-MX')} apoyos · ${_instActiva ? _instActiva.muns||'—' : apoyo.n_muns} municipios`;
 
   // ── SEXO ──────────────────────────────────────────────────────────────────
   if (tipo === 'sexo') {
-    const pM_total = apoyo.total > 0 ? Math.round(apoyo.m / apoyo.total * 100) : 0;
+    const pM_total = _total > 0 ? Math.round(_mTotal / _total * 100) : 0;
     const pH_total = 100 - pM_total;
 
     // HTML del resumen general
@@ -25,11 +66,11 @@ function catModal(nombre, tipo='sexo') {
       <!-- KPIs generales -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
         <div class="cat-modal-stat" style="text-align:center">
-          <div class="cat-modal-stat-val" style="color:#f778ba">${fmt(apoyo.m)}</div>
+          <div class="cat-modal-stat-val" style="color:#f778ba">${fmt(_mTotal)}</div>
           <div class="cat-modal-stat-lbl">Mujeres · ${pM_total}%</div>
         </div>
         <div class="cat-modal-stat" style="text-align:center">
-          <div class="cat-modal-stat-val" style="color:#79c0ff">${fmt(apoyo.h)}</div>
+          <div class="cat-modal-stat-val" style="color:#79c0ff">${fmt(_hTotal)}</div>
           <div class="cat-modal-stat-lbl">Hombres · ${pH_total}%</div>
         </div>
       </div>
@@ -48,10 +89,10 @@ function catModal(nombre, tipo='sexo') {
     const RKEYS  = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
     const RLABS  = {'0-5':'0–5 años','6-11':'6–11 años','12-17':'12–17 años','18-29':'18–29 años','30-49':'30–49 años','50-64':'50–64 años','65+':'65+ años'};
     const RCOLS  = {'0-5':'#7ecef4','6-11':'#4db8f0','12-17':'#10b981','18-29':'#0d7fb5','30-49':'#2196d4','50-64':'#e07b2a','65+':'#9b59b6'};
-    const rangos = apoyo.rangos || {};
+    const rangos = _rangosBase;
     const maxR   = Math.max(...RKEYS.map(k => rangos[k]||0), 1);
     const totR   = RKEYS.reduce((s,k) => s+(rangos[k]||0), 0) || 1;
-    const sinD   = apoyo.total - totR;
+    const sinD   = _total - totR;
     document.getElementById('cat-modal-body').innerHTML =
       RKEYS.map(k => {
         const v   = rangos[k] || 0;
@@ -73,7 +114,7 @@ function catModal(nombre, tipo='sexo') {
           <div style="font-size:13px;color:#8b949e;min-width:72px">Sin dato</div>
           <div style="flex:1;height:6px;background:rgba(205,217,229,.06);border-radius:3px"></div>
           <div style="font-family:'DM Mono',monospace;font-size:13px;color:#8b949e;min-width:52px;text-align:right">${fmt(sinD)}</div>
-          <div style="font-size:12px;color:#484f58;min-width:36px;text-align:right">${Math.round(sinD/apoyo.total*100)}%</div>
+          <div style="font-size:12px;color:#484f58;min-width:36px;text-align:right">${Math.round(sinD/_total*100)}%</div>
         </div>
       </div>` : '');
   }
@@ -85,7 +126,7 @@ function catModal(nombre, tipo='sexo') {
 
     // Filtrar foráneo (no es municipio real)
     const FORANEO_RE = /for[aá]ne/i;
-    const topMunsRaw = (apoyo.por_municipio || []);
+    const topMunsRaw = _munsBase;
     const topMuns = topMunsRaw.filter(m => !FORANEO_RE.test(m.nombre));
     const maxMun  = topMuns[0]?.total || 1;
     const accC    = instAcc(apoyo.instituciones[0]?.nombre||'');
@@ -132,6 +173,7 @@ function catModal(nombre, tipo='sexo') {
 
   // Guardar nombre y tipo activo para el switcher de tabs
   document.getElementById('cat-modal-box')._nombre = nombre;
+  document.getElementById('cat-modal-box')._instFiltro = instFiltro;
   // Actualizar tab activo visualmente
   document.querySelectorAll('.cat-modal-tab').forEach(t => {
     t.classList.toggle('active', t.dataset.tipo === tipo);
@@ -234,10 +276,21 @@ function catModalDesgloseProg(nombre, tipo, btn) {
   const apoyo = D.apoyos.find(a => a.nombre === nombre);
   if (!apoyo) return;
   const iInk = instInk, iBg = instBg;
+
+  // Respetar el filtro de institución activo
+  const _instFiltro = document.getElementById('cat-modal-box')?._instFiltro || 'TODOS';
+  const _instActiva = (_instFiltro && _instFiltro !== 'TODOS')
+    ? apoyo.instituciones.find(i => i.nombre === _instFiltro)
+    : null;
+
   const progs = [];
-  apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  if (_instActiva) {
+    (_instActiva.programas || []).forEach(p => progs.push({...p, inst: _instActiva.nombre}));
+  } else {
+    apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  }
   progs.sort((x, y) => y.total - x.total);
-  const totalApoyo = apoyo.total || 1;
+  const totalApoyo = _instActiva ? (_instActiva.total || 1) : (apoyo.total || 1);
 
   const safeKey = nombre.replace(/[^a-z0-9]/gi,'_');
   const cid = 'dp-' + safeKey + '_' + tipo;
@@ -420,10 +473,21 @@ function catModalToggleDesglose(btn) {
   const apoyo = D.apoyos.find(a => a.nombre === nombre);
   if (!apoyo) return;
   const iInk = instInk, iBg = instBg;
+
+  // Respetar filtro de institución activo
+  const _instFiltroT = document.getElementById('cat-modal-box')?._instFiltro || 'TODOS';
+  const _instActivaT = (_instFiltroT && _instFiltroT !== 'TODOS')
+    ? apoyo.instituciones.find(i => i.nombre === _instFiltroT)
+    : null;
+
   const progs = [];
-  apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  if (_instActivaT) {
+    (_instActivaT.programas || []).forEach(p => progs.push({...p, inst: _instActivaT.nombre}));
+  } else {
+    apoyo.instituciones.forEach(inst => inst.programas.forEach(p => progs.push({...p, inst: inst.nombre})));
+  }
   progs.sort((x, y) => y.total - x.total);
-  const totalApoyo = apoyo.total || 1;
+  const totalApoyo = _instActivaT ? (_instActivaT.total || 1) : (apoyo.total || 1);
 
   const RKEYS = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
   const RLABS = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
@@ -524,5 +588,6 @@ function catModalSwitchTab(btn) {
   if (desBtn) desBtn.classList.remove('active');
   // Re-renderizar el body con el tipo seleccionado
   const nombre = document.getElementById('cat-modal-box')._nombre;
-  if (nombre) catModal(nombre, btn.dataset.tipo);
+  const instFiltroGuardado = document.getElementById('cat-modal-box')._instFiltro || 'TODOS';
+  if (nombre) catModal(nombre, btn.dataset.tipo, instFiltroGuardado);
 }

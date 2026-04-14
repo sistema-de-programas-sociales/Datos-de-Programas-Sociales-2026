@@ -174,15 +174,15 @@ function renderApoyosTable(rows) {
 
         <!-- Botones desglose -->
         <div style="display:flex;gap:5px;flex-wrap:wrap">
-          <button class="cat-ver-btn" onclick="catModal('${safeName}','sexo')" style="font-size:11px;padding:5px 10px;flex:1">
+          <button class="cat-ver-btn" onclick="catModal('${safeName}','sexo',window._catInstFilter||'TODOS')" style="font-size:11px;padding:5px 10px;flex:1">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="4.5" cy="3" r="2"/><path d="M1 11c0-2 1.5-3 3.5-3s3.5 1 3.5 3"/><circle cx="9" cy="3" r="1.5"/><path d="M7.5 11c0-1.5 1-2.5 2-2.5"/></svg>
             Sexo
           </button>
-          <button class="cat-ver-btn" onclick="catModal('${safeName}','edad')" style="font-size:11px;padding:5px 10px;flex:1">
+          <button class="cat-ver-btn" onclick="catModal('${safeName}','edad',window._catInstFilter||'TODOS')" style="font-size:11px;padding:5px 10px;flex:1">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="2" width="10" height="9" rx="1"/><path d="M4 2V1M8 2V1M1 5h10"/></svg>
             Edad
           </button>
-          <button class="cat-ver-btn" onclick="catModal('${safeName}','municipios')" style="font-size:11px;padding:5px 10px;flex:1">
+          <button class="cat-ver-btn" onclick="catModal('${safeName}','municipios',window._catInstFilter||'TODOS')" style="font-size:11px;padding:5px 10px;flex:1">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1C4 1 2 3 2 5c0 3 4 7 4 7s4-4 4-7c0-2-1.8-4-4-4z"/><circle cx="6" cy="5" r="1.2"/></svg>
             Municipios
           </button>
