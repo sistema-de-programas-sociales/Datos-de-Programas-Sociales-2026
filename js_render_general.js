@@ -279,6 +279,7 @@ const INST_COLORS = {
   ICHD:    { acc:'#0891B2', ink:'#155E75', bg:'#CFFAFE' },
   RURAL:   { acc:'#78716C', ink:'#44403C', bg:'#F5F5F4' },
   CULTURA: { acc:'#CA8A04', ink:'#854D0E', bg:'#FEF9C3' },
+  COESPO:  { acc:'#0E7490', ink:'#155E75', bg:'#CFFAFE' },
 };
 // Helpers globales
 function instAcc(n){ return (INST_COLORS[n]||{acc:'#64748B'}).acc; }
@@ -321,13 +322,17 @@ const INST_META = {
              highlight:'Secretaría de Cultura',
              img:'imagenes/inst-cultura.jpg',
              caption:'Casa de Arte Popular de Chihuahua — Secretaría de Cultura, 2026.' },
+  COESPO:  { av:'#0E7490', fullname:'Comisión Estatal de Población', muns:2,
+             titular:'La COESPO atiende a migrantes en tránsito y connacionales retornados en los principales puntos de recepción del estado: Chihuahua y Juárez',
+             highlight:'Comisión Estatal de Población',
+             img:'imagenes/inst-coespo.webp',
+             caption:'Atención integral a migrantes — COESPO Chihuahua, 2026.' },
 };
 
 // ── Instituciones sin color definido usan fallback gris ──────────────────
 // Sus nombres completos están en INST_META para mostrarse en las cards
 
 INST_META.CECYTECH = INST_META.CECYTECH || { av:'#64748B', fullname:'Colegio de Estudios Científicos y Tecnológicos del Estado de Chihuahua', muns:0, titular:'', highlight:'', img:'', caption:'' };
-INST_META.COESPO   = INST_META.COESPO   || { av:'#64748B', fullname:'Comisión Estatal de Población', muns:0, titular:'', highlight:'', img:'', caption:'' };
 INST_META.COESVI   = INST_META.COESVI   || { av:'#64748B', fullname:'Comisión Estatal de Vivienda', muns:0, titular:'', highlight:'', img:'', caption:'' };
 INST_META.ICHDII   = INST_META.ICHDII   || {};
 INST_META.ICHDII.fullname = 'Instituto Chihuahuense para el Desarrollo Integral Infantil';

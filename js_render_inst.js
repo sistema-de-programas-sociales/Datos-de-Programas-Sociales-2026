@@ -212,6 +212,13 @@ function renderInstituciones() {
     const topMunEl  = document.getElementById('inst-top-mun-'+k);
     const topMunVal = document.getElementById('inst-top-mun-val-'+k);
     if (topMunEl) {
+      // COESPO: todos los beneficiarios son foráneos — mostrar Juárez como punto principal
+      if (k === 'COESPO') {
+        topMunEl.textContent  = 'Ciudad Juárez';
+        topMunVal.textContent = 'Principal punto de recepción de migrantes';
+        const ratioMunEl = document.getElementById('inst-ratio-mun-'+k);
+        if (ratioMunEl) ratioMunEl.textContent = '2';
+      } else {
       const munList = (D.municipios||[]).filter(m => m.inst && m.inst[k] && m.inst[k].apoyos > 0);
       const topMun  = munList.reduce((best, m) => (!best || m.inst[k].apoyos > best.inst[k].apoyos) ? m : best, null);
       if (topMun) {
@@ -223,6 +230,7 @@ function renderInstituciones() {
           ratioMunEl.textContent = r;
         }
       } else { topMunEl.textContent = '—'; }
+      }
     }
     /* apoyo más/menos entregado — desde D.apoyos filtrado por institución */
     const progMaxEl = document.getElementById('inst-prog-max-'+k);
@@ -373,6 +381,22 @@ function renderInstituciones() {
               `con el rango etario de <strong>${topRangLabel}</strong> como el más representado dentro del padrón. `+
               `La tasa de localización del <strong>${locPct}%</strong> —con <strong>${fmt(locT)}</strong> beneficiarios con datos de contacto verificados— `+
               `indica un área de oportunidad para fortalecer el seguimiento y la medición del impacto cultural en la población atendida.`;
+          },
+          COESPO: () => {
+            const prog0 = v.programas[0]||{};
+            const topRangLabel = RANGOS_LABELS[topRang]||topRang;
+            const ninos = (rg['0-5']||0)+(rg['6-11']||0)+(rg['12-17']||0);
+            const ninosPct = rangTot ? (ninos/rangTot*100).toFixed(1) : 0;
+            return `<strong style="color:${c}">Comisión Estatal de Población (COESPO)</strong> brinda atención integral a migrantes en tránsito y connacionales retornados, `+
+              `con <strong>${fmt(v.total)}</strong> beneficiarios únicos registrados en el padrón estatal (${padPct}%). `+
+              `La población atendida es clasificada como <strong>foránea</strong> por su condición migratoria; la atención se concentra en los dos principales puntos de recepción del estado: `+
+              `<strong>Chihuahua</strong> y <strong>Ciudad Juárez</strong>, siendo este último el municipio con mayor volumen por su condición fronteriza. `+
+              `El programa activo es <strong>${toTitle(prog0.nombre||'Apoyo Integral a Migrantes')}</strong>, a través del cual se canalizan apoyos en consumibles, asesoría, ropa y traslados. `+
+              `La composición de género registra <strong>${fmt(v.m)} mujeres</strong> (${mPct}%) y <strong>${fmt(v.h)} hombres</strong> (${hPct}%), `+
+              `con un promedio de <strong>${ratio}</strong> apoyo por beneficiario. `+
+              `El <strong>${ninosPct}%</strong> de los beneficiarios con edad registrada son menores de 18 años, `+
+              `lo que refleja el carácter familiar de los flujos migratorios atendidos. `+
+              `El rango etario más numeroso es el de <strong>${topRangLabel}</strong>, con <strong>${fmt(rg[topRang]||0)}</strong> personas (${topRangPct}% de quienes tienen edad registrada).`;
           },
         };
 
