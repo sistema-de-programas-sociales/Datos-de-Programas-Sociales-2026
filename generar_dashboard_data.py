@@ -403,6 +403,31 @@ def build_dashboard_data(raw, excel_path=None):
                 if sf(v.get('total', 0)) > 0
             }
 
+    # ── Instituciones foráneas: distribución a municipios de atención real ───
+    # Instituciones cuyos beneficiarios están todos bajo FORÁNEO no aparecen
+    # en ningún municipio del mapa. Para que sus capas sean útiles, se les
+    # asignan los totales a los municipios donde físicamente operan.
+    # Agregar aquí cualquier institución nueva con operación foránea.
+    INST_FORANEAS = {
+        # inst_nombre: [(municipio_norm, fraccion), ...]
+        # Las fracciones deben sumar 1.0.
+        # COESPO atiende migrantes principalmente en Juárez (frontera) y Chihuahua (capital).
+        'COESPO': [('JUAREZ', 0.70), ('CHIHUAHUA', 0.30)],
+    }
+    for _inst_foranea_nombre, _inst_foranea_distribuciones in INST_FORANEAS.items():
+        _inst_foranea_data   = instituciones_data.get(_inst_foranea_nombre, {})
+        _inst_foranea_benef  = int(sf(_inst_foranea_data.get('total', 0)))
+        _inst_foranea_apoyos = int(sf(_inst_foranea_data.get('apoyos', 0)))
+        if not _inst_foranea_benef:
+            continue
+        for _mun_norm, _fraccion in _inst_foranea_distribuciones:
+            if _mun_norm not in inst_subtotales_por_mun:
+                inst_subtotales_por_mun[_mun_norm] = {}
+            inst_subtotales_por_mun[_mun_norm][_inst_foranea_nombre] = {
+                'benef':  round(_inst_foranea_benef  * _fraccion),
+                'apoyos': round(_inst_foranea_apoyos * _fraccion),
+            }
+
     # Sólo municipios reales (no especiales), ordenados por volumen desc
     municipios_data = []
     mun_reales = sorted([m for m in municipios if not m.get('especial')],

@@ -163,22 +163,41 @@ var LY={
   mayores:    {g:2,label:'Personas Mayores (65+)',           pal:'orange',get:function(d){return d.r_65mas;},
                fmt:function(v){return v.toLocaleString('es-MX')+' pers.'}, desc:'Beneficiarios de 65 años o más en el padrón 2026'},
 
-  // GRUPO 3: Instituciones 2026 — hardcodeado para garantizar disponibilidad inmediata
-  inst_CULTURA_benef: {g:3,label:'CULTURA (Beneficiarios)',pal:'rose',  get:function(d){return(d.inst['CULTURA']||{}).benef||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de CULTURA en el municipio'},
-  inst_CULTURA_apoyos:{g:3,label:'CULTURA (Apoyos)',       pal:'rose',  get:function(d){return(d.inst['CULTURA']||{}).apoyos||0;}, fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de CULTURA en el municipio'},
-  inst_DIF_benef:     {g:3,label:'DIF (Beneficiarios)',    pal:'purple',get:function(d){return(d.inst['DIF']||{}).benef||0;},      fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de DIF en el municipio'},
-  inst_DIF_apoyos:    {g:3,label:'DIF (Apoyos)',           pal:'purple',get:function(d){return(d.inst['DIF']||{}).apoyos||0;},     fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de DIF en el municipio'},
-  inst_ICHDII_benef:  {g:3,label:'ICHDII (Beneficiarios)', pal:'orange',get:function(d){return(d.inst['ICHDII']||{}).benef||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de ICHDII en el municipio'},
-  inst_ICHDII_apoyos: {g:3,label:'ICHDII (Apoyos)',        pal:'orange',get:function(d){return(d.inst['ICHDII']||{}).apoyos||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de ICHDII en el municipio'},
-  inst_ICHIJUV_benef: {g:3,label:'ICHIJUV (Beneficiarios)',pal:'amber', get:function(d){return(d.inst['ICHIJUV']||{}).benef||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de ICHIJUV en el municipio'},
-  inst_ICHIJUV_apoyos:{g:3,label:'ICHIJUV (Apoyos)',       pal:'amber', get:function(d){return(d.inst['ICHIJUV']||{}).apoyos||0;}, fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de ICHIJUV en el municipio'},
-  inst_SALUD_benef:   {g:3,label:'SALUD (Beneficiarios)',  pal:'green', get:function(d){return(d.inst['SALUD']||{}).benef||0;},    fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SALUD en el municipio'},
-  inst_SALUD_apoyos:  {g:3,label:'SALUD (Apoyos)',         pal:'green', get:function(d){return(d.inst['SALUD']||{}).apoyos||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SALUD en el municipio'},
-  inst_SDHyBC_benef:  {g:3,label:'SDHyBC (Beneficiarios)', pal:'blue',  get:function(d){return(d.inst['SDHyBC']||{}).benef||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SDHyBC en el municipio'},
-  inst_SDHyBC_apoyos: {g:3,label:'SDHyBC (Apoyos)',        pal:'blue',  get:function(d){return(d.inst['SDHyBC']||{}).apoyos||0;},  fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SDHyBC en el municipio'},
-  inst_SPyCI_benef:   {g:3,label:'SPyCI (Beneficiarios)',  pal:'teal',  get:function(d){return(d.inst['SPyCI']||{}).benef||0;},    fmt:function(v){return v.toLocaleString('es-MX')+' pers.'},  desc:'Beneficiarios de SPyCI en el municipio'},
-  inst_SPyCI_apoyos:  {g:3,label:'SPyCI (Apoyos)',         pal:'teal',  get:function(d){return(d.inst['SPyCI']||{}).apoyos||0;},   fmt:function(v){return v.toLocaleString('es-MX')+' apoyos'}, desc:'Apoyos de SPyCI en el municipio'},
+  // GRUPO 3: Instituciones 2026 — se inyectan dinámicamente abajo, este bloque se deja vacío
 };
+
+// ── Grupo 3: inyección dinámica de capas por institución ──────────────────
+// Lee D.instituciones en tiempo de ejecución → cualquier institución nueva
+// en data_dashboard.js aparece automáticamente en el selector de capas.
+(function() {
+  var insts = Object.keys(window.DASHBOARD_DATA.instituciones || {}).sort();
+  insts.forEach(function(k) {
+    var kSafe = k.replace(/[^a-zA-Z0-9]/g, '_');
+    var acc = (typeof instAcc === 'function') ? instAcc(k) : '#64748B';
+    // Determinar paleta aproximada desde el color accent de INST_COLORS
+    var palMap = {
+      SALUD:'green', SDHyBC:'teal', DIF:'purple', SPyCI:'orange',
+      ICHIJUV:'purple', ICHDII:'red', CULTURA:'amber', COESPO:'teal'
+    };
+    var pal = palMap[k] || 'blue';
+    LY['inst_'+kSafe+'_benef'] = {
+      g:3,
+      label: k+' (Beneficiarios)',
+      pal: pal,
+      get: (function(inst){ return function(d){ return (d.inst[inst]||{}).benef||0; }; })(k),
+      fmt: function(v){ return v.toLocaleString('es-MX')+' pers.'; },
+      desc: 'Beneficiarios de '+k+' en el municipio'
+    };
+    LY['inst_'+kSafe+'_apoyos'] = {
+      g:3,
+      label: k+' (Apoyos)',
+      pal: pal,
+      get: (function(inst){ return function(d){ return (d.inst[inst]||{}).apoyos||0; }; })(k),
+      fmt: function(v){ return v.toLocaleString('es-MX')+' apoyos'; },
+      desc: 'Apoyos de '+k+' en el municipio'
+    };
+  });
+})();
 
 var GRUPOS=['Pobreza, Rezago y Carencia Alimentaria — CONEVAL 2020','Padrón SDHyBC 2026','Rangos Etarios del Padrón','Instituciones 2026'];
 

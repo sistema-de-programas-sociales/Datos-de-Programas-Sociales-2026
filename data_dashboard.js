@@ -959,6 +959,10 @@ window.DASHBOARD_DATA = {
         "SPyCI": {
           "benef": 312,
           "apoyos": 348
+        },
+        "COESPO": {
+          "benef": 393,
+          "apoyos": 393
         }
       }
     },
@@ -1034,6 +1038,10 @@ window.DASHBOARD_DATA = {
         "SPyCI": {
           "benef": 78,
           "apoyos": 85
+        },
+        "COESPO": {
+          "benef": 917,
+          "apoyos": 917
         }
       }
     },
