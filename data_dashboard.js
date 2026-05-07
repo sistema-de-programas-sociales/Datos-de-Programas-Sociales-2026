@@ -14377,7 +14377,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "FORÁNEO",
+      "nombre": "GASTOS FUNERARIOS",
       "total": 171,
       "m": 107,
       "h": 64,
