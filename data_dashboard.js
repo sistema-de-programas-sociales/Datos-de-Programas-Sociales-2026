@@ -5903,12 +5903,6 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
-              "nombre": "CUAUHTEMOC",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "AQUILES SERDAN",
               "total": 1,
               "m": 0,
@@ -5922,6 +5916,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "AHUMADA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CUAUHTEMOC",
               "total": 1,
               "m": 1,
               "h": 0
@@ -6694,16 +6694,16 @@ window.DASHBOARD_DATA = {
               "h": 75
             },
             {
-              "nombre": "URIQUE",
-              "total": 161,
-              "m": 98,
-              "h": 63
-            },
-            {
               "nombre": "SAN FRANCISCO DE BORJA",
               "total": 161,
               "m": 105,
               "h": 56
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 161,
+              "m": 98,
+              "h": 63
             },
             {
               "nombre": "JANOS",
@@ -7117,16 +7117,16 @@ window.DASHBOARD_DATA = {
           "h": 75
         },
         {
-          "nombre": "URIQUE",
-          "total": 161,
-          "m": 98,
-          "h": 63
-        },
-        {
           "nombre": "SAN FRANCISCO DE BORJA",
           "total": 161,
           "m": 105,
           "h": 56
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 161,
+          "m": 98,
+          "h": 63
         },
         {
           "nombre": "JANOS",
@@ -7475,16 +7475,16 @@ window.DASHBOARD_DATA = {
               "h": 14
             },
             {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 8,
-              "m": 8,
-              "h": 0
-            },
-            {
               "nombre": "AQUILES SERDAN",
               "total": 8,
               "m": 0,
               "h": 8
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 8,
+              "m": 8,
+              "h": 0
             },
             {
               "nombre": "FORANEO",
@@ -7669,6 +7669,12 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
+              "nombre": "ALDAMA",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
               "nombre": "MEOQUI",
               "total": 2,
               "m": 2,
@@ -7679,12 +7685,6 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 1,
               "h": 1
-            },
-            {
-              "nombre": "ALDAMA",
-              "total": 2,
-              "m": 2,
-              "h": 0
             },
             {
               "nombre": "CAMARGO",
@@ -7756,16 +7756,16 @@ window.DASHBOARD_DATA = {
           "h": 33
         },
         {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 15,
-          "m": 11,
-          "h": 4
-        },
-        {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
           "total": 15,
           "m": 15,
           "h": 0
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 15,
+          "m": 11,
+          "h": 4
         },
         {
           "nombre": "CUSIHUIRIACHI",
@@ -7804,6 +7804,12 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
+          "nombre": "ALDAMA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
           "nombre": "MEOQUI",
           "total": 2,
           "m": 2,
@@ -7816,22 +7822,16 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "ALDAMA",
-          "total": 2,
-          "m": 2,
-          "h": 0
+          "nombre": "BALLEZA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "DELICIAS",
           "total": 1,
           "m": 1,
           "h": 0
-        },
-        {
-          "nombre": "BALLEZA",
-          "total": 1,
-          "m": 0,
-          "h": 1
         },
         {
           "nombre": "MADERA",
@@ -9165,18 +9165,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "DELICIAS",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "GUERRERO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "JUAREZ",
               "total": 1,
               "m": 0,
@@ -9184,6 +9172,18 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "ALDAMA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "DELICIAS",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "GUERRERO",
               "total": 1,
               "m": 1,
               "h": 0
@@ -10053,12 +10053,6 @@ window.DASHBOARD_DATA = {
               "h": 28
             },
             {
-              "nombre": "GUERRERO",
-              "total": 48,
-              "m": 40,
-              "h": 8
-            },
-            {
               "nombre": "GUADALUPE Y CALVO",
               "total": 48,
               "m": 30,
@@ -10069,6 +10063,12 @@ window.DASHBOARD_DATA = {
               "total": 48,
               "m": 28,
               "h": 20
+            },
+            {
+              "nombre": "GUERRERO",
+              "total": 48,
+              "m": 40,
+              "h": 8
             },
             {
               "nombre": "CAMARGO",
@@ -10113,12 +10113,6 @@ window.DASHBOARD_DATA = {
               "h": 8
             },
             {
-              "nombre": "URIQUE",
-              "total": 32,
-              "m": 32,
-              "h": 0
-            },
-            {
               "nombre": "ASCENSION",
               "total": 32,
               "m": 24,
@@ -10129,6 +10123,12 @@ window.DASHBOARD_DATA = {
               "total": 32,
               "m": 16,
               "h": 16
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 32,
+              "m": 32,
+              "h": 0
             },
             {
               "nombre": "JANOS",
@@ -10359,12 +10359,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "ROSARIO",
-              "total": 4,
-              "m": 0,
-              "h": 4
-            },
-            {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
               "total": 4,
               "m": 1,
@@ -10381,6 +10375,12 @@ window.DASHBOARD_DATA = {
               "total": 4,
               "m": 4,
               "h": 0
+            },
+            {
+              "nombre": "ROSARIO",
+              "total": 4,
+              "m": 0,
+              "h": 4
             },
             {
               "nombre": "EL TULE",
@@ -10496,12 +10496,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "GUERRERO",
-              "total": 2,
-              "m": 0,
-              "h": 2
-            },
-            {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
               "total": 2,
               "m": 1,
@@ -10509,6 +10503,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "BALLEZA",
+              "total": 2,
+              "m": 0,
+              "h": 2
+            },
+            {
+              "nombre": "GUERRERO",
               "total": 2,
               "m": 0,
               "h": 2
@@ -10655,12 +10655,6 @@ window.DASHBOARD_DATA = {
           "h": 8
         },
         {
-          "nombre": "URIQUE",
-          "total": 32,
-          "m": 32,
-          "h": 0
-        },
-        {
           "nombre": "ASCENSION",
           "total": 32,
           "m": 24,
@@ -10671,6 +10665,12 @@ window.DASHBOARD_DATA = {
           "total": 32,
           "m": 16,
           "h": 16
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 32,
+          "m": 32,
+          "h": 0
         },
         {
           "nombre": "JANOS",
@@ -10859,16 +10859,16 @@ window.DASHBOARD_DATA = {
           "h": 7
         },
         {
-          "nombre": "SAN FRANCISCO DEL ORO",
-          "total": 9,
-          "m": 9,
-          "h": 0
-        },
-        {
           "nombre": "NONOAVA",
           "total": 9,
           "m": 8,
           "h": 1
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 9,
+          "m": 9,
+          "h": 0
         },
         {
           "nombre": "VALLE DE ZARAGOZA",
@@ -10907,12 +10907,6 @@ window.DASHBOARD_DATA = {
           "h": 4
         },
         {
-          "nombre": "ROSARIO",
-          "total": 4,
-          "m": 0,
-          "h": 4
-        },
-        {
           "nombre": "COYAME DEL SOTOL",
           "total": 4,
           "m": 4,
@@ -10923,6 +10917,12 @@ window.DASHBOARD_DATA = {
           "total": 4,
           "m": 4,
           "h": 0
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 4,
+          "m": 0,
+          "h": 4
         },
         {
           "nombre": "EL TULE",
@@ -11178,18 +11178,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "DELICIAS",
-              "total": 4,
-              "m": 0,
-              "h": 4
-            },
-            {
-              "nombre": "URIQUE",
-              "total": 4,
-              "m": 4,
-              "h": 0
-            },
-            {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
               "total": 4,
               "m": 4,
@@ -11200,6 +11188,12 @@ window.DASHBOARD_DATA = {
               "total": 4,
               "m": 4,
               "h": 0
+            },
+            {
+              "nombre": "DELICIAS",
+              "total": 4,
+              "m": 0,
+              "h": 4
             },
             {
               "nombre": "NAMIQUIPA",
@@ -11218,6 +11212,12 @@ window.DASHBOARD_DATA = {
               "total": 4,
               "m": 0,
               "h": 4
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 4,
+              "m": 4,
+              "h": 0
             },
             {
               "nombre": "MAGUARICHI",
@@ -11376,18 +11376,6 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
-          "nombre": "DELICIAS",
-          "total": 4,
-          "m": 0,
-          "h": 4
-        },
-        {
-          "nombre": "URIQUE",
-          "total": 4,
-          "m": 4,
-          "h": 0
-        },
-        {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
           "total": 4,
           "m": 4,
@@ -11400,6 +11388,12 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
+          "nombre": "DELICIAS",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
           "nombre": "NAMIQUIPA",
           "total": 4,
           "m": 4,
@@ -11410,6 +11404,12 @@ window.DASHBOARD_DATA = {
           "total": 4,
           "m": 0,
           "h": 4
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 4,
+          "m": 4,
+          "h": 0
         },
         {
           "nombre": "MAGUARICHI",
@@ -11608,22 +11608,16 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "MEOQUI",
-              "total": 2,
-              "m": 0,
-              "h": 2
-            },
-            {
               "nombre": "MADERA",
               "total": 2,
               "m": 2,
               "h": 0
             },
             {
-              "nombre": "GUERRERO",
-              "total": 1,
+              "nombre": "MEOQUI",
+              "total": 2,
               "m": 0,
-              "h": 1
+              "h": 2
             },
             {
               "nombre": "VALLE DE ZARAGOZA",
@@ -11636,6 +11630,12 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "GUERRERO",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "JIMENEZ",
@@ -11701,22 +11701,16 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
-          "nombre": "MEOQUI",
-          "total": 2,
-          "m": 0,
-          "h": 2
-        },
-        {
           "nombre": "MADERA",
           "total": 2,
           "m": 2,
           "h": 0
         },
         {
-          "nombre": "GUERRERO",
-          "total": 1,
+          "nombre": "MEOQUI",
+          "total": 2,
           "m": 0,
-          "h": 1
+          "h": 2
         },
         {
           "nombre": "VALLE DE ZARAGOZA",
@@ -11729,6 +11723,12 @@ window.DASHBOARD_DATA = {
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "JIMENEZ",
@@ -11978,18 +11978,6 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "CAMARGO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "DELICIAS",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "HIDALGO DEL PARRAL",
               "total": 1,
               "m": 1,
@@ -11997,6 +11985,18 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "ALDAMA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "DELICIAS",
               "total": 1,
               "m": 1,
               "h": 0
@@ -12143,18 +12143,6 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "CAMARGO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "DELICIAS",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "HIDALGO DEL PARRAL",
           "total": 1,
           "m": 1,
@@ -12162,6 +12150,18 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "DELICIAS",
           "total": 1,
           "m": 1,
           "h": 0
@@ -12366,13 +12366,13 @@ window.DASHBOARD_DATA = {
               "h": 16
             },
             {
-              "nombre": "URIQUE",
+              "nombre": "BOCOYNA",
               "total": 54,
               "m": 43,
               "h": 11
             },
             {
-              "nombre": "BOCOYNA",
+              "nombre": "URIQUE",
               "total": 54,
               "m": 43,
               "h": 11
@@ -12447,13 +12447,13 @@ window.DASHBOARD_DATA = {
           "h": 16
         },
         {
-          "nombre": "URIQUE",
+          "nombre": "BOCOYNA",
           "total": 54,
           "m": 43,
           "h": 11
         },
         {
-          "nombre": "BOCOYNA",
+          "nombre": "URIQUE",
           "total": 54,
           "m": 43,
           "h": 11
@@ -12593,16 +12593,16 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "CUAUHTEMOC",
-              "total": 11,
-              "m": 7,
-              "h": 4
-            },
-            {
               "nombre": "BALLEZA",
               "total": 11,
               "m": 6,
               "h": 5
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 11,
+              "m": 7,
+              "h": 4
             },
             {
               "nombre": "CARICHI",
@@ -12611,16 +12611,16 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "URIQUE",
-              "total": 5,
-              "m": 4,
-              "h": 1
-            },
-            {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
               "total": 5,
               "m": 2,
               "h": 3
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 5,
+              "m": 4,
+              "h": 1
             },
             {
               "nombre": "ALDAMA",
@@ -12647,16 +12647,40 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
+              "nombre": "MORELOS",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "ALLENDE",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
               "nombre": "CAMARGO",
               "total": 1,
               "m": 0,
               "h": 1
             },
             {
+              "nombre": "CUSIHUIRIACHI",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
               "nombre": "DELICIAS",
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "GUAZAPARES",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "GUERRERO",
@@ -12671,40 +12695,16 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "SAN FRANCISCO DEL ORO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "MORELOS",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "ALLENDE",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "CUSIHUIRIACHI",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "GUAZAPARES",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
               "nombre": "NUEVO CASAS GRANDES",
               "total": 1,
               "m": 0,
               "h": 1
+            },
+            {
+              "nombre": "SAN FRANCISCO DEL ORO",
+              "total": 1,
+              "m": 1,
+              "h": 0
             }
           ]
         },
@@ -12830,16 +12830,16 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "CUAUHTEMOC",
-          "total": 11,
-          "m": 7,
-          "h": 4
-        },
-        {
           "nombre": "BALLEZA",
           "total": 11,
           "m": 6,
           "h": 5
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 11,
+          "m": 7,
+          "h": 4
         },
         {
           "nombre": "CARICHI",
@@ -12848,16 +12848,16 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "URIQUE",
-          "total": 5,
-          "m": 4,
-          "h": 1
-        },
-        {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
           "total": 5,
           "m": 2,
           "h": 3
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 5,
+          "m": 4,
+          "h": 1
         },
         {
           "nombre": "ALDAMA",
@@ -12884,16 +12884,40 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
+          "nombre": "MORELOS",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
           "nombre": "CAMARGO",
           "total": 1,
           "m": 0,
           "h": 1
         },
         {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
           "nombre": "DELICIAS",
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "GUERRERO",
@@ -12908,40 +12932,16 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "SAN FRANCISCO DEL ORO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "MORELOS",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "ALLENDE",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "CUSIHUIRIACHI",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "GUAZAPARES",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
           "nombre": "NUEVO CASAS GRANDES",
           "total": 1,
           "m": 0,
           "h": 1
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 1,
+          "m": 1,
+          "h": 0
         }
       ]
     },
@@ -13344,12 +13344,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "DELICIAS",
-              "total": 2,
-              "m": 1,
-              "h": 1
-            },
-            {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
               "total": 2,
               "m": 2,
@@ -13362,6 +13356,12 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
+              "nombre": "DELICIAS",
+              "total": 2,
+              "m": 1,
+              "h": 1
+            },
+            {
               "nombre": "GOMEZ FARIAS",
               "total": 2,
               "m": 1,
@@ -13372,24 +13372,6 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 2,
               "h": 0
-            },
-            {
-              "nombre": "GUERRERO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "MEOQUI",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "URIQUE",
-              "total": 1,
-              "m": 0,
-              "h": 1
             },
             {
               "nombre": "MORELOS",
@@ -13434,10 +13416,22 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
+              "nombre": "GUERRERO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
               "nombre": "JIMENEZ",
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "MEOQUI",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "NUEVO CASAS GRANDES",
@@ -13456,6 +13450,12 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "URUACHI",
@@ -13539,12 +13539,6 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
-          "nombre": "DELICIAS",
-          "total": 2,
-          "m": 1,
-          "h": 1
-        },
-        {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
           "total": 2,
           "m": 2,
@@ -13557,6 +13551,12 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
+          "nombre": "DELICIAS",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
           "nombre": "GOMEZ FARIAS",
           "total": 2,
           "m": 1,
@@ -13567,24 +13567,6 @@ window.DASHBOARD_DATA = {
           "total": 2,
           "m": 2,
           "h": 0
-        },
-        {
-          "nombre": "GUERRERO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "MEOQUI",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "URIQUE",
-          "total": 1,
-          "m": 0,
-          "h": 1
         },
         {
           "nombre": "MORELOS",
@@ -13629,10 +13611,22 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
+          "nombre": "GUERRERO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
           "nombre": "JIMENEZ",
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "NUEVO CASAS GRANDES",
@@ -13651,6 +13645,12 @@ window.DASHBOARD_DATA = {
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "URUACHI",
@@ -13772,12 +13772,6 @@ window.DASHBOARD_DATA = {
               "h": 164
             },
             {
-              "nombre": "CAMARGO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "CHIHUAHUA",
               "total": 1,
               "m": 0,
@@ -13785,6 +13779,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "AHUMADA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CAMARGO",
               "total": 1,
               "m": 1,
               "h": 0
@@ -13817,12 +13817,6 @@ window.DASHBOARD_DATA = {
           "h": 164
         },
         {
-          "nombre": "CAMARGO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "CHIHUAHUA",
           "total": 1,
           "m": 0,
@@ -13830,6 +13824,12 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "AHUMADA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CAMARGO",
           "total": 1,
           "m": 1,
           "h": 0
@@ -14058,25 +14058,25 @@ window.DASHBOARD_DATA = {
               "h": 3
             },
             {
-              "nombre": "CUAUHTEMOC",
-              "total": 4,
-              "m": 4,
-              "h": 0
-            },
-            {
               "nombre": "HIDALGO DEL PARRAL",
               "total": 4,
               "m": 1,
               "h": 3
             },
             {
-              "nombre": "GUERRERO",
+              "nombre": "CUAUHTEMOC",
+              "total": 4,
+              "m": 4,
+              "h": 0
+            },
+            {
+              "nombre": "FORANEO",
               "total": 2,
               "m": 2,
               "h": 0
             },
             {
-              "nombre": "FORANEO",
+              "nombre": "GUERRERO",
               "total": 2,
               "m": 2,
               "h": 0
@@ -14255,22 +14255,16 @@ window.DASHBOARD_DATA = {
           "h": 4
         },
         {
-          "nombre": "DELICIAS",
-          "total": 5,
-          "m": 3,
-          "h": 2
-        },
-        {
           "nombre": "MORELOS",
           "total": 5,
           "m": 2,
           "h": 3
         },
         {
-          "nombre": "CUAUHTEMOC",
-          "total": 4,
-          "m": 4,
-          "h": 0
+          "nombre": "DELICIAS",
+          "total": 5,
+          "m": 3,
+          "h": 2
         },
         {
           "nombre": "HIDALGO DEL PARRAL",
@@ -14285,13 +14279,19 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
-          "nombre": "GUERRERO",
+          "nombre": "CUAUHTEMOC",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
           "total": 2,
           "m": 2,
           "h": 0
         },
         {
-          "nombre": "FORANEO",
+          "nombre": "GUERRERO",
           "total": 2,
           "m": 2,
           "h": 0
@@ -14533,16 +14533,16 @@ window.DASHBOARD_DATA = {
               "h": 7
             },
             {
-              "nombre": "CUAUHTEMOC",
-              "total": 11,
-              "m": 9,
-              "h": 2
-            },
-            {
               "nombre": "GUADALUPE Y CALVO",
               "total": 11,
               "m": 7,
               "h": 4
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 11,
+              "m": 9,
+              "h": 2
             },
             {
               "nombre": "BALLEZA",
@@ -14569,16 +14569,22 @@ window.DASHBOARD_DATA = {
               "h": 4
             },
             {
+              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+              "total": 3,
+              "m": 1,
+              "h": 2
+            },
+            {
               "nombre": "HIDALGO DEL PARRAL",
               "total": 3,
               "m": 2,
               "h": 1
             },
             {
-              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-              "total": 3,
+              "nombre": "JUAREZ",
+              "total": 2,
               "m": 1,
-              "h": 2
+              "h": 1
             },
             {
               "nombre": "CAMARGO",
@@ -14593,19 +14599,13 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
-              "nombre": "JUAREZ",
-              "total": 2,
-              "m": 1,
-              "h": 1
-            },
-            {
-              "nombre": "SAN FRANCISCO DEL ORO",
+              "nombre": "ALDAMA",
               "total": 1,
               "m": 1,
               "h": 0
             },
             {
-              "nombre": "ALDAMA",
+              "nombre": "SAN FRANCISCO DEL ORO",
               "total": 1,
               "m": 1,
               "h": 0
@@ -14694,16 +14694,16 @@ window.DASHBOARD_DATA = {
           "h": 7
         },
         {
-          "nombre": "CUAUHTEMOC",
-          "total": 11,
-          "m": 9,
-          "h": 2
-        },
-        {
           "nombre": "GUADALUPE Y CALVO",
           "total": 11,
           "m": 7,
           "h": 4
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 11,
+          "m": 9,
+          "h": 2
         },
         {
           "nombre": "BALLEZA",
@@ -14730,16 +14730,22 @@ window.DASHBOARD_DATA = {
           "h": 4
         },
         {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 3,
+          "m": 1,
+          "h": 2
+        },
+        {
           "nombre": "HIDALGO DEL PARRAL",
           "total": 3,
           "m": 2,
           "h": 1
         },
         {
-          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-          "total": 3,
+          "nombre": "JUAREZ",
+          "total": 2,
           "m": 1,
-          "h": 2
+          "h": 1
         },
         {
           "nombre": "CAMARGO",
@@ -14754,19 +14760,13 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
-          "nombre": "JUAREZ",
-          "total": 2,
-          "m": 1,
-          "h": 1
-        },
-        {
-          "nombre": "SAN FRANCISCO DEL ORO",
+          "nombre": "ALDAMA",
           "total": 1,
           "m": 1,
           "h": 0
         },
         {
-          "nombre": "ALDAMA",
+          "nombre": "SAN FRANCISCO DEL ORO",
           "total": 1,
           "m": 1,
           "h": 0
@@ -14864,12 +14864,6 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
-              "nombre": "CAMARGO",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
               "nombre": "AQUILES SERDAN",
               "total": 1,
               "m": 0,
@@ -14877,6 +14871,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "ALDAMA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "CAMARGO",
               "total": 1,
               "m": 0,
               "h": 1
@@ -14909,12 +14909,6 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
-          "nombre": "CAMARGO",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
           "nombre": "AQUILES SERDAN",
           "total": 1,
           "m": 0,
@@ -14925,15 +14919,21 @@ window.DASHBOARD_DATA = {
           "total": 1,
           "m": 0,
           "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
     {
-      "nombre": "*** PENDIENTE ***",
-      "total": 78,
+      "nombre": "ASISTENCIA TECNICA Y ACOMPAÑAMIENTO",
+      "total": 79,
       "m": 51,
-      "h": 27,
-      "n_muns": 11,
+      "h": 28,
+      "n_muns": 12,
       "pct": 0.0,
       "instituciones": [
         {
@@ -14999,6 +14999,12 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
               "nombre": "CAMARGO",
               "total": 1,
               "m": 1,
@@ -15012,12 +15018,6 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "GUERRERO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
               "total": 1,
               "m": 1,
               "h": 0
@@ -15041,6 +15041,42 @@ window.DASHBOARD_DATA = {
               "h": 0
             }
           ]
+        },
+        {
+          "nombre": "DIF",
+          "total": 1,
+          "m": 0,
+          "h": 1,
+          "muns": 1,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 1,
+              "m": 0,
+              "h": 1,
+              "muns": 1,
+              "muns_lista": [
+                "ALDAMA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "ALDAMA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
         }
       ],
       "rangos": {
@@ -15048,12 +15084,12 @@ window.DASHBOARD_DATA = {
         "6-11": 0,
         "12-17": 44,
         "18-29": 34,
-        "30-49": 0,
+        "30-49": 1,
         "50-64": 0,
         "65+": 0
       },
       "rango_dom": "12–17",
-      "rango_min": "18–29",
+      "rango_min": "30–49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -15080,6 +15116,18 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
           "nombre": "CAMARGO",
           "total": 1,
           "m": 1,
@@ -15093,12 +15141,6 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "GUERRERO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
           "total": 1,
           "m": 1,
           "h": 0
@@ -15275,12 +15317,6 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "AQUILES SERDAN",
               "total": 1,
               "m": 0,
@@ -15288,6 +15324,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
               "total": 1,
               "m": 1,
               "h": 0
@@ -15338,12 +15380,6 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "AQUILES SERDAN",
           "total": 1,
           "m": 0,
@@ -15351,6 +15387,12 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
           "total": 1,
           "m": 1,
           "h": 0
@@ -15408,16 +15450,16 @@ window.DASHBOARD_DATA = {
               "h": 18
             },
             {
-              "nombre": "MEOQUI",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
               "nombre": "AQUILES SERDAN",
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "MEOQUI",
+              "total": 1,
+              "m": 0,
+              "h": 1
             }
           ]
         }
@@ -15441,16 +15483,16 @@ window.DASHBOARD_DATA = {
           "h": 18
         },
         {
-          "nombre": "MEOQUI",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
           "nombre": "AQUILES SERDAN",
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -15527,12 +15569,6 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
-              "nombre": "DELICIAS",
-              "total": 2,
-              "m": 2,
-              "h": 0
-            },
-            {
               "nombre": "JUAREZ",
               "total": 2,
               "m": 2,
@@ -15551,19 +15587,25 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
+              "nombre": "DELICIAS",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
               "nombre": "JIMENEZ",
               "total": 2,
               "m": 2,
               "h": 0
             },
             {
-              "nombre": "GUERRERO",
+              "nombre": "ASCENSION",
               "total": 1,
               "m": 1,
               "h": 0
             },
             {
-              "nombre": "ASCENSION",
+              "nombre": "GUERRERO",
               "total": 1,
               "m": 1,
               "h": 0
@@ -15620,12 +15662,6 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
-          "nombre": "DELICIAS",
-          "total": 2,
-          "m": 2,
-          "h": 0
-        },
-        {
           "nombre": "JUAREZ",
           "total": 2,
           "m": 2,
@@ -15644,19 +15680,25 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
+          "nombre": "DELICIAS",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
           "nombre": "JIMENEZ",
           "total": 2,
           "m": 2,
           "h": 0
         },
         {
-          "nombre": "GUERRERO",
+          "nombre": "ASCENSION",
           "total": 1,
           "m": 1,
           "h": 0
         },
         {
-          "nombre": "ASCENSION",
+          "nombre": "GUERRERO",
           "total": 1,
           "m": 1,
           "h": 0
@@ -15722,12 +15764,6 @@ window.DASHBOARD_DATA = {
               "h": 14
             },
             {
-              "nombre": "MEOQUI",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "SAUCILLO",
               "total": 1,
               "m": 1,
@@ -15735,6 +15771,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "VALLE DE ZARAGOZA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "MEOQUI",
               "total": 1,
               "m": 1,
               "h": 0
@@ -15767,12 +15809,6 @@ window.DASHBOARD_DATA = {
           "h": 14
         },
         {
-          "nombre": "MEOQUI",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "SAUCILLO",
           "total": 1,
           "m": 1,
@@ -15780,6 +15816,12 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "VALLE DE ZARAGOZA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
           "total": 1,
           "m": 1,
           "h": 0
@@ -16138,16 +16180,16 @@ window.DASHBOARD_DATA = {
               "h": 2
             },
             {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "JUAREZ",
               "total": 1,
               "m": 0,
               "h": 1
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 1,
+              "m": 1,
+              "h": 0
             },
             {
               "nombre": "SAUCILLO",
@@ -16225,16 +16267,16 @@ window.DASHBOARD_DATA = {
           "h": 2
         },
         {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "JUAREZ",
           "total": 1,
           "m": 0,
           "h": 1
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
         },
         {
           "nombre": "SAUCILLO",
@@ -17453,71 +17495,6 @@ window.DASHBOARD_DATA = {
           "total": 1,
           "m": 1,
           "h": 0
-        }
-      ]
-    },
-    {
-      "nombre": "ASISTENCIA TECNICA Y ACOMPAÑAMIENTO",
-      "total": 1,
-      "m": 0,
-      "h": 1,
-      "n_muns": 1,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1,
-              "muns_lista": [
-                "ALDAMA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 1,
-                "50-64": 0,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "ALDAMA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 0,
-        "18-29": 0,
-        "30-49": 1,
-        "50-64": 0,
-        "65+": 0
-      },
-      "rango_dom": "30–49",
-      "rango_min": null,
-      "por_municipio": [
-        {
-          "nombre": "ALDAMA",
-          "total": 1,
-          "m": 0,
-          "h": 1
         }
       ]
     },
