@@ -1,5 +1,6 @@
 // Generado automáticamente por generar_dashboard_data.py
 // NO editar manualmente — se sobreescribe con cada actualización del Excel.
+//HOLA
 window.DASHBOARD_DATA = {
   "_meta": {
     "pob_estatal": 4043130,

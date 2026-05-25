@@ -372,3 +372,4 @@ function instTitular(k, v, meta) {
   return hl(meta.fullname) + ' opera ' + nProg + ' programas activos en ' + meta.muns + ' municipios, atendiendo a una población ' + genTxt;
 }
 const RANGOS_LABELS = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29','30-49':'30–49','50-64':'50–64','65+':'65+'};
+//HOLA
