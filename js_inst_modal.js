@@ -269,22 +269,53 @@ function _instProgRender(p, inst, tab) {
   }
 
   else if (tab === 'apoyos') {
-    // Cross-reference D.apoyos to find all tipos de apoyo this program participates in
-    // Normalizar texto: minúsculas + quitar acentos/diacríticos + colapsar espacios
+    // Cross-reference D.apoyos to find all tipos de apoyo this program participates in.
+    // Normalizar texto: minúsculas + quitar acentos + colapsar espacios
     function _normTxt(s) {
       return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
     }
+
+    // Tabla de alias EXPLÍCITA: nombre en D.apoyos[inst.programas] → nombre en D.indicadores
+    // Necesaria cuando los dos Excel usan nombres distintos para el mismo programa.
+    // Formato: 'INST|nombre_en_apoyos' → 'nombre_en_indicadores'
+    var _APOYO_PROG_ALIAS = {
+      'SALUD|MEDICHIHUAHUA':
+        'Atención médica',
+      'DIF|REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES':
+        'Rehabilitación integral y apoyos funcionales',
+      'ICHDII|PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ':
+        'Estancias infantiles para el desarrollo integral de la niñez',
+      'SPyCI|ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA':
+        'Asistencia social para la población indígena',
+      'SPyCI|INCENTIVOS ECONOMICOS A ESTUDIANTES INDIGENAS PARA SU PROFESIONALIZACION':
+        'Incentivos económicos a estudiantes indígenas para su profesionalización',
+      'SDHyBC|ATENCIÓN A NIÑAS, NIÑOS, ADOLESCENTES Y JUVENTUDES':
+        'Atención a niños, niñas, adolescentes y juventudes',
+      'SDHyBC|PREYECTOS PRODUCTIVOS Y ECONOMIA SOLIDARIA':
+        'Proyectos productivos y economía solidaria',
+      'ICHIJUV|INSTITUCIONALIZACION DE LA PERSPECTIVA DE LAS JUVENTUDES':
+        'Institucionalización de la perspectiva de las juventudes',
+      'ICHIJUV|PROGRAMA INSTITUCIONALIZACION DE PERSPECTIVA DE JUVENTUDES':
+        'Institucionalización de la perspectiva de las juventudes',
+    };
+
     const progNorm = _normTxt(p.nombre);
     const tiposEncontrados = [];
     let totalApoyos = 0;
     (D.apoyos || []).forEach(function(a) {
       a.instituciones.forEach(function(inst) {
         (inst.programas || []).forEach(function(prog) {
-          const apoNorm = _normTxt(prog.nombre);
-          // Match exacto (con normalización de acentos) O match parcial bidireccional
-          const exactMatch   = apoNorm === progNorm;
-          const partialMatch = apoNorm.length > 8 && progNorm.length > 8 &&
-                               (apoNorm.includes(progNorm) || progNorm.includes(apoNorm));
+          // 1. Resolver alias explícito para este inst+prog
+          var aliasKey    = inst.nombre + '|' + (prog.nombre||'').toUpperCase().trim();
+          var aliasNombre = _APOYO_PROG_ALIAS[aliasKey] || prog.nombre;
+          var apoNorm     = _normTxt(aliasNombre);
+
+          // 2. Match exacto (con normalización NFD) — preferido
+          // 3. Match parcial bidireccional — fallback para typos/abreviaciones
+          var exactMatch   = apoNorm === progNorm;
+          var partialMatch = !exactMatch &&
+                             apoNorm.length > 8 && progNorm.length > 8 &&
+                             (apoNorm.includes(progNorm) || progNorm.includes(apoNorm));
           if (exactMatch || partialMatch) {
             tiposEncontrados.push({ tipo: a.nombre, total: prog.total||0, m: prog.m||0, h: prog.h||0 });
             totalApoyos += (prog.total||0);
