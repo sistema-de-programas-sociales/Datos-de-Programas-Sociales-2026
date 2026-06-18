@@ -79,9 +79,20 @@ function _instProgRender(p, inst, tab) {
   let bodyHTML = '';
 
   if (tab === 'benef') {
-    const total    = p.benef_unicos || 0;
-    const mujeres  = p.mujeres  || 0;
-    const hombres  = p.hombres  || 0;
+    // Fallback: si benef_unicos es null (datos #REF! en Excel), calcular desde mujeres+hombres
+    // o desde la suma total de rangos etarios + sin_datos_edad
+    const _RKEYS_B = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
+    const _rangosB  = p.rangos || {};
+    const _totalRangos = _RKEYS_B.reduce((s,k) => s + (_rangosB[k]||0), 0);
+    const _sinDatosB   = p.sin_datos_edad || 0;
+    const _sumRangosTotal = _totalRangos + _sinDatosB;
+    const _muj = p.mujeres  != null ? p.mujeres  : 0;
+    const _hom = p.hombres  != null ? p.hombres  : 0;
+    const total    = p.benef_unicos != null
+                     ? p.benef_unicos
+                     : (_muj + _hom > 0 ? _muj + _hom : (_sumRangosTotal > 0 ? _sumRangosTotal : 0));
+    const mujeres  = _muj;
+    const hombres  = _hom;
     const sinId    = p.sin_id   || 0;
     const pctM     = total > 0 ? Math.round(mujeres / total * 100) : 0;
     const pctH     = total > 0 ? Math.round(hombres / total * 100) : 0;
@@ -259,13 +270,22 @@ function _instProgRender(p, inst, tab) {
 
   else if (tab === 'apoyos') {
     // Cross-reference D.apoyos to find all tipos de apoyo this program participates in
-    const progNorm = (p.nombre||'').trim().toLowerCase();
+    // Normalizar texto: minúsculas + quitar acentos/diacríticos + colapsar espacios
+    function _normTxt(s) {
+      return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+    }
+    const progNorm = _normTxt(p.nombre);
     const tiposEncontrados = [];
     let totalApoyos = 0;
     (D.apoyos || []).forEach(function(a) {
       a.instituciones.forEach(function(inst) {
         (inst.programas || []).forEach(function(prog) {
-          if ((prog.nombre||'').trim().toLowerCase() === progNorm) {
+          const apoNorm = _normTxt(prog.nombre);
+          // Match exacto (con normalización de acentos) O match parcial bidireccional
+          const exactMatch   = apoNorm === progNorm;
+          const partialMatch = apoNorm.length > 8 && progNorm.length > 8 &&
+                               (apoNorm.includes(progNorm) || progNorm.includes(apoNorm));
+          if (exactMatch || partialMatch) {
             tiposEncontrados.push({ tipo: a.nombre, total: prog.total||0, m: prog.m||0, h: prog.h||0 });
             totalApoyos += (prog.total||0);
           }

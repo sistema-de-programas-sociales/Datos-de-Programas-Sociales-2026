@@ -108,20 +108,30 @@ function renderProgsTable(data) {
       : 'background:' + acc + '18;border:0.5px solid ' + acc + '44';
     const cardIconStroke = noData ? 'rgba(139,148,158,.4)' : acc;
 
-    const unicos  = p.benef_unicos  || 0;
-    const mujeres = p.mujeres || 0;
-    const hombres = p.hombres || 0;
-    const total   = unicos || (mujeres + hombres);
-    const pctM    = total > 0 ? Math.round(mujeres / total * 100) : 0;
-    const pctH    = 100 - pctM;
-
-    // Rango dominante
+    // Rango dominante (calculado antes de unicos para poder usarlo como fallback)
     const RKEYS = ['0-5','6-11','12-17','18-29','30-49','50-64','65+'];
     const rangos = p.rangos || {};
     const rangoDom = RKEYS.filter(k=>rangos[k]).sort((a,b)=>(rangos[b]||0)-(rangos[a]||0))[0];
     const rangoLabel = rangoDom ? RLABS[rangoDom] : '—';
+    const totalRangos = RKEYS.reduce((s,k) => s + (rangos[k]||0), 0);
 
-    const nMuns = (p.municipios||[]).filter(function(m){ return m && m !== 'NO IDENTIFICADO' && m !== 'FORANEO'; }).length;
+    const mujeres = p.mujeres || 0;
+    const hombres = p.hombres || 0;
+    // FIX 1: benef_unicos puede venir null para programas SPyCI.
+    // Fallback: suma de rangos etarios → mujeres+hombres → 0
+    const unicos  = p.benef_unicos != null
+                    ? p.benef_unicos
+                    : (totalRangos > 0 ? totalRangos : (mujeres + hombres));
+    const total   = unicos || (mujeres + hombres);
+    const pctM    = total > 0 ? Math.round(mujeres / total * 100) : 0;
+    const pctH    = 100 - pctM;
+
+    // FIX 2: municipios[] puede venir vacío aunque muns_benef tenga datos reales.
+    // Priorizar muns_benef (fuente exacta del pivot AJ) sobre municipios[].
+    const _munsBenef = p.muns_benef || {};
+    const _munsFromBenef = Object.keys(_munsBenef).filter(function(m){ return m && m !== 'NO IDENTIFICADO' && m !== 'FORANEO'; });
+    const _munsFromList  = (p.municipios||[]).filter(function(m){ return m && m !== 'NO IDENTIFICADO' && m !== 'FORANEO'; });
+    const nMuns = _munsFromBenef.length > 0 ? _munsFromBenef.length : _munsFromList.length;
     const iconSvg = getApoyoIcon(p.nombre + ' ' + p.inst);
     const safeName = (p.nombre||'').replace(/'/g,'&#39;');
 

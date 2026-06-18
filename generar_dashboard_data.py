@@ -267,6 +267,9 @@ def build_dashboard_data(raw, excel_path=None):
     hoja_s_sin         = {}
     hoja_s_inst_rangos = {}
     hoja_s_inst_sin    = {}
+    # ── hoja_s_benef: fallback de M/H/TOTAL desde col izquierda (0-4) de Unicos y Rango de Edad
+    # Se usa cuando Indicadores y Metas tiene celdas con #REF! (e.g. SPyCI/1S035A1, 1S056A1)
+    hoja_s_benef       = {}   # { _nk(nombre_prog): {'M': int, 'H': int, 'TOTAL': int} }
     _wb_s = None
     if excel_path:
         try:
@@ -275,26 +278,46 @@ def build_dashboard_data(raw, excel_path=None):
         except Exception:
             _wb_s = None
     _rk2  = ['0-5','6-11','12-17','18-29','30-49','50-64','65+']
+    # Palabras reservadas que aparecen en col0 y no son nombres de programa
+    _SKIP_NAMES_E = {'M','H','SIN DATOS','BENEFICIARIOS UNICOS POR SEXO',
+                     'BENEFICIARIOS UNICOS POR RANGO DE EDAD','BENEFICIARIOS ÚNICOS ',
+                     'BENEFICIARIOS UNICOS', 'MES CORRESPONDIENTE', 'TOTAL',
+                     '0-5','6-11','12-17','18-29','30-49','50-64','65+'}
     if _wb_s and 'Unicos y Rango de Edad' in _wb_s.sheetnames:
         _ws_s_early  = _wb_s['Unicos y Rango de Edad']
         _rows_s_early = list(_ws_s_early.iter_rows(values_only=True))
         _COL_N_E, _COL_R0_E, _COL_SIN_E, _COL_TOT_E = 6, 7, 14, 15
+        # Col 0-4: PROGRAMA (col0), SIN_DATOS (col1), M (col2), H (col3), TOTAL (col4)
+        _COL_L_N, _COL_L_M, _COL_L_H, _COL_L_TOT = 0, 2, 3, 4
         for _row_e in _rows_s_early:
+            # ── Lado derecho (col 6-15): rangos etarios por programa ──
             _nom_e = _row_e[_COL_N_E] if _COL_N_E < len(_row_e) else None
-            if not isinstance(_nom_e, str) or not _nom_e.strip(): continue
-            _nom_e = _nom_e.strip()
-            if _nom_e in ('M','H','Sin datos','BENEFICIARIOS UNICOS POR RANGO DE EDAD','BENEFICIARIOS ÚNICOS '): continue
-            _tot_e = _row_e[_COL_TOT_E] if _COL_TOT_E < len(_row_e) else None
-            if not isinstance(_tot_e, (int, float)): continue
-            _rangos_e = {k: (int(_row_e[_COL_R0_E+i]) if isinstance(_row_e[_COL_R0_E+i],(int,float)) and _row_e[_COL_R0_E+i] else 0)
-                         for i,k in enumerate(_rk2) if (_COL_R0_E+i) < len(_row_e)}
-            _sin_e = _row_e[_COL_SIN_E] if _COL_SIN_E < len(_row_e) else None
-            _sin_e = int(_sin_e) if isinstance(_sin_e,(int,float)) and _sin_e else 0
-            _key_e = _nk(_nom_e)
-            hoja_s_rangos[_key_e]      = _rangos_e
-            hoja_s_sin[_key_e]         = _sin_e
-            hoja_s_inst_rangos[_key_e] = _rangos_e   # filas de inst también quedan aquí
-            hoja_s_inst_sin[_key_e]    = _sin_e
+            if isinstance(_nom_e, str) and _nom_e.strip() and _nom_e.strip().upper() not in _SKIP_NAMES_E:
+                _nom_e = _nom_e.strip()
+                _tot_e = _row_e[_COL_TOT_E] if _COL_TOT_E < len(_row_e) else None
+                if isinstance(_tot_e, (int, float)):
+                    _rangos_e = {k: (int(_row_e[_COL_R0_E+i]) if isinstance(_row_e[_COL_R0_E+i],(int,float)) and _row_e[_COL_R0_E+i] else 0)
+                                 for i,k in enumerate(_rk2) if (_COL_R0_E+i) < len(_row_e)}
+                    _sin_e = _row_e[_COL_SIN_E] if _COL_SIN_E < len(_row_e) else None
+                    _sin_e = int(_sin_e) if isinstance(_sin_e,(int,float)) and _sin_e else 0
+                    _key_e = _nk(_nom_e)
+                    hoja_s_rangos[_key_e]      = _rangos_e
+                    hoja_s_sin[_key_e]         = _sin_e
+                    hoja_s_inst_rangos[_key_e] = _rangos_e
+                    hoja_s_inst_sin[_key_e]    = _sin_e
+            # ── Lado izquierdo (col 0-4): M/H/TOTAL por programa/institución ──
+            _nom_l = _row_e[_COL_L_N] if _COL_L_N < len(_row_e) else None
+            if isinstance(_nom_l, str) and _nom_l.strip() and _nom_l.strip().upper() not in _SKIP_NAMES_E:
+                _nom_l = _nom_l.strip()
+                _tot_l   = _row_e[_COL_L_TOT] if _COL_L_TOT < len(_row_e) else None
+                _m_l     = _row_e[_COL_L_M]   if _COL_L_M   < len(_row_e) else None
+                _h_l     = _row_e[_COL_L_H]   if _COL_L_H   < len(_row_e) else None
+                if isinstance(_tot_l, (int, float)):
+                    hoja_s_benef[_nk(_nom_l)] = {
+                        'M':     int(_m_l)   if isinstance(_m_l,   (int,float)) else None,
+                        'H':     int(_h_l)   if isinstance(_h_l,   (int,float)) else None,
+                        'TOTAL': int(_tot_l) if isinstance(_tot_l, (int,float)) else None,
+                    }
 
     # ── Rangos por INSTITUCIÓN desde hoja S (filas de resumen) ──────────────
     if False and _wb_s and 'Unicos y Rango de Edad' in _wb_s.sheetnames:
@@ -794,6 +817,26 @@ def build_dashboard_data(raw, excel_path=None):
         prog_norm_alias = _norm_mun(nombre_prog_alias)
         _inst_pivot = pivot_mun_prog.get(inst_norm, {})
         _muns_benef = _inst_pivot.get(prog_norm, _inst_pivot.get(prog_norm_alias, {}))
+        # ── Fallback desde hoja S izquierda cuando Indicadores y Metas tiene #REF! ──
+        # benef_unicos, mujeres, hombres pueden ser None si la celda del Excel es un error.
+        # En ese caso recuperamos los valores correctos desde la tabla Unicos y Rango de Edad.
+        # IMPORTANTE: si benef_unicos es None (fila #REF!), usamos TODOS los valores de Hoja S
+        # para evitar mezclar datos parciales/corruptos con datos correctos.
+        _sb = hoja_s_benef.get(_nk(nombre_prog_key), hoja_s_benef.get(_nk(nombre_prog_alias), {}))
+        _bu_raw  = ind.get('benef_unicos')
+        _m_raw   = ind.get('mujeres')
+        _h_raw   = ind.get('hombres')
+        _bu_from_ind = _int(_bu_raw)
+        if _bu_from_ind is None and _sb:
+            # Fila corrupta (#REF!) → tomar todo de Hoja S
+            _bu_val = _sb.get('TOTAL')
+            _m_val  = _sb.get('M')
+            _h_val  = _sb.get('H')
+        else:
+            # Fila OK → usar Indicadores y Metas, con fallback individual si algún campo falta
+            _bu_val = _bu_from_ind
+            _m_val  = _int(_m_raw)  if _m_raw  is not None else _sb.get('M')
+            _h_val  = _int(_h_raw)  if _h_raw  is not None else _sb.get('H')
         indicadores_data.append({
             'inst':          ind.get('institucion', ''),
             'clave':         _clave,
@@ -801,10 +844,10 @@ def build_dashboard_data(raw, excel_path=None):
             'pob_potencial': _int(ind.get('pob_potencial')),
             'pob_objetivo':  _int(ind.get('pob_objetivo')),
             'pob_alcanzada': _int(ind.get('pob_alcanzada')),
-            'benef_unicos':  _int(ind.get('benef_unicos')),
+            'benef_unicos':  _bu_val,
             'benef_reales':  _int(ind.get('benef_reales')),
-            'mujeres':       _int(ind.get('mujeres')),
-            'hombres':       _int(ind.get('hombres')),
+            'mujeres':       _m_val,
+            'hombres':       _h_val,
             'sin_id':        _int(ind.get('sin_id')),
             'presupuesto':   _flt(ind.get('presupuesto')),
             'gasto':         _flt(ind.get('gasto')),
