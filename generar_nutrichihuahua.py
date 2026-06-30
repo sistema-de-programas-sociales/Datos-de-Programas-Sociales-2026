@@ -328,7 +328,7 @@ def leer_nutri(excel_path):
     muns = []
     for row_i in range(8, df.shape[0]):
         mun = str(df.iloc[row_i, 1]).strip() if not __import__('pandas').isna(df.iloc[row_i, 1]) else ''
-        if not mun or mun in ['nan','None','(en blanco)','Grand Total','FORANEO']: continue
+        if not mun or mun.upper() in ('NAN','NONE','(EN BLANCO)','GRAND TOTAL','TOTAL','FORANEO'): continue
         def _iv(col): 
             v = df.iloc[row_i, col]
             return int(v) if not __import__('pandas').isna(v) else 0
@@ -361,6 +361,33 @@ def leer_nutri(excel_path):
             cur = entry; insts.append(entry)
         elif prog != 'TOTAL' and cur:
             cur['programas'].append(entry)
+
+    # ── FIX: la tabla AH también tiene jerarquía de 3 niveles ──────────────────
+    # institución → PROGRAMA → apoyo (igual que la tabla BE más abajo).
+    # El parseo de arriba mete TODAS las filas no-institución directo en
+    # inst['programas'] como si fueran programas hermanos, pero algunas son en
+    # realidad apoyos (sub-filas de un programa). Esto causaba que un mismo
+    # nombre de apoyo (p.ej. "Asistencia Alimentaria en Espacio Comun") apareciera
+    # una vez por cada programa padre al que pertenece, en vez de filtrarse.
+    # Se reutiliza la misma heurística de totales que la tabla BE: una fila es
+    # PROGRAMA si su total ≈ la suma acumulada de las filas que le siguen
+    # (antes de que la acumulación se dispare muy por encima de su total).
+    def _es_programa_ah(idx, rows):
+        total = rows[idx]['total']
+        acum = 0
+        for r in rows[idx+1:]:
+            acum += r['total']
+            if abs(acum - total) <= max(5, int(total * 0.02)):
+                return True
+            if acum > total * 1.05:
+                break
+        return False
+
+    for inst_entry in insts:
+        raw_progs = inst_entry['programas']
+        inst_entry['programas'] = [
+            p for idx, p in enumerate(raw_progs) if _es_programa_ah(idx, raw_progs)
+        ]
 
     # ── BE table: jerarquía 3 niveles institución→programa→apoyo ──────────────
     # ── Detectar nivel automáticamente por comparación de totales ──────────────
@@ -458,6 +485,9 @@ def main():
         except Exception as e:
             print(f'ERROR: {e}', file=sys.stderr); sys.exit(1)
         insts_ap  = data['apoyos_inst']
+        insts_real = data['instituciones']  # tabla AH — fuente correcta de BENEFICIARIOS (no apoyos)
+        # Lookup de beneficiarios reales por nombre de institución
+        _benef_by_inst = {i['nombre']: i for i in insts_real}
         muns      = data['municipios']
         RLAB_D    = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29',
                      '30-49':'30–49','50-64':'50–64','65+':'65+'}
@@ -487,7 +517,10 @@ def main():
             'muns': [{'n':m['nombre'],'t':m['total'],'m':m['mujeres'],'h':m['hombres'],
                       'at':m['total'],'am':m['mujeres'],'ah':m['hombres'],
                       'rm':m['rangos_m'],'rh':m['rangos_h']} for m in muns],
-            'insts': [{'nombre':i['nombre'],'benef':i['total'],'bm':i['mujeres'],'bh':i['hombres'],
+            'insts': [{'nombre':i['nombre'],
+                       'benef':_benef_by_inst.get(i['nombre'],{}).get('total', i['total']),
+                       'bm':_benef_by_inst.get(i['nombre'],{}).get('mujeres', i['mujeres']),
+                       'bh':_benef_by_inst.get(i['nombre'],{}).get('hombres', i['hombres']),
                        'apoyos_total':sum(a['t'] for a in apoyos_list if i['nombre'] in a.get('insts',[])),
                        'am':i['mujeres'],'ah':i['hombres'],
                        'programas':[{'n':p['nombre'],'t':p['total'],'m':p['mujeres'],'h':p['hombres']} for p in i.get('programas',[])],

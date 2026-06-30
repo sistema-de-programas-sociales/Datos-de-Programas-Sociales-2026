@@ -301,7 +301,7 @@ async function run(excelPath) {
   console.log(c('gray', '    5. Solo documentos institucionales  (todas las instituciones)'));
   console.log(c('gray', '    6. Institucion(es) especifica(s)'));
   console.log(c('gray', '    7. Solo informe web  (dashboard HTML)'));
-  console.log(c('gray', '    8. ' + c('yellow', 'Reporte NutriChihuahua')));
+  console.log(c('gray', '    8. ' + c('yellow', 'Reporte NutriChihuahua  (Word + actualiza dashboard)')));
   console.log(c('gray', '    9. ' + c('gray',   'Describir en texto libre')));
   console.log('');
   const opcion = (await ask(c('cyan', '  Opcion (1-9): '))).trim();
@@ -455,6 +455,7 @@ async function run(excelPath) {
 
   // ── Opción 8: Reporte NutriChihuahua ─────────────────────────────────────
   if (opcion === '8') {
+    // Paso 1: actualizar js_render_nutri.js (datos del dashboard web)
     info('Generando datos NutriChihuahua para el dashboard...');
     const okNutri = pyRun([
       path.join(DIR, 'generar_dashboard_data.py'),
@@ -466,6 +467,22 @@ async function run(excelPath) {
       warn('generar_dashboard_data.py no soporta --nutrichihuahua-only. Ejecutando pipeline completo web...');
       pyRun([path.join(DIR, 'generar_dashboard_data.py'), excelPath]);
     }
+
+    // Paso 2: generar el reporte Word de NutriChihuahua (editable, exportable a PDF)
+    console.log('');
+    info('Generando reporte Word de NutriChihuahua...');
+    const nombreNutri  = `NutriChihuahua_${mes}_${año}.docx`;
+    const outputNutri  = path.join(subDir, nombreNutri);
+    const okNutriDocx  = pyRun([
+      path.join(DIR, 'generar_nutrichihuahua.py'),
+      excelPath, mes, año, outputNutri
+    ]);
+    if (okNutriDocx && fs.existsSync(outputNutri)) {
+      ok(`Reporte Word generado: ${c('bold', outputNutri)}`);
+    } else {
+      err('Error al generar el reporte Word de NutriChihuahua.');
+    }
+
     ok('Listo. Actualiza el dashboard para ver los cambios.');
     RL.close();
     return;
