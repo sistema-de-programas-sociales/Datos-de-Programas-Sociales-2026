@@ -1,12 +1,12 @@
-// Generado automáticamente por generar_dashboard_data.py
-// NO editar manualmente — se sobreescribe con cada actualización del Excel.
+﻿// Generado automÃ¡ticamente por generar_dashboard_data.py
+// NO editar manualmente â€” se sobreescribe con cada actualizaciÃ³n del Excel.
 window.DASHBOARD_DATA = {
   "_meta": {
     "pob_estatal": 4043130,
     "pob_vulnerable": 1792324,
     "pob_vul_m": 905124,
     "pob_vul_h": 887200,
-    "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua"
+    "fuente": "PadrÃ³n de Beneficiarios â€” SDHyBC Chihuahua"
   },
   "general": {
     "total_benef": 347766,
@@ -76,7 +76,7 @@ window.DASHBOARD_DATA = {
   },
   "rangos_edad": [
     {
-      "label": "0 - 5 años",
+      "label": "0 - 5 aÃ±os",
       "key": "0-5",
       "total": 37249,
       "m": 25198,
@@ -85,7 +85,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 10.7
     },
     {
-      "label": "6 - 11 años",
+      "label": "6 - 11 aÃ±os",
       "key": "6-11",
       "total": 31038,
       "m": 21569,
@@ -94,7 +94,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 8.9
     },
     {
-      "label": "12 - 17 años",
+      "label": "12 - 17 aÃ±os",
       "key": "12-17",
       "total": 30976,
       "m": 21825,
@@ -103,7 +103,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 8.9
     },
     {
-      "label": "18 - 29 años",
+      "label": "18 - 29 aÃ±os",
       "key": "18-29",
       "total": 53883,
       "m": 45457,
@@ -112,7 +112,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 15.5
     },
     {
-      "label": "30 - 49 años",
+      "label": "30 - 49 aÃ±os",
       "key": "30-49",
       "total": 66447,
       "m": 55164,
@@ -121,7 +121,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 19.1
     },
     {
-      "label": "50 - 64 años",
+      "label": "50 - 64 aÃ±os",
       "key": "50-64",
       "total": 55575,
       "m": 45610,
@@ -130,7 +130,7 @@ window.DASHBOARD_DATA = {
       "pct_total": 16.0
     },
     {
-      "label": "65 años o más",
+      "label": "65 aÃ±os o mÃ¡s",
       "key": "65+",
       "total": 43967,
       "m": 35344,
@@ -203,12 +203,12 @@ window.DASHBOARD_DATA = {
         "m": 46128,
         "h": 21269
       },
-      "JUÁREZ": {
+      "JUÃREZ": {
         "total": 61210,
         "m": 48404,
         "h": 18596
       },
-      "CUAUHTÉMOC": {
+      "CUAUHTÃ‰MOC": {
         "total": 13261,
         "m": 10962,
         "h": 3570
@@ -228,7 +228,7 @@ window.DASHBOARD_DATA = {
         "m": 2281,
         "h": 744
       },
-      "JIMÉNEZ": {
+      "JIMÃ‰NEZ": {
         "total": 6698,
         "m": 5543,
         "h": 1937
@@ -283,7 +283,7 @@ window.DASHBOARD_DATA = {
         "m": 1817,
         "h": 569
       },
-      "ASCENSIÓN": {
+      "ASCENSIÃ“N": {
         "total": 2622,
         "m": 2197,
         "h": 716
@@ -313,7 +313,7 @@ window.DASHBOARD_DATA = {
         "m": 1554,
         "h": 568
       },
-      "BATOPILAS DE MANUEL GÓMEZ MORÍN": {
+      "BATOPILAS DE MANUEL GÃ“MEZ MORÃN": {
         "total": 649,
         "m": 532,
         "h": 191
@@ -328,7 +328,7 @@ window.DASHBOARD_DATA = {
         "m": 1307,
         "h": 478
       },
-      "GÓMEZ FARÍAS": {
+      "GÃ“MEZ FARÃAS": {
         "total": 1364,
         "m": 1102,
         "h": 438
@@ -348,7 +348,7 @@ window.DASHBOARD_DATA = {
         "m": 1050,
         "h": 402
       },
-      "AQUILES SERDÁN": {
+      "AQUILES SERDÃN": {
         "total": 834,
         "m": 597,
         "h": 294
@@ -378,7 +378,7 @@ window.DASHBOARD_DATA = {
         "m": 724,
         "h": 265
       },
-      "LÓPEZ": {
+      "LÃ“PEZ": {
         "total": 1102,
         "m": 906,
         "h": 348
@@ -388,7 +388,7 @@ window.DASHBOARD_DATA = {
         "m": 741,
         "h": 309
       },
-      "PRAXÉDIS G. GUERRERO": {
+      "PRAXÃ‰DIS G. GUERRERO": {
         "total": 939,
         "m": 780,
         "h": 260
@@ -418,7 +418,7 @@ window.DASHBOARD_DATA = {
         "m": 423,
         "h": 225
       },
-      "TEMÓSACHIC": {
+      "TEMÃ“SACHIC": {
         "total": 539,
         "m": 443,
         "h": 162
@@ -523,7 +523,7 @@ window.DASHBOARD_DATA = {
         "m": 249,
         "h": 101
       },
-      "HUEJOTITÁN": {
+      "HUEJOTITÃN": {
         "total": 284,
         "m": 221,
         "h": 102
@@ -536,37 +536,37 @@ window.DASHBOARD_DATA = {
     },
     "rangos_edad": [
       {
-        "label": "0 - 5 años",
+        "label": "0 - 5 aÃ±os",
         "key": "0-5",
         "total": 24440
       },
       {
-        "label": "6 - 11 años",
+        "label": "6 - 11 aÃ±os",
         "key": "6-11",
         "total": 21660
       },
       {
-        "label": "12 - 17 años",
+        "label": "12 - 17 aÃ±os",
         "key": "12-17",
         "total": 17472
       },
       {
-        "label": "18 - 29 años",
+        "label": "18 - 29 aÃ±os",
         "key": "18-29",
         "total": 37584
       },
       {
-        "label": "30 - 49 años",
+        "label": "30 - 49 aÃ±os",
         "key": "30-49",
         "total": 47511
       },
       {
-        "label": "50 - 64 años",
+        "label": "50 - 64 aÃ±os",
         "key": "50-64",
         "total": 43222
       },
       {
-        "label": "65 años o más",
+        "label": "65 aÃ±os o mÃ¡s",
         "key": "65+",
         "total": 31840
       }
@@ -637,7 +637,7 @@ window.DASHBOARD_DATA = {
       "apoyos": 38986,
       "programas": [
         {
-          "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+          "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
           "total": 22125,
           "m": 15369,
           "h": 6838,
@@ -645,7 +645,7 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+          "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
           "total": 1625,
           "m": 851,
           "h": 838,
@@ -653,7 +653,7 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+          "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
           "total": 579,
           "m": 334,
           "h": 246,
@@ -705,7 +705,7 @@ window.DASHBOARD_DATA = {
       "apoyos": 26560,
       "programas": [
         {
-          "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
+          "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÃ‘EZ",
           "total": 9154,
           "m": 4459,
           "h": 4695,
@@ -733,7 +733,7 @@ window.DASHBOARD_DATA = {
       "apoyos": 13430,
       "programas": [
         {
-          "nombre": "ATENCIÓN A LA JUVENTUD",
+          "nombre": "ATENCIÃ“N A LA JUVENTUD",
           "total": 11784,
           "m": 7118,
           "h": 4857,
@@ -813,7 +813,7 @@ window.DASHBOARD_DATA = {
       "apoyos": 67510,
       "programas": [
         {
-          "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+          "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
           "total": 18401,
           "m": 11136,
           "h": 7265,
@@ -821,7 +821,7 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "JUÁREZ CUENTA CONMIGO",
+          "nombre": "JUÃREZ CUENTA CONMIGO",
           "total": 8898,
           "m": 6172,
           "h": 2726,
@@ -861,7 +861,7 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÍA SOLIDARIA",
+          "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÃA SOLIDARIA",
           "total": 11,
           "m": 4,
           "h": 7,
@@ -869,7 +869,7 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "ATENCIÓN A NIÑAS, NIÑOS, ADOLESCENTES Y JUVENTUDES",
+          "nombre": "ATENCIÃ“N A NIÃ‘AS, NIÃ‘OS, ADOLESCENTES Y JUVENTUDES",
           "total": 4,
           "m": 1,
           "h": 3,
@@ -897,7 +897,7 @@ window.DASHBOARD_DATA = {
       "apoyos": 6648,
       "programas": [
         {
-          "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+          "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
           "total": 3914,
           "m": 2496,
           "h": 1423,
@@ -1008,7 +1008,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08038",
-      "nombre": "JUÁREZ",
+      "nombre": "JUÃREZ",
       "total": 72577,
       "m": 56103,
       "h": 22587,
@@ -1087,7 +1087,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08018",
-      "nombre": "CUAUHTÉMOC",
+      "nombre": "CUAUHTÃ‰MOC",
       "total": 15929,
       "m": 12818,
       "h": 4494,
@@ -1371,7 +1371,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08037",
-      "nombre": "JIMÉNEZ",
+      "nombre": "JIMÃ‰NEZ",
       "total": 7237,
       "m": 5889,
       "h": 2155,
@@ -2144,7 +2144,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08005",
-      "nombre": "ASCENSIÓN",
+      "nombre": "ASCENSIÃ“N",
       "total": 2933,
       "m": 2414,
       "h": 825,
@@ -2546,7 +2546,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08008",
-      "nombre": "BATOPILAS DE MANUEL GÓMEZ MORÍN",
+      "nombre": "BATOPILAS DE MANUEL GÃ“MEZ MORÃN",
       "total": 1914,
       "m": 1414,
       "h": 629,
@@ -2739,7 +2739,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08026",
-      "nombre": "GÓMEZ FARÍAS",
+      "nombre": "GÃ“MEZ FARÃAS",
       "total": 1603,
       "m": 1252,
       "h": 535,
@@ -2991,7 +2991,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08004",
-      "nombre": "AQUILES SERDÁN",
+      "nombre": "AQUILES SERDÃN",
       "total": 1342,
       "m": 873,
       "h": 531,
@@ -3381,7 +3381,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08040",
-      "nombre": "LÓPEZ",
+      "nombre": "LÃ“PEZ",
       "total": 1160,
       "m": 943,
       "h": 375,
@@ -3507,7 +3507,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08054",
-      "nombre": "PRAXÉDIS G. GUERRERO",
+      "nombre": "PRAXÃ‰DIS G. GUERRERO",
       "total": 1087,
       "m": 880,
       "h": 315,
@@ -3889,7 +3889,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08064",
-      "nombre": "TEMÓSACHIC",
+      "nombre": "TEMÃ“SACHIC",
       "total": 884,
       "m": 671,
       "h": 295,
@@ -5200,7 +5200,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "clave": "08034",
-      "nombre": "HUEJOTITÁN",
+      "nombre": "HUEJOTITÃN",
       "total": 345,
       "m": 263,
       "h": 124,
@@ -5315,7 +5315,7 @@ window.DASHBOARD_DATA = {
   ],
   "municipios_especiales": [
     {
-      "nombre": "FORÁNEO",
+      "nombre": "FORÃNEO",
       "total": 33180,
       "m": 26864,
       "h": 7557
@@ -5856,7 +5856,7 @@ window.DASHBOARD_DATA = {
           "muns": 22,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
               "total": 1757,
               "m": 1074,
               "h": 683,
@@ -5887,7 +5887,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 779,
               "m": 400,
               "h": 379,
@@ -6060,7 +6060,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 65,
               "m": 52,
               "h": 13,
@@ -6079,7 +6079,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 22,
               "m": 18,
               "h": 4,
@@ -6117,8 +6117,8 @@ window.DASHBOARD_DATA = {
         "50-64": 94060,
         "65+": 75237
       },
-      "rango_dom": "50–64",
-      "rango_min": "12–17",
+      "rango_dom": "50â€“64",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -6537,7 +6537,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CUIDADO Y ATENCIÓN INFANTIL",
+      "nombre": "CUIDADO Y ATENCIÃ“N INFANTIL",
       "total": 26346,
       "m": 12805,
       "h": 13541,
@@ -6552,7 +6552,7 @@ window.DASHBOARD_DATA = {
           "muns": 37,
           "programas": [
             {
-              "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
+              "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÃ‘EZ",
               "total": 26346,
               "m": 12805,
               "h": 13541,
@@ -6842,8 +6842,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "6–11",
-      "rango_min": "12–17",
+      "rango_dom": "6â€“11",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -7085,7 +7085,7 @@ window.DASHBOARD_DATA = {
           "muns": 68,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
               "total": 20728,
               "m": 14551,
               "h": 6177,
@@ -7171,7 +7171,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 63,
               "m": 33,
               "h": 30,
@@ -7622,7 +7622,7 @@ window.DASHBOARD_DATA = {
         "65+": 6306
       },
       "rango_dom": "65+",
-      "rango_min": "12–17",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -8035,7 +8035,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CULTURA Y RECREACIÓN",
+      "nombre": "CULTURA Y RECREACIÃ“N",
       "total": 18938,
       "m": 11871,
       "h": 7067,
@@ -8050,7 +8050,7 @@ window.DASHBOARD_DATA = {
           "muns": 24,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 8447,
               "m": 5437,
               "h": 3010,
@@ -8268,7 +8268,7 @@ window.DASHBOARD_DATA = {
           "muns": 8,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "ATENCIÃ“N A LA JUVENTUD",
               "total": 9203,
               "m": 5397,
               "h": 3806,
@@ -8434,8 +8434,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1233,
         "65+": 2535
       },
-      "rango_dom": "12–17",
-      "rango_min": "0–5",
+      "rango_dom": "12â€“17",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -8584,7 +8584,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ASISTENCIA ALIMENTARIA EN ESPACIO COMÚN",
+      "nombre": "ASISTENCIA ALIMENTARIA EN ESPACIO COMÃšN",
       "total": 12678,
       "m": 7598,
       "h": 5080,
@@ -8599,7 +8599,7 @@ window.DASHBOARD_DATA = {
           "muns": 22,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 9243,
               "m": 5142,
               "h": 4101,
@@ -8639,7 +8639,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 562,
               "m": 351,
               "h": 211,
@@ -8801,7 +8801,7 @@ window.DASHBOARD_DATA = {
           "muns": 13,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
               "total": 2834,
               "m": 2091,
               "h": 743,
@@ -8921,7 +8921,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 39,
               "m": 14,
               "h": 25,
@@ -8994,8 +8994,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1811,
         "65+": 2000
       },
-      "rango_dom": "30–49",
-      "rango_min": "6–11",
+      "rango_dom": "30â€“49",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -9174,7 +9174,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CURSO DE CAPACITACIÓN",
+      "nombre": "CURSO DE CAPACITACIÃ“N",
       "total": 10944,
       "m": 8732,
       "h": 2212,
@@ -9189,7 +9189,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 6895,
               "m": 5399,
               "h": 1496,
@@ -9210,7 +9210,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 1929,
               "m": 1505,
               "h": 424,
@@ -9299,7 +9299,7 @@ window.DASHBOARD_DATA = {
           "muns": 13,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
               "total": 1926,
               "m": 1704,
               "h": 222,
@@ -9478,8 +9478,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1824,
         "65+": 746
       },
-      "rango_dom": "30–49",
-      "rango_min": "0–5",
+      "rango_dom": "30â€“49",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -9613,7 +9613,7 @@ window.DASHBOARD_DATA = {
           "muns": 14,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 8402,
               "m": 4598,
               "h": 3804,
@@ -9759,7 +9759,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 2128,
               "m": 1539,
               "h": 589,
@@ -9868,7 +9868,7 @@ window.DASHBOARD_DATA = {
           "muns": 9,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "ATENCIÃ“N A LA JUVENTUD",
               "total": 36,
               "m": 22,
               "h": 14,
@@ -9962,8 +9962,8 @@ window.DASHBOARD_DATA = {
         "50-64": 2912,
         "65+": 2379
       },
-      "rango_dom": "50–64",
-      "rango_min": "12–17",
+      "rango_dom": "50â€“64",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -10094,7 +10094,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TALLER DE CAPACITACIÓN",
+      "nombre": "TALLER DE CAPACITACIÃ“N",
       "total": 7777,
       "m": 5006,
       "h": 2771,
@@ -10109,7 +10109,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 3377,
               "m": 2091,
               "h": 1286,
@@ -10151,7 +10151,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 1886,
               "m": 1119,
               "h": 767,
@@ -10241,7 +10241,7 @@ window.DASHBOARD_DATA = {
         "65+": 2434
       },
       "rango_dom": "65+",
-      "rango_min": "0–5",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -10282,7 +10282,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO ECONÓMICO",
+      "nombre": "APOYO ECONÃ“MICO",
       "total": 6683,
       "m": 4490,
       "h": 2193,
@@ -10377,7 +10377,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 19,
               "m": 10,
               "h": 9,
@@ -10396,7 +10396,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 15,
               "m": 10,
               "h": 5,
@@ -10840,7 +10840,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 134,
               "m": 80,
               "h": 54,
@@ -11087,8 +11087,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1300,
         "65+": 273
       },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
+      "rango_dom": "30â€“49",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -11480,7 +11480,7 @@ window.DASHBOARD_DATA = {
           "muns": 20,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 1119,
               "m": 668,
               "h": 451,
@@ -11499,7 +11499,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 1116,
               "m": 827,
               "h": 289,
@@ -11598,7 +11598,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÍA SOLIDARIA",
+              "nombre": "PROYECTOS PRODUCTIVOS Y ECONOMÃA SOLIDARIA",
               "total": 80,
               "m": 32,
               "h": 48,
@@ -11618,7 +11618,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "ATENCIÓN A NIÑAS, NIÑOS, ADOLESCENTES Y JUVENTUDES",
+              "nombre": "ATENCIÃ“N A NIÃ‘AS, NIÃ‘OS, ADOLESCENTES Y JUVENTUDES",
               "total": 40,
               "m": 10,
               "h": 30,
@@ -11788,7 +11788,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
+              "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÃ‘EZ",
               "total": 214,
               "m": 145,
               "h": 69,
@@ -11918,7 +11918,7 @@ window.DASHBOARD_DATA = {
         "50-64": 893,
         "65+": 267
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -12050,7 +12050,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "EDUCACIÓN Y CAPACITACIÓN TÉCNICA",
+      "nombre": "EDUCACIÃ“N Y CAPACITACIÃ“N TÃ‰CNICA",
       "total": 3482,
       "m": 2150,
       "h": 1332,
@@ -12065,7 +12065,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 3482,
               "m": 2150,
               "h": 1332,
@@ -12138,8 +12138,8 @@ window.DASHBOARD_DATA = {
         "50-64": 271,
         "65+": 383
       },
-      "rango_dom": "6–11",
-      "rango_min": "0–5",
+      "rango_dom": "6â€“11",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -12195,7 +12195,7 @@ window.DASHBOARD_DATA = {
           "muns": 14,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "ATENCIÃ“N A LA JUVENTUD",
               "total": 3013,
               "m": 1800,
               "h": 1213,
@@ -12388,8 +12388,8 @@ window.DASHBOARD_DATA = {
         "50-64": 64,
         "65+": 22
       },
-      "rango_dom": "12–17",
-      "rango_min": "6–11",
+      "rango_dom": "12â€“17",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -12511,7 +12511,7 @@ window.DASHBOARD_DATA = {
           "muns": 31,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 3083,
               "m": 1972,
               "h": 1111,
@@ -12759,8 +12759,8 @@ window.DASHBOARD_DATA = {
         "50-64": 454,
         "65+": 162
       },
-      "rango_dom": "30–49",
-      "rango_min": "0–5",
+      "rango_dom": "30â€“49",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "GUADALUPE Y CALVO",
@@ -12951,7 +12951,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CONDONACIÓN O ESTÍMULO FISCAL",
+      "nombre": "CONDONACIÃ“N O ESTÃMULO FISCAL",
       "total": 2925,
       "m": 1491,
       "h": 1434,
@@ -12966,7 +12966,7 @@ window.DASHBOARD_DATA = {
           "muns": 15,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 2925,
               "m": 1491,
               "h": 1434,
@@ -13102,7 +13102,7 @@ window.DASHBOARD_DATA = {
         "50-64": 919,
         "65+": 243
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -13213,7 +13213,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 1478,
               "m": 1176,
               "h": 302,
@@ -13232,7 +13232,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 627,
               "m": 523,
               "h": 104,
@@ -13270,8 +13270,8 @@ window.DASHBOARD_DATA = {
         "50-64": 678,
         "65+": 566
       },
-      "rango_dom": "50–64",
-      "rango_min": "0–5",
+      "rango_dom": "50â€“64",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -13282,7 +13282,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "GESTIÓN Y VINCULACIÓN",
+      "nombre": "GESTIÃ“N Y VINCULACIÃ“N",
       "total": 1828,
       "m": 1184,
       "h": 644,
@@ -13297,7 +13297,7 @@ window.DASHBOARD_DATA = {
           "muns": 36,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 1438,
               "m": 914,
               "h": 524,
@@ -13578,7 +13578,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 300,
               "m": 212,
               "h": 88,
@@ -13598,7 +13598,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 54,
               "m": 36,
               "h": 18,
@@ -13678,8 +13678,8 @@ window.DASHBOARD_DATA = {
         "50-64": 190,
         "65+": 111
       },
-      "rango_dom": "30–49",
-      "rango_min": "0–5",
+      "rango_dom": "30â€“49",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -13906,7 +13906,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ACOMPAÑAMIENTO TERAPIA PSICOSOCIAL",
+      "nombre": "ACOMPAÃ‘AMIENTO TERAPIA PSICOSOCIAL",
       "total": 1432,
       "m": 1018,
       "h": 414,
@@ -13921,7 +13921,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 764,
               "m": 578,
               "h": 186,
@@ -13941,7 +13941,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 617,
               "m": 424,
               "h": 193,
@@ -14005,8 +14005,8 @@ window.DASHBOARD_DATA = {
         "50-64": 210,
         "65+": 314
       },
-      "rango_dom": "12–17",
-      "rango_min": "0–5",
+      "rango_dom": "12â€“17",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -14038,7 +14038,7 @@ window.DASHBOARD_DATA = {
           "muns": 29,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 934,
               "m": 598,
               "h": 336,
@@ -14328,7 +14328,7 @@ window.DASHBOARD_DATA = {
         "65+": 541
       },
       "rango_dom": "65+",
-      "rango_min": "18–29",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -14567,8 +14567,8 @@ window.DASHBOARD_DATA = {
         "50-64": 274,
         "65+": 183
       },
-      "rango_dom": "50–64",
-      "rango_min": "0–5",
+      "rango_dom": "50â€“64",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -14638,7 +14638,7 @@ window.DASHBOARD_DATA = {
         "50-64": 71,
         "65+": 12
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -14650,7 +14650,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ATENCIÓN EN ALBERGUES",
+      "nombre": "ATENCIÃ“N EN ALBERGUES",
       "total": 671,
       "m": 480,
       "h": 191,
@@ -14665,7 +14665,7 @@ window.DASHBOARD_DATA = {
           "muns": 11,
           "programas": [
             {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "nombre": "ALIMENTACIÃ“N Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
               "total": 671,
               "m": 480,
               "h": 191,
@@ -14773,7 +14773,7 @@ window.DASHBOARD_DATA = {
         "50-64": 33,
         "65+": 7
       },
-      "rango_dom": "18–29",
+      "rango_dom": "18â€“29",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -14860,7 +14860,7 @@ window.DASHBOARD_DATA = {
           "muns": 28,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 444,
               "m": 264,
               "h": 180,
@@ -15121,7 +15121,7 @@ window.DASHBOARD_DATA = {
           "muns": 8,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 45,
               "m": 32,
               "h": 13,
@@ -15146,7 +15146,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 10,
               "m": 5,
               "h": 5,
@@ -15227,8 +15227,8 @@ window.DASHBOARD_DATA = {
         "50-64": 116,
         "65+": 59
       },
-      "rango_dom": "30–49",
-      "rango_min": "6–11",
+      "rango_dom": "30â€“49",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -15434,7 +15434,7 @@ window.DASHBOARD_DATA = {
           "muns": 6,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "ATENCIÃ“N A LA JUVENTUD",
               "total": 552,
               "m": 335,
               "h": 217,
@@ -15507,8 +15507,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "12–17",
+      "rango_dom": "18â€“29",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -15564,7 +15564,7 @@ window.DASHBOARD_DATA = {
           "muns": 30,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 381,
               "m": 225,
               "h": 156,
@@ -15803,7 +15803,7 @@ window.DASHBOARD_DATA = {
           "muns": 16,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 154,
               "m": 108,
               "h": 46,
@@ -15946,8 +15946,8 @@ window.DASHBOARD_DATA = {
         "50-64": 170,
         "65+": 150
       },
-      "rango_dom": "50–64",
-      "rango_min": "12–17",
+      "rango_dom": "50â€“64",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -16162,7 +16162,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ASISTENCIA TECNICA Y ACOMPAÑAMIENTO",
+      "nombre": "ASISTENCIA TECNICA Y ACOMPAÃ‘AMIENTO",
       "total": 425,
       "m": 324,
       "h": 101,
@@ -16177,7 +16177,7 @@ window.DASHBOARD_DATA = {
           "muns": 14,
           "programas": [
             {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "nombre": "ATENCIÃ“N A LA JUVENTUD",
               "total": 424,
               "m": 324,
               "h": 100,
@@ -16304,7 +16304,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 1,
               "m": 0,
               "h": 1,
@@ -16342,8 +16342,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "30–49",
+      "rango_dom": "18â€“29",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -16432,7 +16432,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "SERVICIO DE VINCULACIÓN LABORAL",
+      "nombre": "SERVICIO DE VINCULACIÃ“N LABORAL",
       "total": 408,
       "m": 230,
       "h": 178,
@@ -16489,7 +16489,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 7,
               "m": 5,
               "h": 2,
@@ -16508,7 +16508,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 3,
               "m": 2,
               "h": 1,
@@ -16571,7 +16571,7 @@ window.DASHBOARD_DATA = {
         "65+": 185
       },
       "rango_dom": "65+",
-      "rango_min": "18–29",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -16606,7 +16606,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ASESORÍA A MIGRANTES",
+      "nombre": "ASESORÃA A MIGRANTES",
       "total": 371,
       "m": 194,
       "h": 177,
@@ -16659,7 +16659,7 @@ window.DASHBOARD_DATA = {
         "50-64": 31,
         "65+": 1
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -16671,7 +16671,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "FORÁNEO",
+      "nombre": "FORÃNEO",
       "total": 326,
       "m": 215,
       "h": 111,
@@ -16686,7 +16686,7 @@ window.DASHBOARD_DATA = {
           "muns": 24,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 274,
               "m": 183,
               "h": 91,
@@ -16883,7 +16883,7 @@ window.DASHBOARD_DATA = {
           "muns": 3,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 28,
               "m": 12,
               "h": 16,
@@ -16933,7 +16933,7 @@ window.DASHBOARD_DATA = {
           "muns": 3,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 13,
               "m": 12,
               "h": 1,
@@ -16953,7 +16953,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 11,
               "m": 8,
               "h": 3,
@@ -17003,7 +17003,7 @@ window.DASHBOARD_DATA = {
         "50-64": 61,
         "65+": 20
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -17174,7 +17174,7 @@ window.DASHBOARD_DATA = {
           "muns": 5,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 286,
               "m": 121,
               "h": 165,
@@ -17240,7 +17240,7 @@ window.DASHBOARD_DATA = {
         "50-64": 94,
         "65+": 12
       },
-      "rango_dom": "50–64",
+      "rango_dom": "50â€“64",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -17343,8 +17343,8 @@ window.DASHBOARD_DATA = {
         "50-64": 46,
         "65+": 27
       },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
+      "rango_dom": "30â€“49",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "JUAREZ",
@@ -17382,7 +17382,7 @@ window.DASHBOARD_DATA = {
           "muns": 25,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 232,
               "m": 157,
               "h": 75,
@@ -17588,8 +17588,8 @@ window.DASHBOARD_DATA = {
         "50-64": 46,
         "65+": 15
       },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
+      "rango_dom": "30â€“49",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -17759,7 +17759,7 @@ window.DASHBOARD_DATA = {
           "muns": 22,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 177,
               "m": 145,
               "h": 32,
@@ -17799,7 +17799,7 @@ window.DASHBOARD_DATA = {
               }
             },
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 15,
               "m": 11,
               "h": 4,
@@ -17963,8 +17963,8 @@ window.DASHBOARD_DATA = {
         "50-64": 77,
         "65+": 23
       },
-      "rango_dom": "50–64",
-      "rango_min": "18–29",
+      "rango_dom": "50â€“64",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "HIDALGO DEL PARRAL",
@@ -18101,7 +18101,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "APOYO PARA EL DESARROLLO Y PROMOCIÓN COMERCIAL",
+      "nombre": "APOYO PARA EL DESARROLLO Y PROMOCIÃ“N COMERCIAL",
       "total": 150,
       "m": 112,
       "h": 38,
@@ -18116,7 +18116,7 @@ window.DASHBOARD_DATA = {
           "muns": 7,
           "programas": [
             {
-              "nombre": "JUÁREZ CUENTA CONMIGO",
+              "nombre": "JUÃREZ CUENTA CONMIGO",
               "total": 102,
               "m": 75,
               "h": 27,
@@ -18214,7 +18214,7 @@ window.DASHBOARD_DATA = {
         "50-64": 42,
         "65+": 16
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -18277,7 +18277,7 @@ window.DASHBOARD_DATA = {
           "muns": 18,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 89,
               "m": 54,
               "h": 35,
@@ -18484,8 +18484,8 @@ window.DASHBOARD_DATA = {
         "50-64": 27,
         "65+": 32
       },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
+      "rango_dom": "30â€“49",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "GUACHOCHI",
@@ -18625,7 +18625,7 @@ window.DASHBOARD_DATA = {
           "muns": 20,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 113,
               "m": 73,
               "h": 40,
@@ -18796,8 +18796,8 @@ window.DASHBOARD_DATA = {
         "50-64": 6,
         "65+": 4
       },
-      "rango_dom": "18–29",
-      "rango_min": "0–5",
+      "rango_dom": "18â€“29",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -18937,7 +18937,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 104,
               "m": 74,
               "h": 30,
@@ -18997,7 +18997,7 @@ window.DASHBOARD_DATA = {
         "65+": 32
       },
       "rango_dom": "65+",
-      "rango_min": "30–49",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19098,8 +19098,8 @@ window.DASHBOARD_DATA = {
         "50-64": 2,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "12–17",
+      "rango_dom": "18â€“29",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19177,8 +19177,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "30–49",
+      "rango_dom": "18â€“29",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19216,7 +19216,7 @@ window.DASHBOARD_DATA = {
           "muns": 5,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 36,
               "m": 21,
               "h": 15,
@@ -19283,7 +19283,7 @@ window.DASHBOARD_DATA = {
         "65+": 18
       },
       "rango_dom": "65+",
-      "rango_min": "18–29",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19333,7 +19333,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 30,
               "m": 19,
               "h": 11,
@@ -19392,8 +19392,8 @@ window.DASHBOARD_DATA = {
         "50-64": 4,
         "65+": 2
       },
-      "rango_dom": "30–49",
-      "rango_min": "6–11",
+      "rango_dom": "30â€“49",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19437,7 +19437,7 @@ window.DASHBOARD_DATA = {
           "muns": 5,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 30,
               "m": 16,
               "h": 14,
@@ -19503,8 +19503,8 @@ window.DASHBOARD_DATA = {
         "50-64": 13,
         "65+": 8
       },
-      "rango_dom": "50–64",
-      "rango_min": "18–29",
+      "rango_dom": "50â€“64",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19554,7 +19554,7 @@ window.DASHBOARD_DATA = {
           "muns": 9,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 28,
               "m": 23,
               "h": 5,
@@ -19648,8 +19648,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1,
         "65+": 1
       },
-      "rango_dom": "30–49",
-      "rango_min": "0–5",
+      "rango_dom": "30â€“49",
+      "rango_min": "0â€“5",
       "por_municipio": [
         {
           "nombre": "GUACHOCHI",
@@ -19761,8 +19761,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "0–5",
-      "rango_min": "30–49",
+      "rango_dom": "0â€“5",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "FORANEO",
@@ -19788,7 +19788,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 24,
               "m": 11,
               "h": 13,
@@ -19847,8 +19847,8 @@ window.DASHBOARD_DATA = {
         "50-64": 6,
         "65+": 8
       },
-      "rango_dom": "30–49",
-      "rango_min": "18–29",
+      "rango_dom": "30â€“49",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -19877,7 +19877,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "PRÓTESIS DESARTICULADO DE CADERA",
+      "nombre": "PRÃ“TESIS DESARTICULADO DE CADERA",
       "total": 22,
       "m": 4,
       "h": 18,
@@ -19892,7 +19892,7 @@ window.DASHBOARD_DATA = {
           "muns": 12,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 22,
               "m": 4,
               "h": 18,
@@ -20007,8 +20007,8 @@ window.DASHBOARD_DATA = {
         "50-64": 10,
         "65+": 1
       },
-      "rango_dom": "50–64",
-      "rango_min": "6–11",
+      "rango_dom": "50â€“64",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20100,7 +20100,7 @@ window.DASHBOARD_DATA = {
           "muns": 3,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 14,
               "m": 8,
               "h": 6,
@@ -20150,7 +20150,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 6,
               "m": 3,
               "h": 3,
@@ -20209,7 +20209,7 @@ window.DASHBOARD_DATA = {
         "50-64": 2,
         "65+": 1
       },
-      "rango_dom": "18–29",
+      "rango_dom": "18â€“29",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -20266,7 +20266,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÃ“N CIUDADANA",
               "total": 16,
               "m": 9,
               "h": 7,
@@ -20311,8 +20311,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "50–64",
+      "rango_dom": "18â€“29",
+      "rango_min": "50â€“64",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20344,7 +20344,7 @@ window.DASHBOARD_DATA = {
           "muns": 7,
           "programas": [
             {
-              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+              "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
               "total": 16,
               "m": 14,
               "h": 2,
@@ -20424,8 +20424,8 @@ window.DASHBOARD_DATA = {
         "50-64": 3,
         "65+": 0
       },
-      "rango_dom": "30–49",
-      "rango_min": "50–64",
+      "rango_dom": "30â€“49",
+      "rango_min": "50â€“64",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20487,7 +20487,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 13,
               "m": 9,
               "h": 4,
@@ -20546,8 +20546,8 @@ window.DASHBOARD_DATA = {
         "50-64": 7,
         "65+": 4
       },
-      "rango_dom": "50–64",
-      "rango_min": "18–29",
+      "rango_dom": "50â€“64",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20576,7 +20576,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "MICROCRÉDITO PARA ACTIVIDADES PRODUCTIVAS",
+      "nombre": "MICROCRÃ‰DITO PARA ACTIVIDADES PRODUCTIVAS",
       "total": 10,
       "m": 5,
       "h": 5,
@@ -20643,8 +20643,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1,
         "65+": 0
       },
-      "rango_dom": "30–49",
-      "rango_min": "18–29",
+      "rango_dom": "30â€“49",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "ALDAMA",
@@ -20682,7 +20682,7 @@ window.DASHBOARD_DATA = {
           "muns": 5,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 9,
               "m": 4,
               "h": 5,
@@ -20749,7 +20749,7 @@ window.DASHBOARD_DATA = {
         "65+": 4
       },
       "rango_dom": "65+",
-      "rango_min": "18–29",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20799,7 +20799,7 @@ window.DASHBOARD_DATA = {
           "muns": 4,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 8,
               "m": 1,
               "h": 7,
@@ -20859,7 +20859,7 @@ window.DASHBOARD_DATA = {
         "65+": 3
       },
       "rango_dom": "65+",
-      "rango_min": "12–17",
+      "rango_min": "12â€“17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -20903,7 +20903,7 @@ window.DASHBOARD_DATA = {
           "muns": 3,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 7,
               "m": 3,
               "h": 4,
@@ -20955,7 +20955,7 @@ window.DASHBOARD_DATA = {
         "50-64": 3,
         "65+": 1
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": "65+",
       "por_municipio": [
         {
@@ -20979,7 +20979,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "MATERIAL DE OSTEOSÍNTESIS",
+      "nombre": "MATERIAL DE OSTEOSÃNTESIS",
       "total": 7,
       "m": 2,
       "h": 5,
@@ -20994,7 +20994,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "nombre": "REHABILITACIÃ“N INTEGRAL FÃSICA Y APOYOS FUNCIONALES",
               "total": 7,
               "m": 2,
               "h": 5,
@@ -21039,8 +21039,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1,
         "65+": 2
       },
-      "rango_dom": "0–5",
-      "rango_min": "6–11",
+      "rango_dom": "0â€“5",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -21057,7 +21057,7 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "ARTÍCULOS Y ACCESORIOS PARA DISCAPACITADOS",
+      "nombre": "ARTÃCULOS Y ACCESORIOS PARA DISCAPACITADOS",
       "total": 6,
       "m": 4,
       "h": 2,
@@ -21072,7 +21072,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 6,
               "m": 4,
               "h": 2,
@@ -21117,8 +21117,8 @@ window.DASHBOARD_DATA = {
         "50-64": 2,
         "65+": 2
       },
-      "rango_dom": "50–64",
-      "rango_min": "18–29",
+      "rango_dom": "50â€“64",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -21188,8 +21188,8 @@ window.DASHBOARD_DATA = {
         "50-64": 2,
         "65+": 0
       },
-      "rango_dom": "50–64",
-      "rango_min": "6–11",
+      "rango_dom": "50â€“64",
+      "rango_min": "6â€“11",
       "por_municipio": [
         {
           "nombre": "FORANEO",
@@ -21215,7 +21215,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 3,
               "m": 2,
               "h": 1,
@@ -21261,7 +21261,7 @@ window.DASHBOARD_DATA = {
         "65+": 2
       },
       "rango_dom": "65+",
-      "rango_min": "30–49",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -21345,7 +21345,7 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": null,
       "por_municipio": [
         {
@@ -21384,7 +21384,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 2,
               "m": 1,
               "h": 1,
@@ -21429,8 +21429,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 1
       },
-      "rango_dom": "30–49",
-      "rango_min": "30–49",
+      "rango_dom": "30â€“49",
+      "rango_min": "30â€“49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -21462,7 +21462,7 @@ window.DASHBOARD_DATA = {
           "muns": 2,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 2,
               "m": 2,
               "h": 0,
@@ -21507,8 +21507,8 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "18–29",
-      "rango_min": "18–29",
+      "rango_dom": "18â€“29",
+      "rango_min": "18â€“29",
       "por_municipio": [
         {
           "nombre": "GUACHOCHI",
@@ -21540,7 +21540,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 2,
               "m": 0,
               "h": 2,
@@ -21578,8 +21578,8 @@ window.DASHBOARD_DATA = {
         "50-64": 1,
         "65+": 1
       },
-      "rango_dom": "50–64",
-      "rango_min": "50–64",
+      "rango_dom": "50â€“64",
+      "rango_min": "50â€“64",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
@@ -21605,7 +21605,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 1,
               "m": 1,
               "h": 0,
@@ -21670,7 +21670,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 1,
               "m": 1,
               "h": 0,
@@ -21735,7 +21735,7 @@ window.DASHBOARD_DATA = {
           "muns": 1,
           "programas": [
             {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "nombre": "GESTIÃ“N SOCIAL Y ATENCIÃ“N A LA CIUDADANÃA",
               "total": 1,
               "m": 1,
               "h": 0,
@@ -21773,7 +21773,7 @@ window.DASHBOARD_DATA = {
         "50-64": 0,
         "65+": 0
       },
-      "rango_dom": "30–49",
+      "rango_dom": "30â€“49",
       "rango_min": null,
       "por_municipio": [
         {
@@ -21876,7 +21876,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "ICHIJUV",
       "clave": "2P026L2",
-      "nombre": "Institucionalización de la perspectiva de las juventudes",
+      "nombre": "InstitucionalizaciÃ³n de la perspectiva de las juventudes",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -21959,7 +21959,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "ICHIJUV",
       "clave": "2E029C1",
-      "nombre": "Atención a la juventud",
+      "nombre": "AtenciÃ³n a la juventud",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22071,7 +22071,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "1S035A1",
-      "nombre": "Asistencia social para la población indígena",
+      "nombre": "Asistencia social para la poblaciÃ³n indÃ­gena",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22158,7 +22158,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "2E215C1",
-      "nombre": "Fomento por el respeto de los derechos indígenas",
+      "nombre": "Fomento por el respeto de los derechos indÃ­genas",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22193,7 +22193,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "2E218C1",
-      "nombre": "Desarrollo económico para la población indígena",
+      "nombre": "Desarrollo econÃ³mico para la poblaciÃ³n indÃ­gena",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22228,7 +22228,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "1S034A1",
-      "nombre": "Programa integral para la producción agrícola",
+      "nombre": "Programa integral para la producciÃ³n agrÃ­cola",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22263,7 +22263,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "2E200C1",
-      "nombre": "Estrategia solidaria de alimentación nutritiva",
+      "nombre": "Estrategia solidaria de alimentaciÃ³n nutritiva",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22298,7 +22298,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SPyCI",
       "clave": "1S056A1",
-      "nombre": "Incentivos económicos a estudiantes indígenas para su profesionalización",
+      "nombre": "Incentivos econÃ³micos a estudiantes indÃ­genas para su profesionalizaciÃ³n",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22339,7 +22339,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "DIF",
       "clave": "1S005A1",
-      "nombre": "Alimentación y desarrollo autosustentable de las familias",
+      "nombre": "AlimentaciÃ³n y desarrollo autosustentable de las familias",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22503,7 +22503,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "DIF",
       "clave": "1S042A1",
-      "nombre": "Rehabilitación integral y apoyos funcionales",
+      "nombre": "RehabilitaciÃ³n integral y apoyos funcionales",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22576,7 +22576,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "DIF",
       "clave": "1S045A1",
-      "nombre": "Gestión social y atención a la ciudadanía",
+      "nombre": "GestiÃ³n social y atenciÃ³n a la ciudadanÃ­a",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22813,7 +22813,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "DIF",
       "clave": "1S041A1",
-      "nombre": "Acciones que mejoran las habilidades de crianza para un desarrollo armónico",
+      "nombre": "Acciones que mejoran las habilidades de crianza para un desarrollo armÃ³nico",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22846,7 +22846,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "ICHDII",
       "clave": "1S052A1",
-      "nombre": "Estancias infantiles para el desarrollo integral de la niñez",
+      "nombre": "Estancias infantiles para el desarrollo integral de la niÃ±ez",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -22973,7 +22973,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SDHyBC",
       "clave": "2E027C1",
-      "nombre": "Fortalecimiento comunitario y participación ciudadana",
+      "nombre": "Fortalecimiento comunitario y participaciÃ³n ciudadana",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23120,7 +23120,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SDHyBC",
       "clave": "1S054A1",
-      "nombre": "Atención a niños, niñas, adolescentes y juventudes",
+      "nombre": "AtenciÃ³n a niÃ±os, niÃ±as, adolescentes y juventudes",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23157,7 +23157,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SDHyBC",
       "clave": "2F054C1",
-      "nombre": "Proyectos productivos y economía solidaria",
+      "nombre": "Proyectos productivos y economÃ­a solidaria",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23196,7 +23196,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SDHyBC",
       "clave": "1S028A1",
-      "nombre": "Juárez cuenta conmigo",
+      "nombre": "JuÃ¡rez cuenta conmigo",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23356,7 +23356,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "RURAL",
       "clave": "2F004C1",
-      "nombre": "Fomento agrícola",
+      "nombre": "Fomento agrÃ­cola",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23391,7 +23391,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "RURAL",
       "clave": "1S053B1",
-      "nombre": "Atención a la sequía",
+      "nombre": "AtenciÃ³n a la sequÃ­a",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23459,7 +23459,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "RURAL",
       "clave": "2F052C1",
-      "nombre": "Desarrollo de productores agropecuarios, agroindistriales, agrícolas y forestales",
+      "nombre": "Desarrollo de productores agropecuarios, agroindistriales, agrÃ­colas y forestales",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23527,7 +23527,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "RURAL",
       "clave": "2E084C1",
-      "nombre": "Mecanización del campo",
+      "nombre": "MecanizaciÃ³n del campo",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23630,7 +23630,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "RURAL",
       "clave": "1S014B2",
-      "nombre": "Subsidios a la producción, equipamento e infraestructura",
+      "nombre": "Subsidios a la producciÃ³n, equipamento e infraestructura",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23843,7 +23843,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SALUD",
       "clave": "2E166C1",
-      "nombre": "Atención médica",
+      "nombre": "AtenciÃ³n mÃ©dica",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -23969,7 +23969,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "SEECH",
       "clave": "SE206C1",
-      "nombre": "Cobertura en educación básica",
+      "nombre": "Cobertura en educaciÃ³n bÃ¡sica",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -24039,7 +24039,7 @@ window.DASHBOARD_DATA = {
     {
       "inst": "TURISMO",
       "clave": "2F011C1",
-      "nombre": "Fomento y desarrollo turístico",
+      "nombre": "Fomento y desarrollo turÃ­stico",
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
@@ -24153,7 +24153,7 @@ window.DASHBOARD_DATA = {
         "atendidos": 111276
       },
       {
-        "nombre": "Niños y adolescentes (0-17)",
+        "nombre": "NiÃ±os y adolescentes (0-17)",
         "pob_vulnerable": 542176,
         "atendidos": 99263
       },
@@ -24188,7 +24188,7 @@ window.DASHBOARD_DATA = {
         "atendidos": 27821
       },
       {
-        "nombre": "Personas indígenas",
+        "nombre": "Personas indÃ­genas",
         "pob_vulnerable": 296844,
         "atendidos": 2261
       },
@@ -26262,7 +26262,7 @@ window.DASHBOARD_DATA = {
         },
         "programas": [
           {
-            "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
+            "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÃ“N INDIGENA",
             "total": 125,
             "mujeres": 66,
             "hombres": 59,
