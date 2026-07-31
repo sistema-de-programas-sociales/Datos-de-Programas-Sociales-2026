@@ -265,7 +265,7 @@ function renderVulnerables() {
     'mayores':          'imagenes/65_gv.jpg',
     'multidimensional': 'imagenes/personaspobrezam_gv.webp',
     'sin contar':       'imagenes/pobrezaalim_gv.webp',
-    'alimentaria':      'imagenes/carenciaalim_gv.webp',
+    'alimentaria':      'imagenes/carenciaalim_gv.jpg',
     'indígenas':        'imagenes/indigenas_gv.jpg',
     'discapacidad':     'imagenes/discapacidad_gv.jpeg',
     'violencia':        'imagenes/famvuln_gv.jpg',

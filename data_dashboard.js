@@ -9,156 +9,156 @@ window.DASHBOARD_DATA = {
     "fuente": "Padrón de Beneficiarios — SDHyBC Chihuahua"
   },
   "general": {
-    "total_benef": 347766,
-    "total_m": 267053,
-    "total_h": 111276,
+    "total_benef": 319321,
+    "total_m": 252719,
+    "total_h": 91076,
     "total_sn": 13,
-    "total_apoyos": 710771,
+    "total_apoyos": 629287,
     "total_inst": 8,
-    "total_prog": 24,
+    "total_prog": 26,
     "mun_activos": 67,
-    "ninos": 68287,
-    "jovenes": 84859,
-    "adultos": 122022,
-    "mayores": 43967,
-    "cob_estatal_pct": 8.6,
-    "cob_vulnerable_pct": 19.4,
+    "ninos": 59245,
+    "jovenes": 107504,
+    "adultos": 79182,
+    "mayores": 41759,
+    "cob_estatal_pct": 7.9,
+    "cob_vulnerable_pct": 17.8,
     "pres_total": 0,
     "gasto_total": 0,
     "gasto_x_ben": 0,
     "rangos_mh": {
       "0-5": {
-        "m": 25198,
-        "h": 15437,
-        "total": 37249
+        "m": 22344,
+        "h": 10389,
+        "total": 31225
       },
       "6-11": {
-        "m": 21569,
-        "h": 11835,
-        "total": 31038
+        "m": 20077,
+        "h": 8777,
+        "total": 28020
       },
       "12-17": {
-        "m": 21825,
-        "h": 10906,
-        "total": 30976
+        "m": 20369,
+        "h": 8532,
+        "total": 48161
       },
       "18-29": {
-        "m": 45457,
-        "h": 9974,
-        "total": 53883
+        "m": 41654,
+        "h": 7225,
+        "total": 59343
       },
       "30-49": {
-        "m": 55164,
-        "h": 14930,
-        "total": 66447
+        "m": 51311,
+        "h": 9775,
+        "total": 51499
       },
       "50-64": {
-        "m": 45610,
-        "h": 15626,
-        "total": 55575
+        "m": 43729,
+        "h": 11088,
+        "total": 27683
       },
       "65+": {
-        "m": 35344,
-        "h": 14586,
-        "total": 43967
+        "m": 34572,
+        "h": 11224,
+        "total": 41759
       }
     },
     "rangos": {
-      "0-5": 37249,
-      "6-11": 31038,
-      "12-17": 30976,
-      "18-29": 53883,
-      "30-49": 66447,
-      "50-64": 55575,
-      "65+": 43967,
-      "sin_datos": 95549
+      "0-5": 31225,
+      "6-11": 28020,
+      "12-17": 48161,
+      "18-29": 59343,
+      "30-49": 51499,
+      "50-64": 27683,
+      "65+": 41759,
+      "sin_datos": 95581
     }
   },
   "rangos_edad": [
     {
       "label": "0 - 5 años",
       "key": "0-5",
-      "total": 37249,
-      "m": 25198,
-      "h": 15437,
+      "total": 31225,
+      "m": 22344,
+      "h": 10389,
       "sn": 0,
-      "pct_total": 10.7
+      "pct_total": 9.8
     },
     {
       "label": "6 - 11 años",
       "key": "6-11",
-      "total": 31038,
-      "m": 21569,
-      "h": 11835,
+      "total": 28020,
+      "m": 20077,
+      "h": 8777,
       "sn": 0,
-      "pct_total": 8.9
+      "pct_total": 8.8
     },
     {
       "label": "12 - 17 años",
       "key": "12-17",
-      "total": 30976,
-      "m": 21825,
-      "h": 10906,
+      "total": 48161,
+      "m": 20369,
+      "h": 8532,
       "sn": 0,
-      "pct_total": 8.9
+      "pct_total": 15.1
     },
     {
       "label": "18 - 29 años",
       "key": "18-29",
-      "total": 53883,
-      "m": 45457,
-      "h": 9974,
+      "total": 59343,
+      "m": 41654,
+      "h": 7225,
       "sn": 0,
-      "pct_total": 15.5
+      "pct_total": 18.6
     },
     {
       "label": "30 - 49 años",
       "key": "30-49",
-      "total": 66447,
-      "m": 55164,
-      "h": 14930,
+      "total": 51499,
+      "m": 51311,
+      "h": 9775,
       "sn": 0,
-      "pct_total": 19.1
+      "pct_total": 16.1
     },
     {
       "label": "50 - 64 años",
       "key": "50-64",
-      "total": 55575,
-      "m": 45610,
-      "h": 15626,
+      "total": 27683,
+      "m": 43729,
+      "h": 11088,
       "sn": 0,
-      "pct_total": 16.0
+      "pct_total": 8.7
     },
     {
       "label": "65 años o más",
       "key": "65+",
-      "total": 43967,
-      "m": 35344,
-      "h": 14586,
+      "total": 41759,
+      "m": 34572,
+      "h": 11224,
       "sn": 0,
-      "pct_total": 12.6
+      "pct_total": 13.1
     },
     {
       "label": "Sin dato de edad",
       "key": "sin_datos",
-      "total": 95549,
-      "m": 60751,
-      "h": 34770,
+      "total": 95581,
+      "m": 60784,
+      "h": 34769,
       "sn": 31,
-      "pct_total": 27.5
+      "pct_total": 29.9
     }
   ],
   "localizables": {
-    "total": 239928,
-    "m": 190791,
-    "h": 74226,
-    "pct_del_padron": 69.0,
+    "total": 228416,
+    "m": 188369,
+    "h": 59824,
+    "pct_del_padron": 71.5,
     "por_institucion": [
       {
         "nombre": "SALUD",
-        "total": 208581,
-        "m": 172074,
-        "h": 61352
+        "total": 196346,
+        "m": 169196,
+        "h": 46510
       },
       {
         "nombre": "SDHyBC",
@@ -173,16 +173,16 @@ window.DASHBOARD_DATA = {
         "h": 4691
       },
       {
+        "nombre": "DIF",
+        "total": 2635,
+        "m": 1531,
+        "h": 1170
+      },
+      {
         "nombre": "ICHIJUV",
         "total": 1967,
         "m": 1309,
         "h": 660
-      },
-      {
-        "nombre": "DIF",
-        "total": 1834,
-        "m": 1040,
-        "h": 836
       },
       {
         "nombre": "SPyCI",
@@ -199,376 +199,376 @@ window.DASHBOARD_DATA = {
     ],
     "por_municipio": {
       "CHIHUAHUA": {
-        "total": 61141,
-        "m": 46128,
-        "h": 21269
+        "total": 58734,
+        "m": 45884,
+        "h": 17883
       },
       "JUÁREZ": {
-        "total": 61210,
-        "m": 48404,
-        "h": 18596
+        "total": 59319,
+        "m": 48559,
+        "h": 15241
       },
       "CUAUHTÉMOC": {
-        "total": 13261,
-        "m": 10962,
-        "h": 3570
+        "total": 12577,
+        "m": 10817,
+        "h": 2737
       },
       "HIDALGO DEL PARRAL": {
-        "total": 8916,
-        "m": 7359,
-        "h": 2550
+        "total": 8461,
+        "m": 7208,
+        "h": 2039
       },
       "DELICIAS": {
-        "total": 8703,
-        "m": 6768,
-        "h": 2759
+        "total": 7974,
+        "m": 6443,
+        "h": 2084
       },
       "GUACHOCHI": {
-        "total": 2819,
-        "m": 2281,
-        "h": 744
+        "total": 2643,
+        "m": 2207,
+        "h": 599
       },
       "JIMÉNEZ": {
-        "total": 6698,
-        "m": 5543,
-        "h": 1937
+        "total": 6144,
+        "m": 5263,
+        "h": 1476
       },
       "CAMARGO": {
-        "total": 6295,
-        "m": 5214,
-        "h": 1982
+        "total": 5781,
+        "m": 4948,
+        "h": 1568
       },
       "GUADALUPE Y CALVO": {
-        "total": 2262,
-        "m": 1865,
-        "h": 582
+        "total": 2101,
+        "m": 1781,
+        "h": 456
       },
       "GUERRERO": {
-        "total": 4457,
-        "m": 3706,
-        "h": 1267
+        "total": 4153,
+        "m": 3614,
+        "h": 928
       },
       "BOCOYNA": {
-        "total": 3201,
-        "m": 2624,
-        "h": 806
-      },
-      "ALDAMA": {
-        "total": 4147,
-        "m": 3368,
-        "h": 1255
+        "total": 2873,
+        "m": 2443,
+        "h": 611
       },
       "OJINAGA": {
-        "total": 4212,
-        "m": 3501,
-        "h": 1232
+        "total": 3905,
+        "m": 3390,
+        "h": 932
+      },
+      "ALDAMA": {
+        "total": 3790,
+        "m": 3206,
+        "h": 961
       },
       "MEOQUI": {
-        "total": 3648,
-        "m": 2928,
-        "h": 1142
+        "total": 3327,
+        "m": 2762,
+        "h": 869
       },
       "NUEVO CASAS GRANDES": {
-        "total": 3008,
-        "m": 2486,
-        "h": 875
-      },
-      "MADERA": {
-        "total": 2501,
-        "m": 2110,
-        "h": 624
+        "total": 2917,
+        "m": 2509,
+        "h": 693
       },
       "BUENAVENTURA": {
-        "total": 2141,
-        "m": 1817,
-        "h": 569
+        "total": 2065,
+        "m": 1822,
+        "h": 447
       },
-      "ASCENSIÓN": {
-        "total": 2622,
-        "m": 2197,
-        "h": 716
+      "MADERA": {
+        "total": 2386,
+        "m": 2093,
+        "h": 479
       },
       "BALLEZA": {
-        "total": 1555,
-        "m": 1258,
-        "h": 463
+        "total": 1438,
+        "m": 1209,
+        "h": 378
+      },
+      "ASCENSIÓN": {
+        "total": 2387,
+        "m": 2110,
+        "h": 505
       },
       "URIQUE": {
-        "total": 2114,
-        "m": 1710,
-        "h": 573
-      },
-      "NAMIQUIPA": {
-        "total": 2206,
-        "m": 1791,
-        "h": 652
+        "total": 1922,
+        "m": 1612,
+        "h": 443
       },
       "SAUCILLO": {
-        "total": 2143,
-        "m": 1799,
-        "h": 644
+        "total": 2089,
+        "m": 1827,
+        "h": 507
       },
-      "AHUMADA": {
-        "total": 1935,
-        "m": 1554,
-        "h": 568
-      },
-      "BATOPILAS DE MANUEL GÓMEZ MORÍN": {
-        "total": 649,
-        "m": 532,
-        "h": 191
+      "NAMIQUIPA": {
+        "total": 2117,
+        "m": 1819,
+        "h": 477
       },
       "GUAZAPARES": {
-        "total": 1311,
-        "m": 1105,
-        "h": 364
+        "total": 1293,
+        "m": 1132,
+        "h": 285
       },
-      "CASAS GRANDES": {
-        "total": 1618,
-        "m": 1307,
-        "h": 478
-      },
-      "GÓMEZ FARÍAS": {
-        "total": 1364,
-        "m": 1102,
+      "AHUMADA": {
+        "total": 1801,
+        "m": 1502,
         "h": 438
       },
-      "VALLE DE ZARAGOZA": {
-        "total": 1444,
-        "m": 1172,
-        "h": 485
+      "BATOPILAS DE MANUEL GÓMEZ MORÍN": {
+        "total": 605,
+        "m": 512,
+        "h": 150
+      },
+      "CASAS GRANDES": {
+        "total": 1471,
+        "m": 1242,
+        "h": 346
       },
       "CARICHI": {
-        "total": 842,
-        "m": 734,
-        "h": 215
+        "total": 831,
+        "m": 751,
+        "h": 171
       },
-      "ROSALES": {
-        "total": 1302,
-        "m": 1050,
-        "h": 402
+      "GÓMEZ FARÍAS": {
+        "total": 1265,
+        "m": 1059,
+        "h": 354
       },
-      "AQUILES SERDÁN": {
-        "total": 834,
-        "m": 597,
-        "h": 294
-      },
-      "SANTA BARBARA": {
-        "total": 964,
-        "m": 805,
-        "h": 289
-      },
-      "BACHINIVA": {
-        "total": 933,
-        "m": 777,
-        "h": 284
-      },
-      "JANOS": {
-        "total": 977,
-        "m": 788,
-        "h": 283
+      "VALLE DE ZARAGOZA": {
+        "total": 1371,
+        "m": 1159,
+        "h": 398
       },
       "OCAMPO": {
-        "total": 904,
-        "m": 746,
-        "h": 221
+        "total": 969,
+        "m": 853,
+        "h": 159
       },
-      "IGNACIO ZARAGOZA": {
-        "total": 898,
-        "m": 724,
-        "h": 265
+      "SANTA BARBARA": {
+        "total": 923,
+        "m": 801,
+        "h": 229
       },
-      "LÓPEZ": {
-        "total": 1102,
-        "m": 906,
-        "h": 348
+      "AQUILES SERDÁN": {
+        "total": 822,
+        "m": 597,
+        "h": 269
       },
-      "SANTA ISABEL": {
-        "total": 941,
-        "m": 741,
-        "h": 309
+      "ROSALES": {
+        "total": 1186,
+        "m": 1004,
+        "h": 295
       },
-      "PRAXÉDIS G. GUERRERO": {
-        "total": 939,
-        "m": 780,
-        "h": 260
+      "JANOS": {
+        "total": 993,
+        "m": 836,
+        "h": 235
+      },
+      "BACHINIVA": {
+        "total": 893,
+        "m": 794,
+        "h": 193
       },
       "CHINIPAS": {
-        "total": 403,
-        "m": 330,
-        "h": 98
+        "total": 405,
+        "m": 355,
+        "h": 72
+      },
+      "SANTA ISABEL": {
+        "total": 871,
+        "m": 722,
+        "h": 231
+      },
+      "IGNACIO ZARAGOZA": {
+        "total": 815,
+        "m": 684,
+        "h": 209
+      },
+      "LÓPEZ": {
+        "total": 1013,
+        "m": 856,
+        "h": 274
       },
       "MATAMOROS": {
-        "total": 719,
-        "m": 607,
-        "h": 203
+        "total": 725,
+        "m": 639,
+        "h": 169
       },
       "URUACHI": {
-        "total": 617,
-        "m": 506,
-        "h": 148
-      },
-      "LA CRUZ": {
-        "total": 858,
-        "m": 706,
-        "h": 284
-      },
-      "GUADALUPE": {
         "total": 589,
-        "m": 423,
-        "h": 225
+        "m": 499,
+        "h": 122
+      },
+      "PRAXÉDIS G. GUERRERO": {
+        "total": 855,
+        "m": 742,
+        "h": 195
       },
       "TEMÓSACHIC": {
         "total": 539,
-        "m": 443,
-        "h": 162
+        "m": 468,
+        "h": 130
+      },
+      "LA CRUZ": {
+        "total": 799,
+        "m": 679,
+        "h": 214
+      },
+      "GUADALUPE": {
+        "total": 573,
+        "m": 426,
+        "h": 200
       },
       "MORIS": {
-        "total": 649,
-        "m": 529,
-        "h": 178
-      },
-      "JULIMES": {
-        "total": 683,
-        "m": 525,
-        "h": 236
-      },
-      "SAN FRANCISCO DE CONCHOS": {
-        "total": 624,
-        "m": 514,
-        "h": 209
-      },
-      "CORONADO": {
-        "total": 572,
-        "m": 468,
-        "h": 184
+        "total": 638,
+        "m": 544,
+        "h": 141
       },
       "GALEANA": {
-        "total": 461,
-        "m": 376,
-        "h": 134
-      },
-      "SATEVO": {
-        "total": 477,
-        "m": 391,
-        "h": 164
-      },
-      "SAN FRANCISCO DEL ORO": {
-        "total": 533,
-        "m": 450,
-        "h": 155
-      },
-      "EL TULE": {
-        "total": 418,
-        "m": 341,
-        "h": 137
-      },
-      "ALLENDE": {
         "total": 500,
-        "m": 315,
-        "h": 215
-      },
-      "SAN FRANCISCO DE BORJA": {
-        "total": 411,
-        "m": 348,
-        "h": 138
-      },
-      "MATACHI": {
-        "total": 398,
-        "m": 350,
-        "h": 118
-      },
-      "MAGUARICHI": {
-        "total": 300,
-        "m": 251,
-        "h": 79
-      },
-      "NONOAVA": {
-        "total": 372,
-        "m": 295,
-        "h": 125
-      },
-      "RIVA PALACIO": {
-        "total": 382,
-        "m": 326,
-        "h": 100
-      },
-      "GRAN MORELOS": {
-        "total": 417,
-        "m": 347,
-        "h": 123
-      },
-      "CUSIHUIRIACHI": {
-        "total": 320,
-        "m": 251,
+        "m": 428,
         "h": 112
       },
-      "COYAME DEL SOTOL": {
-        "total": 367,
-        "m": 305,
+      "JULIMES": {
+        "total": 636,
+        "m": 503,
+        "h": 200
+      },
+      "SAN FRANCISCO DE CONCHOS": {
+        "total": 603,
+        "m": 511,
+        "h": 181
+      },
+      "SATEVO": {
+        "total": 516,
+        "m": 446,
+        "h": 140
+      },
+      "CORONADO": {
+        "total": 511,
+        "m": 435,
+        "h": 136
+      },
+      "SAN FRANCISCO DEL ORO": {
+        "total": 501,
+        "m": 440,
+        "h": 123
+      },
+      "EL TULE": {
+        "total": 397,
+        "m": 337,
+        "h": 110
+      },
+      "ALLENDE": {
+        "total": 486,
+        "m": 311,
+        "h": 195
+      },
+      "MATACHI": {
+        "total": 401,
+        "m": 366,
         "h": 98
       },
+      "SAN FRANCISCO DE BORJA": {
+        "total": 390,
+        "m": 340,
+        "h": 114
+      },
+      "NONOAVA": {
+        "total": 356,
+        "m": 290,
+        "h": 108
+      },
+      "MAGUARICHI": {
+        "total": 268,
+        "m": 226,
+        "h": 65
+      },
+      "GRAN MORELOS": {
+        "total": 378,
+        "m": 323,
+        "h": 98
+      },
+      "RIVA PALACIO": {
+        "total": 322,
+        "m": 290,
+        "h": 57
+      },
       "MORELOS": {
-        "total": 62,
-        "m": 46,
-        "h": 17
+        "total": 60,
+        "m": 49,
+        "h": 12
+      },
+      "COYAME DEL SOTOL": {
+        "total": 349,
+        "m": 297,
+        "h": 85
+      },
+      "CUSIHUIRIACHI": {
+        "total": 300,
+        "m": 254,
+        "h": 77
       },
       "ROSARIO": {
-        "total": 156,
-        "m": 129,
-        "h": 42
-      },
-      "DR. BELISARIO DOMINGUEZ": {
-        "total": 314,
-        "m": 249,
-        "h": 101
+        "total": 132,
+        "m": 108,
+        "h": 34
       },
       "HUEJOTITÁN": {
+        "total": 259,
+        "m": 212,
+        "h": 83
+      },
+      "DR. BELISARIO DOMINGUEZ": {
         "total": 284,
-        "m": 221,
-        "h": 102
+        "m": 234,
+        "h": 77
       },
       "MANUEL BENAVIDES": {
-        "total": 272,
-        "m": 222,
-        "h": 82
+        "total": 237,
+        "m": 201,
+        "h": 65
       }
     },
     "rangos_edad": [
       {
         "label": "0 - 5 años",
         "key": "0-5",
-        "total": 24440
+        "total": 23694
       },
       {
         "label": "6 - 11 años",
         "key": "6-11",
-        "total": 21660
+        "total": 20209
       },
       {
         "label": "12 - 17 años",
         "key": "12-17",
-        "total": 17472
+        "total": 16157
       },
       {
         "label": "18 - 29 años",
         "key": "18-29",
-        "total": 37584
+        "total": 34565
       },
       {
         "label": "30 - 49 años",
         "key": "30-49",
-        "total": 47511
+        "total": 43703
       },
       {
         "label": "50 - 64 años",
         "key": "50-64",
-        "total": 43222
+        "total": 40252
       },
       {
         "label": "65 años o más",
         "key": "65+",
-        "total": 31840
+        "total": 30203
       }
     ]
   },
@@ -578,7 +578,7 @@ window.DASHBOARD_DATA = {
       "m": 716,
       "h": 593,
       "sn": 1,
-      "apoyos": 1310,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "APOYO INTEGRAL A MIGRANTES",
@@ -591,11 +591,11 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 111,
-        "6-11": 141,
-        "12-17": 87,
-        "18-29": 233,
-        "30-49": 427,
-        "50-64": 104,
+        "6-11": 87,
+        "12-17": 233,
+        "18-29": 427,
+        "30-49": 104,
+        "50-64": 141,
         "65+": 13,
         "sin_datos": 0
       },
@@ -606,7 +606,7 @@ window.DASHBOARD_DATA = {
       "m": 55,
       "h": 20,
       "sn": 1,
-      "apoyos": 219,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "APOYOS A LA CULTURA",
@@ -620,21 +620,21 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 31,
-        "30-49": 23,
-        "50-64": 10,
+        "12-17": 31,
+        "18-29": 23,
+        "30-49": 10,
+        "50-64": 0,
         "65+": 12,
         "sin_datos": 0
       },
       "sin_datos_edad": 5
     },
     "DIF": {
-      "total": 24897,
-      "m": 17018,
-      "h": 8025,
+      "total": 28974,
+      "m": 19688,
+      "h": 9504,
       "sn": 4,
-      "apoyos": 38986,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
@@ -645,11 +645,35 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-          "total": 1625,
-          "m": 851,
-          "h": 838,
+          "nombre": "ATENCION ALIMENTARIA A PERSONAS EN SITUACION DE VULNERABILIDAD",
+          "total": 19243,
+          "m": 13021,
+          "h": 6222,
           "sn": 0,
+          "apoyos": 0
+        },
+        {
+          "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+          "total": 2487,
+          "m": 1342,
+          "h": 1247,
+          "sn": 0,
+          "apoyos": 0
+        },
+        {
+          "nombre": "ATENCION ALIMENTARIA PRIMEROS 1000 DIAS DE VIDA",
+          "total": 776,
+          "m": 767,
+          "h": 9,
+          "sn": 0,
+          "apoyos": 0
+        },
+        {
+          "nombre": "FORTALECIMIENTO FAMILIAR",
+          "total": 633,
+          "m": 521,
+          "h": 111,
+          "sn": 1,
           "apoyos": 0
         },
         {
@@ -661,18 +685,10 @@ window.DASHBOARD_DATA = {
           "apoyos": 0
         },
         {
-          "nombre": "FORTALECIMIENTO FAMILIAR",
-          "total": 291,
-          "m": 251,
-          "h": 39,
-          "sn": 1,
-          "apoyos": 0
-        },
-        {
           "nombre": "ESPARCIMIENTO PARA EL DESARROLLO FAMILIAR",
-          "total": 238,
-          "m": 183,
-          "h": 55,
+          "total": 257,
+          "m": 197,
+          "h": 60,
           "sn": 0,
           "apoyos": 0
         },
@@ -686,23 +702,23 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 3644,
-        "6-11": 951,
-        "12-17": 587,
-        "18-29": 2096,
-        "30-49": 5285,
-        "50-64": 5299,
-        "65+": 6968,
+        "0-5": 4457,
+        "6-11": 709,
+        "12-17": 2590,
+        "18-29": 6227,
+        "30-49": 6458,
+        "50-64": 1520,
+        "65+": 7954,
         "sin_datos": 0
       },
-      "sin_datos_edad": 133
+      "sin_datos_edad": 169
     },
     "ICHDII": {
       "total": 9154,
       "m": 4459,
       "h": 4695,
       "sn": 0,
-      "apoyos": 26560,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ",
@@ -714,12 +730,12 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 4640,
-        "6-11": 5130,
-        "12-17": 283,
-        "18-29": 12,
-        "30-49": 7,
-        "50-64": 9,
+        "0-5": 4639,
+        "6-11": 284,
+        "12-17": 12,
+        "18-29": 7,
+        "30-49": 9,
+        "50-64": 5130,
         "65+": 0,
         "sin_datos": 0
       },
@@ -730,7 +746,7 @@ window.DASHBOARD_DATA = {
       "m": 7254,
       "h": 4915,
       "sn": 1,
-      "apoyos": 13430,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "ATENCIÓN A LA JUVENTUD",
@@ -767,50 +783,50 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 0,
-        "6-11": 2,
-        "12-17": 7113,
-        "18-29": 4394,
-        "30-49": 112,
-        "50-64": 22,
+        "6-11": 7113,
+        "12-17": 4394,
+        "18-29": 112,
+        "30-49": 22,
+        "50-64": 2,
         "65+": 0,
         "sin_datos": 0
       },
       "sin_datos_edad": 439
     },
     "SALUD": {
-      "total": 279218,
-      "m": 224617,
-      "h": 84181,
+      "total": 247033,
+      "m": 207882,
+      "h": 62251,
       "sn": 0,
-      "apoyos": 556090,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "MEDICHIHUAHUA",
-          "total": 279218,
-          "m": 224617,
-          "h": 84181,
+          "total": 247033,
+          "m": 207882,
+          "h": 62251,
           "sn": 0,
           "apoyos": 0
         }
       ],
       "rangos": {
-        "0-5": 28860,
-        "6-11": 21826,
-        "12-17": 18515,
-        "18-29": 43951,
-        "30-49": 55873,
-        "50-64": 46810,
-        "65+": 34115,
+        "0-5": 22086,
+        "6-11": 15383,
+        "12-17": 37795,
+        "18-29": 47874,
+        "30-49": 41679,
+        "50-64": 17926,
+        "65+": 30982,
         "sin_datos": 0
       },
-      "sin_datos_edad": 93427
+      "sin_datos_edad": 93423
     },
     "SDHyBC": {
       "total": 26884,
       "m": 16827,
       "h": 10062,
       "sn": 0,
-      "apoyos": 67510,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
@@ -879,12 +895,12 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 1067,
-        "6-11": 3586,
-        "12-17": 4711,
-        "18-29": 3085,
-        "30-49": 5357,
-        "50-64": 4804,
-        "65+": 4692,
+        "6-11": 4705,
+        "12-17": 3089,
+        "18-29": 5354,
+        "30-49": 4805,
+        "50-64": 3586,
+        "65+": 4694,
         "sin_datos": 0
       },
       "sin_datos_edad": 0
@@ -894,7 +910,7 @@ window.DASHBOARD_DATA = {
       "m": 2994,
       "h": 1616,
       "sn": 6,
-      "apoyos": 6648,
+      "apoyos": 0,
       "programas": [
         {
           "nombre": "ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA",
@@ -915,11 +931,11 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 11,
-        "6-11": 101,
-        "12-17": 354,
-        "18-29": 1226,
-        "30-49": 1069,
-        "50-64": 387,
+        "6-11": 354,
+        "12-17": 1226,
+        "18-29": 1069,
+        "30-49": 387,
+        "50-64": 101,
         "65+": 141,
         "sin_datos": 0
       },
@@ -930,32 +946,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08020",
       "nombre": "CHIHUAHUA",
-      "total": 74416,
-      "m": 55100,
-      "h": 26135,
+      "total": 71037,
+      "m": 54057,
+      "h": 22555,
       "sn": 0,
       "poblacion": 1028306,
-      "total_apoyos": 165203,
-      "n_programas": 21,
-      "localizables": 61141,
-      "loc_m": 46128,
-      "loc_h": 21269,
-      "pct_loc": 82.2,
+      "total_apoyos": 154413,
+      "n_programas": 23,
+      "localizables": 58734,
+      "loc_m": 45884,
+      "loc_h": 17883,
+      "pct_loc": 82.7,
       "rangos": {
-        "0-5": 7845,
-        "6-11": 7361,
-        "12-17": 9421,
-        "18-29": 10777,
-        "30-49": 13701,
-        "50-64": 12780,
-        "65+": 10912,
+        "0-5": 7641,
+        "6-11": 6991,
+        "12-17": 9057,
+        "18-29": 10054,
+        "30-49": 13127,
+        "50-64": 12591,
+        "65+": 11792,
         "sin_datos": 17629
       },
       "rango_dom": "30-49",
       "rango_min": "6-11",
-      "pct_65mas": 14.7,
-      "pct_ninos": 20.4,
-      "pct_jovenes": 14.5,
+      "pct_65mas": 16.6,
+      "pct_ninos": 20.6,
+      "pct_jovenes": 14.2,
       "grado_dom": "Alto",
       "pct_muy_alto": 0,
       "pct_alto": 60.0,
@@ -977,8 +993,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 204
         },
         "DIF": {
-          "benef": 4175,
-          "apoyos": 9139
+          "benef": 4765,
+          "apoyos": 15969
         },
         "ICHDII": {
           "benef": 2250,
@@ -989,8 +1005,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 5959
         },
         "SALUD": {
-          "benef": 50996,
-          "apoyos": 108720
+          "benef": 47127,
+          "apoyos": 91100
         },
         "SDHyBC": {
           "benef": 12674,
@@ -1002,39 +1018,39 @@ window.DASHBOARD_DATA = {
         },
         "COESPO": {
           "benef": 393,
-          "apoyos": 393
+          "apoyos": 0
         }
       }
     },
     {
       "clave": "08038",
       "nombre": "JUÁREZ",
-      "total": 72577,
-      "m": 56103,
-      "h": 22587,
+      "total": 70986,
+      "m": 56583,
+      "h": 19220,
       "sn": 1,
       "poblacion": 1661295,
-      "total_apoyos": 145043,
-      "n_programas": 15,
-      "localizables": 61210,
-      "loc_m": 48404,
-      "loc_h": 18596,
-      "pct_loc": 84.3,
+      "total_apoyos": 136269,
+      "n_programas": 17,
+      "localizables": 59319,
+      "loc_m": 48559,
+      "loc_h": 15241,
+      "pct_loc": 83.6,
       "rangos": {
-        "0-5": 6784,
-        "6-11": 7781,
-        "12-17": 7834,
-        "18-29": 12990,
-        "30-49": 15356,
-        "50-64": 13806,
-        "65+": 8521,
-        "sin_datos": 18302
+        "0-5": 6734,
+        "6-11": 7605,
+        "12-17": 7686,
+        "18-29": 12595,
+        "30-49": 15599,
+        "50-64": 14230,
+        "65+": 8821,
+        "sin_datos": 18338
       },
       "rango_dom": "30-49",
       "rango_min": "0-5",
-      "pct_65mas": 11.7,
-      "pct_ninos": 20.1,
-      "pct_jovenes": 17.9,
+      "pct_65mas": 12.4,
+      "pct_ninos": 20.2,
+      "pct_jovenes": 17.7,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 14.3,
@@ -1056,8 +1072,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 8
         },
         "DIF": {
-          "benef": 4332,
-          "apoyos": 6122
+          "benef": 5633,
+          "apoyos": 11094
         },
         "ICHDII": {
           "benef": 3545,
@@ -1068,8 +1084,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 3047
         },
         "SALUD": {
-          "benef": 54062,
-          "apoyos": 105767
+          "benef": 51319,
+          "apoyos": 92021
         },
         "SDHyBC": {
           "benef": 8833,
@@ -1081,39 +1097,39 @@ window.DASHBOARD_DATA = {
         },
         "COESPO": {
           "benef": 917,
-          "apoyos": 917
+          "apoyos": 0
         }
       }
     },
     {
       "clave": "08018",
       "nombre": "CUAUHTÉMOC",
-      "total": 15929,
-      "m": 12818,
-      "h": 4494,
+      "total": 15301,
+      "m": 12791,
+      "h": 3604,
       "sn": 0,
       "poblacion": 196633,
-      "total_apoyos": 34134,
-      "n_programas": 13,
-      "localizables": 13261,
-      "loc_m": 10962,
-      "loc_h": 3570,
-      "pct_loc": 83.3,
+      "total_apoyos": 31025,
+      "n_programas": 16,
+      "localizables": 12577,
+      "loc_m": 10817,
+      "loc_h": 2737,
+      "pct_loc": 82.2,
       "rangos": {
-        "0-5": 1603,
-        "6-11": 1269,
-        "12-17": 1631,
-        "18-29": 2679,
-        "30-49": 3222,
-        "50-64": 2718,
-        "65+": 2011,
+        "0-5": 1615,
+        "6-11": 1219,
+        "12-17": 1546,
+        "18-29": 2603,
+        "30-49": 3117,
+        "50-64": 2649,
+        "65+": 1997,
         "sin_datos": 4584
       },
       "rango_dom": "30-49",
       "rango_min": "6-11",
-      "pct_65mas": 12.6,
-      "pct_ninos": 18.0,
-      "pct_jovenes": 16.8,
+      "pct_65mas": 13.1,
+      "pct_ninos": 18.5,
+      "pct_jovenes": 17.0,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -1131,8 +1147,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 64.7,
       "inst": {
         "DIF": {
-          "benef": 607,
-          "apoyos": 1736
+          "benef": 788,
+          "apoyos": 2948
         },
         "ICHDII": {
           "benef": 540,
@@ -1143,8 +1159,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 690
         },
         "SALUD": {
-          "benef": 13728,
-          "apoyos": 28164
+          "benef": 12945,
+          "apoyos": 23843
         },
         "SDHyBC": {
           "benef": 560,
@@ -1159,32 +1175,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08033",
       "nombre": "HIDALGO DEL PARRAL",
-      "total": 12935,
-      "m": 9951,
-      "h": 4095,
+      "total": 12724,
+      "m": 10075,
+      "h": 3575,
       "sn": 0,
       "poblacion": 127636,
-      "total_apoyos": 26767,
-      "n_programas": 13,
-      "localizables": 8916,
-      "loc_m": 7359,
-      "loc_h": 2550,
-      "pct_loc": 68.9,
+      "total_apoyos": 24833,
+      "n_programas": 15,
+      "localizables": 8461,
+      "loc_m": 7208,
+      "loc_h": 2039,
+      "pct_loc": 66.5,
       "rangos": {
-        "0-5": 1292,
-        "6-11": 623,
-        "12-17": 910,
-        "18-29": 3327,
-        "30-49": 2451,
-        "50-64": 2316,
-        "65+": 1846,
+        "0-5": 1519,
+        "6-11": 639,
+        "12-17": 896,
+        "18-29": 3307,
+        "30-49": 2616,
+        "50-64": 2537,
+        "65+": 2237,
         "sin_datos": 3267
       },
       "rango_dom": "18-29",
       "rango_min": "6-11",
-      "pct_65mas": 14.3,
-      "pct_ninos": 14.8,
-      "pct_jovenes": 25.7,
+      "pct_65mas": 17.6,
+      "pct_ninos": 17.0,
+      "pct_jovenes": 26.0,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -1202,8 +1218,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 64.1,
       "inst": {
         "DIF": {
-          "benef": 1473,
-          "apoyos": 1529
+          "benef": 1681,
+          "apoyos": 2995
         },
         "ICHDII": {
           "benef": 270,
@@ -1214,8 +1230,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 2138
         },
         "SALUD": {
-          "benef": 8743,
-          "apoyos": 20700
+          "benef": 8368,
+          "apoyos": 17300
         },
         "SDHyBC": {
           "benef": 855,
@@ -1230,32 +1246,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08022",
       "nombre": "DELICIAS",
-      "total": 9443,
-      "m": 7255,
-      "h": 3045,
+      "total": 8701,
+      "m": 6899,
+      "h": 2389,
       "sn": 0,
       "poblacion": 156678,
-      "total_apoyos": 19299,
-      "n_programas": 11,
-      "localizables": 8703,
-      "loc_m": 6768,
-      "loc_h": 2759,
-      "pct_loc": 92.2,
+      "total_apoyos": 16521,
+      "n_programas": 13,
+      "localizables": 7974,
+      "loc_m": 6443,
+      "loc_h": 2084,
+      "pct_loc": 91.6,
       "rangos": {
-        "0-5": 1148,
-        "6-11": 1149,
-        "12-17": 768,
-        "18-29": 1629,
-        "30-49": 1885,
-        "50-64": 1542,
-        "65+": 886,
+        "0-5": 1078,
+        "6-11": 1063,
+        "12-17": 699,
+        "18-29": 1445,
+        "30-49": 1722,
+        "50-64": 1467,
+        "65+": 855,
         "sin_datos": 2047
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 9.4,
-      "pct_ninos": 24.3,
-      "pct_jovenes": 17.3,
+      "pct_65mas": 9.8,
+      "pct_ninos": 24.6,
+      "pct_jovenes": 16.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -1273,8 +1289,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 66.6,
       "inst": {
         "DIF": {
-          "benef": 145,
-          "apoyos": 145
+          "benef": 240,
+          "apoyos": 366
         },
         "ICHDII": {
           "benef": 951,
@@ -1285,8 +1301,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 203
         },
         "SALUD": {
-          "benef": 8104,
-          "apoyos": 15714
+          "benef": 7287,
+          "apoyos": 12715
         },
         "SDHyBC": {
           "benef": 116,
@@ -1301,32 +1317,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08028",
       "nombre": "GUACHOCHI",
-      "total": 7708,
-      "m": 5945,
-      "h": 2144,
+      "total": 7638,
+      "m": 6048,
+      "h": 1923,
       "sn": 0,
       "poblacion": 56871,
-      "total_apoyos": 12890,
-      "n_programas": 11,
-      "localizables": 2819,
-      "loc_m": 2281,
-      "loc_h": 744,
-      "pct_loc": 36.6,
+      "total_apoyos": 13836,
+      "n_programas": 13,
+      "localizables": 2643,
+      "loc_m": 2207,
+      "loc_h": 599,
+      "pct_loc": 34.6,
       "rangos": {
-        "0-5": 810,
-        "6-11": 594,
-        "12-17": 800,
-        "18-29": 1630,
-        "30-49": 1791,
-        "50-64": 1113,
-        "65+": 841,
+        "0-5": 1058,
+        "6-11": 604,
+        "12-17": 815,
+        "18-29": 1738,
+        "30-49": 2133,
+        "50-64": 1441,
+        "65+": 1288,
         "sin_datos": 1549
       },
       "rango_dom": "30-49",
       "rango_min": "6-11",
-      "pct_65mas": 10.9,
-      "pct_ninos": 18.2,
-      "pct_jovenes": 21.1,
+      "pct_65mas": 16.9,
+      "pct_ninos": 21.8,
+      "pct_jovenes": 22.8,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -1344,8 +1360,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 64.4,
       "inst": {
         "DIF": {
-          "benef": 1892,
-          "apoyos": 2399
+          "benef": 2088,
+          "apoyos": 4175
         },
         "ICHDII": {
           "benef": 312,
@@ -1356,8 +1372,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 596
         },
         "SALUD": {
-          "benef": 4507,
-          "apoyos": 7408
+          "benef": 4269,
+          "apoyos": 6578
         },
         "SDHyBC": {
           "benef": 102,
@@ -1372,32 +1388,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08037",
       "nombre": "JIMÉNEZ",
-      "total": 7237,
-      "m": 5889,
-      "h": 2155,
+      "total": 6668,
+      "m": 5618,
+      "h": 1667,
       "sn": 0,
       "poblacion": 39683,
-      "total_apoyos": 15663,
-      "n_programas": 10,
-      "localizables": 6698,
-      "loc_m": 5543,
-      "loc_h": 1937,
-      "pct_loc": 92.6,
+      "total_apoyos": 13137,
+      "n_programas": 12,
+      "localizables": 6144,
+      "loc_m": 5263,
+      "loc_h": 1476,
+      "pct_loc": 92.1,
       "rangos": {
-        "0-5": 945,
-        "6-11": 591,
-        "12-17": 577,
-        "18-29": 1306,
-        "30-49": 1440,
-        "50-64": 1142,
-        "65+": 794,
+        "0-5": 891,
+        "6-11": 509,
+        "12-17": 528,
+        "18-29": 1167,
+        "30-49": 1325,
+        "50-64": 1077,
+        "65+": 750,
         "sin_datos": 2238
       },
       "rango_dom": "30-49",
-      "rango_min": "12-17",
-      "pct_65mas": 11.0,
-      "pct_ninos": 21.2,
-      "pct_jovenes": 18.0,
+      "rango_min": "6-11",
+      "pct_65mas": 11.2,
+      "pct_ninos": 21.0,
+      "pct_jovenes": 17.5,
       "grado_dom": "Medio",
       "pct_muy_alto": 0.8,
       "pct_alto": 6.8,
@@ -1415,8 +1431,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 57.5,
       "inst": {
         "DIF": {
-          "benef": 189,
-          "apoyos": 191
+          "benef": 212,
+          "apoyos": 371
         },
         "ICHDII": {
           "benef": 81,
@@ -1427,8 +1443,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 65
         },
         "SALUD": {
-          "benef": 6871,
-          "apoyos": 14702
+          "benef": 6285,
+          "apoyos": 11996
         },
         "SDHyBC": {
           "benef": 118,
@@ -1443,32 +1459,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08012",
       "nombre": "CAMARGO",
-      "total": 6967,
-      "m": 5670,
-      "h": 2228,
+      "total": 6462,
+      "m": 5451,
+      "h": 1797,
       "sn": 0,
       "poblacion": 48426,
-      "total_apoyos": 16487,
-      "n_programas": 10,
-      "localizables": 6295,
-      "loc_m": 5214,
-      "loc_h": 1982,
-      "pct_loc": 90.4,
+      "total_apoyos": 14059,
+      "n_programas": 12,
+      "localizables": 5781,
+      "loc_m": 4948,
+      "loc_h": 1568,
+      "pct_loc": 89.5,
       "rangos": {
-        "0-5": 636,
-        "6-11": 624,
-        "12-17": 419,
-        "18-29": 1019,
-        "30-49": 1456,
-        "50-64": 1386,
-        "65+": 983,
-        "sin_datos": 2686
+        "0-5": 599,
+        "6-11": 568,
+        "12-17": 364,
+        "18-29": 893,
+        "30-49": 1351,
+        "50-64": 1296,
+        "65+": 961,
+        "sin_datos": 2685
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 14.1,
+      "pct_65mas": 14.9,
       "pct_ninos": 18.1,
-      "pct_jovenes": 14.6,
+      "pct_jovenes": 13.8,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 40.0,
@@ -1486,8 +1502,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 59.6,
       "inst": {
         "DIF": {
-          "benef": 122,
-          "apoyos": 162
+          "benef": 157,
+          "apoyos": 342
         },
         "ICHDII": {
           "benef": 77,
@@ -1498,8 +1514,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 25
         },
         "SALUD": {
-          "benef": 6523,
-          "apoyos": 15455
+          "benef": 5982,
+          "apoyos": 12847
         },
         "SDHyBC": {
           "benef": 301,
@@ -1514,32 +1530,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08030",
       "nombre": "GUADALUPE Y CALVO",
-      "total": 5722,
-      "m": 4346,
-      "h": 1695,
+      "total": 5608,
+      "m": 4368,
+      "h": 1520,
       "sn": 0,
       "poblacion": 50243,
-      "total_apoyos": 11290,
-      "n_programas": 9,
-      "localizables": 2262,
-      "loc_m": 1865,
-      "loc_h": 582,
-      "pct_loc": 39.5,
+      "total_apoyos": 11211,
+      "n_programas": 11,
+      "localizables": 2101,
+      "loc_m": 1781,
+      "loc_h": 456,
+      "pct_loc": 37.5,
       "rangos": {
-        "0-5": 861,
-        "6-11": 412,
-        "12-17": 380,
-        "18-29": 1084,
-        "30-49": 1348,
-        "50-64": 759,
-        "65+": 573,
+        "0-5": 891,
+        "6-11": 453,
+        "12-17": 386,
+        "18-29": 1157,
+        "30-49": 1473,
+        "50-64": 815,
+        "65+": 645,
         "sin_datos": 1278
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 10.0,
-      "pct_ninos": 22.2,
-      "pct_jovenes": 18.9,
+      "pct_65mas": 11.5,
+      "pct_ninos": 24.0,
+      "pct_jovenes": 20.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 14.3,
       "pct_alto": 14.3,
@@ -1557,8 +1573,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 63.8,
       "inst": {
         "DIF": {
-          "benef": 1565,
-          "apoyos": 3482
+          "benef": 1646,
+          "apoyos": 4112
         },
         "ICHDII": {
           "benef": 42,
@@ -1569,8 +1585,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 20
         },
         "SALUD": {
-          "benef": 3361,
-          "apoyos": 5676
+          "benef": 3165,
+          "apoyos": 4967
         },
         "SDHyBC": {
           "benef": 332,
@@ -1585,32 +1601,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08032",
       "nombre": "GUERRERO",
-      "total": 5608,
-      "m": 4508,
-      "h": 1675,
+      "total": 5355,
+      "m": 4500,
+      "h": 1316,
       "sn": 0,
       "poblacion": 34977,
-      "total_apoyos": 11440,
-      "n_programas": 9,
-      "localizables": 4457,
-      "loc_m": 3706,
-      "loc_h": 1267,
-      "pct_loc": 79.5,
+      "total_apoyos": 10349,
+      "n_programas": 12,
+      "localizables": 4153,
+      "loc_m": 3614,
+      "loc_h": 928,
+      "pct_loc": 77.6,
       "rangos": {
-        "0-5": 330,
-        "6-11": 371,
-        "12-17": 377,
-        "18-29": 737,
-        "30-49": 1183,
-        "50-64": 1131,
-        "65+": 1191,
+        "0-5": 324,
+        "6-11": 326,
+        "12-17": 355,
+        "18-29": 720,
+        "30-49": 1204,
+        "50-64": 1216,
+        "65+": 1421,
         "sin_datos": 1791
       },
       "rango_dom": "65+",
       "rango_min": "0-5",
-      "pct_65mas": 21.2,
-      "pct_ninos": 12.5,
-      "pct_jovenes": 13.1,
+      "pct_65mas": 26.5,
+      "pct_ninos": 12.1,
+      "pct_jovenes": 13.4,
       "grado_dom": "Bajo",
       "pct_muy_alto": 3.7,
       "pct_alto": 2.5,
@@ -1628,8 +1644,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 44.2,
       "inst": {
         "DIF": {
-          "benef": 586,
-          "apoyos": 589
+          "benef": 633,
+          "apoyos": 1204
         },
         "ICHDII": {
           "benef": 14,
@@ -1640,8 +1656,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 66
         },
         "SALUD": {
-          "benef": 5002,
-          "apoyos": 10354
+          "benef": 4706,
+          "apoyos": 8648
         },
         "SDHyBC": {
           "benef": 91,
@@ -1656,32 +1672,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08009",
       "nombre": "BOCOYNA",
-      "total": 4891,
-      "m": 3842,
-      "h": 1348,
+      "total": 4592,
+      "m": 3738,
+      "h": 1110,
       "sn": 0,
       "poblacion": 23060,
-      "total_apoyos": 9483,
-      "n_programas": 9,
-      "localizables": 3201,
-      "loc_m": 2624,
-      "loc_h": 806,
-      "pct_loc": 65.4,
+      "total_apoyos": 8758,
+      "n_programas": 11,
+      "localizables": 2873,
+      "loc_m": 2443,
+      "loc_h": 611,
+      "pct_loc": 62.6,
       "rangos": {
-        "0-5": 593,
-        "6-11": 414,
-        "12-17": 342,
-        "18-29": 844,
-        "30-49": 1027,
-        "50-64": 683,
-        "65+": 596,
+        "0-5": 575,
+        "6-11": 351,
+        "12-17": 297,
+        "18-29": 802,
+        "30-49": 984,
+        "50-64": 663,
+        "65+": 623,
         "sin_datos": 1448
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 12.2,
-      "pct_ninos": 20.6,
-      "pct_jovenes": 17.3,
+      "pct_65mas": 13.6,
+      "pct_ninos": 20.2,
+      "pct_jovenes": 17.5,
       "grado_dom": "Alto",
       "pct_muy_alto": 20.5,
       "pct_alto": 41.0,
@@ -1699,16 +1715,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 72.0,
       "inst": {
         "DIF": {
-          "benef": 463,
-          "apoyos": 1038
+          "benef": 467,
+          "apoyos": 1211
         },
         "ICHDII": {
           "benef": 101,
           "apoyos": 249
         },
         "SALUD": {
-          "benef": 3801,
-          "apoyos": 6341
+          "benef": 3479,
+          "apoyos": 5443
         },
         "SDHyBC": {
           "benef": 227,
@@ -1721,34 +1737,101 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08053",
+      "nombre": "OJINAGA",
+      "total": 4275,
+      "m": 3656,
+      "h": 1054,
+      "sn": 0,
+      "poblacion": 24243,
+      "total_apoyos": 8098,
+      "n_programas": 8,
+      "localizables": 3905,
+      "loc_m": 3390,
+      "loc_h": 932,
+      "pct_loc": 91.3,
+      "rangos": {
+        "0-5": 419,
+        "6-11": 315,
+        "12-17": 229,
+        "18-29": 620,
+        "30-49": 891,
+        "50-64": 891,
+        "65+": 597,
+        "sin_datos": 1468
+      },
+      "rango_dom": "30-49",
+      "rango_min": "12-17",
+      "pct_65mas": 14.0,
+      "pct_ninos": 17.2,
+      "pct_jovenes": 14.5,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 8.0,
+      "pct_alto": 0,
+      "pct_medio": 88.0,
+      "pct_bajo": 4.0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 25,
+      "avg_sin_internet": 67.9,
+      "avg_hacinamiento": 6.1,
+      "avg_analfabeta": 7.4,
+      "avg_piso_tierra": 1.2,
+      "avg_sin_salud": 15.3,
+      "idx_vulnerabilidad": 41.5,
+      "idx_dependencia": 54.6,
+      "idx_urgencia": 56.6,
+      "inst": {
+        "DIF": {
+          "benef": 96,
+          "apoyos": 160
+        },
+        "ICHDII": {
+          "benef": 32,
+          "apoyos": 96
+        },
+        "SALUD": {
+          "benef": 4117,
+          "apoyos": 7585
+        },
+        "SDHyBC": {
+          "benef": 75,
+          "apoyos": 252
+        },
+        "SPyCI": {
+          "benef": 5,
+          "apoyos": 5
+        }
+      }
+    },
+    {
       "clave": "08002",
       "nombre": "ALDAMA",
-      "total": 4592,
-      "m": 3642,
-      "h": 1447,
+      "total": 4229,
+      "m": 3464,
+      "h": 1161,
       "sn": 0,
       "poblacion": 27591,
-      "total_apoyos": 9280,
-      "n_programas": 13,
-      "localizables": 4147,
-      "loc_m": 3368,
-      "loc_h": 1255,
-      "pct_loc": 90.3,
+      "total_apoyos": 7920,
+      "n_programas": 15,
+      "localizables": 3790,
+      "loc_m": 3206,
+      "loc_h": 961,
+      "pct_loc": 89.6,
       "rangos": {
-        "0-5": 597,
-        "6-11": 396,
-        "12-17": 415,
-        "18-29": 754,
-        "30-49": 905,
-        "50-64": 743,
-        "65+": 517,
+        "0-5": 600,
+        "6-11": 351,
+        "12-17": 362,
+        "18-29": 683,
+        "30-49": 835,
+        "50-64": 700,
+        "65+": 506,
         "sin_datos": 1499
       },
       "rango_dom": "30-49",
       "rango_min": "6-11",
-      "pct_65mas": 11.3,
-      "pct_ninos": 21.6,
-      "pct_jovenes": 16.4,
+      "pct_65mas": 12.0,
+      "pct_ninos": 22.5,
+      "pct_jovenes": 16.2,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -1770,8 +1853,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 2
         },
         "DIF": {
-          "benef": 180,
-          "apoyos": 180
+          "benef": 207,
+          "apoyos": 350
         },
         "ICHDII": {
           "benef": 15,
@@ -1782,8 +1865,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 125
         },
         "SALUD": {
-          "benef": 4219,
-          "apoyos": 8529
+          "benef": 3825,
+          "apoyos": 6999
         },
         "SDHyBC": {
           "benef": 161,
@@ -1796,101 +1879,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08053",
-      "nombre": "OJINAGA",
-      "total": 4546,
-      "m": 3726,
-      "h": 1357,
-      "sn": 0,
-      "poblacion": 24243,
-      "total_apoyos": 9523,
-      "n_programas": 7,
-      "localizables": 4212,
-      "loc_m": 3501,
-      "loc_h": 1232,
-      "pct_loc": 92.7,
-      "rangos": {
-        "0-5": 395,
-        "6-11": 333,
-        "12-17": 260,
-        "18-29": 669,
-        "30-49": 962,
-        "50-64": 971,
-        "65+": 639,
-        "sin_datos": 1468
-      },
-      "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 14.1,
-      "pct_ninos": 16.0,
-      "pct_jovenes": 14.7,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 8.0,
-      "pct_alto": 0,
-      "pct_medio": 88.0,
-      "pct_bajo": 4.0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 25,
-      "avg_sin_internet": 67.9,
-      "avg_hacinamiento": 6.1,
-      "avg_analfabeta": 7.4,
-      "avg_piso_tierra": 1.2,
-      "avg_sin_salud": 15.3,
-      "idx_vulnerabilidad": 41.5,
-      "idx_dependencia": 54.6,
-      "idx_urgencia": 56.6,
-      "inst": {
-        "DIF": {
-          "benef": 77,
-          "apoyos": 78
-        },
-        "ICHDII": {
-          "benef": 32,
-          "apoyos": 96
-        },
-        "SALUD": {
-          "benef": 4403,
-          "apoyos": 9092
-        },
-        "SDHyBC": {
-          "benef": 75,
-          "apoyos": 252
-        },
-        "SPyCI": {
-          "benef": 5,
-          "apoyos": 5
-        }
-      }
-    },
-    {
       "clave": "08046",
       "nombre": "MEOQUI",
-      "total": 3952,
-      "m": 3131,
-      "h": 1265,
+      "total": 3666,
+      "m": 2981,
+      "h": 1013,
       "sn": 0,
       "poblacion": 46611,
-      "total_apoyos": 8196,
-      "n_programas": 10,
-      "localizables": 3648,
-      "loc_m": 2928,
-      "loc_h": 1142,
-      "pct_loc": 92.3,
+      "total_apoyos": 6891,
+      "n_programas": 12,
+      "localizables": 3327,
+      "loc_m": 2762,
+      "loc_h": 869,
+      "pct_loc": 90.8,
       "rangos": {
-        "0-5": 411,
-        "6-11": 273,
-        "12-17": 270,
-        "18-29": 700,
-        "30-49": 762,
-        "50-64": 792,
-        "65+": 608,
+        "0-5": 403,
+        "6-11": 228,
+        "12-17": 248,
+        "18-29": 640,
+        "30-49": 708,
+        "50-64": 748,
+        "65+": 584,
         "sin_datos": 852
       },
       "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 15.4,
-      "pct_ninos": 17.3,
-      "pct_jovenes": 17.7,
+      "rango_min": "6-11",
+      "pct_65mas": 15.9,
+      "pct_ninos": 17.2,
+      "pct_jovenes": 17.5,
       "grado_dom": "Muy Alto",
       "pct_muy_alto": 50.0,
       "pct_alto": 50.0,
@@ -1912,8 +1928,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 3
         },
         "DIF": {
-          "benef": 50,
-          "apoyos": 50
+          "benef": 117,
+          "apoyos": 156
         },
         "ICHDII": {
           "benef": 93,
@@ -1924,8 +1940,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 69
         },
         "SALUD": {
-          "benef": 3517,
-          "apoyos": 7260
+          "benef": 3179,
+          "apoyos": 5849
         },
         "SDHyBC": {
           "benef": 257,
@@ -1940,32 +1956,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08051",
       "nombre": "NUEVO CASAS GRANDES",
-      "total": 3596,
-      "m": 2896,
-      "h": 1079,
+      "total": 3544,
+      "m": 2966,
+      "h": 899,
       "sn": 0,
       "poblacion": 68506,
-      "total_apoyos": 7640,
-      "n_programas": 8,
-      "localizables": 3008,
-      "loc_m": 2486,
-      "loc_h": 875,
-      "pct_loc": 83.6,
+      "total_apoyos": 7200,
+      "n_programas": 10,
+      "localizables": 2917,
+      "loc_m": 2509,
+      "loc_h": 693,
+      "pct_loc": 82.3,
       "rangos": {
-        "0-5": 271,
-        "6-11": 239,
+        "0-5": 289,
+        "6-11": 258,
         "12-17": 196,
-        "18-29": 535,
-        "30-49": 752,
-        "50-64": 757,
-        "65+": 628,
+        "18-29": 581,
+        "30-49": 800,
+        "50-64": 770,
+        "65+": 669,
         "sin_datos": 1226
       },
-      "rango_dom": "50-64",
+      "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 17.5,
-      "pct_ninos": 14.2,
-      "pct_jovenes": 14.9,
+      "pct_65mas": 18.9,
+      "pct_ninos": 15.4,
+      "pct_jovenes": 16.4,
       "grado_dom": "Alto",
       "pct_muy_alto": 0,
       "pct_alto": 100.0,
@@ -1983,16 +1999,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 81.2,
       "inst": {
         "DIF": {
-          "benef": 298,
-          "apoyos": 300
+          "benef": 331,
+          "apoyos": 599
         },
         "ICHDII": {
           "benef": 40,
           "apoyos": 120
         },
         "SALUD": {
-          "benef": 3285,
-          "apoyos": 7046
+          "benef": 3207,
+          "apoyos": 6307
         },
         "SDHyBC": {
           "benef": 26,
@@ -2005,105 +2021,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08041",
-      "nombre": "MADERA",
-      "total": 3032,
-      "m": 2455,
-      "h": 829,
-      "sn": 0,
-      "poblacion": 24000,
-      "total_apoyos": 6020,
-      "n_programas": 9,
-      "localizables": 2501,
-      "loc_m": 2110,
-      "loc_h": 624,
-      "pct_loc": 82.5,
-      "rangos": {
-        "0-5": 303,
-        "6-11": 190,
-        "12-17": 210,
-        "18-29": 520,
-        "30-49": 616,
-        "50-64": 495,
-        "65+": 439,
-        "sin_datos": 967
-      },
-      "rango_dom": "30-49",
-      "rango_min": "6-11",
-      "pct_65mas": 14.5,
-      "pct_ninos": 16.3,
-      "pct_jovenes": 17.2,
-      "grado_dom": "Muy Alto",
-      "pct_muy_alto": 50.0,
-      "pct_alto": 50.0,
-      "pct_medio": 0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 4,
-      "avg_sin_internet": 99.3,
-      "avg_hacinamiento": 25.7,
-      "avg_analfabeta": 9.2,
-      "avg_piso_tierra": 2.7,
-      "avg_sin_salud": 3.4,
-      "idx_vulnerabilidad": 71.5,
-      "idx_dependencia": 63.0,
-      "idx_urgencia": 91.5,
-      "inst": {
-        "DIF": {
-          "benef": 227,
-          "apoyos": 227
-        },
-        "ICHDII": {
-          "benef": 62,
-          "apoyos": 184
-        },
-        "ICHIJUV": {
-          "benef": 40,
-          "apoyos": 40
-        },
-        "SALUD": {
-          "benef": 2678,
-          "apoyos": 5202
-        },
-        "SDHyBC": {
-          "benef": 73,
-          "apoyos": 358
-        },
-        "SPyCI": {
-          "benef": 9,
-          "apoyos": 9
-        }
-      }
-    },
-    {
       "clave": "08011",
       "nombre": "BUENAVENTURA",
-      "total": 2944,
-      "m": 2387,
-      "h": 808,
+      "total": 3123,
+      "m": 2602,
+      "h": 749,
       "sn": 0,
       "poblacion": 27426,
-      "total_apoyos": 5668,
-      "n_programas": 7,
-      "localizables": 2141,
-      "loc_m": 1817,
-      "loc_h": 569,
-      "pct_loc": 72.7,
+      "total_apoyos": 5906,
+      "n_programas": 9,
+      "localizables": 2065,
+      "loc_m": 1822,
+      "loc_h": 447,
+      "pct_loc": 66.1,
       "rangos": {
-        "0-5": 243,
-        "6-11": 281,
-        "12-17": 149,
-        "18-29": 411,
-        "30-49": 532,
-        "50-64": 576,
-        "65+": 616,
+        "0-5": 307,
+        "6-11": 309,
+        "12-17": 158,
+        "18-29": 458,
+        "30-49": 620,
+        "50-64": 704,
+        "65+": 860,
         "sin_datos": 898
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 20.9,
-      "pct_ninos": 17.8,
-      "pct_jovenes": 14.0,
+      "pct_65mas": 27.5,
+      "pct_ninos": 19.7,
+      "pct_jovenes": 14.7,
       "grado_dom": "Bajo",
       "pct_muy_alto": 0,
       "pct_alto": 4.7,
@@ -2121,16 +2066,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 48.2,
       "inst": {
         "DIF": {
-          "benef": 621,
-          "apoyos": 638
+          "benef": 824,
+          "apoyos": 1230
         },
         "ICHDII": {
           "benef": 58,
           "apoyos": 174
         },
         "SALUD": {
-          "benef": 2366,
-          "apoyos": 4762
+          "benef": 2373,
+          "apoyos": 4408
         },
         "SDHyBC": {
           "benef": 15,
@@ -2143,69 +2088,73 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08005",
-      "nombre": "ASCENSIÓN",
-      "total": 2933,
-      "m": 2414,
-      "h": 825,
+      "clave": "08041",
+      "nombre": "MADERA",
+      "total": 3012,
+      "m": 2540,
+      "h": 686,
       "sn": 0,
-      "poblacion": 27978,
-      "total_apoyos": 5819,
-      "n_programas": 7,
-      "localizables": 2622,
-      "loc_m": 2197,
-      "loc_h": 716,
-      "pct_loc": 89.4,
+      "poblacion": 24000,
+      "total_apoyos": 5691,
+      "n_programas": 11,
+      "localizables": 2386,
+      "loc_m": 2093,
+      "loc_h": 479,
+      "pct_loc": 79.2,
       "rangos": {
-        "0-5": 291,
-        "6-11": 221,
-        "12-17": 194,
-        "18-29": 466,
-        "30-49": 562,
-        "50-64": 496,
-        "65+": 393,
-        "sin_datos": 1067
+        "0-5": 326,
+        "6-11": 189,
+        "12-17": 220,
+        "18-29": 541,
+        "30-49": 640,
+        "50-64": 516,
+        "65+": 521,
+        "sin_datos": 967
       },
       "rango_dom": "30-49",
-      "rango_min": "12-17",
-      "pct_65mas": 13.4,
-      "pct_ninos": 17.5,
-      "pct_jovenes": 15.9,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 4.1,
-      "pct_alto": 22.4,
-      "pct_medio": 63.3,
-      "pct_bajo": 2.0,
-      "pct_muy_bajo": 8.2,
-      "ageb_count": 49,
-      "avg_sin_internet": 67.6,
-      "avg_hacinamiento": 11.3,
-      "avg_analfabeta": 7.9,
-      "avg_piso_tierra": 2.8,
-      "avg_sin_salud": 36.4,
-      "idx_vulnerabilidad": 47.1,
-      "idx_dependencia": 58.7,
-      "idx_urgencia": 62.9,
+      "rango_min": "6-11",
+      "pct_65mas": 17.3,
+      "pct_ninos": 17.1,
+      "pct_jovenes": 18.0,
+      "grado_dom": "Muy Alto",
+      "pct_muy_alto": 50.0,
+      "pct_alto": 50.0,
+      "pct_medio": 0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 4,
+      "avg_sin_internet": 99.3,
+      "avg_hacinamiento": 25.7,
+      "avg_analfabeta": 9.2,
+      "avg_piso_tierra": 2.7,
+      "avg_sin_salud": 3.4,
+      "idx_vulnerabilidad": 71.5,
+      "idx_dependencia": 63.0,
+      "idx_urgencia": 91.5,
       "inst": {
         "DIF": {
-          "benef": 89,
-          "apoyos": 89
+          "benef": 257,
+          "apoyos": 470
         },
         "ICHDII": {
-          "benef": 19,
-          "apoyos": 55
+          "benef": 62,
+          "apoyos": 184
+        },
+        "ICHIJUV": {
+          "benef": 40,
+          "apoyos": 40
         },
         "SALUD": {
-          "benef": 2829,
-          "apoyos": 5598
+          "benef": 2638,
+          "apoyos": 4630
         },
         "SDHyBC": {
-          "benef": 17,
-          "apoyos": 75
+          "benef": 73,
+          "apoyos": 358
         },
         "SPyCI": {
-          "benef": 2,
-          "apoyos": 2
+          "benef": 9,
+          "apoyos": 9
         }
       }
     },
@@ -2213,31 +2162,31 @@ window.DASHBOARD_DATA = {
       "clave": "08007",
       "nombre": "BALLEZA",
       "total": 2894,
-      "m": 2131,
-      "h": 984,
+      "m": 2198,
+      "h": 898,
       "sn": 0,
       "poblacion": 16406,
-      "total_apoyos": 5115,
-      "n_programas": 8,
-      "localizables": 1555,
-      "loc_m": 1258,
-      "loc_h": 463,
-      "pct_loc": 53.7,
+      "total_apoyos": 5397,
+      "n_programas": 10,
+      "localizables": 1438,
+      "loc_m": 1209,
+      "loc_h": 378,
+      "pct_loc": 49.7,
       "rangos": {
-        "0-5": 284,
-        "6-11": 173,
-        "12-17": 199,
-        "18-29": 395,
-        "30-49": 708,
-        "50-64": 544,
-        "65+": 527,
+        "0-5": 429,
+        "6-11": 193,
+        "12-17": 209,
+        "18-29": 436,
+        "30-49": 882,
+        "50-64": 686,
+        "65+": 727,
         "sin_datos": 746
       },
       "rango_dom": "30-49",
       "rango_min": "6-11",
-      "pct_65mas": 18.2,
-      "pct_ninos": 15.8,
-      "pct_jovenes": 13.6,
+      "pct_65mas": 25.1,
+      "pct_ninos": 21.5,
+      "pct_jovenes": 15.1,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 23.5,
@@ -2255,12 +2204,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 61.0,
       "inst": {
         "DIF": {
-          "benef": 818,
-          "apoyos": 907
+          "benef": 900,
+          "apoyos": 1735
         },
         "SALUD": {
-          "benef": 1947,
-          "apoyos": 3756
+          "benef": 1870,
+          "apoyos": 3210
         },
         "SDHyBC": {
           "benef": 162,
@@ -2273,34 +2222,101 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08005",
+      "nombre": "ASCENSIÓN",
+      "total": 2826,
+      "m": 2447,
+      "h": 628,
+      "sn": 0,
+      "poblacion": 27978,
+      "total_apoyos": 5155,
+      "n_programas": 9,
+      "localizables": 2387,
+      "loc_m": 2110,
+      "loc_h": 505,
+      "pct_loc": 84.5,
+      "rangos": {
+        "0-5": 284,
+        "6-11": 186,
+        "12-17": 195,
+        "18-29": 436,
+        "30-49": 566,
+        "50-64": 490,
+        "65+": 416,
+        "sin_datos": 1067
+      },
+      "rango_dom": "30-49",
+      "rango_min": "6-11",
+      "pct_65mas": 14.7,
+      "pct_ninos": 16.6,
+      "pct_jovenes": 15.4,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 4.1,
+      "pct_alto": 22.4,
+      "pct_medio": 63.3,
+      "pct_bajo": 2.0,
+      "pct_muy_bajo": 8.2,
+      "ageb_count": 49,
+      "avg_sin_internet": 67.6,
+      "avg_hacinamiento": 11.3,
+      "avg_analfabeta": 7.9,
+      "avg_piso_tierra": 2.8,
+      "avg_sin_salud": 36.4,
+      "idx_vulnerabilidad": 47.1,
+      "idx_dependencia": 58.7,
+      "idx_urgencia": 62.9,
+      "inst": {
+        "DIF": {
+          "benef": 166,
+          "apoyos": 226
+        },
+        "ICHDII": {
+          "benef": 19,
+          "apoyos": 55
+        },
+        "SALUD": {
+          "benef": 2661,
+          "apoyos": 4797
+        },
+        "SDHyBC": {
+          "benef": 17,
+          "apoyos": 75
+        },
+        "SPyCI": {
+          "benef": 2,
+          "apoyos": 2
+        }
+      }
+    },
+    {
       "clave": "08066",
       "nombre": "URIQUE",
-      "total": 2878,
-      "m": 2187,
-      "h": 885,
+      "total": 2746,
+      "m": 2181,
+      "h": 749,
       "sn": 0,
       "poblacion": 16988,
-      "total_apoyos": 5735,
-      "n_programas": 11,
-      "localizables": 2114,
-      "loc_m": 1710,
-      "loc_h": 573,
-      "pct_loc": 73.5,
+      "total_apoyos": 5543,
+      "n_programas": 13,
+      "localizables": 1922,
+      "loc_m": 1612,
+      "loc_h": 443,
+      "pct_loc": 70.0,
       "rangos": {
-        "0-5": 322,
-        "6-11": 334,
-        "12-17": 261,
-        "18-29": 431,
-        "30-49": 608,
-        "50-64": 397,
-        "65+": 350,
+        "0-5": 332,
+        "6-11": 315,
+        "12-17": 248,
+        "18-29": 438,
+        "30-49": 603,
+        "50-64": 416,
+        "65+": 379,
         "sin_datos": 810
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 12.2,
-      "pct_ninos": 22.8,
-      "pct_jovenes": 15.0,
+      "pct_65mas": 13.8,
+      "pct_ninos": 23.6,
+      "pct_jovenes": 16.0,
       "grado_dom": "Alto",
       "pct_muy_alto": 0,
       "pct_alto": 66.7,
@@ -2318,8 +2334,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 74.8,
       "inst": {
         "DIF": {
-          "benef": 308,
-          "apoyos": 553
+          "benef": 310,
+          "apoyos": 733
         },
         "ICHDII": {
           "benef": 149,
@@ -2330,8 +2346,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 1
         },
         "SALUD": {
-          "benef": 2244,
-          "apoyos": 3867
+          "benef": 2105,
+          "apoyos": 3495
         },
         "SDHyBC": {
           "benef": 89,
@@ -2344,97 +2360,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08049",
-      "nombre": "NAMIQUIPA",
-      "total": 2765,
-      "m": 2152,
-      "h": 869,
-      "sn": 0,
-      "poblacion": 22649,
-      "total_apoyos": 5683,
-      "n_programas": 7,
-      "localizables": 2206,
-      "loc_m": 1791,
-      "loc_h": 652,
-      "pct_loc": 79.8,
-      "rangos": {
-        "0-5": 210,
-        "6-11": 173,
-        "12-17": 173,
-        "18-29": 352,
-        "30-49": 545,
-        "50-64": 498,
-        "65+": 576,
-        "sin_datos": 885
-      },
-      "rango_dom": "65+",
-      "rango_min": "6-11",
-      "pct_65mas": 20.8,
-      "pct_ninos": 13.9,
-      "pct_jovenes": 12.7,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 16.7,
-      "pct_alto": 16.7,
-      "pct_medio": 66.7,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 6,
-      "avg_sin_internet": 83.9,
-      "avg_hacinamiento": 5.6,
-      "avg_analfabeta": 7.2,
-      "avg_piso_tierra": 2.7,
-      "avg_sin_salud": 7.3,
-      "idx_vulnerabilidad": 44.3,
-      "idx_dependencia": 91.1,
-      "idx_urgencia": 61.2,
-      "inst": {
-        "DIF": {
-          "benef": 65,
-          "apoyos": 65
-        },
-        "SALUD": {
-          "benef": 2509,
-          "apoyos": 4943
-        },
-        "SDHyBC": {
-          "benef": 220,
-          "apoyos": 663
-        },
-        "SPyCI": {
-          "benef": 8,
-          "apoyos": 12
-        }
-      }
-    },
-    {
       "clave": "08063",
       "nombre": "SAUCILLO",
-      "total": 2665,
-      "m": 2175,
-      "h": 810,
+      "total": 2662,
+      "m": 2270,
+      "h": 660,
       "sn": 0,
       "poblacion": 29693,
-      "total_apoyos": 5610,
-      "n_programas": 11,
-      "localizables": 2143,
-      "loc_m": 1799,
-      "loc_h": 644,
-      "pct_loc": 80.4,
+      "total_apoyos": 5244,
+      "n_programas": 13,
+      "localizables": 2089,
+      "loc_m": 1827,
+      "loc_h": 507,
+      "pct_loc": 78.5,
       "rangos": {
-        "0-5": 273,
-        "6-11": 258,
-        "12-17": 152,
-        "18-29": 388,
-        "30-49": 532,
-        "50-64": 568,
-        "65+": 390,
+        "0-5": 337,
+        "6-11": 266,
+        "12-17": 147,
+        "18-29": 378,
+        "30-49": 566,
+        "50-64": 623,
+        "65+": 490,
         "sin_datos": 831
       },
       "rango_dom": "50-64",
       "rango_min": "12-17",
-      "pct_65mas": 14.6,
-      "pct_ninos": 19.9,
-      "pct_jovenes": 14.6,
+      "pct_65mas": 18.4,
+      "pct_ninos": 22.7,
+      "pct_jovenes": 14.2,
       "grado_dom": "Medio",
       "pct_muy_alto": 20.0,
       "pct_alto": 20.0,
@@ -2452,16 +2405,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 64.0,
       "inst": {
         "DIF": {
-          "benef": 304,
-          "apoyos": 304
+          "benef": 325,
+          "apoyos": 606
         },
         "ICHDII": {
           "benef": 64,
           "apoyos": 192
         },
         "SALUD": {
-          "benef": 2324,
-          "apoyos": 4972
+          "benef": 2306,
+          "apoyos": 4304
         },
         "SDHyBC": {
           "benef": 22,
@@ -2474,168 +2427,97 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08001",
-      "nombre": "AHUMADA",
-      "total": 2081,
-      "m": 1642,
-      "h": 632,
+      "clave": "08049",
+      "nombre": "NAMIQUIPA",
+      "total": 2623,
+      "m": 2151,
+      "h": 681,
       "sn": 0,
-      "poblacion": 16198,
-      "total_apoyos": 3718,
+      "poblacion": 22649,
+      "total_apoyos": 5060,
       "n_programas": 10,
-      "localizables": 1935,
-      "loc_m": 1554,
-      "loc_h": 568,
-      "pct_loc": 93.0,
+      "localizables": 2117,
+      "loc_m": 1819,
+      "loc_h": 477,
+      "pct_loc": 80.7,
       "rangos": {
-        "0-5": 276,
-        "6-11": 188,
-        "12-17": 161,
-        "18-29": 423,
-        "30-49": 407,
-        "50-64": 278,
-        "65+": 173,
-        "sin_datos": 634
+        "0-5": 206,
+        "6-11": 162,
+        "12-17": 151,
+        "18-29": 346,
+        "30-49": 518,
+        "50-64": 479,
+        "65+": 555,
+        "sin_datos": 885
       },
-      "rango_dom": "18-29",
+      "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 8.3,
-      "pct_ninos": 22.3,
-      "pct_jovenes": 20.3,
+      "pct_65mas": 21.2,
+      "pct_ninos": 14.0,
+      "pct_jovenes": 13.2,
       "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 4.5,
-      "pct_medio": 68.2,
-      "pct_bajo": 27.3,
-      "pct_muy_bajo": 0,
-      "ageb_count": 22,
-      "avg_sin_internet": 50.0,
-      "avg_hacinamiento": 2.9,
-      "avg_analfabeta": 2.8,
-      "avg_piso_tierra": 1.2,
-      "avg_sin_salud": 14.8,
-      "idx_vulnerabilidad": 33.0,
-      "idx_dependencia": 68.7,
-      "idx_urgencia": 61.1,
-      "inst": {
-        "DIF": {
-          "benef": 97,
-          "apoyos": 100
-        },
-        "ICHDII": {
-          "benef": 30,
-          "apoyos": 90
-        },
-        "ICHIJUV": {
-          "benef": 1,
-          "apoyos": 1
-        },
-        "SALUD": {
-          "benef": 1977,
-          "apoyos": 3486
-        },
-        "SDHyBC": {
-          "benef": 7,
-          "apoyos": 40
-        },
-        "SPyCI": {
-          "benef": 1,
-          "apoyos": 1
-        }
-      }
-    },
-    {
-      "clave": "08008",
-      "nombre": "BATOPILAS DE MANUEL GÓMEZ MORÍN",
-      "total": 1914,
-      "m": 1414,
-      "h": 629,
-      "sn": 0,
-      "poblacion": 11069,
-      "total_apoyos": 4212,
-      "n_programas": 9,
-      "localizables": 649,
-      "loc_m": 532,
-      "loc_h": 191,
-      "pct_loc": 33.9,
-      "rangos": {
-        "0-5": 179,
-        "6-11": 148,
-        "12-17": 146,
-        "18-29": 310,
-        "30-49": 445,
-        "50-64": 266,
-        "65+": 233,
-        "sin_datos": 660
-      },
-      "rango_dom": "30-49",
-      "rango_min": "12-17",
-      "pct_65mas": 12.2,
-      "pct_ninos": 17.1,
-      "pct_jovenes": 16.2,
-      "grado_dom": "Alto",
-      "pct_muy_alto": 42.9,
-      "pct_alto": 57.1,
-      "pct_medio": 0,
+      "pct_muy_alto": 16.7,
+      "pct_alto": 16.7,
+      "pct_medio": 66.7,
       "pct_bajo": 0,
       "pct_muy_bajo": 0,
-      "ageb_count": 7,
-      "avg_sin_internet": 95.7,
-      "avg_hacinamiento": 15.1,
-      "avg_analfabeta": 14.5,
-      "avg_piso_tierra": 34.9,
-      "avg_sin_salud": 13.0,
-      "idx_vulnerabilidad": 72.6,
-      "idx_dependencia": 76.5,
-      "idx_urgencia": 72.8,
+      "ageb_count": 6,
+      "avg_sin_internet": 83.9,
+      "avg_hacinamiento": 5.6,
+      "avg_analfabeta": 7.2,
+      "avg_piso_tierra": 2.7,
+      "avg_sin_salud": 7.3,
+      "idx_vulnerabilidad": 44.3,
+      "idx_dependencia": 91.1,
+      "idx_urgencia": 61.2,
       "inst": {
         "DIF": {
-          "benef": 379,
-          "apoyos": 1175
+          "benef": 73,
+          "apoyos": 130
         },
         "SALUD": {
-          "benef": 1447,
-          "apoyos": 2521
+          "benef": 2365,
+          "apoyos": 4255
         },
         "SDHyBC": {
-          "benef": 107,
-          "apoyos": 355
+          "benef": 220,
+          "apoyos": 663
         },
         "SPyCI": {
-          "benef": 91,
-          "apoyos": 161
+          "benef": 8,
+          "apoyos": 12
         }
       }
     },
     {
       "clave": "08031",
       "nombre": "GUAZAPARES",
-      "total": 1875,
-      "m": 1460,
-      "h": 603,
+      "total": 1968,
+      "m": 1594,
+      "h": 548,
       "sn": 0,
       "poblacion": 9305,
-      "total_apoyos": 3655,
-      "n_programas": 10,
-      "localizables": 1311,
-      "loc_m": 1105,
-      "loc_h": 364,
-      "pct_loc": 69.9,
+      "total_apoyos": 3719,
+      "n_programas": 12,
+      "localizables": 1293,
+      "loc_m": 1132,
+      "loc_h": 285,
+      "pct_loc": 65.7,
       "rangos": {
-        "0-5": 197,
-        "6-11": 171,
-        "12-17": 179,
-        "18-29": 233,
-        "30-49": 372,
-        "50-64": 270,
-        "65+": 379,
+        "0-5": 257,
+        "6-11": 210,
+        "12-17": 189,
+        "18-29": 262,
+        "30-49": 390,
+        "50-64": 302,
+        "65+": 537,
         "sin_datos": 543
       },
       "rango_dom": "65+",
-      "rango_min": "6-11",
-      "pct_65mas": 20.2,
-      "pct_ninos": 19.6,
-      "pct_jovenes": 12.4,
+      "rango_min": "12-17",
+      "pct_65mas": 27.3,
+      "pct_ninos": 23.7,
+      "pct_jovenes": 13.3,
       "grado_dom": "Medio",
       "pct_muy_alto": 7.4,
       "pct_alto": 22.2,
@@ -2653,8 +2535,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 57.9,
       "inst": {
         "DIF": {
-          "benef": 432,
-          "apoyos": 724
+          "benef": 491,
+          "apoyos": 1026
         },
         "ICHDII": {
           "benef": 46,
@@ -2665,8 +2547,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 11
         },
         "SALUD": {
-          "benef": 1447,
-          "apoyos": 2637
+          "benef": 1491,
+          "apoyos": 2399
         },
         "SDHyBC": {
           "benef": 5,
@@ -2679,34 +2561,168 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08001",
+      "nombre": "AHUMADA",
+      "total": 1965,
+      "m": 1614,
+      "h": 501,
+      "sn": 0,
+      "poblacion": 16198,
+      "total_apoyos": 3298,
+      "n_programas": 12,
+      "localizables": 1801,
+      "loc_m": 1502,
+      "loc_h": 438,
+      "pct_loc": 91.7,
+      "rangos": {
+        "0-5": 283,
+        "6-11": 172,
+        "12-17": 152,
+        "18-29": 395,
+        "30-49": 385,
+        "50-64": 282,
+        "65+": 173,
+        "sin_datos": 634
+      },
+      "rango_dom": "18-29",
+      "rango_min": "12-17",
+      "pct_65mas": 8.8,
+      "pct_ninos": 23.2,
+      "pct_jovenes": 20.1,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 4.5,
+      "pct_medio": 68.2,
+      "pct_bajo": 27.3,
+      "pct_muy_bajo": 0,
+      "ageb_count": 22,
+      "avg_sin_internet": 50.0,
+      "avg_hacinamiento": 2.9,
+      "avg_analfabeta": 2.8,
+      "avg_piso_tierra": 1.2,
+      "avg_sin_salud": 14.8,
+      "idx_vulnerabilidad": 33.0,
+      "idx_dependencia": 68.7,
+      "idx_urgencia": 61.1,
+      "inst": {
+        "DIF": {
+          "benef": 103,
+          "apoyos": 197
+        },
+        "ICHDII": {
+          "benef": 30,
+          "apoyos": 90
+        },
+        "ICHIJUV": {
+          "benef": 1,
+          "apoyos": 1
+        },
+        "SALUD": {
+          "benef": 1852,
+          "apoyos": 2969
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 40
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
+    },
+    {
+      "clave": "08008",
+      "nombre": "BATOPILAS DE MANUEL GÓMEZ MORÍN",
+      "total": 1933,
+      "m": 1512,
+      "h": 555,
+      "sn": 0,
+      "poblacion": 11069,
+      "total_apoyos": 4233,
+      "n_programas": 11,
+      "localizables": 605,
+      "loc_m": 512,
+      "loc_h": 150,
+      "pct_loc": 31.3,
+      "rangos": {
+        "0-5": 187,
+        "6-11": 151,
+        "12-17": 156,
+        "18-29": 331,
+        "30-49": 491,
+        "50-64": 294,
+        "65+": 277,
+        "sin_datos": 660
+      },
+      "rango_dom": "30-49",
+      "rango_min": "6-11",
+      "pct_65mas": 14.3,
+      "pct_ninos": 17.5,
+      "pct_jovenes": 17.1,
+      "grado_dom": "Alto",
+      "pct_muy_alto": 42.9,
+      "pct_alto": 57.1,
+      "pct_medio": 0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 7,
+      "avg_sin_internet": 95.7,
+      "avg_hacinamiento": 15.1,
+      "avg_analfabeta": 14.5,
+      "avg_piso_tierra": 34.9,
+      "avg_sin_salud": 13.0,
+      "idx_vulnerabilidad": 72.6,
+      "idx_dependencia": 76.5,
+      "idx_urgencia": 72.8,
+      "inst": {
+        "DIF": {
+          "benef": 387,
+          "apoyos": 1297
+        },
+        "SALUD": {
+          "benef": 1458,
+          "apoyos": 2420
+        },
+        "SDHyBC": {
+          "benef": 107,
+          "apoyos": 355
+        },
+        "SPyCI": {
+          "benef": 91,
+          "apoyos": 161
+        }
+      }
+    },
+    {
       "clave": "08014",
       "nombre": "CASAS GRANDES",
-      "total": 1843,
-      "m": 1456,
-      "h": 563,
+      "total": 1738,
+      "m": 1432,
+      "h": 435,
       "sn": 0,
       "poblacion": 12513,
-      "total_apoyos": 3804,
-      "n_programas": 5,
-      "localizables": 1618,
-      "loc_m": 1307,
-      "loc_h": 478,
-      "pct_loc": 87.8,
+      "total_apoyos": 3445,
+      "n_programas": 7,
+      "localizables": 1471,
+      "loc_m": 1242,
+      "loc_h": 346,
+      "pct_loc": 84.6,
       "rangos": {
-        "0-5": 143,
-        "6-11": 197,
-        "12-17": 171,
-        "18-29": 249,
-        "30-49": 391,
-        "50-64": 323,
-        "65+": 273,
+        "0-5": 152,
+        "6-11": 174,
+        "12-17": 152,
+        "18-29": 246,
+        "30-49": 393,
+        "50-64": 341,
+        "65+": 335,
         "sin_datos": 555
       },
       "rango_dom": "30-49",
       "rango_min": "0-5",
-      "pct_65mas": 14.8,
-      "pct_ninos": 18.4,
-      "pct_jovenes": 13.5,
+      "pct_65mas": 19.3,
+      "pct_ninos": 18.8,
+      "pct_jovenes": 14.2,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -2724,12 +2740,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 60.3,
       "inst": {
         "DIF": {
-          "benef": 189,
-          "apoyos": 191
+          "benef": 211,
+          "apoyos": 389
         },
         "SALUD": {
-          "benef": 1631,
-          "apoyos": 3182
+          "benef": 1504,
+          "apoyos": 2625
         },
         "SDHyBC": {
           "benef": 93,
@@ -2738,160 +2754,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08026",
-      "nombre": "GÓMEZ FARÍAS",
-      "total": 1603,
-      "m": 1252,
-      "h": 535,
-      "sn": 0,
-      "poblacion": 6778,
-      "total_apoyos": 3409,
-      "n_programas": 5,
-      "localizables": 1364,
-      "loc_m": 1102,
-      "loc_h": 438,
-      "pct_loc": 85.1,
-      "rangos": {
-        "0-5": 164,
-        "6-11": 125,
-        "12-17": 88,
-        "18-29": 215,
-        "30-49": 300,
-        "50-64": 314,
-        "65+": 345,
-        "sin_datos": 510
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 21.5,
-      "pct_ninos": 18.0,
-      "pct_jovenes": 13.4,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 16.7,
-      "pct_medio": 83.3,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 6,
-      "avg_sin_internet": 46.5,
-      "avg_hacinamiento": 2.8,
-      "avg_analfabeta": 5.4,
-      "avg_piso_tierra": 1.5,
-      "avg_sin_salud": 4.6,
-      "idx_vulnerabilidad": 33.3,
-      "idx_dependencia": 71.5,
-      "idx_urgencia": 53.7,
-      "inst": {
-        "DIF": {
-          "benef": 216,
-          "apoyos": 219
-        },
-        "ICHDII": {
-          "benef": 38,
-          "apoyos": 113
-        },
-        "SALUD": {
-          "benef": 1422,
-          "apoyos": 3021
-        },
-        "SDHyBC": {
-          "benef": 7,
-          "apoyos": 56
-        }
-      }
-    },
-    {
-      "clave": "08068",
-      "nombre": "VALLE DE ZARAGOZA",
-      "total": 1603,
-      "m": 1285,
-      "h": 543,
-      "sn": 0,
-      "poblacion": 4727,
-      "total_apoyos": 3711,
-      "n_programas": 8,
-      "localizables": 1444,
-      "loc_m": 1172,
-      "loc_h": 485,
-      "pct_loc": 90.1,
-      "rangos": {
-        "0-5": 119,
-        "6-11": 162,
-        "12-17": 110,
-        "18-29": 164,
-        "30-49": 308,
-        "50-64": 316,
-        "65+": 389,
-        "sin_datos": 580
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 24.3,
-      "pct_ninos": 17.5,
-      "pct_jovenes": 10.2,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 0,
-      "avg_sin_internet": 0,
-      "avg_hacinamiento": 0,
-      "avg_analfabeta": 0,
-      "avg_piso_tierra": 0,
-      "avg_sin_salud": 0,
-      "idx_vulnerabilidad": 17.5,
-      "idx_dependencia": 94.2,
-      "idx_urgencia": 42.6,
-      "inst": {
-        "DIF": {
-          "benef": 84,
-          "apoyos": 88
-        },
-        "ICHDII": {
-          "benef": 30,
-          "apoyos": 90
-        },
-        "SALUD": {
-          "benef": 1557,
-          "apoyos": 3513
-        },
-        "SDHyBC": {
-          "benef": 4,
-          "apoyos": 20
-        }
-      }
-    },
-    {
       "clave": "08013",
       "nombre": "CARICHI",
-      "total": 1581,
-      "m": 1241,
+      "total": 1723,
+      "m": 1378,
       "h": 468,
       "sn": 0,
       "poblacion": 7969,
-      "total_apoyos": 3166,
-      "n_programas": 8,
-      "localizables": 842,
-      "loc_m": 734,
-      "loc_h": 215,
-      "pct_loc": 53.3,
+      "total_apoyos": 3350,
+      "n_programas": 10,
+      "localizables": 831,
+      "loc_m": 751,
+      "loc_h": 171,
+      "pct_loc": 48.2,
       "rangos": {
-        "0-5": 144,
-        "6-11": 144,
-        "12-17": 89,
-        "18-29": 213,
-        "30-49": 317,
-        "50-64": 274,
-        "65+": 379,
+        "0-5": 229,
+        "6-11": 148,
+        "12-17": 102,
+        "18-29": 228,
+        "30-49": 390,
+        "50-64": 352,
+        "65+": 526,
         "sin_datos": 434
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 24.0,
-      "pct_ninos": 18.2,
-      "pct_jovenes": 13.5,
+      "pct_65mas": 30.5,
+      "pct_ninos": 21.9,
+      "pct_jovenes": 13.2,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -2909,12 +2799,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 58.6,
       "inst": {
         "DIF": {
-          "benef": 467,
-          "apoyos": 659
+          "benef": 619,
+          "apoyos": 1074
         },
         "SALUD": {
-          "benef": 1097,
-          "apoyos": 2308
+          "benef": 1111,
+          "apoyos": 2077
         },
         "SDHyBC": {
           "benef": 64,
@@ -2927,365 +2817,160 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08056",
-      "nombre": "ROSALES",
-      "total": 1404,
-      "m": 1126,
-      "h": 430,
+      "clave": "08026",
+      "nombre": "GÓMEZ FARÍAS",
+      "total": 1581,
+      "m": 1280,
+      "h": 459,
       "sn": 0,
-      "poblacion": 17031,
-      "total_apoyos": 2896,
-      "n_programas": 5,
-      "localizables": 1302,
-      "loc_m": 1050,
-      "loc_h": 402,
-      "pct_loc": 92.7,
-      "rangos": {
-        "0-5": 144,
-        "6-11": 100,
-        "12-17": 99,
-        "18-29": 212,
-        "30-49": 285,
-        "50-64": 300,
-        "65+": 199,
-        "sin_datos": 326
-      },
-      "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 14.2,
-      "pct_ninos": 17.4,
-      "pct_jovenes": 15.1,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 2,
-      "avg_sin_internet": 55.5,
-      "avg_hacinamiento": 0,
-      "avg_analfabeta": 7.0,
-      "avg_piso_tierra": 0,
-      "avg_sin_salud": 15.7,
-      "idx_vulnerabilidad": 35.4,
-      "idx_dependencia": 70.8,
-      "idx_urgencia": 64.6,
-      "inst": {
-        "DIF": {
-          "benef": 33,
-          "apoyos": 33
-        },
-        "ICHDII": {
-          "benef": 22,
-          "apoyos": 65
-        },
-        "SALUD": {
-          "benef": 1342,
-          "apoyos": 2718
-        },
-        "SDHyBC": {
-          "benef": 15,
-          "apoyos": 80
-        }
-      }
-    },
-    {
-      "clave": "08004",
-      "nombre": "AQUILES SERDÁN",
-      "total": 1342,
-      "m": 873,
-      "h": 531,
-      "sn": 0,
-      "poblacion": 33187,
-      "total_apoyos": 1984,
-      "n_programas": 10,
-      "localizables": 834,
-      "loc_m": 597,
-      "loc_h": 294,
-      "pct_loc": 62.1,
-      "rangos": {
-        "0-5": 175,
-        "6-11": 163,
-        "12-17": 386,
-        "18-29": 158,
-        "30-49": 221,
-        "50-64": 134,
-        "65+": 78,
-        "sin_datos": 154
-      },
-      "rango_dom": "12-17",
-      "rango_min": "65+",
-      "pct_65mas": 5.8,
-      "pct_ninos": 25.2,
-      "pct_jovenes": 11.8,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 12,
-      "avg_sin_internet": 68.2,
-      "avg_hacinamiento": 1.6,
-      "avg_analfabeta": 1.3,
-      "avg_piso_tierra": 1.1,
-      "avg_sin_salud": 10.4,
-      "idx_vulnerabilidad": 34.4,
-      "idx_dependencia": 54.2,
-      "idx_urgencia": 68.6,
-      "inst": {
-        "DIF": {
-          "benef": 104,
-          "apoyos": 112
-        },
-        "ICHDII": {
-          "benef": 15,
-          "apoyos": 43
-        },
-        "ICHIJUV": {
-          "benef": 316,
-          "apoyos": 317
-        },
-        "SALUD": {
-          "benef": 523,
-          "apoyos": 1053
-        },
-        "SDHyBC": {
-          "benef": 399,
-          "apoyos": 458
-        },
-        "SPyCI": {
-          "benef": 1,
-          "apoyos": 1
-        }
-      }
-    },
-    {
-      "clave": "08061",
-      "nombre": "SANTA BARBARA",
-      "total": 1337,
-      "m": 1061,
-      "h": 425,
-      "sn": 0,
-      "poblacion": 12579,
-      "total_apoyos": 3106,
+      "poblacion": 6778,
+      "total_apoyos": 3142,
       "n_programas": 7,
-      "localizables": 964,
-      "loc_m": 805,
-      "loc_h": 289,
-      "pct_loc": 72.1,
+      "localizables": 1265,
+      "loc_m": 1059,
+      "loc_h": 354,
+      "pct_loc": 80.0,
       "rangos": {
-        "0-5": 180,
-        "6-11": 71,
-        "12-17": 96,
-        "18-29": 241,
-        "30-49": 251,
-        "50-64": 246,
-        "65+": 236,
-        "sin_datos": 444
-      },
-      "rango_dom": "30-49",
-      "rango_min": "6-11",
-      "pct_65mas": 17.7,
-      "pct_ninos": 18.8,
-      "pct_jovenes": 18.0,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 2,
-      "avg_sin_internet": 91.4,
-      "avg_hacinamiento": 17.8,
-      "avg_analfabeta": 4.3,
-      "avg_piso_tierra": 0.8,
-      "avg_sin_salud": 1.2,
-      "idx_vulnerabilidad": 47.5,
-      "idx_dependencia": 70.3,
-      "idx_urgencia": 63.2,
-      "inst": {
-        "DIF": {
-          "benef": 212,
-          "apoyos": 212
-        },
-        "ICHDII": {
-          "benef": 21,
-          "apoyos": 53
-        },
-        "ICHIJUV": {
-          "benef": 49,
-          "apoyos": 49
-        },
-        "SALUD": {
-          "benef": 1098,
-          "apoyos": 2756
-        },
-        "SDHyBC": {
-          "benef": 5,
-          "apoyos": 26
-        },
-        "SPyCI": {
-          "benef": 6,
-          "apoyos": 10
-        }
-      }
-    },
-    {
-      "clave": "08006",
-      "nombre": "BACHINIVA",
-      "total": 1253,
-      "m": 1000,
-      "h": 411,
-      "sn": 0,
-      "poblacion": 5850,
-      "total_apoyos": 2564,
-      "n_programas": 7,
-      "localizables": 933,
-      "loc_m": 777,
-      "loc_h": 284,
-      "pct_loc": 74.5,
-      "rangos": {
-        "0-5": 129,
-        "6-11": 103,
-        "12-17": 70,
-        "18-29": 129,
-        "30-49": 221,
-        "50-64": 254,
-        "65+": 287,
-        "sin_datos": 389
+        "0-5": 226,
+        "6-11": 122,
+        "12-17": 84,
+        "18-29": 226,
+        "30-49": 304,
+        "50-64": 321,
+        "65+": 403,
+        "sin_datos": 510
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 22.9,
-      "pct_ninos": 18.5,
-      "pct_jovenes": 10.3,
+      "pct_65mas": 25.5,
+      "pct_ninos": 22.0,
+      "pct_jovenes": 14.3,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
-      "pct_alto": 7.7,
-      "pct_medio": 92.3,
+      "pct_alto": 16.7,
+      "pct_medio": 83.3,
       "pct_bajo": 0,
       "pct_muy_bajo": 0,
-      "ageb_count": 13,
-      "avg_sin_internet": 72.5,
-      "avg_hacinamiento": 6.7,
-      "avg_analfabeta": 3.8,
-      "avg_piso_tierra": 2.7,
-      "avg_sin_salud": 13.4,
-      "idx_vulnerabilidad": 40.6,
-      "idx_dependencia": 85.3,
-      "idx_urgencia": 56.1,
+      "ageb_count": 6,
+      "avg_sin_internet": 46.5,
+      "avg_hacinamiento": 2.8,
+      "avg_analfabeta": 5.4,
+      "avg_piso_tierra": 1.5,
+      "avg_sin_salud": 4.6,
+      "idx_vulnerabilidad": 33.3,
+      "idx_dependencia": 71.5,
+      "idx_urgencia": 53.7,
       "inst": {
         "DIF": {
-          "benef": 64,
-          "apoyos": 64
+          "benef": 252,
+          "apoyos": 433
         },
         "ICHDII": {
-          "benef": 31,
-          "apoyos": 93
+          "benef": 38,
+          "apoyos": 113
         },
         "SALUD": {
-          "benef": 1182,
-          "apoyos": 2358
+          "benef": 1369,
+          "apoyos": 2540
         },
         "SDHyBC": {
           "benef": 7,
-          "apoyos": 49
+          "apoyos": 56
         }
       }
     },
     {
-      "clave": "08036",
-      "nombre": "JANOS",
-      "total": 1208,
-      "m": 925,
-      "h": 388,
+      "clave": "08068",
+      "nombre": "VALLE DE ZARAGOZA",
+      "total": 1566,
+      "m": 1316,
+      "h": 452,
       "sn": 0,
-      "poblacion": 11321,
-      "total_apoyos": 2136,
-      "n_programas": 6,
-      "localizables": 977,
-      "loc_m": 788,
-      "loc_h": 283,
-      "pct_loc": 80.9,
+      "poblacion": 4727,
+      "total_apoyos": 3247,
+      "n_programas": 10,
+      "localizables": 1371,
+      "loc_m": 1159,
+      "loc_h": 398,
+      "pct_loc": 87.5,
       "rangos": {
-        "0-5": 119,
-        "6-11": 89,
-        "12-17": 81,
-        "18-29": 157,
-        "30-49": 239,
-        "50-64": 210,
-        "65+": 232,
-        "sin_datos": 353
+        "0-5": 133,
+        "6-11": 145,
+        "12-17": 97,
+        "18-29": 168,
+        "30-49": 319,
+        "50-64": 321,
+        "65+": 397,
+        "sin_datos": 580
       },
-      "rango_dom": "30-49",
+      "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 19.2,
-      "pct_ninos": 17.2,
-      "pct_jovenes": 13.0,
+      "pct_65mas": 25.4,
+      "pct_ninos": 17.8,
+      "pct_jovenes": 10.7,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
-      "pct_alto": 7.4,
-      "pct_medio": 51.9,
-      "pct_bajo": 37.0,
-      "pct_muy_bajo": 3.7,
-      "ageb_count": 27,
-      "avg_sin_internet": 56.9,
-      "avg_hacinamiento": 2.7,
-      "avg_analfabeta": 2.8,
-      "avg_piso_tierra": 1.2,
-      "avg_sin_salud": 12.6,
-      "idx_vulnerabilidad": 34.1,
-      "idx_dependencia": 72.8,
-      "idx_urgencia": 62.6,
+      "pct_alto": 0,
+      "pct_medio": 0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 0,
+      "avg_sin_internet": 0,
+      "avg_hacinamiento": 0,
+      "avg_analfabeta": 0,
+      "avg_piso_tierra": 0,
+      "avg_sin_salud": 0,
+      "idx_vulnerabilidad": 17.5,
+      "idx_dependencia": 94.2,
+      "idx_urgencia": 42.6,
       "inst": {
         "DIF": {
-          "benef": 156,
-          "apoyos": 157
+          "benef": 88,
+          "apoyos": 166
+        },
+        "ICHDII": {
+          "benef": 30,
+          "apoyos": 90
         },
         "SALUD": {
-          "benef": 1060,
-          "apoyos": 1902
+          "benef": 1515,
+          "apoyos": 2971
         },
         "SDHyBC": {
-          "benef": 10,
-          "apoyos": 62
-        },
-        "SPyCI": {
-          "benef": 12,
-          "apoyos": 15
+          "benef": 4,
+          "apoyos": 20
         }
       }
     },
     {
       "clave": "08052",
       "nombre": "OCAMPO",
-      "total": 1208,
-      "m": 962,
-      "h": 317,
+      "total": 1365,
+      "m": 1182,
+      "h": 246,
       "sn": 0,
       "poblacion": 8965,
-      "total_apoyos": 2014,
-      "n_programas": 6,
-      "localizables": 904,
-      "loc_m": 746,
-      "loc_h": 221,
-      "pct_loc": 74.8,
+      "total_apoyos": 2167,
+      "n_programas": 7,
+      "localizables": 969,
+      "loc_m": 853,
+      "loc_h": 159,
+      "pct_loc": 71.0,
       "rangos": {
-        "0-5": 74,
-        "6-11": 104,
-        "12-17": 90,
-        "18-29": 137,
-        "30-49": 257,
-        "50-64": 197,
-        "65+": 218,
+        "0-5": 102,
+        "6-11": 122,
+        "12-17": 105,
+        "18-29": 173,
+        "30-49": 301,
+        "50-64": 237,
+        "65+": 297,
         "sin_datos": 356
       },
       "rango_dom": "30-49",
       "rango_min": "0-5",
-      "pct_65mas": 18.0,
-      "pct_ninos": 14.7,
-      "pct_jovenes": 11.3,
+      "pct_65mas": 21.8,
+      "pct_ninos": 16.4,
+      "pct_jovenes": 12.7,
       "grado_dom": "Medio",
       "pct_muy_alto": 2.1,
       "pct_alto": 0,
@@ -3303,12 +2988,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 62.0,
       "inst": {
         "DIF": {
-          "benef": 127,
-          "apoyos": 128
+          "benef": 133,
+          "apoyos": 247
         },
         "SALUD": {
-          "benef": 1089,
-          "apoyos": 1803
+          "benef": 1237,
+          "apoyos": 1837
         },
         "SDHyBC": {
           "benef": 14,
@@ -3321,219 +3006,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08035",
-      "nombre": "IGNACIO ZARAGOZA",
-      "total": 1160,
-      "m": 899,
-      "h": 375,
+      "clave": "08061",
+      "nombre": "SANTA BARBARA",
+      "total": 1338,
+      "m": 1100,
+      "h": 364,
       "sn": 0,
-      "poblacion": 5040,
-      "total_apoyos": 2099,
-      "n_programas": 4,
-      "localizables": 898,
-      "loc_m": 724,
-      "loc_h": 265,
-      "pct_loc": 77.4,
+      "poblacion": 12579,
+      "total_apoyos": 2882,
+      "n_programas": 9,
+      "localizables": 923,
+      "loc_m": 801,
+      "loc_h": 229,
+      "pct_loc": 69.0,
       "rangos": {
-        "0-5": 79,
-        "6-11": 82,
-        "12-17": 55,
-        "18-29": 137,
-        "30-49": 193,
-        "50-64": 236,
-        "65+": 293,
-        "sin_datos": 351
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 25.3,
-      "pct_ninos": 13.9,
-      "pct_jovenes": 11.8,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 10.5,
-      "pct_medio": 73.7,
-      "pct_bajo": 15.8,
-      "pct_muy_bajo": 0,
-      "ageb_count": 19,
-      "avg_sin_internet": 43.7,
-      "avg_hacinamiento": 11.2,
-      "avg_analfabeta": 7.6,
-      "avg_piso_tierra": 6.4,
-      "avg_sin_salud": 38.8,
-      "idx_vulnerabilidad": 44.1,
-      "idx_dependencia": 97.1,
-      "idx_urgencia": 54.3,
-      "inst": {
-        "DIF": {
-          "benef": 110,
-          "apoyos": 110
-        },
-        "SALUD": {
-          "benef": 1080,
-          "apoyos": 1964
-        },
-        "SDHyBC": {
-          "benef": 4,
-          "apoyos": 25
-        }
-      }
-    },
-    {
-      "clave": "08040",
-      "nombre": "LÓPEZ",
-      "total": 1160,
-      "m": 943,
-      "h": 375,
-      "sn": 0,
-      "poblacion": 4291,
-      "total_apoyos": 2711,
-      "n_programas": 6,
-      "localizables": 1102,
-      "loc_m": 906,
-      "loc_h": 348,
-      "pct_loc": 95.0,
-      "rangos": {
-        "0-5": 105,
-        "6-11": 112,
-        "12-17": 76,
-        "18-29": 162,
-        "30-49": 238,
-        "50-64": 225,
-        "65+": 181,
+        "0-5": 243,
+        "6-11": 88,
+        "12-17": 96,
+        "18-29": 245,
+        "30-49": 276,
+        "50-64": 266,
+        "65+": 300,
         "sin_datos": 444
       },
-      "rango_dom": "30-49",
-      "rango_min": "12-17",
-      "pct_65mas": 15.6,
-      "pct_ninos": 18.7,
-      "pct_jovenes": 14.0,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 10.4,
-      "pct_alto": 19.4,
-      "pct_medio": 56.7,
-      "pct_bajo": 9.0,
-      "pct_muy_bajo": 4.5,
-      "ageb_count": 67,
-      "avg_sin_internet": 83.4,
-      "avg_hacinamiento": 6.8,
-      "avg_analfabeta": 6.2,
-      "avg_piso_tierra": 6.8,
-      "avg_sin_salud": 13.0,
-      "idx_vulnerabilidad": 46.6,
-      "idx_dependencia": 63.0,
-      "idx_urgencia": 50.4,
-      "inst": {
-        "DIF": {
-          "benef": 27,
-          "apoyos": 27
-        },
-        "ICHDII": {
-          "benef": 21,
-          "apoyos": 61
-        },
-        "SALUD": {
-          "benef": 1130,
-          "apoyos": 2592
-        },
-        "SDHyBC": {
-          "benef": 8,
-          "apoyos": 31
-        }
-      }
-    },
-    {
-      "clave": "08025",
-      "nombre": "SANTA ISABEL",
-      "total": 1160,
-      "m": 895,
-      "h": 384,
-      "sn": 0,
-      "poblacion": 3814,
-      "total_apoyos": 2317,
-      "n_programas": 6,
-      "localizables": 941,
-      "loc_m": 741,
-      "loc_h": 309,
-      "pct_loc": 81.1,
-      "rangos": {
-        "0-5": 138,
-        "6-11": 75,
-        "12-17": 51,
-        "18-29": 128,
-        "30-49": 229,
-        "50-64": 237,
-        "65+": 305,
-        "sin_datos": 349
-      },
       "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 26.3,
-      "pct_ninos": 18.4,
-      "pct_jovenes": 11.0,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 9.1,
-      "pct_medio": 90.9,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 11,
-      "avg_sin_internet": 86.3,
-      "avg_hacinamiento": 2.6,
-      "avg_analfabeta": 6.4,
-      "avg_piso_tierra": 0.6,
-      "avg_sin_salud": 10.6,
-      "idx_vulnerabilidad": 42.1,
-      "idx_dependencia": 79.9,
-      "idx_urgencia": 50.6,
-      "inst": {
-        "DIF": {
-          "benef": 217,
-          "apoyos": 217
-        },
-        "ICHDII": {
-          "benef": 20,
-          "apoyos": 51
-        },
-        "SALUD": {
-          "benef": 999,
-          "apoyos": 2007
-        },
-        "SDHyBC": {
-          "benef": 10,
-          "apoyos": 42
-        }
-      }
-    },
-    {
-      "clave": "08054",
-      "nombre": "PRAXÉDIS G. GUERRERO",
-      "total": 1087,
-      "m": 880,
-      "h": 315,
-      "sn": 0,
-      "poblacion": 4842,
-      "total_apoyos": 2199,
-      "n_programas": 6,
-      "localizables": 939,
-      "loc_m": 780,
-      "loc_h": 260,
-      "pct_loc": 86.4,
-      "rangos": {
-        "0-5": 123,
-        "6-11": 92,
-        "12-17": 69,
-        "18-29": 157,
-        "30-49": 168,
-        "50-64": 221,
-        "65+": 219,
-        "sin_datos": 342
-      },
-      "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 20.1,
-      "pct_ninos": 19.8,
-      "pct_jovenes": 14.4,
+      "rango_min": "6-11",
+      "pct_65mas": 22.4,
+      "pct_ninos": 24.7,
+      "pct_jovenes": 18.3,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -3541,62 +3041,330 @@ window.DASHBOARD_DATA = {
       "pct_bajo": 0,
       "pct_muy_bajo": 0,
       "ageb_count": 2,
-      "avg_sin_internet": 84.9,
-      "avg_hacinamiento": 1.6,
-      "avg_analfabeta": 1.1,
-      "avg_piso_tierra": 0.9,
-      "avg_sin_salud": 7.2,
-      "idx_vulnerabilidad": 37.2,
-      "idx_dependencia": 93.1,
-      "idx_urgencia": 55.0,
+      "avg_sin_internet": 91.4,
+      "avg_hacinamiento": 17.8,
+      "avg_analfabeta": 4.3,
+      "avg_piso_tierra": 0.8,
+      "avg_sin_salud": 1.2,
+      "idx_vulnerabilidad": 47.5,
+      "idx_dependencia": 70.3,
+      "idx_urgencia": 63.2,
       "inst": {
         "DIF": {
-          "benef": 102,
-          "apoyos": 123
+          "benef": 221,
+          "apoyos": 424
         },
         "ICHDII": {
-          "benef": 8,
-          "apoyos": 21
+          "benef": 21,
+          "apoyos": 53
+        },
+        "ICHIJUV": {
+          "benef": 49,
+          "apoyos": 49
         },
         "SALUD": {
-          "benef": 1013,
-          "apoyos": 2052
+          "benef": 1090,
+          "apoyos": 2320
         },
         "SDHyBC": {
-          "benef": 2,
-          "apoyos": 3
+          "benef": 5,
+          "apoyos": 26
+        },
+        "SPyCI": {
+          "benef": 6,
+          "apoyos": 10
+        }
+      }
+    },
+    {
+      "clave": "08004",
+      "nombre": "AQUILES SERDÁN",
+      "total": 1330,
+      "m": 880,
+      "h": 499,
+      "sn": 0,
+      "poblacion": 33187,
+      "total_apoyos": 1995,
+      "n_programas": 11,
+      "localizables": 822,
+      "loc_m": 597,
+      "loc_h": 269,
+      "pct_loc": 61.8,
+      "rangos": {
+        "0-5": 191,
+        "6-11": 164,
+        "12-17": 390,
+        "18-29": 160,
+        "30-49": 225,
+        "50-64": 153,
+        "65+": 109,
+        "sin_datos": 154
+      },
+      "rango_dom": "12-17",
+      "rango_min": "65+",
+      "pct_65mas": 8.2,
+      "pct_ninos": 26.7,
+      "pct_jovenes": 12.0,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 12,
+      "avg_sin_internet": 68.2,
+      "avg_hacinamiento": 1.6,
+      "avg_analfabeta": 1.3,
+      "avg_piso_tierra": 1.1,
+      "avg_sin_salud": 10.4,
+      "idx_vulnerabilidad": 34.4,
+      "idx_dependencia": 54.2,
+      "idx_urgencia": 68.6,
+      "inst": {
+        "DIF": {
+          "benef": 107,
+          "apoyos": 211
+        },
+        "ICHDII": {
+          "benef": 15,
+          "apoyos": 43
+        },
+        "ICHIJUV": {
+          "benef": 316,
+          "apoyos": 317
+        },
+        "SALUD": {
+          "benef": 509,
+          "apoyos": 965
+        },
+        "SDHyBC": {
+          "benef": 399,
+          "apoyos": 458
+        },
+        "SPyCI": {
+          "benef": 1,
+          "apoyos": 1
+        }
+      }
+    },
+    {
+      "clave": "08056",
+      "nombre": "ROSALES",
+      "total": 1301,
+      "m": 1094,
+      "h": 323,
+      "sn": 0,
+      "poblacion": 17031,
+      "total_apoyos": 2436,
+      "n_programas": 7,
+      "localizables": 1186,
+      "loc_m": 1004,
+      "loc_h": 295,
+      "pct_loc": 91.2,
+      "rangos": {
+        "0-5": 134,
+        "6-11": 93,
+        "12-17": 92,
+        "18-29": 198,
+        "30-49": 274,
+        "50-64": 290,
+        "65+": 182,
+        "sin_datos": 326
+      },
+      "rango_dom": "50-64",
+      "rango_min": "12-17",
+      "pct_65mas": 14.0,
+      "pct_ninos": 17.4,
+      "pct_jovenes": 15.2,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 2,
+      "avg_sin_internet": 55.5,
+      "avg_hacinamiento": 0,
+      "avg_analfabeta": 7.0,
+      "avg_piso_tierra": 0,
+      "avg_sin_salud": 15.7,
+      "idx_vulnerabilidad": 35.4,
+      "idx_dependencia": 70.8,
+      "idx_urgencia": 64.6,
+      "inst": {
+        "DIF": {
+          "benef": 35,
+          "apoyos": 66
+        },
+        "ICHDII": {
+          "benef": 22,
+          "apoyos": 65
+        },
+        "SALUD": {
+          "benef": 1236,
+          "apoyos": 2225
+        },
+        "SDHyBC": {
+          "benef": 15,
+          "apoyos": 80
+        }
+      }
+    },
+    {
+      "clave": "08036",
+      "nombre": "JANOS",
+      "total": 1297,
+      "m": 1036,
+      "h": 354,
+      "sn": 0,
+      "poblacion": 11321,
+      "total_apoyos": 2217,
+      "n_programas": 8,
+      "localizables": 993,
+      "loc_m": 836,
+      "loc_h": 235,
+      "pct_loc": 76.6,
+      "rangos": {
+        "0-5": 152,
+        "6-11": 99,
+        "12-17": 91,
+        "18-29": 174,
+        "30-49": 271,
+        "50-64": 224,
+        "65+": 279,
+        "sin_datos": 353
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 21.5,
+      "pct_ninos": 19.4,
+      "pct_jovenes": 13.4,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 7.4,
+      "pct_medio": 51.9,
+      "pct_bajo": 37.0,
+      "pct_muy_bajo": 3.7,
+      "ageb_count": 27,
+      "avg_sin_internet": 56.9,
+      "avg_hacinamiento": 2.7,
+      "avg_analfabeta": 2.8,
+      "avg_piso_tierra": 1.2,
+      "avg_sin_salud": 12.6,
+      "idx_vulnerabilidad": 34.1,
+      "idx_dependencia": 72.8,
+      "idx_urgencia": 62.6,
+      "inst": {
+        "DIF": {
+          "benef": 191,
+          "apoyos": 277
+        },
+        "SALUD": {
+          "benef": 1114,
+          "apoyos": 1863
+        },
+        "SDHyBC": {
+          "benef": 10,
+          "apoyos": 62
+        },
+        "SPyCI": {
+          "benef": 12,
+          "apoyos": 15
+        }
+      }
+    },
+    {
+      "clave": "08006",
+      "nombre": "BACHINIVA",
+      "total": 1254,
+      "m": 1080,
+      "h": 299,
+      "sn": 0,
+      "poblacion": 5850,
+      "total_apoyos": 2295,
+      "n_programas": 9,
+      "localizables": 893,
+      "loc_m": 794,
+      "loc_h": 193,
+      "pct_loc": 71.2,
+      "rangos": {
+        "0-5": 140,
+        "6-11": 105,
+        "12-17": 75,
+        "18-29": 132,
+        "30-49": 231,
+        "50-64": 253,
+        "65+": 297,
+        "sin_datos": 389
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 23.7,
+      "pct_ninos": 19.5,
+      "pct_jovenes": 10.5,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 7.7,
+      "pct_medio": 92.3,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 13,
+      "avg_sin_internet": 72.5,
+      "avg_hacinamiento": 6.7,
+      "avg_analfabeta": 3.8,
+      "avg_piso_tierra": 2.7,
+      "avg_sin_salud": 13.4,
+      "idx_vulnerabilidad": 40.6,
+      "idx_dependencia": 85.3,
+      "idx_urgencia": 56.1,
+      "inst": {
+        "DIF": {
+          "benef": 76,
+          "apoyos": 127
+        },
+        "ICHDII": {
+          "benef": 31,
+          "apoyos": 93
+        },
+        "SALUD": {
+          "benef": 1169,
+          "apoyos": 2026
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 49
         }
       }
     },
     {
       "clave": "08021",
       "nombre": "CHINIPAS",
-      "total": 1077,
-      "m": 766,
-      "h": 341,
+      "total": 1230,
+      "m": 943,
+      "h": 346,
       "sn": 0,
       "poblacion": 5960,
-      "total_apoyos": 1582,
-      "n_programas": 6,
-      "localizables": 403,
-      "loc_m": 330,
-      "loc_h": 98,
-      "pct_loc": 37.4,
+      "total_apoyos": 2130,
+      "n_programas": 9,
+      "localizables": 405,
+      "loc_m": 355,
+      "loc_h": 72,
+      "pct_loc": 32.9,
       "rangos": {
-        "0-5": 175,
-        "6-11": 55,
-        "12-17": 74,
-        "18-29": 130,
-        "30-49": 228,
-        "50-64": 175,
-        "65+": 211,
+        "0-5": 336,
+        "6-11": 73,
+        "12-17": 87,
+        "18-29": 197,
+        "30-49": 311,
+        "50-64": 249,
+        "65+": 367,
         "sin_datos": 224
       },
-      "rango_dom": "30-49",
+      "rango_dom": "65+",
       "rango_min": "6-11",
-      "pct_65mas": 19.6,
-      "pct_ninos": 21.4,
-      "pct_jovenes": 12.1,
+      "pct_65mas": 29.8,
+      "pct_ninos": 33.3,
+      "pct_jovenes": 16.0,
       "grado_dom": "Bajo",
       "pct_muy_alto": 1.9,
       "pct_alto": 2.8,
@@ -3614,12 +3382,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 45.4,
       "inst": {
         "DIF": {
-          "benef": 483,
-          "apoyos": 535
+          "benef": 556,
+          "apoyos": 987
         },
         "SALUD": {
-          "benef": 648,
-          "apoyos": 992
+          "benef": 748,
+          "apoyos": 1088
         },
         "SDHyBC": {
           "benef": 4,
@@ -3632,34 +3400,219 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08025",
+      "nombre": "SANTA ISABEL",
+      "total": 1105,
+      "m": 892,
+      "h": 312,
+      "sn": 0,
+      "poblacion": 3814,
+      "total_apoyos": 2176,
+      "n_programas": 8,
+      "localizables": 871,
+      "loc_m": 722,
+      "loc_h": 231,
+      "pct_loc": 78.8,
+      "rangos": {
+        "0-5": 160,
+        "6-11": 69,
+        "12-17": 44,
+        "18-29": 130,
+        "30-49": 234,
+        "50-64": 257,
+        "65+": 390,
+        "sin_datos": 349
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 35.3,
+      "pct_ninos": 20.7,
+      "pct_jovenes": 11.8,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 9.1,
+      "pct_medio": 90.9,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 11,
+      "avg_sin_internet": 86.3,
+      "avg_hacinamiento": 2.6,
+      "avg_analfabeta": 6.4,
+      "avg_piso_tierra": 0.6,
+      "avg_sin_salud": 10.6,
+      "idx_vulnerabilidad": 42.1,
+      "idx_dependencia": 79.9,
+      "idx_urgencia": 50.6,
+      "inst": {
+        "DIF": {
+          "benef": 228,
+          "apoyos": 431
+        },
+        "ICHDII": {
+          "benef": 20,
+          "apoyos": 51
+        },
+        "SALUD": {
+          "benef": 928,
+          "apoyos": 1652
+        },
+        "SDHyBC": {
+          "benef": 10,
+          "apoyos": 42
+        }
+      }
+    },
+    {
+      "clave": "08035",
+      "nombre": "IGNACIO ZARAGOZA",
+      "total": 1091,
+      "m": 876,
+      "h": 314,
+      "sn": 0,
+      "poblacion": 5040,
+      "total_apoyos": 1888,
+      "n_programas": 5,
+      "localizables": 815,
+      "loc_m": 684,
+      "loc_h": 209,
+      "pct_loc": 74.7,
+      "rangos": {
+        "0-5": 93,
+        "6-11": 87,
+        "12-17": 59,
+        "18-29": 128,
+        "30-49": 196,
+        "50-64": 238,
+        "65+": 293,
+        "sin_datos": 351
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 26.9,
+      "pct_ninos": 16.5,
+      "pct_jovenes": 11.7,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 10.5,
+      "pct_medio": 73.7,
+      "pct_bajo": 15.8,
+      "pct_muy_bajo": 0,
+      "ageb_count": 19,
+      "avg_sin_internet": 43.7,
+      "avg_hacinamiento": 11.2,
+      "avg_analfabeta": 7.6,
+      "avg_piso_tierra": 6.4,
+      "avg_sin_salud": 38.8,
+      "idx_vulnerabilidad": 44.1,
+      "idx_dependencia": 97.1,
+      "idx_urgencia": 54.3,
+      "inst": {
+        "DIF": {
+          "benef": 112,
+          "apoyos": 218
+        },
+        "SALUD": {
+          "benef": 1005,
+          "apoyos": 1645
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 25
+        }
+      }
+    },
+    {
+      "clave": "08040",
+      "nombre": "LÓPEZ",
+      "total": 1086,
+      "m": 901,
+      "h": 309,
+      "sn": 0,
+      "poblacion": 4291,
+      "total_apoyos": 2234,
+      "n_programas": 8,
+      "localizables": 1013,
+      "loc_m": 856,
+      "loc_h": 274,
+      "pct_loc": 93.3,
+      "rangos": {
+        "0-5": 126,
+        "6-11": 93,
+        "12-17": 63,
+        "18-29": 151,
+        "30-49": 210,
+        "50-64": 208,
+        "65+": 166,
+        "sin_datos": 444
+      },
+      "rango_dom": "30-49",
+      "rango_min": "12-17",
+      "pct_65mas": 15.3,
+      "pct_ninos": 20.2,
+      "pct_jovenes": 13.9,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 10.4,
+      "pct_alto": 19.4,
+      "pct_medio": 56.7,
+      "pct_bajo": 9.0,
+      "pct_muy_bajo": 4.5,
+      "ageb_count": 67,
+      "avg_sin_internet": 83.4,
+      "avg_hacinamiento": 6.8,
+      "avg_analfabeta": 6.2,
+      "avg_piso_tierra": 6.8,
+      "avg_sin_salud": 13.0,
+      "idx_vulnerabilidad": 46.6,
+      "idx_dependencia": 63.0,
+      "idx_urgencia": 50.4,
+      "inst": {
+        "DIF": {
+          "benef": 55,
+          "apoyos": 71
+        },
+        "ICHDII": {
+          "benef": 21,
+          "apoyos": 61
+        },
+        "SALUD": {
+          "benef": 1041,
+          "apoyos": 2071
+        },
+        "SDHyBC": {
+          "benef": 8,
+          "apoyos": 31
+        }
+      }
+    },
+    {
       "clave": "08045",
       "nombre": "MATAMOROS",
-      "total": 1058,
-      "m": 821,
-      "h": 347,
+      "total": 1078,
+      "m": 874,
+      "h": 310,
       "sn": 0,
       "poblacion": 4351,
-      "total_apoyos": 2634,
-      "n_programas": 5,
-      "localizables": 719,
-      "loc_m": 607,
-      "loc_h": 203,
-      "pct_loc": 68.0,
+      "total_apoyos": 2668,
+      "n_programas": 7,
+      "localizables": 725,
+      "loc_m": 639,
+      "loc_h": 169,
+      "pct_loc": 67.3,
       "rangos": {
-        "0-5": 138,
-        "6-11": 81,
-        "12-17": 63,
-        "18-29": 140,
-        "30-49": 182,
-        "50-64": 222,
-        "65+": 308,
+        "0-5": 222,
+        "6-11": 112,
+        "12-17": 66,
+        "18-29": 162,
+        "30-49": 205,
+        "50-64": 245,
+        "65+": 389,
         "sin_datos": 258
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 29.1,
-      "pct_ninos": 20.7,
-      "pct_jovenes": 13.2,
+      "pct_65mas": 36.1,
+      "pct_ninos": 31.0,
+      "pct_jovenes": 15.0,
       "grado_dom": "Medio",
       "pct_muy_alto": 2.4,
       "pct_alto": 14.3,
@@ -3677,12 +3630,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 53.3,
       "inst": {
         "DIF": {
-          "benef": 262,
-          "apoyos": 262
+          "benef": 279,
+          "apoyos": 523
         },
         "SALUD": {
-          "benef": 811,
-          "apoyos": 1872
+          "benef": 818,
+          "apoyos": 1645
         },
         "SDHyBC": {
           "benef": 99,
@@ -3697,32 +3650,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08067",
       "nombre": "URUACHI",
-      "total": 1018,
-      "m": 766,
-      "h": 303,
+      "total": 1061,
+      "m": 826,
+      "h": 289,
       "sn": 0,
       "poblacion": 7151,
-      "total_apoyos": 1856,
-      "n_programas": 6,
-      "localizables": 617,
-      "loc_m": 506,
-      "loc_h": 148,
-      "pct_loc": 60.6,
+      "total_apoyos": 2007,
+      "n_programas": 8,
+      "localizables": 589,
+      "loc_m": 499,
+      "loc_h": 122,
+      "pct_loc": 55.5,
       "rangos": {
-        "0-5": 142,
-        "6-11": 69,
-        "12-17": 54,
-        "18-29": 126,
-        "30-49": 214,
-        "50-64": 153,
-        "65+": 175,
+        "0-5": 204,
+        "6-11": 83,
+        "12-17": 60,
+        "18-29": 144,
+        "30-49": 242,
+        "50-64": 174,
+        "65+": 242,
         "sin_datos": 265
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 17.2,
-      "pct_ninos": 20.7,
-      "pct_jovenes": 12.4,
+      "pct_65mas": 22.8,
+      "pct_ninos": 27.0,
+      "pct_jovenes": 13.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 6.2,
       "pct_alto": 0,
@@ -3740,12 +3693,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 60.8,
       "inst": {
         "DIF": {
-          "benef": 318,
-          "apoyos": 682
+          "benef": 355,
+          "apoyos": 879
         },
         "SALUD": {
-          "benef": 711,
-          "apoyos": 1101
+          "benef": 734,
+          "apoyos": 1055
         },
         "SDHyBC": {
           "benef": 7,
@@ -3758,33 +3711,159 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08054",
+      "nombre": "PRAXÉDIS G. GUERRERO",
+      "total": 1037,
+      "m": 868,
+      "h": 257,
+      "sn": 0,
+      "poblacion": 4842,
+      "total_apoyos": 1970,
+      "n_programas": 8,
+      "localizables": 855,
+      "loc_m": 742,
+      "loc_h": 195,
+      "pct_loc": 82.4,
+      "rangos": {
+        "0-5": 142,
+        "6-11": 77,
+        "12-17": 63,
+        "18-29": 159,
+        "30-49": 163,
+        "50-64": 222,
+        "65+": 228,
+        "sin_datos": 342
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 22.0,
+      "pct_ninos": 21.1,
+      "pct_jovenes": 15.3,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 2,
+      "avg_sin_internet": 84.9,
+      "avg_hacinamiento": 1.6,
+      "avg_analfabeta": 1.1,
+      "avg_piso_tierra": 0.9,
+      "avg_sin_salud": 7.2,
+      "idx_vulnerabilidad": 37.2,
+      "idx_dependencia": 93.1,
+      "idx_urgencia": 55.0,
+      "inst": {
+        "DIF": {
+          "benef": 150,
+          "apoyos": 233
+        },
+        "ICHDII": {
+          "benef": 8,
+          "apoyos": 21
+        },
+        "SALUD": {
+          "benef": 919,
+          "apoyos": 1713
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 3
+        }
+      }
+    },
+    {
+      "clave": "08064",
+      "nombre": "TEMÓSACHIC",
+      "total": 932,
+      "m": 760,
+      "h": 260,
+      "sn": 0,
+      "poblacion": 5241,
+      "total_apoyos": 1759,
+      "n_programas": 8,
+      "localizables": 539,
+      "loc_m": 468,
+      "loc_h": 130,
+      "pct_loc": 57.8,
+      "rangos": {
+        "0-5": 140,
+        "6-11": 55,
+        "12-17": 47,
+        "18-29": 106,
+        "30-49": 189,
+        "50-64": 229,
+        "65+": 297,
+        "sin_datos": 291
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 31.9,
+      "pct_ninos": 20.9,
+      "pct_jovenes": 11.4,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 5,
+      "avg_sin_internet": 45.3,
+      "avg_hacinamiento": 5.3,
+      "avg_analfabeta": 9.0,
+      "avg_piso_tierra": 3.6,
+      "avg_sin_salud": 6.4,
+      "idx_vulnerabilidad": 38.1,
+      "idx_dependencia": 78.2,
+      "idx_urgencia": 58.7,
+      "inst": {
+        "DIF": {
+          "benef": 195,
+          "apoyos": 359
+        },
+        "SALUD": {
+          "benef": 779,
+          "apoyos": 1356
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 32
+        },
+        "SPyCI": {
+          "benef": 7,
+          "apoyos": 12
+        }
+      }
+    },
+    {
       "clave": "08017",
       "nombre": "LA CRUZ",
-      "total": 953,
-      "m": 771,
-      "h": 320,
+      "total": 920,
+      "m": 773,
+      "h": 248,
       "sn": 0,
       "poblacion": 3686,
-      "total_apoyos": 2203,
-      "n_programas": 5,
-      "localizables": 858,
-      "loc_m": 706,
-      "loc_h": 284,
-      "pct_loc": 90.0,
+      "total_apoyos": 1887,
+      "n_programas": 7,
+      "localizables": 799,
+      "loc_m": 679,
+      "loc_h": 214,
+      "pct_loc": 86.8,
       "rangos": {
-        "0-5": 74,
-        "6-11": 97,
-        "12-17": 71,
-        "18-29": 120,
-        "30-49": 201,
-        "50-64": 176,
-        "65+": 154,
+        "0-5": 87,
+        "6-11": 93,
+        "12-17": 67,
+        "18-29": 116,
+        "30-49": 190,
+        "50-64": 177,
+        "65+": 163,
         "sin_datos": 357
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 16.2,
-      "pct_ninos": 17.9,
+      "pct_65mas": 17.7,
+      "pct_ninos": 19.6,
       "pct_jovenes": 12.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 2.0,
@@ -3803,16 +3882,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 50.9,
       "inst": {
         "DIF": {
-          "benef": 47,
-          "apoyos": 47
+          "benef": 58,
+          "apoyos": 101
         },
         "ICHDII": {
           "benef": 12,
           "apoyos": 36
         },
         "SALUD": {
-          "benef": 910,
-          "apoyos": 2086
+          "benef": 868,
+          "apoyos": 1716
         },
         "SDHyBC": {
           "benef": 5,
@@ -3827,32 +3906,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08029",
       "nombre": "GUADALUPE",
-      "total": 921,
-      "m": 669,
-      "h": 336,
+      "total": 890,
+      "m": 665,
+      "h": 302,
       "sn": 0,
       "poblacion": 3708,
-      "total_apoyos": 1570,
-      "n_programas": 6,
-      "localizables": 589,
-      "loc_m": 423,
-      "loc_h": 225,
-      "pct_loc": 64.0,
+      "total_apoyos": 1458,
+      "n_programas": 9,
+      "localizables": 573,
+      "loc_m": 426,
+      "loc_h": 200,
+      "pct_loc": 64.4,
       "rangos": {
-        "0-5": 72,
-        "6-11": 72,
-        "12-17": 251,
-        "18-29": 105,
-        "30-49": 117,
-        "50-64": 150,
-        "65+": 144,
+        "0-5": 69,
+        "6-11": 65,
+        "12-17": 248,
+        "18-29": 108,
+        "30-49": 106,
+        "50-64": 161,
+        "65+": 171,
         "sin_datos": 186
       },
       "rango_dom": "12-17",
-      "rango_min": "0-5",
-      "pct_65mas": 15.6,
-      "pct_ninos": 15.6,
-      "pct_jovenes": 11.4,
+      "rango_min": "6-11",
+      "pct_65mas": 19.2,
+      "pct_ninos": 15.1,
+      "pct_jovenes": 12.1,
       "grado_dom": "Alto",
       "pct_muy_alto": 37.1,
       "pct_alto": 40.0,
@@ -3870,16 +3949,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 72.5,
       "inst": {
         "DIF": {
-          "benef": 55,
-          "apoyos": 55
+          "benef": 69,
+          "apoyos": 114
         },
         "ICHDII": {
           "benef": 20,
           "apoyos": 56
         },
         "SALUD": {
-          "benef": 625,
-          "apoyos": 1195
+          "benef": 586,
+          "apoyos": 1024
         },
         "SDHyBC": {
           "benef": 260,
@@ -3888,97 +3967,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08064",
-      "nombre": "TEMÓSACHIC",
-      "total": 884,
-      "m": 671,
-      "h": 295,
-      "sn": 0,
-      "poblacion": 5241,
-      "total_apoyos": 1690,
-      "n_programas": 5,
-      "localizables": 539,
-      "loc_m": 443,
-      "loc_h": 162,
-      "pct_loc": 61.0,
-      "rangos": {
-        "0-5": 85,
-        "6-11": 48,
-        "12-17": 45,
-        "18-29": 82,
-        "30-49": 151,
-        "50-64": 196,
-        "65+": 238,
-        "sin_datos": 291
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 26.9,
-      "pct_ninos": 15.0,
-      "pct_jovenes": 9.3,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 5,
-      "avg_sin_internet": 45.3,
-      "avg_hacinamiento": 5.3,
-      "avg_analfabeta": 9.0,
-      "avg_piso_tierra": 3.6,
-      "avg_sin_salud": 6.4,
-      "idx_vulnerabilidad": 38.1,
-      "idx_dependencia": 78.2,
-      "idx_urgencia": 58.7,
-      "inst": {
-        "DIF": {
-          "benef": 173,
-          "apoyos": 173
-        },
-        "SALUD": {
-          "benef": 747,
-          "apoyos": 1473
-        },
-        "SDHyBC": {
-          "benef": 4,
-          "apoyos": 32
-        },
-        "SPyCI": {
-          "benef": 7,
-          "apoyos": 12
-        }
-      }
-    },
-    {
       "clave": "08048",
       "nombre": "MORIS",
-      "total": 866,
-      "m": 682,
-      "h": 261,
+      "total": 876,
+      "m": 729,
+      "h": 217,
       "sn": 0,
       "poblacion": 4478,
-      "total_apoyos": 1521,
-      "n_programas": 5,
-      "localizables": 649,
-      "loc_m": 529,
-      "loc_h": 178,
-      "pct_loc": 74.9,
+      "total_apoyos": 1576,
+      "n_programas": 7,
+      "localizables": 638,
+      "loc_m": 544,
+      "loc_h": 141,
+      "pct_loc": 72.8,
       "rangos": {
-        "0-5": 84,
-        "6-11": 91,
-        "12-17": 51,
-        "18-29": 118,
-        "30-49": 165,
-        "50-64": 165,
-        "65+": 196,
+        "0-5": 123,
+        "6-11": 86,
+        "12-17": 50,
+        "18-29": 136,
+        "30-49": 205,
+        "50-64": 181,
+        "65+": 258,
         "sin_datos": 255
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 22.6,
-      "pct_ninos": 20.2,
-      "pct_jovenes": 13.6,
+      "pct_65mas": 29.5,
+      "pct_ninos": 23.9,
+      "pct_jovenes": 15.5,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 5.7,
@@ -3996,12 +4012,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 55.8,
       "inst": {
         "DIF": {
-          "benef": 173,
-          "apoyos": 173
+          "benef": 177,
+          "apoyos": 343
         },
         "SALUD": {
-          "benef": 770,
-          "apoyos": 1297
+          "benef": 774,
+          "apoyos": 1182
         },
         "SDHyBC": {
           "benef": 8,
@@ -4014,34 +4030,97 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08039",
-      "nombre": "JULIMES",
-      "total": 785,
-      "m": 581,
-      "h": 284,
+      "clave": "08024",
+      "nombre": "GALEANA",
+      "total": 772,
+      "m": 654,
+      "h": 167,
       "sn": 0,
-      "poblacion": 5734,
-      "total_apoyos": 1537,
-      "n_programas": 5,
-      "localizables": 683,
-      "loc_m": 525,
-      "loc_h": 236,
-      "pct_loc": 87.0,
+      "poblacion": 7291,
+      "total_apoyos": 1528,
+      "n_programas": 6,
+      "localizables": 500,
+      "loc_m": 428,
+      "loc_h": 112,
+      "pct_loc": 64.8,
       "rangos": {
-        "0-5": 125,
-        "6-11": 60,
-        "12-17": 43,
-        "18-29": 94,
-        "30-49": 179,
-        "50-64": 168,
-        "65+": 143,
-        "sin_datos": 114
+        "0-5": 95,
+        "6-11": 114,
+        "12-17": 54,
+        "18-29": 111,
+        "30-49": 149,
+        "50-64": 135,
+        "65+": 115,
+        "sin_datos": 224
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 18.2,
-      "pct_ninos": 23.6,
-      "pct_jovenes": 12.0,
+      "pct_65mas": 14.9,
+      "pct_ninos": 27.1,
+      "pct_jovenes": 14.4,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 11.1,
+      "pct_medio": 44.4,
+      "pct_bajo": 33.3,
+      "pct_muy_bajo": 11.1,
+      "ageb_count": 9,
+      "avg_sin_internet": 49.1,
+      "avg_hacinamiento": 1.8,
+      "avg_analfabeta": 3.1,
+      "avg_piso_tierra": 0.6,
+      "avg_sin_salud": 11.9,
+      "idx_vulnerabilidad": 31.9,
+      "idx_dependencia": 67.4,
+      "idx_urgencia": 63.9,
+      "inst": {
+        "DIF": {
+          "benef": 91,
+          "apoyos": 129
+        },
+        "ICHDII": {
+          "benef": 70,
+          "apoyos": 210
+        },
+        "SALUD": {
+          "benef": 621,
+          "apoyos": 1157
+        },
+        "SDHyBC": {
+          "benef": 4,
+          "apoyos": 32
+        }
+      }
+    },
+    {
+      "clave": "08039",
+      "nombre": "JULIMES",
+      "total": 739,
+      "m": 559,
+      "h": 249,
+      "sn": 0,
+      "poblacion": 5734,
+      "total_apoyos": 1350,
+      "n_programas": 7,
+      "localizables": 636,
+      "loc_m": 503,
+      "loc_h": 200,
+      "pct_loc": 86.1,
+      "rangos": {
+        "0-5": 146,
+        "6-11": 60,
+        "12-17": 43,
+        "18-29": 91,
+        "30-49": 171,
+        "50-64": 172,
+        "65+": 164,
+        "sin_datos": 114
+      },
+      "rango_dom": "50-64",
+      "rango_min": "12-17",
+      "pct_65mas": 22.2,
+      "pct_ninos": 27.9,
+      "pct_jovenes": 12.3,
       "grado_dom": "Bajo",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -4059,16 +4138,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 44.4,
       "inst": {
         "DIF": {
-          "benef": 102,
-          "apoyos": 102
+          "benef": 106,
+          "apoyos": 202
         },
         "ICHDII": {
           "benef": 27,
           "apoyos": 81
         },
         "SALUD": {
-          "benef": 685,
-          "apoyos": 1310
+          "benef": 635,
+          "apoyos": 1023
         },
         "SDHyBC": {
           "benef": 8,
@@ -4079,32 +4158,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08059",
       "nombre": "SAN FRANCISCO DE CONCHOS",
-      "total": 716,
-      "m": 572,
-      "h": 248,
+      "total": 702,
+      "m": 579,
+      "h": 217,
       "sn": 0,
       "poblacion": 3030,
-      "total_apoyos": 1575,
+      "total_apoyos": 1368,
       "n_programas": 4,
-      "localizables": 624,
-      "loc_m": 514,
-      "loc_h": 209,
-      "pct_loc": 87.2,
+      "localizables": 603,
+      "loc_m": 511,
+      "loc_h": 181,
+      "pct_loc": 85.9,
       "rangos": {
-        "0-5": 40,
-        "6-11": 94,
-        "12-17": 71,
+        "0-5": 41,
+        "6-11": 103,
+        "12-17": 70,
         "18-29": 68,
-        "30-49": 143,
-        "50-64": 142,
-        "65+": 130,
+        "30-49": 125,
+        "50-64": 136,
+        "65+": 128,
         "sin_datos": 266
       },
-      "rango_dom": "30-49",
+      "rango_dom": "50-64",
       "rango_min": "0-5",
       "pct_65mas": 18.2,
-      "pct_ninos": 18.7,
-      "pct_jovenes": 9.5,
+      "pct_ninos": 20.5,
+      "pct_jovenes": 9.7,
       "grado_dom": "Medio",
       "pct_muy_alto": 7.7,
       "pct_alto": 0,
@@ -4126,8 +4205,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 45
         },
         "SALUD": {
-          "benef": 608,
-          "apoyos": 1431
+          "benef": 593,
+          "apoyos": 1224
         },
         "SDHyBC": {
           "benef": 81,
@@ -4136,156 +4215,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08015",
-      "nombre": "CORONADO",
-      "total": 711,
-      "m": 572,
-      "h": 229,
-      "sn": 0,
-      "poblacion": 2060,
-      "total_apoyos": 1568,
-      "n_programas": 5,
-      "localizables": 572,
-      "loc_m": 468,
-      "loc_h": 184,
-      "pct_loc": 80.5,
-      "rangos": {
-        "0-5": 63,
-        "6-11": 67,
-        "12-17": 63,
-        "18-29": 72,
-        "30-49": 154,
-        "50-64": 135,
-        "65+": 156,
-        "sin_datos": 231
-      },
-      "rango_dom": "65+",
-      "rango_min": "0-5",
-      "pct_65mas": 21.9,
-      "pct_ninos": 18.3,
-      "pct_jovenes": 10.1,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 9,
-      "avg_sin_internet": 91.9,
-      "avg_hacinamiento": 1.1,
-      "avg_analfabeta": 3.9,
-      "avg_piso_tierra": 1.1,
-      "avg_sin_salud": 16.7,
-      "idx_vulnerabilidad": 41.5,
-      "idx_dependencia": 83.6,
-      "idx_urgencia": 46.4,
-      "inst": {
-        "DIF": {
-          "benef": 116,
-          "apoyos": 117
-        },
-        "SALUD": {
-          "benef": 637,
-          "apoyos": 1435
-        },
-        "SDHyBC": {
-          "benef": 2,
-          "apoyos": 16
-        }
-      }
-    },
-    {
-      "clave": "08024",
-      "nombre": "GALEANA",
-      "total": 649,
-      "m": 517,
-      "h": 183,
-      "sn": 0,
-      "poblacion": 7291,
-      "total_apoyos": 1436,
-      "n_programas": 4,
-      "localizables": 461,
-      "loc_m": 376,
-      "loc_h": 134,
-      "pct_loc": 71.0,
-      "rangos": {
-        "0-5": 60,
-        "6-11": 96,
-        "12-17": 38,
-        "18-29": 67,
-        "30-49": 110,
-        "50-64": 115,
-        "65+": 104,
-        "sin_datos": 224
-      },
-      "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 16.0,
-      "pct_ninos": 24.0,
-      "pct_jovenes": 10.3,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 11.1,
-      "pct_medio": 44.4,
-      "pct_bajo": 33.3,
-      "pct_muy_bajo": 11.1,
-      "ageb_count": 9,
-      "avg_sin_internet": 49.1,
-      "avg_hacinamiento": 1.8,
-      "avg_analfabeta": 3.1,
-      "avg_piso_tierra": 0.6,
-      "avg_sin_salud": 11.9,
-      "idx_vulnerabilidad": 31.9,
-      "idx_dependencia": 67.4,
-      "idx_urgencia": 63.9,
-      "inst": {
-        "DIF": {
-          "benef": 59,
-          "apoyos": 59
-        },
-        "ICHDII": {
-          "benef": 70,
-          "apoyos": 210
-        },
-        "SALUD": {
-          "benef": 528,
-          "apoyos": 1135
-        },
-        "SDHyBC": {
-          "benef": 4,
-          "apoyos": 32
-        }
-      }
-    },
-    {
       "clave": "08062",
       "nombre": "SATEVO",
-      "total": 641,
-      "m": 499,
-      "h": 228,
+      "total": 690,
+      "m": 569,
+      "h": 203,
       "sn": 0,
       "poblacion": 3793,
-      "total_apoyos": 1394,
-      "n_programas": 4,
-      "localizables": 477,
-      "loc_m": 391,
-      "loc_h": 164,
-      "pct_loc": 74.4,
+      "total_apoyos": 1387,
+      "n_programas": 6,
+      "localizables": 516,
+      "loc_m": 446,
+      "loc_h": 140,
+      "pct_loc": 74.8,
       "rangos": {
-        "0-5": 36,
-        "6-11": 38,
-        "12-17": 23,
-        "18-29": 50,
-        "30-49": 106,
-        "50-64": 127,
-        "65+": 229,
+        "0-5": 59,
+        "6-11": 36,
+        "12-17": 29,
+        "18-29": 69,
+        "30-49": 149,
+        "50-64": 155,
+        "65+": 256,
         "sin_datos": 252
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 35.7,
-      "pct_ninos": 11.5,
-      "pct_jovenes": 7.8,
+      "pct_65mas": 37.1,
+      "pct_ninos": 13.8,
+      "pct_jovenes": 10.0,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 4.0,
@@ -4303,12 +4260,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 56.6,
       "inst": {
         "DIF": {
-          "benef": 100,
-          "apoyos": 100
+          "benef": 103,
+          "apoyos": 200
         },
         "SALUD": {
-          "benef": 557,
-          "apoyos": 1261
+          "benef": 602,
+          "apoyos": 1154
         },
         "SDHyBC": {
           "benef": 8,
@@ -4317,34 +4274,93 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08015",
+      "nombre": "CORONADO",
+      "total": 666,
+      "m": 554,
+      "h": 183,
+      "sn": 0,
+      "poblacion": 2060,
+      "total_apoyos": 1398,
+      "n_programas": 7,
+      "localizables": 511,
+      "loc_m": 435,
+      "loc_h": 136,
+      "pct_loc": 76.7,
+      "rangos": {
+        "0-5": 68,
+        "6-11": 67,
+        "12-17": 62,
+        "18-29": 71,
+        "30-49": 168,
+        "50-64": 151,
+        "65+": 179,
+        "sin_datos": 231
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 26.9,
+      "pct_ninos": 20.3,
+      "pct_jovenes": 10.7,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 9,
+      "avg_sin_internet": 91.9,
+      "avg_hacinamiento": 1.1,
+      "avg_analfabeta": 3.9,
+      "avg_piso_tierra": 1.1,
+      "avg_sin_salud": 16.7,
+      "idx_vulnerabilidad": 41.5,
+      "idx_dependencia": 83.6,
+      "idx_urgencia": 46.4,
+      "inst": {
+        "DIF": {
+          "benef": 117,
+          "apoyos": 229
+        },
+        "SALUD": {
+          "benef": 591,
+          "apoyos": 1153
+        },
+        "SDHyBC": {
+          "benef": 2,
+          "apoyos": 16
+        }
+      }
+    },
+    {
       "clave": "08060",
       "nombre": "SAN FRANCISCO DEL ORO",
-      "total": 640,
-      "m": 512,
-      "h": 208,
+      "total": 629,
+      "m": 528,
+      "h": 172,
       "sn": 0,
       "poblacion": 5027,
-      "total_apoyos": 1421,
-      "n_programas": 8,
-      "localizables": 533,
-      "loc_m": 450,
-      "loc_h": 155,
-      "pct_loc": 83.3,
+      "total_apoyos": 1288,
+      "n_programas": 9,
+      "localizables": 501,
+      "loc_m": 440,
+      "loc_h": 123,
+      "pct_loc": 79.7,
       "rangos": {
-        "0-5": 57,
-        "6-11": 67,
-        "12-17": 40,
-        "18-29": 78,
-        "30-49": 132,
-        "50-64": 112,
-        "65+": 113,
+        "0-5": 69,
+        "6-11": 65,
+        "12-17": 42,
+        "18-29": 71,
+        "30-49": 127,
+        "50-64": 121,
+        "65+": 125,
         "sin_datos": 240
       },
       "rango_dom": "30-49",
       "rango_min": "12-17",
-      "pct_65mas": 17.7,
-      "pct_ninos": 19.4,
-      "pct_jovenes": 12.2,
+      "pct_65mas": 19.9,
+      "pct_ninos": 21.3,
+      "pct_jovenes": 11.3,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 5.3,
@@ -4362,8 +4378,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 60.3,
       "inst": {
         "DIF": {
-          "benef": 43,
-          "apoyos": 43
+          "benef": 47,
+          "apoyos": 85
         },
         "ICHDII": {
           "benef": 2,
@@ -4374,8 +4390,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 1
         },
         "SALUD": {
-          "benef": 603,
-          "apoyos": 1347
+          "benef": 587,
+          "apoyos": 1172
         },
         "SDHyBC": {
           "benef": 4,
@@ -4390,32 +4406,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08065",
       "nombre": "EL TULE",
-      "total": 614,
-      "m": 492,
-      "h": 198,
+      "total": 606,
+      "m": 498,
+      "h": 172,
       "sn": 0,
       "poblacion": 1369,
-      "total_apoyos": 1253,
-      "n_programas": 4,
-      "localizables": 418,
-      "loc_m": 341,
-      "loc_h": 137,
-      "pct_loc": 68.1,
+      "total_apoyos": 1204,
+      "n_programas": 6,
+      "localizables": 397,
+      "loc_m": 337,
+      "loc_h": 110,
+      "pct_loc": 65.5,
       "rangos": {
-        "0-5": 60,
+        "0-5": 91,
         "6-11": 32,
-        "12-17": 39,
-        "18-29": 62,
-        "30-49": 127,
-        "50-64": 116,
-        "65+": 177,
+        "12-17": 35,
+        "18-29": 66,
+        "30-49": 135,
+        "50-64": 133,
+        "65+": 232,
         "sin_datos": 180
       },
       "rango_dom": "65+",
       "rango_min": "6-11",
-      "pct_65mas": 28.8,
-      "pct_ninos": 15.0,
-      "pct_jovenes": 10.1,
+      "pct_65mas": 38.3,
+      "pct_ninos": 20.3,
+      "pct_jovenes": 10.9,
       "grado_dom": "Alto",
       "pct_muy_alto": 0,
       "pct_alto": 100.0,
@@ -4433,12 +4449,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 54.9,
       "inst": {
         "DIF": {
-          "benef": 115,
-          "apoyos": 115
+          "benef": 144,
+          "apoyos": 257
         },
         "SALUD": {
-          "benef": 535,
-          "apoyos": 1134
+          "benef": 510,
+          "apoyos": 943
         },
         "SDHyBC": {
           "benef": 1,
@@ -4453,32 +4469,32 @@ window.DASHBOARD_DATA = {
     {
       "clave": "08003",
       "nombre": "ALLENDE",
-      "total": 588,
-      "m": 373,
-      "h": 246,
+      "total": 586,
+      "m": 382,
+      "h": 227,
       "sn": 0,
       "poblacion": 8403,
-      "total_apoyos": 910,
-      "n_programas": 5,
-      "localizables": 500,
-      "loc_m": 315,
-      "loc_h": 215,
-      "pct_loc": 85.0,
+      "total_apoyos": 879,
+      "n_programas": 7,
+      "localizables": 486,
+      "loc_m": 311,
+      "loc_h": 195,
+      "pct_loc": 82.9,
       "rangos": {
-        "0-5": 99,
-        "6-11": 199,
-        "12-17": 37,
-        "18-29": 39,
-        "30-49": 61,
-        "50-64": 67,
-        "65+": 71,
+        "0-5": 106,
+        "6-11": 206,
+        "12-17": 35,
+        "18-29": 40,
+        "30-49": 70,
+        "50-64": 73,
+        "65+": 87,
         "sin_datos": 90
       },
       "rango_dom": "6-11",
       "rango_min": "12-17",
-      "pct_65mas": 12.1,
-      "pct_ninos": 50.7,
-      "pct_jovenes": 6.6,
+      "pct_65mas": 14.8,
+      "pct_ninos": 53.2,
+      "pct_jovenes": 6.8,
       "grado_dom": "Bajo",
       "pct_muy_alto": 7.4,
       "pct_alto": 11.1,
@@ -4496,12 +4512,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 52.8,
       "inst": {
         "DIF": {
-          "benef": 55,
-          "apoyos": 55
+          "benef": 62,
+          "apoyos": 110
         },
         "SALUD": {
-          "benef": 258,
-          "apoyos": 520
+          "benef": 246,
+          "apoyos": 434
         },
         "SDHyBC": {
           "benef": 278,
@@ -4514,93 +4530,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08058",
-      "nombre": "SAN FRANCISCO DE BORJA",
-      "total": 548,
-      "m": 435,
-      "h": 191,
-      "sn": 0,
-      "poblacion": 2315,
-      "total_apoyos": 1198,
-      "n_programas": 4,
-      "localizables": 411,
-      "loc_m": 348,
-      "loc_h": 138,
-      "pct_loc": 75.0,
-      "rangos": {
-        "0-5": 63,
-        "6-11": 27,
-        "12-17": 18,
-        "18-29": 51,
-        "30-49": 94,
-        "50-64": 128,
-        "65+": 186,
-        "sin_datos": 170
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 33.9,
-      "pct_ninos": 16.4,
-      "pct_jovenes": 9.3,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 0,
-      "pct_medio": 100.0,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 2,
-      "avg_sin_internet": 64.7,
-      "avg_hacinamiento": 2.0,
-      "avg_analfabeta": 1.6,
-      "avg_piso_tierra": 0,
-      "avg_sin_salud": 5.0,
-      "idx_vulnerabilidad": 33.0,
-      "idx_dependencia": 92.6,
-      "idx_urgencia": 54.0,
-      "inst": {
-        "DIF": {
-          "benef": 160,
-          "apoyos": 161
-        },
-        "SALUD": {
-          "benef": 433,
-          "apoyos": 1003
-        },
-        "SDHyBC": {
-          "benef": 6,
-          "apoyos": 34
-        }
-      }
-    },
-    {
       "clave": "08044",
       "nombre": "MATACHI",
-      "total": 533,
-      "m": 440,
-      "h": 175,
+      "total": 556,
+      "m": 476,
+      "h": 161,
       "sn": 0,
       "poblacion": 2700,
-      "total_apoyos": 1288,
-      "n_programas": 3,
-      "localizables": 398,
-      "loc_m": 350,
-      "loc_h": 118,
-      "pct_loc": 74.7,
+      "total_apoyos": 1210,
+      "n_programas": 5,
+      "localizables": 401,
+      "loc_m": 366,
+      "loc_h": 98,
+      "pct_loc": 72.1,
       "rangos": {
-        "0-5": 60,
-        "6-11": 32,
-        "12-17": 13,
-        "18-29": 40,
-        "30-49": 87,
-        "50-64": 119,
-        "65+": 170,
+        "0-5": 101,
+        "6-11": 47,
+        "12-17": 11,
+        "18-29": 53,
+        "30-49": 97,
+        "50-64": 123,
+        "65+": 187,
         "sin_datos": 228
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 31.9,
-      "pct_ninos": 17.3,
-      "pct_jovenes": 7.5,
+      "pct_65mas": 33.6,
+      "pct_ninos": 26.6,
+      "pct_jovenes": 9.5,
       "grado_dom": "Medio",
       "pct_muy_alto": 12.5,
       "pct_alto": 0,
@@ -4618,12 +4575,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 54.4,
       "inst": {
         "DIF": {
-          "benef": 89,
-          "apoyos": 89
+          "benef": 105,
+          "apoyos": 178
         },
         "SALUD": {
-          "benef": 464,
-          "apoyos": 1175
+          "benef": 477,
+          "apoyos": 1008
         },
         "SDHyBC": {
           "benef": 3,
@@ -4632,97 +4589,93 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08042",
-      "nombre": "MAGUARICHI",
-      "total": 520,
-      "m": 411,
-      "h": 152,
+      "clave": "08058",
+      "nombre": "SAN FRANCISCO DE BORJA",
+      "total": 532,
+      "m": 434,
+      "h": 169,
       "sn": 0,
-      "poblacion": 1277,
-      "total_apoyos": 1284,
-      "n_programas": 4,
-      "localizables": 300,
-      "loc_m": 251,
-      "loc_h": 79,
-      "pct_loc": 57.7,
+      "poblacion": 2315,
+      "total_apoyos": 1171,
+      "n_programas": 6,
+      "localizables": 390,
+      "loc_m": 340,
+      "loc_h": 114,
+      "pct_loc": 73.3,
       "rangos": {
-        "0-5": 67,
-        "6-11": 39,
-        "12-17": 60,
-        "18-29": 76,
-        "30-49": 136,
-        "50-64": 93,
-        "65+": 80,
-        "sin_datos": 165
+        "0-5": 90,
+        "6-11": 28,
+        "12-17": 20,
+        "18-29": 60,
+        "30-49": 106,
+        "50-64": 139,
+        "65+": 258,
+        "sin_datos": 170
       },
-      "rango_dom": "30-49",
-      "rango_min": "6-11",
-      "pct_65mas": 15.4,
-      "pct_ninos": 20.4,
-      "pct_jovenes": 14.6,
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 48.5,
+      "pct_ninos": 22.2,
+      "pct_jovenes": 11.3,
       "grado_dom": "Medio",
-      "pct_muy_alto": 20.0,
+      "pct_muy_alto": 0,
       "pct_alto": 0,
-      "pct_medio": 60.0,
-      "pct_bajo": 20.0,
+      "pct_medio": 100.0,
+      "pct_bajo": 0,
       "pct_muy_bajo": 0,
-      "ageb_count": 5,
-      "avg_sin_internet": 88.2,
-      "avg_hacinamiento": 0,
-      "avg_analfabeta": 10.4,
-      "avg_piso_tierra": 0.5,
-      "avg_sin_salud": 2.4,
-      "idx_vulnerabilidad": 43.4,
-      "idx_dependencia": 91.2,
-      "idx_urgencia": 42.0,
+      "ageb_count": 2,
+      "avg_sin_internet": 64.7,
+      "avg_hacinamiento": 2.0,
+      "avg_analfabeta": 1.6,
+      "avg_piso_tierra": 0,
+      "avg_sin_salud": 5.0,
+      "idx_vulnerabilidad": 33.0,
+      "idx_dependencia": 92.6,
+      "idx_urgencia": 54.0,
       "inst": {
         "DIF": {
-          "benef": 112,
-          "apoyos": 200
+          "benef": 168,
+          "apoyos": 321
         },
         "SALUD": {
-          "benef": 412,
-          "apoyos": 856
+          "benef": 411,
+          "apoyos": 816
         },
         "SDHyBC": {
-          "benef": 59,
-          "apoyos": 213
-        },
-        "SPyCI": {
-          "benef": 5,
-          "apoyos": 15
+          "benef": 6,
+          "apoyos": 34
         }
       }
     },
     {
       "clave": "08050",
       "nombre": "NONOAVA",
-      "total": 519,
-      "m": 390,
-      "h": 182,
+      "total": 526,
+      "m": 401,
+      "h": 171,
       "sn": 0,
       "poblacion": 3036,
-      "total_apoyos": 1155,
-      "n_programas": 7,
-      "localizables": 372,
-      "loc_m": 295,
-      "loc_h": 125,
-      "pct_loc": 71.7,
+      "total_apoyos": 1119,
+      "n_programas": 9,
+      "localizables": 356,
+      "loc_m": 290,
+      "loc_h": 108,
+      "pct_loc": 67.7,
       "rangos": {
-        "0-5": 80,
-        "6-11": 47,
-        "12-17": 34,
-        "18-29": 37,
-        "30-49": 91,
-        "50-64": 110,
-        "65+": 116,
+        "0-5": 119,
+        "6-11": 51,
+        "12-17": 37,
+        "18-29": 44,
+        "30-49": 98,
+        "50-64": 115,
+        "65+": 125,
         "sin_datos": 130
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 22.4,
-      "pct_ninos": 24.5,
-      "pct_jovenes": 7.1,
+      "pct_65mas": 23.8,
+      "pct_ninos": 32.3,
+      "pct_jovenes": 8.4,
       "grado_dom": "Bajo",
       "pct_muy_alto": 0,
       "pct_alto": 5.5,
@@ -4740,8 +4693,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 42.8,
       "inst": {
         "DIF": {
-          "benef": 78,
-          "apoyos": 78
+          "benef": 98,
+          "apoyos": 157
         },
         "ICHDII": {
           "benef": 29,
@@ -4752,8 +4705,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 1
         },
         "SALUD": {
-          "benef": 396,
-          "apoyos": 820
+          "benef": 390,
+          "apoyos": 705
         },
         "SDHyBC": {
           "benef": 41,
@@ -4766,97 +4719,97 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08055",
-      "nombre": "RIVA PALACIO",
-      "total": 489,
-      "m": 398,
-      "h": 139,
+      "clave": "08042",
+      "nombre": "MAGUARICHI",
+      "total": 497,
+      "m": 402,
+      "h": 133,
       "sn": 0,
-      "poblacion": 7722,
-      "total_apoyos": 812,
-      "n_programas": 5,
-      "localizables": 382,
-      "loc_m": 326,
-      "loc_h": 100,
-      "pct_loc": 78.1,
+      "poblacion": 1277,
+      "total_apoyos": 1145,
+      "n_programas": 6,
+      "localizables": 268,
+      "loc_m": 226,
+      "loc_h": 65,
+      "pct_loc": 53.9,
       "rangos": {
-        "0-5": 28,
-        "6-11": 45,
-        "12-17": 34,
-        "18-29": 56,
-        "30-49": 91,
-        "50-64": 99,
-        "65+": 98,
-        "sin_datos": 109
+        "0-5": 71,
+        "6-11": 36,
+        "12-17": 59,
+        "18-29": 78,
+        "30-49": 130,
+        "50-64": 98,
+        "65+": 78,
+        "sin_datos": 165
       },
-      "rango_dom": "50-64",
-      "rango_min": "0-5",
-      "pct_65mas": 20.0,
-      "pct_ninos": 14.9,
-      "pct_jovenes": 11.5,
+      "rango_dom": "30-49",
+      "rango_min": "6-11",
+      "pct_65mas": 15.7,
+      "pct_ninos": 21.5,
+      "pct_jovenes": 15.7,
       "grado_dom": "Medio",
-      "pct_muy_alto": 0,
+      "pct_muy_alto": 20.0,
       "pct_alto": 0,
-      "pct_medio": 84.6,
-      "pct_bajo": 15.4,
+      "pct_medio": 60.0,
+      "pct_bajo": 20.0,
       "pct_muy_bajo": 0,
-      "ageb_count": 13,
-      "avg_sin_internet": 49.0,
-      "avg_hacinamiento": 3.9,
-      "avg_analfabeta": 2.8,
-      "avg_piso_tierra": 0.7,
-      "avg_sin_salud": 12.4,
-      "idx_vulnerabilidad": 32.7,
-      "idx_dependencia": 75.4,
-      "idx_urgencia": 67.0,
+      "ageb_count": 5,
+      "avg_sin_internet": 88.2,
+      "avg_hacinamiento": 0,
+      "avg_analfabeta": 10.4,
+      "avg_piso_tierra": 0.5,
+      "avg_sin_salud": 2.4,
+      "idx_vulnerabilidad": 43.4,
+      "idx_dependencia": 91.2,
+      "idx_urgencia": 42.0,
       "inst": {
         "DIF": {
-          "benef": 42,
-          "apoyos": 45
+          "benef": 120,
+          "apoyos": 241
         },
         "SALUD": {
-          "benef": 456,
-          "apoyos": 762
+          "benef": 383,
+          "apoyos": 676
         },
         "SDHyBC": {
-          "benef": 1,
-          "apoyos": 2
+          "benef": 59,
+          "apoyos": 213
         },
         "SPyCI": {
-          "benef": 3,
-          "apoyos": 3
+          "benef": 5,
+          "apoyos": 15
         }
       }
     },
     {
       "clave": "08027",
       "nombre": "GRAN MORELOS",
-      "total": 475,
-      "m": 380,
-      "h": 148,
+      "total": 445,
+      "m": 364,
+      "h": 125,
       "sn": 0,
       "poblacion": 2484,
-      "total_apoyos": 947,
-      "n_programas": 5,
-      "localizables": 417,
-      "loc_m": 347,
-      "loc_h": 123,
-      "pct_loc": 87.8,
+      "total_apoyos": 853,
+      "n_programas": 6,
+      "localizables": 378,
+      "loc_m": 323,
+      "loc_h": 98,
+      "pct_loc": 84.9,
       "rangos": {
-        "0-5": 24,
-        "6-11": 28,
-        "12-17": 29,
-        "18-29": 37,
-        "30-49": 88,
-        "50-64": 116,
-        "65+": 133,
+        "0-5": 34,
+        "6-11": 26,
+        "12-17": 21,
+        "18-29": 34,
+        "30-49": 89,
+        "50-64": 117,
+        "65+": 146,
         "sin_datos": 152
       },
       "rango_dom": "65+",
-      "rango_min": "0-5",
-      "pct_65mas": 28.0,
-      "pct_ninos": 10.9,
-      "pct_jovenes": 7.8,
+      "rango_min": "12-17",
+      "pct_65mas": 32.8,
+      "pct_ninos": 13.5,
+      "pct_jovenes": 7.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 9.4,
       "pct_alto": 34.4,
@@ -4874,12 +4827,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 56.7,
       "inst": {
         "DIF": {
-          "benef": 51,
-          "apoyos": 51
+          "benef": 57,
+          "apoyos": 103
         },
         "SALUD": {
-          "benef": 436,
-          "apoyos": 871
+          "benef": 399,
+          "apoyos": 725
         },
         "SDHyBC": {
           "benef": 4,
@@ -4888,61 +4841,61 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08019",
-      "nombre": "CUSIHUIRIACHI",
-      "total": 415,
-      "m": 309,
-      "h": 155,
+      "clave": "08055",
+      "nombre": "RIVA PALACIO",
+      "total": 442,
+      "m": 381,
+      "h": 89,
       "sn": 0,
-      "poblacion": 5826,
-      "total_apoyos": 803,
-      "n_programas": 5,
-      "localizables": 320,
-      "loc_m": 251,
-      "loc_h": 112,
-      "pct_loc": 77.1,
+      "poblacion": 7722,
+      "total_apoyos": 699,
+      "n_programas": 7,
+      "localizables": 322,
+      "loc_m": 290,
+      "loc_h": 57,
+      "pct_loc": 72.9,
       "rangos": {
-        "0-5": 29,
-        "6-11": 25,
-        "12-17": 14,
-        "18-29": 46,
-        "30-49": 81,
-        "50-64": 98,
-        "65+": 89,
-        "sin_datos": 131
+        "0-5": 32,
+        "6-11": 32,
+        "12-17": 28,
+        "18-29": 45,
+        "30-49": 88,
+        "50-64": 100,
+        "65+": 117,
+        "sin_datos": 109
       },
-      "rango_dom": "50-64",
+      "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 21.4,
-      "pct_ninos": 13.0,
-      "pct_jovenes": 11.1,
-      "grado_dom": "Bajo",
-      "pct_muy_alto": 1.1,
-      "pct_alto": 4.6,
-      "pct_medio": 23.4,
-      "pct_bajo": 38.2,
-      "pct_muy_bajo": 32.8,
-      "ageb_count": 659,
-      "avg_sin_internet": 35.8,
-      "avg_hacinamiento": 3.4,
-      "avg_analfabeta": 1.7,
-      "avg_piso_tierra": 1.9,
-      "avg_sin_salud": 12.1,
-      "idx_vulnerabilidad": 22.6,
-      "idx_dependencia": 69.1,
-      "idx_urgencia": 50.3,
+      "pct_65mas": 26.5,
+      "pct_ninos": 14.5,
+      "pct_jovenes": 10.2,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 0,
+      "pct_medio": 84.6,
+      "pct_bajo": 15.4,
+      "pct_muy_bajo": 0,
+      "ageb_count": 13,
+      "avg_sin_internet": 49.0,
+      "avg_hacinamiento": 3.9,
+      "avg_analfabeta": 2.8,
+      "avg_piso_tierra": 0.7,
+      "avg_sin_salud": 12.4,
+      "idx_vulnerabilidad": 32.7,
+      "idx_dependencia": 75.4,
+      "idx_urgencia": 67.0,
       "inst": {
         "DIF": {
-          "benef": 64,
-          "apoyos": 75
+          "benef": 43,
+          "apoyos": 86
         },
         "SALUD": {
-          "benef": 349,
-          "apoyos": 673
+          "benef": 408,
+          "apoyos": 608
         },
         "SDHyBC": {
-          "benef": 7,
-          "apoyos": 52
+          "benef": 1,
+          "apoyos": 2
         },
         "SPyCI": {
           "benef": 3,
@@ -4951,93 +4904,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08016",
-      "nombre": "COYAME DEL SOTOL",
-      "total": 414,
-      "m": 334,
-      "h": 118,
-      "sn": 0,
-      "poblacion": 1218,
-      "total_apoyos": 764,
-      "n_programas": 3,
-      "localizables": 367,
-      "loc_m": 305,
-      "loc_h": 98,
-      "pct_loc": 88.6,
-      "rangos": {
-        "0-5": 43,
-        "6-11": 35,
-        "12-17": 22,
-        "18-29": 37,
-        "30-49": 95,
-        "50-64": 78,
-        "65+": 74,
-        "sin_datos": 137
-      },
-      "rango_dom": "30-49",
-      "rango_min": "12-17",
-      "pct_65mas": 17.9,
-      "pct_ninos": 18.8,
-      "pct_jovenes": 8.9,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 12.5,
-      "pct_medio": 87.5,
-      "pct_bajo": 0,
-      "pct_muy_bajo": 0,
-      "ageb_count": 8,
-      "avg_sin_internet": 70.2,
-      "avg_hacinamiento": 5.9,
-      "avg_analfabeta": 6.1,
-      "avg_piso_tierra": 2.0,
-      "avg_sin_salud": 10.5,
-      "idx_vulnerabilidad": 40.8,
-      "idx_dependencia": 98.7,
-      "idx_urgencia": 46.4,
-      "inst": {
-        "DIF": {
-          "benef": 42,
-          "apoyos": 47
-        },
-        "SALUD": {
-          "benef": 384,
-          "apoyos": 711
-        },
-        "SDHyBC": {
-          "benef": 3,
-          "apoyos": 6
-        }
-      }
-    },
-    {
       "clave": "08047",
       "nombre": "MORELOS",
-      "total": 400,
-      "m": 270,
-      "h": 132,
+      "total": 419,
+      "m": 300,
+      "h": 127,
       "sn": 0,
       "poblacion": 7331,
-      "total_apoyos": 638,
-      "n_programas": 7,
-      "localizables": 62,
-      "loc_m": 46,
-      "loc_h": 17,
-      "pct_loc": 15.5,
+      "total_apoyos": 859,
+      "n_programas": 9,
+      "localizables": 60,
+      "loc_m": 49,
+      "loc_h": 12,
+      "pct_loc": 14.3,
       "rangos": {
-        "0-5": 80,
-        "6-11": 10,
-        "12-17": 15,
-        "18-29": 59,
-        "30-49": 95,
-        "50-64": 57,
-        "65+": 83,
+        "0-5": 133,
+        "6-11": 16,
+        "12-17": 16,
+        "18-29": 71,
+        "30-49": 125,
+        "50-64": 86,
+        "65+": 141,
         "sin_datos": 37
       },
-      "rango_dom": "30-49",
+      "rango_dom": "65+",
       "rango_min": "6-11",
-      "pct_65mas": 20.8,
-      "pct_ninos": 22.5,
-      "pct_jovenes": 14.8,
+      "pct_65mas": 33.7,
+      "pct_ninos": 35.6,
+      "pct_jovenes": 16.9,
       "grado_dom": "Alto",
       "pct_muy_alto": 11.1,
       "pct_alto": 66.7,
@@ -5055,12 +4949,12 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 82.7,
       "inst": {
         "DIF": {
-          "benef": 231,
-          "apoyos": 361
+          "benef": 242,
+          "apoyos": 542
         },
         "SALUD": {
-          "benef": 138,
-          "apoyos": 201
+          "benef": 145,
+          "apoyos": 241
         },
         "SDHyBC": {
           "benef": 5,
@@ -5073,34 +4967,156 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08016",
+      "nombre": "COYAME DEL SOTOL",
+      "total": 413,
+      "m": 341,
+      "h": 109,
+      "sn": 0,
+      "poblacion": 1218,
+      "total_apoyos": 750,
+      "n_programas": 4,
+      "localizables": 349,
+      "loc_m": 297,
+      "loc_h": 85,
+      "pct_loc": 84.5,
+      "rangos": {
+        "0-5": 60,
+        "6-11": 39,
+        "12-17": 24,
+        "18-29": 35,
+        "30-49": 95,
+        "50-64": 85,
+        "65+": 84,
+        "sin_datos": 137
+      },
+      "rango_dom": "30-49",
+      "rango_min": "12-17",
+      "pct_65mas": 20.3,
+      "pct_ninos": 24.0,
+      "pct_jovenes": 8.5,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 12.5,
+      "pct_medio": 87.5,
+      "pct_bajo": 0,
+      "pct_muy_bajo": 0,
+      "ageb_count": 8,
+      "avg_sin_internet": 70.2,
+      "avg_hacinamiento": 5.9,
+      "avg_analfabeta": 6.1,
+      "avg_piso_tierra": 2.0,
+      "avg_sin_salud": 10.5,
+      "idx_vulnerabilidad": 40.8,
+      "idx_dependencia": 98.7,
+      "idx_urgencia": 46.4,
+      "inst": {
+        "DIF": {
+          "benef": 56,
+          "apoyos": 93
+        },
+        "SALUD": {
+          "benef": 373,
+          "apoyos": 651
+        },
+        "SDHyBC": {
+          "benef": 3,
+          "apoyos": 6
+        }
+      }
+    },
+    {
+      "clave": "08019",
+      "nombre": "CUSIHUIRIACHI",
+      "total": 397,
+      "m": 315,
+      "h": 120,
+      "sn": 0,
+      "poblacion": 5826,
+      "total_apoyos": 753,
+      "n_programas": 7,
+      "localizables": 300,
+      "loc_m": 254,
+      "loc_h": 77,
+      "pct_loc": 75.6,
+      "rangos": {
+        "0-5": 40,
+        "6-11": 27,
+        "12-17": 16,
+        "18-29": 42,
+        "30-49": 83,
+        "50-64": 107,
+        "65+": 108,
+        "sin_datos": 131
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 27.2,
+      "pct_ninos": 16.9,
+      "pct_jovenes": 10.6,
+      "grado_dom": "Bajo",
+      "pct_muy_alto": 1.1,
+      "pct_alto": 4.6,
+      "pct_medio": 23.4,
+      "pct_bajo": 38.2,
+      "pct_muy_bajo": 32.8,
+      "ageb_count": 659,
+      "avg_sin_internet": 35.8,
+      "avg_hacinamiento": 3.4,
+      "avg_analfabeta": 1.7,
+      "avg_piso_tierra": 1.9,
+      "avg_sin_salud": 12.1,
+      "idx_vulnerabilidad": 22.6,
+      "idx_dependencia": 69.1,
+      "idx_urgencia": 50.3,
+      "inst": {
+        "DIF": {
+          "benef": 70,
+          "apoyos": 139
+        },
+        "SALUD": {
+          "benef": 326,
+          "apoyos": 559
+        },
+        "SDHyBC": {
+          "benef": 7,
+          "apoyos": 52
+        },
+        "SPyCI": {
+          "benef": 3,
+          "apoyos": 3
+        }
+      }
+    },
+    {
       "clave": "08057",
       "nombre": "ROSARIO",
-      "total": 349,
-      "m": 251,
-      "h": 119,
+      "total": 341,
+      "m": 240,
+      "h": 117,
       "sn": 0,
       "poblacion": 2196,
-      "total_apoyos": 522,
-      "n_programas": 4,
-      "localizables": 156,
-      "loc_m": 129,
-      "loc_h": 42,
-      "pct_loc": 44.7,
+      "total_apoyos": 600,
+      "n_programas": 6,
+      "localizables": 132,
+      "loc_m": 108,
+      "loc_h": 34,
+      "pct_loc": 38.7,
       "rangos": {
-        "0-5": 53,
-        "6-11": 24,
-        "12-17": 10,
-        "18-29": 33,
-        "30-49": 50,
-        "50-64": 57,
-        "65+": 103,
+        "0-5": 92,
+        "6-11": 29,
+        "12-17": 12,
+        "18-29": 38,
+        "30-49": 62,
+        "50-64": 70,
+        "65+": 158,
         "sin_datos": 74
       },
       "rango_dom": "65+",
       "rango_min": "12-17",
-      "pct_65mas": 29.5,
-      "pct_ninos": 22.1,
-      "pct_jovenes": 9.5,
+      "pct_65mas": 46.3,
+      "pct_ninos": 35.5,
+      "pct_jovenes": 11.1,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 20.0,
@@ -5118,16 +5134,16 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 63.0,
       "inst": {
         "DIF": {
-          "benef": 151,
-          "apoyos": 152
+          "benef": 180,
+          "apoyos": 324
         },
         "ICHIJUV": {
           "benef": 5,
           "apoyos": 5
         },
         "SALUD": {
-          "benef": 208,
-          "apoyos": 357
+          "benef": 173,
+          "apoyos": 263
         },
         "SDHyBC": {
           "benef": 1,
@@ -5136,34 +5152,89 @@ window.DASHBOARD_DATA = {
       }
     },
     {
+      "clave": "08034",
+      "nombre": "HUEJOTITÁN",
+      "total": 336,
+      "m": 272,
+      "h": 106,
+      "sn": 0,
+      "poblacion": 787,
+      "total_apoyos": 683,
+      "n_programas": 4,
+      "localizables": 259,
+      "loc_m": 212,
+      "loc_h": 83,
+      "pct_loc": 77.1,
+      "rangos": {
+        "0-5": 28,
+        "6-11": 30,
+        "12-17": 20,
+        "18-29": 42,
+        "30-49": 55,
+        "50-64": 78,
+        "65+": 117,
+        "sin_datos": 117
+      },
+      "rango_dom": "65+",
+      "rango_min": "12-17",
+      "pct_65mas": 34.8,
+      "pct_ninos": 17.3,
+      "pct_jovenes": 12.5,
+      "grado_dom": "Medio",
+      "pct_muy_alto": 0,
+      "pct_alto": 8.7,
+      "pct_medio": 78.3,
+      "pct_bajo": 8.7,
+      "pct_muy_bajo": 4.3,
+      "ageb_count": 23,
+      "avg_sin_internet": 58.1,
+      "avg_hacinamiento": 6.8,
+      "avg_analfabeta": 4.7,
+      "avg_piso_tierra": 3.2,
+      "avg_sin_salud": 11.6,
+      "idx_vulnerabilidad": 38.5,
+      "idx_dependencia": 84.6,
+      "idx_urgencia": 37.8,
+      "inst": {
+        "DIF": {
+          "benef": 61,
+          "apoyos": 106
+        },
+        "SALUD": {
+          "benef": 298,
+          "apoyos": 577
+        }
+      }
+    },
+    {
       "clave": "08023",
       "nombre": "DR. BELISARIO DOMINGUEZ",
-      "total": 345,
-      "m": 268,
-      "h": 114,
+      "total": 320,
+      "m": 259,
+      "h": 89,
       "sn": 0,
       "poblacion": 2475,
-      "total_apoyos": 671,
+      "total_apoyos": 558,
       "n_programas": 5,
-      "localizables": 314,
-      "loc_m": 249,
-      "loc_h": 101,
-      "pct_loc": 91.0,
+      "localizables": 284,
+      "loc_m": 234,
+      "loc_h": 77,
+      "pct_loc": 88.8,
       "rangos": {
-        "0-5": 18,
+        "0-5": 17,
         "6-11": 13,
-        "12-17": 17,
-        "18-29": 17,
-        "30-49": 47,
-        "50-64": 78,
-        "65+": 141,
+        "12-17": 15,
+        "18-29": 19,
+        "30-49": 41,
+        "50-64": 66,
+        "65+": 130,
         "sin_datos": 89
       },
       "rango_dom": "65+",
       "rango_min": "6-11",
-      "pct_65mas": 40.9,
-      "pct_ninos": 9.0,
-      "pct_jovenes": 4.9,
+      "pct_65mas": 40.6,
+      "pct_ninos": 9.4,
+      "pct_jovenes": 5.9,
       "grado_dom": "Medio",
       "pct_muy_alto": 8.3,
       "pct_alto": 8.3,
@@ -5185,8 +5256,8 @@ window.DASHBOARD_DATA = {
           "apoyos": 11
         },
         "SALUD": {
-          "benef": 331,
-          "apoyos": 626
+          "benef": 304,
+          "apoyos": 513
         },
         "SDHyBC": {
           "benef": 5,
@@ -5199,89 +5270,34 @@ window.DASHBOARD_DATA = {
       }
     },
     {
-      "clave": "08034",
-      "nombre": "HUEJOTITÁN",
-      "total": 345,
-      "m": 263,
-      "h": 124,
-      "sn": 0,
-      "poblacion": 787,
-      "total_apoyos": 727,
-      "n_programas": 2,
-      "localizables": 284,
-      "loc_m": 221,
-      "loc_h": 102,
-      "pct_loc": 82.3,
-      "rangos": {
-        "0-5": 24,
-        "6-11": 30,
-        "12-17": 22,
-        "18-29": 38,
-        "30-49": 53,
-        "50-64": 75,
-        "65+": 96,
-        "sin_datos": 117
-      },
-      "rango_dom": "65+",
-      "rango_min": "12-17",
-      "pct_65mas": 27.8,
-      "pct_ninos": 15.7,
-      "pct_jovenes": 11.0,
-      "grado_dom": "Medio",
-      "pct_muy_alto": 0,
-      "pct_alto": 8.7,
-      "pct_medio": 78.3,
-      "pct_bajo": 8.7,
-      "pct_muy_bajo": 4.3,
-      "ageb_count": 23,
-      "avg_sin_internet": 58.1,
-      "avg_hacinamiento": 6.8,
-      "avg_analfabeta": 4.7,
-      "avg_piso_tierra": 3.2,
-      "avg_sin_salud": 11.6,
-      "idx_vulnerabilidad": 38.5,
-      "idx_dependencia": 84.6,
-      "idx_urgencia": 37.8,
-      "inst": {
-        "DIF": {
-          "benef": 53,
-          "apoyos": 53
-        },
-        "SALUD": {
-          "benef": 316,
-          "apoyos": 674
-        }
-      }
-    },
-    {
       "clave": "08043",
       "nombre": "MANUEL BENAVIDES",
-      "total": 328,
-      "m": 250,
-      "h": 112,
+      "total": 310,
+      "m": 254,
+      "h": 94,
       "sn": 0,
       "poblacion": 1103,
-      "total_apoyos": 717,
+      "total_apoyos": 610,
       "n_programas": 4,
-      "localizables": 272,
-      "loc_m": 222,
-      "loc_h": 82,
-      "pct_loc": 82.9,
+      "localizables": 237,
+      "loc_m": 201,
+      "loc_h": 65,
+      "pct_loc": 76.5,
       "rangos": {
-        "0-5": 16,
-        "6-11": 16,
-        "12-17": 13,
+        "0-5": 12,
+        "6-11": 13,
+        "12-17": 17,
         "18-29": 33,
         "30-49": 59,
-        "50-64": 86,
-        "65+": 77,
+        "50-64": 80,
+        "65+": 69,
         "sin_datos": 120
       },
       "rango_dom": "50-64",
-      "rango_min": "12-17",
-      "pct_65mas": 23.5,
-      "pct_ninos": 9.8,
-      "pct_jovenes": 10.1,
+      "rango_min": "0-5",
+      "pct_65mas": 22.3,
+      "pct_ninos": 8.1,
+      "pct_jovenes": 10.6,
       "grado_dom": "Medio",
       "pct_muy_alto": 0,
       "pct_alto": 0,
@@ -5299,8 +5315,8 @@ window.DASHBOARD_DATA = {
       "idx_urgencia": 45.9,
       "inst": {
         "SALUD": {
-          "benef": 322,
-          "apoyos": 693
+          "benef": 304,
+          "apoyos": 586
         },
         "SDHyBC": {
           "benef": 3,
@@ -5315,39 +5331,39 @@ window.DASHBOARD_DATA = {
   ],
   "municipios_especiales": [
     {
-      "nombre": "FORÁNEO",
-      "total": 33180,
-      "m": 26864,
-      "h": 7557
+      "nombre": "NO IDENTIFICADO",
+      "total": 25579,
+      "m": 15767,
+      "h": 9785
     },
     {
-      "nombre": "NO IDENTIFICADO",
-      "total": 25577,
-      "m": 15767,
-      "h": 9783
+      "nombre": "FORÁNEO",
+      "total": 10449,
+      "m": 9740,
+      "h": 712
     }
   ],
   "apoyos": [
     {
       "nombre": "ATENCION A LA SALUD",
-      "total": 558713,
-      "m": 435576,
-      "h": 123137,
+      "total": 450689,
+      "m": 368520,
+      "h": 82169,
       "n_muns": 67,
-      "pct": 78.6,
+      "pct": 71.6,
       "instituciones": [
         {
           "nombre": "SALUD",
-          "total": 556090,
-          "m": 434032,
-          "h": 122058,
+          "total": 447817,
+          "m": 366845,
+          "h": 80972,
           "muns": 69,
           "programas": [
             {
               "nombre": "MEDICHIHUAHUA",
-              "total": 556090,
-              "m": 434032,
-              "h": 122058,
+              "total": 447817,
+              "m": 366845,
+              "h": 80972,
               "muns": 69,
               "muns_lista": [
                 "AHUMADA",
@@ -5421,34 +5437,28 @@ window.DASHBOARD_DATA = {
                 "VALLE DE ZARAGOZA"
               ],
               "rangos": {
-                "0-5": 49714,
-                "6-11": 33135,
-                "12-17": 28867,
-                "18-29": 72949,
-                "30-49": 93652,
-                "50-64": 93786,
-                "65+": 75076
+                "0-5": 36672,
+                "6-11": 24955,
+                "12-17": 21721,
+                "18-29": 55796,
+                "30-49": 71363,
+                "50-64": 71255,
+                "65+": 57149
               }
             }
           ],
           "por_municipio": [
             {
-              "nombre": "CHIHUAHUA",
-              "total": 108720,
-              "m": 83348,
-              "h": 25372
-            },
-            {
               "nombre": "JUAREZ",
-              "total": 105767,
-              "m": 83045,
-              "h": 22722
+              "total": 92021,
+              "m": 76821,
+              "h": 15200
             },
             {
-              "nombre": "FORANEO",
-              "total": 49316,
-              "m": 42103,
-              "h": 7213
+              "nombre": "CHIHUAHUA",
+              "total": 91100,
+              "m": 74070,
+              "h": 17030
             },
             {
               "nombre": "NO IDENTIFICADO",
@@ -5458,402 +5468,408 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "CUAUHTEMOC",
-              "total": 28164,
-              "m": 22923,
-              "h": 5241
+              "total": 23843,
+              "m": 20427,
+              "h": 3416
             },
             {
               "nombre": "HIDALGO DEL PARRAL",
-              "total": 20700,
-              "m": 16683,
-              "h": 4017
-            },
-            {
-              "nombre": "DELICIAS",
-              "total": 15714,
-              "m": 12353,
-              "h": 3361
+              "total": 17300,
+              "m": 14722,
+              "h": 2578
             },
             {
               "nombre": "CAMARGO",
-              "total": 15455,
-              "m": 12142,
-              "h": 3313
+              "total": 12847,
+              "m": 10672,
+              "h": 2175
+            },
+            {
+              "nombre": "DELICIAS",
+              "total": 12715,
+              "m": 10601,
+              "h": 2114
             },
             {
               "nombre": "JIMENEZ",
-              "total": 14702,
-              "m": 11639,
-              "h": 3063
+              "total": 11996,
+              "m": 9964,
+              "h": 2032
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 11086,
+              "m": 10990,
+              "h": 96
             },
             {
               "nombre": "GUERRERO",
-              "total": 10354,
-              "m": 8281,
-              "h": 2073
+              "total": 8648,
+              "m": 7282,
+              "h": 1366
             },
             {
               "nombre": "OJINAGA",
-              "total": 9092,
-              "m": 7177,
-              "h": 1915
+              "total": 7585,
+              "m": 6331,
+              "h": 1254
             },
             {
               "nombre": "ALDAMA",
-              "total": 8529,
-              "m": 6700,
-              "h": 1829
+              "total": 6999,
+              "m": 5782,
+              "h": 1217
             },
             {
               "nombre": "GUACHOCHI",
-              "total": 7408,
-              "m": 6091,
-              "h": 1317
-            },
-            {
-              "nombre": "MEOQUI",
-              "total": 7260,
-              "m": 5644,
-              "h": 1616
+              "total": 6578,
+              "m": 5704,
+              "h": 874
             },
             {
               "nombre": "NUEVO CASAS GRANDES",
-              "total": 7046,
-              "m": 5548,
-              "h": 1498
+              "total": 6307,
+              "m": 5271,
+              "h": 1036
+            },
+            {
+              "nombre": "MEOQUI",
+              "total": 5849,
+              "m": 4816,
+              "h": 1033
             },
             {
               "nombre": "BOCOYNA",
-              "total": 6341,
-              "m": 5127,
-              "h": 1214
+              "total": 5443,
+              "m": 4624,
+              "h": 819
             },
             {
               "nombre": "GUADALUPE Y CALVO",
-              "total": 5676,
-              "m": 4497,
-              "h": 1179
+              "total": 4967,
+              "m": 4173,
+              "h": 794
             },
             {
               "nombre": "ASCENSION",
-              "total": 5598,
-              "m": 4490,
-              "h": 1108
-            },
-            {
-              "nombre": "MADERA",
-              "total": 5202,
-              "m": 4323,
-              "h": 879
-            },
-            {
-              "nombre": "SAUCILLO",
-              "total": 4972,
-              "m": 3876,
-              "h": 1096
-            },
-            {
-              "nombre": "NAMIQUIPA",
-              "total": 4943,
-              "m": 3904,
-              "h": 1039
-            },
-            {
-              "nombre": "BUENAVENTURA",
-              "total": 4762,
-              "m": 3840,
-              "h": 922
-            },
-            {
-              "nombre": "URIQUE",
-              "total": 3867,
-              "m": 3121,
-              "h": 746
-            },
-            {
-              "nombre": "BALLEZA",
-              "total": 3756,
-              "m": 2941,
-              "h": 815
-            },
-            {
-              "nombre": "VALLE DE ZARAGOZA",
-              "total": 3513,
-              "m": 2686,
-              "h": 827
-            },
-            {
-              "nombre": "AHUMADA",
-              "total": 3486,
-              "m": 2743,
-              "h": 743
-            },
-            {
-              "nombre": "CASAS GRANDES",
-              "total": 3182,
-              "m": 2523,
-              "h": 659
-            },
-            {
-              "nombre": "GOMEZ FARIAS",
-              "total": 3021,
-              "m": 2319,
+              "total": 4797,
+              "m": 4095,
               "h": 702
             },
             {
-              "nombre": "SANTA BARBARA",
-              "total": 2756,
-              "m": 2223,
-              "h": 533
+              "nombre": "MADERA",
+              "total": 4630,
+              "m": 4032,
+              "h": 598
             },
             {
-              "nombre": "ROSALES",
-              "total": 2718,
-              "m": 2128,
-              "h": 590
+              "nombre": "BUENAVENTURA",
+              "total": 4408,
+              "m": 3770,
+              "h": 638
             },
             {
-              "nombre": "GUAZAPARES",
-              "total": 2637,
-              "m": 2089,
-              "h": 548
+              "nombre": "SAUCILLO",
+              "total": 4304,
+              "m": 3570,
+              "h": 734
             },
             {
-              "nombre": "LOPEZ",
-              "total": 2592,
-              "m": 2019,
-              "h": 573
+              "nombre": "NAMIQUIPA",
+              "total": 4255,
+              "m": 3589,
+              "h": 666
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 3495,
+              "m": 2980,
+              "h": 515
+            },
+            {
+              "nombre": "BALLEZA",
+              "total": 3210,
+              "m": 2628,
+              "h": 582
+            },
+            {
+              "nombre": "VALLE DE ZARAGOZA",
+              "total": 2971,
+              "m": 2409,
+              "h": 562
+            },
+            {
+              "nombre": "AHUMADA",
+              "total": 2969,
+              "m": 2450,
+              "h": 519
+            },
+            {
+              "nombre": "CASAS GRANDES",
+              "total": 2625,
+              "m": 2207,
+              "h": 418
+            },
+            {
+              "nombre": "GOMEZ FARIAS",
+              "total": 2540,
+              "m": 2063,
+              "h": 477
             },
             {
               "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-              "total": 2521,
-              "m": 1969,
-              "h": 552
+              "total": 2420,
+              "m": 2018,
+              "h": 402
             },
             {
-              "nombre": "BACHINIVA",
-              "total": 2358,
-              "m": 1854,
-              "h": 504
+              "nombre": "GUAZAPARES",
+              "total": 2399,
+              "m": 2021,
+              "h": 378
             },
             {
-              "nombre": "CARICHI",
-              "total": 2308,
-              "m": 1861,
-              "h": 447
-            },
-            {
-              "nombre": "LA CRUZ",
-              "total": 2086,
-              "m": 1602,
-              "h": 484
-            },
-            {
-              "nombre": "PRAXEDIS G. GUERRERO",
-              "total": 2052,
-              "m": 1626,
-              "h": 426
-            },
-            {
-              "nombre": "SANTA ISABEL",
-              "total": 2007,
-              "m": 1534,
-              "h": 473
-            },
-            {
-              "nombre": "IGNACIO ZARAGOZA",
-              "total": 1964,
-              "m": 1524,
-              "h": 440
-            },
-            {
-              "nombre": "JANOS",
-              "total": 1902,
-              "m": 1465,
-              "h": 437
-            },
-            {
-              "nombre": "MATAMOROS",
-              "total": 1872,
-              "m": 1508,
-              "h": 364
-            },
-            {
-              "nombre": "OCAMPO",
-              "total": 1803,
-              "m": 1455,
+              "nombre": "SANTA BARBARA",
+              "total": 2320,
+              "m": 1972,
               "h": 348
             },
             {
-              "nombre": "TEMOSACHIC",
-              "total": 1473,
-              "m": 1147,
-              "h": 326
+              "nombre": "ROSALES",
+              "total": 2225,
+              "m": 1841,
+              "h": 384
             },
             {
-              "nombre": "CORONADO",
-              "total": 1435,
-              "m": 1093,
-              "h": 342
+              "nombre": "CARICHI",
+              "total": 2077,
+              "m": 1766,
+              "h": 311
+            },
+            {
+              "nombre": "LOPEZ",
+              "total": 2071,
+              "m": 1691,
+              "h": 380
+            },
+            {
+              "nombre": "BACHINIVA",
+              "total": 2026,
+              "m": 1734,
+              "h": 292
+            },
+            {
+              "nombre": "JANOS",
+              "total": 1863,
+              "m": 1538,
+              "h": 325
+            },
+            {
+              "nombre": "OCAMPO",
+              "total": 1837,
+              "m": 1609,
+              "h": 228
+            },
+            {
+              "nombre": "LA CRUZ",
+              "total": 1716,
+              "m": 1399,
+              "h": 317
+            },
+            {
+              "nombre": "PRAXEDIS G. GUERRERO",
+              "total": 1713,
+              "m": 1430,
+              "h": 283
+            },
+            {
+              "nombre": "SANTA ISABEL",
+              "total": 1652,
+              "m": 1352,
+              "h": 300
+            },
+            {
+              "nombre": "IGNACIO ZARAGOZA",
+              "total": 1645,
+              "m": 1330,
+              "h": 315
+            },
+            {
+              "nombre": "MATAMOROS",
+              "total": 1645,
+              "m": 1395,
+              "h": 250
+            },
+            {
+              "nombre": "TEMOSACHIC",
+              "total": 1356,
+              "m": 1126,
+              "h": 230
             },
             {
               "nombre": "SAN FRANCISCO DE CONCHOS",
-              "total": 1431,
-              "m": 1091,
-              "h": 340
-            },
-            {
-              "nombre": "SAN FRANCISCO DEL ORO",
-              "total": 1347,
-              "m": 1052,
-              "h": 295
-            },
-            {
-              "nombre": "JULIMES",
-              "total": 1310,
-              "m": 947,
-              "h": 363
-            },
-            {
-              "nombre": "MORIS",
-              "total": 1297,
-              "m": 1001,
-              "h": 296
-            },
-            {
-              "nombre": "SATEVO",
-              "total": 1261,
-              "m": 949,
-              "h": 312
-            },
-            {
-              "nombre": "GUADALUPE",
-              "total": 1195,
-              "m": 911,
-              "h": 284
-            },
-            {
-              "nombre": "MATACHI",
-              "total": 1175,
-              "m": 934,
-              "h": 241
-            },
-            {
-              "nombre": "GALEANA",
-              "total": 1135,
-              "m": 927,
-              "h": 208
-            },
-            {
-              "nombre": "EL TULE",
-              "total": 1134,
-              "m": 870,
-              "h": 264
-            },
-            {
-              "nombre": "URUACHI",
-              "total": 1101,
-              "m": 900,
-              "h": 201
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 1053,
-              "m": 786,
-              "h": 267
-            },
-            {
-              "nombre": "SAN FRANCISCO DE BORJA",
-              "total": 1003,
-              "m": 766,
+              "total": 1224,
+              "m": 987,
               "h": 237
             },
             {
+              "nombre": "MORIS",
+              "total": 1182,
+              "m": 974,
+              "h": 208
+            },
+            {
+              "nombre": "SAN FRANCISCO DEL ORO",
+              "total": 1172,
+              "m": 973,
+              "h": 199
+            },
+            {
+              "nombre": "GALEANA",
+              "total": 1157,
+              "m": 1016,
+              "h": 141
+            },
+            {
+              "nombre": "SATEVO",
+              "total": 1154,
+              "m": 927,
+              "h": 227
+            },
+            {
+              "nombre": "CORONADO",
+              "total": 1153,
+              "m": 940,
+              "h": 213
+            },
+            {
               "nombre": "CHINIPAS",
-              "total": 992,
-              "m": 760,
-              "h": 232
+              "total": 1088,
+              "m": 904,
+              "h": 184
             },
             {
-              "nombre": "GRAN MORELOS",
-              "total": 871,
-              "m": 661,
-              "h": 210
+              "nombre": "URUACHI",
+              "total": 1055,
+              "m": 892,
+              "h": 163
             },
             {
-              "nombre": "MAGUARICHI",
-              "total": 856,
-              "m": 702,
-              "h": 154
-            },
-            {
-              "nombre": "NONOAVA",
-              "total": 820,
-              "m": 627,
+              "nombre": "GUADALUPE",
+              "total": 1024,
+              "m": 831,
               "h": 193
             },
             {
-              "nombre": "RIVA PALACIO",
-              "total": 762,
-              "m": 613,
-              "h": 149
+              "nombre": "JULIMES",
+              "total": 1023,
+              "m": 766,
+              "h": 257
+            },
+            {
+              "nombre": "MATACHI",
+              "total": 1008,
+              "m": 849,
+              "h": 159
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 965,
+              "m": 780,
+              "h": 185
+            },
+            {
+              "nombre": "EL TULE",
+              "total": 943,
+              "m": 762,
+              "h": 181
+            },
+            {
+              "nombre": "SAN FRANCISCO DE BORJA",
+              "total": 816,
+              "m": 658,
+              "h": 158
+            },
+            {
+              "nombre": "GRAN MORELOS",
+              "total": 725,
+              "m": 581,
+              "h": 144
+            },
+            {
+              "nombre": "NONOAVA",
+              "total": 705,
+              "m": 566,
+              "h": 139
+            },
+            {
+              "nombre": "MAGUARICHI",
+              "total": 676,
+              "m": 568,
+              "h": 108
             },
             {
               "nombre": "COYAME DEL SOTOL",
-              "total": 711,
-              "m": 575,
-              "h": 136
+              "total": 651,
+              "m": 543,
+              "h": 108
+            },
+            {
+              "nombre": "RIVA PALACIO",
+              "total": 608,
+              "m": 528,
+              "h": 80
             },
             {
               "nombre": "MANUEL BENAVIDES",
-              "total": 693,
-              "m": 522,
-              "h": 171
+              "total": 586,
+              "m": 467,
+              "h": 119
             },
             {
               "nombre": "HUEJOTITAN",
-              "total": 674,
-              "m": 501,
-              "h": 173
+              "total": 577,
+              "m": 461,
+              "h": 116
             },
             {
               "nombre": "CUSIHUIRIACHI",
-              "total": 673,
-              "m": 495,
-              "h": 178
+              "total": 559,
+              "m": 447,
+              "h": 112
             },
             {
               "nombre": "DR. BELISARIO DOMINGUEZ",
-              "total": 626,
-              "m": 474,
-              "h": 152
+              "total": 513,
+              "m": 412,
+              "h": 101
             },
             {
               "nombre": "ALLENDE",
-              "total": 520,
-              "m": 403,
-              "h": 117
+              "total": 434,
+              "m": 365,
+              "h": 69
             },
             {
               "nombre": "ROSARIO",
-              "total": 357,
-              "m": 271,
-              "h": 86
+              "total": 263,
+              "m": 202,
+              "h": 61
             },
             {
               "nombre": "MORELOS",
-              "total": 201,
-              "m": 158,
-              "h": 43
+              "total": 241,
+              "m": 209,
+              "h": 32
             }
           ]
         },
         {
           "nombre": "DIF",
-          "total": 2536,
-          "m": 1474,
-          "h": 1062,
-          "muns": 22,
+          "total": 2785,
+          "m": 1605,
+          "h": 1180,
+          "muns": 24,
           "programas": [
             {
               "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
@@ -5877,8 +5893,8 @@ window.DASHBOARD_DATA = {
                 "URUACHI"
               ],
               "rangos": {
-                "0-5": 1349,
-                "6-11": 81,
+                "0-5": 1348,
+                "6-11": 82,
                 "12-17": 55,
                 "18-29": 148,
                 "30-49": 71,
@@ -5888,10 +5904,10 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 779,
-              "m": 400,
-              "h": 379,
-              "muns": 12,
+              "total": 1028,
+              "m": 531,
+              "h": 497,
+              "muns": 14,
               "muns_lista": [
                 "AHUMADA",
                 "ALDAMA",
@@ -5901,19 +5917,21 @@ window.DASHBOARD_DATA = {
                 "CHIHUAHUA",
                 "CUAUHTEMOC",
                 "FORANEO",
+                "GUADALUPE",
                 "JANOS",
                 "JUAREZ",
+                "TEMOSACHIC",
                 "URIQUE",
                 "VALLE DE ZARAGOZA"
               ],
               "rangos": {
-                "0-5": 54,
-                "6-11": 49,
-                "12-17": 39,
-                "18-29": 72,
-                "30-49": 164,
-                "50-64": 250,
-                "65+": 151
+                "0-5": 69,
+                "6-11": 72,
+                "12-17": 48,
+                "18-29": 99,
+                "30-49": 209,
+                "50-64": 345,
+                "65+": 186
               }
             }
           ],
@@ -5926,15 +5944,15 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "CHIHUAHUA",
-              "total": 381,
-              "m": 214,
-              "h": 167
+              "total": 523,
+              "m": 298,
+              "h": 225
             },
             {
               "nombre": "JUAREZ",
-              "total": 376,
-              "m": 174,
-              "h": 202
+              "total": 477,
+              "m": 219,
+              "h": 258
             },
             {
               "nombre": "BOCOYNA",
@@ -6004,8 +6022,8 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "CAMARGO",
-              "total": 7,
-              "m": 3,
+              "total": 8,
+              "m": 4,
               "h": 4
             },
             {
@@ -6016,21 +6034,27 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "ALDAMA",
-              "total": 3,
+              "total": 4,
               "m": 2,
+              "h": 2
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 2,
+              "m": 1,
               "h": 1
+            },
+            {
+              "nombre": "GUADALUPE",
+              "total": 2,
+              "m": 0,
+              "h": 2
             },
             {
               "nombre": "JANOS",
               "total": 2,
               "m": 0,
               "h": 2
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 1,
-              "m": 0,
-              "h": 1
             },
             {
               "nombre": "VALLE DE ZARAGOZA",
@@ -6043,6 +6067,12 @@ window.DASHBOARD_DATA = {
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "TEMOSACHIC",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "AHUMADA",
@@ -6109,34 +6139,28 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 51117,
-        "6-11": 33270,
-        "12-17": 28965,
-        "18-29": 73188,
-        "30-49": 93915,
-        "50-64": 94060,
-        "65+": 75237
+        "0-5": 38089,
+        "6-11": 25114,
+        "12-17": 21828,
+        "18-29": 56062,
+        "30-49": 71671,
+        "50-64": 71624,
+        "65+": 57345
       },
-      "rango_dom": "50–64",
+      "rango_dom": "30–49",
       "rango_min": "12–17",
       "por_municipio": [
         {
-          "nombre": "CHIHUAHUA",
-          "total": 109101,
-          "m": 83562,
-          "h": 25539
-        },
-        {
           "nombre": "JUAREZ",
-          "total": 106230,
-          "m": 83289,
-          "h": 22941
+          "total": 92585,
+          "m": 77110,
+          "h": 15475
         },
         {
-          "nombre": "FORANEO",
-          "total": 49322,
-          "m": 42109,
-          "h": 7213
+          "nombre": "CHIHUAHUA",
+          "total": 91623,
+          "m": 74368,
+          "h": 17255
         },
         {
           "nombre": "NO IDENTIFICADO",
@@ -6146,393 +6170,1521 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "CUAUHTEMOC",
-          "total": 28165,
-          "m": 22924,
-          "h": 5241
+          "total": 23844,
+          "m": 20428,
+          "h": 3416
         },
         {
           "nombre": "HIDALGO DEL PARRAL",
-          "total": 20700,
-          "m": 16683,
-          "h": 4017
-        },
-        {
-          "nombre": "DELICIAS",
-          "total": 15714,
-          "m": 12353,
-          "h": 3361
+          "total": 17300,
+          "m": 14722,
+          "h": 2578
         },
         {
           "nombre": "CAMARGO",
-          "total": 15462,
-          "m": 12145,
-          "h": 3317
+          "total": 12855,
+          "m": 10676,
+          "h": 2179
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 12715,
+          "m": 10601,
+          "h": 2114
         },
         {
           "nombre": "JIMENEZ",
-          "total": 14702,
-          "m": 11639,
-          "h": 3063
+          "total": 11996,
+          "m": 9964,
+          "h": 2032
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 11092,
+          "m": 10996,
+          "h": 96
         },
         {
           "nombre": "GUERRERO",
-          "total": 10354,
-          "m": 8281,
-          "h": 2073
+          "total": 8648,
+          "m": 7282,
+          "h": 1366
         },
         {
           "nombre": "OJINAGA",
-          "total": 9092,
-          "m": 7177,
-          "h": 1915
+          "total": 7585,
+          "m": 6331,
+          "h": 1254
         },
         {
           "nombre": "ALDAMA",
-          "total": 8532,
-          "m": 6702,
-          "h": 1830
+          "total": 7003,
+          "m": 5784,
+          "h": 1219
         },
         {
           "nombre": "GUACHOCHI",
-          "total": 7473,
-          "m": 6150,
-          "h": 1323
-        },
-        {
-          "nombre": "MEOQUI",
-          "total": 7260,
-          "m": 5644,
-          "h": 1616
+          "total": 6643,
+          "m": 5763,
+          "h": 880
         },
         {
           "nombre": "NUEVO CASAS GRANDES",
-          "total": 7046,
-          "m": 5548,
-          "h": 1498
+          "total": 6307,
+          "m": 5271,
+          "h": 1036
         },
         {
-          "nombre": "BOCOYNA",
-          "total": 6618,
-          "m": 5306,
-          "h": 1312
+          "nombre": "MEOQUI",
+          "total": 5849,
+          "m": 4816,
+          "h": 1033
         },
         {
           "nombre": "GUADALUPE Y CALVO",
-          "total": 6470,
-          "m": 4955,
-          "h": 1515
+          "total": 5761,
+          "m": 4631,
+          "h": 1130
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 5720,
+          "m": 4803,
+          "h": 917
         },
         {
           "nombre": "ASCENSION",
-          "total": 5598,
-          "m": 4490,
-          "h": 1108
-        },
-        {
-          "nombre": "MADERA",
-          "total": 5202,
-          "m": 4323,
-          "h": 879
-        },
-        {
-          "nombre": "SAUCILLO",
-          "total": 4972,
-          "m": 3876,
-          "h": 1096
-        },
-        {
-          "nombre": "NAMIQUIPA",
-          "total": 4943,
-          "m": 3904,
-          "h": 1039
-        },
-        {
-          "nombre": "BUENAVENTURA",
-          "total": 4762,
-          "m": 3840,
-          "h": 922
-        },
-        {
-          "nombre": "URIQUE",
-          "total": 3965,
-          "m": 3184,
-          "h": 781
-        },
-        {
-          "nombre": "BALLEZA",
-          "total": 3794,
-          "m": 2960,
-          "h": 834
-        },
-        {
-          "nombre": "VALLE DE ZARAGOZA",
-          "total": 3514,
-          "m": 2686,
-          "h": 828
-        },
-        {
-          "nombre": "AHUMADA",
-          "total": 3487,
-          "m": 2744,
-          "h": 743
-        },
-        {
-          "nombre": "CASAS GRANDES",
-          "total": 3182,
-          "m": 2523,
-          "h": 659
-        },
-        {
-          "nombre": "GOMEZ FARIAS",
-          "total": 3021,
-          "m": 2319,
+          "total": 4797,
+          "m": 4095,
           "h": 702
         },
         {
-          "nombre": "SANTA BARBARA",
-          "total": 2756,
-          "m": 2223,
-          "h": 533
+          "nombre": "MADERA",
+          "total": 4630,
+          "m": 4032,
+          "h": 598
         },
         {
-          "nombre": "GUAZAPARES",
-          "total": 2722,
-          "m": 2135,
-          "h": 587
+          "nombre": "BUENAVENTURA",
+          "total": 4408,
+          "m": 3770,
+          "h": 638
         },
         {
-          "nombre": "ROSALES",
-          "total": 2718,
-          "m": 2128,
-          "h": 590
+          "nombre": "SAUCILLO",
+          "total": 4304,
+          "m": 3570,
+          "h": 734
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 4255,
+          "m": 3589,
+          "h": 666
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 3593,
+          "m": 3043,
+          "h": 550
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 3248,
+          "m": 2647,
+          "h": 601
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 2972,
+          "m": 2409,
+          "h": 563
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 2970,
+          "m": 2451,
+          "h": 519
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 2625,
+          "m": 2207,
+          "h": 418
         },
         {
           "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-          "total": 2649,
-          "m": 2054,
-          "h": 595
+          "total": 2548,
+          "m": 2103,
+          "h": 445
         },
         {
-          "nombre": "LOPEZ",
-          "total": 2592,
-          "m": 2019,
-          "h": 573
+          "nombre": "GOMEZ FARIAS",
+          "total": 2540,
+          "m": 2063,
+          "h": 477
         },
         {
-          "nombre": "CARICHI",
-          "total": 2367,
-          "m": 1896,
-          "h": 471
+          "nombre": "GUAZAPARES",
+          "total": 2484,
+          "m": 2067,
+          "h": 417
         },
         {
-          "nombre": "BACHINIVA",
-          "total": 2358,
-          "m": 1854,
-          "h": 504
-        },
-        {
-          "nombre": "LA CRUZ",
-          "total": 2086,
-          "m": 1602,
-          "h": 484
-        },
-        {
-          "nombre": "PRAXEDIS G. GUERRERO",
-          "total": 2052,
-          "m": 1626,
-          "h": 426
-        },
-        {
-          "nombre": "SANTA ISABEL",
-          "total": 2007,
-          "m": 1534,
-          "h": 473
-        },
-        {
-          "nombre": "IGNACIO ZARAGOZA",
-          "total": 1964,
-          "m": 1524,
-          "h": 440
-        },
-        {
-          "nombre": "JANOS",
-          "total": 1904,
-          "m": 1465,
-          "h": 439
-        },
-        {
-          "nombre": "MATAMOROS",
-          "total": 1872,
-          "m": 1508,
-          "h": 364
-        },
-        {
-          "nombre": "OCAMPO",
-          "total": 1803,
-          "m": 1455,
+          "nombre": "SANTA BARBARA",
+          "total": 2320,
+          "m": 1972,
           "h": 348
         },
         {
-          "nombre": "TEMOSACHIC",
-          "total": 1473,
-          "m": 1147,
-          "h": 326
+          "nombre": "ROSALES",
+          "total": 2225,
+          "m": 1841,
+          "h": 384
         },
         {
-          "nombre": "CORONADO",
-          "total": 1435,
-          "m": 1093,
-          "h": 342
+          "nombre": "CARICHI",
+          "total": 2136,
+          "m": 1801,
+          "h": 335
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 2071,
+          "m": 1691,
+          "h": 380
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 2026,
+          "m": 1734,
+          "h": 292
+        },
+        {
+          "nombre": "JANOS",
+          "total": 1865,
+          "m": 1538,
+          "h": 327
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 1837,
+          "m": 1609,
+          "h": 228
+        },
+        {
+          "nombre": "LA CRUZ",
+          "total": 1716,
+          "m": 1399,
+          "h": 317
+        },
+        {
+          "nombre": "PRAXEDIS G. GUERRERO",
+          "total": 1713,
+          "m": 1430,
+          "h": 283
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 1652,
+          "m": 1352,
+          "h": 300
+        },
+        {
+          "nombre": "IGNACIO ZARAGOZA",
+          "total": 1645,
+          "m": 1330,
+          "h": 315
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 1645,
+          "m": 1395,
+          "h": 250
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 1357,
+          "m": 1126,
+          "h": 231
         },
         {
           "nombre": "SAN FRANCISCO DE CONCHOS",
-          "total": 1431,
-          "m": 1091,
-          "h": 340
-        },
-        {
-          "nombre": "SAN FRANCISCO DEL ORO",
-          "total": 1347,
-          "m": 1052,
-          "h": 295
-        },
-        {
-          "nombre": "JULIMES",
-          "total": 1310,
-          "m": 947,
-          "h": 363
+          "total": 1224,
+          "m": 987,
+          "h": 237
         },
         {
           "nombre": "MORIS",
-          "total": 1297,
-          "m": 1001,
-          "h": 296
-        },
-        {
-          "nombre": "SATEVO",
-          "total": 1261,
-          "m": 949,
-          "h": 312
-        },
-        {
-          "nombre": "URUACHI",
-          "total": 1223,
-          "m": 976,
-          "h": 247
-        },
-        {
-          "nombre": "GUADALUPE",
-          "total": 1195,
-          "m": 911,
-          "h": 284
-        },
-        {
-          "nombre": "MATACHI",
-          "total": 1175,
-          "m": 934,
-          "h": 241
-        },
-        {
-          "nombre": "GALEANA",
-          "total": 1135,
-          "m": 927,
+          "total": 1182,
+          "m": 974,
           "h": 208
         },
         {
-          "nombre": "EL TULE",
-          "total": 1134,
-          "m": 870,
-          "h": 264
+          "nombre": "URUACHI",
+          "total": 1177,
+          "m": 968,
+          "h": 209
         },
         {
-          "nombre": "AQUILES SERDAN",
-          "total": 1054,
-          "m": 786,
-          "h": 268
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 1172,
+          "m": 973,
+          "h": 199
+        },
+        {
+          "nombre": "GALEANA",
+          "total": 1157,
+          "m": 1016,
+          "h": 141
+        },
+        {
+          "nombre": "SATEVO",
+          "total": 1154,
+          "m": 927,
+          "h": 227
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 1153,
+          "m": 940,
+          "h": 213
         },
         {
           "nombre": "CHINIPAS",
-          "total": 1004,
-          "m": 767,
-          "h": 237
+          "total": 1100,
+          "m": 911,
+          "h": 189
+        },
+        {
+          "nombre": "GUADALUPE",
+          "total": 1026,
+          "m": 831,
+          "h": 195
+        },
+        {
+          "nombre": "JULIMES",
+          "total": 1023,
+          "m": 766,
+          "h": 257
+        },
+        {
+          "nombre": "MATACHI",
+          "total": 1008,
+          "m": 849,
+          "h": 159
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 967,
+          "m": 781,
+          "h": 186
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 943,
+          "m": 762,
+          "h": 181
         },
         {
           "nombre": "SAN FRANCISCO DE BORJA",
-          "total": 1003,
-          "m": 766,
-          "h": 237
-        },
-        {
-          "nombre": "MAGUARICHI",
-          "total": 898,
-          "m": 727,
-          "h": 171
+          "total": 816,
+          "m": 658,
+          "h": 158
         },
         {
           "nombre": "GRAN MORELOS",
-          "total": 871,
-          "m": 661,
-          "h": 210
+          "total": 725,
+          "m": 581,
+          "h": 144
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 718,
+          "m": 593,
+          "h": 125
         },
         {
           "nombre": "NONOAVA",
-          "total": 820,
-          "m": 627,
-          "h": 193
-        },
-        {
-          "nombre": "RIVA PALACIO",
-          "total": 762,
-          "m": 613,
-          "h": 149
+          "total": 705,
+          "m": 566,
+          "h": 139
         },
         {
           "nombre": "COYAME DEL SOTOL",
-          "total": 711,
-          "m": 575,
-          "h": 136
+          "total": 651,
+          "m": 543,
+          "h": 108
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 608,
+          "m": 528,
+          "h": 80
         },
         {
           "nombre": "MANUEL BENAVIDES",
-          "total": 693,
-          "m": 522,
-          "h": 171
+          "total": 586,
+          "m": 467,
+          "h": 119
         },
         {
           "nombre": "HUEJOTITAN",
-          "total": 674,
-          "m": 501,
-          "h": 173
+          "total": 577,
+          "m": 461,
+          "h": 116
         },
         {
           "nombre": "CUSIHUIRIACHI",
-          "total": 673,
-          "m": 495,
-          "h": 178
+          "total": 559,
+          "m": 447,
+          "h": 112
         },
         {
           "nombre": "DR. BELISARIO DOMINGUEZ",
-          "total": 626,
-          "m": 474,
-          "h": 152
+          "total": 513,
+          "m": 412,
+          "h": 101
         },
         {
           "nombre": "ALLENDE",
-          "total": 520,
-          "m": 403,
-          "h": 117
-        },
-        {
-          "nombre": "ROSARIO",
-          "total": 357,
-          "m": 271,
-          "h": 86
+          "total": 434,
+          "m": 365,
+          "h": 69
         },
         {
           "nombre": "MORELOS",
-          "total": 238,
-          "m": 179,
+          "total": 278,
+          "m": 230,
+          "h": 48
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 263,
+          "m": 202,
+          "h": 61
+        }
+      ]
+    },
+    {
+      "nombre": "DESPENSA DE ALIMENTOS",
+      "total": 40855,
+      "m": 28399,
+      "h": 12456,
+      "n_muns": 66,
+      "pct": 6.5,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 40855,
+          "m": 28399,
+          "h": 12456,
+          "muns": 68,
+          "programas": [
+            {
+              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
+              "total": 20728,
+              "m": 14551,
+              "h": 6177,
+              "muns": 68,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "AQUILES SERDAN",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "COYAME DEL SOTOL",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "DR. BELISARIO DOMINGUEZ",
+                "EL TULE",
+                "FORANEO",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GRAN MORELOS",
+                "GUACHOCHI",
+                "GUADALUPE",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "HUEJOTITAN",
+                "IGNACIO ZARAGOZA",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NO IDENTIFICADO",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "OCAMPO",
+                "OJINAGA",
+                "PRAXEDIS G. GUERRERO",
+                "RIVA PALACIO",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SAN FRANCISCO DE CONCHOS",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 2512,
+                "6-11": 692,
+                "12-17": 409,
+                "18-29": 1764,
+                "30-49": 4582,
+                "50-64": 4477,
+                "65+": 6291
+              }
+            },
+            {
+              "nombre": "ATENCION ALIMENTARIA A PERSONAS EN SITUACION DE VULNERABILIDAD",
+              "total": 19287,
+              "m": 13047,
+              "h": 6240,
+              "muns": 64,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "AQUILES SERDAN",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "COYAME DEL SOTOL",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "EL TULE",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GRAN MORELOS",
+                "GUACHOCHI",
+                "GUADALUPE",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "HUEJOTITAN",
+                "IGNACIO ZARAGOZA",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "OCAMPO",
+                "OJINAGA",
+                "PRAXEDIS G. GUERRERO",
+                "RIVA PALACIO",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SAN FRANCISCO DEL ORO",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 2486,
+                "6-11": 693,
+                "12-17": 324,
+                "18-29": 943,
+                "30-49": 3914,
+                "50-64": 4555,
+                "65+": 6372
+              }
+            },
+            {
+              "nombre": "ATENCION ALIMENTARIA PRIMEROS 1000 DIAS DE VIDA",
+              "total": 777,
+              "m": 768,
+              "h": 9,
+              "muns": 57,
+              "muns_lista": [
+                "AHUMADA",
+                "ALDAMA",
+                "ALLENDE",
+                "ASCENSION",
+                "BACHINIVA",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "BUENAVENTURA",
+                "CAMARGO",
+                "CARICHI",
+                "CASAS GRANDES",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CORONADO",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "DELICIAS",
+                "EL TULE",
+                "GALEANA",
+                "GOMEZ FARIAS",
+                "GUACHOCHI",
+                "GUADALUPE",
+                "GUADALUPE Y CALVO",
+                "GUAZAPARES",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "HUEJOTITAN",
+                "JANOS",
+                "JIMENEZ",
+                "JUAREZ",
+                "JULIMES",
+                "LA CRUZ",
+                "LOPEZ",
+                "MADERA",
+                "MAGUARICHI",
+                "MATACHI",
+                "MATAMOROS",
+                "MEOQUI",
+                "MORELOS",
+                "MORIS",
+                "NAMIQUIPA",
+                "NONOAVA",
+                "NUEVO CASAS GRANDES",
+                "PRAXEDIS G. GUERRERO",
+                "RIVA PALACIO",
+                "ROSALES",
+                "ROSARIO",
+                "SAN FRANCISCO DE BORJA",
+                "SANTA BARBARA",
+                "SANTA ISABEL",
+                "SATEVO",
+                "SAUCILLO",
+                "TEMOSACHIC",
+                "URIQUE",
+                "URUACHI",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 19,
+                "6-11": 0,
+                "12-17": 33,
+                "18-29": 435,
+                "30-49": 287,
+                "50-64": 3,
+                "65+": 0
+              }
+            },
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 63,
+              "m": 33,
+              "h": 30,
+              "muns": 11,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "BACHINIVA",
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "FORANEO",
+                "GOMEZ FARIAS",
+                "GUACHOCHI",
+                "GUADALUPE Y CALVO",
+                "OJINAGA",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 3,
+                "30-49": 23,
+                "50-64": 22,
+                "65+": 15
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "JUAREZ",
+              "total": 6964,
+              "m": 5392,
+              "h": 1572
+            },
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 5325,
+              "m": 4010,
+              "h": 1315
+            },
+            {
+              "nombre": "GUACHOCHI",
+              "total": 3545,
+              "m": 2671,
+              "h": 874
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 2919,
+              "m": 1968,
+              "h": 951
+            },
+            {
+              "nombre": "BALLEZA",
+              "total": 1588,
+              "m": 1072,
+              "h": 516
+            },
+            {
+              "nombre": "BUENAVENTURA",
+              "total": 1229,
+              "m": 845,
+              "h": 384
+            },
+            {
+              "nombre": "GUADALUPE Y CALVO",
+              "total": 1219,
+              "m": 749,
+              "h": 470
+            },
+            {
+              "nombre": "GUERRERO",
+              "total": 1196,
+              "m": 835,
+              "h": 361
+            },
+            {
+              "nombre": "CHINIPAS",
+              "total": 911,
+              "m": 604,
+              "h": 307
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 839,
+              "m": 557,
+              "h": 282
+            },
+            {
+              "nombre": "CARICHI",
+              "total": 788,
+              "m": 510,
+              "h": 278
+            },
+            {
+              "nombre": "NO IDENTIFICADO",
+              "total": 740,
+              "m": 740,
+              "h": 0
+            },
+            {
+              "nombre": "SAUCILLO",
+              "total": 602,
+              "m": 412,
+              "h": 190
+            },
+            {
+              "nombre": "GUAZAPARES",
+              "total": 602,
+              "m": 341,
+              "h": 261
+            },
+            {
+              "nombre": "NUEVO CASAS GRANDES",
+              "total": 597,
+              "m": 396,
+              "h": 201
+            },
+            {
+              "nombre": "MATAMOROS",
+              "total": 523,
+              "m": 319,
+              "h": 204
+            },
+            {
+              "nombre": "MADERA",
+              "total": 451,
+              "m": 242,
+              "h": 209
+            },
+            {
+              "nombre": "GOMEZ FARIAS",
+              "total": 431,
+              "m": 248,
+              "h": 183
+            },
+            {
+              "nombre": "SANTA ISABEL",
+              "total": 430,
+              "m": 286,
+              "h": 144
+            },
+            {
+              "nombre": "SANTA BARBARA",
+              "total": 424,
+              "m": 262,
+              "h": 162
+            },
+            {
+              "nombre": "URUACHI",
+              "total": 394,
+              "m": 229,
+              "h": 165
+            },
+            {
+              "nombre": "CASAS GRANDES",
+              "total": 388,
+              "m": 242,
+              "h": 146
+            },
+            {
+              "nombre": "JIMENEZ",
+              "total": 366,
+              "m": 203,
+              "h": 163
+            },
+            {
+              "nombre": "DELICIAS",
+              "total": 363,
+              "m": 236,
+              "h": 127
+            },
+            {
+              "nombre": "MORELOS",
+              "total": 362,
+              "m": 240,
+              "h": 122
+            },
+            {
+              "nombre": "TEMOSACHIC",
+              "total": 348,
+              "m": 206,
+              "h": 142
+            },
+            {
+              "nombre": "BOCOYNA",
+              "total": 347,
+              "m": 247,
+              "h": 100
+            },
+            {
+              "nombre": "MORIS",
+              "total": 342,
+              "m": 243,
+              "h": 99
+            },
+            {
+              "nombre": "ALDAMA",
+              "total": 333,
+              "m": 184,
+              "h": 149
+            },
+            {
+              "nombre": "ROSARIO",
+              "total": 324,
+              "m": 205,
+              "h": 119
+            },
+            {
+              "nombre": "SAN FRANCISCO DE BORJA",
+              "total": 321,
+              "m": 213,
+              "h": 108
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 320,
+              "m": 195,
+              "h": 125
+            },
+            {
+              "nombre": "JANOS",
+              "total": 275,
+              "m": 149,
+              "h": 126
+            },
+            {
+              "nombre": "EL TULE",
+              "total": 257,
+              "m": 175,
+              "h": 82
+            },
+            {
+              "nombre": "OCAMPO",
+              "total": 246,
+              "m": 149,
+              "h": 97
+            },
+            {
+              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+              "total": 245,
+              "m": 156,
+              "h": 89
+            },
+            {
+              "nombre": "CORONADO",
+              "total": 227,
+              "m": 176,
+              "h": 51
+            },
+            {
+              "nombre": "ASCENSION",
+              "total": 226,
+              "m": 142,
+              "h": 84
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 222,
+              "m": 178,
+              "h": 44
+            },
+            {
+              "nombre": "IGNACIO ZARAGOZA",
+              "total": 218,
+              "m": 96,
+              "h": 122
+            },
+            {
+              "nombre": "JULIMES",
+              "total": 202,
+              "m": 114,
+              "h": 88
+            },
+            {
+              "nombre": "SATEVO",
+              "total": 200,
+              "m": 131,
+              "h": 69
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 193,
+              "m": 126,
+              "h": 67
+            },
+            {
+              "nombre": "AHUMADA",
+              "total": 193,
+              "m": 100,
+              "h": 93
+            },
+            {
+              "nombre": "PRAXEDIS G. GUERRERO",
+              "total": 180,
+              "m": 111,
+              "h": 69
+            },
+            {
+              "nombre": "MATACHI",
+              "total": 178,
+              "m": 97,
+              "h": 81
+            },
+            {
+              "nombre": "OJINAGA",
+              "total": 158,
+              "m": 99,
+              "h": 59
+            },
+            {
+              "nombre": "NONOAVA",
+              "total": 157,
+              "m": 105,
+              "h": 52
+            },
+            {
+              "nombre": "MEOQUI",
+              "total": 154,
+              "m": 78,
+              "h": 76
+            },
+            {
+              "nombre": "VALLE DE ZARAGOZA",
+              "total": 152,
+              "m": 104,
+              "h": 48
+            },
+            {
+              "nombre": "GALEANA",
+              "total": 129,
+              "m": 92,
+              "h": 37
+            },
+            {
+              "nombre": "BACHINIVA",
+              "total": 125,
+              "m": 53,
+              "h": 72
+            },
+            {
+              "nombre": "NAMIQUIPA",
+              "total": 125,
+              "m": 66,
+              "h": 59
+            },
+            {
+              "nombre": "CUSIHUIRIACHI",
+              "total": 121,
+              "m": 72,
+              "h": 49
+            },
+            {
+              "nombre": "GUADALUPE",
+              "total": 111,
+              "m": 71,
+              "h": 40
+            },
+            {
+              "nombre": "ALLENDE",
+              "total": 110,
+              "m": 74,
+              "h": 36
+            },
+            {
+              "nombre": "HUEJOTITAN",
+              "total": 106,
+              "m": 81,
+              "h": 25
+            },
+            {
+              "nombre": "GRAN MORELOS",
+              "total": 102,
+              "m": 66,
+              "h": 36
+            },
+            {
+              "nombre": "LA CRUZ",
+              "total": 101,
+              "m": 64,
+              "h": 37
+            },
+            {
+              "nombre": "COYAME DEL SOTOL",
+              "total": 93,
+              "m": 54,
+              "h": 39
+            },
+            {
+              "nombre": "SAN FRANCISCO DEL ORO",
+              "total": 85,
+              "m": 47,
+              "h": 38
+            },
+            {
+              "nombre": "MAGUARICHI",
+              "total": 83,
+              "m": 66,
+              "h": 17
+            },
+            {
+              "nombre": "RIVA PALACIO",
+              "total": 82,
+              "m": 41,
+              "h": 41
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 77,
+              "m": 38,
+              "h": 39
+            },
+            {
+              "nombre": "LOPEZ",
+              "total": 69,
+              "m": 34,
+              "h": 35
+            },
+            {
+              "nombre": "ROSALES",
+              "total": 66,
+              "m": 59,
+              "h": 7
+            },
+            {
+              "nombre": "SAN FRANCISCO DE CONCHOS",
+              "total": 45,
+              "m": 25,
+              "h": 20
+            },
+            {
+              "nombre": "DR. BELISARIO DOMINGUEZ",
+              "total": 11,
+              "m": 8,
+              "h": 3
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 5017,
+        "6-11": 1385,
+        "12-17": 766,
+        "18-29": 3145,
+        "30-49": 8806,
+        "50-64": 9057,
+        "65+": 12678
+      },
+      "rango_dom": "65+",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 6964,
+          "m": 5392,
+          "h": 1572
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5325,
+          "m": 4010,
+          "h": 1315
+        },
+        {
+          "nombre": "GUACHOCHI",
+          "total": 3545,
+          "m": 2671,
+          "h": 874
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 2919,
+          "m": 1968,
+          "h": 951
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 1588,
+          "m": 1072,
+          "h": 516
+        },
+        {
+          "nombre": "BUENAVENTURA",
+          "total": 1229,
+          "m": 845,
+          "h": 384
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 1219,
+          "m": 749,
+          "h": 470
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 1196,
+          "m": 835,
+          "h": 361
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 911,
+          "m": 604,
+          "h": 307
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 839,
+          "m": 557,
+          "h": 282
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 788,
+          "m": 510,
+          "h": 278
+        },
+        {
+          "nombre": "NO IDENTIFICADO",
+          "total": 740,
+          "m": 740,
+          "h": 0
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 602,
+          "m": 412,
+          "h": 190
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 602,
+          "m": 341,
+          "h": 261
+        },
+        {
+          "nombre": "NUEVO CASAS GRANDES",
+          "total": 597,
+          "m": 396,
+          "h": 201
+        },
+        {
+          "nombre": "MATAMOROS",
+          "total": 523,
+          "m": 319,
+          "h": 204
+        },
+        {
+          "nombre": "MADERA",
+          "total": 451,
+          "m": 242,
+          "h": 209
+        },
+        {
+          "nombre": "GOMEZ FARIAS",
+          "total": 431,
+          "m": 248,
+          "h": 183
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 430,
+          "m": 286,
+          "h": 144
+        },
+        {
+          "nombre": "SANTA BARBARA",
+          "total": 424,
+          "m": 262,
+          "h": 162
+        },
+        {
+          "nombre": "URUACHI",
+          "total": 394,
+          "m": 229,
+          "h": 165
+        },
+        {
+          "nombre": "CASAS GRANDES",
+          "total": 388,
+          "m": 242,
+          "h": 146
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 366,
+          "m": 203,
+          "h": 163
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 363,
+          "m": 236,
+          "h": 127
+        },
+        {
+          "nombre": "MORELOS",
+          "total": 362,
+          "m": 240,
+          "h": 122
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 348,
+          "m": 206,
+          "h": 142
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 347,
+          "m": 247,
+          "h": 100
+        },
+        {
+          "nombre": "MORIS",
+          "total": 342,
+          "m": 243,
+          "h": 99
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 333,
+          "m": 184,
+          "h": 149
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 324,
+          "m": 205,
+          "h": 119
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 321,
+          "m": 213,
+          "h": 108
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 320,
+          "m": 195,
+          "h": 125
+        },
+        {
+          "nombre": "JANOS",
+          "total": 275,
+          "m": 149,
+          "h": 126
+        },
+        {
+          "nombre": "EL TULE",
+          "total": 257,
+          "m": 175,
+          "h": 82
+        },
+        {
+          "nombre": "OCAMPO",
+          "total": 246,
+          "m": 149,
+          "h": 97
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 245,
+          "m": 156,
+          "h": 89
+        },
+        {
+          "nombre": "CORONADO",
+          "total": 227,
+          "m": 176,
+          "h": 51
+        },
+        {
+          "nombre": "ASCENSION",
+          "total": 226,
+          "m": 142,
+          "h": 84
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 222,
+          "m": 178,
+          "h": 44
+        },
+        {
+          "nombre": "IGNACIO ZARAGOZA",
+          "total": 218,
+          "m": 96,
+          "h": 122
+        },
+        {
+          "nombre": "JULIMES",
+          "total": 202,
+          "m": 114,
+          "h": 88
+        },
+        {
+          "nombre": "SATEVO",
+          "total": 200,
+          "m": 131,
+          "h": 69
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 193,
+          "m": 126,
+          "h": 67
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 193,
+          "m": 100,
+          "h": 93
+        },
+        {
+          "nombre": "PRAXEDIS G. GUERRERO",
+          "total": 180,
+          "m": 111,
+          "h": 69
+        },
+        {
+          "nombre": "MATACHI",
+          "total": 178,
+          "m": 97,
+          "h": 81
+        },
+        {
+          "nombre": "OJINAGA",
+          "total": 158,
+          "m": 99,
           "h": 59
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 157,
+          "m": 105,
+          "h": 52
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 154,
+          "m": 78,
+          "h": 76
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 152,
+          "m": 104,
+          "h": 48
+        },
+        {
+          "nombre": "GALEANA",
+          "total": 129,
+          "m": 92,
+          "h": 37
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 125,
+          "m": 53,
+          "h": 72
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 125,
+          "m": 66,
+          "h": 59
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 121,
+          "m": 72,
+          "h": 49
+        },
+        {
+          "nombre": "GUADALUPE",
+          "total": 111,
+          "m": 71,
+          "h": 40
+        },
+        {
+          "nombre": "ALLENDE",
+          "total": 110,
+          "m": 74,
+          "h": 36
+        },
+        {
+          "nombre": "HUEJOTITAN",
+          "total": 106,
+          "m": 81,
+          "h": 25
+        },
+        {
+          "nombre": "GRAN MORELOS",
+          "total": 102,
+          "m": 66,
+          "h": 36
+        },
+        {
+          "nombre": "LA CRUZ",
+          "total": 101,
+          "m": 64,
+          "h": 37
+        },
+        {
+          "nombre": "COYAME DEL SOTOL",
+          "total": 93,
+          "m": 54,
+          "h": 39
+        },
+        {
+          "nombre": "SAN FRANCISCO DEL ORO",
+          "total": 85,
+          "m": 47,
+          "h": 38
+        },
+        {
+          "nombre": "MAGUARICHI",
+          "total": 83,
+          "m": 66,
+          "h": 17
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 82,
+          "m": 41,
+          "h": 41
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 77,
+          "m": 38,
+          "h": 39
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 69,
+          "m": 34,
+          "h": 35
+        },
+        {
+          "nombre": "ROSALES",
+          "total": 66,
+          "m": 59,
+          "h": 7
+        },
+        {
+          "nombre": "SAN FRANCISCO DE CONCHOS",
+          "total": 45,
+          "m": 25,
+          "h": 20
+        },
+        {
+          "nombre": "DR. BELISARIO DOMINGUEZ",
+          "total": 11,
+          "m": 8,
+          "h": 3
         }
       ]
     },
@@ -6542,7 +7694,7 @@ window.DASHBOARD_DATA = {
       "m": 12805,
       "h": 13541,
       "n_muns": 37,
-      "pct": 3.7,
+      "pct": 4.2,
       "instituciones": [
         {
           "nombre": "ICHDII",
@@ -6597,9 +7749,9 @@ window.DASHBOARD_DATA = {
                 "VALLE DE ZARAGOZA"
               ],
               "rangos": {
-                "0-5": 12482,
-                "6-11": 13492,
-                "12-17": 372,
+                "0-5": 12390,
+                "6-11": 13558,
+                "12-17": 398,
                 "18-29": 0,
                 "30-49": 0,
                 "50-64": 0,
@@ -6834,9 +7986,9 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 12482,
-        "6-11": 13492,
-        "12-17": 372,
+        "0-5": 12390,
+        "6-11": 13558,
+        "12-17": 398,
         "18-29": 0,
         "30-49": 0,
         "50-64": 0,
@@ -7070,977 +8222,12 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "DESPENSA DE ALIMENTOS",
-      "total": 20791,
-      "m": 14584,
-      "h": 6207,
-      "n_muns": 66,
-      "pct": 2.9,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 20791,
-          "m": 14584,
-          "h": 6207,
-          "muns": 68,
-          "programas": [
-            {
-              "nombre": "ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS",
-              "total": 20728,
-              "m": 14551,
-              "h": 6177,
-              "muns": 68,
-              "muns_lista": [
-                "AHUMADA",
-                "ALDAMA",
-                "ALLENDE",
-                "AQUILES SERDAN",
-                "ASCENSION",
-                "BACHINIVA",
-                "BALLEZA",
-                "BATOPILAS DE MANUEL GOMEZ MORIN",
-                "BOCOYNA",
-                "BUENAVENTURA",
-                "CAMARGO",
-                "CARICHI",
-                "CASAS GRANDES",
-                "CHIHUAHUA",
-                "CHINIPAS",
-                "CORONADO",
-                "COYAME DEL SOTOL",
-                "CUAUHTEMOC",
-                "CUSIHUIRIACHI",
-                "DELICIAS",
-                "DR. BELISARIO DOMINGUEZ",
-                "EL TULE",
-                "FORANEO",
-                "GALEANA",
-                "GOMEZ FARIAS",
-                "GRAN MORELOS",
-                "GUACHOCHI",
-                "GUADALUPE",
-                "GUADALUPE Y CALVO",
-                "GUAZAPARES",
-                "GUERRERO",
-                "HIDALGO DEL PARRAL",
-                "HUEJOTITAN",
-                "IGNACIO ZARAGOZA",
-                "JANOS",
-                "JIMENEZ",
-                "JUAREZ",
-                "JULIMES",
-                "LA CRUZ",
-                "LOPEZ",
-                "MADERA",
-                "MAGUARICHI",
-                "MATACHI",
-                "MATAMOROS",
-                "MEOQUI",
-                "MORELOS",
-                "MORIS",
-                "NAMIQUIPA",
-                "NO IDENTIFICADO",
-                "NONOAVA",
-                "NUEVO CASAS GRANDES",
-                "OCAMPO",
-                "OJINAGA",
-                "PRAXEDIS G. GUERRERO",
-                "RIVA PALACIO",
-                "ROSALES",
-                "ROSARIO",
-                "SAN FRANCISCO DE BORJA",
-                "SAN FRANCISCO DE CONCHOS",
-                "SAN FRANCISCO DEL ORO",
-                "SANTA BARBARA",
-                "SANTA ISABEL",
-                "SATEVO",
-                "SAUCILLO",
-                "TEMOSACHIC",
-                "URIQUE",
-                "URUACHI",
-                "VALLE DE ZARAGOZA"
-              ],
-              "rangos": {
-                "0-5": 2512,
-                "6-11": 692,
-                "12-17": 411,
-                "18-29": 1762,
-                "30-49": 4582,
-                "50-64": 4477,
-                "65+": 6291
-              }
-            },
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 63,
-              "m": 33,
-              "h": 30,
-              "muns": 11,
-              "muns_lista": [
-                "AQUILES SERDAN",
-                "BACHINIVA",
-                "BOCOYNA",
-                "CHIHUAHUA",
-                "CUAUHTEMOC",
-                "FORANEO",
-                "GOMEZ FARIAS",
-                "GUACHOCHI",
-                "GUADALUPE Y CALVO",
-                "OJINAGA",
-                "URIQUE"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 4,
-                "30-49": 22,
-                "50-64": 22,
-                "65+": 15
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "JUAREZ",
-              "total": 3516,
-              "m": 2745,
-              "h": 771
-            },
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 2740,
-              "m": 2056,
-              "h": 684
-            },
-            {
-              "nombre": "GUACHOCHI",
-              "total": 1769,
-              "m": 1332,
-              "h": 437
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1456,
-              "m": 988,
-              "h": 468
-            },
-            {
-              "nombre": "BALLEZA",
-              "total": 760,
-              "m": 513,
-              "h": 247
-            },
-            {
-              "nombre": "NO IDENTIFICADO",
-              "total": 740,
-              "m": 740,
-              "h": 0
-            },
-            {
-              "nombre": "BUENAVENTURA",
-              "total": 637,
-              "m": 441,
-              "h": 196
-            },
-            {
-              "nombre": "GUADALUPE Y CALVO",
-              "total": 589,
-              "m": 363,
-              "h": 226
-            },
-            {
-              "nombre": "GUERRERO",
-              "total": 588,
-              "m": 408,
-              "h": 180
-            },
-            {
-              "nombre": "CHINIPAS",
-              "total": 460,
-              "m": 309,
-              "h": 151
-            },
-            {
-              "nombre": "CUAUHTEMOC",
-              "total": 420,
-              "m": 278,
-              "h": 142
-            },
-            {
-              "nombre": "CARICHI",
-              "total": 378,
-              "m": 243,
-              "h": 135
-            },
-            {
-              "nombre": "SAUCILLO",
-              "total": 300,
-              "m": 201,
-              "h": 99
-            },
-            {
-              "nombre": "GUAZAPARES",
-              "total": 300,
-              "m": 166,
-              "h": 134
-            },
-            {
-              "nombre": "NUEVO CASAS GRANDES",
-              "total": 298,
-              "m": 198,
-              "h": 100
-            },
-            {
-              "nombre": "MATAMOROS",
-              "total": 262,
-              "m": 161,
-              "h": 101
-            },
-            {
-              "nombre": "MADERA",
-              "total": 226,
-              "m": 122,
-              "h": 104
-            },
-            {
-              "nombre": "GOMEZ FARIAS",
-              "total": 217,
-              "m": 123,
-              "h": 94
-            },
-            {
-              "nombre": "SANTA ISABEL",
-              "total": 216,
-              "m": 145,
-              "h": 71
-            },
-            {
-              "nombre": "SANTA BARBARA",
-              "total": 212,
-              "m": 132,
-              "h": 80
-            },
-            {
-              "nombre": "URUACHI",
-              "total": 197,
-              "m": 114,
-              "h": 83
-            },
-            {
-              "nombre": "CASAS GRANDES",
-              "total": 190,
-              "m": 117,
-              "h": 73
-            },
-            {
-              "nombre": "JIMENEZ",
-              "total": 186,
-              "m": 101,
-              "h": 85
-            },
-            {
-              "nombre": "MORELOS",
-              "total": 181,
-              "m": 119,
-              "h": 62
-            },
-            {
-              "nombre": "BOCOYNA",
-              "total": 180,
-              "m": 128,
-              "h": 52
-            },
-            {
-              "nombre": "TEMOSACHIC",
-              "total": 173,
-              "m": 101,
-              "h": 72
-            },
-            {
-              "nombre": "MORIS",
-              "total": 172,
-              "m": 122,
-              "h": 50
-            },
-            {
-              "nombre": "ALDAMA",
-              "total": 166,
-              "m": 91,
-              "h": 75
-            },
-            {
-              "nombre": "URIQUE",
-              "total": 161,
-              "m": 98,
-              "h": 63
-            },
-            {
-              "nombre": "SAN FRANCISCO DE BORJA",
-              "total": 161,
-              "m": 105,
-              "h": 56
-            },
-            {
-              "nombre": "JANOS",
-              "total": 155,
-              "m": 81,
-              "h": 74
-            },
-            {
-              "nombre": "ROSARIO",
-              "total": 152,
-              "m": 95,
-              "h": 57
-            },
-            {
-              "nombre": "DELICIAS",
-              "total": 142,
-              "m": 103,
-              "h": 39
-            },
-            {
-              "nombre": "OCAMPO",
-              "total": 127,
-              "m": 77,
-              "h": 50
-            },
-            {
-              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-              "total": 123,
-              "m": 78,
-              "h": 45
-            },
-            {
-              "nombre": "EL TULE",
-              "total": 115,
-              "m": 79,
-              "h": 36
-            },
-            {
-              "nombre": "CORONADO",
-              "total": 115,
-              "m": 89,
-              "h": 26
-            },
-            {
-              "nombre": "CAMARGO",
-              "total": 111,
-              "m": 89,
-              "h": 22
-            },
-            {
-              "nombre": "IGNACIO ZARAGOZA",
-              "total": 110,
-              "m": 49,
-              "h": 61
-            },
-            {
-              "nombre": "JULIMES",
-              "total": 102,
-              "m": 58,
-              "h": 44
-            },
-            {
-              "nombre": "SATEVO",
-              "total": 100,
-              "m": 65,
-              "h": 35
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 98,
-              "m": 62,
-              "h": 36
-            },
-            {
-              "nombre": "AHUMADA",
-              "total": 96,
-              "m": 50,
-              "h": 46
-            },
-            {
-              "nombre": "ASCENSION",
-              "total": 89,
-              "m": 52,
-              "h": 37
-            },
-            {
-              "nombre": "MATACHI",
-              "total": 89,
-              "m": 47,
-              "h": 42
-            },
-            {
-              "nombre": "NONOAVA",
-              "total": 78,
-              "m": 53,
-              "h": 25
-            },
-            {
-              "nombre": "FORANEO",
-              "total": 77,
-              "m": 38,
-              "h": 39
-            },
-            {
-              "nombre": "OJINAGA",
-              "total": 76,
-              "m": 47,
-              "h": 29
-            },
-            {
-              "nombre": "VALLE DE ZARAGOZA",
-              "total": 74,
-              "m": 50,
-              "h": 24
-            },
-            {
-              "nombre": "PRAXEDIS G. GUERRERO",
-              "total": 70,
-              "m": 44,
-              "h": 26
-            },
-            {
-              "nombre": "BACHINIVA",
-              "total": 63,
-              "m": 27,
-              "h": 36
-            },
-            {
-              "nombre": "NAMIQUIPA",
-              "total": 63,
-              "m": 33,
-              "h": 30
-            },
-            {
-              "nombre": "CUSIHUIRIACHI",
-              "total": 60,
-              "m": 35,
-              "h": 25
-            },
-            {
-              "nombre": "GALEANA",
-              "total": 59,
-              "m": 43,
-              "h": 16
-            },
-            {
-              "nombre": "ALLENDE",
-              "total": 55,
-              "m": 36,
-              "h": 19
-            },
-            {
-              "nombre": "GUADALUPE",
-              "total": 55,
-              "m": 35,
-              "h": 20
-            },
-            {
-              "nombre": "HUEJOTITAN",
-              "total": 53,
-              "m": 41,
-              "h": 12
-            },
-            {
-              "nombre": "GRAN MORELOS",
-              "total": 50,
-              "m": 33,
-              "h": 17
-            },
-            {
-              "nombre": "MEOQUI",
-              "total": 48,
-              "m": 24,
-              "h": 24
-            },
-            {
-              "nombre": "LA CRUZ",
-              "total": 47,
-              "m": 29,
-              "h": 18
-            },
-            {
-              "nombre": "COYAME DEL SOTOL",
-              "total": 47,
-              "m": 29,
-              "h": 18
-            },
-            {
-              "nombre": "SAN FRANCISCO DE CONCHOS",
-              "total": 45,
-              "m": 25,
-              "h": 20
-            },
-            {
-              "nombre": "SAN FRANCISCO DEL ORO",
-              "total": 43,
-              "m": 23,
-              "h": 20
-            },
-            {
-              "nombre": "MAGUARICHI",
-              "total": 42,
-              "m": 33,
-              "h": 9
-            },
-            {
-              "nombre": "RIVA PALACIO",
-              "total": 41,
-              "m": 20,
-              "h": 21
-            },
-            {
-              "nombre": "ROSALES",
-              "total": 33,
-              "m": 29,
-              "h": 4
-            },
-            {
-              "nombre": "LOPEZ",
-              "total": 26,
-              "m": 15,
-              "h": 11
-            },
-            {
-              "nombre": "DR. BELISARIO DOMINGUEZ",
-              "total": 11,
-              "m": 8,
-              "h": 3
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 2512,
-        "6-11": 692,
-        "12-17": 411,
-        "18-29": 1766,
-        "30-49": 4604,
-        "50-64": 4499,
-        "65+": 6306
-      },
-      "rango_dom": "65+",
-      "rango_min": "12–17",
-      "por_municipio": [
-        {
-          "nombre": "JUAREZ",
-          "total": 3516,
-          "m": 2745,
-          "h": 771
-        },
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 2740,
-          "m": 2056,
-          "h": 684
-        },
-        {
-          "nombre": "GUACHOCHI",
-          "total": 1769,
-          "m": 1332,
-          "h": 437
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 1456,
-          "m": 988,
-          "h": 468
-        },
-        {
-          "nombre": "BALLEZA",
-          "total": 760,
-          "m": 513,
-          "h": 247
-        },
-        {
-          "nombre": "NO IDENTIFICADO",
-          "total": 740,
-          "m": 740,
-          "h": 0
-        },
-        {
-          "nombre": "BUENAVENTURA",
-          "total": 637,
-          "m": 441,
-          "h": 196
-        },
-        {
-          "nombre": "GUADALUPE Y CALVO",
-          "total": 589,
-          "m": 363,
-          "h": 226
-        },
-        {
-          "nombre": "GUERRERO",
-          "total": 588,
-          "m": 408,
-          "h": 180
-        },
-        {
-          "nombre": "CHINIPAS",
-          "total": 460,
-          "m": 309,
-          "h": 151
-        },
-        {
-          "nombre": "CUAUHTEMOC",
-          "total": 420,
-          "m": 278,
-          "h": 142
-        },
-        {
-          "nombre": "CARICHI",
-          "total": 378,
-          "m": 243,
-          "h": 135
-        },
-        {
-          "nombre": "SAUCILLO",
-          "total": 300,
-          "m": 201,
-          "h": 99
-        },
-        {
-          "nombre": "GUAZAPARES",
-          "total": 300,
-          "m": 166,
-          "h": 134
-        },
-        {
-          "nombre": "NUEVO CASAS GRANDES",
-          "total": 298,
-          "m": 198,
-          "h": 100
-        },
-        {
-          "nombre": "MATAMOROS",
-          "total": 262,
-          "m": 161,
-          "h": 101
-        },
-        {
-          "nombre": "MADERA",
-          "total": 226,
-          "m": 122,
-          "h": 104
-        },
-        {
-          "nombre": "GOMEZ FARIAS",
-          "total": 217,
-          "m": 123,
-          "h": 94
-        },
-        {
-          "nombre": "SANTA ISABEL",
-          "total": 216,
-          "m": 145,
-          "h": 71
-        },
-        {
-          "nombre": "SANTA BARBARA",
-          "total": 212,
-          "m": 132,
-          "h": 80
-        },
-        {
-          "nombre": "URUACHI",
-          "total": 197,
-          "m": 114,
-          "h": 83
-        },
-        {
-          "nombre": "CASAS GRANDES",
-          "total": 190,
-          "m": 117,
-          "h": 73
-        },
-        {
-          "nombre": "JIMENEZ",
-          "total": 186,
-          "m": 101,
-          "h": 85
-        },
-        {
-          "nombre": "MORELOS",
-          "total": 181,
-          "m": 119,
-          "h": 62
-        },
-        {
-          "nombre": "BOCOYNA",
-          "total": 180,
-          "m": 128,
-          "h": 52
-        },
-        {
-          "nombre": "TEMOSACHIC",
-          "total": 173,
-          "m": 101,
-          "h": 72
-        },
-        {
-          "nombre": "MORIS",
-          "total": 172,
-          "m": 122,
-          "h": 50
-        },
-        {
-          "nombre": "ALDAMA",
-          "total": 166,
-          "m": 91,
-          "h": 75
-        },
-        {
-          "nombre": "URIQUE",
-          "total": 161,
-          "m": 98,
-          "h": 63
-        },
-        {
-          "nombre": "SAN FRANCISCO DE BORJA",
-          "total": 161,
-          "m": 105,
-          "h": 56
-        },
-        {
-          "nombre": "JANOS",
-          "total": 155,
-          "m": 81,
-          "h": 74
-        },
-        {
-          "nombre": "ROSARIO",
-          "total": 152,
-          "m": 95,
-          "h": 57
-        },
-        {
-          "nombre": "DELICIAS",
-          "total": 142,
-          "m": 103,
-          "h": 39
-        },
-        {
-          "nombre": "OCAMPO",
-          "total": 127,
-          "m": 77,
-          "h": 50
-        },
-        {
-          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-          "total": 123,
-          "m": 78,
-          "h": 45
-        },
-        {
-          "nombre": "EL TULE",
-          "total": 115,
-          "m": 79,
-          "h": 36
-        },
-        {
-          "nombre": "CORONADO",
-          "total": 115,
-          "m": 89,
-          "h": 26
-        },
-        {
-          "nombre": "CAMARGO",
-          "total": 111,
-          "m": 89,
-          "h": 22
-        },
-        {
-          "nombre": "IGNACIO ZARAGOZA",
-          "total": 110,
-          "m": 49,
-          "h": 61
-        },
-        {
-          "nombre": "JULIMES",
-          "total": 102,
-          "m": 58,
-          "h": 44
-        },
-        {
-          "nombre": "SATEVO",
-          "total": 100,
-          "m": 65,
-          "h": 35
-        },
-        {
-          "nombre": "AQUILES SERDAN",
-          "total": 98,
-          "m": 62,
-          "h": 36
-        },
-        {
-          "nombre": "AHUMADA",
-          "total": 96,
-          "m": 50,
-          "h": 46
-        },
-        {
-          "nombre": "ASCENSION",
-          "total": 89,
-          "m": 52,
-          "h": 37
-        },
-        {
-          "nombre": "MATACHI",
-          "total": 89,
-          "m": 47,
-          "h": 42
-        },
-        {
-          "nombre": "NONOAVA",
-          "total": 78,
-          "m": 53,
-          "h": 25
-        },
-        {
-          "nombre": "FORANEO",
-          "total": 77,
-          "m": 38,
-          "h": 39
-        },
-        {
-          "nombre": "OJINAGA",
-          "total": 76,
-          "m": 47,
-          "h": 29
-        },
-        {
-          "nombre": "VALLE DE ZARAGOZA",
-          "total": 74,
-          "m": 50,
-          "h": 24
-        },
-        {
-          "nombre": "PRAXEDIS G. GUERRERO",
-          "total": 70,
-          "m": 44,
-          "h": 26
-        },
-        {
-          "nombre": "BACHINIVA",
-          "total": 63,
-          "m": 27,
-          "h": 36
-        },
-        {
-          "nombre": "NAMIQUIPA",
-          "total": 63,
-          "m": 33,
-          "h": 30
-        },
-        {
-          "nombre": "CUSIHUIRIACHI",
-          "total": 60,
-          "m": 35,
-          "h": 25
-        },
-        {
-          "nombre": "GALEANA",
-          "total": 59,
-          "m": 43,
-          "h": 16
-        },
-        {
-          "nombre": "ALLENDE",
-          "total": 55,
-          "m": 36,
-          "h": 19
-        },
-        {
-          "nombre": "GUADALUPE",
-          "total": 55,
-          "m": 35,
-          "h": 20
-        },
-        {
-          "nombre": "HUEJOTITAN",
-          "total": 53,
-          "m": 41,
-          "h": 12
-        },
-        {
-          "nombre": "GRAN MORELOS",
-          "total": 50,
-          "m": 33,
-          "h": 17
-        },
-        {
-          "nombre": "MEOQUI",
-          "total": 48,
-          "m": 24,
-          "h": 24
-        },
-        {
-          "nombre": "LA CRUZ",
-          "total": 47,
-          "m": 29,
-          "h": 18
-        },
-        {
-          "nombre": "COYAME DEL SOTOL",
-          "total": 47,
-          "m": 29,
-          "h": 18
-        },
-        {
-          "nombre": "SAN FRANCISCO DE CONCHOS",
-          "total": 45,
-          "m": 25,
-          "h": 20
-        },
-        {
-          "nombre": "SAN FRANCISCO DEL ORO",
-          "total": 43,
-          "m": 23,
-          "h": 20
-        },
-        {
-          "nombre": "MAGUARICHI",
-          "total": 42,
-          "m": 33,
-          "h": 9
-        },
-        {
-          "nombre": "RIVA PALACIO",
-          "total": 41,
-          "m": 20,
-          "h": 21
-        },
-        {
-          "nombre": "ROSALES",
-          "total": 33,
-          "m": 29,
-          "h": 4
-        },
-        {
-          "nombre": "LOPEZ",
-          "total": 26,
-          "m": 15,
-          "h": 11
-        },
-        {
-          "nombre": "DR. BELISARIO DOMINGUEZ",
-          "total": 11,
-          "m": 8,
-          "h": 3
-        }
-      ]
-    },
-    {
       "nombre": "CULTURA Y RECREACIÓN",
-      "total": 18938,
-      "m": 11871,
-      "h": 7067,
+      "total": 19194,
+      "m": 12068,
+      "h": 7126,
       "n_muns": 24,
-      "pct": 2.7,
+      "pct": 3.1,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -8081,12 +8268,12 @@ window.DASHBOARD_DATA = {
                 "URIQUE"
               ],
               "rangos": {
-                "0-5": 739,
-                "6-11": 2755,
-                "12-17": 1413,
-                "18-29": 324,
+                "0-5": 735,
+                "6-11": 2746,
+                "12-17": 1426,
+                "18-29": 323,
                 "30-49": 729,
-                "50-64": 964,
+                "50-64": 965,
                 "65+": 1523
               }
             },
@@ -8347,16 +8534,16 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "DIF",
-          "total": 238,
-          "m": 183,
-          "h": 55,
+          "total": 494,
+          "m": 380,
+          "h": 114,
           "muns": 1,
           "programas": [
             {
               "nombre": "ESPARCIMIENTO PARA EL DESARROLLO FAMILIAR",
-              "total": 238,
-              "m": 183,
-              "h": 55,
+              "total": 494,
+              "m": 380,
+              "h": 114,
               "muns": 1,
               "muns_lista": [
                 "CHIHUAHUA"
@@ -8367,17 +8554,17 @@ window.DASHBOARD_DATA = {
                 "12-17": 0,
                 "18-29": 0,
                 "30-49": 0,
-                "50-64": 60,
-                "65+": 178
+                "50-64": 120,
+                "65+": 374
               }
             }
           ],
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 238,
-              "m": 183,
-              "h": 55
+              "total": 494,
+              "m": 380,
+              "h": 114
             }
           ]
         },
@@ -8426,22 +8613,22 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 739,
-        "6-11": 2755,
-        "12-17": 7207,
-        "18-29": 3419,
+        "0-5": 735,
+        "6-11": 2746,
+        "12-17": 7220,
+        "18-29": 3418,
         "30-49": 769,
-        "50-64": 1233,
-        "65+": 2535
+        "50-64": 1294,
+        "65+": 2731
       },
       "rango_dom": "12–17",
       "rango_min": "0–5",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 11305,
-          "m": 7285,
-          "h": 4020
+          "total": 11561,
+          "m": 7482,
+          "h": 4079
         },
         {
           "nombre": "HIDALGO DEL PARRAL",
@@ -8584,12 +8771,554 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "TERAPIA",
+      "total": 16401,
+      "m": 9378,
+      "h": 7023,
+      "n_muns": 23,
+      "pct": 2.6,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 14124,
+          "m": 7729,
+          "h": 6395,
+          "muns": 18,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 14115,
+              "m": 7722,
+              "h": 6393,
+              "muns": 18,
+              "muns_lista": [
+                "ALDAMA",
+                "AQUILES SERDAN",
+                "BALLEZA",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "BOCOYNA",
+                "CAMARGO",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "CUSIHUIRIACHI",
+                "FORANEO",
+                "GUERRERO",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MADERA",
+                "RIVA PALACIO",
+                "TEMOSACHIC",
+                "URIQUE"
+              ],
+              "rangos": {
+                "0-5": 1322,
+                "6-11": 1542,
+                "12-17": 467,
+                "18-29": 930,
+                "30-49": 2168,
+                "50-64": 4157,
+                "65+": 3529
+              }
+            },
+            {
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 9,
+              "m": 7,
+              "h": 2,
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 3,
+                "30-49": 5,
+                "50-64": 1,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 8973,
+              "m": 5094,
+              "h": 3879
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 2732,
+              "m": 1316,
+              "h": 1416
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 2096,
+              "m": 1158,
+              "h": 938
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 110,
+              "m": 65,
+              "h": 45
+            },
+            {
+              "nombre": "URIQUE",
+              "total": 72,
+              "m": 46,
+              "h": 26
+            },
+            {
+              "nombre": "BOCOYNA",
+              "total": 38,
+              "m": 0,
+              "h": 38
+            },
+            {
+              "nombre": "MADERA",
+              "total": 19,
+              "m": 2,
+              "h": 17
+            },
+            {
+              "nombre": "CUSIHUIRIACHI",
+              "total": 18,
+              "m": 4,
+              "h": 14
+            },
+            {
+              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+              "total": 15,
+              "m": 15,
+              "h": 0
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 11,
+              "m": 2,
+              "h": 9
+            },
+            {
+              "nombre": "TEMOSACHIC",
+              "total": 9,
+              "m": 9,
+              "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 8,
+              "m": 8,
+              "h": 0
+            },
+            {
+              "nombre": "GUERRERO",
+              "total": 7,
+              "m": 0,
+              "h": 7
+            },
+            {
+              "nombre": "CARICHI",
+              "total": 5,
+              "m": 0,
+              "h": 5
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 4,
+              "m": 4,
+              "h": 0
+            },
+            {
+              "nombre": "RIVA PALACIO",
+              "total": 4,
+              "m": 4,
+              "h": 0
+            },
+            {
+              "nombre": "ALDAMA",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "BALLEZA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        },
+        {
+          "nombre": "SDHyBC",
+          "total": 2241,
+          "m": 1627,
+          "h": 614,
+          "muns": 6,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
+              "total": 2128,
+              "m": 1539,
+              "h": 589,
+              "muns": 5,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "CHIHUAHUA",
+                "HIDALGO DEL PARRAL",
+                "NAMIQUIPA",
+                "SAN FRANCISCO DE BORJA"
+              ],
+              "rangos": {
+                "0-5": 32,
+                "6-11": 327,
+                "12-17": 401,
+                "18-29": 252,
+                "30-49": 629,
+                "50-64": 374,
+                "65+": 113
+              }
+            },
+            {
+              "nombre": "APOYO A PERSONAS MAYORES",
+              "total": 65,
+              "m": 63,
+              "h": 2,
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "DELICIAS"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 17,
+                "65+": 48
+              }
+            },
+            {
+              "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
+              "total": 48,
+              "m": 25,
+              "h": 23,
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 2,
+                "18-29": 22,
+                "30-49": 19,
+                "50-64": 5,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 2203,
+              "m": 1592,
+              "h": 611
+            },
+            {
+              "nombre": "SAN FRANCISCO DE BORJA",
+              "total": 13,
+              "m": 13,
+              "h": 0
+            },
+            {
+              "nombre": "NAMIQUIPA",
+              "total": 12,
+              "m": 12,
+              "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 9,
+              "m": 9,
+              "h": 0
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 3,
+              "m": 0,
+              "h": 3
+            },
+            {
+              "nombre": "DELICIAS",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        },
+        {
+          "nombre": "ICHIJUV",
+          "total": 36,
+          "m": 22,
+          "h": 14,
+          "muns": 9,
+          "programas": [
+            {
+              "nombre": "ATENCIÓN A LA JUVENTUD",
+              "total": 36,
+              "m": 22,
+              "h": 14,
+              "muns": 9,
+              "muns_lista": [
+                "ALDAMA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "MEOQUI",
+                "NONOAVA",
+                "ROSARIO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 7,
+                "18-29": 29,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 18,
+              "m": 11,
+              "h": 7
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 5,
+              "m": 1,
+              "h": 4
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 4,
+              "m": 2,
+              "h": 2
+            },
+            {
+              "nombre": "MEOQUI",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "ALDAMA",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "ROSARIO",
+              "total": 2,
+              "m": 1,
+              "h": 1
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "NONOAVA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 1354,
+        "6-11": 1869,
+        "12-17": 877,
+        "18-29": 1236,
+        "30-49": 2821,
+        "50-64": 4554,
+        "65+": 3690
+      },
+      "rango_dom": "50–64",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 11194,
+          "m": 6697,
+          "h": 4497
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 2736,
+          "m": 1318,
+          "h": 1418
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 2097,
+          "m": 1159,
+          "h": 938
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 111,
+          "m": 66,
+          "h": 45
+        },
+        {
+          "nombre": "URIQUE",
+          "total": 72,
+          "m": 46,
+          "h": 26
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 38,
+          "m": 0,
+          "h": 38
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 22,
+          "m": 18,
+          "h": 4
+        },
+        {
+          "nombre": "MADERA",
+          "total": 19,
+          "m": 2,
+          "h": 17
+        },
+        {
+          "nombre": "CUSIHUIRIACHI",
+          "total": 18,
+          "m": 4,
+          "h": 14
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 15,
+          "m": 15,
+          "h": 0
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 14,
+          "m": 2,
+          "h": 12
+        },
+        {
+          "nombre": "SAN FRANCISCO DE BORJA",
+          "total": 13,
+          "m": 13,
+          "h": 0
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 12,
+          "m": 12,
+          "h": 0
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 9,
+          "m": 9,
+          "h": 0
+        },
+        {
+          "nombre": "GUERRERO",
+          "total": 7,
+          "m": 0,
+          "h": 7
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 5,
+          "m": 0,
+          "h": 5
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "RIVA PALACIO",
+          "total": 4,
+          "m": 4,
+          "h": 0
+        },
+        {
+          "nombre": "MEOQUI",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "ROSARIO",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "BALLEZA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "DELICIAS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "NONOAVA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        }
+      ]
+    },
+    {
       "nombre": "ASISTENCIA ALIMENTARIA EN ESPACIO COMÚN",
       "total": 12678,
       "m": 7598,
       "h": 5080,
       "n_muns": 28,
-      "pct": 1.8,
+      "pct": 2.0,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -8629,13 +9358,13 @@ window.DASHBOARD_DATA = {
                 "URIQUE"
               ],
               "rangos": {
-                "0-5": 329,
-                "6-11": 1307,
-                "12-17": 1356,
-                "18-29": 1104,
-                "30-49": 1736,
+                "0-5": 327,
+                "6-11": 1304,
+                "12-17": 1359,
+                "18-29": 1102,
+                "30-49": 1738,
                 "50-64": 1554,
-                "65+": 1857
+                "65+": 1859
               }
             },
             {
@@ -8649,8 +9378,8 @@ window.DASHBOARD_DATA = {
               ],
               "rangos": {
                 "0-5": 12,
-                "6-11": 48,
-                "12-17": 55,
+                "6-11": 47,
+                "12-17": 56,
                 "18-29": 50,
                 "30-49": 117,
                 "50-64": 149,
@@ -8822,12 +9551,12 @@ window.DASHBOARD_DATA = {
                 "URUACHI"
               ],
               "rangos": {
-                "0-5": 1068,
-                "6-11": 49,
+                "0-5": 1067,
+                "6-11": 50,
                 "12-17": 162,
-                "18-29": 746,
+                "18-29": 745,
                 "30-49": 561,
-                "50-64": 101,
+                "50-64": 102,
                 "65+": 12
               }
             }
@@ -8986,13 +9715,13 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 1409,
-        "6-11": 1404,
-        "12-17": 1587,
-        "18-29": 1909,
-        "30-49": 2423,
-        "50-64": 1811,
-        "65+": 2000
+        "0-5": 1406,
+        "6-11": 1401,
+        "12-17": 1591,
+        "18-29": 1906,
+        "30-49": 2425,
+        "50-64": 1812,
+        "65+": 2002
       },
       "rango_dom": "30–49",
       "rango_min": "6–11",
@@ -9179,7 +9908,7 @@ window.DASHBOARD_DATA = {
       "m": 8732,
       "h": 2212,
       "n_muns": 19,
-      "pct": 1.5,
+      "pct": 1.7,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -9201,12 +9930,12 @@ window.DASHBOARD_DATA = {
               ],
               "rangos": {
                 "0-5": 101,
-                "6-11": 603,
-                "12-17": 1074,
-                "18-29": 1531,
-                "30-49": 1788,
-                "50-64": 1292,
-                "65+": 506
+                "6-11": 602,
+                "12-17": 1072,
+                "18-29": 1532,
+                "30-49": 1789,
+                "50-64": 1291,
+                "65+": 508
               }
             },
             {
@@ -9322,9 +10051,9 @@ window.DASHBOARD_DATA = {
                 "0-5": 10,
                 "6-11": 2,
                 "12-17": 188,
-                "18-29": 868,
-                "30-49": 660,
-                "50-64": 91,
+                "18-29": 867,
+                "30-49": 659,
+                "50-64": 93,
                 "65+": 14
               }
             },
@@ -9471,12 +10200,12 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 126,
-        "6-11": 737,
-        "12-17": 1600,
+        "6-11": 736,
+        "12-17": 1598,
         "18-29": 2825,
         "30-49": 2993,
-        "50-64": 1824,
-        "65+": 746
+        "50-64": 1825,
+        "65+": 748
       },
       "rango_dom": "30–49",
       "rango_min": "0–5",
@@ -9598,508 +10327,12 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "TERAPIA",
-      "total": 10688,
-      "m": 6254,
-      "h": 4434,
-      "n_muns": 20,
-      "pct": 1.5,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 8411,
-          "m": 4605,
-          "h": 3806,
-          "muns": 14,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 8402,
-              "m": 4598,
-              "h": 3804,
-              "muns": 14,
-              "muns_lista": [
-                "AQUILES SERDAN",
-                "BALLEZA",
-                "BATOPILAS DE MANUEL GOMEZ MORIN",
-                "BOCOYNA",
-                "CAMARGO",
-                "CHIHUAHUA",
-                "CUAUHTEMOC",
-                "CUSIHUIRIACHI",
-                "FORANEO",
-                "HIDALGO DEL PARRAL",
-                "JUAREZ",
-                "MADERA",
-                "RIVA PALACIO",
-                "URIQUE"
-              ],
-              "rangos": {
-                "0-5": 800,
-                "6-11": 804,
-                "12-17": 272,
-                "18-29": 570,
-                "30-49": 1223,
-                "50-64": 2515,
-                "65+": 2218
-              }
-            },
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 9,
-              "m": 7,
-              "h": 2,
-              "muns": 1,
-              "muns_lista": [
-                "JUAREZ"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 3,
-                "30-49": 5,
-                "50-64": 1,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 5204,
-              "m": 3032,
-              "h": 2172
-            },
-            {
-              "nombre": "JUAREZ",
-              "total": 1715,
-              "m": 797,
-              "h": 918
-            },
-            {
-              "nombre": "CUAUHTEMOC",
-              "total": 1309,
-              "m": 702,
-              "h": 607
-            },
-            {
-              "nombre": "URIQUE",
-              "total": 51,
-              "m": 25,
-              "h": 26
-            },
-            {
-              "nombre": "CAMARGO",
-              "total": 43,
-              "m": 16,
-              "h": 27
-            },
-            {
-              "nombre": "BOCOYNA",
-              "total": 33,
-              "m": 0,
-              "h": 33
-            },
-            {
-              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-              "total": 15,
-              "m": 15,
-              "h": 0
-            },
-            {
-              "nombre": "CUSIHUIRIACHI",
-              "total": 15,
-              "m": 1,
-              "h": 14
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 8,
-              "m": 0,
-              "h": 8
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 8,
-              "m": 8,
-              "h": 0
-            },
-            {
-              "nombre": "FORANEO",
-              "total": 4,
-              "m": 4,
-              "h": 0
-            },
-            {
-              "nombre": "RIVA PALACIO",
-              "total": 4,
-              "m": 4,
-              "h": 0
-            },
-            {
-              "nombre": "BALLEZA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "MADERA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        },
-        {
-          "nombre": "SDHyBC",
-          "total": 2241,
-          "m": 1627,
-          "h": 614,
-          "muns": 6,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO COMUNITARIO Y PARTICIPACIÓN CIUDADANA",
-              "total": 2128,
-              "m": 1539,
-              "h": 589,
-              "muns": 5,
-              "muns_lista": [
-                "AQUILES SERDAN",
-                "CHIHUAHUA",
-                "HIDALGO DEL PARRAL",
-                "NAMIQUIPA",
-                "SAN FRANCISCO DE BORJA"
-              ],
-              "rangos": {
-                "0-5": 34,
-                "6-11": 325,
-                "12-17": 401,
-                "18-29": 252,
-                "30-49": 629,
-                "50-64": 374,
-                "65+": 113
-              }
-            },
-            {
-              "nombre": "APOYO A PERSONAS MAYORES",
-              "total": 65,
-              "m": 63,
-              "h": 2,
-              "muns": 2,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "DELICIAS"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 0,
-                "50-64": 17,
-                "65+": 48
-              }
-            },
-            {
-              "nombre": "APOYOS A PERSONAS CON DISCAPACIDAD",
-              "total": 48,
-              "m": 25,
-              "h": 23,
-              "muns": 1,
-              "muns_lista": [
-                "CHIHUAHUA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 3,
-                "18-29": 21,
-                "30-49": 19,
-                "50-64": 5,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 2203,
-              "m": 1592,
-              "h": 611
-            },
-            {
-              "nombre": "SAN FRANCISCO DE BORJA",
-              "total": 13,
-              "m": 13,
-              "h": 0
-            },
-            {
-              "nombre": "NAMIQUIPA",
-              "total": 12,
-              "m": 12,
-              "h": 0
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 9,
-              "m": 9,
-              "h": 0
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 3,
-              "m": 0,
-              "h": 3
-            },
-            {
-              "nombre": "DELICIAS",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        },
-        {
-          "nombre": "ICHIJUV",
-          "total": 36,
-          "m": 22,
-          "h": 14,
-          "muns": 9,
-          "programas": [
-            {
-              "nombre": "ATENCIÓN A LA JUVENTUD",
-              "total": 36,
-              "m": 22,
-              "h": 14,
-              "muns": 9,
-              "muns_lista": [
-                "ALDAMA",
-                "CAMARGO",
-                "CHIHUAHUA",
-                "CUAUHTEMOC",
-                "HIDALGO DEL PARRAL",
-                "JUAREZ",
-                "MEOQUI",
-                "NONOAVA",
-                "ROSARIO"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 7,
-                "18-29": 29,
-                "30-49": 0,
-                "50-64": 0,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 18,
-              "m": 11,
-              "h": 7
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 5,
-              "m": 1,
-              "h": 4
-            },
-            {
-              "nombre": "JUAREZ",
-              "total": 4,
-              "m": 2,
-              "h": 2
-            },
-            {
-              "nombre": "MEOQUI",
-              "total": 2,
-              "m": 2,
-              "h": 0
-            },
-            {
-              "nombre": "ALDAMA",
-              "total": 2,
-              "m": 2,
-              "h": 0
-            },
-            {
-              "nombre": "ROSARIO",
-              "total": 2,
-              "m": 1,
-              "h": 1
-            },
-            {
-              "nombre": "CAMARGO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "CUAUHTEMOC",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "NONOAVA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 834,
-        "6-11": 1129,
-        "12-17": 683,
-        "18-29": 875,
-        "30-49": 1876,
-        "50-64": 2912,
-        "65+": 2379
-      },
-      "rango_dom": "50–64",
-      "rango_min": "12–17",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 7425,
-          "m": 4635,
-          "h": 2790
-        },
-        {
-          "nombre": "JUAREZ",
-          "total": 1719,
-          "m": 799,
-          "h": 920
-        },
-        {
-          "nombre": "CUAUHTEMOC",
-          "total": 1310,
-          "m": 703,
-          "h": 607
-        },
-        {
-          "nombre": "URIQUE",
-          "total": 51,
-          "m": 25,
-          "h": 26
-        },
-        {
-          "nombre": "CAMARGO",
-          "total": 44,
-          "m": 17,
-          "h": 27
-        },
-        {
-          "nombre": "BOCOYNA",
-          "total": 33,
-          "m": 0,
-          "h": 33
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 22,
-          "m": 18,
-          "h": 4
-        },
-        {
-          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-          "total": 15,
-          "m": 15,
-          "h": 0
-        },
-        {
-          "nombre": "CUSIHUIRIACHI",
-          "total": 15,
-          "m": 1,
-          "h": 14
-        },
-        {
-          "nombre": "SAN FRANCISCO DE BORJA",
-          "total": 13,
-          "m": 13,
-          "h": 0
-        },
-        {
-          "nombre": "NAMIQUIPA",
-          "total": 12,
-          "m": 12,
-          "h": 0
-        },
-        {
-          "nombre": "AQUILES SERDAN",
-          "total": 11,
-          "m": 0,
-          "h": 11
-        },
-        {
-          "nombre": "FORANEO",
-          "total": 4,
-          "m": 4,
-          "h": 0
-        },
-        {
-          "nombre": "RIVA PALACIO",
-          "total": 4,
-          "m": 4,
-          "h": 0
-        },
-        {
-          "nombre": "MEOQUI",
-          "total": 2,
-          "m": 2,
-          "h": 0
-        },
-        {
-          "nombre": "ALDAMA",
-          "total": 2,
-          "m": 2,
-          "h": 0
-        },
-        {
-          "nombre": "ROSARIO",
-          "total": 2,
-          "m": 1,
-          "h": 1
-        },
-        {
-          "nombre": "BALLEZA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "DELICIAS",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "MADERA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "NONOAVA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        }
-      ]
-    },
-    {
       "nombre": "TALLER DE CAPACITACIÓN",
       "total": 7777,
       "m": 5006,
       "h": 2771,
       "n_muns": 6,
-      "pct": 1.1,
+      "pct": 1.2,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -10121,8 +10354,8 @@ window.DASHBOARD_DATA = {
               "rangos": {
                 "0-5": 189,
                 "6-11": 742,
-                "12-17": 1307,
-                "18-29": 170,
+                "12-17": 1302,
+                "18-29": 175,
                 "30-49": 221,
                 "50-64": 262,
                 "65+": 486
@@ -10146,8 +10379,8 @@ window.DASHBOARD_DATA = {
                 "12-17": 0,
                 "18-29": 0,
                 "30-49": 0,
-                "50-64": 406,
-                "65+": 1667
+                "50-64": 405,
+                "65+": 1668
               }
             },
             {
@@ -10183,8 +10416,8 @@ window.DASHBOARD_DATA = {
               "rangos": {
                 "0-5": 0,
                 "6-11": 0,
-                "12-17": 10,
-                "18-29": 218,
+                "12-17": 9,
+                "18-29": 219,
                 "30-49": 158,
                 "50-64": 55,
                 "65+": 0
@@ -10234,11 +10467,11 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 192,
         "6-11": 1306,
-        "12-17": 2065,
-        "18-29": 424,
+        "12-17": 2059,
+        "18-29": 430,
         "30-49": 514,
-        "50-64": 842,
-        "65+": 2434
+        "50-64": 841,
+        "65+": 2435
       },
       "rango_dom": "65+",
       "rango_min": "0–5",
@@ -10287,7 +10520,7 @@ window.DASHBOARD_DATA = {
       "m": 4490,
       "h": 2193,
       "n_muns": 61,
-      "pct": 0.9,
+      "pct": 1.1,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -10372,8 +10605,8 @@ window.DASHBOARD_DATA = {
                 "12-17": 0,
                 "18-29": 1616,
                 "30-49": 2614,
-                "50-64": 1259,
-                "65+": 227
+                "50-64": 1257,
+                "65+": 229
               }
             },
             {
@@ -11084,8 +11317,8 @@ window.DASHBOARD_DATA = {
         "12-17": 2,
         "18-29": 2237,
         "30-49": 2793,
-        "50-64": 1300,
-        "65+": 273
+        "50-64": 1298,
+        "65+": 275
       },
       "rango_dom": "30–49",
       "rango_min": "12–17",
@@ -11470,7 +11703,7 @@ window.DASHBOARD_DATA = {
       "m": 2254,
       "h": 1503,
       "n_muns": 20,
-      "pct": 0.5,
+      "pct": 0.6,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -11492,8 +11725,8 @@ window.DASHBOARD_DATA = {
                 "0-5": 0,
                 "6-11": 0,
                 "12-17": 0,
-                "18-29": 276,
-                "30-49": 509,
+                "18-29": 274,
+                "30-49": 511,
                 "50-64": 274,
                 "65+": 60
               }
@@ -11524,8 +11757,8 @@ window.DASHBOARD_DATA = {
                 "0-5": 0,
                 "6-11": 0,
                 "12-17": 0,
-                "18-29": 234,
-                "30-49": 498,
+                "18-29": 232,
+                "30-49": 500,
                 "50-64": 280,
                 "65+": 104
               }
@@ -11549,8 +11782,8 @@ window.DASHBOARD_DATA = {
                 "0-5": 0,
                 "6-11": 0,
                 "12-17": 0,
-                "18-29": 175,
-                "30-49": 274,
+                "18-29": 173,
+                "30-49": 276,
                 "50-64": 120,
                 "65+": 23
               }
@@ -11611,8 +11844,8 @@ window.DASHBOARD_DATA = {
                 "0-5": 0,
                 "6-11": 0,
                 "12-17": 0,
-                "18-29": 33,
-                "30-49": 39,
+                "18-29": 31,
+                "30-49": 41,
                 "50-64": 8,
                 "65+": 0
               }
@@ -11913,8 +12146,8 @@ window.DASHBOARD_DATA = {
         "0-5": 0,
         "6-11": 0,
         "12-17": 0,
-        "18-29": 975,
-        "30-49": 1622,
+        "18-29": 967,
+        "30-49": 1630,
         "50-64": 893,
         "65+": 267
       },
@@ -12055,7 +12288,7 @@ window.DASHBOARD_DATA = {
       "m": 2150,
       "h": 1332,
       "n_muns": 6,
-      "pct": 0.5,
+      "pct": 0.6,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -12079,9 +12312,9 @@ window.DASHBOARD_DATA = {
                 "OJINAGA"
               ],
               "rangos": {
-                "0-5": 126,
-                "6-11": 1571,
-                "12-17": 734,
+                "0-5": 121,
+                "6-11": 1564,
+                "12-17": 746,
                 "18-29": 148,
                 "30-49": 249,
                 "50-64": 271,
@@ -12130,9 +12363,9 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 126,
-        "6-11": 1571,
-        "12-17": 734,
+        "0-5": 121,
+        "6-11": 1564,
+        "12-17": 746,
         "18-29": 148,
         "30-49": 249,
         "50-64": 271,
@@ -12185,7 +12418,7 @@ window.DASHBOARD_DATA = {
       "m": 1925,
       "h": 1270,
       "n_muns": 17,
-      "pct": 0.4,
+      "pct": 0.5,
       "instituciones": [
         {
           "nombre": "ICHIJUV",
@@ -12501,7 +12734,7 @@ window.DASHBOARD_DATA = {
       "m": 1972,
       "h": 1111,
       "n_muns": 30,
-      "pct": 0.4,
+      "pct": 0.5,
       "instituciones": [
         {
           "nombre": "SPyCI",
@@ -12956,7 +13189,7 @@ window.DASHBOARD_DATA = {
       "m": 1491,
       "h": 1434,
       "n_muns": 15,
-      "pct": 0.4,
+      "pct": 0.5,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -12994,8 +13227,8 @@ window.DASHBOARD_DATA = {
                 "12-17": 0,
                 "18-29": 524,
                 "30-49": 1239,
-                "50-64": 919,
-                "65+": 243
+                "50-64": 917,
+                "65+": 245
               }
             }
           ],
@@ -13099,8 +13332,8 @@ window.DASHBOARD_DATA = {
         "12-17": 0,
         "18-29": 524,
         "30-49": 1239,
-        "50-64": 919,
-        "65+": 243
+        "50-64": 917,
+        "65+": 245
       },
       "rango_dom": "30–49",
       "rango_min": "65+",
@@ -13225,10 +13458,10 @@ window.DASHBOARD_DATA = {
                 "0-5": 28,
                 "6-11": 66,
                 "12-17": 32,
-                "18-29": 127,
-                "30-49": 377,
-                "50-64": 461,
-                "65+": 387
+                "18-29": 126,
+                "30-49": 376,
+                "50-64": 462,
+                "65+": 388
               }
             },
             {
@@ -13265,10 +13498,10 @@ window.DASHBOARD_DATA = {
         "0-5": 33,
         "6-11": 74,
         "12-17": 40,
-        "18-29": 184,
-        "30-49": 530,
-        "50-64": 678,
-        "65+": 566
+        "18-29": 183,
+        "30-49": 529,
+        "50-64": 679,
+        "65+": 567
       },
       "rango_dom": "50–64",
       "rango_min": "0–5",
@@ -13954,8 +14187,8 @@ window.DASHBOARD_DATA = {
                 "6-11": 148,
                 "12-17": 138,
                 "18-29": 70,
-                "30-49": 135,
-                "50-64": 85,
+                "30-49": 134,
+                "50-64": 86,
                 "65+": 33
               }
             },
@@ -14001,8 +14234,8 @@ window.DASHBOARD_DATA = {
         "6-11": 185,
         "12-17": 355,
         "18-29": 104,
-        "30-49": 253,
-        "50-64": 210,
+        "30-49": 252,
+        "50-64": 211,
         "65+": 314
       },
       "rango_dom": "12–17",
@@ -14028,7 +14261,7 @@ window.DASHBOARD_DATA = {
       "m": 659,
       "h": 339,
       "n_muns": 29,
-      "pct": 0.1,
+      "pct": 0.2,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -14512,7 +14745,7 @@ window.DASHBOARD_DATA = {
       "m": 410,
       "h": 582,
       "n_muns": 2,
-      "pct": 0.1,
+      "pct": 0.2,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -14532,12 +14765,12 @@ window.DASHBOARD_DATA = {
                 "JUAREZ"
               ],
               "rangos": {
-                "0-5": 16,
+                "0-5": 14,
                 "6-11": 25,
-                "12-17": 90,
+                "12-17": 92,
                 "18-29": 179,
-                "30-49": 225,
-                "50-64": 274,
+                "30-49": 224,
+                "50-64": 275,
                 "65+": 183
               }
             }
@@ -14559,12 +14792,12 @@ window.DASHBOARD_DATA = {
         }
       ],
       "rangos": {
-        "0-5": 16,
+        "0-5": 14,
         "6-11": 25,
-        "12-17": 90,
+        "12-17": 92,
         "18-29": 179,
-        "30-49": 225,
-        "50-64": 274,
+        "30-49": 224,
+        "50-64": 275,
         "65+": 183
       },
       "rango_dom": "50–64",
@@ -14685,8 +14918,8 @@ window.DASHBOARD_DATA = {
               ],
               "rangos": {
                 "0-5": 148,
-                "6-11": 17,
-                "12-17": 79,
+                "6-11": 16,
+                "12-17": 80,
                 "18-29": 214,
                 "30-49": 132,
                 "50-64": 33,
@@ -14766,8 +14999,8 @@ window.DASHBOARD_DATA = {
       ],
       "rangos": {
         "0-5": 148,
-        "6-11": 17,
-        "12-17": 79,
+        "6-11": 16,
+        "12-17": 80,
         "18-29": 214,
         "30-49": 132,
         "50-64": 33,
@@ -14846,9 +15079,9 @@ window.DASHBOARD_DATA = {
     },
     {
       "nombre": "ANALISIS CLINICO",
-      "total": 609,
-      "m": 391,
-      "h": 218,
+      "total": 621,
+      "m": 398,
+      "h": 223,
       "n_muns": 30,
       "pct": 0.1,
       "instituciones": [
@@ -15115,9 +15348,9 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "DIF",
-          "total": 55,
-          "m": 37,
-          "h": 18,
+          "total": 67,
+          "m": 44,
+          "h": 23,
           "muns": 8,
           "programas": [
             {
@@ -15147,31 +15380,32 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 10,
-              "m": 5,
-              "h": 5,
-              "muns": 2,
+              "total": 22,
+              "m": 12,
+              "h": 10,
+              "muns": 3,
               "muns_lista": [
                 "CHIHUAHUA",
+                "HIDALGO DEL PARRAL",
                 "JUAREZ"
               ],
               "rangos": {
                 "0-5": 0,
                 "6-11": 1,
                 "12-17": 0,
-                "18-29": 2,
-                "30-49": 3,
-                "50-64": 1,
-                "65+": 3
+                "18-29": 4,
+                "30-49": 5,
+                "50-64": 7,
+                "65+": 5
               }
             }
           ],
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 43,
-              "m": 29,
-              "h": 14
+              "total": 54,
+              "m": 36,
+              "h": 18
             },
             {
               "nombre": "JUAREZ",
@@ -15184,6 +15418,12 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 2,
               "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 2,
+              "m": 1,
+              "h": 1
             },
             {
               "nombre": "VALLE DE ZARAGOZA",
@@ -15204,12 +15444,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "SAUCILLO",
               "total": 1,
               "m": 1,
@@ -15222,19 +15456,19 @@ window.DASHBOARD_DATA = {
         "0-5": 0,
         "6-11": 28,
         "12-17": 52,
-        "18-29": 143,
-        "30-49": 204,
-        "50-64": 116,
-        "65+": 59
+        "18-29": 145,
+        "30-49": 206,
+        "50-64": 122,
+        "65+": 61
       },
       "rango_dom": "30–49",
       "rango_min": "6–11",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 162,
-          "m": 125,
-          "h": 37
+          "total": 173,
+          "m": 132,
+          "h": 41
         },
         {
           "nombre": "GUACHOCHI",
@@ -15297,6 +15531,12 @@ window.DASHBOARD_DATA = {
           "h": 8
         },
         {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 6,
+          "m": 3,
+          "h": 3
+        },
+        {
           "nombre": "CUAUHTEMOC",
           "total": 6,
           "m": 5,
@@ -15304,12 +15544,6 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "JUAREZ",
-          "total": 5,
-          "m": 3,
-          "h": 2
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
           "total": 5,
           "m": 3,
           "h": 2
@@ -15604,8 +15838,8 @@ window.DASHBOARD_DATA = {
               "rangos": {
                 "0-5": 0,
                 "6-11": 0,
-                "12-17": 16,
-                "18-29": 37,
+                "12-17": 14,
+                "18-29": 39,
                 "30-49": 87,
                 "50-64": 111,
                 "65+": 130
@@ -15940,8 +16174,8 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 16,
-        "18-29": 52,
+        "12-17": 14,
+        "18-29": 54,
         "30-49": 147,
         "50-64": 170,
         "65+": 150
@@ -16158,6 +16392,123 @@ window.DASHBOARD_DATA = {
           "total": 1,
           "m": 1,
           "h": 0
+        }
+      ]
+    },
+    {
+      "nombre": "DESARROLLO DE CAPACIDADES Y FORMACION DE CAPITAL SOCIAL",
+      "total": 507,
+      "m": 437,
+      "h": 69,
+      "n_muns": 3,
+      "pct": 0.1,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 507,
+          "m": 437,
+          "h": 69,
+          "muns": 5,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 507,
+              "m": 437,
+              "h": 69,
+              "muns": 5,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "FORANEO",
+                "JUAREZ",
+                "NO IDENTIFICADO"
+              ],
+              "rangos": {
+                "0-5": 3,
+                "6-11": 0,
+                "12-17": 2,
+                "18-29": 98,
+                "30-49": 239,
+                "50-64": 103,
+                "65+": 55
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "JUAREZ",
+              "total": 387,
+              "m": 322,
+              "h": 64
+            },
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 113,
+              "m": 113,
+              "h": 0
+            },
+            {
+              "nombre": "NO IDENTIFICADO",
+              "total": 4,
+              "m": 0,
+              "h": 4
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 3,
+        "6-11": 0,
+        "12-17": 2,
+        "18-29": 98,
+        "30-49": 239,
+        "50-64": 103,
+        "65+": 55
+      },
+      "rango_dom": "30–49",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 387,
+          "m": 322,
+          "h": 64
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 113,
+          "m": 113,
+          "h": 0
+        },
+        {
+          "nombre": "NO IDENTIFICADO",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 1,
+          "m": 0,
+          "h": 1
         }
       ]
     },
@@ -16671,12 +17022,142 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "CREDENCIAL DE DESCUENTO",
+      "total": 362,
+      "m": 156,
+      "h": 206,
+      "n_muns": 5,
+      "pct": 0.1,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 362,
+          "m": 156,
+          "h": 206,
+          "muns": 6,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 362,
+              "m": 156,
+              "h": 206,
+              "muns": 6,
+              "muns_lista": [
+                "AHUMADA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "FORANEO",
+                "GUADALUPE",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 30,
+                "6-11": 38,
+                "12-17": 30,
+                "18-29": 51,
+                "30-49": 74,
+                "50-64": 125,
+                "65+": 14
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "JUAREZ",
+              "total": 357,
+              "m": 153,
+              "h": 204
+            },
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "AHUMADA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "GUADALUPE",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 30,
+        "6-11": 38,
+        "12-17": 30,
+        "18-29": 51,
+        "30-49": 74,
+        "50-64": 125,
+        "65+": 14
+      },
+      "rango_dom": "50–64",
+      "rango_min": "65+",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 357,
+          "m": 153,
+          "h": 204
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUADALUPE",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        }
+      ]
+    },
+    {
       "nombre": "FORÁNEO",
       "total": 326,
       "m": 215,
       "h": 111,
       "n_muns": 25,
-      "pct": 0.0,
+      "pct": 0.1,
       "instituciones": [
         {
           "nombre": "SPyCI",
@@ -17154,214 +17635,6 @@ window.DASHBOARD_DATA = {
           "nombre": "SAN FRANCISCO DEL ORO",
           "total": 1,
           "m": 1,
-          "h": 0
-        }
-      ]
-    },
-    {
-      "nombre": "CREDENCIAL DE DESCUENTO",
-      "total": 286,
-      "m": 121,
-      "h": 165,
-      "n_muns": 4,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 286,
-          "m": 121,
-          "h": 165,
-          "muns": 5,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 286,
-              "m": 121,
-              "h": 165,
-              "muns": 5,
-              "muns_lista": [
-                "AHUMADA",
-                "CAMARGO",
-                "CHIHUAHUA",
-                "FORANEO",
-                "JUAREZ"
-              ],
-              "rangos": {
-                "0-5": 27,
-                "6-11": 24,
-                "12-17": 25,
-                "18-29": 40,
-                "30-49": 64,
-                "50-64": 94,
-                "65+": 12
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "JUAREZ",
-              "total": 282,
-              "m": 118,
-              "h": 164
-            },
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "CAMARGO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "FORANEO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "AHUMADA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 27,
-        "6-11": 24,
-        "12-17": 25,
-        "18-29": 40,
-        "30-49": 64,
-        "50-64": 94,
-        "65+": 12
-      },
-      "rango_dom": "50–64",
-      "rango_min": "65+",
-      "por_municipio": [
-        {
-          "nombre": "JUAREZ",
-          "total": 282,
-          "m": 118,
-          "h": 164
-        },
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "CAMARGO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "FORANEO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "AHUMADA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        }
-      ]
-    },
-    {
-      "nombre": "DESARROLLO DE CAPACIDADES Y FORMACION DE CAPITAL SOCIAL",
-      "total": 252,
-      "m": 228,
-      "h": 23,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 252,
-          "m": 228,
-          "h": 23,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 252,
-              "m": 228,
-              "h": 23,
-              "muns": 3,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "FORANEO",
-                "JUAREZ"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 2,
-                "18-29": 49,
-                "30-49": 123,
-                "50-64": 46,
-                "65+": 27
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "JUAREZ",
-              "total": 186,
-              "m": 162,
-              "h": 23
-            },
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 64,
-              "m": 64,
-              "h": 0
-            },
-            {
-              "nombre": "FORANEO",
-              "total": 2,
-              "m": 2,
-              "h": 0
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 2,
-        "18-29": 49,
-        "30-49": 123,
-        "50-64": 46,
-        "65+": 27
-      },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
-      "por_municipio": [
-        {
-          "nombre": "JUAREZ",
-          "total": 186,
-          "m": 162,
-          "h": 23
-        },
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 64,
-          "m": 64,
-          "h": 0
-        },
-        {
-          "nombre": "FORANEO",
-          "total": 2,
-          "m": 2,
           "h": 0
         }
       ]
@@ -19201,6 +19474,90 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "*** PENDIENTE ***",
+      "total": 36,
+      "m": 36,
+      "h": 0,
+      "n_muns": 1,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 36,
+          "m": 36,
+          "h": 0,
+          "muns": 1,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 33,
+              "m": 33,
+              "h": 0,
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 0,
+                "65+": 0
+              }
+            },
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 3,
+              "m": 3,
+              "h": 0,
+              "muns": 1,
+              "muns_lista": [
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 0,
+                "50-64": 1,
+                "65+": 2
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "JUAREZ",
+              "total": 36,
+              "m": 36,
+              "h": 0
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 0,
+        "50-64": 1,
+        "65+": 2
+      },
+      "rango_dom": "65+",
+      "rango_min": "50–64",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 36,
+          "m": 36,
+          "h": 0
+        }
+      ]
+    },
+    {
       "nombre": "INSUMOS VARIOS",
       "total": 36,
       "m": 21,
@@ -19311,6 +19668,422 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "OJINAGA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        }
+      ]
+    },
+    {
+      "nombre": "MATERIAL DE OSTEOSÍNTESIS",
+      "total": 34,
+      "m": 18,
+      "h": 16,
+      "n_muns": 10,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 34,
+          "m": 18,
+          "h": 16,
+          "muns": 10,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 34,
+              "m": 18,
+              "h": 16,
+              "muns": 10,
+              "muns_lista": [
+                "BACHINIVA",
+                "BOCOYNA",
+                "CAMARGO",
+                "CHIHUAHUA",
+                "CHINIPAS",
+                "CUAUHTEMOC",
+                "GUAZAPARES",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ",
+                "NAMIQUIPA"
+              ],
+              "rangos": {
+                "0-5": 6,
+                "6-11": 12,
+                "12-17": 3,
+                "18-29": 3,
+                "30-49": 2,
+                "50-64": 5,
+                "65+": 3
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 20,
+              "m": 10,
+              "h": 10
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 4,
+              "m": 2,
+              "h": 2
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 3,
+              "m": 3,
+              "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "BOCOYNA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "CAMARGO",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "CHINIPAS",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "GUAZAPARES",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "BACHINIVA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "NAMIQUIPA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 6,
+        "6-11": 12,
+        "12-17": 3,
+        "18-29": 3,
+        "30-49": 2,
+        "50-64": 5,
+        "65+": 3
+      },
+      "rango_dom": "6–11",
+      "rango_min": "30–49",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 20,
+          "m": 10,
+          "h": 10
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 4,
+          "m": 2,
+          "h": 2
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 3,
+          "m": 3,
+          "h": 0
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CAMARGO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CHINIPAS",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        }
+      ]
+    },
+    {
+      "nombre": "PRÓTESIS DESARTICULADO DE CADERA",
+      "total": 34,
+      "m": 7,
+      "h": 27,
+      "n_muns": 14,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 34,
+          "m": 7,
+          "h": 27,
+          "muns": 14,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 34,
+              "m": 7,
+              "h": 27,
+              "muns": 14,
+              "muns_lista": [
+                "ALDAMA",
+                "BACHINIVA",
+                "CARICHI",
+                "CHIHUAHUA",
+                "CORONADO",
+                "CUAUHTEMOC",
+                "GUAZAPARES",
+                "HIDALGO DEL PARRAL",
+                "JIMENEZ",
+                "JUAREZ",
+                "LOPEZ",
+                "NAMIQUIPA",
+                "SAUCILLO",
+                "TEMOSACHIC"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 2,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 13,
+                "50-64": 15,
+                "65+": 3
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 10,
+              "m": 1,
+              "h": 9
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 7,
+              "m": 1,
+              "h": 6
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 3,
+              "m": 0,
+              "h": 3
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "LOPEZ",
+              "total": 2,
+              "m": 0,
+              "h": 2
+            },
+            {
+              "nombre": "NAMIQUIPA",
+              "total": 2,
+              "m": 1,
+              "h": 1
+            },
+            {
+              "nombre": "SAUCILLO",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "CARICHI",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "GUAZAPARES",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "JIMENEZ",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "TEMOSACHIC",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "ALDAMA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "BACHINIVA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CORONADO",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 2,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 13,
+        "50-64": 15,
+        "65+": 3
+      },
+      "rango_dom": "50–64",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 10,
+          "m": 1,
+          "h": 9
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 7,
+          "m": 1,
+          "h": 6
+        },
+        {
+          "nombre": "CUAUHTEMOC",
+          "total": 3,
+          "m": 0,
+          "h": 3
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "LOPEZ",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "NAMIQUIPA",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "CARICHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "GUAZAPARES",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "TEMOSACHIC",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "BACHINIVA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CORONADO",
           "total": 1,
           "m": 0,
           "h": 1
@@ -19877,214 +20650,6 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "PRÓTESIS DESARTICULADO DE CADERA",
-      "total": 22,
-      "m": 4,
-      "h": 18,
-      "n_muns": 12,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 22,
-          "m": 4,
-          "h": 18,
-          "muns": 12,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 22,
-              "m": 4,
-              "h": 18,
-              "muns": 12,
-              "muns_lista": [
-                "ALDAMA",
-                "BACHINIVA",
-                "CARICHI",
-                "CHIHUAHUA",
-                "CORONADO",
-                "CUAUHTEMOC",
-                "GUAZAPARES",
-                "HIDALGO DEL PARRAL",
-                "JIMENEZ",
-                "JUAREZ",
-                "LOPEZ",
-                "SAUCILLO"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 1,
-                "12-17": 0,
-                "18-29": 1,
-                "30-49": 9,
-                "50-64": 10,
-                "65+": 1
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 10,
-              "m": 1,
-              "h": 9
-            },
-            {
-              "nombre": "CUAUHTEMOC",
-              "total": 2,
-              "m": 0,
-              "h": 2
-            },
-            {
-              "nombre": "JUAREZ",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "SAUCILLO",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "CARICHI",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "GUAZAPARES",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "JIMENEZ",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "ALDAMA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "BACHINIVA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "CORONADO",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "LOPEZ",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 1,
-        "12-17": 0,
-        "18-29": 1,
-        "30-49": 9,
-        "50-64": 10,
-        "65+": 1
-      },
-      "rango_dom": "50–64",
-      "rango_min": "6–11",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 10,
-          "m": 1,
-          "h": 9
-        },
-        {
-          "nombre": "CUAUHTEMOC",
-          "total": 2,
-          "m": 0,
-          "h": 2
-        },
-        {
-          "nombre": "JUAREZ",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "SAUCILLO",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "CARICHI",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "GUAZAPARES",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "JIMENEZ",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "ALDAMA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "BACHINIVA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "CORONADO",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "LOPEZ",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        }
-      ]
-    },
-    {
       "nombre": "APOYOS EXTRAORDINARIOS",
       "total": 20,
       "m": 11,
@@ -20576,6 +21141,110 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "REHABILITACION Y MANTENIMIENTO DE INFRAESTRUCTURA",
+      "total": 12,
+      "m": 1,
+      "h": 11,
+      "n_muns": 4,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 12,
+          "m": 1,
+          "h": 11,
+          "muns": 4,
+          "programas": [
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 12,
+              "m": 1,
+              "h": 11,
+              "muns": 4,
+              "muns_lista": [
+                "AHUMADA",
+                "BOCOYNA",
+                "CHIHUAHUA",
+                "JIMENEZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 1,
+                "18-29": 0,
+                "30-49": 3,
+                "50-64": 4,
+                "65+": 4
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 8,
+              "m": 1,
+              "h": 7
+            },
+            {
+              "nombre": "JIMENEZ",
+              "total": 2,
+              "m": 0,
+              "h": 2
+            },
+            {
+              "nombre": "BOCOYNA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "AHUMADA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 1,
+        "18-29": 0,
+        "30-49": 3,
+        "50-64": 4,
+        "65+": 4
+      },
+      "rango_dom": "50–64",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 8,
+          "m": 1,
+          "h": 7
+        },
+        {
+          "nombre": "JIMENEZ",
+          "total": 2,
+          "m": 0,
+          "h": 2
+        },
+        {
+          "nombre": "BOCOYNA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "AHUMADA",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        }
+      ]
+    },
+    {
       "nombre": "MICROCRÉDITO PARA ACTIVIDADES PRODUCTIVAS",
       "total": 10,
       "m": 5,
@@ -20784,110 +21453,6 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "REHABILITACION Y MANTENIMIENTO DE INFRAESTRUCTURA",
-      "total": 8,
-      "m": 1,
-      "h": 7,
-      "n_muns": 4,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 8,
-          "m": 1,
-          "h": 7,
-          "muns": 4,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 8,
-              "m": 1,
-              "h": 7,
-              "muns": 4,
-              "muns_lista": [
-                "AHUMADA",
-                "BOCOYNA",
-                "CHIHUAHUA",
-                "JIMENEZ"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 1,
-                "18-29": 0,
-                "30-49": 2,
-                "50-64": 2,
-                "65+": 3
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 4,
-              "m": 1,
-              "h": 3
-            },
-            {
-              "nombre": "JIMENEZ",
-              "total": 2,
-              "m": 0,
-              "h": 2
-            },
-            {
-              "nombre": "BOCOYNA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "AHUMADA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 1,
-        "18-29": 0,
-        "30-49": 2,
-        "50-64": 2,
-        "65+": 3
-      },
-      "rango_dom": "65+",
-      "rango_min": "12–17",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 4,
-          "m": 1,
-          "h": 3
-        },
-        {
-          "nombre": "JIMENEZ",
-          "total": 2,
-          "m": 0,
-          "h": 2
-        },
-        {
-          "nombre": "BOCOYNA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "AHUMADA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        }
-      ]
-    },
-    {
       "nombre": "LENTES",
       "total": 7,
       "m": 3,
@@ -20972,84 +21537,6 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "BOCOYNA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        }
-      ]
-    },
-    {
-      "nombre": "MATERIAL DE OSTEOSÍNTESIS",
-      "total": 7,
-      "m": 2,
-      "h": 5,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 7,
-          "m": 2,
-          "h": 5,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 7,
-              "m": 2,
-              "h": 5,
-              "muns": 2,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "GUAZAPARES"
-              ],
-              "rangos": {
-                "0-5": 2,
-                "6-11": 1,
-                "12-17": 1,
-                "18-29": 0,
-                "30-49": 0,
-                "50-64": 1,
-                "65+": 2
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 6,
-              "m": 2,
-              "h": 4
-            },
-            {
-              "nombre": "GUAZAPARES",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 2,
-        "6-11": 1,
-        "12-17": 1,
-        "18-29": 0,
-        "30-49": 0,
-        "50-64": 1,
-        "65+": 2
-      },
-      "rango_dom": "0–5",
-      "rango_min": "6–11",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 6,
-          "m": 2,
-          "h": 4
-        },
-        {
-          "nombre": "GUAZAPARES",
           "total": 1,
           "m": 0,
           "h": 1
@@ -21316,16 +21803,16 @@ window.DASHBOARD_DATA = {
           ],
           "por_municipio": [
             {
-              "nombre": "CHIHUAHUA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
               "nombre": "JUAREZ",
               "total": 1,
               "m": 1,
               "h": 0
+            },
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 1,
+              "m": 0,
+              "h": 1
             },
             {
               "nombre": "FORANEO",
@@ -21349,16 +21836,16 @@ window.DASHBOARD_DATA = {
       "rango_min": null,
       "por_municipio": [
         {
-          "nombre": "CHIHUAHUA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
           "nombre": "JUAREZ",
           "total": 1,
           "m": 1,
           "h": 0
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 1,
+          "m": 0,
+          "h": 1
         },
         {
           "nombre": "FORANEO",
@@ -21785,93 +22272,7 @@ window.DASHBOARD_DATA = {
       ]
     }
   ],
-  "apoyos_g3": {
-    "CECYTECH": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "COESPO": {
-      "total": 1310,
-      "m": 716,
-      "h": 593
-    },
-    "COESVI": {
-      "total": 2,
-      "m": 0,
-      "h": 0
-    },
-    "CULTURA": {
-      "total": 219,
-      "m": 177,
-      "h": 41
-    },
-    "DIF": {
-      "total": 38986,
-      "m": 26093,
-      "h": 12889
-    },
-    "ICHD": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "ICHDII": {
-      "total": 26560,
-      "m": 12950,
-      "h": 13610
-    },
-    "ICHIJUV": {
-      "total": 13430,
-      "m": 8018,
-      "h": 5411
-    },
-    "ICHIMUJ": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "RURAL": {
-      "total": 9,
-      "m": 0,
-      "h": 0
-    },
-    "SALUD": {
-      "total": 556090,
-      "m": 434032,
-      "h": 122058
-    },
-    "SDHyBC": {
-      "total": 67510,
-      "m": 43663,
-      "h": 23847
-    },
-    "SEECH": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "SEyD": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "SPyCI": {
-      "total": 6648,
-      "m": 4287,
-      "h": 2355
-    },
-    "TRABAJO": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    },
-    "TURISMO": {
-      "total": 1,
-      "m": 0,
-      "h": 0
-    }
-  },
+  "apoyos_g3": {},
   "indicadores": [
     {
       "inst": "ICHIJUV",
@@ -21895,11 +22296,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 0,
-        "6-11": 0,
-        "12-17": 3,
-        "18-29": 90,
-        "30-49": 41,
-        "50-64": 19,
+        "6-11": 3,
+        "12-17": 90,
+        "18-29": 41,
+        "30-49": 19,
+        "50-64": 0,
         "65+": 0
       },
       "sin_datos_edad": 1,
@@ -21932,8 +22333,8 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 24,
+        "12-17": 24,
+        "18-29": 0,
         "30-49": 0,
         "50-64": 0,
         "65+": 0
@@ -21978,10 +22379,10 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 0,
-        "6-11": 2,
-        "12-17": 7109,
-        "18-29": 4275,
-        "30-49": 61,
+        "6-11": 7109,
+        "12-17": 4275,
+        "18-29": 61,
+        "30-49": 2,
         "50-64": 2,
         "65+": 0
       },
@@ -22090,11 +22491,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 11,
-        "6-11": 101,
-        "12-17": 352,
-        "18-29": 658,
-        "30-49": 955,
-        "50-64": 383,
+        "6-11": 352,
+        "12-17": 658,
+        "18-29": 955,
+        "30-49": 383,
+        "50-64": 101,
         "65+": 141
       },
       "sin_datos_edad": 1332,
@@ -22317,11 +22718,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 0,
-        "6-11": 0,
-        "12-17": 2,
-        "18-29": 583,
-        "30-49": 117,
-        "50-64": 4,
+        "6-11": 2,
+        "12-17": 583,
+        "18-29": 117,
+        "30-49": 4,
+        "50-64": 0,
         "65+": 0
       },
       "sin_datos_edad": 1,
@@ -22358,11 +22759,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 3477,
-        "6-11": 751,
-        "12-17": 486,
-        "18-29": 1855,
-        "30-49": 4674,
-        "50-64": 4529,
+        "6-11": 487,
+        "12-17": 1857,
+        "18-29": 4675,
+        "30-49": 4530,
+        "50-64": 752,
         "65+": 6278
       },
       "sin_datos_edad": 125,
@@ -22468,10 +22869,10 @@ window.DASHBOARD_DATA = {
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
-      "benef_unicos": 291,
-      "benef_reales": 290,
-      "mujeres": 251,
-      "hombres": 39,
+      "benef_unicos": 633,
+      "benef_reales": 632,
+      "mujeres": 521,
+      "hombres": 111,
       "sin_id": 1,
       "presupuesto": null,
       "gasto": null,
@@ -22482,22 +22883,25 @@ window.DASHBOARD_DATA = {
       "eficiencia": null,
       "desempeno": null,
       "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 3,
-        "18-29": 52,
-        "30-49": 146,
-        "50-64": 57,
-        "65+": 28
+        "0-5": 3,
+        "6-11": 9,
+        "12-17": 128,
+        "18-29": 265,
+        "30-49": 130,
+        "50-64": 0,
+        "65+": 57
       },
-      "sin_datos_edad": 5,
+      "sin_datos_edad": 41,
       "municipios": [
         "CHIHUAHUA",
+        "CUAUHTEMOC",
         "FORANEO",
-        "JUAREZ"
+        "JUAREZ",
+        "NO IDENTIFICADO"
       ],
       "muns_benef": {
-        "CHIHUAHUA": 60
+        "CHIHUAHUA": 107,
+        "CUAUHTEMOC": 1
       }
     },
     {
@@ -22507,10 +22911,10 @@ window.DASHBOARD_DATA = {
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
-      "benef_unicos": 1625,
-      "benef_reales": 1689,
-      "mujeres": 851,
-      "hombres": 838,
+      "benef_unicos": 2487,
+      "benef_reales": 2589,
+      "mujeres": 1342,
+      "hombres": 1247,
       "sin_id": null,
       "presupuesto": null,
       "gasto": null,
@@ -22521,13 +22925,13 @@ window.DASHBOARD_DATA = {
       "eficiencia": null,
       "desempeno": null,
       "rangos": {
-        "0-5": 169,
-        "6-11": 201,
-        "12-17": 90,
-        "18-29": 129,
-        "30-49": 288,
-        "50-64": 466,
-        "65+": 296
+        "0-5": 237,
+        "6-11": 139,
+        "12-17": 197,
+        "18-29": 436,
+        "30-49": 736,
+        "50-64": 323,
+        "65+": 451
       },
       "sin_datos_edad": 0,
       "municipios": [
@@ -22541,35 +22945,41 @@ window.DASHBOARD_DATA = {
         "CAMARGO",
         "CARICHI",
         "CHIHUAHUA",
+        "CHINIPAS",
         "CORONADO",
         "CUAUHTEMOC",
         "CUSIHUIRIACHI",
         "FORANEO",
+        "GUADALUPE",
         "GUAZAPARES",
+        "GUERRERO",
         "HIDALGO DEL PARRAL",
         "JANOS",
         "JIMENEZ",
         "JUAREZ",
         "LOPEZ",
         "MADERA",
+        "NAMIQUIPA",
         "RIVA PALACIO",
         "SAUCILLO",
+        "TEMOSACHIC",
         "URIQUE",
         "VALLE DE ZARAGOZA"
       ],
       "muns_benef": {
         "AHUMADA": 2,
-        "ALDAMA": 4,
-        "AQUILES SERDAN": 2,
-        "BACHINIVA": 1,
+        "ALDAMA": 6,
+        "AQUILES SERDAN": 3,
+        "BACHINIVA": 2,
         "BALLEZA": 1,
         "BATOPILAS DE MANUEL GOMEZ MORIN": 1,
-        "BOCOYNA": 3,
-        "CAMARGO": 11,
-        "CARICHI": 1,
-        "CHIHUAHUA": 764,
+        "BOCOYNA": 4,
+        "CAMARGO": 19,
+        "CARICHI": 2,
+        "CHIHUAHUA": 1216,
+        "CHINIPAS": 1,
         "CORONADO": 1,
-        "CUAUHTEMOC": 184,
+        "CUAUHTEMOC": 338,
         "CUSIHUIRIACHI": 4
       }
     },
@@ -22595,11 +23005,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 0,
-        "6-11": 0,
-        "12-17": 13,
-        "18-29": 53,
-        "30-49": 148,
-        "50-64": 177,
+        "6-11": 12,
+        "12-17": 54,
+        "18-29": 149,
+        "30-49": 177,
+        "50-64": 0,
         "65+": 189
       },
       "sin_datos_edad": 0,
@@ -22667,10 +23077,10 @@ window.DASHBOARD_DATA = {
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
-      "benef_unicos": 238,
-      "benef_reales": 238,
-      "mujeres": 183,
-      "hombres": 55,
+      "benef_unicos": 257,
+      "benef_reales": 257,
+      "mujeres": 197,
+      "hombres": 60,
       "sin_id": null,
       "presupuesto": null,
       "gasto": null,
@@ -22685,16 +23095,16 @@ window.DASHBOARD_DATA = {
         "6-11": 0,
         "12-17": 0,
         "18-29": 0,
-        "30-49": 0,
-        "50-64": 60,
-        "65+": 178
+        "30-49": 67,
+        "50-64": 0,
+        "65+": 197
       },
       "sin_datos_edad": 0,
       "municipios": [
         "CHIHUAHUA"
       ],
       "muns_benef": {
-        "CHIHUAHUA": 238
+        "CHIHUAHUA": 257
       }
     },
     {
@@ -22788,10 +23198,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 17,
-        "30-49": 53,
-        "50-64": 45,
+        "12-17": 17,
+        "18-29": 53,
+        "30-49": 45,
+        "50-64": 0,
         "65+": 19
       },
       "sin_datos_edad": 0,
@@ -22898,11 +23308,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 6,
-        "6-11": 10,
-        "12-17": 25,
-        "18-29": 135,
-        "30-49": 144,
-        "50-64": 116,
+        "6-11": 26,
+        "12-17": 135,
+        "18-29": 143,
+        "30-49": 117,
+        "50-64": 10,
         "65+": 49
       },
       "sin_datos_edad": 0,
@@ -22944,10 +23354,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 7,
-        "30-49": 17,
-        "50-64": 493,
+        "12-17": 7,
+        "18-29": 17,
+        "30-49": 492,
+        "50-64": 0,
         "65+": 1614
       },
       "sin_datos_edad": 0,
@@ -22992,12 +23402,12 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 846,
-        "6-11": 3008,
-        "12-17": 3229,
-        "18-29": 2024,
-        "30-49": 3864,
-        "50-64": 3288,
-        "65+": 2381
+        "6-11": 3229,
+        "12-17": 2024,
+        "18-29": 3863,
+        "30-49": 3287,
+        "50-64": 3008,
+        "65+": 2382
       },
       "sin_datos_edad": 0,
       "municipios": [
@@ -23140,9 +23550,9 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
+        "12-17": 2,
         "18-29": 2,
-        "30-49": 2,
+        "30-49": 0,
         "50-64": 0,
         "65+": 0
       },
@@ -23177,10 +23587,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
+        "12-17": 5,
         "18-29": 6,
-        "30-49": 6,
-        "50-64": 1,
+        "30-49": 1,
+        "50-64": 0,
         "65+": 0
       },
       "sin_datos_edad": 0,
@@ -23215,12 +23625,12 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 243,
-        "6-11": 1248,
-        "12-17": 1988,
-        "18-29": 1183,
-        "30-49": 1728,
-        "50-64": 1466,
-        "65+": 1152
+        "6-11": 1981,
+        "12-17": 1187,
+        "18-29": 1727,
+        "30-49": 1468,
+        "50-64": 1248,
+        "65+": 1153
       },
       "sin_datos_edad": 0,
       "municipios": [
@@ -23259,10 +23669,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 290,
-        "30-49": 445,
-        "50-64": 207,
+        "12-17": 290,
+        "18-29": 445,
+        "30-49": 207,
+        "50-64": 0,
         "65+": 37
       },
       "sin_datos_edad": 0,
@@ -23718,10 +24128,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 0,
         "6-11": 0,
-        "12-17": 0,
-        "18-29": 31,
-        "30-49": 23,
-        "50-64": 10,
+        "12-17": 31,
+        "18-29": 23,
+        "30-49": 10,
+        "50-64": 0,
         "65+": 12
       },
       "sin_datos_edad": 5,
@@ -23759,11 +24169,11 @@ window.DASHBOARD_DATA = {
       "desempeno": null,
       "rangos": {
         "0-5": 111,
-        "6-11": 141,
-        "12-17": 87,
-        "18-29": 233,
-        "30-49": 427,
-        "50-64": 104,
+        "6-11": 87,
+        "12-17": 233,
+        "18-29": 427,
+        "30-49": 104,
+        "50-64": 141,
         "65+": 13
       },
       "sin_datos_edad": 194,
@@ -23847,10 +24257,10 @@ window.DASHBOARD_DATA = {
       "pob_potencial": null,
       "pob_objetivo": null,
       "pob_alcanzada": null,
-      "benef_unicos": 279218,
-      "benef_reales": 308798,
-      "mujeres": 224617,
-      "hombres": 84181,
+      "benef_unicos": 247033,
+      "benef_reales": 270133,
+      "mujeres": 207882,
+      "hombres": 62251,
       "sin_id": null,
       "presupuesto": null,
       "gasto": null,
@@ -23861,15 +24271,15 @@ window.DASHBOARD_DATA = {
       "eficiencia": null,
       "desempeno": null,
       "rangos": {
-        "0-5": 28860,
-        "6-11": 21826,
-        "12-17": 18515,
-        "18-29": 43951,
-        "30-49": 55873,
-        "50-64": 46810,
-        "65+": 34115
+        "0-5": 22086,
+        "6-11": 15383,
+        "12-17": 37795,
+        "18-29": 47874,
+        "30-49": 41679,
+        "50-64": 17926,
+        "65+": 30982
       },
-      "sin_datos_edad": 93427,
+      "sin_datos_edad": 93423,
       "municipios": [
         "AHUMADA",
         "ALDAMA",
@@ -23942,28 +24352,28 @@ window.DASHBOARD_DATA = {
         "VALLE DE ZARAGOZA"
       ],
       "muns_benef": {
-        "AHUMADA": 1977,
-        "ALDAMA": 4219,
-        "ALLENDE": 258,
-        "AQUILES SERDAN": 523,
-        "ASCENSION": 2829,
-        "BACHINIVA": 1182,
-        "BALLEZA": 1947,
-        "BATOPILAS DE MANUEL GOMEZ MORIN": 1447,
-        "BOCOYNA": 3801,
-        "BUENAVENTURA": 2366,
-        "CAMARGO": 6523,
-        "CARICHI": 1097,
-        "CASAS GRANDES": 1631,
-        "CHIHUAHUA": 50996,
-        "CHINIPAS": 648,
-        "CORONADO": 637,
-        "COYAME DEL SOTOL": 384,
-        "CUAUHTEMOC": 13728,
-        "CUSIHUIRIACHI": 349,
-        "DELICIAS": 8104,
-        "DR. BELISARIO DOMINGUEZ": 331,
-        "EL TULE": 535
+        "AHUMADA": 1852,
+        "ALDAMA": 3825,
+        "ALLENDE": 246,
+        "AQUILES SERDAN": 509,
+        "ASCENSION": 2661,
+        "BACHINIVA": 1169,
+        "BALLEZA": 1870,
+        "BATOPILAS DE MANUEL GOMEZ MORIN": 1458,
+        "BOCOYNA": 3479,
+        "BUENAVENTURA": 2373,
+        "CAMARGO": 5982,
+        "CARICHI": 1111,
+        "CASAS GRANDES": 1504,
+        "CHIHUAHUA": 47127,
+        "CHINIPAS": 748,
+        "CORONADO": 591,
+        "COYAME DEL SOTOL": 373,
+        "CUAUHTEMOC": 12945,
+        "CUSIHUIRIACHI": 326,
+        "DELICIAS": 7287,
+        "DR. BELISARIO DOMINGUEZ": 304,
+        "EL TULE": 510
       }
     },
     {
@@ -24145,32 +24555,32 @@ window.DASHBOARD_DATA = {
       {
         "nombre": "Mujeres",
         "pob_vulnerable": 905124,
-        "atendidos": 267053
+        "atendidos": 252719
       },
       {
         "nombre": "Hombres",
         "pob_vulnerable": 887200,
-        "atendidos": 111276
+        "atendidos": 91076
       },
       {
         "nombre": "Niños y adolescentes (0-17)",
         "pob_vulnerable": 542176,
-        "atendidos": 99263
+        "atendidos": 86928
       },
       {
         "nombre": "Jovenes (18-29)",
         "pob_vulnerable": 401598,
-        "atendidos": 53883
+        "atendidos": 48161
       },
       {
         "nombre": "Adultos (30-64)",
         "pob_vulnerable": 730828,
-        "atendidos": 66447
+        "atendidos": 59343
       },
       {
         "nombre": "Personas mayores (65+)",
         "pob_vulnerable": 117722,
-        "atendidos": 43967
+        "atendidos": 41759
       },
       {
         "nombre": "Personas con pobreza multidimensional",
@@ -24185,7 +24595,7 @@ window.DASHBOARD_DATA = {
       {
         "nombre": "Personas con carencia alimentaria",
         "pob_vulnerable": 384853,
-        "atendidos": 27821
+        "atendidos": 30694
       },
       {
         "nombre": "Personas indígenas",
@@ -24195,504 +24605,504 @@ window.DASHBOARD_DATA = {
       {
         "nombre": "Personas con discapacidad",
         "pob_vulnerable": 228514,
-        "atendidos": 2095
+        "atendidos": 2957
       },
       {
         "nombre": "Personas en situacion de vulnerabilidad y violencia familiar",
         "pob_vulnerable": 100000,
-        "atendidos": 531
+        "atendidos": 892
       }
     ],
     "mujeres": {
       "pob_vulnerable": 905124,
-      "atendidas": 267053
+      "atendidas": 252719
     },
     "hombres": {
       "pob_vulnerable": 887200,
-      "atendidos": 111276
+      "atendidos": 91076
     }
   },
   "nutrichihuahua": {
-    "total": 27977,
+    "total": 30871,
     "municipios": [
       {
         "nombre": "AHUMADA",
-        "total": 96,
-        "mujeres": 50,
-        "hombres": 46,
+        "total": 102,
+        "mujeres": 54,
+        "hombres": 48,
         "rangos_m": {
           "0-5": 8,
           "6-11": 2,
-          "12-17": 2,
-          "18-29": 6,
-          "30-49": 13,
-          "50-64": 13,
-          "65+": 6
+          "12-17": 7,
+          "18-29": 15,
+          "30-49": 17,
+          "50-64": 3,
+          "65+": 7
         },
         "rangos_h": {
           "0-5": 9,
-          "6-11": 4,
-          "12-17": 2,
-          "18-29": 6,
-          "30-49": 9,
-          "50-64": 7,
-          "65+": 9
+          "6-11": 3,
+          "12-17": 6,
+          "18-29": 10,
+          "30-49": 7,
+          "50-64": 4,
+          "65+": 10
         }
       },
       {
         "nombre": "ALDAMA",
-        "total": 290,
-        "mujeres": 145,
-        "hombres": 145,
+        "total": 315,
+        "mujeres": 160,
+        "hombres": 155,
         "rangos_m": {
-          "0-5": 12,
-          "6-11": 8,
-          "12-17": 4,
-          "18-29": 28,
-          "30-49": 43,
-          "50-64": 27,
-          "65+": 23
+          "0-5": 19,
+          "6-11": 4,
+          "12-17": 30,
+          "18-29": 46,
+          "30-49": 30,
+          "50-64": 9,
+          "65+": 24
         },
         "rangos_h": {
-          "0-5": 22,
+          "0-5": 27,
           "6-11": 5,
-          "12-17": 4,
-          "18-29": 16,
-          "30-49": 28,
-          "50-64": 33,
+          "12-17": 16,
+          "18-29": 30,
+          "30-49": 34,
+          "50-64": 11,
           "65+": 38
         }
       },
       {
         "nombre": "ALLENDE",
-        "total": 55,
-        "mujeres": 36,
-        "hombres": 19,
+        "total": 62,
+        "mujeres": 42,
+        "hombres": 20,
         "rangos_m": {
-          "0-5": 6,
-          "6-11": 4,
-          "12-17": 0,
-          "18-29": 2,
-          "30-49": 8,
-          "50-64": 11,
-          "65+": 5
+          "0-5": 7,
+          "6-11": 0,
+          "12-17": 2,
+          "18-29": 9,
+          "30-49": 14,
+          "50-64": 6,
+          "65+": 7
         },
         "rangos_h": {
           "0-5": 3,
-          "6-11": 2,
-          "12-17": 0,
+          "6-11": 0,
+          "12-17": 1,
           "18-29": 1,
-          "30-49": 1,
-          "50-64": 2,
-          "65+": 10
+          "30-49": 2,
+          "50-64": 4,
+          "65+": 12
         }
       },
       {
         "nombre": "AQUILES SERDAN",
-        "total": 98,
-        "mujeres": 62,
-        "hombres": 36,
+        "total": 101,
+        "mujeres": 64,
+        "hombres": 37,
         "rangos_m": {
           "0-5": 10,
           "6-11": 1,
-          "12-17": 1,
-          "18-29": 5,
-          "30-49": 10,
-          "50-64": 16,
-          "65+": 19
+          "12-17": 5,
+          "18-29": 12,
+          "30-49": 19,
+          "50-64": 2,
+          "65+": 20
         },
         "rangos_h": {
-          "0-5": 5,
-          "6-11": 1,
-          "12-17": 2,
-          "18-29": 0,
-          "30-49": 5,
-          "50-64": 9,
+          "0-5": 6,
+          "6-11": 2,
+          "12-17": 0,
+          "18-29": 5,
+          "30-49": 9,
+          "50-64": 1,
           "65+": 14
         }
       },
       {
         "nombre": "ASCENSION",
-        "total": 89,
-        "mujeres": 52,
-        "hombres": 37,
+        "total": 166,
+        "mujeres": 103,
+        "hombres": 63,
         "rangos_m": {
-          "0-5": 4,
-          "6-11": 1,
-          "12-17": 1,
-          "18-29": 4,
-          "30-49": 14,
-          "50-64": 8,
-          "65+": 20
+          "0-5": 5,
+          "6-11": 2,
+          "12-17": 6,
+          "18-29": 29,
+          "30-49": 26,
+          "50-64": 2,
+          "65+": 37
         },
         "rangos_h": {
-          "0-5": 1,
-          "6-11": 4,
-          "12-17": 2,
-          "18-29": 1,
-          "30-49": 8,
-          "50-64": 8,
-          "65+": 13
+          "0-5": 6,
+          "6-11": 2,
+          "12-17": 3,
+          "18-29": 15,
+          "30-49": 14,
+          "50-64": 5,
+          "65+": 20
         }
       },
       {
         "nombre": "BACHINIVA",
-        "total": 63,
-        "mujeres": 27,
-        "hombres": 36,
+        "total": 74,
+        "mujeres": 31,
+        "hombres": 43,
         "rangos_m": {
-          "0-5": 7,
-          "6-11": 2,
-          "12-17": 0,
-          "18-29": 3,
-          "30-49": 10,
-          "50-64": 0,
+          "0-5": 9,
+          "6-11": 0,
+          "12-17": 3,
+          "18-29": 12,
+          "30-49": 0,
+          "50-64": 2,
           "65+": 5
         },
         "rangos_h": {
-          "0-5": 9,
-          "6-11": 1,
-          "12-17": 2,
-          "18-29": 1,
-          "30-49": 2,
-          "50-64": 7,
-          "65+": 14
+          "0-5": 12,
+          "6-11": 2,
+          "12-17": 1,
+          "18-29": 2,
+          "30-49": 7,
+          "50-64": 2,
+          "65+": 17
         }
       },
       {
         "nombre": "BALLEZA",
-        "total": 960,
-        "mujeres": 621,
-        "hombres": 339,
+        "total": 1043,
+        "mujeres": 676,
+        "hombres": 367,
         "rangos_m": {
-          "0-5": 75,
-          "6-11": 9,
-          "12-17": 20,
-          "18-29": 69,
-          "30-49": 200,
-          "50-64": 116,
-          "65+": 131
+          "0-5": 111,
+          "6-11": 22,
+          "12-17": 78,
+          "18-29": 210,
+          "30-49": 124,
+          "50-64": 19,
+          "65+": 139
         },
         "rangos_h": {
-          "0-5": 65,
-          "6-11": 14,
+          "0-5": 92,
+          "6-11": 16,
           "12-17": 16,
-          "18-29": 16,
-          "30-49": 64,
-          "50-64": 71,
-          "65+": 93
+          "18-29": 68,
+          "30-49": 73,
+          "50-64": 18,
+          "65+": 96
         }
       },
       {
         "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-        "total": 388,
-        "mujeres": 236,
-        "hombres": 152,
+        "total": 396,
+        "mujeres": 243,
+        "hombres": 153,
         "rangos_m": {
-          "0-5": 18,
-          "6-11": 24,
-          "12-17": 26,
-          "18-29": 48,
-          "30-49": 60,
+          "0-5": 19,
+          "6-11": 26,
+          "12-17": 50,
+          "18-29": 61,
+          "30-49": 26,
           "50-64": 24,
-          "65+": 29
+          "65+": 33
         },
         "rangos_h": {
           "0-5": 23,
-          "6-11": 25,
-          "12-17": 13,
-          "18-29": 21,
-          "30-49": 35,
-          "50-64": 12,
+          "6-11": 13,
+          "12-17": 21,
+          "18-29": 35,
+          "30-49": 13,
+          "50-64": 27,
           "65+": 22
         }
       },
       {
         "nombre": "BOCOYNA",
-        "total": 598,
-        "mujeres": 408,
+        "total": 600,
+        "mujeres": 410,
         "hombres": 190,
         "rangos_m": {
           "0-5": 64,
-          "6-11": 22,
-          "12-17": 6,
-          "18-29": 52,
-          "30-49": 85,
-          "50-64": 56,
-          "65+": 102
+          "6-11": 6,
+          "12-17": 52,
+          "18-29": 85,
+          "30-49": 58,
+          "50-64": 22,
+          "65+": 104
         },
         "rangos_h": {
           "0-5": 53,
-          "6-11": 12,
-          "12-17": 7,
-          "18-29": 21,
-          "30-49": 32,
-          "50-64": 19,
+          "6-11": 7,
+          "12-17": 22,
+          "18-29": 32,
+          "30-49": 19,
+          "50-64": 12,
           "65+": 43
         }
       },
       {
         "nombre": "BUENAVENTURA",
-        "total": 620,
-        "mujeres": 432,
-        "hombres": 188,
+        "total": 826,
+        "mujeres": 558,
+        "hombres": 268,
         "rangos_m": {
-          "0-5": 7,
-          "6-11": 59,
-          "12-17": 4,
-          "18-29": 20,
-          "30-49": 86,
-          "50-64": 89,
-          "65+": 167
+          "0-5": 45,
+          "6-11": 5,
+          "12-17": 34,
+          "18-29": 102,
+          "30-49": 123,
+          "50-64": 64,
+          "65+": 195
         },
         "rangos_h": {
-          "0-5": 6,
-          "6-11": 44,
-          "12-17": 3,
-          "18-29": 1,
-          "30-49": 11,
-          "50-64": 32,
-          "65+": 91
+          "0-5": 44,
+          "6-11": 3,
+          "12-17": 2,
+          "18-29": 14,
+          "30-49": 46,
+          "50-64": 52,
+          "65+": 117
         }
       },
       {
         "nombre": "CAMARGO",
-        "total": 193,
-        "mujeres": 135,
-        "hombres": 58,
+        "total": 220,
+        "mujeres": 155,
+        "hombres": 65,
         "rangos_m": {
-          "0-5": 2,
-          "6-11": 17,
-          "12-17": 13,
-          "18-29": 8,
-          "30-49": 45,
-          "50-64": 31,
-          "65+": 22
+          "0-5": 4,
+          "6-11": 13,
+          "12-17": 8,
+          "18-29": 54,
+          "30-49": 39,
+          "50-64": 17,
+          "65+": 25
         },
         "rangos_h": {
-          "0-5": 4,
-          "6-11": 12,
+          "0-5": 5,
+          "6-11": 5,
           "12-17": 5,
-          "18-29": 4,
-          "30-49": 5,
-          "50-64": 18,
-          "65+": 13
+          "18-29": 5,
+          "30-49": 21,
+          "50-64": 12,
+          "65+": 17
         }
       },
       {
         "nombre": "CARICHI",
-        "total": 464,
-        "mujeres": 304,
-        "hombres": 160,
+        "total": 615,
+        "mujeres": 396,
+        "hombres": 219,
         "rangos_m": {
-          "0-5": 30,
-          "6-11": 28,
-          "12-17": 5,
-          "18-29": 29,
-          "30-49": 61,
-          "50-64": 58,
-          "65+": 83
+          "0-5": 56,
+          "6-11": 8,
+          "12-17": 38,
+          "18-29": 80,
+          "30-49": 81,
+          "50-64": 30,
+          "65+": 104
         },
         "rangos_h": {
-          "0-5": 37,
-          "6-11": 26,
-          "12-17": 1,
-          "18-29": 9,
-          "30-49": 14,
-          "50-64": 14,
-          "65+": 57
+          "0-5": 58,
+          "6-11": 1,
+          "12-17": 10,
+          "18-29": 21,
+          "30-49": 23,
+          "50-64": 30,
+          "65+": 78
         }
       },
       {
         "nombre": "CASAS GRANDES",
-        "total": 266,
-        "mujeres": 160,
-        "hombres": 106,
+        "total": 288,
+        "mujeres": 175,
+        "hombres": 113,
         "rangos_m": {
-          "0-5": 8,
-          "6-11": 9,
-          "12-17": 34,
-          "18-29": 6,
-          "30-49": 27,
-          "50-64": 40,
-          "65+": 38
+          "0-5": 12,
+          "6-11": 34,
+          "12-17": 10,
+          "18-29": 33,
+          "30-49": 41,
+          "50-64": 10,
+          "65+": 42
         },
         "rangos_h": {
-          "0-5": 8,
-          "6-11": 10,
-          "12-17": 23,
-          "18-29": 2,
-          "30-49": 10,
-          "50-64": 14,
-          "65+": 41
-        }
-      },
-      {
-        "nombre": "CHIHUAHUA",
-        "total": 4743,
-        "mujeres": 3202,
-        "hombres": 1541,
-        "rangos_m": {
-          "0-5": 147,
-          "6-11": 188,
-          "12-17": 176,
-          "18-29": 181,
-          "30-49": 618,
-          "50-64": 687,
-          "65+": 1228
-        },
-        "rangos_h": {
-          "0-5": 159,
-          "6-11": 177,
-          "12-17": 207,
-          "18-29": 125,
-          "30-49": 226,
-          "50-64": 251,
-          "65+": 420
-        }
-      },
-      {
-        "nombre": "CHINIPAS",
-        "total": 468,
-        "mujeres": 313,
-        "hombres": 155,
-        "rangos_m": {
-          "0-5": 78,
-          "6-11": 7,
-          "12-17": 17,
-          "18-29": 29,
-          "30-49": 61,
-          "50-64": 46,
-          "65+": 75
-        },
-        "rangos_h": {
-          "0-5": 57,
-          "6-11": 4,
+          "0-5": 12,
+          "6-11": 23,
           "12-17": 2,
-          "18-29": 12,
-          "30-49": 21,
-          "50-64": 14,
+          "18-29": 10,
+          "30-49": 14,
+          "50-64": 10,
           "65+": 45
         }
       },
       {
+        "nombre": "CHIHUAHUA",
+        "total": 4829,
+        "mujeres": 3260,
+        "hombres": 1569,
+        "rangos_m": {
+          "0-5": 161,
+          "6-11": 177,
+          "12-17": 194,
+          "18-29": 634,
+          "30-49": 722,
+          "50-64": 195,
+          "65+": 1270
+        },
+        "rangos_h": {
+          "0-5": 171,
+          "6-11": 209,
+          "12-17": 130,
+          "18-29": 229,
+          "30-49": 260,
+          "50-64": 193,
+          "65+": 440
+        }
+      },
+      {
+        "nombre": "CHINIPAS",
+        "total": 542,
+        "mujeres": 353,
+        "hombres": 189,
+        "rangos_m": {
+          "0-5": 91,
+          "6-11": 17,
+          "12-17": 34,
+          "18-29": 69,
+          "30-49": 53,
+          "50-64": 9,
+          "65+": 90
+        },
+        "rangos_h": {
+          "0-5": 72,
+          "6-11": 2,
+          "12-17": 12,
+          "18-29": 24,
+          "30-49": 17,
+          "50-64": 8,
+          "65+": 61
+        }
+      },
+      {
         "nombre": "CORONADO",
-        "total": 114,
+        "total": 115,
         "mujeres": 89,
-        "hombres": 25,
+        "hombres": 26,
         "rangos_m": {
           "0-5": 6,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 10,
-          "30-49": 25,
-          "50-64": 15,
-          "65+": 32
+          "6-11": 0,
+          "12-17": 10,
+          "18-29": 27,
+          "30-49": 15,
+          "50-64": 4,
+          "65+": 33
         },
         "rangos_h": {
           "0-5": 8,
           "6-11": 1,
           "12-17": 1,
-          "18-29": 1,
-          "30-49": 2,
-          "50-64": 7,
-          "65+": 5
+          "18-29": 2,
+          "30-49": 8,
+          "50-64": 1,
+          "65+": 6
         }
       },
       {
         "nombre": "COYAME DEL SOTOL",
-        "total": 42,
-        "mujeres": 24,
-        "hombres": 18,
+        "total": 56,
+        "mujeres": 31,
+        "hombres": 25,
         "rangos_m": {
-          "0-5": 7,
+          "0-5": 10,
           "6-11": 1,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 5,
-          "50-64": 6,
-          "65+": 5
+          "12-17": 1,
+          "18-29": 6,
+          "30-49": 7,
+          "50-64": 2,
+          "65+": 8
         },
         "rangos_h": {
-          "0-5": 9,
-          "6-11": 3,
+          "0-5": 13,
+          "6-11": 1,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 2,
-          "50-64": 3,
-          "65+": 1
+          "18-29": 2,
+          "30-49": 5,
+          "50-64": 4,
+          "65+": 2
         }
       },
       {
         "nombre": "CUAUHTEMOC",
-        "total": 673,
-        "mujeres": 421,
-        "hombres": 252,
+        "total": 699,
+        "mujeres": 441,
+        "hombres": 258,
         "rangos_m": {
-          "0-5": 40,
-          "6-11": 18,
-          "12-17": 10,
-          "18-29": 52,
-          "30-49": 140,
-          "50-64": 94,
-          "65+": 71
+          "0-5": 43,
+          "6-11": 10,
+          "12-17": 63,
+          "18-29": 146,
+          "30-49": 101,
+          "50-64": 21,
+          "65+": 73
         },
         "rangos_h": {
-          "0-5": 35,
-          "6-11": 17,
-          "12-17": 13,
-          "18-29": 31,
-          "30-49": 65,
-          "50-64": 51,
-          "65+": 41
+          "0-5": 39,
+          "6-11": 13,
+          "12-17": 32,
+          "18-29": 67,
+          "30-49": 54,
+          "50-64": 25,
+          "65+": 43
         }
       },
       {
         "nombre": "CUSIHUIRIACHI",
-        "total": 60,
-        "mujeres": 35,
-        "hombres": 25,
+        "total": 66,
+        "mujeres": 39,
+        "hombres": 27,
         "rangos_m": {
-          "0-5": 6,
-          "6-11": 2,
+          "0-5": 7,
+          "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 7,
-          "50-64": 6,
-          "65+": 14
+          "18-29": 9,
+          "30-49": 6,
+          "50-64": 4,
+          "65+": 15
         },
         "rangos_h": {
           "0-5": 6,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 2,
-          "50-64": 8,
-          "65+": 8
+          "12-17": 1,
+          "18-29": 2,
+          "30-49": 9,
+          "50-64": 0,
+          "65+": 10
         }
       },
       {
         "nombre": "DELICIAS",
-        "total": 183,
-        "mujeres": 128,
-        "hombres": 55,
+        "total": 278,
+        "mujeres": 166,
+        "hombres": 112,
         "rangos_m": {
-          "0-5": 13,
-          "6-11": 1,
-          "12-17": 2,
-          "18-29": 8,
-          "30-49": 43,
-          "50-64": 34,
-          "65+": 27
+          "0-5": 15,
+          "6-11": 2,
+          "12-17": 11,
+          "18-29": 56,
+          "30-49": 51,
+          "50-64": 6,
+          "65+": 28
         },
         "rangos_h": {
-          "0-5": 11,
-          "6-11": 5,
-          "12-17": 0,
-          "18-29": 3,
-          "30-49": 6,
-          "50-64": 12,
-          "65+": 20
+          "0-5": 17,
+          "6-11": 2,
+          "12-17": 13,
+          "18-29": 33,
+          "30-49": 21,
+          "50-64": 14,
+          "65+": 22
         }
       },
       {
@@ -24704,9 +25114,9 @@ window.DASHBOARD_DATA = {
           "0-5": 1,
           "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
+          "18-29": 2,
           "30-49": 2,
-          "50-64": 2,
+          "50-64": 0,
           "65+": 3
         },
         "rangos_h": {
@@ -24721,626 +25131,626 @@ window.DASHBOARD_DATA = {
       },
       {
         "nombre": "EL TULE",
-        "total": 115,
-        "mujeres": 79,
-        "hombres": 36,
+        "total": 144,
+        "mujeres": 97,
+        "hombres": 47,
         "rangos_m": {
-          "0-5": 7,
+          "0-5": 17,
           "6-11": 1,
-          "12-17": 0,
-          "18-29": 2,
-          "30-49": 15,
-          "50-64": 14,
-          "65+": 40
+          "12-17": 7,
+          "18-29": 15,
+          "30-49": 16,
+          "50-64": 3,
+          "65+": 43
         },
         "rangos_h": {
-          "0-5": 5,
-          "6-11": 1,
+          "0-5": 16,
+          "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 2,
-          "50-64": 9,
-          "65+": 19
+          "18-29": 2,
+          "30-49": 9,
+          "50-64": 2,
+          "65+": 20
         }
       },
       {
         "nombre": "GALEANA",
-        "total": 59,
-        "mujeres": 43,
-        "hombres": 16,
+        "total": 91,
+        "mujeres": 68,
+        "hombres": 23,
         "rangos_m": {
-          "0-5": 9,
+          "0-5": 14,
           "6-11": 2,
-          "12-17": 2,
-          "18-29": 8,
-          "30-49": 6,
-          "50-64": 9,
-          "65+": 7
+          "12-17": 17,
+          "18-29": 10,
+          "30-49": 14,
+          "50-64": 3,
+          "65+": 11
         },
         "rangos_h": {
-          "0-5": 4,
-          "6-11": 2,
+          "0-5": 10,
+          "6-11": 1,
           "12-17": 1,
-          "18-29": 1,
-          "30-49": 5,
-          "50-64": 1,
-          "65+": 2
+          "18-29": 5,
+          "30-49": 1,
+          "50-64": 3,
+          "65+": 3
         }
       },
       {
         "nombre": "GOMEZ FARIAS",
-        "total": 215,
-        "mujeres": 121,
-        "hombres": 94,
+        "total": 251,
+        "mujeres": 149,
+        "hombres": 102,
         "rangos_m": {
-          "0-5": 29,
-          "6-11": 0,
-          "12-17": 4,
-          "18-29": 15,
-          "30-49": 14,
-          "50-64": 15,
-          "65+": 44
+          "0-5": 32,
+          "6-11": 4,
+          "12-17": 28,
+          "18-29": 18,
+          "30-49": 18,
+          "50-64": 2,
+          "65+": 53
         },
         "rangos_h": {
-          "0-5": 42,
+          "0-5": 46,
           "6-11": 1,
-          "12-17": 1,
-          "18-29": 3,
-          "30-49": 4,
-          "50-64": 19,
-          "65+": 24
+          "12-17": 3,
+          "18-29": 4,
+          "30-49": 24,
+          "50-64": 1,
+          "65+": 25
         }
       },
       {
         "nombre": "GRAN MORELOS",
-        "total": 50,
-        "mujeres": 33,
-        "hombres": 17,
+        "total": 56,
+        "mujeres": 36,
+        "hombres": 20,
         "rangos_m": {
-          "0-5": 3,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 6,
-          "50-64": 7,
+          "0-5": 5,
+          "6-11": 0,
+          "12-17": 1,
+          "18-29": 7,
+          "30-49": 8,
+          "50-64": 3,
           "65+": 15
         },
         "rangos_h": {
-          "0-5": 5,
-          "6-11": 1,
+          "0-5": 8,
+          "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 1,
-          "50-64": 0,
+          "18-29": 1,
+          "30-49": 0,
+          "50-64": 1,
           "65+": 10
         }
       },
       {
         "nombre": "GUACHOCHI",
-        "total": 1955,
-        "mujeres": 1452,
-        "hombres": 503,
+        "total": 2156,
+        "mujeres": 1600,
+        "hombres": 556,
         "rangos_m": {
-          "0-5": 136,
-          "6-11": 19,
-          "12-17": 41,
-          "18-29": 203,
-          "30-49": 423,
-          "50-64": 322,
-          "65+": 308
+          "0-5": 152,
+          "6-11": 45,
+          "12-17": 236,
+          "18-29": 474,
+          "30-49": 364,
+          "50-64": 36,
+          "65+": 358
         },
         "rangos_h": {
-          "0-5": 126,
-          "6-11": 18,
-          "12-17": 20,
-          "18-29": 75,
-          "30-49": 52,
-          "50-64": 62,
-          "65+": 150
+          "0-5": 145,
+          "6-11": 22,
+          "12-17": 77,
+          "18-29": 58,
+          "30-49": 78,
+          "50-64": 38,
+          "65+": 162
         }
       },
       {
         "nombre": "GUADALUPE",
-        "total": 55,
-        "mujeres": 35,
-        "hombres": 20,
+        "total": 68,
+        "mujeres": 43,
+        "hombres": 25,
         "rangos_m": {
-          "0-5": 3,
+          "0-5": 4,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 5,
-          "50-64": 9,
-          "65+": 17
+          "12-17": 2,
+          "18-29": 5,
+          "30-49": 13,
+          "50-64": 0,
+          "65+": 20
         },
         "rangos_h": {
-          "0-5": 1,
-          "6-11": 2,
-          "12-17": 0,
-          "18-29": 5,
-          "30-49": 1,
-          "50-64": 7,
-          "65+": 4
+          "0-5": 2,
+          "6-11": 0,
+          "12-17": 5,
+          "18-29": 1,
+          "30-49": 10,
+          "50-64": 2,
+          "65+": 5
         }
       },
       {
         "nombre": "GUADALUPE Y CALVO",
-        "total": 1860,
-        "mujeres": 1252,
-        "hombres": 608,
+        "total": 1941,
+        "mujeres": 1298,
+        "hombres": 643,
         "rangos_m": {
-          "0-5": 329,
-          "6-11": 61,
-          "12-17": 63,
-          "18-29": 298,
-          "30-49": 324,
-          "50-64": 120,
-          "65+": 73
+          "0-5": 331,
+          "6-11": 64,
+          "12-17": 306,
+          "18-29": 336,
+          "30-49": 129,
+          "50-64": 95,
+          "65+": 85
         },
         "rangos_h": {
           "0-5": 274,
-          "6-11": 69,
-          "12-17": 29,
-          "18-29": 62,
-          "30-49": 82,
-          "50-64": 44,
-          "65+": 48
+          "6-11": 30,
+          "12-17": 67,
+          "18-29": 88,
+          "30-49": 48,
+          "50-64": 102,
+          "65+": 61
         }
       },
       {
         "nombre": "GUAZAPARES",
-        "total": 427,
-        "mujeres": 246,
-        "hombres": 181,
+        "total": 487,
+        "mujeres": 282,
+        "hombres": 205,
         "rangos_m": {
-          "0-5": 33,
-          "6-11": 15,
-          "12-17": 8,
-          "18-29": 25,
-          "30-49": 34,
-          "50-64": 22,
-          "65+": 94
+          "0-5": 45,
+          "6-11": 9,
+          "12-17": 29,
+          "18-29": 36,
+          "30-49": 25,
+          "50-64": 21,
+          "65+": 115
         },
         "rangos_h": {
-          "0-5": 40,
-          "6-11": 12,
-          "12-17": 3,
-          "18-29": 15,
-          "30-49": 20,
-          "50-64": 19,
-          "65+": 60
+          "0-5": 52,
+          "6-11": 5,
+          "12-17": 15,
+          "18-29": 21,
+          "30-49": 23,
+          "50-64": 20,
+          "65+": 67
         }
       },
       {
         "nombre": "GUERRERO",
-        "total": 657,
-        "mujeres": 445,
-        "hombres": 212,
+        "total": 703,
+        "mujeres": 477,
+        "hombres": 226,
         "rangos_m": {
-          "0-5": 1,
-          "6-11": 6,
-          "12-17": 4,
-          "18-29": 26,
-          "30-49": 120,
-          "50-64": 122,
-          "65+": 168
+          "0-5": 2,
+          "6-11": 4,
+          "12-17": 29,
+          "18-29": 134,
+          "30-49": 136,
+          "50-64": 6,
+          "65+": 185
         },
         "rangos_h": {
-          "0-5": 5,
-          "6-11": 10,
-          "12-17": 9,
-          "18-29": 12,
-          "30-49": 33,
-          "50-64": 37,
-          "65+": 107
+          "0-5": 8,
+          "6-11": 9,
+          "12-17": 15,
+          "18-29": 35,
+          "30-49": 43,
+          "50-64": 10,
+          "65+": 115
         }
       },
       {
         "nombre": "HIDALGO DEL PARRAL",
-        "total": 1513,
-        "mujeres": 1030,
-        "hombres": 483,
+        "total": 1722,
+        "mujeres": 1169,
+        "hombres": 553,
         "rangos_m": {
-          "0-5": 119,
-          "6-11": 21,
-          "12-17": 9,
-          "18-29": 67,
-          "30-49": 289,
-          "50-64": 243,
-          "65+": 284
+          "0-5": 138,
+          "6-11": 11,
+          "12-17": 84,
+          "18-29": 326,
+          "30-49": 295,
+          "50-64": 34,
+          "65+": 332
         },
         "rangos_h": {
-          "0-5": 115,
-          "6-11": 21,
-          "12-17": 17,
-          "18-29": 28,
-          "30-49": 43,
-          "50-64": 97,
-          "65+": 163
+          "0-5": 139,
+          "6-11": 25,
+          "12-17": 33,
+          "18-29": 49,
+          "30-49": 111,
+          "50-64": 38,
+          "65+": 189
         }
       },
       {
         "nombre": "HUEJOTITAN",
-        "total": 53,
-        "mujeres": 41,
-        "hombres": 12,
+        "total": 61,
+        "mujeres": 45,
+        "hombres": 16,
         "rangos_m": {
-          "0-5": 1,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 3,
-          "50-64": 8,
-          "65+": 27
+          "0-5": 2,
+          "6-11": 0,
+          "12-17": 2,
+          "18-29": 4,
+          "30-49": 10,
+          "50-64": 1,
+          "65+": 28
         },
         "rangos_h": {
-          "0-5": 5,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 0,
-          "30-49": 1,
+          "0-5": 7,
+          "6-11": 0,
+          "12-17": 1,
+          "18-29": 1,
+          "30-49": 2,
           "50-64": 2,
-          "65+": 3
+          "65+": 4
         }
       },
       {
         "nombre": "IGNACIO ZARAGOZA",
-        "total": 110,
-        "mujeres": 49,
-        "hombres": 61,
+        "total": 112,
+        "mujeres": 50,
+        "hombres": 62,
         "rangos_m": {
           "0-5": 7,
-          "6-11": 6,
-          "12-17": 1,
-          "18-29": 3,
-          "30-49": 11,
+          "6-11": 1,
+          "12-17": 3,
+          "18-29": 12,
+          "30-49": 7,
           "50-64": 7,
-          "65+": 14
+          "65+": 15
         },
         "rangos_h": {
           "0-5": 11,
-          "6-11": 4,
-          "12-17": 2,
-          "18-29": 6,
-          "30-49": 9,
-          "50-64": 12,
-          "65+": 17
+          "6-11": 2,
+          "12-17": 6,
+          "18-29": 10,
+          "30-49": 14,
+          "50-64": 4,
+          "65+": 20
         }
       },
       {
         "nombre": "JANOS",
-        "total": 155,
-        "mujeres": 81,
-        "hombres": 74,
+        "total": 190,
+        "mujeres": 102,
+        "hombres": 88,
         "rangos_m": {
-          "0-5": 16,
-          "6-11": 2,
+          "0-5": 21,
+          "6-11": 1,
           "12-17": 1,
-          "18-29": 1,
-          "30-49": 10,
-          "50-64": 15,
-          "65+": 36
+          "18-29": 13,
+          "30-49": 19,
+          "50-64": 2,
+          "65+": 45
         },
         "rangos_h": {
-          "0-5": 27,
-          "6-11": 7,
-          "12-17": 1,
-          "18-29": 3,
-          "30-49": 10,
-          "50-64": 4,
-          "65+": 22
+          "0-5": 32,
+          "6-11": 1,
+          "12-17": 3,
+          "18-29": 14,
+          "30-49": 4,
+          "50-64": 7,
+          "65+": 28
         }
       },
       {
         "nombre": "JIMENEZ",
-        "total": 185,
-        "mujeres": 100,
-        "hombres": 85,
+        "total": 209,
+        "mujeres": 120,
+        "hombres": 89,
         "rangos_m": {
-          "0-5": 18,
-          "6-11": 2,
-          "12-17": 6,
-          "18-29": 8,
-          "30-49": 21,
-          "50-64": 25,
-          "65+": 21
+          "0-5": 25,
+          "6-11": 6,
+          "12-17": 11,
+          "18-29": 29,
+          "30-49": 34,
+          "50-64": 4,
+          "65+": 26
         },
         "rangos_h": {
           "0-5": 17,
-          "6-11": 5,
-          "12-17": 1,
-          "18-29": 12,
-          "30-49": 17,
-          "50-64": 23,
-          "65+": 10
+          "6-11": 3,
+          "12-17": 13,
+          "18-29": 17,
+          "30-49": 26,
+          "50-64": 5,
+          "65+": 12
         }
       },
       {
         "nombre": "JUAREZ",
-        "total": 5297,
-        "mujeres": 4083,
-        "hombres": 1214,
+        "total": 6091,
+        "mujeres": 4640,
+        "hombres": 1451,
         "rangos_m": {
-          "0-5": 121,
-          "6-11": 96,
-          "12-17": 71,
-          "18-29": 283,
-          "30-49": 1355,
-          "50-64": 1364,
-          "65+": 798
+          "0-5": 162,
+          "6-11": 74,
+          "12-17": 349,
+          "18-29": 1550,
+          "30-49": 1572,
+          "50-64": 129,
+          "65+": 913
         },
         "rangos_h": {
-          "0-5": 124,
-          "6-11": 129,
-          "12-17": 72,
-          "18-29": 107,
-          "30-49": 208,
-          "50-64": 292,
-          "65+": 285
+          "0-5": 168,
+          "6-11": 82,
+          "12-17": 118,
+          "18-29": 252,
+          "30-49": 387,
+          "50-64": 160,
+          "65+": 327
         }
       },
       {
         "nombre": "JULIMES",
-        "total": 102,
-        "mujeres": 58,
-        "hombres": 44,
+        "total": 106,
+        "mujeres": 61,
+        "hombres": 45,
         "rangos_m": {
-          "0-5": 14,
-          "6-11": 3,
-          "12-17": 1,
-          "18-29": 4,
-          "30-49": 9,
-          "50-64": 13,
-          "65+": 14
+          "0-5": 15,
+          "6-11": 1,
+          "12-17": 5,
+          "18-29": 10,
+          "30-49": 13,
+          "50-64": 4,
+          "65+": 16
         },
         "rangos_h": {
-          "0-5": 16,
+          "0-5": 17,
           "6-11": 1,
           "12-17": 1,
-          "18-29": 1,
-          "30-49": 6,
-          "50-64": 5,
+          "18-29": 7,
+          "30-49": 5,
+          "50-64": 7,
           "65+": 14
         }
       },
       {
         "nombre": "LA CRUZ",
-        "total": 47,
-        "mujeres": 29,
-        "hombres": 18,
+        "total": 58,
+        "mujeres": 37,
+        "hombres": 21,
         "rangos_m": {
-          "0-5": 0,
-          "6-11": 0,
-          "12-17": 2,
-          "18-29": 5,
-          "30-49": 5,
-          "50-64": 9,
-          "65+": 8
-        },
-        "rangos_h": {
-          "0-5": 0,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 3,
-          "30-49": 4,
-          "50-64": 4,
-          "65+": 6
-        }
-      },
-      {
-        "nombre": "LOPEZ",
-        "total": 26,
-        "mujeres": 15,
-        "hombres": 11,
-        "rangos_m": {
-          "0-5": 5,
-          "6-11": 3,
-          "12-17": 0,
-          "18-29": 0,
-          "30-49": 2,
-          "50-64": 2,
-          "65+": 3
+          "0-5": 4,
+          "6-11": 2,
+          "12-17": 5,
+          "18-29": 7,
+          "30-49": 10,
+          "50-64": 1,
+          "65+": 9
         },
         "rangos_h": {
           "0-5": 1,
           "6-11": 1,
-          "12-17": 0,
-          "18-29": 0,
-          "30-49": 2,
+          "12-17": 3,
+          "18-29": 4,
+          "30-49": 4,
+          "50-64": 1,
+          "65+": 9
+        }
+      },
+      {
+        "nombre": "LOPEZ",
+        "total": 54,
+        "mujeres": 28,
+        "hombres": 26,
+        "rangos_m": {
+          "0-5": 15,
+          "6-11": 0,
+          "12-17": 2,
+          "18-29": 3,
+          "30-49": 3,
           "50-64": 3,
+          "65+": 3
+        },
+        "rangos_h": {
+          "0-5": 15,
+          "6-11": 0,
+          "12-17": 0,
+          "18-29": 2,
+          "30-49": 4,
+          "50-64": 1,
           "65+": 4
         }
       },
       {
         "nombre": "MADERA",
-        "total": 276,
-        "mujeres": 155,
-        "hombres": 121,
+        "total": 304,
+        "mujeres": 171,
+        "hombres": 133,
         "rangos_m": {
-          "0-5": 30,
-          "6-11": 13,
-          "12-17": 8,
-          "18-29": 17,
-          "30-49": 21,
-          "50-64": 22,
-          "65+": 46
+          "0-5": 34,
+          "6-11": 9,
+          "12-17": 23,
+          "18-29": 26,
+          "30-49": 23,
+          "50-64": 20,
+          "65+": 48
         },
         "rangos_h": {
-          "0-5": 13,
-          "6-11": 3,
-          "12-17": 14,
-          "18-29": 10,
-          "30-49": 20,
-          "50-64": 21,
-          "65+": 40
+          "0-5": 19,
+          "6-11": 15,
+          "12-17": 13,
+          "18-29": 24,
+          "30-49": 23,
+          "50-64": 5,
+          "65+": 42
         }
       },
       {
         "nombre": "MAGUARICHI",
-        "total": 142,
-        "mujeres": 103,
-        "hombres": 39,
+        "total": 150,
+        "mujeres": 109,
+        "hombres": 41,
         "rangos_m": {
           "0-5": 11,
-          "6-11": 0,
-          "12-17": 5,
-          "18-29": 20,
-          "30-49": 30,
-          "50-64": 20,
-          "65+": 18
+          "6-11": 5,
+          "12-17": 23,
+          "18-29": 33,
+          "30-49": 20,
+          "50-64": 0,
+          "65+": 19
         },
         "rangos_h": {
           "0-5": 9,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 2,
-          "30-49": 7,
-          "50-64": 8,
-          "65+": 12
-        }
-      },
-      {
-        "nombre": "MATACHI",
-        "total": 89,
-        "mujeres": 47,
-        "hombres": 42,
-        "rangos_m": {
-          "0-5": 19,
-          "6-11": 4,
-          "12-17": 0,
-          "18-29": 3,
-          "30-49": 9,
-          "50-64": 3,
-          "65+": 9
-        },
-        "rangos_h": {
-          "0-5": 17,
-          "6-11": 7,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 2,
-          "50-64": 5,
-          "65+": 10
-        }
-      },
-      {
-        "nombre": "MATAMOROS",
-        "total": 333,
-        "mujeres": 194,
-        "hombres": 139,
-        "rangos_m": {
-          "0-5": 42,
-          "6-11": 6,
+          "6-11": 0,
           "12-17": 2,
-          "18-29": 21,
-          "30-49": 20,
-          "50-64": 25,
-          "65+": 79
-        },
-        "rangos_h": {
-          "0-5": 35,
-          "6-11": 5,
-          "12-17": 1,
-          "18-29": 3,
-          "30-49": 9,
-          "50-64": 27,
-          "65+": 59
-        }
-      },
-      {
-        "nombre": "MEOQUI",
-        "total": 127,
-        "mujeres": 60,
-        "hombres": 67,
-        "rangos_m": {
-          "0-5": 5,
-          "6-11": 4,
-          "12-17": 3,
-          "18-29": 5,
-          "30-49": 15,
-          "50-64": 20,
-          "65+": 9
-        },
-        "rangos_h": {
-          "0-5": 4,
-          "6-11": 5,
-          "12-17": 4,
           "18-29": 7,
-          "30-49": 14,
-          "50-64": 20,
+          "30-49": 8,
+          "50-64": 2,
           "65+": 13
         }
       },
       {
-        "nombre": "MORELOS",
-        "total": 219,
-        "mujeres": 147,
-        "hombres": 72,
+        "nombre": "MATACHI",
+        "total": 105,
+        "mujeres": 57,
+        "hombres": 48,
         "rangos_m": {
-          "0-5": 35,
-          "6-11": 2,
-          "12-17": 4,
-          "18-29": 18,
-          "30-49": 28,
-          "50-64": 21,
-          "65+": 38
+          "0-5": 23,
+          "6-11": 0,
+          "12-17": 6,
+          "18-29": 11,
+          "30-49": 3,
+          "50-64": 10,
+          "65+": 9
         },
         "rangos_h": {
-          "0-5": 31,
-          "6-11": 2,
+          "0-5": 21,
+          "6-11": 0,
           "12-17": 1,
-          "18-29": 3,
+          "18-29": 2,
           "30-49": 6,
+          "50-64": 12,
+          "65+": 11
+        }
+      },
+      {
+        "nombre": "MATAMOROS",
+        "total": 350,
+        "mujeres": 202,
+        "hombres": 148,
+        "rangos_m": {
+          "0-5": 44,
+          "6-11": 2,
+          "12-17": 23,
+          "18-29": 22,
+          "30-49": 28,
+          "50-64": 15,
+          "65+": 84
+        },
+        "rangos_h": {
+          "0-5": 39,
+          "6-11": 1,
+          "12-17": 3,
+          "18-29": 9,
+          "30-49": 27,
+          "50-64": 18,
+          "65+": 64
+        }
+      },
+      {
+        "nombre": "MEOQUI",
+        "total": 194,
+        "mujeres": 97,
+        "hombres": 97,
+        "rangos_m": {
+          "0-5": 6,
+          "6-11": 6,
+          "12-17": 9,
+          "18-29": 23,
+          "30-49": 33,
+          "50-64": 4,
+          "65+": 19
+        },
+        "rangos_h": {
+          "0-5": 4,
+          "6-11": 5,
+          "12-17": 11,
+          "18-29": 18,
+          "30-49": 30,
           "50-64": 7,
-          "65+": 20
+          "65+": 23
+        }
+      },
+      {
+        "nombre": "MORELOS",
+        "total": 231,
+        "mujeres": 154,
+        "hombres": 77,
+        "rangos_m": {
+          "0-5": 37,
+          "6-11": 4,
+          "12-17": 18,
+          "18-29": 31,
+          "30-49": 23,
+          "50-64": 3,
+          "65+": 40
+        },
+        "rangos_h": {
+          "0-5": 32,
+          "6-11": 1,
+          "12-17": 3,
+          "18-29": 7,
+          "30-49": 8,
+          "50-64": 2,
+          "65+": 23
         }
       },
       {
         "nombre": "MORIS",
-        "total": 172,
-        "mujeres": 122,
-        "hombres": 50,
+        "total": 176,
+        "mujeres": 124,
+        "hombres": 52,
         "rangos_m": {
-          "0-5": 18,
-          "6-11": 1,
-          "12-17": 0,
-          "18-29": 11,
-          "30-49": 26,
-          "50-64": 22,
-          "65+": 44
+          "0-5": 19,
+          "6-11": 0,
+          "12-17": 12,
+          "18-29": 28,
+          "30-49": 24,
+          "50-64": 2,
+          "65+": 47
         },
         "rangos_h": {
-          "0-5": 14,
-          "6-11": 2,
-          "12-17": 0,
-          "18-29": 6,
-          "30-49": 3,
-          "50-64": 4,
+          "0-5": 16,
+          "6-11": 0,
+          "12-17": 6,
+          "18-29": 4,
+          "30-49": 4,
+          "50-64": 3,
           "65+": 21
         }
       },
       {
         "nombre": "NAMIQUIPA",
-        "total": 267,
-        "mujeres": 113,
-        "hombres": 154,
+        "total": 272,
+        "mujeres": 117,
+        "hombres": 155,
         "rangos_m": {
-          "0-5": 7,
+          "0-5": 8,
           "6-11": 5,
-          "12-17": 5,
-          "18-29": 24,
-          "30-49": 28,
-          "50-64": 19,
+          "12-17": 26,
+          "18-29": 29,
+          "30-49": 20,
+          "50-64": 5,
           "65+": 27
         },
         "rangos_h": {
-          "0-5": 6,
-          "6-11": 12,
-          "12-17": 17,
-          "18-29": 33,
-          "30-49": 24,
-          "50-64": 30,
-          "65+": 37
+          "0-5": 7,
+          "6-11": 17,
+          "12-17": 33,
+          "18-29": 24,
+          "30-49": 30,
+          "50-64": 12,
+          "65+": 39
         }
       },
       {
@@ -25350,11 +25760,11 @@ window.DASHBOARD_DATA = {
         "hombres": 0,
         "rangos_m": {
           "0-5": 2,
-          "6-11": 0,
-          "12-17": 35,
-          "18-29": 402,
-          "30-49": 284,
-          "50-64": 3,
+          "6-11": 33,
+          "12-17": 404,
+          "18-29": 284,
+          "30-49": 3,
+          "50-64": 0,
           "65+": 0
         },
         "rangos_h": {
@@ -25369,218 +25779,218 @@ window.DASHBOARD_DATA = {
       },
       {
         "nombre": "NONOAVA",
-        "total": 109,
-        "mujeres": 69,
-        "hombres": 40,
+        "total": 129,
+        "mujeres": 81,
+        "hombres": 48,
         "rangos_m": {
-          "0-5": 18,
-          "6-11": 9,
-          "12-17": 1,
-          "18-29": 4,
-          "30-49": 13,
-          "50-64": 7,
+          "0-5": 27,
+          "6-11": 2,
+          "12-17": 6,
+          "18-29": 14,
+          "30-49": 7,
+          "50-64": 13,
           "65+": 17
         },
         "rangos_h": {
-          "0-5": 12,
-          "6-11": 4,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 5,
-          "50-64": 11,
+          "0-5": 19,
+          "6-11": 1,
+          "12-17": 1,
+          "18-29": 5,
+          "30-49": 11,
+          "50-64": 5,
           "65+": 8
         }
       },
       {
         "nombre": "NUEVO CASAS GRANDES",
-        "total": 298,
-        "mujeres": 198,
-        "hombres": 100,
+        "total": 331,
+        "mujeres": 215,
+        "hombres": 116,
         "rangos_m": {
-          "0-5": 9,
-          "6-11": 19,
-          "12-17": 3,
-          "18-29": 33,
-          "30-49": 59,
-          "50-64": 37,
-          "65+": 38
+          "0-5": 15,
+          "6-11": 4,
+          "12-17": 36,
+          "18-29": 73,
+          "30-49": 38,
+          "50-64": 23,
+          "65+": 40
         },
         "rangos_h": {
-          "0-5": 6,
-          "6-11": 28,
+          "0-5": 21,
+          "6-11": 10,
           "12-17": 8,
-          "18-29": 6,
+          "18-29": 17,
           "30-49": 17,
-          "50-64": 17,
-          "65+": 18
+          "50-64": 31,
+          "65+": 19
         }
       },
       {
         "nombre": "OCAMPO",
-        "total": 127,
-        "mujeres": 77,
-        "hombres": 50,
+        "total": 135,
+        "mujeres": 84,
+        "hombres": 51,
         "rangos_m": {
           "0-5": 0,
           "6-11": 1,
-          "12-17": 1,
-          "18-29": 2,
-          "30-49": 9,
-          "50-64": 19,
-          "65+": 45
+          "12-17": 2,
+          "18-29": 13,
+          "30-49": 22,
+          "50-64": 1,
+          "65+": 46
         },
         "rangos_h": {
           "0-5": 0,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 2,
-          "30-49": 3,
-          "50-64": 7,
-          "65+": 37
+          "6-11": 1,
+          "12-17": 2,
+          "18-29": 4,
+          "30-49": 8,
+          "50-64": 0,
+          "65+": 41
         }
       },
       {
         "nombre": "OJINAGA",
-        "total": 111,
-        "mujeres": 56,
-        "hombres": 55,
+        "total": 130,
+        "mujeres": 67,
+        "hombres": 63,
         "rangos_m": {
-          "0-5": 8,
-          "6-11": 3,
+          "0-5": 16,
+          "6-11": 5,
           "12-17": 4,
-          "18-29": 3,
-          "30-49": 11,
-          "50-64": 14,
-          "65+": 14
+          "18-29": 12,
+          "30-49": 17,
+          "50-64": 4,
+          "65+": 16
         },
         "rangos_h": {
-          "0-5": 10,
-          "6-11": 2,
-          "12-17": 0,
-          "18-29": 4,
-          "30-49": 11,
-          "50-64": 19,
+          "0-5": 18,
+          "6-11": 0,
+          "12-17": 4,
+          "18-29": 11,
+          "30-49": 19,
+          "50-64": 5,
           "65+": 11
         }
       },
       {
         "nombre": "PRAXEDIS G. GUERRERO",
-        "total": 70,
-        "mujeres": 44,
-        "hombres": 26,
+        "total": 118,
+        "mujeres": 73,
+        "hombres": 45,
         "rangos_m": {
-          "0-5": 4,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 6,
-          "30-49": 1,
-          "50-64": 11,
+          "0-5": 14,
+          "6-11": 2,
+          "12-17": 17,
+          "18-29": 8,
+          "30-49": 12,
+          "50-64": 0,
           "65+": 21
         },
         "rangos_h": {
-          "0-5": 0,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 5,
-          "30-49": 5,
-          "50-64": 6,
-          "65+": 9
+          "0-5": 13,
+          "6-11": 1,
+          "12-17": 5,
+          "18-29": 8,
+          "30-49": 9,
+          "50-64": 1,
+          "65+": 10
         }
       },
       {
         "nombre": "RIVA PALACIO",
-        "total": 41,
-        "mujeres": 20,
+        "total": 42,
+        "mujeres": 21,
         "hombres": 21,
         "rangos_m": {
           "0-5": 1,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 2,
+          "12-17": 2,
+          "18-29": 4,
           "30-49": 3,
-          "50-64": 2,
-          "65+": 12
+          "50-64": 0,
+          "65+": 13
         },
         "rangos_h": {
           "0-5": 1,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 0,
-          "30-49": 1,
-          "50-64": 5,
+          "6-11": 1,
+          "12-17": 0,
+          "18-29": 1,
+          "30-49": 6,
+          "50-64": 0,
           "65+": 13
         }
       },
       {
         "nombre": "ROSALES",
-        "total": 33,
-        "mujeres": 29,
+        "total": 35,
+        "mujeres": 31,
         "hombres": 4,
         "rangos_m": {
           "0-5": 0,
-          "6-11": 0,
-          "12-17": 2,
-          "18-29": 8,
-          "30-49": 11,
-          "50-64": 5,
+          "6-11": 2,
+          "12-17": 9,
+          "18-29": 12,
+          "30-49": 5,
+          "50-64": 0,
           "65+": 3
         },
         "rangos_h": {
           "0-5": 0,
           "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 3,
-          "50-64": 1,
+          "18-29": 3,
+          "30-49": 2,
+          "50-64": 0,
           "65+": 0
         }
       },
       {
         "nombre": "ROSARIO",
-        "total": 151,
-        "mujeres": 95,
-        "hombres": 56,
+        "total": 182,
+        "mujeres": 114,
+        "hombres": 68,
         "rangos_m": {
-          "0-5": 16,
+          "0-5": 20,
           "6-11": 1,
-          "12-17": 0,
-          "18-29": 9,
-          "30-49": 15,
-          "50-64": 17,
-          "65+": 37
+          "12-17": 10,
+          "18-29": 18,
+          "30-49": 19,
+          "50-64": 4,
+          "65+": 48
         },
         "rangos_h": {
           "0-5": 28,
-          "6-11": 3,
-          "12-17": 4,
-          "18-29": 0,
-          "30-49": 0,
-          "50-64": 3,
-          "65+": 18
+          "6-11": 5,
+          "12-17": 1,
+          "18-29": 2,
+          "30-49": 6,
+          "50-64": 11,
+          "65+": 23
         }
       },
       {
         "nombre": "SAN FRANCISCO DE BORJA",
-        "total": 160,
-        "mujeres": 104,
-        "hombres": 56,
+        "total": 168,
+        "mujeres": 111,
+        "hombres": 57,
         "rangos_m": {
-          "0-5": 18,
-          "6-11": 0,
-          "12-17": 2,
-          "18-29": 9,
-          "30-49": 13,
-          "50-64": 13,
-          "65+": 49
+          "0-5": 19,
+          "6-11": 2,
+          "12-17": 10,
+          "18-29": 13,
+          "30-49": 14,
+          "50-64": 0,
+          "65+": 54
         },
         "rangos_h": {
-          "0-5": 11,
+          "0-5": 12,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 6,
-          "50-64": 10,
-          "65+": 28
+          "12-17": 1,
+          "18-29": 6,
+          "30-49": 11,
+          "50-64": 2,
+          "65+": 30
         }
       },
       {
@@ -25591,163 +26001,163 @@ window.DASHBOARD_DATA = {
         "rangos_m": {
           "0-5": 2,
           "6-11": 0,
-          "12-17": 0,
+          "12-17": 3,
           "18-29": 3,
-          "30-49": 3,
-          "50-64": 5,
+          "30-49": 5,
+          "50-64": 0,
           "65+": 12
         },
         "rangos_h": {
           "0-5": 3,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 0,
-          "30-49": 3,
-          "50-64": 4,
+          "6-11": 1,
+          "12-17": 0,
+          "18-29": 3,
+          "30-49": 4,
+          "50-64": 0,
           "65+": 9
         }
       },
       {
         "nombre": "SAN FRANCISCO DEL ORO",
-        "total": 43,
-        "mujeres": 23,
-        "hombres": 20,
+        "total": 47,
+        "mujeres": 26,
+        "hombres": 21,
         "rangos_m": {
-          "0-5": 4,
-          "6-11": 1,
+          "0-5": 5,
+          "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 2,
-          "50-64": 9,
-          "65+": 7
+          "18-29": 4,
+          "30-49": 9,
+          "50-64": 1,
+          "65+": 8
         },
         "rangos_h": {
           "0-5": 4,
-          "6-11": 1,
+          "6-11": 2,
           "12-17": 1,
-          "18-29": 1,
-          "30-49": 1,
-          "50-64": 4,
-          "65+": 8
+          "18-29": 2,
+          "30-49": 4,
+          "50-64": 1,
+          "65+": 9
         }
       },
       {
         "nombre": "SANTA BARBARA",
-        "total": 212,
-        "mujeres": 132,
-        "hombres": 80,
+        "total": 222,
+        "mujeres": 136,
+        "hombres": 86,
         "rangos_m": {
           "0-5": 25,
-          "6-11": 1,
-          "12-17": 6,
-          "18-29": 6,
-          "30-49": 24,
-          "50-64": 22,
-          "65+": 48
+          "6-11": 6,
+          "12-17": 8,
+          "18-29": 26,
+          "30-49": 23,
+          "50-64": 4,
+          "65+": 50
         },
         "rangos_h": {
-          "0-5": 32,
+          "0-5": 37,
           "6-11": 1,
-          "12-17": 1,
-          "18-29": 2,
-          "30-49": 7,
-          "50-64": 14,
-          "65+": 23
+          "12-17": 2,
+          "18-29": 7,
+          "30-49": 14,
+          "50-64": 5,
+          "65+": 25
         }
       },
       {
         "nombre": "SANTA ISABEL",
-        "total": 216,
-        "mujeres": 145,
-        "hombres": 71,
+        "total": 227,
+        "mujeres": 150,
+        "hombres": 77,
         "rangos_m": {
-          "0-5": 15,
-          "6-11": 2,
-          "12-17": 1,
-          "18-29": 8,
-          "30-49": 26,
-          "50-64": 32,
-          "65+": 61
+          "0-5": 18,
+          "6-11": 1,
+          "12-17": 9,
+          "18-29": 28,
+          "30-49": 34,
+          "50-64": 6,
+          "65+": 63
         },
         "rangos_h": {
-          "0-5": 17,
-          "6-11": 0,
-          "12-17": 2,
-          "18-29": 4,
-          "30-49": 6,
-          "50-64": 7,
-          "65+": 35
+          "0-5": 20,
+          "6-11": 2,
+          "12-17": 4,
+          "18-29": 6,
+          "30-49": 7,
+          "50-64": 2,
+          "65+": 38
         }
       },
       {
         "nombre": "SATEVO",
-        "total": 100,
-        "mujeres": 65,
+        "total": 103,
+        "mujeres": 68,
         "hombres": 35,
         "rangos_m": {
-          "0-5": 3,
-          "6-11": 0,
-          "12-17": 1,
-          "18-29": 7,
-          "30-49": 19,
-          "50-64": 14,
-          "65+": 21
+          "0-5": 4,
+          "6-11": 2,
+          "12-17": 8,
+          "18-29": 19,
+          "30-49": 14,
+          "50-64": 0,
+          "65+": 23
         },
         "rangos_h": {
           "0-5": 8,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 1,
-          "30-49": 6,
-          "50-64": 8,
+          "12-17": 1,
+          "18-29": 6,
+          "30-49": 8,
+          "50-64": 1,
           "65+": 12
         }
       },
       {
         "nombre": "SAUCILLO",
-        "total": 304,
-        "mujeres": 203,
-        "hombres": 101,
+        "total": 326,
+        "mujeres": 220,
+        "hombres": 106,
         "rangos_m": {
-          "0-5": 16,
-          "6-11": 1,
-          "12-17": 2,
-          "18-29": 7,
-          "30-49": 42,
-          "50-64": 67,
-          "65+": 68
+          "0-5": 17,
+          "6-11": 3,
+          "12-17": 8,
+          "18-29": 44,
+          "30-49": 76,
+          "50-64": 3,
+          "65+": 81
         },
         "rangos_h": {
           "0-5": 14,
-          "6-11": 1,
+          "6-11": 3,
           "12-17": 3,
-          "18-29": 2,
-          "30-49": 9,
-          "50-64": 33,
-          "65+": 39
+          "18-29": 10,
+          "30-49": 35,
+          "50-64": 3,
+          "65+": 42
         }
       },
       {
         "nombre": "TEMOSACHIC",
-        "total": 174,
-        "mujeres": 101,
-        "hombres": 73,
+        "total": 194,
+        "mujeres": 114,
+        "hombres": 80,
         "rangos_m": {
-          "0-5": 31,
-          "6-11": 5,
-          "12-17": 0,
-          "18-29": 3,
-          "30-49": 17,
-          "50-64": 18,
-          "65+": 27
+          "0-5": 37,
+          "6-11": 0,
+          "12-17": 6,
+          "18-29": 21,
+          "30-49": 20,
+          "50-64": 7,
+          "65+": 30
         },
         "rangos_h": {
-          "0-5": 20,
-          "6-11": 6,
-          "12-17": 3,
-          "18-29": 2,
-          "30-49": 7,
-          "50-64": 11,
+          "0-5": 24,
+          "6-11": 4,
+          "12-17": 2,
+          "18-29": 8,
+          "30-49": 11,
+          "50-64": 9,
           "65+": 24
         }
       },
@@ -25758,119 +26168,119 @@ window.DASHBOARD_DATA = {
         "hombres": 138,
         "rangos_m": {
           "0-5": 21,
-          "6-11": 6,
-          "12-17": 16,
-          "18-29": 34,
-          "30-49": 31,
-          "50-64": 26,
+          "6-11": 16,
+          "12-17": 35,
+          "18-29": 31,
+          "30-49": 26,
+          "50-64": 8,
           "65+": 31
         },
         "rangos_h": {
           "0-5": 28,
-          "6-11": 2,
-          "12-17": 33,
-          "18-29": 22,
-          "30-49": 23,
-          "50-64": 18,
-          "65+": 16
+          "6-11": 34,
+          "12-17": 22,
+          "18-29": 23,
+          "30-49": 18,
+          "50-64": 5,
+          "65+": 17
         }
       },
       {
         "nombre": "URUACHI",
-        "total": 292,
-        "mujeres": 178,
-        "hombres": 114,
+        "total": 329,
+        "mujeres": 202,
+        "hombres": 127,
         "rangos_m": {
-          "0-5": 32,
+          "0-5": 44,
           "6-11": 8,
-          "12-17": 6,
-          "18-29": 30,
-          "30-49": 38,
-          "50-64": 25,
-          "65+": 39
+          "12-17": 34,
+          "18-29": 40,
+          "30-49": 28,
+          "50-64": 8,
+          "65+": 43
         },
         "rangos_h": {
-          "0-5": 39,
-          "6-11": 16,
-          "12-17": 1,
-          "18-29": 7,
-          "30-49": 14,
-          "50-64": 10,
+          "0-5": 51,
+          "6-11": 1,
+          "12-17": 7,
+          "18-29": 14,
+          "30-49": 12,
+          "50-64": 20,
           "65+": 29
         }
       },
       {
         "nombre": "VALLE DE ZARAGOZA",
-        "total": 74,
-        "mujeres": 50,
+        "total": 78,
+        "mujeres": 54,
         "hombres": 24,
         "rangos_m": {
-          "0-5": 1,
+          "0-5": 3,
           "6-11": 0,
-          "12-17": 0,
-          "18-29": 6,
+          "12-17": 6,
+          "18-29": 17,
           "30-49": 16,
-          "50-64": 14,
-          "65+": 13
+          "50-64": 0,
+          "65+": 15
         },
         "rangos_h": {
           "0-5": 0,
-          "6-11": 1,
+          "6-11": 0,
           "12-17": 0,
-          "18-29": 0,
-          "30-49": 8,
-          "50-64": 6,
+          "18-29": 8,
+          "30-49": 6,
+          "50-64": 1,
           "65+": 9
         }
       },
       {
         "nombre": "TOTAL",
-        "total": 27897,
-        "mujeres": 18825,
-        "hombres": 9072,
+        "total": 30804,
+        "mujeres": 20722,
+        "hombres": 10082,
         "rangos_m": {
-          "0-5": 1792,
-          "6-11": 734,
-          "12-17": 608,
-          "18-29": 1819,
-          "30-49": 4756,
-          "50-64": 4221,
-          "65+": 4920
+          "0-5": 2161,
+          "6-11": 637,
+          "12-17": 2108,
+          "18-29": 5290,
+          "30-49": 4804,
+          "50-64": 944,
+          "65+": 5441
         },
         "rangos_h": {
-          "0-5": 1710,
-          "6-11": 756,
-          "12-17": 558,
-          "18-29": 733,
-          "30-49": 1270,
-          "50-64": 1560,
-          "65+": 2517
+          "0-5": 2090,
+          "6-11": 599,
+          "12-17": 793,
+          "18-29": 1414,
+          "30-49": 1795,
+          "50-64": 1000,
+          "65+": 2796
         }
       }
     ],
     "instituciones": [
       {
         "nombre": "DIF",
-        "total": 21812,
-        "mujeres": 15179,
-        "hombres": 6709,
+        "total": 24706,
+        "mujeres": 17095,
+        "hombres": 7721,
         "rangos_m": {
-          "0-5": 1658,
-          "6-11": 348,
-          "12-17": 286,
-          "18-29": 1393,
-          "30-49": 3825,
-          "50-64": 3428,
-          "65+": 4206
+          "0-5": 2027,
+          "6-11": 315,
+          "12-17": 1686,
+          "18-29": 4369,
+          "30-49": 4017,
+          "50-64": 558,
+          "65+": 4731
         },
         "rangos_h": {
-          "0-5": 1594,
-          "6-11": 375,
-          "12-17": 195,
-          "18-29": 449,
-          "30-49": 848,
-          "50-64": 1133,
-          "65+": 2090
+          "0-5": 1974,
+          "6-11": 236,
+          "12-17": 509,
+          "18-29": 993,
+          "30-49": 1368,
+          "50-64": 619,
+          "65+": 2370
         },
         "programas": [
           {
@@ -25880,20 +26290,20 @@ window.DASHBOARD_DATA = {
             "hombres": 6675,
             "rangos_m": {
               "0-5": 1658,
-              "6-11": 348,
-              "12-17": 286,
-              "18-29": 1389,
-              "30-49": 3814,
-              "50-64": 3413,
+              "6-11": 286,
+              "12-17": 1391,
+              "18-29": 3815,
+              "30-49": 3413,
+              "50-64": 348,
               "65+": 4195
             },
             "rangos_h": {
               "0-5": 1594,
-              "6-11": 375,
-              "12-17": 195,
-              "18-29": 448,
-              "30-49": 837,
-              "50-64": 1119,
+              "6-11": 195,
+              "12-17": 448,
+              "18-29": 837,
+              "30-49": 1120,
+              "50-64": 376,
               "65+": 2082
             }
           },
@@ -25904,20 +26314,20 @@ window.DASHBOARD_DATA = {
             "hombres": 539,
             "rangos_m": {
               "0-5": 411,
-              "6-11": 17,
-              "12-17": 101,
-              "18-29": 420,
-              "30-49": 330,
-              "50-64": 55,
+              "6-11": 101,
+              "12-17": 420,
+              "18-29": 331,
+              "30-49": 55,
+              "50-64": 17,
               "65+": 5
             },
             "rangos_h": {
               "0-5": 355,
-              "6-11": 23,
-              "12-17": 9,
-              "18-29": 66,
-              "30-49": 45,
-              "50-64": 13,
+              "6-11": 9,
+              "12-17": 66,
+              "18-29": 45,
+              "30-49": 14,
+              "50-64": 24,
               "65+": 2
             }
           },
@@ -25928,21 +26338,117 @@ window.DASHBOARD_DATA = {
             "hombres": 6137,
             "rangos_m": {
               "0-5": 1249,
-              "6-11": 331,
-              "12-17": 185,
-              "18-29": 969,
-              "30-49": 3488,
-              "50-64": 3358,
+              "6-11": 185,
+              "12-17": 971,
+              "18-29": 3488,
+              "30-49": 3358,
+              "50-64": 331,
               "65+": 4190
             },
             "rangos_h": {
               "0-5": 1240,
-              "6-11": 352,
-              "12-17": 186,
-              "18-29": 382,
-              "30-49": 792,
-              "50-64": 1106,
+              "6-11": 186,
+              "12-17": 382,
+              "18-29": 792,
+              "30-49": 1106,
+              "50-64": 352,
               "65+": 2080
+            }
+          },
+          {
+            "nombre": "ATENCION ALIMENTARIA A PERSONAS EN SITUACION DE VULNERABILIDAD",
+            "total": 19243,
+            "mujeres": 13021,
+            "hombres": 6222,
+            "rangos_m": {
+              "0-5": 1262,
+              "6-11": 129,
+              "12-17": 556,
+              "18-29": 3077,
+              "30-49": 3405,
+              "50-64": 324,
+              "65+": 4277
+            },
+            "rangos_h": {
+              "0-5": 1213,
+              "6-11": 194,
+              "12-17": 386,
+              "18-29": 830,
+              "30-49": 1147,
+              "50-64": 369,
+              "65+": 2083
+            }
+          },
+          {
+            "nombre": "DESPENSA DE ALIMENTOS",
+            "total": 19243,
+            "mujeres": 13021,
+            "hombres": 6222,
+            "rangos_m": {
+              "0-5": 1262,
+              "6-11": 129,
+              "12-17": 556,
+              "18-29": 3077,
+              "30-49": 3405,
+              "50-64": 324,
+              "65+": 4277
+            },
+            "rangos_h": {
+              "0-5": 1213,
+              "6-11": 194,
+              "12-17": 386,
+              "18-29": 830,
+              "30-49": 1147,
+              "50-64": 369,
+              "65+": 2083
+            }
+          },
+          {
+            "nombre": "ATENCION ALIMENTARIA PRIMEROS 1000 DIAS DE VIDA",
+            "total": 776,
+            "mujeres": 767,
+            "hombres": 9,
+            "rangos_m": {
+              "0-5": 10,
+              "6-11": 33,
+              "12-17": 434,
+              "18-29": 287,
+              "30-49": 3,
+              "50-64": 0,
+              "65+": 0
+            },
+            "rangos_h": {
+              "0-5": 9,
+              "6-11": 0,
+              "12-17": 0,
+              "18-29": 0,
+              "30-49": 0,
+              "50-64": 0,
+              "65+": 0
+            }
+          },
+          {
+            "nombre": "DESPENSA DE ALIMENTOS",
+            "total": 776,
+            "mujeres": 767,
+            "hombres": 9,
+            "rangos_m": {
+              "0-5": 10,
+              "6-11": 33,
+              "12-17": 434,
+              "18-29": 287,
+              "30-49": 3,
+              "50-64": 0,
+              "65+": 0
+            },
+            "rangos_h": {
+              "0-5": 9,
+              "6-11": 0,
+              "12-17": 0,
+              "18-29": 0,
+              "30-49": 0,
+              "50-64": 0,
+              "65+": 0
             }
           },
           {
@@ -25953,19 +26459,19 @@ window.DASHBOARD_DATA = {
             "rangos_m": {
               "0-5": 0,
               "6-11": 0,
-              "12-17": 0,
-              "18-29": 4,
-              "30-49": 12,
-              "50-64": 15,
+              "12-17": 3,
+              "18-29": 13,
+              "30-49": 15,
+              "50-64": 0,
               "65+": 11
             },
             "rangos_h": {
               "0-5": 0,
               "6-11": 0,
-              "12-17": 0,
-              "18-29": 1,
-              "30-49": 11,
-              "50-64": 14,
+              "12-17": 1,
+              "18-29": 11,
+              "30-49": 14,
+              "50-64": 0,
               "65+": 8
             }
           },
@@ -25977,19 +26483,19 @@ window.DASHBOARD_DATA = {
             "rangos_m": {
               "0-5": 0,
               "6-11": 0,
-              "12-17": 0,
-              "18-29": 3,
+              "12-17": 2,
+              "18-29": 12,
               "30-49": 11,
-              "50-64": 11,
+              "50-64": 0,
               "65+": 8
             },
             "rangos_h": {
               "0-5": 0,
               "6-11": 0,
-              "12-17": 0,
-              "18-29": 1,
+              "12-17": 1,
+              "18-29": 11,
               "30-49": 11,
-              "50-64": 11,
+              "50-64": 0,
               "65+": 7
             }
           },
@@ -26001,10 +26507,10 @@ window.DASHBOARD_DATA = {
             "rangos_m": {
               "0-5": 0,
               "6-11": 0,
-              "12-17": 0,
+              "12-17": 1,
               "18-29": 1,
-              "30-49": 1,
-              "50-64": 4,
+              "30-49": 4,
+              "50-64": 0,
               "65+": 3
             },
             "rangos_h": {
@@ -26012,8 +26518,8 @@ window.DASHBOARD_DATA = {
               "6-11": 0,
               "12-17": 0,
               "18-29": 0,
-              "30-49": 0,
-              "50-64": 3,
+              "30-49": 3,
+              "50-64": 0,
               "65+": 1
             }
           }
@@ -26026,20 +26532,20 @@ window.DASHBOARD_DATA = {
         "hombres": 2338,
         "rangos_m": {
           "0-5": 135,
-          "6-11": 381,
-          "12-17": 318,
-          "18-29": 428,
-          "30-49": 949,
-          "50-64": 808,
-          "65+": 740
+          "6-11": 318,
+          "12-17": 427,
+          "18-29": 948,
+          "30-49": 808,
+          "50-64": 381,
+          "65+": 741
         },
         "rangos_h": {
           "0-5": 117,
-          "6-11": 383,
-          "12-17": 349,
-          "18-29": 275,
-          "30-49": 410,
-          "50-64": 423,
+          "6-11": 349,
+          "12-17": 275,
+          "18-29": 409,
+          "30-49": 424,
+          "50-64": 383,
           "65+": 438
         },
         "programas": [
@@ -26053,8 +26559,8 @@ window.DASHBOARD_DATA = {
               "6-11": 0,
               "12-17": 0,
               "18-29": 0,
-              "30-49": 0,
-              "50-64": 1,
+              "30-49": 1,
+              "50-64": 0,
               "65+": 4
             },
             "rangos_h": {
@@ -26062,8 +26568,8 @@ window.DASHBOARD_DATA = {
               "6-11": 0,
               "12-17": 0,
               "18-29": 0,
-              "30-49": 0,
-              "50-64": 1,
+              "30-49": 1,
+              "50-64": 0,
               "65+": 4
             }
           },
@@ -26077,8 +26583,8 @@ window.DASHBOARD_DATA = {
               "6-11": 0,
               "12-17": 0,
               "18-29": 0,
-              "30-49": 0,
-              "50-64": 1,
+              "30-49": 1,
+              "50-64": 0,
               "65+": 4
             },
             "rangos_h": {
@@ -26086,8 +26592,8 @@ window.DASHBOARD_DATA = {
               "6-11": 0,
               "12-17": 0,
               "18-29": 0,
-              "30-49": 0,
-              "50-64": 1,
+              "30-49": 1,
+              "50-64": 0,
               "65+": 4
             }
           },
@@ -26098,20 +26604,20 @@ window.DASHBOARD_DATA = {
             "hombres": 2057,
             "rangos_m": {
               "0-5": 116,
-              "6-11": 347,
-              "12-17": 301,
-              "18-29": 352,
-              "30-49": 731,
-              "50-64": 585,
+              "6-11": 301,
+              "12-17": 352,
+              "18-29": 730,
+              "30-49": 585,
+              "50-64": 347,
               "65+": 567
             },
             "rangos_h": {
               "0-5": 107,
-              "6-11": 334,
-              "12-17": 330,
-              "18-29": 252,
-              "30-49": 360,
-              "50-64": 365,
+              "6-11": 330,
+              "12-17": 252,
+              "18-29": 360,
+              "30-49": 365,
+              "50-64": 334,
               "65+": 363
             }
           },
@@ -26122,20 +26628,20 @@ window.DASHBOARD_DATA = {
             "hombres": 1953,
             "rangos_m": {
               "0-5": 112,
-              "6-11": 345,
-              "12-17": 297,
-              "18-29": 309,
-              "30-49": 594,
-              "50-64": 407,
+              "6-11": 297,
+              "12-17": 309,
+              "18-29": 593,
+              "30-49": 407,
+              "50-64": 345,
               "65+": 423
             },
             "rangos_h": {
               "0-5": 106,
-              "6-11": 328,
-              "12-17": 326,
-              "18-29": 239,
-              "30-49": 347,
-              "50-64": 332,
+              "6-11": 326,
+              "12-17": 239,
+              "18-29": 347,
+              "30-49": 332,
+              "50-64": 328,
               "65+": 329
             }
           },
@@ -26146,20 +26652,20 @@ window.DASHBOARD_DATA = {
             "hombres": 104,
             "rangos_m": {
               "0-5": 4,
-              "6-11": 2,
-              "12-17": 4,
-              "18-29": 44,
-              "30-49": 140,
-              "50-64": 184,
+              "6-11": 4,
+              "12-17": 44,
+              "18-29": 140,
+              "30-49": 184,
+              "50-64": 2,
               "65+": 144
             },
             "rangos_h": {
               "0-5": 1,
-              "6-11": 6,
-              "12-17": 4,
+              "6-11": 4,
+              "12-17": 13,
               "18-29": 13,
-              "30-49": 13,
-              "50-64": 33,
+              "30-49": 33,
+              "50-64": 6,
               "65+": 34
             }
           },
@@ -26170,20 +26676,20 @@ window.DASHBOARD_DATA = {
             "hombres": 446,
             "rangos_m": {
               "0-5": 24,
-              "6-11": 42,
-              "12-17": 36,
-              "18-29": 127,
-              "30-49": 382,
-              "50-64": 426,
-              "65+": 338
+              "6-11": 36,
+              "12-17": 126,
+              "18-29": 382,
+              "30-49": 426,
+              "50-64": 42,
+              "65+": 339
             },
             "rangos_h": {
               "0-5": 14,
-              "6-11": 64,
-              "12-17": 30,
-              "18-29": 39,
-              "30-49": 73,
-              "50-64": 109,
+              "6-11": 30,
+              "12-17": 39,
+              "18-29": 72,
+              "30-49": 110,
+              "50-64": 64,
               "65+": 120
             }
           },
@@ -26194,20 +26700,20 @@ window.DASHBOARD_DATA = {
             "hombres": 146,
             "rangos_m": {
               "0-5": 6,
-              "6-11": 17,
-              "12-17": 21,
-              "18-29": 32,
-              "30-49": 57,
-              "50-64": 51,
+              "6-11": 21,
+              "12-17": 32,
+              "18-29": 57,
+              "30-49": 51,
+              "50-64": 17,
               "65+": 45
             },
             "rangos_h": {
               "0-5": 4,
-              "6-11": 23,
-              "12-17": 13,
-              "18-29": 9,
-              "30-49": 27,
-              "50-64": 38,
+              "6-11": 13,
+              "12-17": 9,
+              "18-29": 27,
+              "30-49": 38,
+              "50-64": 23,
               "65+": 35
             }
           },
@@ -26218,20 +26724,20 @@ window.DASHBOARD_DATA = {
             "hombres": 301,
             "rangos_m": {
               "0-5": 18,
-              "6-11": 25,
-              "12-17": 15,
-              "18-29": 97,
-              "30-49": 330,
-              "50-64": 385,
-              "65+": 297
+              "6-11": 15,
+              "12-17": 96,
+              "18-29": 330,
+              "30-49": 385,
+              "50-64": 25,
+              "65+": 298
             },
             "rangos_h": {
               "0-5": 10,
-              "6-11": 41,
-              "12-17": 17,
-              "18-29": 30,
-              "30-49": 46,
-              "50-64": 72,
+              "6-11": 17,
+              "12-17": 30,
+              "18-29": 45,
+              "30-49": 73,
+              "50-64": 41,
               "65+": 85
             }
           }
@@ -26244,20 +26750,20 @@ window.DASHBOARD_DATA = {
         "hombres": 59,
         "rangos_m": {
           "0-5": 0,
-          "6-11": 6,
-          "12-17": 5,
-          "18-29": 12,
-          "30-49": 22,
-          "50-64": 17,
+          "6-11": 5,
+          "12-17": 12,
+          "18-29": 22,
+          "30-49": 17,
+          "50-64": 6,
           "65+": 4
         },
         "rangos_h": {
           "0-5": 0,
-          "6-11": 0,
-          "12-17": 14,
-          "18-29": 11,
-          "30-49": 20,
-          "50-64": 10,
+          "6-11": 14,
+          "12-17": 11,
+          "18-29": 20,
+          "30-49": 10,
+          "50-64": 0,
           "65+": 4
         },
         "programas": [
@@ -26268,20 +26774,20 @@ window.DASHBOARD_DATA = {
             "hombres": 59,
             "rangos_m": {
               "0-5": 0,
-              "6-11": 6,
-              "12-17": 5,
-              "18-29": 12,
-              "30-49": 22,
-              "50-64": 17,
+              "6-11": 5,
+              "12-17": 12,
+              "18-29": 22,
+              "30-49": 17,
+              "50-64": 6,
               "65+": 4
             },
             "rangos_h": {
               "0-5": 0,
-              "6-11": 0,
-              "12-17": 14,
-              "18-29": 11,
-              "30-49": 20,
-              "50-64": 10,
+              "6-11": 14,
+              "12-17": 11,
+              "18-29": 20,
+              "30-49": 10,
+              "50-64": 0,
               "65+": 4
             }
           },
@@ -26292,20 +26798,20 @@ window.DASHBOARD_DATA = {
             "hombres": 24,
             "rangos_m": {
               "0-5": 0,
-              "6-11": 0,
-              "12-17": 1,
-              "18-29": 3,
-              "30-49": 4,
-              "50-64": 5,
+              "6-11": 1,
+              "12-17": 3,
+              "18-29": 4,
+              "30-49": 5,
+              "50-64": 0,
               "65+": 0
             },
             "rangos_h": {
               "0-5": 0,
-              "6-11": 0,
-              "12-17": 13,
+              "6-11": 13,
+              "12-17": 5,
               "18-29": 5,
-              "30-49": 5,
-              "50-64": 1,
+              "30-49": 1,
+              "50-64": 0,
               "65+": 0
             }
           },
@@ -26316,20 +26822,20 @@ window.DASHBOARD_DATA = {
             "hombres": 35,
             "rangos_m": {
               "0-5": 0,
-              "6-11": 6,
-              "12-17": 4,
-              "18-29": 9,
-              "30-49": 18,
-              "50-64": 12,
+              "6-11": 4,
+              "12-17": 9,
+              "18-29": 18,
+              "30-49": 12,
+              "50-64": 6,
               "65+": 4
             },
             "rangos_h": {
               "0-5": 0,
-              "6-11": 0,
-              "12-17": 1,
-              "18-29": 6,
-              "30-49": 15,
-              "50-64": 9,
+              "6-11": 1,
+              "12-17": 6,
+              "18-29": 15,
+              "30-49": 9,
+              "50-64": 0,
               "65+": 4
             }
           }
