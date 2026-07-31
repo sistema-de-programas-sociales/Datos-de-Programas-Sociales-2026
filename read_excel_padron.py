@@ -27,7 +27,17 @@ def sf(v):
 
 def clean(v):
     if v is None: return None
-    s = str(v).strip(); return s if s else None
+    s = str(v).strip()
+    if not s: return None
+    return _INST_ALIAS.get(s.upper(), s)
+
+# ── Alias de nombres de institución que cambiaron en el Excel ────────────────
+# El Excel renombró la col. de "ICHD" a "ICHDyCF" (Inst. Chih. del Deporte y
+# Cultura Física); se normaliza aquí para que siga casando con INST_SET/INST_META.
+_INST_ALIAS = {
+    'ICHDYCF': 'ICHD',
+    'SECRETARIA DE TURISMO': 'TURISMO',
+}
 
 # ── Correcciones ortográficas de datos del Excel ─────────────────────────────
 # Corrige tildes y errores tipográficos en apoyos, programas y municipios
@@ -288,9 +298,7 @@ def parse_sheet1():
             if _ng_u in ('M', 'H'):
                 # Acumular en el último programa de la institución activa en TabB
                 if _tab_b_inst and _tab_b_prog is not None:
-                    _rng_fila = {'0-5':sf(r[7]),'6-11':sf(r[8]),'12-17':sf(r[9]),
-                                 '18-29':sf(r[10]),'30-49':sf(r[11]),'50-64':sf(r[12]),
-                                 '65+':sf(r[13]),'sin_datos':sf(r[14])}
+                    _rng_fila = {k: sf(r[ci] if ci < len(r) else None) for k, ci in _RANGO_COL.items()}
                     sexo = _ng_u.lower()  # 'm' o 'h'
                     if _tab_b_inst in instituciones:
                         progs = instituciones[_tab_b_inst]['programas']
@@ -306,9 +314,7 @@ def parse_sheet1():
             if is_age(ng):
                 continue
 
-            rng = {'0-5':sf(r[7]),'6-11':sf(r[8]),'12-17':sf(r[9]),
-                   '18-29':sf(r[10]),'30-49':sf(r[11]),'50-64':sf(r[12]),
-                   '65+':sf(r[13]),'sin_datos':sf(r[14])}
+            rng = {k: sf(r[ci] if ci < len(r) else None) for k, ci in _RANGO_COL.items()}
             if ng.upper() == 'TOTAL':
                 rangos_global = rng
                 _tab_b_inst = None; _tab_b_prog = None
@@ -501,12 +507,10 @@ def parse_sheet3_full():
             tagged.append(('INST', n, r)); continue
         nr = next_real(i)
         if nr and is_inst(nr):
-            n_u = n.strip().upper()
-            ESPECIALES_APOYO = {'NO IDENTIFICADO', 'FORANEO', 'FORÁNEO'}
-            # Municipios reales (67) → nunca son APOYOs
-            # Especiales (NO IDENTIFICADO, FORÁNEO) → APOYO cuando next es INST
-            # Cualquier otra cosa no-municipio → APOYO cuando next es INST
-            if n_u in ESPECIALES_APOYO or _norm(n) not in _MUN_VALIDOS_NORM:
+            # Municipios (incl. especiales FORÁNEO / NO IDENTIFICADO) → nunca son APOYOs,
+            # aunque por coincidencia de orden en la hoja queden justo antes de la
+            # siguiente institución. Cualquier otra cosa no-municipio → APOYO.
+            if _norm(n) not in _MUN_VALIDOS_NORM:
                 tagged.append(('APOYO', n, r)); continue
         tagged.append(('OTHER', n, r))
 
@@ -688,7 +692,7 @@ def parse_localizables():
             continue
         if not reading_a:
             continue
-        nombre = str(row[col_a_data] or '').strip()
+        nombre = clean(row[col_a_data]) or ''
         if not nombre:
             continue
         if nombre.upper() == 'TOTAL':
@@ -724,7 +728,7 @@ def parse_localizables():
     for ri, row in enumerate(rows):
         if hdr_row_idx is not None and ri <= hdr_row_idx:
             continue
-        g = str(row[col_b_data] or '').strip() if len(row) > col_b_data else ''
+        g = (clean(row[col_b_data]) or '') if len(row) > col_b_data else ''
         if not g or g.upper() in ('TOTAL', 'M', 'H'):
             if g.upper() == 'TOTAL':
                 # Leer rangos globales de esta fila TOTAL
@@ -772,7 +776,7 @@ def parse_localizables():
     for ri, row in enumerate(rows):
         if hdr_row_idx is not None and ri <= hdr_row_idx:
             continue
-        r_lbl = str(row[col_c_data] or '').strip() if len(row) > col_c_data else ''
+        r_lbl = (clean(row[col_c_data]) or '') if len(row) > col_c_data else ''
         if not r_lbl or 'BENEFICIARIOS LOCALIZABLES POR MUNICIPIO' in r_lbl.upper():
             continue
         if r_lbl.upper() == 'M':
@@ -1161,7 +1165,7 @@ def parse_apoyos_a3():
     # ── 2. Filtrar filas relevantes desde el inicio detectado ─────────────────
     clean_rows = []
     for row in rows3[data_start_a3:]:
-        val = str(row[0] or '').strip()
+        val = clean(row[0]) or ''
         if not val or val.upper() in SKIP_U: continue
         if _is_age(val): continue
         clean_rows.append((val, sf(row[1] if len(row)>1 else None),
@@ -1179,6 +1183,11 @@ def parse_apoyos_a3():
     for idx, (val, sn3, m3, h3, t3) in enumerate(clean_rows):
         if _is_inst(val):
             inst_act = val; prog_act = None; continue
+        # Una fila de municipio (incl. FORANEO/NO IDENTIFICADO) nunca es
+        # cabecera de apoyo o programa, aunque el lookahead la confunda por
+        # quedar justo antes de la siguiente institución en la hoja.
+        if is_municipio(val):
+            continue
         if inst_act is None or next_inst[idx]:
             apoyo_act = corr(val); inst_act = None; prog_act = None; continue
         if prog_act is None:
@@ -1192,10 +1201,32 @@ def parse_apoyos_a3():
 
 
 # ─── MAPA DE COLUMNAS DE RANGOS (Tabla B hoja 1 y hoja Localizables) ─────────
-# Fila de encabezado (fila 4): col G = label, H=0-5, I=6-11, J=12-17, K=18-29,
-#                                        L=30-49, M=50-64, N=65+, O=Sin datos, P=TOTAL
-_RANGO_COL = {'0-5': 7, '6-11': 8, '12-17': 9, '18-29': 10,
-              '30-49': 11, '50-64': 12, '65+': 13, 'sin_datos': 14}
+# Fila de encabezado (fila 4): col G = label, H..N = rangos de edad, O=Sin datos, P=TOTAL.
+# Se descubre dinámicamente porque un refresh de Excel puede reordenar
+# alfabéticamente las columnas del pivot (0-5, 12-17, 18-29, 30-49, 50-64,
+# 6-11, 65+ en vez de orden cronológico) y romper cualquier offset fijo.
+def _discover_rango_col():
+    rows_u = _WB_CACHE.get('Unicos y Rango de Edad', [])
+    for row in rows_u:
+        for ci, v in enumerate(row):
+            if v and 'RANGO DE EDAD' in str(v).upper():
+                mapping = {}
+                for cj in range(ci + 1, len(row)):
+                    h = str(row[cj] or '').strip()
+                    hu = h.upper()
+                    if hu == 'TOTAL':
+                        break
+                    if hu in ('SIN DATOS', 'SIN DATO', 'SNDATOS', 'SINDATOS'):
+                        mapping['sin_datos'] = cj
+                    elif h:
+                        mapping[h] = cj
+                if len(mapping) >= 6:
+                    return mapping
+    # Fallback al orden cronológico esperado si no se encuentra el encabezado
+    return {'0-5': 7, '6-11': 8, '12-17': 9, '18-29': 10,
+            '30-49': 11, '50-64': 12, '65+': 13, 'sin_datos': 14}
+
+_RANGO_COL = _discover_rango_col()
 
 def _col_indices(rangos_edad):
     """Devuelve lista de índices de columna para los rangos solicitados."""
@@ -1910,7 +1941,7 @@ def _parse_pivot_mun_prog():
         'SALUD','SDHYBC','SPYCI','CULTURA','ICHD','RURAL','SEECH','SEYD',
         'TRABAJO','TURISMO','SDHyBC','SPyCI'
     }}
-    MUN_VALIDOS_NORM = {_norm(k) for k in POB_MUNICIPAL.keys()} | {_norm('NO IDENTIFICADO')}
+    MUN_VALIDOS_NORM = {_norm(k) for k in POB_MUNICIPAL.keys()} | {_norm('NO IDENTIFICADO'), _norm('FORANEO'), _norm('FORÁNEO')}
     result = {}
     inst_act = prog_act = None
     for r in rows_piv:

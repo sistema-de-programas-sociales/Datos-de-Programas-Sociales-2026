@@ -119,23 +119,47 @@ def leer_nutrichihuahua(excel_path):
         df = xl.parse('Nutrichihuahua', header=None)
         RANGOS = ['0-5','6-11','12-17','18-29','30-49','50-64','65+']
 
+        # ── Columnas descubiertas dinámicamente ──────────────────────────────
+        # Un refresh de Excel puede reordenar/añadir sub-bloques (p.ej. metió un
+        # bloque "Sin datos" que no existía antes) y romper cualquier offset fijo.
+        # Se ubica la fila de marcadores de sección (celdas exactas 'M','H',
+        # 'Total M','Total H') y luego, en la fila siguiente, los rótulos de
+        # rango de edad dentro de cada sección.
+        m_col_map = h_col_map = {}
+        col_total_m = col_total_h = None
+        for _sri in range(min(15, df.shape[0]) - 1):
+            _sect = [str(v).strip() if isinstance(v, str) else '' for v in df.iloc[_sri]]
+            if 'M' in _sect and 'H' in _sect and 'Total M' in _sect and 'Total H' in _sect:
+                _rango_row = [str(v).strip() if isinstance(v, str) else '' for v in df.iloc[_sri + 1]]
+                _m0, _m1 = _sect.index('M'), _sect.index('Total M')
+                _h0, _h1 = _sect.index('H'), _sect.index('Total H')
+                m_col_map = {_rango_row[ci]: ci for ci in range(_m0, _m1) if _rango_row[ci] in RANGOS}
+                h_col_map = {_rango_row[ci]: ci for ci in range(_h0, _h1) if _rango_row[ci] in RANGOS}
+                col_total_m, col_total_h = _m1, _h1
+                break
+        if not m_col_map or not h_col_map:
+            # Fallback al layout original si no se encuentra el encabezado esperado
+            m_col_map = {r: 2 + j for j, r in enumerate(RANGOS)}
+            h_col_map = {r: 11 + j for j, r in enumerate(RANGOS)}
+            col_total_m, col_total_h = 10, 19
+
         # TABLE 1: by municipality (col B=1, rows 8+)
         muns = []
         for row_i in range(8, df.shape[0]):
             mun = str(df.iloc[row_i, 1]).strip() if pd.notna(df.iloc[row_i, 1]) else ''
             if not mun or mun in ['nan','None','(en blanco)','Grand Total','FORANEO']:
                 continue
-            total_m_val = df.iloc[row_i, 10]
+            total_m_val = df.iloc[row_i, col_total_m]
             total_m = int(total_m_val) if pd.notna(total_m_val) else 0
             m_rangos = {}
-            for j, r in enumerate(RANGOS):
-                v = df.iloc[row_i, 2+j]
+            for r, ci in m_col_map.items():
+                v = df.iloc[row_i, ci]
                 m_rangos[r] = int(v) if pd.notna(v) else 0
             h_rangos = {}
-            for j, r in enumerate(RANGOS):
-                v = df.iloc[row_i, 11+j]
+            for r, ci in h_col_map.items():
+                v = df.iloc[row_i, ci]
                 h_rangos[r] = int(v) if pd.notna(v) else 0
-            total_h_val = df.iloc[row_i, 19]
+            total_h_val = df.iloc[row_i, col_total_h]
             total_h = int(total_h_val) if pd.notna(total_h_val) else sum(h_rangos.values())
             total = total_m + total_h
             muns.append({'nombre': mun, 'total': total, 'mujeres': total_m, 'hombres': total_h,
@@ -183,6 +207,29 @@ def build_dashboard_data(raw, excel_path=None):
     rangos        = raw['rangos_edad']            # col de rangos globales
     rangos_mh     = raw.get('rangos_mh_global', {})  # col S: desglose M/H
     instituciones = raw['instituciones']          # 5 instituciones principales
+
+    # ── Merge manual: "Programa de Estancias Infantiles..." aparece dos veces
+    # en el Excel — un bloque bajo SDHyBC (vigente, 9,460) y uno bajo ICHDII
+    # (residual, 8,656). ICHDII se separó de SDHyBC como institución propia
+    # por decisión operativa; el bloque de SDHyBC es el que debe quedar bajo
+    # ICHDII, no sumarse — se reemplaza, y se quita de SDHyBC para no duplicar.
+    _EI_PROG_NAME = 'PROGRAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ'
+    if 'SDHyBC' in instituciones and 'ICHDII' in instituciones:
+        _sd_progs = instituciones['SDHyBC'].get('programas', [])
+        _ei_prog  = next((p for p in _sd_progs if p.get('nombre', '').strip() == _EI_PROG_NAME), None)
+        if _ei_prog:
+            _sd = instituciones['SDHyBC']
+            _sd['programas'] = [p for p in _sd_progs if p.get('nombre', '').strip() != _EI_PROG_NAME]
+            for _k in ('total', 'm', 'h', 'sn', 'apoyos'):
+                _sd[_k] = max(0, sf(_sd.get(_k, 0)) - sf(_ei_prog.get(_k, 0)))
+            _ic = instituciones['ICHDII']
+            for _p in _ic.get('programas', []):
+                if _p.get('nombre', '').strip() == _EI_PROG_NAME:
+                    for _k in ('total', 'm', 'h', 'sn', 'apoyos'):
+                        _p[_k] = _ei_prog.get(_k, 0)
+            for _k in ('total', 'm', 'h', 'sn', 'apoyos'):
+                _ic[_k] = _ei_prog.get(_k, 0)
+
     municipios    = raw['municipios']             # lista completa
     apoyos        = raw['apoyos']                 # listado de tipos de apoyo
     loc           = raw.get('localizables', {})
@@ -572,7 +619,7 @@ def build_dashboard_data(raw, excel_path=None):
         'ATENCIÓN MÉDICA':    'MEDICHIHUAHUA',
         'ATENCION MEDICA':    'MEDICHIHUAHUA',
         'ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ':
-            'PROGAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ',
+            'PROGRAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ',
         'REHABILITACIÓN INTEGRAL Y APOYOS FUNCIONALES':
             'REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES',
         'REHABILITACION INTEGRAL Y APOYOS FUNCIONALES':
@@ -584,14 +631,76 @@ def build_dashboard_data(raw, excel_path=None):
         # Incentivos nombre largo
         'INCENTIVOS ECONÓMICOS A ESTUDIANTES INDÍGENAS PARA SU PROFESIONALIZACIÓN':
             'Incentivos económicos a estudiantes indígenas para su profesionalización',
+        # Typo en la hoja "Unicos y Rango de Edad": "Desrrollo" en vez de "Desarrollo"
+        'ALIMENTACIÓN Y DESARROLLO AUTOSUSTENTABLE DE LAS FAMILIAS':
+            'ALIMENTACION Y DESRROLLO AUTOSUSTENTABLE DE LAS FAMILIAS',
+        # Falta "LAS" — el match difuso por prefijo no cubre diferencias a media frase
+        'INSTITUCIONALIZACIÓN DE LA PERSPECTIVA DE LAS JUVENTUDES':
+            'PROGRAMA INSTITUCIONALIZACION DE PERSPECTIVA DE JUVENTUDES',
+        # Nombre corto en Indicadores, nombre completo en Hoja S
+        'APOYOS PARA EL EMPLEO':
+            'APOYOS PARA EL EMPLEO EN EL ESTADO DE CHIHUAHUA',
+        # "en" vs "de" — no es solo diferencia de prefijo/sufijo
+        'COBERTURA EN EDUCACIÓN BÁSICA':
+            'COBERTURA DE EDUCACION BASICA INCLUSIVA',
     }
+
+    # ── Fallback difuso: "Indicadores y Metas" casi siempre omite el prefijo
+    # "PROGRAMA " / "PROGAMA " (typo) que sí trae la hoja "Unicos y Rango de
+    # Edad". En vez de mantener un alias manual por cada programa nuevo,
+    # indexamos los nombres reales por institución ignorando ese prefijo y
+    # usamos ese match cuando no hay alias explícito ni coincidencia directa.
+    def _strip_prog_prefix(s):
+        s = (s or '').strip()
+        su = s.upper()
+        for pfx in ('PROGRAMA DE ', 'PROGRAMA  ', 'PROGRAMA ', 'PROGAMA DE ', 'PROGAMA '):
+            if su.startswith(pfx):
+                return s[len(pfx):].strip()
+        return s
+
+    PROG_BY_INST_FUZZY = {}
+    REAL_PROG_NORM_BY_INST = {}  # {inst: {nombre_normalizado: nombre_real}} — para detectar huérfanos
+    for _inst_k, _inst_v in instituciones.items():
+        _idx = {}
+        _real = {}
+        for _p in _inst_v.get('programas', []):
+            _idx[_nk(_strip_prog_prefix(_p.get('nombre', '')))] = _p.get('nombre', '')
+            _real[_nk(_p.get('nombre', ''))] = _p.get('nombre', '')
+        PROG_BY_INST_FUZZY[_inst_k] = _idx
+        REAL_PROG_NORM_BY_INST[_inst_k] = _real
+    _claimed_progs = set()  # {(inst, nombre_real_normalizado)} — ya tienen tarjeta vía Indicadores
 
     # ── Rangos ÚNICOS por programa — ya leídos en hoja_s_rangos arriba ───────
     if False: pass  # placeholder
     if _wb_s and 'Unicos y Rango de Edad' in _wb_s.sheetnames:
         ws_s  = _wb_s['Unicos y Rango de Edad']
         rows_s = list(ws_s.iter_rows(values_only=True))
-        COL_N, COL_R0, COL_SIN, COL_TOT = 6, 7, 14, 15
+        COL_N = 6
+        # Columnas de rango descubiertas dinámicamente: un refresh de Excel puede
+        # reordenar alfabéticamente las columnas del pivot (0-5, 12-17, 18-29,
+        # 30-49, 50-64, 6-11, 65+ en vez de orden cronológico) y romper offsets fijos.
+        COL_R  = {}   # {'0-5': col_idx, ...}
+        COL_SIN = None
+        COL_TOT = None
+        for row_s in rows_s:
+            for _ci, _v in enumerate(row_s):
+                if _v and 'RANGO DE EDAD' in str(_v).upper():
+                    for _cj in range(_ci + 1, len(row_s)):
+                        _h = str(row_s[_cj] or '').strip()
+                        _hu = _h.upper()
+                        if _hu == 'TOTAL':
+                            COL_TOT = _cj
+                            break
+                        if _hu in ('SIN DATOS', 'SIN DATO'):
+                            COL_SIN = _cj
+                        elif _h in _rk2:
+                            COL_R[_h] = _cj
+                    break
+            if COL_R:
+                break
+        if not COL_R:
+            COL_R = {'0-5': 7, '6-11': 8, '12-17': 9, '18-29': 10, '30-49': 11, '50-64': 12, '65+': 13}
+            COL_SIN, COL_TOT = 14, 15
         for row_s in rows_s:
             nombre_s = row_s[COL_N] if COL_N < len(row_s) else None
             if not isinstance(nombre_s, str) or not nombre_s.strip():
@@ -599,14 +708,15 @@ def build_dashboard_data(raw, excel_path=None):
             nombre_s = nombre_s.strip()
             if nombre_s in ('M','H','Sin datos','BENEFICIARIOS UNICOS POR RANGO DE EDAD','BENEFICIARIOS ÚNICOS '):
                 continue
-            total_s = row_s[COL_TOT] if COL_TOT < len(row_s) else None
+            total_s = row_s[COL_TOT] if COL_TOT is not None and COL_TOT < len(row_s) else None
             if not isinstance(total_s, (int, float)):
                 continue
             rangos_s = {}
-            for i_r, k_r in enumerate(_rk2):
-                v_r = row_s[COL_R0 + i_r] if (COL_R0 + i_r) < len(row_s) else None
+            for k_r in _rk2:
+                _ci = COL_R.get(k_r)
+                v_r = row_s[_ci] if (_ci is not None and _ci < len(row_s)) else None
                 rangos_s[k_r] = int(v_r) if isinstance(v_r, (int, float)) and v_r else 0
-            sin_d_s = row_s[COL_SIN] if COL_SIN < len(row_s) else None
+            sin_d_s = row_s[COL_SIN] if COL_SIN is not None and COL_SIN < len(row_s) else None
             hoja_s_rangos[_nk(nombre_s)] = rangos_s
         hoja_s_sin[_nk(nombre_s)]    = int(sin_d_s) if isinstance(sin_d_s,(int,float)) and sin_d_s else 0
 
@@ -796,11 +906,27 @@ def build_dashboard_data(raw, excel_path=None):
     indicadores_data = []
     pivot_mun_prog = raw.get('pivot_mun_prog', {})  # {inst_norm: {prog_norm: {mun_norm: count}}}
     for ind in indicadores:
-        def _int(v): return int(sf(v)) if v else None
-        def _flt(v): return round(float(v), 2) if v else None
+        # Celdas rotas de Excel (fórmulas #REF!, #DIV/0!, etc.) llegan como el
+        # texto literal del error, no como None — sin este filtro, int(sf('#REF!'))
+        # da 0 y se confunde con un dato real en vez de "sin dato".
+        def _is_excel_err(v): return isinstance(v, str) and v.strip().startswith('#')
+        def _int(v): return None if (v is None or _is_excel_err(v)) else int(sf(v))
+        def _flt(v): return None if (v is None or _is_excel_err(v)) else round(float(sf(v)), 2)
         nombre_prog_key = ind.get('nombre', '').upper().strip()
         nombre_prog_alias = IND_PROG_ALIAS.get(nombre_prog_key,
                           IND_PROG_ALIAS.get(nombre_prog_key.title(), nombre_prog_key))
+        # Sin alias explícito y sin match directo → probar match difuso
+        # (mismo nombre, ignorando el prefijo "PROGRAMA ") dentro de la institución.
+        if nombre_prog_alias == nombre_prog_key and _nk(nombre_prog_key) not in hoja_s_rangos:
+            _fuzzy = PROG_BY_INST_FUZZY.get(ind.get('institucion', ''), {}) \
+                        .get(_nk(_strip_prog_prefix(ind.get('nombre', ''))))
+            if _fuzzy:
+                nombre_prog_alias = _fuzzy
+        # Si esta fila de Indicadores sí corresponde a un programa real de Hoja S,
+        # márcalo como "cubierto" para no duplicarlo después como huérfano.
+        _real_hit = REAL_PROG_NORM_BY_INST.get(ind.get('institucion', ''), {}).get(_nk(nombre_prog_alias))
+        if _real_hit:
+            _claimed_progs.add((ind.get('institucion', ''), _nk(_real_hit)))
         _rk2 = ['0-5','6-11','12-17','18-29','30-49','50-64','65+']
         # Rangos desde hoja S (beneficiarios únicos, dato correcto)
         _rp  = hoja_s_rangos.get(_nk(nombre_prog_alias), hoja_s_rangos.get(_nk(nombre_prog_key), {}))
@@ -826,6 +952,12 @@ def build_dashboard_data(raw, excel_path=None):
         _bu_raw  = ind.get('benef_unicos')
         _m_raw   = ind.get('mujeres')
         _h_raw   = ind.get('hombres')
+        # Caso especial: "Estancias Infantiles" trae su propio benef_unicos válido
+        # en Indicadores y Metas, pero corresponde al bloque residual de ICHDII
+        # (8,656) ya reemplazado arriba por el vigente de SDHyBC (9,460).
+        # Forzar el fallback a Hoja S para que use el número correcto.
+        if nombre_prog_alias.strip() == 'PROGRAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ':
+            _bu_raw = None
         _bu_from_ind = _int(_bu_raw)
         if _bu_from_ind is None and _sb:
             # Fila corrupta (#REF!) → tomar todo de Hoja S
@@ -835,8 +967,8 @@ def build_dashboard_data(raw, excel_path=None):
         else:
             # Fila OK → usar Indicadores y Metas, con fallback individual si algún campo falta
             _bu_val = _bu_from_ind
-            _m_val  = _int(_m_raw)  if _m_raw  is not None else _sb.get('M')
-            _h_val  = _int(_h_raw)  if _h_raw  is not None else _sb.get('H')
+            _m_val  = _int(_m_raw)  if _int(_m_raw) is not None else _sb.get('M')
+            _h_val  = _int(_h_raw)  if _int(_h_raw) is not None else _sb.get('H')
         indicadores_data.append({
             'inst':          ind.get('institucion', ''),
             'clave':         _clave,
@@ -862,6 +994,50 @@ def build_dashboard_data(raw, excel_path=None):
             'municipios':    _mp,
             'muns_benef':    _muns_benef,  # {mun_norm: count} desde pivot AJ
         })
+
+    # ── Completar catálogo: programas reales sin fila en "Indicadores y Metas" ──
+    # Existen con datos reales de beneficiarios (Hoja S) pero la hoja de
+    # indicadores no los menciona en absoluto, así que nunca tendrían tarjeta.
+    # Se sintetiza una con clave propia (para que "Más datos" los encuentre)
+    # y sin métricas de indicador (pob. potencial/objetivo/presupuesto, etc.)
+    # porque esas simplemente no existen para estos programas.
+    _rk2 = ['0-5','6-11','12-17','18-29','30-49','50-64','65+']
+    for _inst_k, _inst_v in instituciones.items():
+        for _oi, _p in enumerate(_inst_v.get('programas', [])):
+            _pnorm = _nk(_p.get('nombre', ''))
+            if (_inst_k, _pnorm) in _claimed_progs:
+                continue
+            _rp3  = hoja_s_rangos.get(_pnorm, {})
+            _sin3 = hoja_s_sin.get(_pnorm, 0)
+            _mp3  = sorted(ind_prog_muns.get(_p.get('nombre', '').upper().strip(), set()))
+            _inst_norm3 = _norm_mun(_inst_k)
+            _prog_norm3 = _norm_mun(_p.get('nombre', ''))
+            _muns_benef3 = pivot_mun_prog.get(_inst_norm3, {}).get(_prog_norm3, {})
+            indicadores_data.append({
+                'inst':          _inst_k,
+                'clave':         f'SYN-{_inst_k}-{_oi}',
+                'nombre':        _p.get('nombre', ''),
+                'pob_potencial': None,
+                'pob_objetivo':  None,
+                'pob_alcanzada': None,
+                'benef_unicos':  int(sf(_p.get('total', 0))),
+                'benef_reales':  None,
+                'mujeres':       int(sf(_p.get('m', 0))),
+                'hombres':       int(sf(_p.get('h', 0))),
+                'sin_id':        int(sf(_p.get('sn', 0))) if _p.get('sn') else None,
+                'presupuesto':   None,
+                'gasto':         None,
+                'ep':            None,
+                'metas_prog':    None,
+                'avance_metas':  None,
+                'eficacia':      None,
+                'eficiencia':    None,
+                'desempeno':     None,
+                'rangos':        {k: int(_rp3.get(k, 0)) for k in _rk2},
+                'sin_datos_edad': _sin3,
+                'municipios':    _mp3,
+                'muns_benef':    _muns_benef3,
+            })
 
     # ── Presupuesto global (igual que reporte general) ────────────────────────
     pres_vals  = [float(p['presupuesto']) for p in indicadores if p.get('presupuesto') and float(p.get('presupuesto', 0)) > 0]

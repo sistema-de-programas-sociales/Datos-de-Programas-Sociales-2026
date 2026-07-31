@@ -5,6 +5,14 @@ function renderInstituciones() {
   const locByI = {};
   (D.localizables?.por_institucion||[]).forEach(x => { locByI[x.nombre] = x; });
 
+  /* municipios reales por institución — calculado del padrón vigente, no hardcodeado en INST_META */
+  const munsByInst = {};
+  (D.municipios||[]).forEach(m => {
+    Object.keys(m.inst||{}).forEach(k => {
+      if (m.inst[k]?.benef > 0) munsByInst[k] = (munsByInst[k]||0) + 1;
+    });
+  });
+
   /* orden dinámico — SALUD primero por su peso dominante, resto por volumen desc */
   const ORDER = Object.keys(insts)
     .filter(k => insts[k] && Number(insts[k].total) > 0)
@@ -85,6 +93,7 @@ function renderInstituciones() {
   container.innerHTML = ORDER.map((k, rowIdx) => {
     const v    = inst(k);
     const meta = INST_META[k] || {av:'#555',fullname:k,muns:0,img:'',caption:''};
+    meta.muns  = munsByInst[k] || 0;
     const locI = locByI[k];
     const locT = locI?.total || 0;
     const locPct = v.total ? (locT/v.total*100).toFixed(1) : 0;
@@ -200,6 +209,7 @@ function renderInstituciones() {
   ORDER.forEach(k => {
     const v    = inst(k);
     const meta = INST_META[k] || {av:'#555'};
+    meta.muns  = munsByInst[k] || 0;
     const locI = locByI[k];
     const locT = locI?.total || 0;
     const locPct = v.total ? (locT/v.total*100).toFixed(1) : 0;

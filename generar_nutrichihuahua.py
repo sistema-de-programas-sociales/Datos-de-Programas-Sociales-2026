@@ -325,27 +325,72 @@ def leer_nutri(excel_path):
         raise ValueError('No existe la hoja Nutrichihuahua en el Excel.')
     df = xl.parse('Nutrichihuahua', header=None)
 
+    # Columnas descubiertas dinámicamente: un refresh de Excel puede reordenar o
+    # insertar sub-bloques (p.ej. añadió un bloque "Sin datos" que no existía
+    # antes) y romper cualquier offset fijo tipo "col 2+j".
+    _m_col_map, _h_col_map = {}, {}
+    _col_total_m = _col_total_h = None
+    for _sri in range(min(15, df.shape[0]) - 1):
+        _sect = [str(v).strip() if isinstance(v, str) else '' for v in df.iloc[_sri]]
+        if 'M' in _sect and 'H' in _sect and 'Total M' in _sect and 'Total H' in _sect:
+            _rango_row = [str(v).strip() if isinstance(v, str) else '' for v in df.iloc[_sri + 1]]
+            _m0, _m1 = _sect.index('M'), _sect.index('Total M')
+            _h0, _h1 = _sect.index('H'), _sect.index('Total H')
+            _m_col_map = {_rango_row[ci]: ci for ci in range(_m0, _m1) if _rango_row[ci] in RANGOS}
+            _h_col_map = {_rango_row[ci]: ci for ci in range(_h0, _h1) if _rango_row[ci] in RANGOS}
+            _col_total_m, _col_total_h = _m1, _h1
+            break
+    if not _m_col_map or not _h_col_map:
+        _m_col_map = {r: 2 + j for j, r in enumerate(RANGOS)}
+        _h_col_map = {r: 11 + j for j, r in enumerate(RANGOS)}
+        _col_total_m, _col_total_h = 10, 19
+
     muns = []
     for row_i in range(8, df.shape[0]):
         mun = str(df.iloc[row_i, 1]).strip() if not __import__('pandas').isna(df.iloc[row_i, 1]) else ''
         if not mun or mun.upper() in ('NAN','NONE','(EN BLANCO)','GRAND TOTAL','TOTAL','FORANEO'): continue
-        def _iv(col): 
+        def _iv(col):
             v = df.iloc[row_i, col]
             return int(v) if not __import__('pandas').isna(v) else 0
-        total_m  = _iv(10)
-        m_rangos = {r: _iv(2+j) for j,r in enumerate(RANGOS)}
-        h_rangos = {r: _iv(11+j) for j,r in enumerate(RANGOS)}
-        total_h  = _iv(19)
+        total_m  = _iv(_col_total_m)
+        m_rangos = {r: _iv(ci) for r, ci in _m_col_map.items()}
+        h_rangos = {r: _iv(ci) for r, ci in _h_col_map.items()}
+        total_h  = _iv(_col_total_h)
         muns.append({'nombre': mun, 'total': total_m+total_h,
                      'mujeres': total_m, 'hombres': total_h,
                      'rangos_m': m_rangos, 'rangos_h': h_rangos})
+
+    # Columnas de la tabla AH (institución→programa→apoyo) descubiertas
+    # dinámicamente: mismo problema de sub-bloques reordenados/insertados
+    # que en la Tabla 1 y la tabla CC.
+    _ah_m_map, _ah_h_map = {}, {}
+    _ah_col_tm = _ah_col_th = _ah_col_tot = None
+    for _sri in range(min(15, df.shape[0]) - 1):
+        _region = {ci: (str(v).strip() if isinstance(v, str) else '')
+                   for ci, v in enumerate(df.iloc[_sri]) if 30 <= ci < 65}
+        _vals = set(_region.values())
+        if {'M', 'H', 'Total M', 'Total H', 'TOTAL'} <= _vals:
+            _rango_row = {ci: (str(v).strip() if isinstance(v, str) else '')
+                          for ci, v in enumerate(df.iloc[_sri + 1]) if 30 <= ci < 65}
+            _m0 = next(ci for ci, v in _region.items() if v == 'M')
+            _ah_col_tm = next(ci for ci, v in _region.items() if v == 'Total M')
+            _h0 = next(ci for ci, v in _region.items() if v == 'H')
+            _ah_col_th = next(ci for ci, v in _region.items() if v == 'Total H')
+            _ah_col_tot = next(ci for ci, v in _region.items() if v == 'TOTAL')
+            _ah_m_map = {v: ci for ci, v in _rango_row.items() if _m0 <= ci < _ah_col_tm and v in RANGOS}
+            _ah_h_map = {v: ci for ci, v in _rango_row.items() if _h0 <= ci < _ah_col_th and v in RANGOS}
+            break
+    if _ah_col_tot is None:
+        _ah_m_map = {r: 34 + j for j, r in enumerate(RANGOS)}
+        _ah_h_map = {r: 43 + j for j, r in enumerate(RANGOS)}
+        _ah_col_tm, _ah_col_th, _ah_col_tot = 42, 51, 52
 
     INST_NAMES = ['DIF','SDHyBC','SPyCI']
     insts, cur = [], None
     for row_i in range(9, df.shape[0]):
         prog = str(df.iloc[row_i, 33]).strip() if not __import__('pandas').isna(df.iloc[row_i, 33]) else ''
         if not prog or prog in ['nan','None','Grand Total','LOCALIZABLES NUTRICHIHUAHUA']: continue
-        tv = df.iloc[row_i, 52]
+        tv = df.iloc[row_i, _ah_col_tot]
         if __import__('pandas').isna(tv): continue
         total = int(tv)
         if total == 0: continue
@@ -353,9 +398,9 @@ def leer_nutri(excel_path):
             v = df.iloc[row_i, col]
             return int(v) if not __import__('pandas').isna(v) else 0
         entry = {'nombre': prog, 'total': total,
-                 'mujeres': _iv2(42), 'hombres': _iv2(51),
-                 'rangos_m': {r: _iv2(34+j) for j,r in enumerate(RANGOS)},
-                 'rangos_h': {r: _iv2(43+j) for j,r in enumerate(RANGOS)},
+                 'mujeres': _iv2(_ah_col_tm), 'hombres': _iv2(_ah_col_th),
+                 'rangos_m': {r: _iv2(ci) for r, ci in _ah_m_map.items()},
+                 'rangos_h': {r: _iv2(ci) for r, ci in _ah_h_map.items()},
                  'programas': []}
         if prog in INST_NAMES:
             cur = entry; insts.append(entry)
@@ -389,85 +434,67 @@ def leer_nutri(excel_path):
             p for idx, p in enumerate(raw_progs) if _es_programa_ah(idx, raw_progs)
         ]
 
-    # ── BE table: jerarquía 3 niveles institución→programa→apoyo ──────────────
-    # ── Detectar nivel automáticamente por comparación de totales ──────────────
-    # Si el total de una fila ≈ suma acumulada de las siguientes filas no-inst → es PROGRAMA
-    # Si no → es APOYO. Esto elimina cualquier lista hardcodeada de nombres.
-    _SKIP_BE = {'nan','None','TOTAL','LOCALIZABLES NUTRICHIHUAHUA'}
-    _raw_be = []
-    for row_i in range(9, df.shape[0]):
-        nombre = str(df.iloc[row_i, 56]).strip() if not pd.isna(df.iloc[row_i, 56]) else ''
-        if not nombre or nombre in _SKIP_BE: continue
-        tv = df.iloc[row_i, 75]
-        if pd.isna(tv): continue
-        total = int(tv)
-        if total == 0: continue
-        tm = int(df.iloc[row_i, 65]) if not pd.isna(df.iloc[row_i, 65]) else 0
-        th = int(df.iloc[row_i, 74]) if not pd.isna(df.iloc[row_i, 74]) else 0
-        _raw_be.append({'nombre': nombre, 'total': total, 'mujeres': tm, 'hombres': th,
-                        'rangos_m': {r: (int(df.iloc[row_i, 57+j]) if not pd.isna(df.iloc[row_i, 57+j]) else 0)
-                                     for j,r in enumerate(RANGOS)},
-                        'rangos_h': {r: (int(df.iloc[row_i, 66+j]) if not pd.isna(df.iloc[row_i, 66+j]) else 0)
-                                     for j,r in enumerate(RANGOS)}})
+    # ── Tabla BE (col 56, apoyos por institución) ya no existe como tabla
+    # separada — col56 ahora es solo una columna de rango de edad interna de
+    # la propia tabla AH de arriba. Se reutiliza "insts" (que ya distingue
+    # institución→programa) como fuente de insts_ap; el desglose fino por
+    # apoyo individual ya no está disponible en esta hoja.
+    insts_ap = [
+        {**inst_entry, 'apoyos': [], 'programas': [
+            {**p, 'apoyos': []} for p in inst_entry['programas']
+        ]}
+        for inst_entry in insts
+    ]
 
-    def _es_programa(idx, rows, inst_names):
-        """True si el total de rows[idx] ≈ suma prefijo de filas siguientes no-inst."""
-        total = rows[idx]['total']
-        acum = 0
-        for r in rows[idx+1:]:
-            if r['nombre'] in inst_names: break
-            acum += r['total']
-            if abs(acum - total) <= max(5, int(total * 0.02)):
-                return True
-            if acum > total * 1.05:
-                break
-        return False
+    # ── CC table: apoyos por municipio (col ~80, rows 13+) ────────────────────
+    # Columnas de "Total M"/"Total H"/"TOTAL" descubiertas dinámicamente
+    # (región col>=70 para no confundir con los marcadores de la Tabla 1).
+    _m2_col = _h2_col = _tot_col = None
+    for _sri in range(9, min(15, df.shape[0])):
+        _region = {ci: (str(v).strip() if isinstance(v, str) else '')
+                   for ci, v in enumerate(df.iloc[_sri]) if ci >= 70}
+        _vals = set(_region.values())
+        if {'M', 'H', 'Total M', 'Total H', 'TOTAL'} <= _vals:
+            _m2_col = next(ci for ci, v in _region.items() if v == 'Total M')
+            _h2_col = next(ci for ci, v in _region.items() if v == 'Total H')
+            _tot_col = next(ci for ci, v in _region.items() if v == 'TOTAL')
+            break
+    if _m2_col is None:
+        _m2_col, _h2_col, _tot_col = 89, 98, 99
 
-    insts_ap, cur_ap, cur_prog_ap = [], None, None
-    for idx, entry in enumerate(_raw_be):
-        nombre = entry['nombre']
-        e = {**entry, 'programas': [], 'apoyos': []}
-        if nombre in INST_NAMES:
-            cur_ap = e; cur_prog_ap = None; insts_ap.append(e)
-        elif _es_programa(idx, _raw_be, set(INST_NAMES)):
-            cur_prog_ap = e
-            if cur_ap: cur_ap['programas'].append(e)
-        else:
-            e['inst'] = cur_ap['nombre'] if cur_ap else ''
-            e['prog'] = cur_prog_ap['nombre'] if cur_prog_ap else ''
-            if cur_prog_ap: cur_prog_ap['apoyos'].append(e)
-            if cur_ap: cur_ap['apoyos'].append(e)
-
-    # ── CC table: apoyos por municipio (col 80, rows 13+, total col 99) ──────
     SKIP_MUN = {'nan','None','Grand Total','FORANEO','NO IDENTIFICADO','TOTAL'}
     muns_ap = []
     for row_i in range(13, df.shape[0]):
         mun = str(df.iloc[row_i, 80]).strip() if not pd.isna(df.iloc[row_i, 80]) else ''
         if not mun or mun in SKIP_MUN: continue
-        tv = df.iloc[row_i, 99]
+        tv = df.iloc[row_i, _tot_col]
         if pd.isna(tv): continue
         total = int(tv)
         if total == 0: continue
-        total_m2 = int(df.iloc[row_i, 89]) if not pd.isna(df.iloc[row_i, 89]) else 0
-        total_h2 = int(df.iloc[row_i, 98]) if not pd.isna(df.iloc[row_i, 98]) else 0
+        total_m2 = int(df.iloc[row_i, _m2_col]) if not pd.isna(df.iloc[row_i, _m2_col]) else 0
+        total_h2 = int(df.iloc[row_i, _h2_col]) if not pd.isna(df.iloc[row_i, _h2_col]) else 0
         muns_ap.append({'nombre': mun, 'total': total, 'mujeres': total_m2, 'hombres': total_h2})
 
-    # Leer fila TOTAL de tabla AH (col 33) — fuente canónica de beneficiarios únicos
-    total_benef_canonico = 0
-    for row_i in range(9, df.shape[0]):
-        prog = str(df.iloc[row_i, 33]).strip() if not pd.isna(df.iloc[row_i, 33]) else ''
-        if prog.upper() == 'TOTAL':
-            tv = df.iloc[row_i, 52]
-            if not pd.isna(tv):
-                total_benef_canonico = int(float(tv))
-            break
+    # Beneficiarios únicos totales: suma de la tabla AH por institución (ya
+    # descubierta arriba con columnas dinámicas) — más confiable que buscar
+    # una fila "TOTAL" suelta, cuya columna también se mueve entre refreshes.
+    total_benef_canonico = sum(i['total'] for i in insts)
+    if not total_benef_canonico:
+        # Sin tabla AH: recuperar el total sumando la Tabla 1 (municipios).
+        total_benef_canonico = sum(m['total'] for m in muns if m['nombre'] not in ('TOTAL', 'NO IDENTIFICADO'))
+
+    apoyos_total = sum(i['total'] for i in insts_ap)
+    if not apoyos_total:
+        # Igual que arriba: la tabla BE (apoyos por institución) también
+        # desapareció; se usa la Tabla CC (apoyos por municipio) como respaldo.
+        apoyos_total = sum(m['total'] for m in muns_ap)
 
     return {
         'municipios':    [m for m in muns if m['nombre'] not in ('TOTAL','NO IDENTIFICADO')],
         'instituciones': insts,
         'apoyos_inst':   insts_ap,
         'apoyos_mun':    muns_ap,
-        'apoyos_total':  sum(i['total'] for i in insts_ap),
+        'apoyos_total':  apoyos_total,
         'total_benef_canonico': total_benef_canonico,
     }
 

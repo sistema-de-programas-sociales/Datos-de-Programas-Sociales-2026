@@ -283,7 +283,7 @@ function _instProgRender(p, inst, tab) {
         'Atención médica',
       'DIF|REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES':
         'Rehabilitación integral y apoyos funcionales',
-      'ICHDII|PROGRAMA DE ESTANCIAS INFATILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ':
+      'ICHDII|PROGRAMA DE ESTANCIAS INFANTILES PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ':
         'Estancias infantiles para el desarrollo integral de la niñez',
       'SPyCI|ASISTENCIA SOCIAL PARA LA POBLACIÓN INDIGENA':
         'Asistencia social para la población indígena',
@@ -297,6 +297,10 @@ function _instProgRender(p, inst, tab) {
         'Institucionalización de la perspectiva de las juventudes',
       'ICHIJUV|PROGRAMA INSTITUCIONALIZACION DE PERSPECTIVA DE JUVENTUDES':
         'Institucionalización de la perspectiva de las juventudes',
+      'DIF|ALIMENTACION Y DESRROLLO AUTOSUSTENTABLE DE LAS FAMILIAS':
+        'Alimentación y desarrollo autosustentable de las familias',
+      'SEECH|COBERTURA DE EDUCACION BASICA INCLUSIVA':
+        'Cobertura en educación básica',
     };
 
     const progNorm = _normTxt(p.nombre);
