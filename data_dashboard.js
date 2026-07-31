@@ -8258,16 +8258,16 @@ window.DASHBOARD_DATA = {
               "h": 23
             },
             {
-              "nombre": "SANTA ISABEL",
-              "total": 54,
-              "m": 22,
-              "h": 32
-            },
-            {
               "nombre": "ASCENSION",
               "total": 54,
               "m": 30,
               "h": 24
+            },
+            {
+              "nombre": "SANTA ISABEL",
+              "total": 54,
+              "m": 22,
+              "h": 32
             },
             {
               "nombre": "ROSALES",
@@ -8566,16 +8566,16 @@ window.DASHBOARD_DATA = {
               "h": 7
             },
             {
-              "nombre": "SANTA ISABEL",
-              "total": 16,
-              "m": 6,
-              "h": 10
-            },
-            {
               "nombre": "SANTA BARBARA",
               "total": 16,
               "m": 7,
               "h": 9
+            },
+            {
+              "nombre": "SANTA ISABEL",
+              "total": 16,
+              "m": 6,
+              "h": 10
             },
             {
               "nombre": "ALDAMA",
@@ -9164,12 +9164,6 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
-              "nombre": "SANTA ISABEL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "DELICIAS",
               "total": 1,
               "m": 1,
@@ -9183,6 +9177,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "IGNACIO ZARAGOZA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "SANTA ISABEL",
               "total": 1,
               "m": 1,
               "h": 0
@@ -9426,12 +9426,6 @@ window.DASHBOARD_DATA = {
           "h": 0
         },
         {
-          "nombre": "SANTA ISABEL",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "GUERRERO",
           "total": 1,
           "m": 1,
@@ -9439,6 +9433,12 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "IGNACIO ZARAGOZA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SANTA ISABEL",
           "total": 1,
           "m": 1,
           "h": 0
@@ -11002,11 +11002,11 @@ window.DASHBOARD_DATA = {
     },
     {
       "nombre": "CURSO DE CAPACITACIÓN",
-      "total": 10653,
-      "m": 8484,
-      "h": 2169,
+      "total": 10767,
+      "m": 8574,
+      "h": 2193,
       "n_muns": 17,
-      "pct": 1.6,
+      "pct": 1.7,
       "instituciones": [
         {
           "nombre": "SDHyBC",
@@ -11247,17 +11247,53 @@ window.DASHBOARD_DATA = {
           ]
         },
         {
+          "nombre": "ICHIJUV",
+          "total": 110,
+          "m": 90,
+          "h": 20,
+          "muns": 1,
+          "programas": [
+            {
+              "nombre": "PROGRAMA INSTITUCIONALIZACION DE PERSPECTIVA DE JUVENTUDES",
+              "total": 110,
+              "m": 90,
+              "h": 20,
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 3,
+                "18-29": 57,
+                "30-49": 32,
+                "50-64": 18,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 110,
+              "m": 90,
+              "h": 20
+            }
+          ]
+        },
+        {
           "nombre": "CULTURA",
-          "total": 4,
+          "total": 8,
           "m": 3,
-          "h": 1,
+          "h": 5,
           "muns": 3,
           "programas": [
             {
               "nombre": "APOYOS A LA CULTURA",
-              "total": 4,
+              "total": 8,
               "m": 3,
-              "h": 1,
+              "h": 5,
               "muns": 3,
               "muns_lista": [
                 "CHIHUAHUA",
@@ -11269,7 +11305,7 @@ window.DASHBOARD_DATA = {
                 "6-11": 0,
                 "12-17": 0,
                 "18-29": 0,
-                "30-49": 3,
+                "30-49": 5,
                 "50-64": 0,
                 "65+": 0
               }
@@ -11278,9 +11314,9 @@ window.DASHBOARD_DATA = {
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 2,
+              "total": 6,
               "m": 2,
-              "h": 0
+              "h": 4
             },
             {
               "nombre": "JUAREZ",
@@ -11300,10 +11336,10 @@ window.DASHBOARD_DATA = {
       "rangos": {
         "0-5": 120,
         "6-11": 763,
-        "12-17": 1593,
-        "18-29": 2589,
-        "30-49": 2906,
-        "50-64": 1858,
+        "12-17": 1596,
+        "18-29": 2646,
+        "30-49": 2940,
+        "50-64": 1876,
         "65+": 768
       },
       "rango_dom": "30–49",
@@ -11338,6 +11374,12 @@ window.DASHBOARD_DATA = {
           "total": 140,
           "m": 135,
           "h": 5
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 116,
+          "m": 92,
+          "h": 24
         },
         {
           "nombre": "URUACHI",
@@ -11397,12 +11439,6 @@ window.DASHBOARD_DATA = {
           "nombre": "FORANEO",
           "total": 3,
           "m": 3,
-          "h": 0
-        },
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 2,
-          "m": 2,
           "h": 0
         },
         {
@@ -11628,8 +11664,8 @@ window.DASHBOARD_DATA = {
     },
     {
       "nombre": "APOYO ECONÓMICO",
-      "total": 6057,
-      "m": 3973,
+      "total": 6056,
+      "m": 3972,
       "h": 2060,
       "n_muns": 62,
       "pct": 0.9,
@@ -11975,12 +12011,6 @@ window.DASHBOARD_DATA = {
               "h": 7
             },
             {
-              "nombre": "SANTA ISABEL",
-              "total": 28,
-              "m": 20,
-              "h": 8
-            },
-            {
               "nombre": "CARICHI",
               "total": 28,
               "m": 28,
@@ -12009,6 +12039,12 @@ window.DASHBOARD_DATA = {
               "total": 28,
               "m": 21,
               "h": 7
+            },
+            {
+              "nombre": "SANTA ISABEL",
+              "total": 28,
+              "m": 20,
+              "h": 8
             },
             {
               "nombre": "TEMOSACHIC",
@@ -12332,15 +12368,15 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "DIF",
-          "total": 2,
-          "m": 2,
+          "total": 1,
+          "m": 1,
           "h": 0,
           "muns": 1,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 2,
-              "m": 2,
+              "total": 1,
+              "m": 1,
               "h": 0,
               "muns": 1,
               "muns_lista": [
@@ -12351,7 +12387,7 @@ window.DASHBOARD_DATA = {
                 "6-11": 0,
                 "12-17": 0,
                 "18-29": 0,
-                "30-49": 2,
+                "30-49": 1,
                 "50-64": 0,
                 "65+": 0
               }
@@ -12360,8 +12396,8 @@ window.DASHBOARD_DATA = {
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 2,
-              "m": 2,
+              "total": 1,
+              "m": 1,
               "h": 0
             }
           ]
@@ -12408,7 +12444,7 @@ window.DASHBOARD_DATA = {
         "6-11": 0,
         "12-17": 0,
         "18-29": 1696,
-        "30-49": 2728,
+        "30-49": 2727,
         "50-64": 1324,
         "65+": 281
       },
@@ -12417,8 +12453,8 @@ window.DASHBOARD_DATA = {
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 1898,
-          "m": 1318,
+          "total": 1897,
+          "m": 1317,
           "h": 580
         },
         {
@@ -12632,12 +12668,6 @@ window.DASHBOARD_DATA = {
           "h": 7
         },
         {
-          "nombre": "SANTA ISABEL",
-          "total": 28,
-          "m": 20,
-          "h": 8
-        },
-        {
           "nombre": "CARICHI",
           "total": 28,
           "m": 28,
@@ -12666,6 +12696,12 @@ window.DASHBOARD_DATA = {
           "total": 28,
           "m": 21,
           "h": 7
+        },
+        {
+          "nombre": "SANTA ISABEL",
+          "total": 28,
+          "m": 20,
+          "h": 8
         },
         {
           "nombre": "TEMOSACHIC",
@@ -14126,12 +14162,6 @@ window.DASHBOARD_DATA = {
               "h": 1
             },
             {
-              "nombre": "SANTA ISABEL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
               "nombre": "VALLE DE ZARAGOZA",
               "total": 1,
               "m": 1,
@@ -14169,6 +14199,12 @@ window.DASHBOARD_DATA = {
             },
             {
               "nombre": "SANTA BARBARA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "SANTA ISABEL",
               "total": 1,
               "m": 1,
               "h": 0
@@ -14285,12 +14321,6 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
-          "nombre": "SANTA ISABEL",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
           "nombre": "VALLE DE ZARAGOZA",
           "total": 1,
           "m": 1,
@@ -14328,6 +14358,12 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "SANTA BARBARA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "SANTA ISABEL",
           "total": 1,
           "m": 1,
           "h": 0
@@ -16885,128 +16921,11 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "DESARROLLO DE CAPACIDADES Y FORMACION DE CAPITAL SOCIAL",
-      "total": 415,
-      "m": 353,
-      "h": 62,
-      "n_muns": 3,
-      "pct": 0.1,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 415,
-          "m": 353,
-          "h": 62,
-          "muns": 5,
-          "programas": [
-            {
-              "nombre": "FORTALECIMIENTO FAMILIAR",
-              "total": 415,
-              "m": 353,
-              "h": 62,
-              "muns": 5,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "CUAUHTEMOC",
-                "FORANEO",
-                "JUAREZ",
-                "NO IDENTIFICADO"
-              ],
-              "rangos": {
-                "0-5": 3,
-                "6-11": 0,
-                "12-17": 1,
-                "18-29": 64,
-                "30-49": 165,
-                "50-64": 94,
-                "65+": 50
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "JUAREZ",
-              "total": 340,
-              "m": 283,
-              "h": 57
-            },
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 69,
-              "m": 69,
-              "h": 0
-            },
-            {
-              "nombre": "NO IDENTIFICADO",
-              "total": 4,
-              "m": 0,
-              "h": 4
-            },
-            {
-              "nombre": "FORANEO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "CUAUHTEMOC",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 3,
-        "6-11": 0,
-        "12-17": 1,
-        "18-29": 64,
-        "30-49": 165,
-        "50-64": 94,
-        "65+": 50
-      },
-      "rango_dom": "30–49",
-      "rango_min": "12–17",
-      "por_municipio": [
-        {
-          "nombre": "JUAREZ",
-          "total": 340,
-          "m": 283,
-          "h": 57
-        },
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 69,
-          "m": 69,
-          "h": 0
-        },
-        {
-          "nombre": "NO IDENTIFICADO",
-          "total": 4,
-          "m": 0,
-          "h": 4
-        },
-        {
-          "nombre": "FORANEO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "CUAUHTEMOC",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        }
-      ]
-    },
-    {
       "nombre": "PAGO DE CONSULTAS, ESTUDIOS, CIRUGIAS, MEDICAMENTOS Y PROTESIS",
-      "total": 404,
-      "m": 271,
-      "h": 133,
-      "n_muns": 30,
+      "total": 425,
+      "m": 286,
+      "h": 139,
+      "n_muns": 31,
       "pct": 0.1,
       "instituciones": [
         {
@@ -17180,17 +17099,17 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "DIF",
-          "total": 178,
-          "m": 106,
-          "h": 72,
-          "muns": 21,
+          "total": 199,
+          "m": 121,
+          "h": 78,
+          "muns": 23,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 178,
-              "m": 106,
-              "h": 72,
-              "muns": 21,
+              "total": 199,
+              "m": 121,
+              "h": 78,
+              "muns": 23,
               "muns_lista": [
                 "ALDAMA",
                 "AQUILES SERDAN",
@@ -17206,10 +17125,12 @@ window.DASHBOARD_DATA = {
                 "GUADALUPE Y CALVO",
                 "GUAZAPARES",
                 "GUERRERO",
+                "HIDALGO DEL PARRAL",
                 "JUAREZ",
                 "MEOQUI",
                 "NAMIQUIPA",
                 "OJINAGA",
+                "SANTA ISABEL",
                 "URIQUE",
                 "URUACHI",
                 "VALLE DE ZARAGOZA"
@@ -17218,19 +17139,19 @@ window.DASHBOARD_DATA = {
                 "0-5": 0,
                 "6-11": 0,
                 "12-17": 9,
-                "18-29": 25,
-                "30-49": 35,
-                "50-64": 53,
-                "65+": 56
+                "18-29": 26,
+                "30-49": 43,
+                "50-64": 60,
+                "65+": 61
               }
             }
           ],
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 146,
-              "m": 86,
-              "h": 60
+              "total": 164,
+              "m": 98,
+              "h": 66
             },
             {
               "nombre": "JUAREZ",
@@ -17261,6 +17182,12 @@ window.DASHBOARD_DATA = {
               "total": 2,
               "m": 1,
               "h": 1
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 2,
+              "m": 2,
+              "h": 0
             },
             {
               "nombre": "ALDAMA",
@@ -17341,6 +17268,12 @@ window.DASHBOARD_DATA = {
               "h": 0
             },
             {
+              "nombre": "SANTA ISABEL",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
               "nombre": "URIQUE",
               "total": 1,
               "m": 0,
@@ -17359,24 +17292,24 @@ window.DASHBOARD_DATA = {
         "0-5": 0,
         "6-11": 0,
         "12-17": 9,
-        "18-29": 46,
-        "30-49": 119,
-        "50-64": 142,
-        "65+": 88
+        "18-29": 47,
+        "30-49": 127,
+        "50-64": 149,
+        "65+": 93
       },
       "rango_dom": "50–64",
       "rango_min": "12–17",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 344,
-          "m": 231,
-          "h": 113
+          "total": 362,
+          "m": 243,
+          "h": 119
         },
         {
           "nombre": "HIDALGO DEL PARRAL",
-          "total": 7,
-          "m": 5,
+          "total": 9,
+          "m": 7,
           "h": 2
         },
         {
@@ -17542,7 +17475,130 @@ window.DASHBOARD_DATA = {
           "h": 1
         },
         {
+          "nombre": "SANTA ISABEL",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
           "nombre": "URUACHI",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        }
+      ]
+    },
+    {
+      "nombre": "DESARROLLO DE CAPACIDADES Y FORMACION DE CAPITAL SOCIAL",
+      "total": 415,
+      "m": 353,
+      "h": 62,
+      "n_muns": 3,
+      "pct": 0.1,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 415,
+          "m": 353,
+          "h": 62,
+          "muns": 5,
+          "programas": [
+            {
+              "nombre": "FORTALECIMIENTO FAMILIAR",
+              "total": 415,
+              "m": 353,
+              "h": 62,
+              "muns": 5,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "CUAUHTEMOC",
+                "FORANEO",
+                "JUAREZ",
+                "NO IDENTIFICADO"
+              ],
+              "rangos": {
+                "0-5": 3,
+                "6-11": 0,
+                "12-17": 1,
+                "18-29": 64,
+                "30-49": 165,
+                "50-64": 94,
+                "65+": 50
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "JUAREZ",
+              "total": 340,
+              "m": 283,
+              "h": 57
+            },
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 69,
+              "m": 69,
+              "h": 0
+            },
+            {
+              "nombre": "NO IDENTIFICADO",
+              "total": 4,
+              "m": 0,
+              "h": 4
+            },
+            {
+              "nombre": "FORANEO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "CUAUHTEMOC",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 3,
+        "6-11": 0,
+        "12-17": 1,
+        "18-29": 64,
+        "30-49": 165,
+        "50-64": 94,
+        "65+": 50
+      },
+      "rango_dom": "30–49",
+      "rango_min": "12–17",
+      "por_municipio": [
+        {
+          "nombre": "JUAREZ",
+          "total": 340,
+          "m": 283,
+          "h": 57
+        },
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 69,
+          "m": 69,
+          "h": 0
+        },
+        {
+          "nombre": "NO IDENTIFICADO",
+          "total": 4,
+          "m": 0,
+          "h": 4
+        },
+        {
+          "nombre": "FORANEO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "CUAUHTEMOC",
           "total": 1,
           "m": 0,
           "h": 1
@@ -18309,290 +18365,6 @@ window.DASHBOARD_DATA = {
           "total": 6,
           "m": 0,
           "h": 6
-        }
-      ]
-    },
-    {
-      "nombre": "ANALISIS CLINICO",
-      "total": 168,
-      "m": 126,
-      "h": 42,
-      "n_muns": 8,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "ICHIJUV",
-          "total": 110,
-          "m": 90,
-          "h": 20,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "PROGRAMA INSTITUCIONALIZACION DE PERSPECTIVA DE JUVENTUDES",
-              "total": 110,
-              "m": 90,
-              "h": 20,
-              "muns": 1,
-              "muns_lista": [
-                "CHIHUAHUA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 3,
-                "18-29": 57,
-                "30-49": 32,
-                "50-64": 18,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 110,
-              "m": 90,
-              "h": 20
-            }
-          ]
-        },
-        {
-          "nombre": "DIF",
-          "total": 53,
-          "m": 32,
-          "h": 21,
-          "muns": 8,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 35,
-              "m": 23,
-              "h": 12,
-              "muns": 7,
-              "muns_lista": [
-                "AQUILES SERDAN",
-                "BATOPILAS DE MANUEL GOMEZ MORIN",
-                "CHIHUAHUA",
-                "GUADALUPE Y CALVO",
-                "HIDALGO DEL PARRAL",
-                "SANTA ISABEL",
-                "VALLE DE ZARAGOZA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 2,
-                "30-49": 9,
-                "50-64": 9,
-                "65+": 15
-              }
-            },
-            {
-              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
-              "total": 18,
-              "m": 9,
-              "h": 9,
-              "muns": 3,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "HIDALGO DEL PARRAL",
-                "JUAREZ"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 1,
-                "12-17": 0,
-                "18-29": 3,
-                "30-49": 4,
-                "50-64": 6,
-                "65+": 4
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 42,
-              "m": 25,
-              "h": 17
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 3,
-              "m": 2,
-              "h": 1
-            },
-            {
-              "nombre": "GUADALUPE Y CALVO",
-              "total": 2,
-              "m": 2,
-              "h": 0
-            },
-            {
-              "nombre": "VALLE DE ZARAGOZA",
-              "total": 2,
-              "m": 1,
-              "h": 1
-            },
-            {
-              "nombre": "JUAREZ",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "AQUILES SERDAN",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "SANTA ISABEL",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        },
-        {
-          "nombre": "CULTURA",
-          "total": 4,
-          "m": 4,
-          "h": 0,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "APOYOS A LA CULTURA",
-              "total": 4,
-              "m": 4,
-              "h": 0,
-              "muns": 1,
-              "muns_lista": [
-                "CHIHUAHUA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 2,
-                "50-64": 1,
-                "65+": 1
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 4,
-              "m": 4,
-              "h": 0
-            }
-          ]
-        },
-        {
-          "nombre": "ICHD",
-          "total": 1,
-          "m": 0,
-          "h": 1,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "APOYOS AL DEPORTE",
-              "total": 1,
-              "m": 0,
-              "h": 1,
-              "muns": 1,
-              "muns_lista": [
-                "CHIHUAHUA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 1,
-                "50-64": 0,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 1,
-        "12-17": 3,
-        "18-29": 62,
-        "30-49": 48,
-        "50-64": 34,
-        "65+": 20
-      },
-      "rango_dom": "18–29",
-      "rango_min": "6–11",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 157,
-          "m": 119,
-          "h": 38
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 3,
-          "m": 2,
-          "h": 1
-        },
-        {
-          "nombre": "GUADALUPE Y CALVO",
-          "total": 2,
-          "m": 2,
-          "h": 0
-        },
-        {
-          "nombre": "VALLE DE ZARAGOZA",
-          "total": 2,
-          "m": 1,
-          "h": 1
-        },
-        {
-          "nombre": "JUAREZ",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "AQUILES SERDAN",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "SANTA ISABEL",
-          "total": 1,
-          "m": 1,
-          "h": 0
         }
       ]
     },
@@ -19524,6 +19296,205 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "ANALISIS CLINICO",
+      "total": 40,
+      "m": 22,
+      "h": 18,
+      "n_muns": 7,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 39,
+          "m": 22,
+          "h": 17,
+          "muns": 7,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 21,
+              "m": 13,
+              "h": 8,
+              "muns": 6,
+              "muns_lista": [
+                "AQUILES SERDAN",
+                "BATOPILAS DE MANUEL GOMEZ MORIN",
+                "CHIHUAHUA",
+                "GUADALUPE Y CALVO",
+                "HIDALGO DEL PARRAL",
+                "VALLE DE ZARAGOZA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 5,
+                "50-64": 4,
+                "65+": 11
+              }
+            },
+            {
+              "nombre": "REHABILITACIÓN INTEGRAL FÍSICA Y APOYOS FUNCIONALES",
+              "total": 18,
+              "m": 9,
+              "h": 9,
+              "muns": 3,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "HIDALGO DEL PARRAL",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 1,
+                "12-17": 0,
+                "18-29": 3,
+                "30-49": 4,
+                "50-64": 6,
+                "65+": 4
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 30,
+              "m": 17,
+              "h": 13
+            },
+            {
+              "nombre": "GUADALUPE Y CALVO",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "HIDALGO DEL PARRAL",
+              "total": 2,
+              "m": 1,
+              "h": 1
+            },
+            {
+              "nombre": "VALLE DE ZARAGOZA",
+              "total": 2,
+              "m": 1,
+              "h": 1
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "AQUILES SERDAN",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            },
+            {
+              "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        },
+        {
+          "nombre": "ICHD",
+          "total": 1,
+          "m": 0,
+          "h": 1,
+          "muns": 1,
+          "programas": [
+            {
+              "nombre": "APOYOS AL DEPORTE",
+              "total": 1,
+              "m": 0,
+              "h": 1,
+              "muns": 1,
+              "muns_lista": [
+                "CHIHUAHUA"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 1,
+                "50-64": 0,
+                "65+": 0
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 1,
+        "12-17": 0,
+        "18-29": 4,
+        "30-49": 10,
+        "50-64": 10,
+        "65+": 15
+      },
+      "rango_dom": "65+",
+      "rango_min": "6–11",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 31,
+          "m": 17,
+          "h": 14
+        },
+        {
+          "nombre": "GUADALUPE Y CALVO",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "HIDALGO DEL PARRAL",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "VALLE DE ZARAGOZA",
+          "total": 2,
+          "m": 1,
+          "h": 1
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "AQUILES SERDAN",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        },
+        {
+          "nombre": "BATOPILAS DE MANUEL GOMEZ MORIN",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        }
+      ]
+    },
+    {
       "nombre": "APOYOS EXTRAORDINARIOS",
       "total": 35,
       "m": 15,
@@ -20116,84 +20087,6 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "INSUMOS VARIOS",
-      "total": 20,
-      "m": 9,
-      "h": 11,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 20,
-          "m": 9,
-          "h": 11,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 20,
-              "m": 9,
-              "h": 11,
-              "muns": 2,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "SAUCILLO"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 5,
-                "50-64": 4,
-                "65+": 11
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 19,
-              "m": 8,
-              "h": 11
-            },
-            {
-              "nombre": "SAUCILLO",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 0,
-        "18-29": 0,
-        "30-49": 5,
-        "50-64": 4,
-        "65+": 11
-      },
-      "rango_dom": "65+",
-      "rango_min": "50–64",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 19,
-          "m": 8,
-          "h": 11
-        },
-        {
-          "nombre": "SAUCILLO",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        }
-      ]
-    },
-    {
       "nombre": "APOYO A GASTOS ESCOLARES",
       "total": 18,
       "m": 10,
@@ -20272,31 +20165,108 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "MATERIAL DE CIRUGIA",
-      "total": 17,
-      "m": 10,
-      "h": 7,
-      "n_muns": 6,
+      "nombre": "INSUMOS VARIOS",
+      "total": 18,
+      "m": 8,
+      "h": 10,
+      "n_muns": 2,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 17,
-          "m": 10,
-          "h": 7,
-          "muns": 6,
+          "total": 18,
+          "m": 8,
+          "h": 10,
+          "muns": 2,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 18,
+              "m": 8,
+              "h": 10,
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "SAUCILLO"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 3,
+                "50-64": 4,
+                "65+": 11
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
               "total": 17,
-              "m": 10,
+              "m": 7,
+              "h": 10
+            },
+            {
+              "nombre": "SAUCILLO",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 3,
+        "50-64": 4,
+        "65+": 11
+      },
+      "rango_dom": "65+",
+      "rango_min": "30–49",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 17,
+          "m": 7,
+          "h": 10
+        },
+        {
+          "nombre": "SAUCILLO",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        }
+      ]
+    },
+    {
+      "nombre": "MATERIAL DE CIRUGIA",
+      "total": 15,
+      "m": 8,
+      "h": 7,
+      "n_muns": 5,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 15,
+          "m": 8,
+          "h": 7,
+          "muns": 5,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 15,
+              "m": 8,
               "h": 7,
-              "muns": 6,
+              "muns": 5,
               "muns_lista": [
                 "AHUMADA",
                 "CHIHUAHUA",
                 "CHINIPAS",
-                "HIDALGO DEL PARRAL",
                 "MEOQUI",
                 "NUEVO CASAS GRANDES"
               ],
@@ -20305,24 +20275,18 @@ window.DASHBOARD_DATA = {
                 "6-11": 0,
                 "12-17": 0,
                 "18-29": 3,
-                "30-49": 3,
+                "30-49": 2,
                 "50-64": 6,
-                "65+": 5
+                "65+": 4
               }
             }
           ],
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 12,
-              "m": 7,
+              "total": 11,
+              "m": 6,
               "h": 5
-            },
-            {
-              "nombre": "HIDALGO DEL PARRAL",
-              "total": 1,
-              "m": 1,
-              "h": 0
             },
             {
               "nombre": "MEOQUI",
@@ -20356,24 +20320,18 @@ window.DASHBOARD_DATA = {
         "6-11": 0,
         "12-17": 0,
         "18-29": 3,
-        "30-49": 3,
+        "30-49": 2,
         "50-64": 6,
-        "65+": 5
+        "65+": 4
       },
       "rango_dom": "50–64",
-      "rango_min": "18–29",
+      "rango_min": "30–49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 12,
-          "m": 7,
+          "total": 11,
+          "m": 6,
           "h": 5
-        },
-        {
-          "nombre": "HIDALGO DEL PARRAL",
-          "total": 1,
-          "m": 1,
-          "h": 0
         },
         {
           "nombre": "MEOQUI",
@@ -20597,133 +20555,6 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
-      "nombre": "CAMA/COLCHON/COLCHONETA",
-      "total": 9,
-      "m": 5,
-      "h": 4,
-      "n_muns": 3,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "DIF",
-          "total": 5,
-          "m": 5,
-          "h": 0,
-          "muns": 3,
-          "programas": [
-            {
-              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 5,
-              "m": 5,
-              "h": 0,
-              "muns": 3,
-              "muns_lista": [
-                "ALDAMA",
-                "CHIHUAHUA",
-                "GUACHOCHI"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 1,
-                "30-49": 1,
-                "50-64": 2,
-                "65+": 1
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 3,
-              "m": 3,
-              "h": 0
-            },
-            {
-              "nombre": "ALDAMA",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            },
-            {
-              "nombre": "GUACHOCHI",
-              "total": 1,
-              "m": 1,
-              "h": 0
-            }
-          ]
-        },
-        {
-          "nombre": "CULTURA",
-          "total": 4,
-          "m": 0,
-          "h": 4,
-          "muns": 1,
-          "programas": [
-            {
-              "nombre": "APOYOS A LA CULTURA",
-              "total": 4,
-              "m": 0,
-              "h": 4,
-              "muns": 1,
-              "muns_lista": [
-                "CHIHUAHUA"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 2,
-                "50-64": 0,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 4,
-              "m": 0,
-              "h": 4
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 0,
-        "18-29": 1,
-        "30-49": 3,
-        "50-64": 2,
-        "65+": 1
-      },
-      "rango_dom": "30–49",
-      "rango_min": "18–29",
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 7,
-          "m": 3,
-          "h": 4
-        },
-        {
-          "nombre": "ALDAMA",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        },
-        {
-          "nombre": "GUACHOCHI",
-          "total": 1,
-          "m": 1,
-          "h": 0
-        }
-      ]
-    },
-    {
       "nombre": "REHABILITACION Y MANTENIMIENTO DE INFRAESTRUCTURA",
       "total": 8,
       "m": 0,
@@ -20919,25 +20750,103 @@ window.DASHBOARD_DATA = {
       ]
     },
     {
+      "nombre": "SERVICIOS DE TRASLADOS",
+      "total": 6,
+      "m": 4,
+      "h": 2,
+      "n_muns": 2,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "CULTURA",
+          "total": 6,
+          "m": 4,
+          "h": 2,
+          "muns": 2,
+          "programas": [
+            {
+              "nombre": "APOYOS A LA CULTURA",
+              "total": 6,
+              "m": 4,
+              "h": 2,
+              "muns": 2,
+              "muns_lista": [
+                "CHIHUAHUA",
+                "JUAREZ"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 0,
+                "30-49": 4,
+                "50-64": 1,
+                "65+": 1
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 5,
+              "m": 4,
+              "h": 1
+            },
+            {
+              "nombre": "JUAREZ",
+              "total": 1,
+              "m": 0,
+              "h": 1
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 0,
+        "30-49": 4,
+        "50-64": 1,
+        "65+": 1
+      },
+      "rango_dom": "30–49",
+      "rango_min": "50–64",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 5,
+          "m": 4,
+          "h": 1
+        },
+        {
+          "nombre": "JUAREZ",
+          "total": 1,
+          "m": 0,
+          "h": 1
+        }
+      ]
+    },
+    {
       "nombre": "SILLA DE RUEDAS",
-      "total": 7,
+      "total": 6,
       "m": 2,
-      "h": 5,
+      "h": 4,
       "n_muns": 3,
       "pct": 0.0,
       "instituciones": [
         {
           "nombre": "DIF",
-          "total": 7,
+          "total": 6,
           "m": 2,
-          "h": 5,
+          "h": 4,
           "muns": 3,
           "programas": [
             {
               "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
-              "total": 7,
+              "total": 6,
               "m": 2,
-              "h": 5,
+              "h": 4,
               "muns": 3,
               "muns_lista": [
                 "BOCOYNA",
@@ -20950,7 +20859,7 @@ window.DASHBOARD_DATA = {
                 "12-17": 0,
                 "18-29": 0,
                 "30-49": 2,
-                "50-64": 3,
+                "50-64": 2,
                 "65+": 2
               }
             }
@@ -20958,9 +20867,9 @@ window.DASHBOARD_DATA = {
           "por_municipio": [
             {
               "nombre": "CHIHUAHUA",
-              "total": 5,
+              "total": 4,
               "m": 1,
-              "h": 4
+              "h": 3
             },
             {
               "nombre": "BOCOYNA",
@@ -20983,17 +20892,17 @@ window.DASHBOARD_DATA = {
         "12-17": 0,
         "18-29": 0,
         "30-49": 2,
-        "50-64": 3,
+        "50-64": 2,
         "65+": 2
       },
-      "rango_dom": "50–64",
+      "rango_dom": "30–49",
       "rango_min": "30–49",
       "por_municipio": [
         {
           "nombre": "CHIHUAHUA",
-          "total": 5,
+          "total": 4,
           "m": 1,
-          "h": 4
+          "h": 3
         },
         {
           "nombre": "BOCOYNA",
@@ -21081,6 +20990,97 @@ window.DASHBOARD_DATA = {
         },
         {
           "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        }
+      ]
+    },
+    {
+      "nombre": "CAMA/COLCHON/COLCHONETA",
+      "total": 4,
+      "m": 4,
+      "h": 0,
+      "n_muns": 3,
+      "pct": 0.0,
+      "instituciones": [
+        {
+          "nombre": "DIF",
+          "total": 4,
+          "m": 4,
+          "h": 0,
+          "muns": 3,
+          "programas": [
+            {
+              "nombre": "GESTIÓN SOCIAL Y ATENCIÓN A LA CIUDADANÍA",
+              "total": 4,
+              "m": 4,
+              "h": 0,
+              "muns": 3,
+              "muns_lista": [
+                "ALDAMA",
+                "CHIHUAHUA",
+                "GUACHOCHI"
+              ],
+              "rangos": {
+                "0-5": 0,
+                "6-11": 0,
+                "12-17": 0,
+                "18-29": 1,
+                "30-49": 1,
+                "50-64": 1,
+                "65+": 1
+              }
+            }
+          ],
+          "por_municipio": [
+            {
+              "nombre": "CHIHUAHUA",
+              "total": 2,
+              "m": 2,
+              "h": 0
+            },
+            {
+              "nombre": "ALDAMA",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            },
+            {
+              "nombre": "GUACHOCHI",
+              "total": 1,
+              "m": 1,
+              "h": 0
+            }
+          ]
+        }
+      ],
+      "rangos": {
+        "0-5": 0,
+        "6-11": 0,
+        "12-17": 0,
+        "18-29": 1,
+        "30-49": 1,
+        "50-64": 1,
+        "65+": 1
+      },
+      "rango_dom": "18–29",
+      "rango_min": "18–29",
+      "por_municipio": [
+        {
+          "nombre": "CHIHUAHUA",
+          "total": 2,
+          "m": 2,
+          "h": 0
+        },
+        {
+          "nombre": "ALDAMA",
+          "total": 1,
+          "m": 1,
+          "h": 0
+        },
+        {
+          "nombre": "GUACHOCHI",
           "total": 1,
           "m": 1,
           "h": 0
@@ -21292,84 +21292,6 @@ window.DASHBOARD_DATA = {
           "total": 2,
           "m": 2,
           "h": 0
-        }
-      ]
-    },
-    {
-      "nombre": "SERVICIOS DE TRASLADOS",
-      "total": 2,
-      "m": 0,
-      "h": 2,
-      "n_muns": 2,
-      "pct": 0.0,
-      "instituciones": [
-        {
-          "nombre": "CULTURA",
-          "total": 2,
-          "m": 0,
-          "h": 2,
-          "muns": 2,
-          "programas": [
-            {
-              "nombre": "APOYOS A LA CULTURA",
-              "total": 2,
-              "m": 0,
-              "h": 2,
-              "muns": 2,
-              "muns_lista": [
-                "CHIHUAHUA",
-                "JUAREZ"
-              ],
-              "rangos": {
-                "0-5": 0,
-                "6-11": 0,
-                "12-17": 0,
-                "18-29": 0,
-                "30-49": 2,
-                "50-64": 0,
-                "65+": 0
-              }
-            }
-          ],
-          "por_municipio": [
-            {
-              "nombre": "CHIHUAHUA",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            },
-            {
-              "nombre": "JUAREZ",
-              "total": 1,
-              "m": 0,
-              "h": 1
-            }
-          ]
-        }
-      ],
-      "rangos": {
-        "0-5": 0,
-        "6-11": 0,
-        "12-17": 0,
-        "18-29": 0,
-        "30-49": 2,
-        "50-64": 0,
-        "65+": 0
-      },
-      "rango_dom": "30–49",
-      "rango_min": null,
-      "por_municipio": [
-        {
-          "nombre": "CHIHUAHUA",
-          "total": 1,
-          "m": 0,
-          "h": 1
-        },
-        {
-          "nombre": "JUAREZ",
-          "total": 1,
-          "m": 0,
-          "h": 1
         }
       ]
     },
