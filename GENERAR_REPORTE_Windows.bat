@@ -36,9 +36,10 @@ echo %* | findstr /i "\-\-web" >nul
 if not errorlevel 1 (
     echo.
     echo  Actualizando NutriChihuahua...
-    python "%~dp0generar_nutrichihuahua.py" "%EXCEL%" --dashboard-only
+    python3 "%~dp0generar_nutrichihuahua.py" "%EXCEL%" --dashboard-only
     if errorlevel 1 (
-        echo  AVISO: generar_nutrichihuahua.py retorno error - verificar manualmente
+        echo  ERROR en generar_nutrichihuahua.py
+        pause & exit /b 1
     )
 )
 

@@ -10,25 +10,25 @@ echo.
 set ERRORES=0
 
 echo [1/6] Verificando Python...
-python --version >nul 2>&1
+python3 --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo   [X] Python NO encontrado
     echo       Descarga: https://www.python.org/downloads/
     echo       IMPORTANTE: marca "Add Python to PATH" al instalar
     set /a ERRORES+=1
 ) else (
-    for /f "tokens=*" %%v in ('python --version 2^>^&1') do echo   [OK] %%v
+    for /f "tokens=*" %%v in ('python3 --version 2^>^&1') do echo   [OK] %%v
 )
 
 echo.
 echo [2/6] Verificando pip...
-python -m pip --version >nul 2>&1
+python3 -m pip --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo   [X] pip NO encontrado
-    echo       Ejecuta: python -m ensurepip --upgrade
+    echo       Ejecuta: python3 -m ensurepip --upgrade
     set /a ERRORES+=1
 ) else (
-    for /f "tokens=*" %%v in ('python -m pip --version 2^>^&1') do echo   [OK] %%v
+    for /f "tokens=*" %%v in ('python3 -m pip --version 2^>^&1') do echo   [OK] %%v
 )
 
 echo.
@@ -64,10 +64,14 @@ if %errorlevel% neq 0 (
 echo.
 echo [6/6] Verificando librerias Python...
 for %%L in (openpyxl pandas docx) do (
-    python -c "import %%L" >nul 2>&1
+    python3 -c "import %%L" >nul 2>&1
     if !errorlevel! neq 0 (
         echo   [X] %%L NO instalada
-        echo       Ejecuta: python -m pip install %%L
+        if "%%L"=="docx" (
+            echo       Ejecuta: python3 -m pip install python-docx
+        ) else (
+            echo       Ejecuta: python3 -m pip install %%L
+        )
         set /a ERRORES+=1
     ) else (
         echo   [OK] %%L
@@ -84,7 +88,7 @@ if %ERRORES% equ 0 (
     echo   Instala lo que falta segun las instrucciones de arriba,
     echo   luego vuelve a ejecutar este script para verificar.
     echo.
-    echo   Nota: usa "python -m pip install ..." en lugar de "pip install ..."
+    echo   Nota: usa "python3 -m pip install ..." en lugar de "pip install ..."
 )
 echo ============================================================
 echo.

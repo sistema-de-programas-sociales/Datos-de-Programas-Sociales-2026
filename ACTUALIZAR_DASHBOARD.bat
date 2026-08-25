@@ -34,9 +34,10 @@ if errorlevel 1 (
 :: PASO 2: js_render_nutri.js
 echo.
 echo  [2/2] Actualizando NutriChihuahua...
-python "%~dp0generar_nutrichihuahua.py" "%EXCEL%" --dashboard-only
+python3 "%~dp0generar_nutrichihuahua.py" "%EXCEL%" --dashboard-only
 if errorlevel 1 (
-    echo  AVISO: generar_nutrichihuahua.py retorno error - verificar manualmente
+    echo  ERROR en generar_nutrichihuahua.py
+    pause & exit /b 1
 )
 
 echo.
