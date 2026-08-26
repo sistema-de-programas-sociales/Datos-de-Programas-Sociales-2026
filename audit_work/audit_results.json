@@ -1,0 +1,518 @@
+{
+  "source": "D:\\2026\\JP\\Padron 2026.xlsx",
+  "generated_at": "2026-08-25T13:25:08",
+  "scope": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "source_rows": {
+    "C1": 63340,
+    "C2": 27211,
+    "C3": 135998,
+    "C4": 599684
+  },
+  "rules": [
+    {
+      "key": "dependencia",
+      "label": "Dependencia ausente o no reconocida"
+    },
+    {
+      "key": "programa",
+      "label": "Programa ausente"
+    },
+    {
+      "key": "nombre",
+      "label": "Nombre ausente"
+    },
+    {
+      "key": "apellido",
+      "label": "Primer apellido ausente"
+    },
+    {
+      "key": "curp",
+      "label": "CURP ausente o con formato inválido"
+    },
+    {
+      "key": "sexo",
+      "label": "Sexo distinto de H/M"
+    },
+    {
+      "key": "fecha_nacimiento",
+      "label": "Fecha de nacimiento ausente o inválida"
+    },
+    {
+      "key": "edad",
+      "label": "Edad ausente o fuera de 0 a 105"
+    },
+    {
+      "key": "municipio",
+      "label": "Municipio ausente o fuera del catálogo estatal"
+    },
+    {
+      "key": "cp",
+      "label": "Código postal inválido"
+    },
+    {
+      "key": "telefono",
+      "label": "Teléfono inválido"
+    },
+    {
+      "key": "mes",
+      "label": "Mes correspondiente ausente"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependency": "SEECH",
+      "total_records": 4403,
+      "inconsistent_records": 4403,
+      "total_inconsistencies": 4582,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 175,
+        "sexo": 0,
+        "fecha_nacimiento": 2,
+        "edad": 2,
+        "municipio": 0,
+        "cp": 0,
+        "telefono": 4403,
+        "mes": 0
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 1.040654099477629,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 4403
+    },
+    {
+      "dependency": "COESPO",
+      "total_records": 1309,
+      "inconsistent_records": 1309,
+      "total_inconsistencies": 6743,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 5,
+        "curp": 1309,
+        "sexo": 0,
+        "fecha_nacimiento": 1309,
+        "edad": 193,
+        "municipio": 1309,
+        "cp": 1309,
+        "telefono": 1309,
+        "mes": 0
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 5.151260504201681,
+      "top_error_key": "curp",
+      "top_error_label": "CURP ausente o con formato inválido",
+      "top_error_count": 1309
+    },
+    {
+      "dependency": "SPyCI",
+      "total_records": 1027,
+      "inconsistent_records": 1027,
+      "total_inconsistencies": 2765,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 162,
+        "sexo": 1027,
+        "fecha_nacimiento": 1,
+        "edad": 3,
+        "municipio": 5,
+        "cp": 1027,
+        "telefono": 540,
+        "mes": 0
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 2.6923076923076925,
+      "top_error_key": "sexo",
+      "top_error_label": "Sexo distinto de H/M",
+      "top_error_count": 1027
+    },
+    {
+      "dependency": "TRABAJO",
+      "total_records": 452,
+      "inconsistent_records": 452,
+      "total_inconsistencies": 834,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 0,
+        "sexo": 0,
+        "fecha_nacimiento": 0,
+        "edad": 0,
+        "municipio": 185,
+        "cp": 198,
+        "telefono": 451,
+        "mes": 0
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 1.845132743362832,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 451
+    },
+    {
+      "dependency": "RURAL",
+      "total_records": 18,
+      "inconsistent_records": 18,
+      "total_inconsistencies": 180,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 18,
+        "apellido": 18,
+        "curp": 18,
+        "sexo": 18,
+        "fecha_nacimiento": 18,
+        "edad": 18,
+        "municipio": 18,
+        "cp": 18,
+        "telefono": 18,
+        "mes": 18
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 10.0,
+      "top_error_key": "nombre",
+      "top_error_label": "Nombre ausente",
+      "top_error_count": 18
+    },
+    {
+      "dependency": "COESVI",
+      "total_records": 4,
+      "inconsistent_records": 4,
+      "total_inconsistencies": 40,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 4,
+        "apellido": 4,
+        "curp": 4,
+        "sexo": 4,
+        "fecha_nacimiento": 4,
+        "edad": 4,
+        "municipio": 4,
+        "cp": 4,
+        "telefono": 4,
+        "mes": 4
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 10.0,
+      "top_error_key": "nombre",
+      "top_error_label": "Nombre ausente",
+      "top_error_count": 4
+    },
+    {
+      "dependency": "ICHIMUJ",
+      "total_records": 2,
+      "inconsistent_records": 2,
+      "total_inconsistencies": 20,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 2,
+        "apellido": 2,
+        "curp": 2,
+        "sexo": 2,
+        "fecha_nacimiento": 2,
+        "edad": 2,
+        "municipio": 2,
+        "cp": 2,
+        "telefono": 2,
+        "mes": 2
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 10.0,
+      "top_error_key": "nombre",
+      "top_error_label": "Nombre ausente",
+      "top_error_count": 2
+    },
+    {
+      "dependency": "CECYTECH",
+      "total_records": 1,
+      "inconsistent_records": 1,
+      "total_inconsistencies": 10,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 1,
+        "apellido": 1,
+        "curp": 1,
+        "sexo": 1,
+        "fecha_nacimiento": 1,
+        "edad": 1,
+        "municipio": 1,
+        "cp": 1,
+        "telefono": 1,
+        "mes": 1
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 10.0,
+      "top_error_key": "nombre",
+      "top_error_label": "Nombre ausente",
+      "top_error_count": 1
+    },
+    {
+      "dependency": "SEYD",
+      "total_records": 1,
+      "inconsistent_records": 1,
+      "total_inconsistencies": 10,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 1,
+        "apellido": 1,
+        "curp": 1,
+        "sexo": 1,
+        "fecha_nacimiento": 1,
+        "edad": 1,
+        "municipio": 1,
+        "cp": 1,
+        "telefono": 1,
+        "mes": 1
+      },
+      "correct_records": 0,
+      "error_rate": 1.0,
+      "average_errors_per_inconsistent": 10.0,
+      "top_error_key": "nombre",
+      "top_error_label": "Nombre ausente",
+      "top_error_count": 1
+    },
+    {
+      "dependency": "DIF",
+      "total_records": 59260,
+      "inconsistent_records": 50601,
+      "total_inconsistencies": 62063,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 3,
+        "apellido": 29,
+        "curp": 1664,
+        "sexo": 0,
+        "fecha_nacimiento": 257,
+        "edad": 253,
+        "municipio": 303,
+        "cp": 9364,
+        "telefono": 50190,
+        "mes": 0
+      },
+      "correct_records": 8659,
+      "error_rate": 0.8538812014849815,
+      "average_errors_per_inconsistent": 1.2265172625046936,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 50190
+    },
+    {
+      "dependency": "ICHIJUV",
+      "total_records": 25109,
+      "inconsistent_records": 21254,
+      "total_inconsistencies": 30402,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 138,
+        "curp": 3903,
+        "sexo": 1,
+        "fecha_nacimiento": 1303,
+        "edad": 609,
+        "municipio": 236,
+        "cp": 5663,
+        "telefono": 18549,
+        "mes": 0
+      },
+      "correct_records": 3855,
+      "error_rate": 0.8464693934445816,
+      "average_errors_per_inconsistent": 1.430413098710831,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 18549
+    },
+    {
+      "dependency": "CULTURA",
+      "total_records": 317,
+      "inconsistent_records": 122,
+      "total_inconsistencies": 169,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 10,
+        "sexo": 0,
+        "fecha_nacimiento": 0,
+        "edad": 6,
+        "municipio": 19,
+        "cp": 43,
+        "telefono": 90,
+        "mes": 1
+      },
+      "correct_records": 195,
+      "error_rate": 0.38485804416403785,
+      "average_errors_per_inconsistent": 1.3852459016393444,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 90
+    },
+    {
+      "dependency": "SALUD",
+      "total_records": 599684,
+      "inconsistent_records": 227787,
+      "total_inconsistencies": 428817,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 65644,
+        "sexo": 0,
+        "fecha_nacimiento": 0,
+        "edad": 112924,
+        "municipio": 78838,
+        "cp": 78750,
+        "telefono": 92661,
+        "mes": 0
+      },
+      "correct_records": 371897,
+      "error_rate": 0.37984505172724303,
+      "average_errors_per_inconsistent": 1.882534999802447,
+      "top_error_key": "edad",
+      "top_error_label": "Edad ausente o fuera de 0 a 105",
+      "top_error_count": 112924
+    },
+    {
+      "dependency": "ICHD",
+      "total_records": 477,
+      "inconsistent_records": 174,
+      "total_inconsistencies": 244,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 2,
+        "curp": 21,
+        "sexo": 2,
+        "fecha_nacimiento": 17,
+        "edad": 17,
+        "municipio": 2,
+        "cp": 30,
+        "telefono": 153,
+        "mes": 0
+      },
+      "correct_records": 303,
+      "error_rate": 0.36477987421383645,
+      "average_errors_per_inconsistent": 1.4022988505747127,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 153
+    },
+    {
+      "dependency": "ICHDII",
+      "total_records": 44987,
+      "inconsistent_records": 13872,
+      "total_inconsistencies": 14016,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 646,
+        "sexo": 0,
+        "fecha_nacimiento": 0,
+        "edad": 0,
+        "municipio": 0,
+        "cp": 3,
+        "telefono": 13367,
+        "mes": 0
+      },
+      "correct_records": 31115,
+      "error_rate": 0.30835574721586234,
+      "average_errors_per_inconsistent": 1.0103806228373702,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 13367
+    },
+    {
+      "dependency": "SDHyBC",
+      "total_records": 89138,
+      "inconsistent_records": 26338,
+      "total_inconsistencies": 26506,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 7,
+        "curp": 207,
+        "sexo": 0,
+        "fecha_nacimiento": 2,
+        "edad": 0,
+        "municipio": 34,
+        "cp": 360,
+        "telefono": 25896,
+        "mes": 0
+      },
+      "correct_records": 62800,
+      "error_rate": 0.2954744329017927,
+      "average_errors_per_inconsistent": 1.0063786164477182,
+      "top_error_key": "telefono",
+      "top_error_label": "Teléfono inválido",
+      "top_error_count": 25896
+    },
+    {
+      "dependency": "TURISMO",
+      "total_records": 44,
+      "inconsistent_records": 2,
+      "total_inconsistencies": 4,
+      "errors": {
+        "dependencia": 0,
+        "programa": 0,
+        "nombre": 0,
+        "apellido": 0,
+        "curp": 0,
+        "sexo": 0,
+        "fecha_nacimiento": 0,
+        "edad": 0,
+        "municipio": 2,
+        "cp": 2,
+        "telefono": 0,
+        "mes": 0
+      },
+      "correct_records": 42,
+      "error_rate": 0.045454545454545456,
+      "average_errors_per_inconsistent": 2.0,
+      "top_error_key": "municipio",
+      "top_error_label": "Municipio ausente o fuera del catálogo estatal",
+      "top_error_count": 2
+    }
+  ],
+  "global": {
+    "total_records": 826233,
+    "inconsistent_records": 347367,
+    "correct_records": 478866,
+    "error_rate": 0.42042256845224046,
+    "total_inconsistencies": 577405,
+    "dependency_count": 17
+  }
+}

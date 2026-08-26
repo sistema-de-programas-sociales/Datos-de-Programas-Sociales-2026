@@ -387,12 +387,18 @@ def leer_nutri(excel_path):
 
     INST_NAMES = ['DIF','SDHyBC','SPyCI']
     insts, cur = [], None
+    total_benef_global = total_m_global = total_h_global = 0
     for row_i in range(9, df.shape[0]):
         prog = str(df.iloc[row_i, 33]).strip() if not __import__('pandas').isna(df.iloc[row_i, 33]) else ''
         if not prog or prog in ['nan','None','Grand Total','LOCALIZABLES NUTRICHIHUAHUA']: continue
         tv = df.iloc[row_i, _ah_col_tot]
         if __import__('pandas').isna(tv): continue
         total = int(tv)
+        if prog.upper() == 'TOTAL':
+            total_benef_global = total
+            total_m_global = int(df.iloc[row_i, _ah_col_tm]) if not __import__('pandas').isna(df.iloc[row_i, _ah_col_tm]) else 0
+            total_h_global = int(df.iloc[row_i, _ah_col_th]) if not __import__('pandas').isna(df.iloc[row_i, _ah_col_th]) else 0
+            continue
         if total == 0: continue
         def _iv2(col):
             v = df.iloc[row_i, col]
@@ -434,55 +440,123 @@ def leer_nutri(excel_path):
             p for idx, p in enumerate(raw_progs) if _es_programa_ah(idx, raw_progs)
         ]
 
-    # ── Tabla BE (col 56, apoyos por institución) ya no existe como tabla
-    # separada — col56 ahora es solo una columna de rango de edad interna de
-    # la propia tabla AH de arriba. Se reutiliza "insts" (que ya distingue
-    # institución→programa) como fuente de insts_ap; el desglose fino por
-    # apoyo individual ya no está disponible en esta hoja.
-    insts_ap = [
-        {**inst_entry, 'apoyos': [], 'programas': [
-            {**p, 'apoyos': []} for p in inst_entry['programas']
-        ]}
-        for inst_entry in insts
-    ]
+    # ── Tablas de apoyos entregados ──────────────────────────────────────────
+    # Excel mueve estos pivotes cuando se agregan bloques como "Sin datos".
+    # Se detectan por sus anclas, no por columnas fijas:
+    #   1) institución → programa → tipo de apoyo
+    #   2) municipio → total de apoyos
+    def _count_blocks():
+        blocks = []
+        for anchor_row in range(df.shape[0]):
+            for label_col, value in enumerate(df.iloc[anchor_row]):
+                if str(value).strip().upper() != 'RECUENTO DE # DE APOYOS':
+                    continue
+                data_label_row = None
+                for ri in range(anchor_row + 1, min(anchor_row + 5, df.shape[0])):
+                    if str(df.iloc[ri, label_col]).strip().upper() == 'LOCALIZABLES NUTRICHIHUAHUA':
+                        data_label_row = ri
+                        break
+                if data_label_row is None:
+                    continue
 
-    # ── CC table: apoyos por municipio (col ~80, rows 13+) ────────────────────
-    # Columnas de "Total M"/"Total H"/"TOTAL" descubiertas dinámicamente
-    # (región col>=70 para no confundir con los marcadores de la Tabla 1).
-    _m2_col = _h2_col = _tot_col = None
-    for _sri in range(9, min(15, df.shape[0])):
-        _region = {ci: (str(v).strip() if isinstance(v, str) else '')
-                   for ci, v in enumerate(df.iloc[_sri]) if ci >= 70}
-        _vals = set(_region.values())
-        if {'M', 'H', 'Total M', 'Total H', 'TOTAL'} <= _vals:
-            _m2_col = next(ci for ci, v in _region.items() if v == 'Total M')
-            _h2_col = next(ci for ci, v in _region.items() if v == 'Total H')
-            _tot_col = next(ci for ci, v in _region.items() if v == 'TOTAL')
-            break
-    if _m2_col is None:
-        _m2_col, _h2_col, _tot_col = 89, 98, 99
+                metric_cols = None
+                for ri in range(anchor_row, data_label_row + 1):
+                    region = {ci: str(df.iloc[ri, ci]).strip()
+                              for ci in range(label_col, min(label_col + 32, df.shape[1]))
+                              if isinstance(df.iloc[ri, ci], str)}
+                    vals = set(region.values())
+                    if {'M', 'H', 'Total M', 'Total H', 'TOTAL'} <= vals:
+                        metric_cols = (
+                            next(ci for ci, v in region.items() if v == 'Total M'),
+                            next(ci for ci, v in region.items() if v == 'Total H'),
+                            next(ci for ci, v in region.items() if v == 'TOTAL'),
+                        )
+                        break
+                if metric_cols:
+                    blocks.append((label_col, data_label_row + 1, *metric_cols))
+        return blocks
 
+    count_blocks = _count_blocks()
+
+    # Jerarquía institución → programa → apoyo. Se reconoce porque la primera
+    # fila de datos es una institución válida.
+    insts_ap = []
+    for label_col, data_start, col_tm, col_th, col_tot in count_blocks:
+        first_name = str(df.iloc[data_start, label_col]).strip() if data_start < df.shape[0] else ''
+        if first_name not in INST_NAMES:
+            continue
+        cur_ap = None
+        for row_i in range(data_start, df.shape[0]):
+            name = str(df.iloc[row_i, label_col]).strip() if pd.notna(df.iloc[row_i, label_col]) else ''
+            if not name or name in ('nan', 'None', 'Grand Total'):
+                continue
+            if name.upper() == 'TOTAL':
+                break
+            tv = df.iloc[row_i, col_tot]
+            if pd.isna(tv) or int(tv) == 0:
+                continue
+            entry = {
+                'nombre': name,
+                'total': int(tv),
+                'mujeres': int(df.iloc[row_i, col_tm]) if pd.notna(df.iloc[row_i, col_tm]) else 0,
+                'hombres': int(df.iloc[row_i, col_th]) if pd.notna(df.iloc[row_i, col_th]) else 0,
+            }
+            if name in INST_NAMES:
+                entry['programas_raw'] = []
+                cur_ap = entry
+                insts_ap.append(entry)
+            elif cur_ap:
+                cur_ap['programas_raw'].append(entry)
+
+        for inst_entry in insts_ap:
+            rows = inst_entry.pop('programas_raw', [])
+            prog_idxs = [idx for idx in range(len(rows)) if _es_programa_ah(idx, rows)]
+            programas = []
+            for pos, idx in enumerate(prog_idxs):
+                next_idx = prog_idxs[pos + 1] if pos + 1 < len(prog_idxs) else len(rows)
+                programas.append({**rows[idx], 'apoyos': rows[idx + 1:next_idx]})
+            inst_entry['programas'] = programas
+        break
+
+    # Respaldo para layouts antiguos que no tengan el pivote de apoyos.
+    if not insts_ap:
+        insts_ap = [
+            {**inst_entry, 'programas': [
+                {**p, 'apoyos': []} for p in inst_entry['programas']
+            ]}
+            for inst_entry in insts
+        ]
+
+    # Tabla de apoyos por municipio: es el otro bloque cuyo primer dato no es
+    # una institución. Se usa para el reporte y sus KPIs municipales.
     SKIP_MUN = {'nan','None','Grand Total','FORANEO','NO IDENTIFICADO','TOTAL'}
     muns_ap = []
-    for row_i in range(13, df.shape[0]):
-        mun = str(df.iloc[row_i, 80]).strip() if not pd.isna(df.iloc[row_i, 80]) else ''
-        if not mun or mun in SKIP_MUN: continue
-        tv = df.iloc[row_i, _tot_col]
-        if pd.isna(tv): continue
-        total = int(tv)
-        if total == 0: continue
-        total_m2 = int(df.iloc[row_i, _m2_col]) if not pd.isna(df.iloc[row_i, _m2_col]) else 0
-        total_h2 = int(df.iloc[row_i, _h2_col]) if not pd.isna(df.iloc[row_i, _h2_col]) else 0
-        muns_ap.append({'nombre': mun, 'total': total, 'mujeres': total_m2, 'hombres': total_h2})
-
-    # Beneficiarios únicos totales: suma de la tabla AH por institución (ya
-    # descubierta arriba con columnas dinámicas) — más confiable que buscar
-    # una fila "TOTAL" suelta, cuya columna también se mueve entre refreshes.
-    total_benef_canonico = sum(i['total'] for i in insts)
+    for label_col, data_start, col_tm, col_th, col_tot in count_blocks:
+        first_name = str(df.iloc[data_start, label_col]).strip() if data_start < df.shape[0] else ''
+        if first_name in INST_NAMES:
+            continue
+        for row_i in range(data_start, df.shape[0]):
+            mun = str(df.iloc[row_i, label_col]).strip() if pd.notna(df.iloc[row_i, label_col]) else ''
+            if not mun or mun in SKIP_MUN:
+                if mun == 'TOTAL':
+                    break
+                continue
+            tv = df.iloc[row_i, col_tot]
+            if pd.isna(tv) or int(tv) == 0:
+                continue
+            muns_ap.append({
+                'nombre': mun,
+                'total': int(tv),
+                'mujeres': int(df.iloc[row_i, col_tm]) if pd.notna(df.iloc[row_i, col_tm]) else 0,
+                'hombres': int(df.iloc[row_i, col_th]) if pd.notna(df.iloc[row_i, col_th]) else 0,
+            })
+        if muns_ap:
+            break
+    # La fila TOTAL deduplica a las personas que aparecen en más de una
+    # institución. Sumar instituciones inflaba el universo localizable.
+    total_benef_canonico = total_benef_global
     if not total_benef_canonico:
-        # Sin tabla AH: recuperar el total sumando la Tabla 1 (municipios).
-        total_benef_canonico = sum(m['total'] for m in muns if m['nombre'] not in ('TOTAL', 'NO IDENTIFICADO'))
-
+        total_benef_canonico = sum(i['total'] for i in insts)
     apoyos_total = sum(i['total'] for i in insts_ap)
     if not apoyos_total:
         # Igual que arriba: la tabla BE (apoyos por institución) también
@@ -496,6 +570,8 @@ def leer_nutri(excel_path):
         'apoyos_mun':    muns_ap,
         'apoyos_total':  apoyos_total,
         'total_benef_canonico': total_benef_canonico,
+        'total_m_canonico': total_m_global,
+        'total_h_canonico': total_h_global,
     }
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
@@ -515,6 +591,7 @@ def main():
         insts_real = data['instituciones']  # tabla AH — fuente correcta de BENEFICIARIOS (no apoyos)
         # Lookup de beneficiarios reales por nombre de institución
         _benef_by_inst = {i['nombre']: i for i in insts_real}
+        _ap_by_inst = {i['nombre']: i for i in insts_ap}
         muns      = data['municipios']
         RLAB_D    = {'0-5':'0–5','6-11':'6–11','12-17':'12–17','18-29':'18–29',
                      '30-49':'30–49','50-64':'50–64','65+':'65+'}
@@ -539,22 +616,30 @@ def main():
         total_apoyos = data['apoyos_total']
         ND = {
             'total_benef':  total_benef,
+            'total_m':      data.get('total_m_canonico', 0),
+            'total_h':      data.get('total_h_canonico', 0),
             'total_apoyos': total_apoyos,
             'RT':  RT, 'RANGOS': RANGOS, 'RLAB': RLAB_D,
             'muns': [{'n':m['nombre'],'t':m['total'],'m':m['mujeres'],'h':m['hombres'],
                       'at':m['total'],'am':m['mujeres'],'ah':m['hombres'],
                       'rm':m['rangos_m'],'rh':m['rangos_h']} for m in muns],
-            'insts': [{'nombre':i['nombre'],
-                       'benef':_benef_by_inst.get(i['nombre'],{}).get('total', i['total']),
-                       'bm':_benef_by_inst.get(i['nombre'],{}).get('mujeres', i['mujeres']),
-                       'bh':_benef_by_inst.get(i['nombre'],{}).get('hombres', i['hombres']),
-                       'apoyos_total':sum(a['t'] for a in apoyos_list if i['nombre'] in a.get('insts',[])),
-                       'am':i['mujeres'],'ah':i['hombres'],
-                       'programas':[{'n':p['nombre'],'t':p['total'],'m':p['mujeres'],'h':p['hombres']} for p in i.get('programas',[])],
-                       'ap_programas':[{'n':p['nombre'],'t':p['total'],'apoyos':[{'n':a['nombre'],'t':a['total'],'m':a['mujeres'],'h':a['hombres']} for a in p.get('apoyos',[])]} for p in i.get('programas',[])]
+            'insts': [{
+                       'nombre':i['nombre'],
+                       'benef':i['total'],
+                       'bm':i['mujeres'],
+                       'bh':i['hombres'],
+                       'apoyos_total':_ap_by_inst.get(i['nombre'], {}).get('total', 0),
+                       'am':_ap_by_inst.get(i['nombre'], {}).get('mujeres', 0),
+                       'ah':_ap_by_inst.get(i['nombre'], {}).get('hombres', 0),
+                       'programas':[{'n':p['nombre'],'t':p['total'],'m':p['mujeres'],'h':p['hombres']}
+                                    for p in i.get('programas',[])],
+                       'ap_programas':[{
+                           'n':p['nombre'],'t':p['total'],
+                           'apoyos':[{'n':a['nombre'],'t':a['total'],'m':a['mujeres'],'h':a['hombres']}
+                                     for a in p.get('apoyos',[])]
+                       } for p in _ap_by_inst.get(i['nombre'], {}).get('programas',[])]
                        }
-                      for i in insts_ap],
-            'apoyos': apoyos_list,
+                      for i in insts_real],            'apoyos': apoyos_list,
             'RT_M': RT_M, 'RT_H': RT_H,
         }
         nd_json = json.dumps(ND, ensure_ascii=False, separators=(',',':'))

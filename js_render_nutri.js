@@ -23,14 +23,16 @@ function renderNutri() {
   const totalB  = ND.total_benef;
   const totalA  = ND.total_apoyos;
   const RKEYS   = ND.RANGOS;
-  const totBM   = ND.insts.reduce((s,i)=>s+i.bm,0);
-  const totBH   = totalB - totBM;
+  const totBM   = Number.isFinite(ND.total_m) && ND.total_m > 0 ? ND.total_m : ND.insts.reduce((s,i)=>s+i.bm,0);
+  const totBH   = Number.isFinite(ND.total_h) && ND.total_h > 0 ? ND.total_h : totalB - totBM;
   const munsSort= [...ND.muns].sort((a,b)=>b.t-a.t);
   const rangoMax= RKEYS.reduce((a,b)=>ND.RT[a]>=ND.RT[b]?a:b);
   const rangoMin= RKEYS.filter(r=>ND.RT[r]>0).reduce((a,b)=>ND.RT[a]<=ND.RT[b]?a:b);
   const munCobArr = ND.muns.map(m=>{const p=pobMap[normN(m.n)]||0;return{...m,pob:p,cob:p>0?m.t/p*100:0};}).filter(m=>m.pob>0);
   const munCobTop = [...munCobArr].sort((a,b)=>b.cob-a.cob)[0];
   const apTop = ND.apoyos[0];
+  const apTopWords = toTit(apTop?.n||'—').split(' ');
+  const apTopLabel = apTopWords.slice(0,3).join(' ') + (apTopWords.length > 3 ? '…' : '');
 
   /* inst accent colors matching INST_COLORS */
   const NC = { DIF:'#DB2777', SDHyBC:'#1D9E75', SPyCI:'#C2410C' };
@@ -47,13 +49,13 @@ function renderNutri() {
   const kpiEl = document.getElementById('kpi-nutri');
   if (kpiEl) {
     kpiEl.innerHTML =
-      kpiSS('Beneficiarios',    fN(totalB),              'localizables en el programa','cgr','gr') +
+      kpiSS('Beneficiarios Localizables', fN(totalB),         'personas únicas con datos válidos','cgr','gr') +
       kpiSS('Apoyos Entregados',fN(totalA),              (totalA/totalB).toFixed(2)+' por beneficiario','cg','g') +
       kpiSS('Mujeres',          (totBM/totalB*100).toFixed(1)+'%', fN(totBM)+' beneficiarias','cf','f') +
       kpiSS('Rango Mayor',      ND.RLAB[rangoMax],       fN(ND.RT[rangoMax])+' benef.','cr','r') +
       kpiSS('Municipio Líder',  toTit(munsSort[0]?.n||'—'), fN(munsSort[0]?.t||0)+' beneficiarios','cb','b') +
       kpiSS('Mayor Cobertura',  toTit(munCobTop?.n||'—'),   munCobTop?munCobTop.cob.toFixed(1)+'% de su pob.':'—','cgr','gr') +
-      kpiSS('Apoyo Mayor',      toTit(apTop?.n||'—').split(' ').slice(0,3).join(' ')+'…', fN(apTop?.t||0)+' apoyos','cg','g') +
+      kpiSS('Apoyo Mayor',      apTopLabel,             fN(apTop?.t||0)+' apoyos','cg','g') +
       kpiSS('Sin Cobertura',    '1', 'Manuel Benavides','cr','r');
   }
 
