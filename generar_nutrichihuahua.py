@@ -428,7 +428,7 @@ def leer_nutri(excel_path):
         acum = 0
         for r in rows[idx+1:]:
             acum += r['total']
-            if abs(acum - total) <= max(5, int(total * 0.02)):
+            if abs(acum - total) <= max(1, int(total * 0.02)):
                 return True
             if acum > total * 1.05:
                 break
